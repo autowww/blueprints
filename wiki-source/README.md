@@ -1,31 +1,34 @@
-# GitHub Wiki source
+# GitHub Wiki mirror
 
-These Markdown files are meant to be published to **[github.com/autowww/blueprints/wiki](https://github.com/autowww/blueprints/wiki)**.
+The wiki at [github.com/autowww/blueprints/wiki](https://github.com/autowww/blueprints/wiki) is filled by **`sync-wiki.sh`**, which copies almost all `*.md` from this repo into the wiki (same folder layout), rewrites links to `.html` handbook files to point at the **code** tab on GitHub, and regenerates **`_Sidebar.md`**.
 
-GitHub does **not** create the wiki Git remote until the **first page** exists.
+## One-time setup
 
-## One-time: create the wiki
+1. Repo **Wiki** tab → **Create the first page**.
+2. Page name **`Home`** → save (content can be a stub; the script will replace it on first sync).
 
-1. Open the repo **Wiki** tab → **Create the first page**.
-2. Set the page name to **`Home`** (capital **H** — this becomes the default landing page).
-3. Paste the contents of **`Home.md`** from this folder (or a one-line stub like `# Blueprints`, then Save).
-4. Save the page.
+Until step 2 is done, `git clone https://github.com/autowww/blueprints.wiki.git` fails with “repository not found.”
 
-## Publish updates from this repo
-
-From a clone of **`autowww/blueprints`** with GitHub auth configured:
+## Each time you want to refresh the wiki
 
 ```bash
-./wiki-source/publish-wiki.sh
+cd /path/to/blueprints   # clone of autowww/blueprints, main up to date
+./wiki-source/sync-wiki.sh
 ```
 
-Or manually:
+Requirements: `git`, `python3`, and credentials that can **push** to `https://github.com/autowww/blueprints.wiki.git` (same GitHub account / token as for the main repo).
 
-```bash
-git clone https://github.com/autowww/blueprints.wiki.git
-cp /path/to/blueprints/wiki-source/Home.md blueprints.wiki/
-cp /path/to/blueprints/wiki-source/_Sidebar.md blueprints.wiki/
-cd blueprints.wiki && git add Home.md _Sidebar.md && git commit -m "Sync wiki" && git push
-```
+## What gets mirrored
 
-The wiki remote may use branch **`master`** or **`main`** depending on when the wiki was created; the script tries both.
+- All `*.md` under `sdlc/`, `docs/`, and `agents/`, except:
+  - anything under **`wiki-source/`**
+  - files named **`*.template.md`**
+
+## What does *not* get mirrored
+
+- **HTML handbook** (`sdlc/docs/*.html`) — GitHub Wiki is Markdown-oriented; those stay in the main repo. Synced Markdown links to `.html` are rewritten to `github.com/.../blob/main/sdlc/docs/...`.
+- **Shell scripts, SVG, Dockerfiles**, etc. — still only in the code repo.
+
+## Legacy script
+
+`publish-wiki.sh` only copied `Home.md` and `_Sidebar.md` (no full docs). Use **`sync-wiki.sh`** instead.
