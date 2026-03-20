@@ -52,11 +52,11 @@
           <div class="alert alert-warning border-0 shadow-sm py-2 mb-3" role="status">
             <strong class="text-body">Project tracking files</strong> under the consuming repo&rsquo;s <code>sdlc/</code> (e.g. <a href="../../../sdlc/TRACKING-METHODOLOGIES.md" class="alert-link">TRACKING-METHODOLOGIES.md</a>) stay lightweight. <strong class="text-body">Full methodology guides</strong> (Scrum, Kanban, …) live in <a href="../methodologies/README.md" class="alert-link"><code>blueprints/sdlc/methodologies/</code></a> — canonical Markdown + handbook pages below.
           </div>
-          <p class="text-body-secondary small mb-4">Cross-cutting <strong class="text-body">scope management</strong> and <strong class="text-body">time tracking</strong> (git activity vs explicit hours) are in the <a href="change.html#scope-management" class="link-success">Change control</a> chapter — methodology docs below assume you align backlog and work-unit ids with those rules.</p>
+          <p class="text-body-secondary small mb-4">Cross-cutting <strong class="text-body">scope management</strong> and <strong class="text-body">time tracking</strong> (git activity vs explicit hours) are in the <a href="change.html#scope-management" class="link-success">Change control</a> chapter — methodology docs below assume you align backlog and work-unit ids with those rules. <strong class="text-body">Spec-driven development</strong> (acceptance criteria and durable intent before deep implementation) is a separate <a href="spec-driven.html" class="link-success">handbook chapter</a> — complementary to every methodology here.</p>
 
           <section id="methodology-guides" class="mt-3 mb-4">
             <h2 class="font-display h5 fw-semibold">Methodology guides (deep dives)</h2>
-            <p class="text-body-secondary small mt-2 mb-3">Each topic has a <strong class="text-body">handbook page</strong> (summary, a <strong class="text-body">process diagram</strong>, external links each with a short <strong class="text-body">executive summary</strong>) and a <strong class="text-body">Markdown source</strong> in the blueprint (full detail, adoption notes, same diagrams via image links).</p>
+            <p class="text-body-secondary small mt-2 mb-3">Each topic has a <strong class="text-body">handbook page</strong> (summary, diagrams, external links with <strong class="text-body">executive summaries</strong>) and <strong class="text-body">Markdown</strong> in the blueprint. <strong class="text-body">Scrum, Kanban, phased delivery, and XP</strong> each have <strong class="text-body">four subchapters</strong> (Foundation, Roles, Ceremonies, Process) with <strong class="text-body">tables, mini-TOC, and Mermaid</strong> — regenerated from <code>docs/build_methodology_chapters.py</code> (Scrum <strong class="text-body">Roles</strong> is hand-maintained). Canonical depth stays in <code>methodologies/&lt;name&gt;/</code>. For <strong class="text-body">SDD-style inputs/outputs</strong> per ceremony intent and cross-methodology process slots, use <a href="spec-driven-sdd-ceremonies.html" class="link-success">Ceremonies (SDD I/O)</a> and <a href="spec-driven-sdd-process.html" class="link-success">Process (SDD I/O)</a> under Spec-driven development.</p>
             <div class="row row-cols-1 row-cols-md-2 g-2">
               <div class="col">
                 <div class="border rounded-3 bg-body p-3 h-100 shadow-sm">
@@ -68,7 +68,7 @@
               <div class="col">
                 <div class="border rounded-3 bg-body p-3 h-100 shadow-sm">
                   <h3 class="font-display h6 fw-bold text-success mb-2">Ceremonies</h3>
-                  <p class="text-body-secondary small mb-2"><strong class="text-body">Foundation</strong> (intent types C1–C6) split from <strong class="text-body">forks</strong> (Scrum, Kanban, phased, XP); phases + archetypes.</p>
+                  <p class="text-body-secondary small mb-2"><strong class="text-body">Foundation</strong> (C1–C6 + suggestions), <strong class="text-body">bridge</strong> (methodology names), <strong class="text-body">forks</strong> (event suggestions); SDLC §2 phase map.</p>
                   <p class="small mb-0"><a href="methodologies-ceremonies.html" class="link-success">Handbook →</a> · <a href="../methodologies/ceremonies/README.md" class="text-secondary">ceremonies/README.md</a></p>
                 </div>
               </div>

@@ -99,6 +99,21 @@ See project [`TRACKING-CHALLENGES.md`](../../../sdlc/TRACKING-CHALLENGES.md) for
 
 ---
 
+## Prescriptive deep dive (teams)
+
+For **roles**, **foundation fit** (phases A–F, tracking spine, C1–C6), **ceremony inputs/outputs/agendas**, and **Mermaid process maps**, use the package **[`scrum/README.md`](scrum/README.md)**:
+
+| Chapter | File |
+|---------|------|
+| Foundation & fit | [`scrum/foundation-connection.md`](scrum/foundation-connection.md) |
+| Roles | [`scrum/roles.md`](scrum/roles.md) |
+| Ceremonies | [`scrum/ceremonies-prescriptive.md`](scrum/ceremonies-prescriptive.md) |
+| Process & flows | [`scrum/process-and-flows.md`](scrum/process-and-flows.md) |
+
+Handbook stubs (sidebar under **Methodologies**): [`methodologies-scrum-foundation.html`](../docs/methodologies-scrum-foundation.html) … [`methodologies-scrum-process.html`](../docs/methodologies-scrum-process.html).
+
+---
+
 ## Further reading
 
 - [Scrum Guide — History](https://scrumguides.org/) — **Official site** for guide versions and history (not the Guide text itself).  

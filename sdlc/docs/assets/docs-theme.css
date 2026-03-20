@@ -233,6 +233,33 @@ aside.bg-dark .doc-nav-sublink:hover,
   border-left-color: rgba(25, 135, 84, 0.65);
 }
 
+/* Nested methodology hubs (Scrum → Foundation, Roles, …) */
+.doc-nav-subgroup {
+  margin-left: 0.25rem;
+  padding-left: 0.35rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: 0.1rem;
+}
+.doc-nav-subhub {
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+aside.bg-dark .doc-nav-subhub.active,
+.offcanvas.text-bg-dark .doc-nav-subhub.active {
+  color: #fff !important;
+}
+.doc-nav-deepwrap {
+  padding-bottom: 0.15rem;
+}
+aside.bg-dark .doc-nav-sublink-deep,
+.offcanvas.text-bg-dark .doc-nav-sublink-deep {
+  margin-left: 0.35rem;
+  padding-left: 0.75rem !important;
+  font-size: 0.82rem;
+  opacity: 0.95;
+  border-left-color: rgba(255, 255, 255, 0.12);
+}
+
 /* Sidebar — slightly tighter links */
 .nav-scroll .nav-link.rounded {
   padding: 0.35rem 0.65rem !important;

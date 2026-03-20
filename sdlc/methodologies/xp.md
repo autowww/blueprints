@@ -68,6 +68,12 @@ XP’s **technical** bar pairs well with **agents** if you **keep humans in the 
 
 ---
 
+## Prescriptive deep dive (teams)
+
+Package **[`xp/README.md`](xp/README.md)** — foundation fit, customer/coach/developers, iteration events, TDD/CI loop maps. Handbook: [`methodologies-xp-foundation.html`](../docs/methodologies-xp-foundation.html) through [`methodologies-xp-process.html`](../docs/methodologies-xp-process.html).
+
+---
+
 ## Further reading
 
 - [Wiki.c2.com — Extreme Programming Roadmap](https://wiki.c2.com/?ExtremeProgrammingRoadmap) — **Classic wiki** index of XP topics; dated but historically influential.  

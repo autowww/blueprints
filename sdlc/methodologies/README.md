@@ -7,15 +7,16 @@
 | Guide | Topics |
 |-------|--------|
 | [**Roles & archetypes**](roles-archetypes.md) | Five archetypes: summary + **detail** (responsibilities, artifacts, ceremonies) + **methodology tweaks** (Scrum/Kanban/phased/XP per archetype); **Owner/Implementer**; title quick-reference; **methodology roll-up**; specialty hats vs **Contributor**. Handbook: [`methodologies-roles.html`](../docs/methodologies-roles.html). |
-| [**Ceremonies**](ceremonies/README.md) | **Foundation** ([`ceremony-foundation.md`](ceremonies/ceremony-foundation.md)): six **intent types** (C1–C6), phase + archetype matrices; **forks**: [Scrum](ceremonies/scrum.md), [Kanban](ceremonies/kanban.md), [Phased](ceremonies/phased.md), [XP](ceremonies/xp.md). Handbook: [`methodologies-ceremonies.html`](../docs/methodologies-ceremonies.html). |
+| [**Ceremonies**](ceremonies/README.md) | **Foundation** ([`ceremony-foundation.md`](ceremonies/ceremony-foundation.md)): C1–C6, phase + archetype matrices, **practice suggestions** per intent. **Bridge** ([`methodology-bridge.md`](ceremonies/methodology-bridge.md)): intents ↔ methodology names, blends, calendar mapping. **Forks** + event suggestions: [Scrum](ceremonies/scrum.md), [Kanban](ceremonies/kanban.md), [Phased](ceremonies/phased.md), [XP](ceremonies/xp.md). Tied to [`SDLC.md`](../SDLC.md) §2. Handbook: [`methodologies-ceremonies.html`](../docs/methodologies-ceremonies.html). |
 | [**Agile (umbrella)**](agile.md) | Values, principles, how Scrum/Kanban/XP combine. |
-| [**Scrum**](scrum.md) | Roles, events, artifacts, sprint flow; agentic fit; tracking. |
-| [**Kanban**](kanban.md) | Flow, WIP, policies, service classes; board vs git. |
-| [**Phased delivery**](phased-delivery.md) | Sequential phases, gates, baselines vs incremental. |
-| [**Extreme Programming (XP)**](xp.md) | Practices, technical excellence, pairing, CI. |
+| [**Scrum**](scrum.md) | Roles, events, artifacts, sprint flow; agentic fit; tracking. **Prescriptive package:** [`scrum/README.md`](scrum/README.md) (foundation, roles, ceremonies I/O, process maps). |
+| [**Kanban**](kanban.md) | Flow, WIP, policies, service classes; board vs git. **Prescriptive package:** [`kanban/README.md`](kanban/README.md). |
+| [**Phased delivery**](phased-delivery.md) | Sequential phases, gates, baselines vs incremental. **Prescriptive package:** [`phased/README.md`](phased/README.md). |
+| [**Extreme Programming (XP)**](xp.md) | Practices, technical excellence, pairing, CI. **Prescriptive package:** [`xp/README.md`](xp/README.md). |
 | [**Agentic SDLC**](agentic-sdlc.md) | Cross-cutting: agents, review, identity, limits — not a replacement for the guides above. |
+| [**Spec-driven development**](spec-driven-development.md) | Written intent leads implementation; docs↔code loop; agentic fit. **SDD I/O:** [`spec-driven/README.md`](spec-driven/README.md) (C1–C6 + P1–P6 tables & examples), templates [`templates/sdd/`](../templates/sdd/). Handbook: [`spec-driven.html`](../docs/spec-driven.html) + nested **SDD schema / Ceremonies / Process** pages. |
 
-**Handbook (HTML):** [`docs/methodologies.html`](../docs/methodologies.html) (hub) and `docs/methodologies-*.html` sub-chapters — summaries + links here.
+**Handbook (HTML):** [`docs/methodologies.html`](../docs/methodologies.html) (hub) and `docs/methodologies-*.html`; **spec-driven** is [`docs/spec-driven.html`](../docs/spec-driven.html). **Scrum/Kanban/phased/XP** subchapters (Foundation, Ceremonies, Process) are generated with tables + Mermaid via [`docs/build_methodology_chapters.py`](../docs/build_methodology_chapters.py); **Scrum — Roles** is hand-maintained in HTML.
 
 **Maintainers:** curated external URLs, **executive summaries** (why each link matters here), and a quick `curl` check pattern — [`REFERENCE-LINKS.md`](REFERENCE-LINKS.md). Keep handbook [`methodologies-*.html`](../docs/methodologies.html) blurbs in sync when URLs or intent change.
 

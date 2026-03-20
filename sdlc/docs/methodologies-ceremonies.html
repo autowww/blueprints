@@ -46,8 +46,12 @@
               <li class="breadcrumb-item active" aria-current="page">Ceremonies</li>
             </ol></nav>
             <h1 class="font-display h2 fw-bold text-body mb-0">Ceremonies</h1>
-            <p class="text-body-secondary small mt-2 mb-0"><strong class="text-body">Foundation</strong> = methodology-neutral <strong class="text-body">intent types</strong> (C1–C6). <strong class="text-body">Forks</strong> = Scrum, Kanban, phased, XP mappings. Same split as <a href="methodologies-roles.html" class="link-success">Roles &amp; archetypes</a>. Canonical: <a href="../methodologies/ceremonies/README.md" class="link-success">ceremonies/README.md</a>.</p>
+            <p class="text-body-secondary small mt-2 mb-0"><strong class="text-body">Foundation</strong> = intent types (C1–C6) + <strong class="text-body">practice suggestions</strong>. <strong class="text-body">Bridge</strong> = crosswalk to methodology names. <strong class="text-body">Forks</strong> = Scrum/Kanban/phased/XP + event suggestions. <a href="phases.html" class="link-success">SDLC phases</a> tie-in in <a href="../SDLC.md" class="link-success">SDLC.md</a> §2. Canonical: <a href="../methodologies/ceremonies/README.md" class="link-success">ceremonies/README.md</a>.</p>
           </header>
+
+          <div class="alert alert-light border shadow-sm mb-4 py-2" role="note">
+            <p class="small text-body-secondary mb-0"><strong class="text-body">Spec-driven I/O:</strong> For each intent <strong class="text-body">C1–C6</strong>, see preconditions, inputs, outputs, and <strong class="text-body">filled examples</strong> in <a href="spec-driven-sdd-ceremonies.html" class="link-success">Ceremonies (SDD I/O)</a> + template <a href="../templates/sdd/CEREMONY-INTENT.template.md" class="link-success"><code>CEREMONY-INTENT.template.md</code></a>. Process slices (refinement, planning, gate, …): <a href="spec-driven-sdd-process.html" class="link-success">Process (SDD I/O)</a>.</p>
+          </div>
 
           <div class="row g-3 g-lg-4">
             <div class="col-lg-8 col-xl-9 order-2 order-lg-1">
@@ -59,6 +63,24 @@
               <li><strong class="text-body">Forks</strong> name official or common rituals and map them to C1–C6; cadence and rules stay in each methodology.</li>
               <li><strong class="text-body">Roles</strong> (<a href="methodologies-roles.html" class="link-success">archetypes</a>) say <em>who</em> tends to lead; <a href="phases.html" class="link-success">Phases A–F</a> say <em>what docs</em> the lifecycle expects.</li>
             </ul>
+          </section>
+
+          <section class="mb-4 pt-3 border-top" id="methodology-bridge">
+            <h2 class="font-display h5 fw-semibold">Methodology bridge</h2>
+            <p class="text-body-secondary small mb-2">Crosswalk <strong class="text-body">C1–C6</strong> to typical <strong class="text-body">Scrum / Kanban / phased / XP</strong> ritual names; blend tips; how to map your calendar. Full matrix: <a href="../methodologies/ceremonies/methodology-bridge.md" class="link-success">methodology-bridge.md</a>.</p>
+            <div class="doc-table-wrap mt-2">
+              <table class="table table-sm table-bordered mb-0">
+                <thead class="table-light"><tr><th scope="col">Intent</th><th scope="col">Examples across methodologies</th></tr></thead>
+                <tbody class="small text-body-secondary">
+                  <tr><td><strong class="text-body">C1</strong></td><td>Sprint Goal context · replenishment “why” · phase charter · planning game</td></tr>
+                  <tr><td><strong class="text-body">C2</strong></td><td>Sprint Planning forecast · pull / WIP · gate “enter build” · story pick-up</td></tr>
+                  <tr><td><strong class="text-body">C3</strong></td><td>Daily Scrum · stand-up · integration sync · pair handoffs</td></tr>
+                  <tr><td><strong class="text-body">C4</strong></td><td>Sprint Review · service review · UAT / demo · small-release feedback</td></tr>
+                  <tr><td><strong class="text-body">C5</strong></td><td>Retro · ops / Kaizen · post-phase lessons · coach loop</td></tr>
+                  <tr><td><strong class="text-body">C6</strong></td><td>DoD + increment · column policies · IV&amp;V exit · TDD + CI</td></tr>
+                </tbody>
+              </table>
+            </div>
           </section>
 
           <section class="mb-4 pt-3 border-top" id="intent-types">
@@ -93,6 +115,24 @@
             <p class="text-body-secondary small mb-0">Example: <strong class="text-body">C2</strong> often co-led by <strong class="text-body">Demand</strong> + <strong class="text-body">Build</strong>; <strong class="text-body">C5</strong> by <strong class="text-body">Flow</strong>. See <a href="../methodologies/ceremonies/ceremony-foundation.md" class="link-success">foundation § Intent × archetypes</a> and <a href="methodologies-roles.html" class="link-success">Roles &amp; archetypes</a>.</p>
           </section>
 
+          <section class="mb-4 pt-3 border-top" id="sdlc-bridge">
+            <h2 class="font-display h5 fw-semibold">SDLC phases ↔ intents</h2>
+            <p class="text-body-secondary small mb-2"><a href="../SDLC.md" class="link-success">SDLC.md</a> §2 opens with a table mapping <strong class="text-body">Phases A–F</strong> to which intents are usually engaged (planning, build, verify, release). Ceremonies support the phase <strong class="text-body">obligations</strong>—they do not replace WBS/specs/CI docs.</p>
+          </section>
+
+          <section class="mb-4 pt-3 border-top" id="practice-suggestions">
+            <h2 class="font-display h5 fw-semibold">Practice suggestions (foundation)</h2>
+            <p class="text-body-secondary small mb-2">Per-intent hints: <strong class="text-body">minimum viable</strong>, <strong class="text-body">prefer</strong>, <strong class="text-body">avoid</strong>, and <strong class="text-body">doc hooks</strong> to phases and tracking. Full text: <a href="../methodologies/ceremonies/ceremony-foundation.md#practice-suggestions-by-intent" class="link-success">ceremony-foundation.md § Practice suggestions</a>.</p>
+            <ul class="text-body-secondary small mb-0">
+              <li><strong class="text-body">C1</strong> — written goal + out-of-scope; avoid crisis-only alignment.</li>
+              <li><strong class="text-body">C2</strong> — visible selected work + capacity check; avoid silent overflow.</li>
+              <li><strong class="text-body">C3</strong> — blockers surfaced in 24h; avoid status-only with no escalation.</li>
+              <li><strong class="text-body">C4</strong> — demo <strong class="text-body">Done</strong> work; stakeholders who can accept.</li>
+              <li><strong class="text-body">C5</strong> — one experiment with owner; use data not only opinions.</li>
+              <li><strong class="text-body">C6</strong> — checklist + CI automation; shift left on risk.</li>
+            </ul>
+          </section>
+
           <section class="mb-4 pt-3 border-top" id="principles">
             <h2 class="font-display h5 fw-semibold">Principles</h2>
             <ul class="text-body-secondary small mb-0">
@@ -102,13 +142,27 @@
             </ul>
           </section>
 
+          <section class="mb-4 pt-3 border-top" id="intent-cycle">
+            <h2 class="font-display h5 fw-semibold">Intent cycle (diagram)</h2>
+            <p class="text-body-secondary small mb-2">How <strong class="text-body">C1–C6</strong> often repeat across a delivery horizon—actual cadence depends on methodology (Scrum sprint vs Kanban replenishment, etc.).</p>
+            <div class="border rounded-3 bg-white p-3 shadow-sm"><div class="mermaid small">flowchart LR
+  C1[C1 Align] --> C2[C2 Commit]
+  C2 --> C3[C3 Sync]
+  C3 --> C4[C4 Inspect]
+  C4 --> C6[C6 Assure]
+  C6 --> C5[C5 Improve]
+  C5 --> C1</div></div>
+            <p class="text-body-secondary small mt-2 mb-0">Not a mandated sequence every week—some intents happen continuously (e.g. C3 via pairing). See <a href="../methodologies/ceremonies/ceremony-foundation.md" class="link-success">ceremony-foundation.md</a>.</p>
+          </section>
+
           <section class="mb-4 pt-3 border-top" id="forks">
             <h2 class="font-display h5 fw-semibold">Methodology forks (Markdown)</h2>
+            <p class="text-body-secondary small mb-2">Each fork adds <strong class="text-body">methodology-specific suggestions</strong> (tables) after the intent mapping.</p>
             <ul class="text-body-secondary small mb-0">
-              <li><a href="../methodologies/ceremonies/scrum.md" class="link-success">scrum.md</a> — Sprint Planning, Daily, Review, Retro → C1–C6.</li>
-              <li><a href="../methodologies/ceremonies/kanban.md" class="link-success">kanban.md</a> — Replenishment, stand-up, service reviews.</li>
-              <li><a href="../methodologies/ceremonies/phased.md" class="link-success">phased.md</a> — Gates, baselines, UAT, release approval.</li>
-              <li><a href="../methodologies/ceremonies/xp.md" class="link-success">xp.md</a> — Planning game, small releases, pairing as quality.</li>
+              <li><a href="../methodologies/ceremonies/scrum.md" class="link-success">scrum.md</a> — events + Scrum-specific suggestions.</li>
+              <li><a href="../methodologies/ceremonies/kanban.md" class="link-success">kanban.md</a> — replenishment, stand-up, service reviews.</li>
+              <li><a href="../methodologies/ceremonies/phased.md" class="link-success">phased.md</a> — gates, UAT, handoffs.</li>
+              <li><a href="../methodologies/ceremonies/xp.md" class="link-success">xp.md</a> — planning game, releases, pairing.</li>
             </ul>
           </section>
 
@@ -119,10 +173,14 @@
                 <p class="doc-toc-title px-3 pt-3 mb-0">On this page</p>
                 <div class="nav flex-column px-3 pb-3">
                   <a class="nav-link fw-semibold" href="#overview">Foundation vs forks</a>
+                  <a class="nav-link fw-semibold" href="#methodology-bridge">Methodology bridge</a>
                   <a class="nav-link fw-semibold" href="#intent-types">Intent types C1–C6</a>
                   <a class="nav-link fw-semibold" href="#phase-touch">Phase touch</a>
                   <a class="nav-link fw-semibold" href="#archetype-lead">Archetype leads</a>
+                  <a class="nav-link fw-semibold" href="#sdlc-bridge">SDLC ↔ intents</a>
+                  <a class="nav-link fw-semibold" href="#practice-suggestions">Practice suggestions</a>
                   <a class="nav-link fw-semibold" href="#principles">Principles</a>
+                  <a class="nav-link fw-semibold" href="#intent-cycle">Intent cycle</a>
                   <a class="nav-link fw-semibold" href="#forks">Methodology forks</a>
                 </div>
               </nav>
@@ -144,5 +202,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   <script src="assets/docs-nav.js"></script>
   <script src="assets/docs-toc-scrollspy.js"></script>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
+  </script>
 </body>
 </html>

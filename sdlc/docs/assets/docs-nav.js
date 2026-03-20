@@ -3,9 +3,13 @@
  *
  * Edit DOC_NAV below: each entry is either
  *   - a leaf chapter: { href, label }
- *   - a chapter with sub-pages: { hubHref, label, groupId, children: [{ href, label }, …] }
- * groupId must be unique (ASCII, no spaces) — used in collapse target ids.
- * When you add HTML files for a chapter’s sub-pages, add a group or extend children.
+ *   - a chapter with sub-pages: { hubHref, label, groupId, children: [ … ] }
+ *
+ * Group `children` may mix:
+ *   - leaves: { href, label }
+ *   - nested hubs: { hubHref, label, groupId, children: [{ href, label }, …] } (e.g. Scrum → Foundation, Roles, …)
+ *
+ * Top-level groupId and each nested groupId must be unique (ASCII, no spaces) — used in collapse target ids.
  */
 (function () {
   'use strict';
@@ -23,6 +27,18 @@
     { href: 'review.html', label: 'Review cadence' },
     { href: 'cicd.html', label: 'CI/CD & quality gates' },
     { href: 'documentation.html', label: 'Documentation layout' },
+    {
+      hubHref: 'spec-driven.html',
+      label: 'Spec-driven development',
+      groupId: 'SpecDriven',
+      ariaLabel: 'Spec-driven sub-chapters',
+      children: [
+        { href: 'spec-driven.html', label: 'Overview' },
+        { href: 'spec-driven-sdd-schema.html', label: 'SDD schema & templates' },
+        { href: 'spec-driven-sdd-ceremonies.html', label: 'Ceremonies (SDD I/O)' },
+        { href: 'spec-driven-sdd-process.html', label: 'Process (SDD I/O)' },
+      ],
+    },
     { href: 'agents.html', label: 'Agents & automation' },
     {
       hubHref: 'methodologies.html',
@@ -32,10 +48,50 @@
       children: [
         { href: 'methodologies-roles.html', label: 'Roles & archetypes' },
         { href: 'methodologies-ceremonies.html', label: 'Ceremonies' },
-        { href: 'methodologies-scrum.html', label: 'Scrum' },
-        { href: 'methodologies-kanban.html', label: 'Kanban' },
-        { href: 'methodologies-phased.html', label: 'Phased delivery' },
-        { href: 'methodologies-xp.html', label: 'XP' },
+        {
+          hubHref: 'methodologies-scrum.html',
+          label: 'Scrum',
+          groupId: 'MethodologiesScrum',
+          children: [
+            { href: 'methodologies-scrum-foundation.html', label: 'Foundation' },
+            { href: 'methodologies-scrum-roles.html', label: 'Roles' },
+            { href: 'methodologies-scrum-ceremonies.html', label: 'Ceremonies' },
+            { href: 'methodologies-scrum-process.html', label: 'Process' },
+          ],
+        },
+        {
+          hubHref: 'methodologies-kanban.html',
+          label: 'Kanban',
+          groupId: 'MethodologiesKanban',
+          children: [
+            { href: 'methodologies-kanban-foundation.html', label: 'Foundation' },
+            { href: 'methodologies-kanban-roles.html', label: 'Roles' },
+            { href: 'methodologies-kanban-ceremonies.html', label: 'Ceremonies' },
+            { href: 'methodologies-kanban-process.html', label: 'Process' },
+          ],
+        },
+        {
+          hubHref: 'methodologies-phased.html',
+          label: 'Phased delivery',
+          groupId: 'MethodologiesPhased',
+          children: [
+            { href: 'methodologies-phased-foundation.html', label: 'Foundation' },
+            { href: 'methodologies-phased-roles.html', label: 'Roles' },
+            { href: 'methodologies-phased-ceremonies.html', label: 'Ceremonies' },
+            { href: 'methodologies-phased-process.html', label: 'Process' },
+          ],
+        },
+        {
+          hubHref: 'methodologies-xp.html',
+          label: 'XP',
+          groupId: 'MethodologiesXp',
+          children: [
+            { href: 'methodologies-xp-foundation.html', label: 'Foundation' },
+            { href: 'methodologies-xp-roles.html', label: 'Roles' },
+            { href: 'methodologies-xp-ceremonies.html', label: 'Ceremonies' },
+            { href: 'methodologies-xp-process.html', label: 'Process' },
+          ],
+        },
         { href: 'methodologies-agile.html', label: 'Agile (umbrella)' },
         { href: 'methodologies-agentic.html', label: 'Agentic SDLC' },
       ],
@@ -69,15 +125,38 @@
     return 'nav-link link-light rounded py-2 px-3' + (active ? ' active' : '');
   }
 
-  function subLinkClass(active) {
-    return 'nav-link link-light rounded py-2 px-3 doc-nav-sublink' + (active ? ' active' : '');
+  function subLinkClass(active, deep) {
+    var base = 'nav-link link-light rounded py-2 px-3 doc-nav-sublink' + (deep ? ' doc-nav-sublink-deep' : '');
+    return base + (active ? ' active' : '');
+  }
+
+  /** True if `page` matches this leaf or any descendant href (one level of nesting). */
+  function childMatchesPage(page, child) {
+    if (child.href && child.href === page) return true;
+    if (child.hubHref && child.hubHref === page) return true;
+    if (child.children && child.children.length) {
+      var j;
+      for (j = 0; j < child.children.length; j++) {
+        if (child.children[j].href === page) return true;
+      }
+    }
+    return false;
   }
 
   function groupIsOpen(page, item) {
     if (page === item.hubHref) return true;
     var i;
     for (i = 0; i < item.children.length; i++) {
-      if (item.children[i].href === page) return true;
+      if (childMatchesPage(page, item.children[i])) return true;
+    }
+    return false;
+  }
+
+  function nestedGroupIsOpen(page, sub) {
+    if (page === sub.hubHref) return true;
+    var j;
+    for (j = 0; j < sub.children.length; j++) {
+      if (sub.children[j].href === page) return true;
     }
     return false;
   }
@@ -97,7 +176,7 @@
     );
   }
 
-  function renderGroup(page, item, collapseId) {
+  function renderGroup(page, item, collapseId, navSuffix) {
     var open = groupIsOpen(page, item);
     var hubActive = page === item.hubHref;
     var html = '';
@@ -139,17 +218,85 @@
       '">';
 
     for (i = 0; i < item.children.length; i++) {
-      var c = item.children[i];
+      html += renderMethodologyChild(page, item.children[i], navSuffix);
+    }
+    html += '</div></div>';
+    return html;
+  }
+
+  function renderMethodologyChild(page, c, navSuffix) {
+    if (c.hubHref && c.children && c.children.length && c.groupId) {
+      return renderNestedMethodologyGroup(page, c, navSuffix);
+    }
+    if (c.href) {
       var ca = c.href === page;
-      html +=
+      return (
         '<a class="' +
-        subLinkClass(ca) +
+        subLinkClass(ca, false) +
         '" href="' +
         escapeAttr(c.href) +
         '"' +
         (ca ? ' aria-current="page"' : '') +
         '>' +
         escapeHtml(c.label) +
+        '</a>'
+      );
+    }
+    return '';
+  }
+
+  function renderNestedMethodologyGroup(page, sub, navSuffix) {
+    var collapseId = 'docNavSub-' + sub.groupId + '-' + navSuffix;
+    var open = nestedGroupIsOpen(page, sub);
+    var hubActive = page === sub.hubHref;
+    var aria = escapeAttr(sub.label + ' sub-chapters');
+    var html = '';
+    var j;
+
+    html += '<div class="doc-nav-subgroup" role="presentation">';
+    html += '<div class="d-flex align-items-center doc-nav-group-row doc-nav-subgroup-row">';
+    html +=
+      '<button type="button" class="btn btn-link doc-nav-toggle doc-nav-toggle-nested p-0 border-0 shadow-none flex-shrink-0 d-flex align-items-center justify-content-center" style="width:1.65rem;min-height:2.35rem" data-bs-toggle="collapse" data-bs-target="#' +
+      collapseId +
+      '" aria-expanded="' +
+      open +
+      '" aria-controls="' +
+      collapseId +
+      '" title="Toggle sub-chapters">';
+    html +=
+      '<svg class="doc-nav-chevron" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>';
+    html += '</button>';
+    html +=
+      '<a class="nav-link link-light rounded py-2 px-2 flex-grow-1 text-start doc-nav-subhub' +
+      (hubActive ? ' active' : '') +
+      '" href="' +
+      escapeAttr(sub.hubHref) +
+      '"' +
+      (hubActive ? ' aria-current="page"' : '') +
+      '>' +
+      escapeHtml(sub.label) +
+      '</a>';
+    html += '</div>';
+    html +=
+      '<div id="' +
+      collapseId +
+      '" class="collapse doc-nav-subwrap doc-nav-deepwrap' +
+      (open ? ' show' : '') +
+      '" role="group" aria-label="' +
+      aria +
+      '">';
+    for (j = 0; j < sub.children.length; j++) {
+      var cc = sub.children[j];
+      var cca = cc.href === page;
+      html +=
+        '<a class="' +
+        subLinkClass(cca, true) +
+        '" href="' +
+        escapeAttr(cc.href) +
+        '"' +
+        (cca ? ' aria-current="page"' : '') +
+        '>' +
+        escapeHtml(cc.label) +
         '</a>';
     }
     html += '</div></div>';
@@ -170,7 +317,8 @@
         html += renderGroup(
           page,
           entry,
-          'docNavGroup-' + entry.groupId + '-' + navSuffix
+          'docNavGroup-' + entry.groupId + '-' + navSuffix,
+          navSuffix
         );
       } else if (entry.href) {
         html += renderLeaf(page, entry);

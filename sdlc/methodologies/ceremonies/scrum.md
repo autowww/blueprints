@@ -35,6 +35,20 @@ See project [`TRACKING-CHALLENGES.md`](../../../../sdlc/TRACKING-CHALLENGES.md).
 
 ---
 
+## Suggestions (Scrum-specific)
+
+| Event | Suggestions |
+|-------|-------------|
+| **Sprint Planning** | Time-box **C1** (why / goal) before **C2** (forecast); write **Sprint Goal** in the tracker. Stop when forecast is **realistic**, not when every backlog item is discussed. |
+| **Daily Scrum** | Keep **C3** only—defer **C2** reorder to PO outside the 15 minutes unless team policy allows a short “after the Daily” slot. |
+| **Sprint Review** | Show **Done** increment only; **C4** needs honest **feedback**, not a status deck. Capture product backlog **changes** visibly (C1 for next Sprint). |
+| **Retrospective** | **C5:** one or two **experiments** with owners; revisit **last** retro items at the start. |
+| **Sprint container** | Treat **C6** as **continuous** via **DoD** and integration—don’t skip tests “until the end of the Sprint.” |
+
+For **cross-methodology** blend tips (e.g. Scrumban), see [`methodology-bridge.md`](methodology-bridge.md).
+
+---
+
 ## Agentic note
 
 Human **accountability** for commitments and acceptance stays with [**roles**](../roles-archetypes.md); agents assist execution. Planning and Review still need **human** intent and **DoD** ownership—[`../agentic-sdlc.md`](../agentic-sdlc.md).

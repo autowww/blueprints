@@ -26,3 +26,17 @@
 ## Tracking
 
 **Cycle time** and **queue time** need **board/tracker** data; git shows **activity**, not **waiting** or **blocked** time—[`../kanban.md`](../kanban.md).
+
+---
+
+## Suggestions (Kanban-specific)
+
+| Practice | Suggestions |
+|----------|-------------|
+| **Replenishment** | Make **C2** **policy-driven**: who pulls, from which pool, under what **WIP** cap. Review **aging** before pulling new work. |
+| **Stand-up / sync** | Focus on **flow** and **blockers** (**C3**); if work ages without movement, treat as **C5** input (policy change). |
+| **Service delivery review** | Bring **metrics** (lead time, throughput, SLA breaches) for **C4**; agree **one** service improvement for **C5**. |
+| **Operations review** | Use for **dependencies** and **Steer** visibility—avoid duplicating team-level **C3** unless value is clear. |
+| **Policies / DoD** | Document **C6** per column in plain language; re-read when **defects** escape or **rework** spikes. |
+
+Crosswalk to other methodologies: [`methodology-bridge.md`](methodology-bridge.md).

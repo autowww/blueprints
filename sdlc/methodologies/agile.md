@@ -46,7 +46,7 @@ The [**Twelve Principles**](https://agilemanifesto.org/principles.html) behind t
 
 **Roles:** blending frameworks still means naming **who** holds each **archetype**—see [`roles-archetypes.md`](roles-archetypes.md) (per-archetype detail + [Methodology roll-up](roles-archetypes.md#methodology-roll-up-all-archetypes-at-a-glance)).
 
-**Ceremonies:** pick **intent types** from [`ceremonies/ceremony-foundation.md`](ceremonies/ceremony-foundation.md), then map your blend using the relevant **forks** in [`ceremonies/README.md`](ceremonies/README.md).
+**Ceremonies:** pick **intent types** from [`ceremonies/ceremony-foundation.md`](ceremonies/ceremony-foundation.md), use [`ceremonies/methodology-bridge.md`](ceremonies/methodology-bridge.md) to align vocabulary across frameworks, then map your blend with the **forks** in [`ceremonies/README.md`](ceremonies/README.md).
 
 ---
 

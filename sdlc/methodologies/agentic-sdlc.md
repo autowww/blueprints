@@ -62,6 +62,7 @@ Repos may adopt an optional **tracking foundation** under `sdlc/` (see [`templat
 
 ## Related blueprint guides
 
+- [Spec-driven development](spec-driven-development.md) — **durable specs in the repo** (acceptance criteria, IDs) before large agent-driven edits; complements this guide. Handbook: [`../docs/spec-driven.html`](../docs/spec-driven.html).  
 - [Roles & archetypes](roles-archetypes.md) — human **accountability** vs **Contributor** identity when agents commit.  
 - [Ceremonies](ceremonies/README.md) — **foundation** intents vs methodology **forks**; where humans stay in the loop for planning and acceptance.  
 - [Agile (umbrella)](agile.md)  

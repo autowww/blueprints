@@ -35,7 +35,7 @@
         </div>
       </div>
       <main id="main" class="doc-main col-lg-9 col-xl-10 px-3 px-md-4 pt-4 pt-lg-3 pb-4">
-        <div class="mx-auto doc-content">
+        <div class="mx-auto doc-content-wide px-lg-1">
           <header class="mb-3 pb-3 border-bottom">
             <nav aria-label="breadcrumb"><ol class="breadcrumb small mb-3">
               <li class="breadcrumb-item"><a href="index.html">Handbook</a></li>
@@ -43,48 +43,112 @@
               <li class="breadcrumb-item active" aria-current="page">Agile</li>
             </ol></nav>
             <h1 class="font-display h2 fw-bold text-body mb-0">Agile (umbrella)</h1>
-            <p class="text-body-secondary small mt-2 mb-0">Values and principles; not a process — see Scrum, Kanban, and XP for concrete frameworks.</p>
+            <p class="text-body-secondary small mt-2 mb-0"><strong class="text-body">Values and principles</strong> (Manifesto)—not a single process. Frameworks (<strong class="text-body">Scrum</strong>, <strong class="text-body">Kanban</strong>, <strong class="text-body">XP</strong>) operationalize Agile in different ways; teams often <strong class="text-body">blend</strong>. Canonical: <a href="../methodologies/agile.md" class="link-success">agile.md</a>.</p>
           </header>
-          <section class="mt-3" id="process-overview">
-            <h2 class="font-display h5 fw-semibold">Process overview</h2>
+
+          <div class="row g-3 g-lg-4">
+            <div class="col-lg-8 col-xl-9 order-2 order-lg-1">
+
+          <section class="mb-4" id="values">
+            <h2 class="font-display h5 fw-semibold">Values &amp; principles</h2>
             <ul class="text-body-secondary small mb-3">
-              <li><strong class="text-body">Agile</strong> (capital A) usually means the <strong class="text-body">Manifesto + twelve principles</strong>: prioritize people, working software, collaboration, and responding to change.</li>
-              <li><strong class="text-body">Frameworks</strong> (Scrum, Kanban, XP, …) give concrete roles, events, or practices — teams often <strong class="text-body">blend</strong> them under the same values.</li>
-              <li>This blueprint’s <strong class="text-body">Phases A–F</strong> stay methodology-neutral; Agile informs <em>how</em> you run those phases, not a separate SDLC.</li>
+              <li><strong class="text-body">Manifesto (2001):</strong> individuals &amp; interactions, working software, customer collaboration, responding to change—over the items on the right (still valued).</li>
+              <li><strong class="text-body">Twelve principles</strong> expand delivery, feedback, and sustainable pace—see <a href="https://agilemanifesto.org/principles.html" class="link-success" rel="noopener">agilemanifesto.org/principles.html</a>.</li>
+              <li><strong class="text-body">This blueprint:</strong> <a href="phases.html" class="link-success">Phases A–F</a> stay methodology-neutral; Agile informs <em>how</em> you run them.</li>
             </ul>
-            <figure class="figure my-3 p-2 bg-white rounded-3 border shadow-sm">
-              <img src="assets/methodology-agile-umbrella.svg" width="720" height="120" class="figure-img img-fluid d-block mx-auto" style="max-width: 100%" alt="Diagram: Agile umbrella over Scrum, Kanban, and XP" />
-              <figcaption class="figure-caption text-center">Agile as umbrella — pick one primary rhythm, then add practices (e.g. XP) as needed.</figcaption>
-            </figure>
           </section>
-          <section class="mt-3"><h2 class="font-display h5 fw-semibold">Authoritative sources</h2>
-            <p class="small text-body-secondary mb-2">Each entry: what the link is and why this blueprint points to it—you can skip opening it if you already know the source.</p>
-            <ul class="text-body-secondary small list-unstyled">
-              <li class="mb-2"><a href="https://agilemanifesto.org/" class="link-success" rel="noopener">Agile Manifesto</a><span class="doc-external-summary">Original four values (2001)—defines “Agile” before you choose Scrum, Kanban, or XP.</span></li>
-              <li class="mb-2"><a href="https://agilemanifesto.org/principles.html" class="link-success" rel="noopener">Twelve Principles</a><span class="doc-external-summary">Expands the manifesto into concrete principles (delivery, feedback, sustainability).</span></li>
-              <li class="mb-2"><a href="https://www.agilealliance.org/" class="link-success" rel="noopener">Agile Alliance</a><span class="doc-external-summary">Nonprofit hub for articles, glossary, community—neutral background reading.</span></li>
-              <li class="mb-2"><a href="https://www.scrum.org/resources/what-is-scrum" class="link-success" rel="noopener">Scrum.org — What is Scrum?</a><span class="doc-external-summary">One framework often used under Agile values—helps if you picked Scrum as your cadence.</span></li>
-              <li class="mb-0"><a href="https://www.agilealliance.org/subway" class="link-success" rel="noopener">Agile Alliance — Subway map</a><span class="doc-external-summary">Visual map of Agile-related practices; orientation only, not a prescribed workflow.</span></li>
-            </ul></section>
-            <section class="mt-4 pt-3 border-top"><h2 class="font-display h5 fw-semibold">In this blueprint</h2>
-            <p class="text-body-secondary small mb-0"><code>SDLC.md</code> is methodology-neutral at the phase level; pick <strong class="text-body">Scrum</strong>, <strong class="text-body">Kanban</strong>, <strong class="text-body">phased</strong>, or <strong class="text-body">blends</strong> as your primary rhythm.</p></section>
+
+          <section class="mb-4 pt-3 border-top" id="umbrella">
+            <h2 class="font-display h5 fw-semibold">Umbrella over frameworks</h2>
+            <figure class="figure my-2 p-2 bg-white rounded-3 border shadow-sm">
+              <img src="assets/methodology-agile-umbrella.svg" width="720" height="120" class="figure-img img-fluid d-block mx-auto" style="max-width: 100%" alt="Agile umbrella over Scrum, Kanban, and XP" />
+              <figcaption class="figure-caption text-center">Pick one <strong class="text-body">primary rhythm</strong>, then add practices (e.g. XP engineering) and metrics (e.g. Kanban flow).</figcaption>
+            </figure>
+            <div class="border rounded-3 bg-white p-3 shadow-sm mt-3"><div class="mermaid small">flowchart TB
+  AG[Agile values / principles]
+  AG --> SC[Scrum cadence]
+  AG --> KB[Kanban flow]
+  AG --> XP[XP practices]
+  SC -.-> BL[Common blends]
+  KB -.-> BL
+  XP -.-> BL</div></div>
+            <p class="text-body-secondary small mt-2 mb-0">Mermaid is schematic—your org chart and tooling live in project docs.</p>
+          </section>
+
+          <section class="mb-4 pt-3 border-top" id="choose">
+            <h2 class="font-display h5 fw-semibold">Choosing a primary rhythm</h2>
+            <div class="doc-table-wrap mt-2">
+              <table class="table table-sm table-striped table-bordered mb-0">
+                <thead class="table-light"><tr><th scope="col">If you need…</th><th scope="col">Often start with…</th></tr></thead>
+                <tbody class="small text-body-secondary">
+                  <tr><td>Fixed iterations, regular stakeholder demos</td><td><a href="methodologies-scrum.html" class="link-success">Scrum</a></td></tr>
+                  <tr><td>Continuous flow, variable intake</td><td><a href="methodologies-kanban.html" class="link-success">Kanban</a></td></tr>
+                  <tr><td>Strong engineering discipline (TDD, CI, pairing)</td><td><a href="methodologies-xp.html" class="link-success">XP</a> + Scrum or Kanban</td></tr>
+                  <tr><td>Formal gates, baselines, regulated evidence</td><td><a href="methodologies-phased.html" class="link-success">Phased delivery</a> or hybrid</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="mb-4 pt-3 border-top" id="blueprint">
+            <h2 class="font-display h5 fw-semibold">In this blueprint</h2>
+            <ul class="text-body-secondary small mb-0">
+              <li><strong class="text-body">Roles:</strong> <a href="methodologies-roles.html" class="link-success">Archetypes</a> — name who holds Demand, Build, Flow, Assure, Steer even when blending.</li>
+              <li><strong class="text-body">Ceremonies:</strong> <a href="methodologies-ceremonies.html" class="link-success">C1–C6 intents</a> + methodology forks—same intent, different ritual names.</li>
+              <li><strong class="text-body">Agentic:</strong> <a href="methodologies-agentic.html" class="link-success">Agentic SDLC</a> layers on automation without replacing human acceptance.</li>
+            </ul>
+          </section>
+
+          <section class="mb-4 pt-3 border-top" id="sources">
+            <h2 class="font-display h5 fw-semibold">Authoritative sources</h2>
+            <p class="small text-body-secondary mb-2">Each entry: what it is and why this blueprint links to it.</p>
+            <ul class="text-body-secondary small list-unstyled mb-0">
+              <li class="mb-2"><a href="https://agilemanifesto.org/" class="link-success" rel="noopener">Agile Manifesto</a><span class="doc-external-summary">Original four values—defines Agile before you choose a framework.</span></li>
+              <li class="mb-2"><a href="https://agilemanifesto.org/principles.html" class="link-success" rel="noopener">Twelve Principles</a><span class="doc-external-summary">Delivery, feedback, sustainability.</span></li>
+              <li class="mb-2"><a href="https://www.agilealliance.org/" class="link-success" rel="noopener">Agile Alliance</a><span class="doc-external-summary">Hub, glossary, community context.</span></li>
+              <li class="mb-2"><a href="https://www.scrum.org/resources/what-is-scrum" class="link-success" rel="noopener">Scrum.org — What is Scrum?</a><span class="doc-external-summary">Common framework under Agile values.</span></li>
+              <li class="mb-0"><a href="https://www.agilealliance.org/subway" class="link-success" rel="noopener">Agile Alliance — Subway map</a><span class="doc-external-summary">Practice landscape; orientation, not a mandated workflow.</span></li>
+            </ul>
+          </section>
+
           <div class="alert alert-light border shadow-sm mt-4 py-3" role="note">
-            <p class="fw-semibold text-body mb-2">Full guide (canonical)</p>
-            <p class="small text-body-secondary mb-0">Authoritative depth, tables, and links live in Markdown: <a href="../methodologies/agile.md" class="link-success">agile.md</a> (in <code>blueprints/sdlc/methodologies/</code>).</p>
+            <p class="fw-semibold text-body mb-2">Canonical source</p>
+            <p class="small text-body-secondary mb-0">Full narrative: <a href="../methodologies/agile.md" class="link-success">agile.md</a>.</p>
           </div>
+
           <nav class="d-flex flex-wrap justify-content-between gap-2 mt-4 pt-3 border-top" aria-label="Chapter navigation">
-            <a href="methodologies.html" class="btn btn-outline-secondary btn-sm">← Methodologies hub</a>
-            <a href="governance.html" class="btn btn-outline-success btn-sm">Governance →</a>
+            <a href="methodologies-xp-process.html" class="btn btn-outline-secondary btn-sm">← XP — Process</a>
+            <a href="methodologies-agentic.html" class="btn btn-outline-success btn-sm">Agentic SDLC →</a>
           </nav>
           <footer class="mt-4 pt-3 border-top text-muted small">
             <p class="mb-1">Handbook last aligned with blueprint Markdown: <strong class="text-body">2026-03-20</strong>.</p>
             <p class="mb-0 text-secondary" style="font-size: 0.8rem">Styled with <a href="https://getbootstrap.com/docs/5.3/" class="link-success" rel="noopener">Bootstrap 5.3</a> (CDN).</p>
           </footer>
+
+            </div>
+            <div class="col-lg-4 col-xl-3 order-1 order-lg-2">
+              <nav class="doc-toc doc-toc-sticky border rounded bg-body shadow-sm" aria-label="On this page">
+                <p class="doc-toc-title px-3 pt-3 mb-0">On this page</p>
+                <div class="nav flex-column px-3 pb-3 small">
+                  <a class="nav-link fw-semibold py-1" href="#values">Values</a>
+                  <a class="nav-link fw-semibold py-1" href="#umbrella">Umbrella &amp; diagram</a>
+                  <a class="nav-link fw-semibold py-1" href="#choose">Choose rhythm</a>
+                  <a class="nav-link fw-semibold py-1" href="#blueprint">In this blueprint</a>
+                  <a class="nav-link fw-semibold py-1" href="#sources">Sources</a>
+                </div>
+              </nav>
+            </div>
+          </div>
         </div>
       </main>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   <script src="assets/docs-nav.js"></script>
+  <script src="assets/docs-toc-scrollspy.js"></script>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
+  </script>
 </body>
 </html>

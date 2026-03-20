@@ -4,9 +4,25 @@
 
 This file defines **why** recurring delivery collaboration exists in this blueprint—**without** Scrum, Kanban, or XP names. Methodology guides **map** their official events and practices **onto** these **intent types**.
 
-**Pairs with:** [`roles-archetypes.md`](../roles-archetypes.md) (**who**), [`SDLC.md`](../../SDLC.md) Phases A–F (**what artifacts the lifecycle expects**), and (in adopting repos) [`sdlc/TRACKING-FOUNDATION.md`](../../../../sdlc/TRACKING-FOUNDATION.md) (**contributor → events → work units**).
+**Pairs with:** [`roles-archetypes.md`](../roles-archetypes.md) (**who**), [`SDLC.md`](../../SDLC.md) Phases A–F (**what artifacts the lifecycle expects**), and (in adopting repos) [`sdlc/TRACKING-FOUNDATION.md`](../../../../sdlc/TRACKING-FOUNDATION.md) (**contributor → events → work units**). **SDD I/O (inputs/outputs/examples per C1–C6):** [`spec-driven/ceremonies-sdd.md`](../spec-driven/ceremonies-sdd.md) · template [`templates/sdd/CEREMONY-INTENT.template.md`](../../templates/sdd/CEREMONY-INTENT.template.md).
 
 **Forks (methodology-specific):** [Scrum](scrum.md) · [Kanban](kanban.md) · [Phased](phased.md) · [XP](xp.md) · [Index](README.md)
+
+**Bridge (intents ↔ methodology names):** [`methodology-bridge.md`](methodology-bridge.md) — crosswalk matrix, blend suggestions, how to map your calendar.
+
+---
+
+## Document map
+
+| Section | Contents |
+|---------|----------|
+| [Vocabulary](#vocabulary) | Ceremony, intent, foundation, fork |
+| [Six intent types](#six-ceremony-intent-types) | C1–C6 definitions |
+| [Intent × phases](#intent--sdlc-phases-typical-touch) | A–F touch matrix |
+| [Intent × archetypes](#intent--archetypes-typical-facilitation) | Who leads |
+| [Practice suggestions](#practice-suggestions-by-intent) | Actionable guidance per C1–C6 |
+| [Principles](#principles) | Design rules |
+| [Related reading](#related-reading) | Links |
 
 ---
 
@@ -71,6 +87,54 @@ Archetypes are defined in [`roles-archetypes.md`](../roles-archetypes.md). “Le
 
 ---
 
+## Practice suggestions (by intent)
+
+Methodology-neutral **hints** for running or replacing ceremonies. For **named** Scrum/Kanban/phased/XP rituals and per-event tips, see the [**methodology bridge**](methodology-bridge.md) and each [fork](README.md).
+
+### C1 — Align on intent
+
+- **Minimum viable:** Written **goal** + **out of scope** for the next horizon; one **Demand**-owned sentence stakeholders can repeat.  
+- **Prefer:** Tie alignment to **measurable** outcomes or **user** stories, not only internal tasks.  
+- **Avoid:** Re-aligning **only** in crisis—schedule **before** commitment (C2) breaks.  
+- **Doc hook:** Update [`SDLC.md`](../../SDLC.md) Phase A–B artifacts when priorities or acceptance shift.
+
+### C2 — Commit / select work
+
+- **Minimum viable:** Explicit **list** of work items entering execution with **WIP** or **Sprint** boundary visible on the board/tracker.  
+- **Prefer:** **Capacity** check (people, skills, dependencies)—not only PO desire.  
+- **Avoid:** Silent **overflow** (everything “in progress”); forces honest **descope** or **defer**.  
+- **Doc hook:** WBS/backlog **status** and **ready** criteria per Phase B.
+
+### C3 — Sync progress
+
+- **Minimum viable:** **Blockers** visible within 24h (board column, chat, or stand-up).  
+- **Prefer:** **Dependency** ownership named (person or team), not “the org.”  
+- **Avoid:** Status-only round-robin with **no** decisions or escalations—merge with **C5** if the team only vents.  
+- **Doc hook:** Link **commits/PRs** to work units so sync can reference **evidence** ([`TRACKING-FOUNDATION`](../../../../sdlc/TRACKING-FOUNDATION.md)).
+
+### C4 — Inspect outcome
+
+- **Minimum viable:** **Demo** or **walkthrough** of **Done** work against acceptance; notes captured.  
+- **Prefer:** **Stakeholders** who can say “yes / not yet / change X”—not only developers.  
+- **Avoid:** **Deck-only** reviews with no running increment when software is the product.  
+- **Doc hook:** Phase E exit, Phase F readiness; story **done** per [`SDLC.md`](../../SDLC.md) §3.
+
+### C5 — Improve the system
+
+- **Minimum viable:** **One** agreed experiment or policy tweak per cadence with **owner** and **date**.  
+- **Prefer:** **Data** from board/CI/incidents—not only opinions.  
+- **Avoid:** **Blame** framing; keep focus on **system** and **interfaces**.  
+- **Doc hook:** Optional `sdlc/NOTES.md` or retro log in project repo.
+
+### C6 — Assure / release
+
+- **Minimum viable:** **Checklist** (tests, security, rollback) attached to **release** or **merge to main**.  
+- **Prefer:** **Automate** repeatable checks in CI; humans for **judgment** calls.  
+- **Avoid:** **Assurance** only at the end of a long branch—shift **left** per risk.  
+- **Doc hook:** Phase F artifacts, `docs/release/`, CI docs per [`SDLC.md`](../../SDLC.md) §7.
+
+---
+
 ## Principles
 
 1. **Ceremony ≠ meeting** — The **outcome** matters; async boards, recorded reviews, or written gate packets can satisfy the **intent** if transparency and decisions are real.
@@ -85,6 +149,7 @@ Archetypes are defined in [`roles-archetypes.md`](../roles-archetypes.md). “Le
 
 | Doc | Why |
 |-----|-----|
+| [`methodology-bridge.md`](methodology-bridge.md) | **Crosswalk** C1–C6 ↔ Scrum/Kanban/phased/XP names |
 | [`roles-archetypes.md`](../roles-archetypes.md) | **Who** leads and tweaks by methodology |
 | [`scrum.md`](../scrum.md) | Scrum events (source narrative) |
 | [`kanban.md`](../kanban.md) | Flow, replenishment, reviews |

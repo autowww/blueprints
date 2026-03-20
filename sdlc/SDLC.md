@@ -6,6 +6,8 @@ This describes a **generic** delivery flow and **which documentation** to update
 
 **Ceremonies (foundation vs forks):** methodology-neutral **intent types** (why recurring collaboration exists) and per-methodology mappings — [`methodologies/ceremonies/README.md`](methodologies/ceremonies/README.md); handbook [Ceremonies](docs/methodologies-ceremonies.html).
 
+**Bridge (intents ↔ Scrum / Kanban / phased / XP names):** [`methodologies/ceremonies/methodology-bridge.md`](methodologies/ceremonies/methodology-bridge.md) — matrix, blend suggestions, calendar mapping.
+
 **Path examples** below use a common `docs/` layout; adjust names if your tree differs.
 
 ---
@@ -22,6 +24,23 @@ This describes a **generic** delivery flow and **which documentation** to update
 ---
 
 ## 2. Phases & documentation obligations
+
+### Ceremony intents vs phases (C1–C6)
+
+Recurring collaboration (**ceremonies**) should **cover** the six **intent types** over time: **C1** Align, **C2** Commit, **C3** Sync, **C4** Inspect, **C5** Improve, **C6** Assure/release — see [`methodologies/ceremonies/ceremony-foundation.md`](methodologies/ceremonies/ceremony-foundation.md). They **do not replace** the artifact tables below; they explain **why** teams hold planning, reviews, and gates.
+
+| Phase | Intents most engaged (typical) | Illustrative ceremony pressure |
+|-------|-------------------------------|--------------------------------|
+| **A** Discover | **C1**, **C2** | Prioritization, roadmap/backlog sessions |
+| **B** Specify | **C1**, **C6** (readiness) | Refinement, “definition of ready,” risk triage |
+| **C** Design | **C1**, **C6** | Design review, NFR alignment |
+| **D** Build | **C2**, **C3**, **C6** (ongoing) | Pull/commit selection, standups, CI as assurance |
+| **E** Verify | **C3**, **C4**, **C6** | Test progress sync, stakeholder demo, quality gates |
+| **F** Release | **C4**, **C6** | Go/no-go, release approval, post-release learnings → **C5** |
+
+**Methodology mapping:** the same intents appear as **Sprint Planning**, **replenishment**, **tollgates**, **planning game**, etc. — [`methodologies/ceremonies/methodology-bridge.md`](methodologies/ceremonies/methodology-bridge.md).
+
+---
 
 ### Phase A — Discover / prioritize
 

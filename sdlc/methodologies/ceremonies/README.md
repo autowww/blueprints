@@ -4,7 +4,8 @@
 
 | Layer | File | Contents |
 |-------|------|----------|
-| **Foundation** | [`ceremony-foundation.md`](ceremony-foundation.md) | **Intent types** (why people meet or sync), ties to [`SDLC.md`](../../SDLC.md) phases and [**roles** archetypes](../roles-archetypes.md); principles; tracking limits. |
+| **Foundation** | [`ceremony-foundation.md`](ceremony-foundation.md) | **Intent types** (C1–C6), phase + archetype matrices, **practice suggestions** per intent, principles. |
+| **Bridge** | [`methodology-bridge.md`](methodology-bridge.md) | **Crosswalk** intent ↔ Scrum / Kanban / phased / XP **names**; blend tips; how to map your calendar. |
 | **Fork — Scrum** | [`scrum.md`](scrum.md) | Scrum **events** mapped to foundation intents; links to [Scrum guide](../scrum.md) + Scrum Guide. |
 | **Fork — Kanban** | [`kanban.md`](kanban.md) | Kanban **feedback loops** and common rituals mapped to intents; links to [Kanban](../kanban.md). |
 | **Fork — Phased** | [`phased.md`](phased.md) | **Gates**, phase reviews, formal assurance mapped to intents; links to [Phased delivery](../phased-delivery.md). |
@@ -14,4 +15,4 @@
 
 **Audience:** Teams using [`blueprints/sdlc/`](../../README.md). Calendar, attendees, and tool URLs stay in the **project** (`sdlc/`, `docs/`), not here.
 
-**Read order:** [`ceremony-foundation.md`](ceremony-foundation.md) first, then **one** methodology fork that matches your primary cadence.
+**Read order:** [`ceremony-foundation.md`](ceremony-foundation.md) (intents + **practice suggestions**) → [`methodology-bridge.md`](methodology-bridge.md) for **vocabulary mapping** and **blends** → one **fork** above (e.g. [Scrum](scrum.md)) for event-level detail and methodology-specific **suggestions**.

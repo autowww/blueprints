@@ -1,6 +1,6 @@
 # External reference URLs (methodology guides)
 
-Curated list of **https** targets cited in [`blueprints/sdlc/methodologies/`](README.md) and mirrored in [`docs/methodologies-*.html`](../docs/methodologies.html). When you change a URL in Markdown, update the matching handbook page’s “Authoritative sources” (or equivalent) section.
+Curated list of **https** targets cited in [`blueprints/sdlc/methodologies/`](README.md) and mirrored in [`docs/methodologies-*.html`](../docs/methodologies.html) and in generated **Process & flows** pages (`methodologies-*-process.html`). When you change a URL in Markdown, update the matching handbook page’s “Authoritative sources” / “Authoritative sources & further reading” section (and re-run `build_methodology_chapters.py` for generated HTML).
 
 Each row includes an **executive summary**: what the link is and **why this blueprint points to it**, so readers can decide whether to open it.
 
@@ -19,6 +19,8 @@ Each row includes an **executive summary**: what the link is and **why this blue
 | ProKanban.org | https://prokanban.org/ | **Professional Kanban** community—training and certification paths; optional depth. |
 | Agile Alliance — Scrum (glossary) | https://www.agilealliance.org/glossary/scrum/ | Short **Scrum** entry plus community context—handy glossary alongside the Guide. |
 | ISO/IEC/IEEE 12207 (catalogue) | https://www.iso.org/standard/63712.html | **International standard** for software life-cycle processes—formal anchor for phased/regulated delivery (catalogue entry; full text is paid/licensed). |
+| PMI — Standards & guides | https://www.pmi.org/standards | **PMBOK** and related standards—common vocabulary for phases, knowledge areas, and governance when formalizing gates and project framing (complements ISO 12207). *Note:* some environments get **HTTP 403** to `pmi.org` from automated `curl`; try a normal browser. |
+| Wikipedia — PMBOK | https://en.wikipedia.org/wiki/Project_Management_Body_of_Knowledge | **Overview** of PMI’s Project Management Body of Knowledge—phases and knowledge areas in encyclopedia form when licensed PMBOK text is unavailable. |
 | Wikipedia — Waterfall model | https://en.wikipedia.org/wiki/Waterfall_model | **Informal** history and diagram of sequential phases—context for phased delivery, not a standard. |
 | Wikipedia — Software development process (Waterfall section) | https://en.wikipedia.org/wiki/Software_development_process#Waterfall_development | **Waterfall as one lifecycle** among many—helps compare with iterative approaches. |
 | Wikipedia — Agile software development | https://en.wikipedia.org/wiki/Agile_software_development | **Contrast** between iterative Agile and plan-driven lifecycles—useful when arguing hybrids (phased gates + iterative build). |

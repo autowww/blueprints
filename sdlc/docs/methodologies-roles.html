@@ -61,6 +61,22 @@
             </ul>
           </section>
 
+          <section class="mb-4 pt-3 border-top" id="archetype-map">
+            <h2 class="font-display h5 fw-semibold">Five archetypes (diagram)</h2>
+            <p class="text-body-secondary small mb-2">Schematic—real orgs map multiple titles onto one archetype or split one archetype across people. Detail in sections 1–5 below.</p>
+            <div class="border rounded-3 bg-white p-3 shadow-sm"><div class="mermaid small">flowchart TB
+  DM[Demand and value]
+  BL[Build and integrate]
+  FL[Flow and improvement]
+  AS[Assure and ship]
+  ST[Steer and govern]
+  DM --- BL
+  BL --- FL
+  FL --- AS
+  AS --- ST
+  ST --- DM</div></div>
+          </section>
+
           <!-- 1 Demand & value -->
           <section class="mb-4 pt-3 border-top" id="demand-value">
             <h2 class="font-display h5 fw-semibold">1. Demand &amp; value</h2>
@@ -291,6 +307,7 @@
                 <p class="doc-toc-title px-3 pt-3 mb-0">On this page</p>
                 <div class="nav flex-column px-3 pb-3">
                   <a class="nav-link fw-semibold" href="#vocabulary">Vocabulary</a>
+                  <a class="nav-link fw-semibold" href="#archetype-map">Archetype map</a>
                   <a class="nav-link fw-semibold" href="#demand-value">1. Demand &amp; value</a>
                   <a class="nav-link fw-semibold" href="#build-integrate">2. Build &amp; integrate</a>
                   <a class="nav-link fw-semibold" href="#flow-improvement">3. Flow &amp; improvement</a>
@@ -325,5 +342,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   <script src="assets/docs-nav.js"></script>
   <script src="assets/docs-toc-scrollspy.js"></script>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
+  </script>
 </body>
 </html>

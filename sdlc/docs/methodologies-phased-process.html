@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SDLC blueprint — Phased — Process</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.cdnfonts.com/css/proxima-nova-2" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/docs-theme.css" />
+</head>
+<body class="bg-body-tertiary">
+  <a href="#main" class="skip-link">Skip to content</a>
+  <button type="button" class="btn btn-primary position-fixed top-0 start-0 m-3 d-lg-none shadow" style="z-index: 1040" data-bs-toggle="offcanvas" data-bs-target="#docNavOffcanvas" aria-controls="docNavOffcanvas" aria-label="Open navigation">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/></svg>
+  </button>
+  <div class="container-fluid px-0">
+    <div class="row g-0 flex-lg-nowrap min-vh-100">
+      <aside class="col-lg-3 col-xl-2 d-none d-lg-flex flex-column bg-dark text-white border-end p-0" style="min-height: 100vh">
+        <div class="p-3 border-bottom border-secondary">
+          <p class="fs-6 fw-semibold text-white mb-0">SDLC blueprint</p>
+          <p class="small text-secondary mt-2 mb-0">Human handbook · Product-agnostic</p>
+        </div>
+        <nav class="nav-scroll flex-grow-1 px-2 py-3" id="doc-sidebar-nav" aria-label="Handbook chapters"></nav>
+      </aside>
+      <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="docNavOffcanvas" aria-labelledby="docNavLabel">
+        <div class="offcanvas-header border-bottom border-secondary">
+          <h5 class="offcanvas-title fs-6 fw-semibold" id="docNavLabel">SDLC blueprint</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body p-0">
+          <nav class="nav flex-column px-2 py-2 nav-scroll" id="doc-offcanvas-nav" aria-label="Handbook chapters mobile"></nav>
+        </div>
+      </div>
+      <main id="main" class="doc-main col-lg-9 col-xl-10 px-3 px-md-4 pt-4 pt-lg-3 pb-4">
+        <div class="mx-auto doc-content-wide px-lg-1">
+          <header class="mb-3 pb-3 border-bottom">
+            <nav aria-label="breadcrumb"><ol class="breadcrumb small mb-3"><li class="breadcrumb-item"><a href="index.html">Handbook</a></li><li class="breadcrumb-item"><a href="methodologies.html">Methodologies</a></li><li class="breadcrumb-item"><a href="methodologies-phased.html">Phased delivery</a></li><li class="breadcrumb-item active" aria-current="page">Process</li></ol></nav>
+            <h1 class="font-display h2 fw-bold text-body mb-0">Phased delivery — Process &amp; flows</h1>
+            <p class="text-body-secondary small mt-2 mb-0">Mermaid maps, gate/CR/traceability narrative, and standards-oriented links.</p>
+          </header>
+          <div class="row g-3 g-lg-4">
+            <div class="col-lg-8 col-xl-9 order-2 order-lg-1">
+<section class="mb-4" id="overview"><h2 class="font-display h5 fw-semibold">Overview</h2><p class="text-body-secondary small mb-0">Stages, gate decisions, change control, and traceability—typical of <strong class="text-body">plan-driven</strong> and regulated contexts. Adapt names to your org; keep the intent: explicit baselines, decisions, and evidence. Canonical: <a href="../methodologies/phased/process-and-flows.md" class="link-success">process-and-flows.md</a>.</p></section>
+<section class="mb-4 pt-3 border-top" id="diagrams"><h2 class="font-display h5 fw-semibold">Diagrams</h2><p class="text-body-secondary small mb-2">Rendered when JavaScript runs. Same diagrams in canonical Markdown.</p><div class="border rounded-3 bg-white p-3 shadow-sm my-3"><div class="mermaid small">flowchart LR
+  I[Initiate] --&gt; P[Plan]
+  P --&gt; D[Design]
+  D --&gt; B[Build]
+  B --&gt; T[Test]
+  T --&gt; U[UAT]
+  U --&gt; R[Release]
+  R --&gt; O[Operate]</div></div><div class="border rounded-3 bg-white p-3 shadow-sm my-3"><div class="mermaid small">flowchart TD
+  G[Gate pack] --&gt; C{Exit criteria met?}
+  C --&gt;|No| H[Hold + actions]
+  H --&gt; G
+  C --&gt;|Yes| N{Sponsor approves?}
+  N --&gt;|No| X[Defer / kill]
+  N --&gt;|Yes| Y[Next stage]</div></div><div class="border rounded-3 bg-white p-3 shadow-sm my-3"><div class="mermaid small">flowchart LR
+  CR[Change request] --&gt; IA[Impact analysis]
+  IA --&gt; B{Steer decision}
+  B --&gt;|Approve| BL[Re-baseline]
+  B --&gt;|Reject| Q[Queue / drop]</div></div><div class="border rounded-3 bg-white p-3 shadow-sm my-3"><div class="mermaid small">flowchart LR
+  Req[Requirement ID] --&gt; DS[Design ref]
+  DS --&gt; TC[Test case]
+  TC --&gt; RN[Release note]</div></div></section>
+<section class="mb-4 pt-3 border-top" id="flow-details"><h2 class="font-display h5 fw-semibold">Flow details (walkthrough)</h2><h3 class="font-display h6 fw-semibold text-body mt-1 mb-2">Stage sequence</h3><p class="text-body-secondary small mb-0">This linear chain is a teaching simplification: real programs often overlap design and build or run rolling UAT, subject to governance. Governance gates usually sit on transitions: each stage produces a baseline (scope, design, test strategy) that the next stage consumes. Map your organization’s named stages onto blueprint phases A–F in RAID and the handbook so audits and agents share one vocabulary.</p><h3 class="font-display h6 fw-semibold text-body mt-3 mb-2">Gate decision</h3><p class="text-body-secondary small mb-0">A gate pack proves exit criteria for the stage—evidence of quality, risk treatment, and readiness. If criteria fail, the stage is held with corrective actions rather than rubber-stamping. Sponsor or steering approval is an explicit decision to spend and commit to the next baseline; defer, kill, or replan are valid outcomes.</p><h3 class="font-display h6 fw-semibold text-body mt-3 mb-2">Change control (scope)</h3><p class="text-body-secondary small mb-0">Change requests capture proposed deviation from the approved baseline. Impact analysis covers schedule, cost, risk, and traceability. Steering approves (re-baseline, often with versioned artifacts) or rejects (queue for a later release or drop). Ad-hoc scope without this path erodes traceability and auditability.</p><h3 class="font-display h6 fw-semibold text-body mt-3 mb-2">Traceability thread</h3><p class="text-body-secondary small mb-0">Regulated and large-scale delivery depends on forward and backward trace: requirement IDs link to design references, test cases, and release notes. This supports impact analysis when a defect or CR arrives and demonstrates coverage to auditors—not optional when gates are meaningful.</p></section>
+<section class="mb-4 pt-3 border-top" id="af"><h2 class="font-display h5 fw-semibold">Phases A–F (typical mapping)</h2><div class="doc-table-wrap mt-2"><table class="table table-sm table-bordered mb-0 table-striped"><thead class="table-light"><tr><th scope='col'>Blueprint phase</th><th scope='col'>Typical phased locus</th></tr></thead><tbody class="small text-body-secondary"><tr><td>A Shape</td><td>Initiate; charter; high-level requirements</td></tr><tr><td>B Plan</td><td>Planning; WBS; schedule baseline</td></tr><tr><td>C Build</td><td>Design and implementation per baseline</td></tr><tr><td>D Verify</td><td>Test phases; inspections; exit evidence</td></tr><tr><td>E Release</td><td>UAT; deployment; handover</td></tr><tr><td>F Learn</td><td>Operate; warranty; benefits realization</td></tr></tbody></table></div></section>
+<section class="mb-4 pt-3 border-top" id="sources"><h2 class="font-display h5 fw-semibold">Authoritative sources &amp; further reading</h2><ul class="list-unstyled small text-body-secondary mb-0"><li class="mb-2"><a href="https://www.iso.org/standard/63712.html" class="link-success" rel="noopener">ISO/IEC/IEEE 12207 (catalogue)</a><span class="doc-external-summary">International software life-cycle process standard—formal anchor for phased / regulated lifecycles (full text is licensed).</span></li><li class="mb-2"><a href="https://en.wikipedia.org/wiki/Project_Management_Body_of_Knowledge" class="link-success" rel="noopener">Wikipedia — Project Management Body of Knowledge (PMBOK)</a><span class="doc-external-summary">Encyclopedia overview of PMI’s knowledge areas and process groups—frames phased governance when full PMBOK text is licensed; see also PMI.org in REFERENCE-LINKS.md.</span></li><li class="mb-2"><a href="https://en.wikipedia.org/wiki/Waterfall_model" class="link-success" rel="noopener">Wikipedia — Waterfall model</a><span class="doc-external-summary">Informal history and diagrams of sequential delivery—context, not a normative substitute for your SDLC policy.</span></li><li class="mb-0"><a href="https://en.wikipedia.org/wiki/Agile_software_development" class="link-success" rel="noopener">Wikipedia — Agile software development</a><span class="doc-external-summary">Contrast with iterative methods—useful when blending phase gates with iterative build inside stages.</span></li></ul><p class="small text-body-secondary mb-0 mt-3">Full curated list with matching blurbs: <a href="../methodologies/REFERENCE-LINKS.md" class="link-success"><code>REFERENCE-LINKS.md</code></a> (repository path).</p></section>
+            </div>
+            <div class="col-lg-4 col-xl-3 order-1 order-lg-2">
+              <nav class="doc-toc doc-toc-sticky border rounded bg-body shadow-sm" aria-label="On this page">
+                <p class="doc-toc-title px-3 pt-3 mb-0">On this page</p>
+                <div class="nav flex-column px-3 pb-3 small">
+<a class="nav-link fw-semibold py-1" href="#overview">Overview</a><a class="nav-link fw-semibold py-1" href="#diagrams">Diagrams</a><a class="nav-link fw-semibold py-1" href="#flow-details">Flow details</a><a class="nav-link fw-semibold py-1" href="#af">A–F map</a><a class="nav-link fw-semibold py-1" href="#sources">Sources</a>
+                </div>
+              </nav>
+            </div>
+          </div>
+<div class="alert alert-light border shadow-sm mt-4 py-3" role="note"><p class="fw-semibold text-body mb-2">Canonical source</p><p class="small text-body-secondary mb-0">Edit <a href="../methodologies/phased/process-and-flows.md" class="link-success"><code>methodologies/phased/process-and-flows.md</code></a> first; regenerate this page with <code>build_methodology_chapters.py</code>.</p></div>
+          <nav class="d-flex flex-wrap justify-content-between gap-2 mt-4 pt-3 border-top" aria-label="Chapter navigation">
+            <a href="methodologies-phased-ceremonies.html" class="btn btn-outline-secondary btn-sm">← Ceremonies</a>
+            <a href="methodologies-xp.html" class="btn btn-outline-success btn-sm">XP →</a>
+          </nav>
+          <footer class="mt-4 pt-3 border-top text-muted small">
+            <p class="mb-1">Handbook last aligned with blueprint Markdown: <strong class="text-body">2026-03-20</strong>.</p>
+            <p class="mb-0 text-secondary" style="font-size: 0.8rem">Styled with <a href="https://getbootstrap.com/docs/5.3/" class="link-success" rel="noopener">Bootstrap 5.3</a> (CDN).</p>
+          </footer>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="assets/docs-nav.js"></script>
+  <script src="assets/docs-toc-scrollspy.js"></script>
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
+  </script>
+
+</body>
+</html>

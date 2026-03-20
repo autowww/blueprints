@@ -71,6 +71,12 @@ Many teams use **Scrum** events with **Kanban** flow metrics, or **Scrumban** hy
 
 ---
 
+## Prescriptive deep dive (teams)
+
+Package **[`kanban/README.md`](kanban/README.md)** — foundation fit, roles (SRM/team/coach), ceremonies (replenishment, stand-up, delivery review, SDR), process maps. Handbook: [`methodologies-kanban-foundation.html`](../docs/methodologies-kanban-foundation.html) through [`methodologies-kanban-process.html`](../docs/methodologies-kanban-process.html).
+
+---
+
 ## Further reading
 
 - [Scrum.org — Kanban Guide for Scrum Teams (PDF)](https://scrum.org/resources/kanban-guide-scrum-teams) — Same **Scrum+Kanban** integration guide; PDF format for offline reading.  

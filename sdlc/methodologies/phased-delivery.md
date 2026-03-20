@@ -68,6 +68,12 @@ It contrasts with **iterative** Agile delivery: phases emphasize **upfront basel
 
 ---
 
+## Prescriptive deep dive (teams)
+
+Package **[`phased/README.md`](phased/README.md)** — stages vs A–F, gate roles, ceremonies (charter, TRR, UAT, PIR), flow maps. Handbook: [`methodologies-phased-foundation.html`](../docs/methodologies-phased-foundation.html) through [`methodologies-phased-process.html`](../docs/methodologies-phased-process.html).
+
+---
+
 ## Further reading
 
 - Project [`TRACKING-CHALLENGES.md`](../../../sdlc/TRACKING-CHALLENGES.md) — phased / Waterfall-oriented challenges  

@@ -26,3 +26,17 @@ Names vary by standard (e.g. ISO/IEC/IEEE 12207-style lifecycles). Illustrative 
 ## Tracking vs compliance
 
 **Git** shows engineering **activity**; **signatures**, **baselines**, and **gate minutes** usually live in **ALM, QMS, or document control**—[`../phased-delivery.md`](../phased-delivery.md).
+
+---
+
+## Suggestions (phased delivery)
+
+| Pattern | Suggestions |
+|---------|-------------|
+| **Requirements / design reviews** | Treat as **C1 + C6**: alignment **and** readiness to freeze; record **explicit** waivers if you proceed with known gaps. |
+| **Phase exit / tollgate** | **Agenda** per intent: evidence (**C6**), stakeholder acceptance (**C4**), **go/no-go** (**Steer**). Don’t merge **C5** into gate unless you time-box it. |
+| **UAT** | Pure **C4** for product fit; separate from **technical** test exit (**C6**) when org structure blurs them. |
+| **Handoffs** | Between phases, run a **short C3**-style sync on **interfaces** and **traceability ids**—reduces “wrong build” at next gate. |
+| **Hybrids** | If you iterate **inside** implementation, still hold **C4** mini-reviews so **C6** at gate isn’t the first inspection. |
+
+Bridge matrix: [`methodology-bridge.md`](methodology-bridge.md).

@@ -20,3 +20,17 @@ XP emphasizes **values** and **technical practices**; some map cleanly to **cere
 | **On-site customer** | **C1** + **C4** (ongoing) | **Demand** archetype **embedded**—reduces need for heavy periodic **C4** batches. |
 
 **C6** is **strongly embedded** in **TDD**, **CI**, and **collective ownership**—see [`../xp.md`](../xp.md).
+
+---
+
+## Suggestions (XP-specific)
+
+| Practice / area | Suggestions |
+|-----------------|-------------|
+| **Planning game** | Keep slices **small** enough that **C2** is frequent; if planning drifts long, you’ve smuggled in **C1** without time-box. |
+| **On-site customer** | Use **continuous C1/C4**; still schedule **explicit** checkpoints if the customer is **part-time** or a proxy. |
+| **Pairing / ensemble** | Treat as **live C3 + C6** for the shared task; ensure **cross-pair** sync exists for **system** integration. |
+| **Small releases** | Each release is a **C4** opportunity; if releases are **too** small for stakeholders, batch **demos** but not **integration**. |
+| **Retro / coach** | If you skip formal **C5**, get improvement signal from **metrics** (CI, defects) and **pair rotation** feedback. |
+
+Vocabulary crosswalk: [`methodology-bridge.md`](methodology-bridge.md).

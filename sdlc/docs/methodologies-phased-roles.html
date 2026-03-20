@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SDLC blueprint — Phased — Roles</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.cdnfonts.com/css/proxima-nova-2" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/docs-theme.css" />
+</head>
+<body class="bg-body-tertiary">
+  <a href="#main" class="skip-link">Skip to content</a>
+  <button type="button" class="btn btn-primary position-fixed top-0 start-0 m-3 d-lg-none shadow" style="z-index: 1040" data-bs-toggle="offcanvas" data-bs-target="#docNavOffcanvas" aria-controls="docNavOffcanvas" aria-label="Open navigation">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/></svg>
+  </button>
+  <div class="container-fluid px-0">
+    <div class="row g-0 flex-lg-nowrap min-vh-100">
+      <aside class="col-lg-3 col-xl-2 d-none d-lg-flex flex-column bg-dark text-white border-end p-0" style="min-height: 100vh">
+        <div class="p-3 border-bottom border-secondary">
+          <p class="fs-6 fw-semibold text-white mb-0">SDLC blueprint</p>
+          <p class="small text-secondary mt-2 mb-0">Human handbook · Product-agnostic</p>
+        </div>
+        <nav class="nav-scroll flex-grow-1 px-2 py-3" id="doc-sidebar-nav" aria-label="Handbook chapters"></nav>
+      </aside>
+      <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="docNavOffcanvas" aria-labelledby="docNavLabel">
+        <div class="offcanvas-header border-bottom border-secondary">
+          <h5 class="offcanvas-title fs-6 fw-semibold" id="docNavLabel">SDLC blueprint</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body p-0">
+          <nav class="nav flex-column px-2 py-2 nav-scroll" id="doc-offcanvas-nav" aria-label="Handbook chapters mobile"></nav>
+        </div>
+      </div>
+      <main id="main" class="doc-main col-lg-9 col-xl-10 px-3 px-md-4 pt-4 pt-lg-3 pb-4">
+        <div class="mx-auto doc-content-wide px-lg-1">
+          <header class="mb-3 pb-3 border-bottom">
+            <nav aria-label="breadcrumb"><ol class="breadcrumb small mb-3"><li class="breadcrumb-item"><a href="index.html">Handbook</a></li><li class="breadcrumb-item"><a href="methodologies.html">Methodologies</a></li><li class="breadcrumb-item"><a href="methodologies-phased.html">Phased delivery</a></li><li class="breadcrumb-item active" aria-current="page">Roles</li></ol></nav>
+            <h1 class="font-display h2 fw-bold text-body mb-0">Phased delivery — Roles</h1>
+            <p class="text-body-secondary small mt-2 mb-0">Sponsor, PM, BA, tech lead, team.</p>
+          </header>
+          <div class="row g-3 g-lg-4">
+            <div class="col-lg-8 col-xl-9 order-2 order-lg-1">
+<section class="mb-4" id="overview"><h2 class="font-display h5 fw-semibold">Overview</h2><p class="text-body-secondary small mb-0">Prescriptive roles for gated delivery. Canonical: <a href="../methodologies/phased/roles.md" class="link-success">roles.md</a>.</p></section>
+<section class="mb-4 pt-3 border-top" id="sponsor"><h2 class="font-display h5 fw-semibold">Sponsor / SRO</h2><div class="doc-table-wrap mt-2"><table class="table table-sm table-bordered mb-0 table-striped"><thead class="table-light"><tr><th scope='col'>Aspect</th><th scope='col'>Guidance</th></tr></thead><tbody class="small text-body-secondary"><tr><td>Accountable for</td><td>Outcomes, funding, escalations; gate acceptance</td></tr><tr><td>Archetypes</td><td>Sponsor proxy, Steer</td></tr><tr><td>Outputs</td><td>Charter go, stage go, change exceptions</td></tr></tbody></table></div></section>
+<section class="mb-4 pt-3 border-top" id="pm"><h2 class="font-display h5 fw-semibold">Project / program manager</h2><div class="doc-table-wrap mt-2"><table class="table table-sm table-bordered mb-0 table-striped"><thead class="table-light"><tr><th scope='col'>Aspect</th><th scope='col'>Guidance</th></tr></thead><tbody class="small text-body-secondary"><tr><td>Accountable for</td><td>Schedule, budget, RAID, comms—not technical truth</td></tr><tr><td>Archetypes</td><td>Orchestrator</td></tr><tr><td>Outputs</td><td>Status, gate packs, dependencies</td></tr></tbody></table></div></section>
+<section class="mb-4 pt-3 border-top" id="ba"><h2 class="font-display h5 fw-semibold">Business analyst</h2><div class="doc-table-wrap mt-2"><table class="table table-sm table-bordered mb-0 table-striped"><thead class="table-light"><tr><th scope='col'>Aspect</th><th scope='col'>Guidance</th></tr></thead><tbody class="small text-body-secondary"><tr><td>Accountable for</td><td>Requirements traceability, elicitation, UAT often</td></tr><tr><td>Archetypes</td><td>Orchestrator, Implementer</td></tr><tr><td>Outputs</td><td>SRS, use cases, AC packs</td></tr></tbody></table></div></section>
+<section class="mb-4 pt-3 border-top" id="tech"><h2 class="font-display h5 fw-semibold">Tech lead / architect</h2><div class="doc-table-wrap mt-2"><table class="table table-sm table-bordered mb-0 table-striped"><thead class="table-light"><tr><th scope='col'>Aspect</th><th scope='col'>Guidance</th></tr></thead><tbody class="small text-body-secondary"><tr><td>Accountable for</td><td>Technical integrity, NFRs, build approach</td></tr><tr><td>Archetypes</td><td>Quality advocate, Implementer</td></tr><tr><td>Outputs</td><td>Design baselines, ADRs, test strategy</td></tr></tbody></table></div></section>
+<section class="mb-4 pt-3 border-top" id="team"><h2 class="font-display h5 fw-semibold">Delivery team</h2><div class="doc-table-wrap mt-2"><table class="table table-sm table-bordered mb-0 table-striped"><thead class="table-light"><tr><th scope='col'>Aspect</th><th scope='col'>Guidance</th></tr></thead><tbody class="small text-body-secondary"><tr><td>Accountable for</td><td>Work packages per baseline; escalate variances</td></tr><tr><td>Archetypes</td><td>Implementer, Quality advocate</td></tr><tr><td>Outputs</td><td>Build, test execution</td></tr></tbody></table></div></section>
+<section class="mb-4 pt-3 border-top" id="participation"><h2 class="font-display h5 fw-semibold">Ceremony participation</h2><div class="doc-table-wrap mt-2"><table class="table table-sm table-bordered mb-0 table-striped"><thead class="table-light"><tr><th scope='col'>Ceremony</th><th scope='col'>Sponsor</th><th scope='col'>PM</th><th scope='col'>BA</th><th scope='col'>Tech</th><th scope='col'>Team</th></tr></thead><tbody class="small text-body-secondary"><tr><td>Gate review</td><td>R</td><td>R</td><td>R</td><td>R</td><td>O</td></tr><tr><td>Weekly status</td><td>O</td><td>R</td><td>O</td><td>O</td><td>O</td></tr><tr><td>Design review</td><td>O</td><td>R</td><td>R</td><td>R</td><td>R</td></tr><tr><td>Test readiness</td><td>O</td><td>R</td><td>O</td><td>R</td><td>R</td></tr><tr><td>UAT</td><td>O</td><td>R</td><td>R</td><td>O</td><td>O</td></tr><tr><td>PIR</td><td>O</td><td>R</td><td>R</td><td>R</td><td>R</td></tr></tbody></table></div></section>
+<section class="mb-4 pt-3 border-top" id="diagram"><h2 class="font-display h5 fw-semibold">RACI at gate (concept)</h2><p class="text-body-secondary small mb-2">Rendered when JavaScript runs. Same diagrams in canonical Markdown.</p><div class="border rounded-3 bg-white p-3 shadow-sm my-3"><div class="mermaid small">flowchart TD
+  GP[Gate pack] --&gt; TL[Tech lead review]
+  TL --&gt; PM[PM integrates]
+  PM --&gt; SP[Sponsor decision]
+  SP --&gt;|Go| NX[Next stage]
+  SP --&gt;|Hold| AC[Actions]</div></div></section>
+            </div>
+            <div class="col-lg-4 col-xl-3 order-1 order-lg-2">
+              <nav class="doc-toc doc-toc-sticky border rounded bg-body shadow-sm" aria-label="On this page">
+                <p class="doc-toc-title px-3 pt-3 mb-0">On this page</p>
+                <div class="nav flex-column px-3 pb-3 small">
+<a class="nav-link fw-semibold py-1" href="#overview">Overview</a><a class="nav-link fw-semibold py-1" href="#sponsor">Sponsor</a><a class="nav-link fw-semibold py-1" href="#pm">PM</a><a class="nav-link fw-semibold py-1" href="#ba">BA</a><a class="nav-link fw-semibold py-1" href="#tech">Tech lead</a><a class="nav-link fw-semibold py-1" href="#team">Team</a><a class="nav-link fw-semibold py-1" href="#participation">Participation</a><a class="nav-link fw-semibold py-1" href="#diagram">Diagram</a>
+                </div>
+              </nav>
+            </div>
+          </div>
+<div class="alert alert-light border shadow-sm mt-4 py-3" role="note"><p class="fw-semibold text-body mb-2">Canonical source</p><p class="small text-body-secondary mb-0">Edit <a href="../methodologies/phased/roles.md" class="link-success"><code>methodologies/phased/roles.md</code></a> first; regenerate this page with <code>build_methodology_chapters.py</code>.</p></div>
+          <nav class="d-flex flex-wrap justify-content-between gap-2 mt-4 pt-3 border-top" aria-label="Chapter navigation">
+            <a href="methodologies-phased-foundation.html" class="btn btn-outline-secondary btn-sm">← Foundation</a>
+            <a href="methodologies-phased-ceremonies.html" class="btn btn-outline-success btn-sm">Ceremonies →</a>
+          </nav>
+          <footer class="mt-4 pt-3 border-top text-muted small">
+            <p class="mb-1">Handbook last aligned with blueprint Markdown: <strong class="text-body">2026-03-20</strong>.</p>
+            <p class="mb-0 text-secondary" style="font-size: 0.8rem">Styled with <a href="https://getbootstrap.com/docs/5.3/" class="link-success" rel="noopener">Bootstrap 5.3</a> (CDN).</p>
+          </footer>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="assets/docs-nav.js"></script>
+  <script src="assets/docs-toc-scrollspy.js"></script>
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
+  </script>
+
+</body>
+</html>

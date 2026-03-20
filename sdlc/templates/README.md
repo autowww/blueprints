@@ -19,3 +19,13 @@ Canonical files for a **mutable** `sdlc/` folder at repo root (see [`../SDLc-WOR
 |------|-----|
 | [**ROADMAP.template.md**](ROADMAP.template.md) | Optional milestone/epic table; pair with a WBS or backlog elsewhere. |
 | [**TEST-PLAN.template.md**](TEST-PLAN.template.md) | Optional scope-level test plan (levels, environments, traceability, exit criteria). |
+
+## Spec-driven (SDD) — ceremony & process I/O
+
+| Path | Use |
+|------|-----|
+| [**sdd/README.md**](sdd/README.md) | Blank specs for **inputs/outputs/preconditions** (agents, product, engineering). |
+| [**sdd/CEREMONY-INTENT.template.md**](sdd/CEREMONY-INTENT.template.md) | Map **C1–C6** or team rituals to SDD tables. |
+| [**sdd/PROCESS-SLOT.template.md**](sdd/PROCESS-SLOT.template.md) | Gates, release slices, toolchain steps. |
+
+Normative schema and worked examples: [`../methodologies/spec-driven/`](../methodologies/spec-driven/README.md) · handbook [`../docs/spec-driven-sdd-schema.html`](../docs/spec-driven-sdd-schema.html).
