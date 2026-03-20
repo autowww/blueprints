@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SDLC blueprint — Extreme Programming (XP)</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.cdnfonts.com/css/proxima-nova-2" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/docs-theme.css" />
+</head>
+<body class="bg-body-tertiary">
+  <a href="#main" class="skip-link">Skip to content</a>
+  <button type="button" class="btn btn-primary position-fixed top-0 start-0 m-3 d-lg-none shadow" style="z-index: 1040" data-bs-toggle="offcanvas" data-bs-target="#docNavOffcanvas" aria-controls="docNavOffcanvas" aria-label="Open navigation">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/></svg>
+  </button>
+  <div class="container-fluid px-0">
+    <div class="row g-0 flex-lg-nowrap min-vh-100">
+      <aside class="col-lg-3 col-xl-2 d-none d-lg-flex flex-column bg-dark text-white border-end p-0" style="min-height: 100vh">
+        <div class="p-3 border-bottom border-secondary">
+          <p class="fs-6 fw-semibold text-white mb-0">SDLC blueprint</p>
+          <p class="small text-secondary mt-2 mb-0">Human handbook · Product-agnostic</p>
+        </div>
+        <nav class="nav-scroll flex-grow-1 px-2 py-3" id="doc-sidebar-nav" aria-label="Handbook chapters"></nav>
+      </aside>
+      <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="docNavOffcanvas" aria-labelledby="docNavLabel">
+        <div class="offcanvas-header border-bottom border-secondary">
+          <h5 class="offcanvas-title fs-6 fw-semibold" id="docNavLabel">SDLC blueprint</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body p-0">
+          <nav class="nav flex-column px-2 py-2 nav-scroll" id="doc-offcanvas-nav" aria-label="Handbook chapters mobile"></nav>
+        </div>
+      </div>
+      <main id="main" class="doc-main col-lg-9 col-xl-10 px-3 px-md-4 pt-4 pt-lg-3 pb-4">
+        <div class="mx-auto doc-content">
+          <header class="mb-3 pb-3 border-bottom">
+            <nav aria-label="breadcrumb"><ol class="breadcrumb small mb-3">
+              <li class="breadcrumb-item"><a href="index.html">Handbook</a></li>
+              <li class="breadcrumb-item"><a href="methodologies.html">Methodologies</a></li>
+              <li class="breadcrumb-item active" aria-current="page">XP</li>
+            </ol></nav>
+            <h1 class="font-display h2 fw-bold text-body mb-0">Extreme Programming (XP)</h1>
+            <p class="text-body-secondary small mt-2 mb-0">Technical practices: TDD, CI, small releases, pairing — often combined with Scrum or Kanban cadence.</p>
+          </header>
+          <section class="mt-3" id="process-overview">
+            <h2 class="font-display h5 fw-semibold">Process overview</h2>
+            <ul class="text-body-secondary small mb-3">
+              <li>XP emphasizes <strong class="text-body">technical excellence</strong>: feedback loops through tests, integration, collaboration, and continuous design improvement.</li>
+              <li>It is <strong class="text-body">compatible</strong> with Scrum (iteration) or Kanban (flow) — XP answers “how we build,” not the planning calendar by itself.</li>
+              <li><strong class="text-body">CI/CD &amp; DoD</strong> in this blueprint map directly to XP practices; agents increase the need for automated gates and human review.</li>
+            </ul>
+            <figure class="figure my-3 p-2 bg-white rounded-3 border shadow-sm">
+              <img src="assets/methodology-xp-loop.svg" width="720" height="100" class="figure-img img-fluid d-block mx-auto" style="max-width: 100%" alt="Diagram: TDD, continuous integration, pair or mob work, refactoring, small releases" />
+              <figcaption class="figure-caption text-center">Core practices in sequence — in real teams these interleave daily.</figcaption>
+            </figure>
+          </section>
+          <section class="mt-3"><h2 class="font-display h5 fw-semibold">Authoritative sources</h2>
+            <p class="small text-body-secondary mb-2">Each entry: what the link is and why this blueprint points to it—you can skip opening it if you already know the source.</p>
+            <ul class="text-body-secondary small list-unstyled">
+              <li class="mb-2"><a href="https://en.wikipedia.org/wiki/Extreme_programming" class="link-success" rel="noopener">Wikipedia — Extreme programming</a><span class="doc-external-summary">Encyclopedia overview of practices and history—stable entry before books or blogs.</span></li>
+              <li class="mb-2"><a href="https://www.agilealliance.org/agile101/agile-glossary/" class="link-success" rel="noopener">Agile Alliance — Agile glossary</a><span class="doc-external-summary">Searchable terms—find Extreme Programming and related Agile vocabulary.</span></li>
+              <li class="mb-2"><a href="https://ronjeffries.com/xprog/" class="link-success" rel="noopener">Ron Jeffries — XP</a><span class="doc-external-summary">Practitioner site—stories and guidance from a central XP voice.</span></li>
+              <li class="mb-0"><a href="https://martinfowler.com/bliki/ExtremeProgramming.html" class="link-success" rel="noopener">Martin Fowler — XP (Bliki)</a><span class="doc-external-summary">Short expert summary on a widely cited blog—quick read.</span></li>
+            </ul></section>
+            <section class="mt-4 pt-3 border-top"><h2 class="font-display h5 fw-semibold">In this blueprint</h2>
+            <p class="text-body-secondary small mb-0">Maps to <strong class="text-body">CI/CD</strong> (handbook <code>cicd.html</code>), <strong class="text-body">testing</strong>, and DoD. Agents raise the importance of <strong class="text-body">automated</strong> gates and human review.</p></section>
+          <div class="alert alert-light border shadow-sm mt-4 py-3" role="note">
+            <p class="fw-semibold text-body mb-2">Full guide (canonical)</p>
+            <p class="small text-body-secondary mb-0">Authoritative depth, tables, and links live in Markdown: <a href="../methodologies/xp.md" class="link-success">xp.md</a> (in <code>blueprints/sdlc/methodologies/</code>).</p>
+          </div>
+          <nav class="d-flex flex-wrap justify-content-between gap-2 mt-4 pt-3 border-top" aria-label="Chapter navigation">
+            <a href="methodologies.html" class="btn btn-outline-secondary btn-sm">← Methodologies hub</a>
+            <a href="governance.html" class="btn btn-outline-success btn-sm">Governance →</a>
+          </nav>
+          <footer class="mt-4 pt-3 border-top text-muted small">
+            <p class="mb-1">Handbook last aligned with blueprint Markdown: <strong class="text-body">2026-03-20</strong>.</p>
+            <p class="mb-0 text-secondary" style="font-size: 0.8rem">Styled with <a href="https://getbootstrap.com/docs/5.3/" class="link-success" rel="noopener">Bootstrap 5.3</a> (CDN).</p>
+          </footer>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="assets/docs-nav.js"></script>
+</body>
+</html>

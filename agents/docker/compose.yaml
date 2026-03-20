@@ -1,0 +1,11 @@
+# Foundational compose — build only; run recipes via `docker compose run` or project scripts.
+# Context directory: blueprints/agents/ (repository root: -f blueprints/agents/docker/compose.yaml)
+
+services:
+  agent-base:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.base
+    image: agents-blueprint-base:local
+    # Example run (override in agents/compose.override.yaml):
+    # docker compose run --rm -v "$PWD:/work:ro" -v "$PWD/agents/workspaces:/workspaces" agent-base bash agents/recipes/example/run.sh

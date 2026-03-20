@@ -1,0 +1,6 @@
+docs
+templates
+scripts
+**/.git
+**/__pycache__
+**/node_modules

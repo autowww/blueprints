@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+# Recipe: {{RECIPE_NAME}} — replace body with real steps.
+# In Docker, repo is typically mounted at /work; cwd may be /work or recipe dir.
+
+echo "Recipe {{RECIPE_NAME}} (stub) — edit run.sh"
+pwd
+ls -la

@@ -1,0 +1,19 @@
+# Foundational automation image — extend for Playwright, Python, or cloud CLIs.
+# Build: docker compose -f blueprints/agents/docker/compose.yaml build
+
+FROM node:20-bookworm-slim
+
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends \
+    ca-certificates \
+    curl \
+    git \
+    jq \
+  && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /work
+
+# Optional: Chromium system deps for Playwright (uncomment after adding playwright to a recipe)
+# RUN npx --yes playwright@1.49.1 install-deps chromium
+
+ENV NODE_ENV=production

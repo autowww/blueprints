@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SDLC blueprint — Change control</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.cdnfonts.com/css/proxima-nova-2" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/docs-theme.css" />
+</head>
+<body class="bg-body-tertiary">
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <button type="button" class="btn btn-primary position-fixed top-0 start-0 m-3 d-lg-none shadow" style="z-index: 1040" data-bs-toggle="offcanvas" data-bs-target="#docNavOffcanvas" aria-controls="docNavOffcanvas" aria-label="Open navigation">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/></svg>
+  </button>
+
+  <div class="container-fluid px-0">
+    <div class="row g-0 flex-lg-nowrap min-vh-100">
+      <aside class="col-lg-3 col-xl-2 d-none d-lg-flex flex-column bg-dark text-white border-end p-0" style="min-height: 100vh">
+        <div class="p-3 border-bottom border-secondary">
+          <p class="fs-6 fw-semibold text-white mb-0">SDLC blueprint</p>
+          <p class="small text-secondary mt-2 mb-0">Human handbook · Product-agnostic</p>
+        </div>
+        <nav class="nav-scroll flex-grow-1 px-2 py-3" id="doc-sidebar-nav" aria-label="Handbook chapters"></nav>
+      </aside>
+
+      <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="docNavOffcanvas" aria-labelledby="docNavLabel">
+        <div class="offcanvas-header border-bottom border-secondary">
+          <h5 class="offcanvas-title fs-6 fw-semibold" id="docNavLabel">SDLC blueprint</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body p-0">
+          <nav class="nav flex-column px-2 py-2 nav-scroll" id="doc-offcanvas-nav" aria-label="Handbook chapters mobile"></nav>
+        </div>
+      </div>
+
+      <main id="main" class="doc-main col-lg-9 col-xl-10 px-3 px-md-4 pt-4 pt-lg-3 pb-4">
+        <div class="mx-auto doc-content-wide px-lg-1">
+          <header class="mb-3 pb-3 border-bottom">
+            <nav aria-label="breadcrumb"><ol class="breadcrumb small mb-3">
+              <li class="breadcrumb-item"><a href="index.html">Handbook</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Change control</li>
+            </ol></nav>
+            <h1 class="font-display h2 fw-bold text-body mb-0">Change control</h1>
+            <p class="text-body-secondary small mt-2 mb-0">How to evolve requirements, scope, and architecture without losing <strong class="text-body">traceability</strong> — stable IDs, visible scope, ADR history, and honest <strong class="text-body">time</strong> accounting (git is not duration).</p>
+          </header>
+
+          <div class="alert alert-light border shadow-sm mb-4 py-2" role="note">
+            <p class="small text-body-secondary mb-0"><strong class="text-body">Canonical</strong> bullets live in <a href="../SDLC.md" class="link-success"><code>SDLC.md</code> §5</a>. This chapter expands them for the handbook; keep both aligned.</p>
+          </div>
+
+          <div class="row g-3 g-lg-4">
+            <div class="col-lg-8 col-xl-9 order-2 order-lg-1">
+
+              <section id="introduction" class="mb-4">
+                <h2 class="font-display h5 fw-semibold">Why this matters</h2>
+                <p class="text-body-secondary small mb-2">Teams ship faster when <strong class="text-body">one planning view</strong> (backlog, WBS, board) matches what actually ships. Change control is the discipline of recording <strong class="text-body">what</strong> changed <strong class="text-body">before</strong> or <strong class="text-body">as</strong> you implement — so reviews, releases, and audits can answer: which requirement or story authorized this work?</p>
+                <p class="text-body-secondary small mb-0">The sections below map to how this blueprint uses <a href="documentation.html" class="link-success">documentation layout</a> and optional <a href="methodologies.html" class="link-success">methodology</a> tracking in project <code>sdlc/</code>.</p>
+              </section>
+
+              <section id="process-diagram" class="mb-4">
+                <h2 class="font-display h5 fw-semibold">Process diagram</h2>
+                <figure class="figure my-3 p-2 bg-white rounded-3 border shadow-sm">
+                  <img src="assets/change-control-flow.svg" width="720" height="132" class="figure-img img-fluid d-block mx-auto" style="max-width: 100%" alt="Flow from change signal through backlog and implementation to traceability; avoid hidden scope" />
+                  <figcaption class="figure-caption text-center">Prefer backlog-visible work; <strong class="text-body">time</strong> is covered in its own section — not from commit timestamps alone.</figcaption>
+                </figure>
+              </section>
+
+              <section id="stable-ids" class="mb-4">
+                <h2 class="font-display h5 fw-semibold">Stable requirement IDs</h2>
+                <p class="text-body-secondary small mb-2">If you use hierarchical IDs (<code>M1E2S3</code>, <code>REQ-004</code>, etc.), treat them as <strong class="text-body">keys into specs, tests, and traceability</strong>.</p>
+                <ul class="text-body-secondary small mb-0">
+                  <li><strong class="text-body">Do not renumber silently</strong> once an ID appears in code comments, tests, CSV matrices, or ADRs — readers follow stale pointers.</li>
+                  <li><strong class="text-body">Deprecate explicitly:</strong> note &ldquo;superseded by …&rdquo; in the spec or backlog row; keep the old row for history if your policy allows.</li>
+                  <li><strong class="text-body">Renaming schemes</strong> (e.g. padding digits) is a <strong>migration</strong>: batch-update references or maintain an alias table — document the rule in <code>docs/</code>.</li>
+                </ul>
+              </section>
+
+              <section id="scope-management" class="mb-4">
+                <h2 class="font-display h5 fw-semibold">Scope management</h2>
+                <p class="text-body-secondary small mb-2"><strong class="text-body">Scope</strong> is the agreed set of outcomes for a milestone, epic, story, or release. <strong class="text-body">Scope management</strong> means every meaningful change to that set is <strong>visible</strong> in your planning artifacts — not only in chat or in someone&rsquo;s head.</p>
+                <div class="doc-table-wrap mt-2 mb-3">
+                  <table class="table table-sm table-striped mb-0">
+                    <thead class="table-light"><tr><th>Situation</th><th>What to do</th></tr></thead>
+                    <tbody>
+                      <tr><td>New work appears mid-stream</td><td>Add or split a <strong class="text-body">story</strong> (or task); link from PR/commits to the new id. Update <strong class="text-body">WBS</strong> / board status.</td></tr>
+                      <tr><td>Scope shrinks (descope)</td><td>Mark items <strong class="text-body">cancelled</strong> or move to a future milestone with a short reason; epic &ldquo;done&rdquo; still means <strong>in-scope</strong> children are done.</td></tr>
+                      <tr><td>Scope creeps without paperwork</td><td>Retro: restore <strong class="text-body">explicit</strong> stories after the fact if needed; tighten <a href="review.html" class="link-success">PR checks</a> so backlog moves with code.</td></tr>
+                      <tr><td>Risk from scope</td><td>Update <strong class="text-body">risk register</strong> when a scope change creates or mitigates exposure (see <code>SDLC.md</code> Phase B).</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p class="text-body-secondary small mb-2"><strong class="text-body">Foundation vs sprint scope:</strong> Engineering tracking uses <strong class="text-body">scope</strong> as a boundary for metrics (repo, path, product). That is <em>not</em> the same as Scrum <strong>Sprint scope</strong> — see <a href="../../../sdlc/SCOPE-WORK-REPO-AND-CURSOR.md" class="link-success"><code>sdlc/SCOPE-WORK-REPO-AND-CURSOR.md</code></a> in repos that include it.</p>
+                <p class="text-body-secondary small mb-0"><strong class="text-body">Where it lives in the tree:</strong> milestone and epic boundaries are usually captured under <code>docs/requirements/</code> — see <a href="documentation.html" class="link-success">Documentation layout</a> for the hierarchy and WBS.</p>
+              </section>
+
+              <section id="adrs" class="mb-4">
+                <h2 class="font-display h5 fw-semibold">Architecture decisions (ADRs)</h2>
+                <p class="text-body-secondary small mb-2">Significant, somewhat stable technical choices belong in <code>docs/adr/</code> (or your convention). Change control for ADRs means <strong class="text-body">preserving auditability</strong>:</p>
+                <ul class="text-body-secondary small mb-0">
+                  <li><strong class="text-body">Supersede, don&rsquo;t erase:</strong> add a new ADR that references the old one and explains what changed.</li>
+                  <li><strong class="text-body">Link from code or specs</strong> when a module implements a specific decision — IDs stay stable like requirement IDs.</li>
+                  <li><strong class="text-body">Regulated / safety contexts:</strong> keep enough history to show <em>why</em> a decision was valid at the time, even after pivot.</li>
+                </ul>
+              </section>
+
+              <section id="time-tracking" class="mb-4">
+                <h2 class="font-display h5 fw-semibold">Time tracking</h2>
+                <p class="text-body-secondary small mb-2"><strong class="text-body">Git timestamps are not duration.</strong> A burst of commits does not measure meeting time, review time, or thinking time. This blueprint separates:</p>
+                <div class="doc-table-wrap mt-2 mb-3">
+                  <table class="table table-sm table-striped mb-0">
+                    <thead class="table-light"><tr><th>Layer</th><th>What it measures</th><th>Typical source</th></tr></thead>
+                    <tbody>
+                      <tr><td><strong class="text-body">Activity / touch</strong></td><td>When work touched the repo (commits, maybe PR events)</td><td>Git + optional aggregates — see engineering tracking <strong class="text-body">events</strong></td></tr>
+                      <tr><td><strong class="text-body">Explicit duration</strong></td><td>Minutes or hours <em>with intent</em> (capacity, billing, planning)</td><td>External tracker, or in-repo CSV/JSONL under something like <code>metrics/time/</code> — <strong>not</strong> the frozen blueprint</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p class="text-body-secondary small mb-2">If you log hours in-repo, use stable <strong class="text-body">work unit</strong> ids that match your WBS (e.g. <code>M1E2S1</code>) and document field meanings in project <code>sdlc/</code>. Full conventions: <a href="../../../sdlc/TRACKING-FOUNDATION.md" class="link-success"><code>sdlc/TRACKING-FOUNDATION.md</code></a> (&ldquo;Where duration can live&rdquo;). Caveats on gaming and misread signals: <a href="../../../sdlc/TRACKING-CHALLENGES.md" class="link-success"><code>TRACKING-CHALLENGES.md</code></a>.</p>
+                <p class="text-body-secondary small mb-0"><a href="methodologies-agentic.html" class="link-success">Agentic SDLC</a> also notes that agent-assisted work still needs human-visible intent and linkage — same idea as scope: <strong class="text-body">don&rsquo;t infer effort from automation noise alone</strong>.</p>
+              </section>
+
+              <section id="related" class="mb-4">
+                <h2 class="font-display h5 fw-semibold">Related chapters</h2>
+                <ul class="text-body-secondary small mb-0">
+                  <li><a href="documentation.html" class="link-success">Documentation layout</a> — where specs and WBS live.</li>
+                  <li><a href="review.html" class="link-success">Review cadence</a> — when to refresh backlog and risks.</li>
+                  <li><a href="dod.html" class="link-success">Definition of done</a> — epic done = in-scope stories done.</li>
+                  <li><a href="methodologies.html" class="link-success">Methodologies &amp; tracking</a> — Scrum/Kanban lenses on the same foundation.</li>
+                </ul>
+              </section>
+            </div>
+
+            <div class="col-lg-4 col-xl-3 order-1 order-lg-2">
+              <nav class="doc-toc doc-toc-sticky border rounded bg-body shadow-sm" aria-label="On this page">
+                <p class="doc-toc-title px-3 pt-3 mb-0">On this page</p>
+                <div class="nav flex-column px-3 pb-3">
+                  <a class="nav-link fw-semibold" href="#introduction">Introduction</a>
+                  <a class="nav-link fw-semibold" href="#process-diagram">Process diagram</a>
+                  <a class="nav-link fw-semibold" href="#stable-ids">Stable IDs</a>
+                  <a class="nav-link fw-semibold" href="#scope-management">Scope management</a>
+                  <a class="nav-link fw-semibold" href="#adrs">ADRs</a>
+                  <a class="nav-link fw-semibold" href="#time-tracking">Time tracking</a>
+                  <a class="nav-link fw-semibold" href="#related">Related</a>
+                </div>
+              </nav>
+            </div>
+          </div>
+
+          <nav class="d-flex flex-wrap justify-content-between gap-2 mt-4 pt-3 border-top" aria-label="Chapter navigation">
+            <a href="dod.html" class="btn btn-outline-secondary btn-sm">← Definition of done</a>
+            <a href="review.html" class="btn btn-outline-success btn-sm">Review cadence →</a>
+          </nav>
+
+          <footer class="mt-4 pt-3 border-top text-muted small">
+            <p class="mb-1">Handbook last aligned with blueprint Markdown: <strong class="text-body">2026-03-20</strong>.</p>
+            <p class="mb-0 text-secondary" style="font-size: 0.8rem">Styled with <a href="https://getbootstrap.com/docs/5.3/" class="link-success" rel="noopener">Bootstrap 5.3</a> (CDN).</p>
+          </footer>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="assets/docs-nav.js"></script>
+  <script src="assets/docs-toc-scrollspy.js"></script>
+</body>
+</html>
