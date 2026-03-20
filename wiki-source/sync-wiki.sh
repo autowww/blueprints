@@ -14,7 +14,13 @@ python3 "$ROOT/wiki-source/sync_markdown.py"
 
 cp "$ROOT/wiki-source/Home.md" "$TMP/stage/Home.md"
 
-git clone "$WIKI_URL" "$TMP/wiki"
+if ! git clone "$WIKI_URL" "$TMP/wiki"; then
+  echo >&2 ""
+  echo >&2 "Could not clone the wiki repo. On GitHub: open the repo Wiki tab and"
+  echo >&2 "click \"Create the first page\", name it Home, save — then run this script again."
+  echo >&2 ""
+  exit 128
+fi
 cd "$TMP/wiki"
 
 # Drop previous mirror (keep only git metadata); re-add everything from stage
