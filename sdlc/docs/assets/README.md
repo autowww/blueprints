@@ -12,6 +12,7 @@ This folder holds **CSS**, **JavaScript**, and **diagrams** for the **SDLC bluep
 | [`cicd.html`](../cicd.html) | `cicd-gates.svg` | Present — conceptual CI gate chain |
 | [`change.html`](../change.html) | `change-control-flow.svg` | Present — visible scope path vs hidden scope |
 | [`methodologies-roles.html`](../methodologies-roles.html) | — | No figure — archetype & title tables inline |
+| [`methodologies-ceremonies.html`](../methodologies-ceremonies.html) | — | No figure — intent types + fork links inline |
 | [`methodologies-scrum.html`](../methodologies-scrum.html) | `methodology-scrum-sprint.svg` | Present — Sprint event chain |
 | [`methodologies-kanban.html`](../methodologies-kanban.html) | `methodology-kanban-board.svg` | Present — pull / board flow |
 | [`methodologies-phased.html`](../methodologies-phased.html) | `methodology-phased-gates.svg` | Present — phased gates |

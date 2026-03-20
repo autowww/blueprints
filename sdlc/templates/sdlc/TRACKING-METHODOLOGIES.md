@@ -8,6 +8,8 @@
 
 **Blueprint deep guides:** [`../blueprints/sdlc/methodologies/README.md`](../blueprints/sdlc/methodologies/README.md) — full methodology write-ups + external links + agentic SDLC.
 
+**Ceremony intent model (blueprint):** [`../blueprints/sdlc/methodologies/ceremonies/README.md`](../blueprints/sdlc/methodologies/ceremonies/README.md) — neutral **C1–C6** + Scrum/Kanban/phased/XP **forks**; this file stays **how ceremonies consume aggregates** on the tracking spine.
+
 **Foundation:** [`TRACKING-FOUNDATION.md`](TRACKING-FOUNDATION.md) · **Challenges / limits:** [`TRACKING-CHALLENGES.md`](TRACKING-CHALLENGES.md)
 
 ---

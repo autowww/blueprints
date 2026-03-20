@@ -4,6 +4,8 @@ This describes a **generic** delivery flow and **which documentation** to update
 
 **Methodology depth (Scrum, Kanban, XP, phased, Agile, agentic SDLC):** see [`methodologies/README.md`](methodologies/README.md) — full guides with external links and adoption notes; the [handbook](docs/methodologies.html) mirrors these as sub-chapters.
 
+**Ceremonies (foundation vs forks):** methodology-neutral **intent types** (why recurring collaboration exists) and per-methodology mappings — [`methodologies/ceremonies/README.md`](methodologies/ceremonies/README.md); handbook [Ceremonies](docs/methodologies-ceremonies.html).
+
 **Path examples** below use a common `docs/` layout; adjust names if your tree differs.
 
 ---

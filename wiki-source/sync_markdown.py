@@ -45,6 +45,8 @@ def transform(rel: pathlib.Path, text: str) -> str:
 
     if s.startswith("sdlc/methodologies/"):
         text = re.sub(r"\]\(\.\./docs/([^)]+\.html)\)", blob_sdlc_docs, text)
+        # e.g. methodologies/ceremonies/README.md → ../../docs/…
+        text = re.sub(r"\]\(\.\./\.\./docs/([^)]+\.html)\)", blob_sdlc_docs, text)
 
     if s.startswith("agents/"):
         text = re.sub(r"\]\(\.\./sdlc/docs/([^)]+\.html)\)", blob_sdlc_docs, text)

@@ -48,6 +48,8 @@
 | Testing | Story DoD, [`templates/TEST-PLAN.template.md`](../templates/TEST-PLAN.template.md). |
 | Small increments | Phase D build; link commits to work-unit IDs. |
 
+**Ceremonies:** XP practices as **intent types** — [`ceremonies/xp.md`](ceremonies/xp.md) · [foundation](ceremonies/ceremony-foundation.md).
+
 **Roles:** how XP **merges Assure into Build** via practices and keeps **Demand** close—[`roles-archetypes.md`](roles-archetypes.md) §2, §4, §5 (Methodology tweaks **XP**).
 
 ---

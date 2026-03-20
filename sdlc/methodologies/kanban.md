@@ -48,6 +48,8 @@ Use Kanban when **demand is variable**, **priorities shift often**, or **service
 | Policies / DoD | Align with handbook **Definition of done** and project CI gates. |
 | Cadence | **Review cadence** ([`review.html`](../docs/review.html)) can follow **weekly** or **on-demand** replenishment instead of Sprint boundaries. |
 
+**Ceremonies:** Kanban rituals mapped to neutral **intent types** — [`ceremonies/kanban.md`](ceremonies/kanban.md) · [foundation](ceremonies/ceremony-foundation.md).
+
 **Roles:** how Kanban **tweaks** delivery **archetypes** (Demand, Build, Flow, Assure, Steer)—[`roles-archetypes.md`](roles-archetypes.md) §1–5 (Methodology tweaks column **Kanban**).
 
 ---

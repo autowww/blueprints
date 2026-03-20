@@ -7,6 +7,7 @@
 | Guide | Topics |
 |-------|--------|
 | [**Roles & archetypes**](roles-archetypes.md) | Five archetypes: summary + **detail** (responsibilities, artifacts, ceremonies) + **methodology tweaks** (Scrum/Kanban/phased/XP per archetype); **Owner/Implementer**; title quick-reference; **methodology roll-up**; specialty hats vs **Contributor**. Handbook: [`methodologies-roles.html`](../docs/methodologies-roles.html). |
+| [**Ceremonies**](ceremonies/README.md) | **Foundation** ([`ceremony-foundation.md`](ceremonies/ceremony-foundation.md)): six **intent types** (C1–C6), phase + archetype matrices; **forks**: [Scrum](ceremonies/scrum.md), [Kanban](ceremonies/kanban.md), [Phased](ceremonies/phased.md), [XP](ceremonies/xp.md). Handbook: [`methodologies-ceremonies.html`](../docs/methodologies-ceremonies.html). |
 | [**Agile (umbrella)**](agile.md) | Values, principles, how Scrum/Kanban/XP combine. |
 | [**Scrum**](scrum.md) | Roles, events, artifacts, sprint flow; agentic fit; tracking. |
 | [**Kanban**](kanban.md) | Flow, WIP, policies, service classes; board vs git. |

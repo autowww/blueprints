@@ -393,6 +393,7 @@ A **Product Owner** who never commits may be **invisible** in commit-only dashbo
 | Doc | Why |
 |-----|-----|
 | [`SDLC.md`](../SDLC.md) §1–2 | Minimal **Owner** / **Implementer** and phase obligations |
+| [Ceremonies — foundation](ceremonies/ceremony-foundation.md) | **Intent types** C1–C6 × phases × archetypes (who leads rituals) |
 | [Scrum](scrum.md) | Official **accountabilities** and events |
 | [Kanban](kanban.md) | Service-oriented **roles** and policies |
 | [Phased delivery](phased-delivery.md) | **Gates** and **Steer & govern** |

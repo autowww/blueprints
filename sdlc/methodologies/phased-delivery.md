@@ -51,6 +51,8 @@ It contrasts with **iterative** Agile delivery: phases emphasize **upfront basel
 | Traceability | Requirements ↔ tests ↔ risks matrices. |
 | Verification evidence | Test plans, CI reports, release checklist ([`release` docs in project]). |
 
+**Ceremonies:** gates and reviews mapped to **intent types** — [`ceremonies/phased.md`](ceremonies/phased.md) · [foundation](ceremonies/ceremony-foundation.md).
+
 **Roles:** how phased delivery **emphasizes Steer & govern** and **Assure**, and **splits Build** by handoffs—[`roles-archetypes.md`](roles-archetypes.md) §1–5 and [Methodology roll-up](roles-archetypes.md#methodology-roll-up-all-archetypes-at-a-glance).
 
 ---

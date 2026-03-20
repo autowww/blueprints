@@ -63,6 +63,7 @@ Repos may adopt an optional **tracking foundation** under `sdlc/` (see [`templat
 ## Related blueprint guides
 
 - [Roles & archetypes](roles-archetypes.md) — human **accountability** vs **Contributor** identity when agents commit.  
+- [Ceremonies](ceremonies/README.md) — **foundation** intents vs methodology **forks**; where humans stay in the loop for planning and acceptance.  
 - [Agile (umbrella)](agile.md)  
 - [Scrum](scrum.md) · [Kanban](kanban.md) · [XP](xp.md) · [Phased delivery](phased-delivery.md)  
 - **Execution layer (optional):** containerized recipes and `agents/` workspace — see [`blueprints/agents/STRUCTURE.md`](../../agents/STRUCTURE.md) and handbook [`../docs/agents.html`](../docs/agents.html).

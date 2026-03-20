@@ -91,14 +91,9 @@ If your repo uses **milestone → epic → story** specs, a **Sprint** often pul
 
 ---
 
-## Ceremonies — inputs that git cannot replace
+## Ceremonies
 
-| Ceremony | What git-based tracking approximates | What you still need |
-|----------|----------------------------------------|---------------------|
-| Planning | Recent activity, linked commits | Sprint Goal, PO ordering, capacity |
-| Daily | Activity per person | Verbal blockers, coordination |
-| Review | Merged work, increment | Stakeholder feedback, acceptance |
-| Retro | Throughput themes (weak) | Psychological safety, process changes |
+**Methodology-neutral intent types** (Align, Commit, Sync, …) live in [`ceremonies/ceremony-foundation.md`](ceremonies/ceremony-foundation.md). **Scrum events mapped to those intents** + git vs ALM gaps: [`ceremonies/scrum.md`](ceremonies/scrum.md).
 
 See project [`TRACKING-CHALLENGES.md`](../../../sdlc/TRACKING-CHALLENGES.md) for limits of commit-based metrics.
 
@@ -108,4 +103,5 @@ See project [`TRACKING-CHALLENGES.md`](../../../sdlc/TRACKING-CHALLENGES.md) for
 
 - [Scrum Guide — History](https://scrumguides.org/) — **Official site** for guide versions and history (not the Guide text itself).  
 - [Agile Manifesto](https://agilemanifesto.org/) — **Values** that Scrum aligns with; not a Scrum process.  
+- [Ceremonies — Scrum fork](ceremonies/scrum.md) · [foundation intents](ceremonies/ceremony-foundation.md)  
 - Companion blueprint guides: [Kanban](kanban.md), [XP](xp.md), [Agentic SDLC](agentic-sdlc.md)

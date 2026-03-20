@@ -7,6 +7,8 @@ This wiki is a **Markdown mirror** of the **[blueprints](https://github.com/auto
 - **SDLC hub:** [sdlc/README](sdlc/README)
 - **Phases & DoD (single file):** [sdlc/SDLC](sdlc/SDLC)
 - **Methodologies:** [sdlc/methodologies/README](sdlc/methodologies/README)
+- **Roles & archetypes:** [sdlc/methodologies/roles-archetypes](sdlc/methodologies/roles-archetypes)
+- **Ceremonies (foundation + forks):** [sdlc/methodologies/ceremonies/README](sdlc/methodologies/ceremonies/README)
 - **Product-docs blueprint:** [docs/README](docs/README)
 - **Agents blueprint:** [agents/README](agents/README)
 

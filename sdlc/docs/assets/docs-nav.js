@@ -31,6 +31,7 @@
       ariaLabel: 'Methodology sub-chapters',
       children: [
         { href: 'methodologies-roles.html', label: 'Roles & archetypes' },
+        { href: 'methodologies-ceremonies.html', label: 'Ceremonies' },
         { href: 'methodologies-scrum.html', label: 'Scrum' },
         { href: 'methodologies-kanban.html', label: 'Kanban' },
         { href: 'methodologies-phased.html', label: 'Phased delivery' },
