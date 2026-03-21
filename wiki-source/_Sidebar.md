@@ -8,5 +8,5 @@
 - [Handbook index (HTML)](https://github.com/autowww/blueprints/blob/main/sdlc/docs/index.html)
 - [Methodologies](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/README.md)
 - [Roles & archetypes](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/roles-archetypes.md)
-- [Product docs blueprint](https://github.com/autowww/blueprints/blob/main/docs/README.md)
+- [Documentation blueprint](https://github.com/autowww/blueprints/blob/main/docs/README.md)
 - [Agents blueprint](https://github.com/autowww/blueprints/blob/main/agents/README.md)

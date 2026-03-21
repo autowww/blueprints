@@ -51,6 +51,12 @@ def transform(rel: pathlib.Path, text: str) -> str:
     if s.startswith("agents/"):
         text = re.sub(r"\]\(\.\./sdlc/docs/([^)]+\.html)\)", blob_sdlc_docs, text)
 
+    if s.startswith("ide/"):
+        text = re.sub(r"\]\(\.\./sdlc/docs/([^)]+\.html)\)", blob_sdlc_docs, text)
+
+    if s.startswith("docs/"):
+        text = re.sub(r"\]\(\.\./sdlc/docs/([^)]+\.html)\)", blob_sdlc_docs, text)
+
     return text
 
 
@@ -66,7 +72,7 @@ def write_sidebar(rel_paths: list[pathlib.Path]) -> None:
         "_Mirrored from [`autowww/blueprints`](https://github.com/autowww/blueprints) — run `wiki-source/sync-wiki.sh` to refresh._",
         "",
     ]
-    order = ("sdlc", "docs", "agents")
+    order = ("sdlc", "docs", "agents", "ide")
     for top in list(order) + sorted(k for k in by_top if k not in order):
         if top not in by_top:
             continue

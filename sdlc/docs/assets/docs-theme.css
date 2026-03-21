@@ -260,6 +260,18 @@ aside.bg-dark .doc-nav-sublink-deep,
   border-left-color: rgba(255, 255, 255, 0.12);
 }
 
+/* Nav section headers — visual grouping for top-level categories */
+.doc-nav-section-label {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 0.65rem !important;
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+.doc-nav-section-label:first-child {
+  border-top: none;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
 /* Sidebar — slightly tighter links */
 .nav-scroll .nav-link.rounded {
   padding: 0.35rem 0.65rem !important;

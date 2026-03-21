@@ -20,7 +20,7 @@ Requirements: `git`, `python3`, and credentials that can **push** to `https://gi
 
 ## What gets mirrored
 
-- All `*.md` under `sdlc/` (including `sdlc/methodologies/ceremonies/`), `docs/`, and `agents/`, except:
+- All `*.md` under `sdlc/` (including `sdlc/methodologies/ceremonies/`), `docs/`, `agents/`, and `ide/`, except:
   - anything under **`wiki-source/`**
   - files named **`*.template.md`**
 

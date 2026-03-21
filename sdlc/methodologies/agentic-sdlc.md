@@ -60,6 +60,14 @@ Repos may adopt an optional **tracking foundation** under `sdlc/` (see [`templat
 
 ---
 
+## IDE instruction layer
+
+The governance described above is **projected into IDE agent instructions** so that AI assistants (Cursor, Claude Code) follow the process natively. See [`blueprints/ide/STRUCTURE.md`](../../ide/STRUCTURE.md) for the vendor feature matrix and template → project file mapping. Handbook: [`../docs/ide.html`](../docs/ide.html).
+
+Bootstrap: `./blueprints/ide/scripts/init-ide-workspace.sh "Project Name"` — generates `.cursor/rules/`, `CLAUDE.md`, commands, skills, and plan templates. Generated files are mutable project files; teams customize freely.
+
+---
+
 ## Related blueprint guides
 
 - [Spec-driven development](spec-driven-development.md) — **durable specs in the repo** (acceptance criteria, IDs) before large agent-driven edits; complements this guide. Handbook: [`../docs/spec-driven.html`](../docs/spec-driven.html).  
@@ -67,4 +75,5 @@ Repos may adopt an optional **tracking foundation** under `sdlc/` (see [`templat
 - [Ceremonies](ceremonies/README.md) — **foundation** intents vs methodology **forks**; where humans stay in the loop for planning and acceptance.  
 - [Agile (umbrella)](agile.md)  
 - [Scrum](scrum.md) · [Kanban](kanban.md) · [XP](xp.md) · [Phased delivery](phased-delivery.md)  
-- **Execution layer (optional):** containerized recipes and `agents/` workspace — see [`blueprints/agents/STRUCTURE.md`](../../agents/STRUCTURE.md) and handbook [`../docs/agents.html`](../docs/agents.html).
+- **Execution layer (optional):** containerized recipes and `agents/` workspace — see [`blueprints/agents/STRUCTURE.md`](../../agents/STRUCTURE.md) and handbook [`../docs/agents.html`](../docs/agents.html).  
+- **IDE agent instructions:** templates for Cursor rules, Claude skills, commands, and plan convention — see [`blueprints/ide/README.md`](../../ide/README.md) and handbook [`../docs/ide.html`](../docs/ide.html).

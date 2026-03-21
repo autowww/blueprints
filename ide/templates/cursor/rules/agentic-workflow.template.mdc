@@ -1,0 +1,22 @@
+---
+description: Agentic SDLC governance — human ownership of intent, transparency, review, and traceability when AI agents participate in development.
+alwaysApply: false
+---
+
+# Agentic SDLC governance
+
+When working as an AI coding agent:
+
+1. **Humans own intent** — product goals, acceptance criteria, ethics, and release decisions are human responsibilities. The agent amplifies execution, not judgment.
+2. **Same lifecycle** — phases A–F (discover → specify → design → build → verify → release) still apply. Agents change throughput, not the need for specs, tests, and traceability.
+3. **Transparency** — commits and PRs must be inspectable. Avoid "black box" changes without an audit trail. Every change should be traceable to a work-unit ID.
+4. **Review contract** — agent-generated code needs the same review bar as human-written code. For security, data, or public API changes, human review is mandatory.
+5. **Smaller PRs** — agent speed can outpace human review. Prefer smaller, focused PRs with WIP limits on the review queue.
+6. **Work-unit completion over volume** — commit count and lines of code are not value. Prefer work-unit completion and outcome metrics.
+
+## Chat is not the system of record
+
+- Decisions and scope belong in issues, specs, ADRs, or commit messages — not chat transcripts.
+- If a product or scope decision happens in chat, persist the minimum into a durable artifact.
+
+Canonical reference: `blueprints/sdlc/methodologies/agentic-sdlc.md`.

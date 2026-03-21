@@ -20,13 +20,18 @@
    */
   var DOC_NAV = [
     { href: 'index.html', label: 'Handbook home' },
+
+    { sectionLabel: 'Process' },
     { href: 'overview.html', label: 'Overview & roles' },
     { href: 'phases.html', label: 'Phases A–F' },
     { href: 'dod.html', label: 'Definition of done' },
     { href: 'change.html', label: 'Change control' },
     { href: 'review.html', label: 'Review cadence' },
-    { href: 'cicd.html', label: 'CI/CD & quality gates' },
+    { href: 'governance.html', label: 'Governance' },
+
+    { sectionLabel: 'Engineering' },
     { href: 'documentation.html', label: 'Documentation layout' },
+    { href: 'cicd.html', label: 'CI/CD & quality gates' },
     {
       hubHref: 'spec-driven.html',
       label: 'Spec-driven development',
@@ -39,10 +44,15 @@
         { href: 'spec-driven-sdd-process.html', label: 'Process (SDD I/O)' },
       ],
     },
+
+    { sectionLabel: 'Agentic development' },
     { href: 'agents.html', label: 'Agents & automation' },
+    { href: 'ide.html', label: 'IDE instructions (Cursor / Claude)' },
+
+    { sectionLabel: 'Methodologies' },
     {
       hubHref: 'methodologies.html',
-      label: 'Methodologies & tracking',
+      label: 'Overview & tracking',
       groupId: 'Methodologies',
       ariaLabel: 'Methodology sub-chapters',
       children: [
@@ -96,7 +106,6 @@
         { href: 'methodologies-agentic.html', label: 'Agentic SDLC' },
       ],
     },
-    { href: 'governance.html', label: 'Governance' },
   ];
 
   function currentPage() {
@@ -303,17 +312,26 @@
     return html;
   }
 
+  function renderSectionLabel(label) {
+    return (
+      '<p class="doc-nav-section-label small text-uppercase text-secondary px-3 mb-1 mt-3" style="letter-spacing:0.12em;font-size:0.6rem;font-weight:700;opacity:0.7">' +
+      escapeHtml(label) +
+      '</p>'
+    );
+  }
+
   function renderNav(page, navSuffix) {
     var html = '';
     var i;
     var entry;
-
-    html +=
-      '<p class="small text-uppercase text-secondary px-3 mb-2 doc-nav-chapters-label" style="letter-spacing:0.12em;font-size:0.65rem">Chapters</p>';
+    var isFirst = true;
 
     for (i = 0; i < DOC_NAV.length; i++) {
       entry = DOC_NAV[i];
-      if (entry.children && entry.children.length > 0 && entry.hubHref && entry.groupId) {
+      if (entry.sectionLabel) {
+        html += renderSectionLabel(entry.sectionLabel);
+        isFirst = false;
+      } else if (entry.children && entry.children.length > 0 && entry.hubHref && entry.groupId) {
         html += renderGroup(
           page,
           entry,

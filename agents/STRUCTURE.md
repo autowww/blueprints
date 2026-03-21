@@ -16,6 +16,8 @@ This document is the **canonical Markdown** for the **agents & automation** blue
 
 This blueprint does **not** mandate a particular LLM vendor or multi-agent framework. It defines **where** Docker fits and **how** recipes connect to CI.
 
+**Relationship to `blueprints/ide/`:** The agents blueprint covers **containerized execution** (server-side, CI). For **IDE agent instructions** (Cursor rules, Claude skills, commands, plan convention), see [`blueprints/ide/`](../ide/README.md) and handbook [`ide.html`](../sdlc/docs/ide.html).
+
 ---
 
 ## 2. Conceptual layers (outside → inside)

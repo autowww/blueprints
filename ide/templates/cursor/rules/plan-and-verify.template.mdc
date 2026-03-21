@@ -1,0 +1,28 @@
+---
+description: Plan-first workflow and verification contract for multi-file or unfamiliar changes.
+alwaysApply: false
+---
+
+# Plan-first workflow
+
+For multi-file changes, unfamiliar code areas, or complex logic:
+
+1. **Explore** — read relevant files, understand the codebase context before writing code.
+2. **Plan** — create a plan with the approach, files to change, and verification strategy. For significant work, save the plan to `.cursor/plans/` with the work-unit ID in the filename (e.g. `M1E1S1-auth-callback.md`).
+3. **Implement** — work through the plan systematically in small batches. Each PR traces to a work unit.
+4. **Verify** — run the project's test/lint/build commands after implementation. Failing tests or unmet acceptance criteria are the stop signal.
+5. **Commit** — with work-unit reference and clear message.
+
+Skip the plan for single-file fixes, well-known patterns, or trivial changes where the diff is describable in one sentence.
+
+## Verification contract
+
+- After making changes, **always run tests** if the project has them.
+- Check that acceptance criteria from the spec are met.
+- If you cannot verify, say so — do not assume the change is correct.
+
+## Context hygiene
+
+- One work unit per conversation when practical.
+- Start a new conversation when switching tasks or when the agent seems confused.
+- If the conversation is long and effectiveness decreases, start fresh with a more specific prompt.

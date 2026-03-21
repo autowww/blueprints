@@ -1,0 +1,21 @@
+---
+description: Commit message conventions and work-unit traceability.
+alwaysApply: true
+---
+
+# Commit conventions
+
+Every commit that advances project work:
+
+1. **Reference the work unit** in the subject or body:
+   - `Refs M1E1S1` / `Fixes M1E1S1` (docs-as-code IDs from `docs/requirements/`)
+   - or `Fixes #123` if the source of truth is GitHub Issues
+   - Use `chore:` or `docs:` prefix only for truly unrelated housekeeping — use sparingly.
+
+2. **Plain-language description** — say what changed and why in one screen. Future you and reviewers read this.
+
+3. **Co-authored-by** — when agent-assisted, add `Co-authored-by:` trailers per team policy.
+
+4. **Branch naming** (optional): include work-unit ID, e.g. `feature/M1E1S1-google-auth-callback`.
+
+5. **PR title/body** — list work-unit IDs covered and link to relevant specs.

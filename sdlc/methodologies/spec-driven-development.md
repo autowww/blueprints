@@ -59,6 +59,8 @@ Agents amplify **execution**; they do not replace **acceptance** or **prioritiza
 
 See [`agentic-sdlc.md`](agentic-sdlc.md) and handbook [`agents.html`](../docs/agents.html).
 
+The spec-driven workflow is operationalized as **IDE agent instructions** (Cursor rules, Claude skills) in [`blueprints/ide/`](../../ide/README.md) — see handbook [`ide.html`](../docs/ide.html).
+
 ---
 
 ## Anti-patterns

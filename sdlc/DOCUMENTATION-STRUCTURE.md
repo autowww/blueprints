@@ -41,7 +41,7 @@ repository root/
     scripts/                    # init-sdlc-workspace.sh — see scripts/README.md, SDLc-WORKSPACE.md
     SDLc-WORKSPACE.md           # How to bootstrap sibling sdlc/
 
-  blueprints/docs/               # Frozen product-functional IA — see blueprints/docs/POLICY.md
+  blueprints/docs/               # Frozen documentation IA + templates for full docs/ tree — see blueprints/docs/POLICY.md
     README.md
     POLICY.md
     STRUCTURE.md
@@ -49,7 +49,8 @@ repository root/
       index.html
       MAINTENANCE.md
       assets/
-    templates/
+    templates/                  # Product, requirements, ADR, engineering area templates
+    scripts/                    # init-docs-workspace.sh — bootstrap docs/ for a project
 
   blueprints/agents/             # Optional frozen Docker automation blueprint — see blueprints/agents/POLICY.md
     README.md
@@ -61,6 +62,14 @@ repository root/
     docs/                       # Short HTML mirror; full chapter in blueprints/sdlc/docs/agents.html
       index.html
       MAINTENANCE.md
+
+  blueprints/ide/                # Optional frozen IDE agent instruction templates — see blueprints/ide/POLICY.md
+    README.md
+    POLICY.md
+    STRUCTURE.md
+    templates/                  # AGENTS.md, CLAUDE.md, .cursor/rules, .cursor/commands, .claude/skills, plans
+    scripts/                    # init-ide-workspace.sh
+    docs/
 
   agents/                       # Optional mutable automation workspace (NOT inside blueprints/agents) — recipes, workspaces/, compose.override.yaml
 

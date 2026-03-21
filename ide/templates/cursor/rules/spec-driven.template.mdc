@@ -1,0 +1,24 @@
+---
+description: Spec-driven development — acceptance criteria, work-unit IDs, and spec lifecycle when editing requirements or implementing features.
+globs: docs/requirements/**/*
+alwaysApply: false
+---
+
+# Spec-driven development
+
+When implementing features or editing requirements:
+
+1. **Work-unit IDs first** — every story, epic, and task has a stable ID (e.g. `M1E1S1`). Reference it in commits, PRs, and plan files.
+2. **Acceptance criteria before code** — if the spec for a work unit lacks testable criteria, write or refine them before implementing. Prefer **given/when/then**, checklists, or concrete examples over vague adjectives.
+3. **Hierarchy** — milestones → epics → stories → tasks. Specs live under `docs/requirements/milestones/` following the project's structure.
+4. **Lifecycle loop** — Draft → Refine (criteria agreed) → Implement (small batches, PR traces to work unit) → Inspect (review checks spec fit) → Adapt (update spec if reality invalidates it, in the same changeset as the code).
+5. **Failing tests or unmet criteria are the stop signal** — not "looks fine in chat."
+
+## Anti-patterns to avoid
+
+- **Code-first, spec-later** — block "done" until criteria match what shipped.
+- **Specs in chat only** — move decisions into Markdown linked from the tree.
+- **Specs never updated** — changing behavior without updating spec is scope drift.
+- **One giant spec doc** — use the hierarchy so diffs stay reviewable.
+
+Canonical reference: `blueprints/sdlc/methodologies/spec-driven-development.md`.

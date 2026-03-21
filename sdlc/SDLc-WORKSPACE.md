@@ -44,6 +44,8 @@ If `README.md` already exists in the target, the script **refuses to overwrite**
 - **Customize** `sdlc/README.md`: remove table rows for paths you do not use yet (e.g. `blueprints/docs/`, `docs/product/`) if the repo is slimmer than the template.
 - **Link** the handbook: [`docs/index.html`](docs/index.html) already references `../../../sdlc/TRACKING-*.md` when those files exist.
 - **Do not** edit the frozen blueprint for project-only notes; keep them in `sdlc/` or `docs/`.
+- **Documentation tree (companion):** run [`blueprints/docs/scripts/init-docs-workspace.sh`](../docs/scripts/README.md) to bootstrap the full `docs/` tree (INDEX, PROJECT, ROADMAP, product, requirements, ADR, engineering areas).
+- **IDE agent instructions (optional companion):** if your team uses AI coding agents (Cursor, Claude Code), also run [`blueprints/ide/scripts/init-ide-workspace.sh`](../ide/scripts/README.md) to bootstrap `.cursor/rules/`, `CLAUDE.md`, commands, and plan templates.
 
 ## Drift
 
