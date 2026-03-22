@@ -4,7 +4,7 @@ This document defines **where documentation can live** in a repository, **what k
 
 **Related:** [`SDLC.md`](SDLC.md) (phases, gates, doc obligations) · optional **requirements convention** in the consuming repo (e.g. `docs/requirements/STRUCTURE-PROPOSAL.md` if you adopt one).
 
-**Scalability:** The layout below scales from a single deliverable to multiple milestones and teams by **namespacing delivery specs** (often under `docs/requirements/`) and keeping frozen blueprints under **`blueprints/`** at repository root — **`blueprints/sdlc/`** (this SDLC package), optional **`blueprints/docs/`** (product-functional IA; mutable prose under **`docs/product/`**), and optional **`blueprints/agents/`** (containerized automation). **Agentic** delivery (IDE/LLM/CI) is covered in **`methodologies/agentic-sdlc.md`**. Mutable jobs live in **`agents/`** at repository root—see **`blueprints/agents/STRUCTURE.md`** and the SDLC handbook chapter **`blueprints/sdlc/docs/agents.html`**. Swap folder names if you use another tool (e.g. `work-items/` instead of `requirements/`)—keep the *separation* between process docs, product-functional docs, delivery specs, and (when used) automation blueprints.
+**Scalability:** The layout below scales from a single deliverable to multiple milestones and teams by **namespacing delivery specs** (often under `docs/requirements/`) and keeping frozen blueprints under **`blueprints/`** at repository root — **`blueprints/sdlc/`** (this SDLC package), optional **`blueprints/product/`** (product-functional IA; mutable prose under **`docs/product/`**), and optional **`blueprints/agents/`** (containerized automation). **Agentic** delivery (IDE/LLM/CI) is covered in **`methodologies/agentic-sdlc.md`**. Mutable jobs live in **`agents/`** at repository root—see **`blueprints/agents/STRUCTURE.md`** and the SDLC handbook chapter **`blueprints/sdlc/docs/agents.html`**. Swap folder names if you use another tool (e.g. `work-items/` instead of `requirements/`)—keep the *separation* between process docs, product-functional docs, delivery specs, and (when used) automation blueprints.
 
 ---
 
@@ -22,7 +22,7 @@ This document defines **where documentation can live** in a repository, **what k
 
 ## 2. Recommended layout (repository root + `docs/`)
 
-This blueprint assumes **`blueprints/sdlc/`** (this folder) lives **under `blueprints/`** at repository root, next to **`docs/`** and **`sdlc/`**. A sibling **`sdlc/`** (or similar) holds **project-specific** SDLC notes and links—do not put that material inside `blueprints/sdlc/`. Optional **`blueprints/docs/`** holds frozen product-functional IA; project prose belongs under **`docs/product/`**.
+This blueprint assumes **`blueprints/sdlc/`** (this folder) lives **under `blueprints/`** at repository root, next to **`docs/`** and **`sdlc/`**. A sibling **`sdlc/`** (or similar) holds **project-specific** SDLC notes and links—do not put that material inside `blueprints/sdlc/`. Optional **`blueprints/product/`** holds frozen product-functional IA; project prose belongs under **`docs/product/`**.
 
 ```text
 repository root/
@@ -41,7 +41,7 @@ repository root/
     scripts/                    # init-sdlc-workspace.sh — see scripts/README.md, SDLc-WORKSPACE.md
     SDLc-WORKSPACE.md           # How to bootstrap sibling sdlc/
 
-  blueprints/docs/               # Frozen product-functional IA — see blueprints/docs/POLICY.md
+  blueprints/product/               # Frozen product-functional IA — see blueprints/product/POLICY.md
     README.md
     POLICY.md
     STRUCTURE.md
@@ -50,6 +50,30 @@ repository root/
       MAINTENANCE.md
       assets/
     templates/
+
+  blueprints/pdlc/               # Frozen product lifecycle blueprint — see blueprints/pdlc/POLICY.md
+    README.md
+    POLICY.md
+    PDLC.md                     # Phases P1–P6, artifacts, exit criteria
+    PDLC-SDLC-BRIDGE.md         # How PDLC and SDLC relate — diagrams, role mapping, worked example
+    approaches/                 # PDLC approach guides (Dual-Track, Stage-Gate, Design Thinking, …)
+    templates/                  # Product vision, experiment log, metrics, GTM, sunset plan
+    docs/                       # Human handbook (HTML)
+      index.html
+      MAINTENANCE.md
+      assets/
+
+  blueprints/disciplines/         # Cross-cutting professional disciplines — see blueprints/disciplines/README.md
+    README.md                   # Hub: BA, PM, Testing, Software Architecture, DevOps, Big Data, Data Science
+    ba/                         # Business analysis (BABOK, knowledge areas, techniques, perspectives)
+    pm/                         # Project management (process groups, governance, approaches)
+    testing/                    # Testing & QA (ISTQB approaches, automation landscape)
+    software-architecture/      # Software architecture (quality attributes, patterns, ADRs)
+    devops/                     # DevOps (CALMS, DORA, SRE, CI/CD, observability)
+    bigdata/                    # Big data & data engineering (governance, pipeline patterns, DataOps)
+    data-science/               # Data science & ML (CRISP-DM, MLOps, responsible AI)
+    docs/                       # Future human handbook (HTML)
+      MAINTENANCE.md
 
   blueprints/agents/             # Optional frozen Docker automation blueprint — see blueprints/agents/POLICY.md
     README.md
@@ -69,6 +93,14 @@ repository root/
     TRACKING-FOUNDATION.md      # Optional: engineering tracking (copy from templates/sdlc; not frozen blueprint text)
     TRACKING-METHODOLOGIES.md
     TRACKING-CHALLENGES.md
+
+  forge/                         # Optional Forge SDLC workspace (mutable); bootstrap from blueprints/sdlc/templates/forge
+    forge.config.yaml            # Team, Bellows, Assay Gate, paths — from forge.config.template.yaml
+    charge.md                    # Current daily Charge
+    charge-archive/              # Archived daily Charge files
+    journal/                     # Day journals (YYYY-MM-DD.md)
+    releases/                    # Product Spark release plans
+  ember-logs/                    # Ember Log entries (YYYY-MM-DD.md) — decision memory
 
   docs/
     INDEX.md
@@ -181,7 +213,7 @@ docs/requirements/
 
 ### 2.2 Agents blueprint (optional, automation)
 
-**Software agents** in this repo’s sense include **LLM assistants**, **IDE tooling**, **CI bots**, and **containerized** jobs — see [`methodologies/agentic-sdlc.md`](methodologies/agentic-sdlc.md). **`blueprints/agents/`** is the **optional execution layer** for **repeatable, isolated** work (Docker images, Compose, `agents/recipes/`). When you adopt it, treat it like **`blueprints/docs/`**: **frozen** generic package at repository root; **mutable** content in **`agents/`** (recipes, workspaces, optional `compose.override.yaml`). Full sub-layer model:
+**Software agents** in this repo’s sense include **LLM assistants**, **IDE tooling**, **CI bots**, and **containerized** jobs — see [`methodologies/agentic-sdlc.md`](methodologies/agentic-sdlc.md). **`blueprints/agents/`** is the **optional execution layer** for **repeatable, isolated** work (Docker images, Compose, `agents/recipes/`). When you adopt it, treat it like **`blueprints/product/`**: **frozen** generic package at repository root; **mutable** content in **`agents/`** (recipes, workspaces, optional `compose.override.yaml`). Full sub-layer model:
 
 | Layer | Contents |
 |-------|----------|
@@ -199,7 +231,7 @@ docs/requirements/
 | Type | Typical location | When to add / update |
 |------|------------------|----------------------|
 | **Product / setup** | Root `README.md` | New setup steps, features users care about. |
-| **Product functional** | `docs/product/` (mutable); IA in `blueprints/docs/` | Vision, journeys, capabilities, feature behavior—when observable product behavior needs a canonical description. |
+| **Product functional** | `docs/product/` (mutable); IA in `blueprints/product/` | Vision, journeys, capabilities, feature behavior—when observable product behavior needs a canonical description. |
 | **Project profile** | `docs/PROJECT.md` | Stack, regulatory context, **where planning/backlog lives**—keeps [`SDLC.md`](SDLC.md) generic. |
 | **Planning / WBS** | `docs/requirements/WBS.*` (typical); optional `docs/ROADMAP.md` from [`templates/ROADMAP.template.md`](templates/ROADMAP.template.md) | New scope; status changes; planning cycles. |
 | **Risks** | `docs/requirements/risks/register.csv` (or your RBS) | New risk, mitigation, closure. |
@@ -216,17 +248,17 @@ docs/requirements/
 
 ## 4. SDLC mapping (summary)
 
-Full detail: [`SDLC.md`](SDLC.md).
+Full detail: [`SDLC.md`](SDLC.md). **PDLC context:** [`blueprints/pdlc/PDLC-SDLC-BRIDGE.md`](../pdlc/PDLC-SDLC-BRIDGE.md) shows how these SDLC phases sit inside the broader product lifecycle (P1–P6). **BA context:** [`blueprints/disciplines/product/ba/BA-SDLC-PDLC-BRIDGE.md`](../disciplines/product/ba/BA-SDLC-PDLC-BRIDGE.md) maps business analysis knowledge areas and techniques to both lifecycles.
 
-| Phase | Typical documentation |
-|-------|------------------------|
-| **Discover / ideate** | WBS/backlog (and optional high-level planning doc); optional notes in `architecture/` or ADR draft. |
-| **Specify** | Story acceptance criteria; risks; themes row if used. |
-| **Design** | Story/epic detail or ADR if cross-cutting. |
-| **Build** | Task notes; API comments; backlog status; CI config; optional test plan; optional **agents** recipes under `agents/` when `blueprints/agents/` is adopted. |
-| **Verify** | Tests matrix or inline requirement references; **CI quality gates** green; optional containerized checks from **`agents/`** documented next to other gates. |
-| **Release** | Release checklist; README; planning status update; optional release pipeline docs. |
-| **Operate / learn** | Risks, ADR supersession, planning adjustments. |
+| Phase | Typical documentation | PDLC context |
+|-------|------------------------|--------------|
+| **Discover / ideate** | WBS/backlog (and optional high-level planning doc); optional notes in `architecture/` or ADR draft. | Receives validated problem + solution from PDLC P3 Strategize. |
+| **Specify** | Story acceptance criteria; risks; themes row if used. | Acceptance criteria reflect PDLC P3 success metrics. |
+| **Design** | Story/epic detail or ADR if cross-cutting. | Informed by PDLC P2 feasibility assessment. |
+| **Build** | Task notes; API comments; backlog status; CI config; optional test plan; optional **agents** recipes under `agents/` when `blueprints/agents/` is adopted. | — |
+| **Verify** | Tests matrix or inline requirement references; **CI quality gates** green; optional containerized checks from **`agents/`** documented next to other gates. | Tests validate against outcome criteria (PDLC P3 metrics) alongside technical correctness. |
+| **Release** | Release checklist; README; planning status update; optional release pipeline docs. | Shippable increment hands to PDLC P4 Launch. |
+| **Operate / learn** | Risks, ADR supersession, planning adjustments. | PDLC P5 Grow: adoption analytics, experiment logs, iteration backlog feed back into Discover. PDLC P6: lifecycle assessment, sunset planning. See `docs/product/metrics/`, `docs/product/lifecycle/`. |
 
 ---
 
@@ -241,7 +273,7 @@ Full detail: [`SDLC.md`](SDLC.md).
 
 ## 6. Evolution
 
-- **Small team / single deliverable:** `blueprints/sdlc/` + `sdlc/` + slim `docs/requirements/` + root `README` may be enough; add `blueprints/docs/` + `docs/product/` when you want a structured functional spec.  
+- **Small team / single deliverable:** `blueprints/sdlc/` + `sdlc/` + slim `docs/requirements/` + root `README` may be enough; add `blueprints/product/` + `docs/product/` when you want a structured functional spec.  
 - **Multiple products or long horizons:** Add milestone namespaces (`M1`, `M2`), stricter WBS, more ADRs; keep **`blueprints/sdlc/`** unchanged per [`POLICY.md`](POLICY.md).  
 - **Monorepo:** One `blueprints/` folder (with `sdlc/` inside it, etc.) at repo root; per-package `docs/` or `requirements/` as needed.  
 - **Containerized automation:** Add **`blueprints/agents/`** once; keep **`agents/`** recipes scoped per package or document mount paths in `docs/development/`.

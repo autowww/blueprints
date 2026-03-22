@@ -1,0 +1,57 @@
+---
+description: Forge Bellows — Engineering family aggregator. Invokes all 7 engineering discipline challenges in sequence.
+globs: 
+alwaysApply: false
+---
+
+# Bellows: Engineering family
+
+When invoked, run challenges from **all 7 engineering disciplines** against the current work item. Present a consolidated report.
+
+## Disciplines included
+
+1. **Software Engineering** — CS fundamentals, craft practices, code quality
+2. **Software Architecture** — system structure, quality attributes, patterns
+3. **DevOps** — CI/CD, deployment, observability, operational readiness
+4. **Testing & QA** — test coverage, design techniques, automation fitness
+5. **Frontend** — web UI performance, accessibility, component architecture
+6. **Mobile** — platform patterns, offline-first, app store readiness
+7. **Embedded / IoT** — constraints, safety, real-time, OTA updates
+
+## Protocol
+
+1. Identify which engineering disciplines are **relevant** to the work item (skip disciplines that clearly do not apply — e.g., skip Mobile for a backend-only Spark).
+2. For each relevant discipline, produce a challenge following [`BELLOWS-CONTRACT.md`](BELLOWS-CONTRACT.md) output format.
+3. Consolidate into a single report with a summary table of all concerns across disciplines.
+4. Recommend the highest-severity action across all challenges.
+
+## Consolidated output format
+
+```markdown
+## Bellows challenge: Engineering family
+
+**Work item:** {ID and title}
+**Disciplines consulted:** {list}
+**Disciplines skipped (not relevant):** {list}
+
+### Summary
+
+| Discipline | Concerns | Highest severity | Recommendation |
+|------------|----------|------------------|----------------|
+
+### Detail per discipline
+(individual challenge sections)
+
+### Overall recommendation
+{Proceed / Proceed with conditions / Rework / Bank}
+```
+
+## Knowledge bases
+
+- [`blueprints/disciplines/engineering/software-engineering/`](../../../../disciplines/engineering/software-engineering/README.md)
+- [`blueprints/disciplines/engineering/software-architecture/`](../../../../disciplines/engineering/software-architecture/README.md)
+- [`blueprints/disciplines/engineering/devops/`](../../../../disciplines/engineering/devops/README.md)
+- [`blueprints/disciplines/engineering/testing/`](../../../../disciplines/engineering/testing/README.md)
+- [`blueprints/disciplines/engineering/frontend/`](../../../../disciplines/engineering/frontend/README.md)
+- [`blueprints/disciplines/engineering/mobile/`](../../../../disciplines/engineering/mobile/README.md)
+- [`blueprints/disciplines/engineering/embedded-iot/`](../../../../disciplines/engineering/embedded-iot/README.md)

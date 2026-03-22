@@ -1,0 +1,171 @@
+# SAFe — process and flows
+
+**Purpose:** Visual and narrative description of SAFe process flows at **team**, **program (ART)**, and **portfolio** levels. Mermaid diagrams for key lifecycle patterns.
+
+---
+
+## 1. PI lifecycle (program level)
+
+A **Program Increment (PI)** is the primary planning and delivery cadence in SAFe — typically 8–12 weeks containing 4–5 iterations plus an Innovation & Planning (IP) iteration.
+
+```mermaid
+flowchart LR
+    A[PI Planning<br/>2 days] --> B[Iteration 1]
+    B --> C[System Demo 1]
+    C --> D[Iteration 2]
+    D --> E[System Demo 2]
+    E --> F[Iteration 3]
+    F --> G[System Demo 3]
+    G --> H[Iteration 4]
+    H --> I[System Demo 4]
+    I --> J[IP Iteration<br/>Innovation &<br/>Planning]
+    J --> K[I&A<br/>Inspect &<br/>Adapt]
+    K --> L[Next PI Planning]
+
+    style A fill:#4a90d9,color:#fff
+    style K fill:#d94a4a,color:#fff
+    style J fill:#4ad97a,color:#fff
+```
+
+### IP iteration
+
+The final iteration in a PI is typically reserved for:
+- Innovation and exploration (hackathons, spikes)
+- Infrastructure and tooling improvements
+- PI-level System Demo and I&A
+- Preparation for next PI Planning
+- Training and cross-team knowledge sharing
+
+Teams should **not** plan feature work into the IP iteration.
+
+---
+
+## 2. Iteration flow (team level)
+
+Within each iteration, team-level flow follows standard Scrum/Kanban patterns:
+
+```mermaid
+flowchart LR
+    A[Iteration<br/>Planning] --> B[Daily execution]
+    B --> C{Daily<br/>Stand-up}
+    C -->|Continue| B
+    C -->|Blocker| D[ART Sync<br/>escalation]
+    D --> B
+    B --> E[Iteration<br/>Review]
+    E --> F[System Demo<br/>contribution]
+    F --> G[Iteration<br/>Retrospective]
+    G --> A
+
+    style A fill:#4a90d9,color:#fff
+    style F fill:#d9a54a,color:#fff
+```
+
+**SAFe-specific addition:** team iterations feed into the **System Demo** every iteration, ensuring continuous cross-team integration.
+
+---
+
+## 3. ART coordination flow
+
+```mermaid
+flowchart TD
+    subgraph "Weekly / bi-weekly"
+        A[Scrum of Scrums<br/>SM delegates] --> B[PO Sync<br/>PO delegates]
+        A --> C[RTE aggregates<br/>risks & impediments]
+        B --> C
+    end
+
+    subgraph "Per iteration"
+        D[Team iteration<br/>reviews] --> E[System Demo<br/>integrated]
+    end
+
+    subgraph "Per PI"
+        F[PI Planning] --> G[4-5 iterations]
+        G --> H[I&A]
+        H --> F
+    end
+
+    C --> D
+    E --> G
+```
+
+---
+
+## 4. Portfolio Kanban flow
+
+Epics flow through the portfolio Kanban system before reaching ARTs:
+
+```mermaid
+flowchart LR
+    A[Funnel] --> B[Reviewing]
+    B --> C[Analyzing]
+    C --> D{Go / No-Go}
+    D -->|Go| E[Portfolio<br/>Backlog]
+    D -->|No-Go| F[Archive]
+    E --> G[Implementing<br/>on ART]
+    G --> H[Done]
+
+    style D fill:#d9a54a,color:#fff
+    style F fill:#999,color:#fff
+```
+
+| Stage | Activity |
+|-------|----------|
+| **Funnel** | Capture epics from strategic themes, stakeholders, teams |
+| **Reviewing** | Lightweight evaluation; filter out low-value or duplicate items |
+| **Analyzing** | Develop **Lean business case** (benefit hypothesis, MVP scope, cost estimate) |
+| **Go / No-Go** | LPM decides based on Lean budget, strategy alignment, capacity |
+| **Portfolio Backlog** | Approved epics awaiting ART capacity |
+| **Implementing** | Epic decomposed into features on ART program backlog |
+| **Done** | Benefit hypothesis validated or invalidated |
+
+---
+
+## 5. Release on demand
+
+SAFe decouples **release** from **PI cadence**. Teams can release at any point when:
+
+1. Features meet **Definition of Done** and acceptance criteria
+2. Continuous delivery pipeline is green (build, test, stage)
+3. Business decides to release (business value, market timing)
+
+```mermaid
+flowchart LR
+    A[Continuous<br/>exploration] --> B[Continuous<br/>integration]
+    B --> C[Continuous<br/>deployment]
+    C --> D[Release on<br/>demand]
+
+    style D fill:#4ad97a,color:#fff
+```
+
+The **continuous delivery pipeline** spans all four activities. PI cadence provides **alignment**; release cadence provides **value delivery**. They need not be the same.
+
+---
+
+## 6. Dependency management
+
+Dependencies are first surfaced at **PI Planning** and tracked throughout the PI:
+
+| When | How |
+|------|-----|
+| **PI Planning** | Teams identify dependencies during breakouts; visualized on the **program board** as strings between teams/iterations |
+| **ART Sync** | RTE and SMs review dependency status; escalate blocked items |
+| **Daily Stand-up** | Teams surface intra-team blockers; cross-team items go to SM → ART Sync |
+| **I&A** | Review dependency-related delays; improve architectural runway to reduce future dependencies |
+
+**ROAM model** for risks identified at PI Planning:
+
+| Status | Meaning |
+|--------|---------|
+| **Resolved** | Risk no longer exists |
+| **Owned** | Someone accepted responsibility and has a mitigation plan |
+| **Accepted** | Impact understood and accepted; no further action |
+| **Mitigated** | Actions taken to reduce probability or impact |
+
+---
+
+## 7. References
+
+- [`../safe.md`](../safe.md) — SAFe methodology summary
+- [`ceremonies-prescriptive.md`](ceremonies-prescriptive.md) — event detail with inputs/outputs
+- [`roles.md`](roles.md) — who does what
+- [`foundation-connection.md`](foundation-connection.md) — SDLC phase mapping

@@ -25,7 +25,7 @@ This folder holds **CSS**, **JavaScript**, and **diagrams** for the **SDLC bluep
 
 **Broken links:** none — every `<img src="assets/…">` points to an existing file.
 
-**Other blueprints:** `blueprints/docs/docs/` uses only `assets/docs-theme.css` (no raster/SVG images yet).
+**Other blueprints:** `blueprints/product/docs/` uses only `assets/docs-theme.css` (no raster/SVG images yet).
 
 ## Non-image assets
 

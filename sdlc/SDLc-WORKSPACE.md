@@ -41,7 +41,7 @@ If `README.md` already exists in the target, the script **refuses to overwrite**
 
 ## After init
 
-- **Customize** `sdlc/README.md`: remove table rows for paths you do not use yet (e.g. `blueprints/docs/`, `docs/product/`) if the repo is slimmer than the template.
+- **Customize** `sdlc/README.md`: remove table rows for paths you do not use yet (e.g. `blueprints/product/`, `docs/product/`) if the repo is slimmer than the template.
 - **Link** the handbook: [`docs/index.html`](docs/index.html) already references `../../../sdlc/TRACKING-*.md` when those files exist.
 - **Do not** edit the frozen blueprint for project-only notes; keep them in `sdlc/` or `docs/`.
 

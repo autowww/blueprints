@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light" />
+  <title>Blueprints — documentation portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            display: ['"Fraunces"', 'Georgia', 'serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    .area-card { transition: transform .15s, box-shadow .15s; }
+    .area-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.08); }
+  </style>
+</head>
+<body class="min-h-full bg-slate-50 font-sans text-slate-800 antialiased">
+
+  <div class="mx-auto max-w-5xl px-4 pb-20 pt-16 sm:px-8">
+
+    <header class="mb-16 text-center">
+      <p class="mb-3 text-xs font-semibold uppercase tracking-[.2em] text-indigo-600">Documentation Portal</p>
+      <h1 class="font-display text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">Blueprints</h1>
+      <p class="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-slate-600">
+        Reusable documentation and process packages for software projects &mdash; organized into
+        <strong class="text-slate-800">lifecycles</strong>,
+        <strong class="text-slate-800">disciplines</strong>, and
+        <strong class="text-slate-800">support packages</strong>.
+      </p>
+    </header>
+
+    <section class="mb-16">
+      <h2 class="font-display text-2xl font-bold text-slate-900 mb-2">How it fits together</h2>
+      <p class="text-slate-600 leading-relaxed mb-6">
+        Three lifecycle questions drive the framework. <strong class="text-slate-800">PDLC</strong> asks
+        &ldquo;are we building the <em>right</em> product?&rdquo; &mdash; discovery through sunset.
+        <strong class="text-slate-800">SDLC</strong> asks &ldquo;are we building the product <em>right</em>?&rdquo;
+        &mdash; phases A&ndash;F from discover to release.
+        <strong class="text-slate-800">PM</strong> governs delivery: schedule, budget, risk.
+        <strong class="text-slate-800">BA</strong> provides the analytical techniques both lifecycles rely on.
+        <strong class="text-slate-800">Product Docs</strong> defines where product-functional prose lives.
+      </p>
+
+      <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <div class="flex flex-col items-center gap-3 text-sm">
+          <div class="rounded-xl border-2 border-amber-400 bg-amber-50 px-6 py-3 text-center font-semibold text-amber-900 w-full max-w-md">
+            PDLC &mdash; Product Development Lifecycle
+            <span class="block text-xs font-normal text-amber-700 mt-1">P1 Discover &rarr; P2 Validate &rarr; P3 Strategize &rarr; P4 Launch &rarr; P5 Grow &rarr; P6 Sunset</span>
+          </div>
+          <svg class="h-5 w-5 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M12 5v14m0 0l-4-4m4 4l4-4"/></svg>
+          <div class="rounded-xl border-2 border-emerald-500 bg-emerald-50 px-6 py-3 text-center font-semibold text-emerald-900 w-full max-w-sm">
+            SDLC &mdash; Software Delivery Lifecycle
+            <span class="block text-xs font-normal text-emerald-700 mt-1">A Discover &rarr; B Specify &rarr; C Design &rarr; D Build &rarr; E Verify &rarr; F Release</span>
+          </div>
+          <div class="flex gap-4 mt-2 w-full max-w-lg justify-center">
+            <div class="flex-1 rounded-lg border border-blue-200 bg-blue-50 px-4 py-2 text-center">
+              <span class="font-semibold text-blue-900">PM</span>
+              <span class="block text-xs text-blue-700 mt-0.5">Governance layer</span>
+            </div>
+            <div class="flex-1 rounded-lg border border-violet-200 bg-violet-50 px-4 py-2 text-center">
+              <span class="font-semibold text-violet-900">BA</span>
+              <span class="block text-xs text-violet-700 mt-0.5">Analytical techniques</span>
+            </div>
+            <div class="flex-1 rounded-lg border border-rose-200 bg-rose-50 px-4 py-2 text-center">
+              <span class="font-semibold text-rose-900">Product Docs</span>
+              <span class="block text-xs text-rose-700 mt-0.5">Functional IA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="font-display text-2xl font-bold text-slate-900 mb-6">Handbook areas</h2>
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+
+        <a href="../sdlc/docs/index.html" class="area-card block rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-100 text-emerald-700">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-bold text-slate-900">SDLC</h3>
+          <p class="mt-1 text-sm text-slate-500">Software delivery lifecycle &mdash; phases A&ndash;F, Definition of Done, methodologies, ceremonies, CI/CD, and governance.</p>
+          <p class="mt-3 text-xs font-semibold text-emerald-600">Open handbook &rarr;</p>
+        </a>
+
+        <a href="../pdlc/docs/index.html" class="area-card block rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-amber-100 text-amber-700">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-bold text-slate-900">PDLC</h3>
+          <p class="mt-1 text-sm text-slate-500">Product development lifecycle &mdash; from problem discovery through growth and sunset. Wraps around SDLC as the broader product lifecycle.</p>
+          <p class="mt-3 text-xs font-semibold text-amber-600">Open handbook &rarr;</p>
+        </a>
+
+        <a href="../product/docs/index.html" class="area-card block rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-rose-100 text-rose-700">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-bold text-slate-900">Product Docs</h3>
+          <p class="mt-1 text-sm text-slate-500">Product-functional documentation blueprint &mdash; information architecture for vision, personas, capabilities, journeys, and feature specs.</p>
+          <p class="mt-3 text-xs font-semibold text-rose-600">Open handbook &rarr;</p>
+        </a>
+
+        <a href="../disciplines/governance/pm/docs/index.html" class="area-card block rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100 text-blue-700">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-bold text-slate-900">Project Management</h3>
+          <p class="mt-1 text-sm text-slate-500">PM governance layer &mdash; process groups, knowledge areas, approaches (PMI/PMBOK, PRINCE2, Six Sigma), and bridges to SDLC/PDLC.</p>
+          <p class="mt-3 text-xs font-semibold text-blue-600">Open handbook &rarr;</p>
+        </a>
+
+        <a href="../disciplines/product/ba/docs/index.html" class="area-card block rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-violet-100 text-violet-700">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-bold text-slate-900">Business Analysis</h3>
+          <p class="mt-1 text-sm text-slate-500">BABOK-aligned knowledge areas, techniques, and perspectives &mdash; the analytical discipline spanning PDLC discovery and SDLC delivery.</p>
+          <p class="mt-3 text-xs font-semibold text-violet-600">Open handbook &rarr;</p>
+        </a>
+
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="font-display text-2xl font-bold text-slate-900 mb-4">Adopt in your repo</h2>
+      <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm text-sm text-slate-600 leading-relaxed space-y-3">
+        <p><strong class="text-slate-800">1.</strong> Add as a <strong>git submodule</strong> under <code class="rounded bg-slate-100 px-1.5 py-0.5 text-xs">blueprints/</code>:</p>
+        <pre class="overflow-x-auto rounded-xl border border-slate-200 bg-slate-50 p-3 text-xs text-slate-700">git submodule add https://github.com/autowww/blueprints.git blueprints</pre>
+        <p><strong class="text-slate-800">2.</strong> Bootstrap project-specific folders (<code class="rounded bg-slate-100 px-1.5 py-0.5 text-xs">sdlc/</code>, <code class="rounded bg-slate-100 px-1.5 py-0.5 text-xs">docs/product/</code>) using the templates in each package.</p>
+        <p><strong class="text-slate-800">3.</strong> Open <code class="rounded bg-slate-100 px-1.5 py-0.5 text-xs">blueprints/docs/index.html</code> in a browser for this portal, or serve with <code class="rounded bg-slate-100 px-1.5 py-0.5 text-xs">python -m http.server</code>.</p>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="font-display text-2xl font-bold text-slate-900 mb-4">Markdown sources</h2>
+      <p class="text-sm text-slate-600 leading-relaxed mb-4">Each handbook is a browser-friendly view of canonical Markdown. Edit Markdown first, then update HTML per each area's <code class="rounded bg-slate-100 px-1.5 py-0.5 text-xs">MAINTENANCE.md</code>.</p>
+      <div class="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
+        <table class="min-w-full text-sm">
+          <thead>
+            <tr class="border-b border-slate-100 bg-slate-50/80">
+              <th class="px-4 py-3 text-left font-semibold text-slate-700">Area</th>
+              <th class="px-4 py-3 text-left font-semibold text-slate-700">Canonical Markdown</th>
+              <th class="px-4 py-3 text-left font-semibold text-slate-700">HTML handbook</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-600">
+            <tr><td class="px-4 py-2.5">SDLC</td><td class="px-4 py-2.5"><code class="text-xs">blueprints/sdlc/*.md</code></td><td class="px-4 py-2.5"><code class="text-xs">blueprints/sdlc/docs/</code></td></tr>
+            <tr><td class="px-4 py-2.5">PDLC</td><td class="px-4 py-2.5"><code class="text-xs">blueprints/pdlc/*.md</code></td><td class="px-4 py-2.5"><code class="text-xs">blueprints/pdlc/docs/</code></td></tr>
+            <tr><td class="px-4 py-2.5">Product Docs</td><td class="px-4 py-2.5"><code class="text-xs">blueprints/product/*.md</code></td><td class="px-4 py-2.5"><code class="text-xs">blueprints/product/docs/</code></td></tr>
+            <tr><td class="px-4 py-2.5">PM</td><td class="px-4 py-2.5"><code class="text-xs">blueprints/disciplines/governance/pm/*.md</code></td><td class="px-4 py-2.5"><code class="text-xs">blueprints/disciplines/governance/pm/docs/</code></td></tr>
+            <tr><td class="px-4 py-2.5">BA</td><td class="px-4 py-2.5"><code class="text-xs">blueprints/disciplines/product/ba/*.md</code></td><td class="px-4 py-2.5"><code class="text-xs">blueprints/disciplines/product/ba/docs/</code></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer class="border-t border-slate-200 pt-8 text-sm text-slate-500">
+      <p>Portal last updated: <strong class="text-slate-700">2026-03-22</strong>.</p>
+      <p class="mt-1">Maintained per <a href="MAINTENANCE.md" class="text-indigo-600 hover:underline">MAINTENANCE.md</a>. Styled with <a href="https://tailwindcss.com" class="text-indigo-600 hover:underline" rel="noopener">Tailwind CSS</a> (CDN).</p>
+    </footer>
+
+  </div>
+
+  <script src="assets/portal-nav.js" data-root=".."></script>
+</body>
+</html>

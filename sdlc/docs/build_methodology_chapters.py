@@ -3,6 +3,10 @@
 Generate full handbook HTML for methodology subchapters (Foundation / Ceremonies / Process
 for Scrum, Kanban, Phased, XP). Same layout pattern as methodologies-scrum-roles.html.
 
+NOTE: Lean, Spiral, V-Model, and DevOps subchapter HTML pages are currently hand-maintained
+(stub pages linking to Markdown sources). They can be extended to use this same generation
+pattern by adding their data structures below.
+
 Run from this directory:
   python3 build_methodology_chapters.py
 

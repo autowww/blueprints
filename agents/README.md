@@ -1,6 +1,6 @@
 # Agents blueprint (automation)
 
-This folder is a **reusable, product-agnostic** package for **engineering automation**: **foundational Docker images**, **Compose patterns**, and **templates** for isolated, repeatable jobs (shell scripts, browser runners, optional LLM tool loops). It is the **execution layer** for work that fits the repo’s **agentic** and **CI** policies — not the place for SDLC process prose (see **`blueprints/sdlc/`**, including [**`methodologies/agentic-sdlc.md`**](../sdlc/methodologies/agentic-sdlc.md)) or product functional specs (see **`blueprints/docs/`**).
+This folder is a **reusable, product-agnostic** package for **engineering automation**: **foundational Docker images**, **Compose patterns**, and **templates** for isolated, repeatable jobs (shell scripts, browser runners, optional LLM tool loops). It is the **execution layer** for work that fits the repo’s **agentic** and **CI** policies — not the place for SDLC process prose (see **`blueprints/sdlc/`**, including [**`methodologies/agentic-sdlc.md`**](../sdlc/methodologies/agentic-sdlc.md)) or product functional specs (see **`blueprints/product/`**).
 
 **Governance:** read [`POLICY.md`](POLICY.md) — **do not change** this directory unless explicitly updating the baseline. Project automation lives in **`agents/`** (mutable) at repository root when you adopt this blueprint.
 

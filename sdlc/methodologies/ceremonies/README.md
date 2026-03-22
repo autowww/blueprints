@@ -10,6 +10,11 @@
 | **Fork — Kanban** | [`kanban.md`](kanban.md) | Kanban **feedback loops** and common rituals mapped to intents; links to [Kanban](../kanban.md). |
 | **Fork — Phased** | [`phased.md`](phased.md) | **Gates**, phase reviews, formal assurance mapped to intents; links to [Phased delivery](../phased-delivery.md). |
 | **Fork — XP** | [`xp.md`](xp.md) | XP **practices** that behave like ceremonies mapped to intents; links to [XP](../xp.md). |
+| **Fork — SAFe** | [`safe.md`](safe.md) | SAFe **program-level and team-level events** mapped to intents; links to [SAFe](../safe.md). |
+| **Fork — Lean** | [`lean.md`](lean.md) | Lean **improvement practices** (Kaizen, value-stream mapping, A3) mapped to intents; links to [Lean](../lean.md). |
+| **Fork — Spiral** | [`spiral.md`](spiral.md) | Spiral **quadrant events** and anchor-point milestones mapped to intents; links to [Spiral](../spiral.md). |
+| **Fork — V-Model** | [`v-model.md`](v-model.md) | V-Model **design reviews** and **test gates** mapped to intents; links to [V-Model](../v-model.md). |
+| **Fork — DevOps** | [`devops.md`](devops.md) | DevOps **operational ceremonies** (deployment, incident, SLO) mapped to intents; links to [DevOps](../devops.md). |
 
 **Handbook:** [`../../docs/methodologies-ceremonies.html`](../../docs/methodologies-ceremonies.html) — summary + navigation.
 

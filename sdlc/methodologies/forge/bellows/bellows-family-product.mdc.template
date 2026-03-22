@@ -1,0 +1,52 @@
+---
+description: Forge Bellows — Product family aggregator. Invokes all 5 product discipline challenges.
+globs: 
+alwaysApply: false
+---
+
+# Bellows: Product family
+
+When invoked, run challenges from **all 5 product disciplines** against the current work item.
+
+## Disciplines included
+
+1. **Product Management** — strategy coherence, priority rationale, market positioning, OKR alignment
+2. **Business Analysis** — stakeholder needs, requirements quality, solution evaluation
+3. **UX / UI Design** — usability, accessibility, desirability
+4. **Marketing** — positioning, GTM readiness, growth instrumentation
+5. **Customer Success** — onboarding, support readiness, churn indicators
+
+## Protocol
+
+1. Identify which product disciplines are **relevant** (e.g., skip Marketing for internal tooling).
+2. For each relevant discipline, produce a challenge following [`BELLOWS-CONTRACT.md`](BELLOWS-CONTRACT.md).
+3. Consolidate into a single report.
+
+## Consolidated output format
+
+```markdown
+## Bellows challenge: Product family
+
+**Work item:** {ID and title}
+**Disciplines consulted:** {list}
+**Disciplines skipped (not relevant):** {list}
+
+### Summary
+
+| Discipline | Concerns | Highest severity | Recommendation |
+|------------|----------|------------------|----------------|
+
+### Detail per discipline
+(individual challenge sections)
+
+### Overall recommendation
+{Proceed / Proceed with conditions / Rework / Bank}
+```
+
+## Knowledge bases
+
+- [`blueprints/disciplines/product/product-management/`](../../../../disciplines/product/product-management/README.md)
+- [`blueprints/disciplines/product/ba/`](../../../../disciplines/product/ba/README.md)
+- [`blueprints/disciplines/product/ux-design/`](../../../../disciplines/product/ux-design/README.md)
+- [`blueprints/disciplines/product/marketing/`](../../../../disciplines/product/marketing/README.md)
+- [`blueprints/disciplines/product/customer-success/`](../../../../disciplines/product/customer-success/README.md)

@@ -1,0 +1,87 @@
+# Spiral Model — major processes & flow maps
+
+## 1. Spiral quadrant cycle
+
+```mermaid
+flowchart TD
+  Q1["Q1: Determine objectives"] --> Q2["Q2: Identify & resolve risks"]
+  Q2 --> Q3["Q3: Develop & test"]
+  Q3 --> Q4["Q4: Plan next iteration"]
+  Q4 --> Q1
+```
+
+Each pass through the four quadrants is one **spiral**. Risk analysis (Q2) gates commitment to build (Q3).
+
+## 2. Risk-driven decision (Q2 detail)
+
+```mermaid
+flowchart TD
+  RI[Identify risks] --> RA[Analyze: likelihood × impact]
+  RA --> RS{Resolution strategy}
+  RS -->|Prototype| PR[Build prototype]
+  RS -->|Mitigate| MT[Add safeguards]
+  RS -->|Accept| AC[Document and monitor]
+  RS -->|Avoid| AV[Change approach or scope]
+  PR --> RV[Review results]
+  MT --> RV
+  AC --> RV
+  AV --> RV
+  RV --> GO{Acceptable risk?}
+  GO -->|Yes| Q3[Proceed to Q3 build]
+  GO -->|No| RI
+```
+
+## 3. Anchor-point milestone sequence
+
+```mermaid
+flowchart LR
+  S1["Spiral 1–2: Concept"] --> LCO["LCO milestone"]
+  LCO --> S3["Spiral 3–4: Architecture"] --> LCA["LCA milestone"]
+  LCA --> S5["Spiral 5+: Build"] --> IOC["IOC milestone"]
+  IOC --> OP[Operations]
+```
+
+Milestone count and spiral numbering are illustrative; actual projects adjust based on risk and scope.
+
+## 4. Spiral scope evolution
+
+```mermaid
+flowchart LR
+  E1["Early spirals: Concepts, prototypes"] --> E2["Middle spirals: Architecture, integration"]
+  E2 --> E3["Late spirals: Full build, testing"]
+  E3 --> E4["Final spirals: Deployment, transition"]
+```
+
+## 5. Phases A–F (Spiral mapping per spiral)
+
+| Blueprint phase | Typical Spiral locus | Notes |
+|-----------------|----------------------|-------|
+| A Shape | Q1: Objectives, constraints | Revisited each spiral with increasing detail |
+| B Plan | Q1 + Q4: Spiral planning, risk approach | Plan adapts to current risk profile |
+| C Build | Q3: Development, prototyping | Scope matches spiral maturity |
+| D Verify | Q3: Testing against spiral objectives | Verification depth grows with product maturity |
+| E Release | Q4: Milestone review, stakeholder commit | Early releases are internal (demos); later are operational |
+| F Learn | Q4 → next Q1: Feedback loop | Systematic learning drives next spiral |
+
+## 6. Flow details (walkthrough)
+
+**Quadrant cycle** — The four quadrants are not sequential phases but a repeated cycle. Q1 sets direction, Q2 manages risk, Q3 produces work, Q4 evaluates and plans. The model's power is in the Q2 gate: no commitment to expensive build work without understanding risks.
+
+**Risk-driven decision** — Q2 produces actionable risk resolution: build a prototype to test feasibility, add safeguards for known threats, accept monitored risks, or change approach to avoid them entirely. The cycle repeats until risk is acceptable for the current spiral's scope.
+
+**Anchor-point milestones** — LCO confirms the project is worth doing. LCA confirms the architecture can support it. IOC confirms the system is ready for users. These are **commitment gates** — stakeholders decide whether to invest in the next phase of spirals.
+
+**Scope evolution** — Early spirals are cheap, exploratory, and may produce throwaway prototypes. As confidence grows, spirals become more engineering-intensive. This progressive commitment is the model's core risk management strategy.
+
+## 7. Authoritative sources & further reading
+
+- [Wikipedia — Spiral model](https://en.wikipedia.org/wiki/Spiral_model) — Stable overview of quadrants and history.
+- [Wikipedia — Barry Boehm](https://en.wikipedia.org/wiki/Barry_Boehm) — Author context.
+- [IEEE — Boehm 1988 paper](https://doi.org/10.1109/2.59) — Original publication (may require IEEE access).
+- [SEI/CMU](https://resources.sei.cmu.edu/) — Software Engineering Institute resources.
+
+Full curated list: [`REFERENCE-LINKS.md`](../REFERENCE-LINKS.md).
+
+## 8. Internal links
+
+- [Ceremonies](ceremonies-prescriptive.md) · [Overview](../spiral.md)

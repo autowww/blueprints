@@ -10,7 +10,7 @@ This wiki is a **Markdown mirror** of the **[blueprints](https://github.com/auto
 - **Spec-driven development (SDD):** [spec-driven-development](sdlc/methodologies/spec-driven-development) · [SDD I/O package](sdlc/methodologies/spec-driven/README) (ceremonies C1–C6, process P1–P6, schema) · [templates/sdd/README](sdlc/templates/sdd/README) (copy-paste specs for agents/teams)
 - **Roles & archetypes:** [sdlc/methodologies/roles-archetypes](sdlc/methodologies/roles-archetypes)
 - **Ceremonies (foundation + bridge + forks):** [sdlc/methodologies/ceremonies/README](sdlc/methodologies/ceremonies/README) · [methodology-bridge](sdlc/methodologies/ceremonies/methodology-bridge)
-- **Product-docs blueprint:** [docs/README](docs/README)
+- **Product-docs blueprint:** [product/README](product/README)
 - **Agents blueprint:** [agents/README](agents/README)
 
 Use the **sidebar** for the full mirrored tree.

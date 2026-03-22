@@ -28,6 +28,31 @@ Each row includes an **executive summary**: what the link is and **why this blue
 | Ron Jeffries — XP | https://ronjeffries.com/xprog/ | **Practitioner** perspective on XP—stories and guidance from a signatory-level voice. |
 | Martin Fowler — XP (Bliki) | https://martinfowler.com/bliki/ExtremeProgramming.html | Short **expert summary** of XP on a widely cited blog—quick read. |
 | Wiki.c2 — Extreme Programming Roadmap | https://wiki.c2.com/?ExtremeProgrammingRoadmap | **Classic wiki** index of XP topics—dated but historically influential. |
+| Wikipedia — Lean software development | https://en.wikipedia.org/wiki/Lean_software_development | **Stable overview** of the seven Poppendieck principles, history, and relationship to manufacturing Lean—entry point before the books. |
+| Wikipedia — Toyota Production System | https://en.wikipedia.org/wiki/Toyota_Production_System | **Manufacturing roots** of Lean—understanding TPS clarifies why "waste" and "pull" matter in software. |
+| Agile Alliance — Lean software development | https://www.agilealliance.org/glossary/lean-software-development/ | **Short definition** in the Agile glossary—shared vocabulary for Lean. |
+| Lean Enterprise Institute | https://www.lean.org/ | **Practitioner community** for Lean thinking—manufacturing and beyond; optional depth. |
+| Wikipedia — Spiral model | https://en.wikipedia.org/wiki/Spiral_model | **Stable overview** of Boehm's risk-driven model—quadrants, anchor-point milestones, history. |
+| Wikipedia — Barry Boehm | https://en.wikipedia.org/wiki/Barry_Boehm | **Author** biography—context for the Spiral Model's origins in defense/aerospace. |
+| Wikipedia — V-model (software development) | https://en.wikipedia.org/wiki/V-model_(software_development) | **Stable overview** of the V-Model—phases, traceability pairing, and comparison with Waterfall. |
+| Wikipedia — Verification and validation | https://en.wikipedia.org/wiki/Verification_and_validation | **Foundational** V&V concepts—"building the right product" vs "building the product right." |
+| ISO 26262 (catalogue) | https://www.iso.org/standard/68383.html | **Automotive** functional safety standard mandating V-Model-style development (catalogue; full text licensed). |
+| Wikipedia — DevOps | https://en.wikipedia.org/wiki/DevOps | **Stable overview** of DevOps history, practices, and culture—entry point before vendor-specific guidance. |
+| Wikipedia — CI/CD | https://en.wikipedia.org/wiki/CI/CD | **Continuous integration and delivery**—the technical backbone of DevOps pipelines. |
+| DORA — DevOps Research and Assessment | https://dora.dev/ | **Research-backed** DevOps metrics and capabilities; the four key metrics (deployment frequency, lead time, CFR, MTTR). |
+| Google SRE Book | https://sre.google/sre-book/table-of-contents/ | **Free online** SRE practices and principles—companion to DevOps methodology. |
+| Wikipedia — Feature-driven development | https://en.wikipedia.org/wiki/Feature-driven_development | **Stable overview** of FDD's five activities, roles, and feature-centric approach. |
+| Agile Alliance — FDD | https://www.agilealliance.org/glossary/fdd/ | **Short definition** of Feature-Driven Development in the Agile glossary. |
+| Wikipedia — Crystal Clear | https://en.wikipedia.org/wiki/Crystal_Clear_(software_development) | **Stable overview** of the most common Crystal variant—properties and scaling. |
+| Wikipedia — DSDM | https://en.wikipedia.org/wiki/Dynamic_systems_development_method | **Stable overview** of DSDM phases, principles, and MoSCoW prioritization. |
+| Agile Business Consortium | https://www.agilebusiness.org/ | **Official** DSDM body—framework documentation, training, certification. |
+| Shape Up (free book) | https://basecamp.com/shapeup | **Official** Shape Up book by Ryan Singer—complete methodology description, free online. |
+| PMI — Disciplined Agile | https://www.pmi.org/disciplined-agile | **Official** DA body of knowledge—goal diagrams, lifecycles, process options (PMI-owned). |
+| Wikipedia — Disciplined agile delivery | https://en.wikipedia.org/wiki/Disciplined_agile_delivery | **Stable overview** of DA's approach, lifecycles, and relationship to other Agile methods. |
+| Wikipedia — Behavior-driven development | https://en.wikipedia.org/wiki/Behavior-driven_development | **Stable overview** of BDD—Given-When-Then, tools, relationship to TDD. |
+| Dan North — Introducing BDD | https://dannorth.net/introducing-bdd/ | **Original** BDD article by its creator—motivation and initial formulation. |
+| Cucumber — BDD overview | https://cucumber.io/docs/bdd/ | **Practitioner** guide to BDD with a popular tool—process and anti-patterns. |
+| Wikipedia — Rapid application development | https://en.wikipedia.org/wiki/Rapid_application_development | **Stable overview** of RAD—phases, tools, prototyping-centric approach. |
 | OWASP — Top 10 for LLM Applications | https://owasp.org/www-project-top-10-for-large-language-model-applications/ | **Security risks** when LLMs touch design, code, or data in the SDLC—essential for agentic / AI-assisted workflows. |
 
 ## Quick verification (maintainers)

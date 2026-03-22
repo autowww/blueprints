@@ -2,11 +2,15 @@
 
 This describes a **generic** delivery flow and **which documentation** to update at each step. It pairs with [`DOCUMENTATION-STRUCTURE.md`](DOCUMENTATION-STRUCTURE.md) (where files live, including the optional **milestone → epic → story → task** hierarchy in §2.1) and your project’s **own** requirements or backlog convention (where you keep epics, stories, and IDs).
 
-**Methodology depth (Scrum, Kanban, XP, phased, Agile, agentic SDLC):** see [`methodologies/README.md`](methodologies/README.md) — full guides with external links and adoption notes; the [handbook](docs/methodologies.html) mirrors these as sub-chapters.
+**PDLC (product lifecycle):** This SDLC covers **how to build the product right** — phases A–F from requirements through release. The **Product Development Life Cycle** ([`blueprints/pdlc/`](../pdlc/README.md)) covers **building the right product** — problem discovery, solution validation, strategy, go-to-market, growth, and sunset. SDLC phases A–F sit **inside** the PDLC as the Build & Release engine. See [`PDLC-SDLC-BRIDGE.md`](../pdlc/PDLC-SDLC-BRIDGE.md) for phase alignment, artifact handoffs, role mapping, and a worked example.
+
+**Methodology depth (Scrum, Kanban, XP, phased, Lean, Spiral, V-Model, DevOps, SAFe, FDD, Crystal, DSDM, Shape Up, DA, BDD, RAD, Agile, agentic SDLC):** see [`methodologies/README.md`](methodologies/README.md) — full guides with external links and adoption notes; the [handbook](docs/methodologies.html) mirrors these as sub-chapters.
 
 **Ceremonies (foundation vs forks):** methodology-neutral **intent types** (why recurring collaboration exists) and per-methodology mappings — [`methodologies/ceremonies/README.md`](methodologies/ceremonies/README.md); handbook [Ceremonies](docs/methodologies-ceremonies.html).
 
 **Bridge (intents ↔ Scrum / Kanban / phased / XP names):** [`methodologies/ceremonies/methodology-bridge.md`](methodologies/ceremonies/methodology-bridge.md) — matrix, blend suggestions, calendar mapping.
+
+**Discipline bridges:** Cross-cutting disciplines each have a bridge mapping their practices to SDLC phases A–F and PDLC P1–P6 — see [`BRIDGES.md`](../BRIDGES.md) for the full index, or jump to a specific discipline: [BA](../disciplines/product/ba/BA-SDLC-PDLC-BRIDGE.md) · [PM](../disciplines/governance/pm/PM-SDLC-PDLC-BRIDGE.md) · [Testing](../disciplines/engineering/testing/TESTING-SDLC-PDLC-BRIDGE.md) · [Architecture](../disciplines/engineering/software-architecture/ARCH-SDLC-PDLC-BRIDGE.md) · [DevOps](../disciplines/engineering/devops/DEVOPS-SDLC-PDLC-BRIDGE.md) · [Big Data](../disciplines/data/bigdata/BIGDATA-SDLC-PDLC-BRIDGE.md) · [Data Science](../disciplines/data/data-science/DS-SDLC-PDLC-BRIDGE.md).
 
 **Path examples** below use a common `docs/` layout; adjust names if your tree differs.
 
@@ -185,6 +189,8 @@ An epic is **done** when all **in-scope** child stories are `done`, your **plann
 ## 7. CI/CD, quality gates, and test plans
 
 **CI/CD** means continuous integration (build + checks on every push/PR) and, when you adopt it, continuous delivery or deployment (automation toward release).
+
+**Testing depth:** [`disciplines/engineering/testing/README.md`](../disciplines/engineering/testing/README.md) is the cross-cutting testing knowledge base — test levels and types, test design techniques, modern strategies (shift-left, TDD, BDD, contract testing, AI-augmented), and the test automation frameworks landscape. Reference it when choosing *what* to test and *which tools* to use; this section covers *where* testing fits in the pipeline.
 
 | Concept | What to capture |
 |---------|-----------------|

@@ -46,7 +46,7 @@
               <li class="breadcrumb-item active" aria-current="page">Methodologies &amp; tracking</li>
             </ol></nav>
             <h1 class="font-display h2 fw-bold text-body mb-0">Methodologies &amp; tracking</h1>
-            <p class="text-body-secondary small mt-2 mb-0">How <strong class="text-body">Scrum</strong>, <strong class="text-body">Kanban</strong>, <strong class="text-body">phased delivery</strong>, and <strong class="text-body">XP</strong> use one engineering-tracking <strong class="text-body">foundation</strong> — plus where the Markdown sources live in the consuming repo.</p>
+            <p class="text-body-secondary small mt-2 mb-0">Comprehensive guides for <strong class="text-body">19 methodologies</strong> organized by group — iterative Agile, sequential/risk-driven, scaling, Lean/continuous delivery, complementary practices — all mapped to one engineering-tracking <strong class="text-body">foundation</strong>.</p>
           </header>
 
           <div class="alert alert-warning border-0 shadow-sm py-2 mb-3" role="status">
@@ -57,63 +57,70 @@
           <section id="methodology-guides" class="mt-3 mb-4">
             <h2 class="font-display h5 fw-semibold">Methodology guides (deep dives)</h2>
             <p class="text-body-secondary small mt-2 mb-3">Each topic has a <strong class="text-body">handbook page</strong> (summary, diagrams, external links with <strong class="text-body">executive summaries</strong>) and <strong class="text-body">Markdown</strong> in the blueprint. <strong class="text-body">Scrum, Kanban, phased delivery, and XP</strong> each have <strong class="text-body">four subchapters</strong> (Foundation, Roles, Ceremonies, Process) with <strong class="text-body">tables, mini-TOC, and Mermaid</strong> — regenerated from <code>docs/build_methodology_chapters.py</code> (Scrum <strong class="text-body">Roles</strong> is hand-maintained). Canonical depth stays in <code>methodologies/&lt;name&gt;/</code>. For <strong class="text-body">SDD-style inputs/outputs</strong> per ceremony intent and cross-methodology process slots, use <a href="spec-driven-sdd-ceremonies.html" class="link-success">Ceremonies (SDD I/O)</a> and <a href="spec-driven-sdd-process.html" class="link-success">Process (SDD I/O)</a> under Spec-driven development.</p>
+            <h3 class="font-display h6 fw-bold text-secondary mt-3 mb-2">Foundation (methodology-neutral)</h3>
+            <div class="row row-cols-1 row-cols-md-2 g-2 mb-4">
+              <div class="col">
+                <div class="border rounded-3 bg-body p-3 h-100 shadow-sm">
+                  <h4 class="font-display h6 fw-bold text-success mb-2">Roles &amp; archetypes</h4>
+                  <p class="text-body-secondary small mb-2">Per-archetype <strong class="text-body">detail</strong> + methodology <strong class="text-body">tweaks</strong>; roll-up; Owner/Implementer; specialty hats vs <strong class="text-body">Contributor</strong>.</p>
+                  <p class="small mb-0"><a href="methodologies-roles.html" class="link-success">Handbook &rarr;</a> &middot; <a href="../methodologies/roles-archetypes.md" class="text-secondary">roles-archetypes.md</a></p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="border rounded-3 bg-body p-3 h-100 shadow-sm">
+                  <h4 class="font-display h6 fw-bold text-success mb-2">Ceremonies</h4>
+                  <p class="text-body-secondary small mb-2"><strong class="text-body">Foundation</strong> (C1&ndash;C6 + suggestions), <strong class="text-body">bridge</strong> (methodology names), <strong class="text-body">forks</strong> (event suggestions).</p>
+                  <p class="small mb-0"><a href="methodologies-ceremonies.html" class="link-success">Handbook &rarr;</a> &middot; <a href="../methodologies/ceremonies/README.md" class="text-secondary">ceremonies/README.md</a></p>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="font-display h6 fw-bold text-secondary mb-2">Iterative Agile frameworks</h3>
+            <p class="text-body-secondary small mb-2">Frameworks that organize work in iterations or cadences with cross-functional teams and regular feedback.</p>
+            <div class="row row-cols-1 row-cols-md-2 g-2 mb-4">
+              <div class="col"><div class="border rounded-3 bg-body p-3 h-100 shadow-sm"><h4 class="font-display h6 fw-bold text-success mb-2">Scrum</h4><p class="text-body-secondary small mb-2">Sprints, accountabilities, events, artifacts; mapping to Phases A&ndash;F.</p><p class="small mb-0"><a href="methodologies-scrum.html" class="link-success">Handbook &rarr;</a> &middot; <a href="../methodologies/scrum.md" class="text-secondary">scrum.md</a></p></div></div>
+              <div class="col"><div class="border rounded-3 bg-body p-3 h-100 shadow-sm"><h4 class="font-display h6 fw-bold text-success mb-2">Kanban</h4><p class="text-body-secondary small mb-2">Flow, WIP, policies; metrics from the board vs git.</p><p class="small mb-0"><a href="methodologies-kanban.html" class="link-success">Handbook &rarr;</a> &middot; <a href="../methodologies/kanban.md" class="text-secondary">kanban.md</a></p></div></div>
+              <div class="col"><div class="border rounded-3 bg-body p-3 h-100 shadow-sm"><h4 class="font-display h6 fw-bold text-success mb-2">XP</h4><p class="text-body-secondary small mb-2">TDD, CI, pairing, small releases; technical excellence.</p><p class="small mb-0"><a href="methodologies-xp.html" class="link-success">Handbook &rarr;</a> &middot; <a href="../methodologies/xp.md" class="text-secondary">xp.md</a></p></div></div>
+              <div class="col"><div class="border rounded-3 bg-body p-3 h-100 shadow-sm"><h4 class="font-display h6 fw-bold text-success mb-2">FDD</h4><p class="text-body-secondary small mb-2">Model-driven, feature-centric; five activities; class ownership.</p><p class="small mb-0"><a href="methodologies-fdd.html" class="link-success">Handbook &rarr;</a> &middot; <a href="../methodologies/fdd.md" class="text-secondary">fdd.md</a></p></div></div>
+              <div class="col"><div class="border rounded-3 bg-body p-3 h-100 shadow-sm"><h4 class="font-display h6 fw-bold text-success mb-2">Crystal</h4><p class="text-body-secondary small mb-2">Family of methods scaled by team size and criticality.</p><p class="small mb-0"><a href="methodologies-crystal.html" class="link-success">Handbook &rarr;</a> &middot; <a href="../methodologies/crystal.md" class="text-secondary">crystal.md</a></p></div></div>
+              <div class="col"><div class="border rounded-3 bg-body p-3 h-100 shadow-sm"><h4 class="font-display h6 fw-bold text-success mb-2">DSDM</h4><p class="text-body-secondary small mb-2">Agile governance; MoSCoW; fixed time/cost, variable scope.</p><p class="small mb-0"><a href="methodologies-dsdm.html" class="link-success">Handbook &rarr;</a> &middot; <a href="../methodologies/dsdm.md" class="text-secondary">dsdm.md</a></p></div></div>
+              <div class="col"><div class="border rounded-3 bg-body p-3 h-100 shadow-sm"><h4 class="font-display h6 fw-bold text-success mb-2">Shape Up</h4><p class="text-body-secondary small mb-2">6-week cycles, appetites, shaping, betting table, hill charts.</p><p class="small mb-0"><a href="methodologies-shape-up.html" class="link-success">Handbook &rarr;</a> &middot; <a href="../methodologies/shape-up.md" class="text-secondary">shape-up.md</a></p></div></div>
+              <div class="col"><div class="border rounded-3 bg-body p-3 h-100 shadow-sm"><h4 class="font-display h6 fw-bold text-success mb-2">Agile (umbrella)</h4><p class="text-body-secondary small mb-2">Manifesto, principles; how frameworks combine.</p><p class="small mb-0"><a href="methodologies-agile.html" class="link-success">Handbook &rarr;</a> &middot; <a href="../methodologies/agile.md" class="text-secondary">agile.md</a></p></div></div>
+            </div>
+
+            <h3 class="font-display h6 fw-bold text-secondary mb-2">Sequential and risk-driven models</h3>
+            <p class="text-body-secondary small mb-2">Models emphasizing upfront planning, formal verification, or risk-driven iteration. Common in regulated industries.</p>
+            <div class="row row-cols-1 row-cols-md-2 g-2 mb-4">
+              <div class="col"><div class="border rounded-3 bg-body p-3 h-100 shadow-sm"><h4 class="font-display h6 fw-bold text-success mb-2">Phased delivery</h4><p class="text-body-secondary small mb-2">Gates, baselines, regulated-style delivery vs iterative hybrids.</p><p class="small mb-0"><a href="methodologies-phased.html" class="link-success">Handbook &rarr;</a> &middot; <a href="../methodologies/phased-delivery.md" class="text-secondary">phased-delivery.md</a></p></div></div>
+              <div class="col"><div class="border rounded-3 bg-body p-3 h-100 shadow-sm"><h4 class="font-display h6 fw-bold text-success mb-2">V-Model</h4><p class="text-body-secondary small mb-2">Verification/validation pairing; traceability across V-levels.</p><p class="small mb-0"><a href="methodologies-v-model.html" class="link-success">Handbook &rarr;</a> &middot; <a href="../methodologies/v-model.md" class="text-secondary">v-model.md</a></p></div></div>
+              <div class="col"><div class="border rounded-3 bg-body p-3 h-100 shadow-sm"><h4 class="font-display h6 fw-bold text-success mb-2">Spiral Model</h4><p class="text-body-secondary small mb-2">Risk-driven iteration; four quadrants; anchor-point milestones.</p><p class="small mb-0"><a href="methodologies-spiral.html" class="link-success">Handbook &rarr;</a> &middot; <a href="../methodologies/spiral.md" class="text-secondary">spiral.md</a></p></div></div>
+              <div class="col"><div class="border rounded-3 bg-body p-3 h-100 shadow-sm"><h4 class="font-display h6 fw-bold text-success mb-2">RAD</h4><p class="text-body-secondary small mb-2">Prototyping-centric; rapid iterations; precursor to modern Agile.</p><p class="small mb-0"><a href="methodologies-rad.html" class="link-success">Handbook &rarr;</a> &middot; <a href="../methodologies/rad.md" class="text-secondary">rad.md</a></p></div></div>
+            </div>
+
+            <h3 class="font-display h6 fw-bold text-secondary mb-2">Scaling frameworks</h3>
+            <p class="text-body-secondary small mb-2">Frameworks for coordinating multiple teams on shared products or portfolios.</p>
+            <div class="row row-cols-1 row-cols-md-2 g-2 mb-4">
+              <div class="col"><div class="border rounded-3 bg-body p-3 h-100 shadow-sm"><h4 class="font-display h6 fw-bold text-success mb-2">SAFe</h4><p class="text-body-secondary small mb-2">Multi-team coordination, PI Planning, ART, portfolio governance.</p><p class="small mb-0"><a href="../methodologies/safe.md" class="link-success">Markdown &rarr;</a></p></div></div>
+              <div class="col"><div class="border rounded-3 bg-body p-3 h-100 shadow-sm"><h4 class="font-display h6 fw-bold text-success mb-2">Disciplined Agile</h4><p class="text-body-secondary small mb-2">PMI process-decision toolkit; goal-driven; multiple lifecycle options.</p><p class="small mb-0"><a href="methodologies-da.html" class="link-success">Handbook &rarr;</a> &middot; <a href="../methodologies/disciplined-agile.md" class="text-secondary">disciplined-agile.md</a></p></div></div>
+            </div>
+
+            <h3 class="font-display h6 fw-bold text-secondary mb-2">Lean and continuous delivery</h3>
+            <p class="text-body-secondary small mb-2">Principles and practices focused on optimizing flow, eliminating waste, and unifying Dev with Ops.</p>
+            <div class="row row-cols-1 row-cols-md-2 g-2 mb-4">
+              <div class="col"><div class="border rounded-3 bg-body p-3 h-100 shadow-sm"><h4 class="font-display h6 fw-bold text-success mb-2">Lean Software Development</h4><p class="text-body-secondary small mb-2">Seven principles; value-stream thinking; Kaizen; waste elimination.</p><p class="small mb-0"><a href="methodologies-lean.html" class="link-success">Handbook &rarr;</a> &middot; <a href="../methodologies/lean.md" class="text-secondary">lean.md</a></p></div></div>
+              <div class="col"><div class="border rounded-3 bg-body p-3 h-100 shadow-sm"><h4 class="font-display h6 fw-bold text-success mb-2">DevOps</h4><p class="text-body-secondary small mb-2">CI/CD, IaC, monitoring, DORA metrics, incident response.</p><p class="small mb-0"><a href="methodologies-devops.html" class="link-success">Handbook &rarr;</a> &middot; <a href="../methodologies/devops.md" class="text-secondary">devops.md</a></p></div></div>
+            </div>
+
+            <h3 class="font-display h6 fw-bold text-secondary mb-2">Complementary practices</h3>
+            <p class="text-body-secondary small mb-2">Practices that enhance any methodology rather than replacing it.</p>
+            <div class="row row-cols-1 row-cols-md-2 g-2 mb-4">
+              <div class="col"><div class="border rounded-3 bg-body p-3 h-100 shadow-sm"><h4 class="font-display h6 fw-bold text-success mb-2">BDD</h4><p class="text-body-secondary small mb-2">Given-When-Then scenarios; living specifications; automated acceptance tests.</p><p class="small mb-0"><a href="methodologies-bdd.html" class="link-success">Handbook &rarr;</a> &middot; <a href="../methodologies/bdd.md" class="text-secondary">bdd.md</a></p></div></div>
+              <div class="col"><div class="border rounded-3 bg-body p-3 h-100 shadow-sm"><h4 class="font-display h6 fw-bold text-success mb-2">Spec-driven development</h4><p class="text-body-secondary small mb-2">Written intent leads implementation; docs&harr;code loop.</p><p class="small mb-0"><a href="spec-driven.html" class="link-success">Handbook &rarr;</a> &middot; <a href="../methodologies/spec-driven-development.md" class="text-secondary">spec-driven-development.md</a></p></div></div>
+            </div>
+
+            <h3 class="font-display h6 fw-bold text-secondary mb-2">Cross-cutting</h3>
             <div class="row row-cols-1 row-cols-md-2 g-2">
-              <div class="col">
-                <div class="border rounded-3 bg-body p-3 h-100 shadow-sm">
-                  <h3 class="font-display h6 fw-bold text-success mb-2">Roles &amp; archetypes</h3>
-                  <p class="text-body-secondary small mb-2">Per-archetype <strong class="text-body">detail</strong> + Scrum/Kanban/phased/XP <strong class="text-body">tweaks</strong>; roll-up; Owner/Implementer; specialty hats vs <strong class="text-body">Contributor</strong>.</p>
-                  <p class="small mb-0"><a href="methodologies-roles.html" class="link-success">Handbook →</a> · <a href="../methodologies/roles-archetypes.md" class="text-secondary">roles-archetypes.md</a></p>
-                </div>
-              </div>
-              <div class="col">
-                <div class="border rounded-3 bg-body p-3 h-100 shadow-sm">
-                  <h3 class="font-display h6 fw-bold text-success mb-2">Ceremonies</h3>
-                  <p class="text-body-secondary small mb-2"><strong class="text-body">Foundation</strong> (C1–C6 + suggestions), <strong class="text-body">bridge</strong> (methodology names), <strong class="text-body">forks</strong> (event suggestions); SDLC §2 phase map.</p>
-                  <p class="small mb-0"><a href="methodologies-ceremonies.html" class="link-success">Handbook →</a> · <a href="../methodologies/ceremonies/README.md" class="text-secondary">ceremonies/README.md</a></p>
-                </div>
-              </div>
-              <div class="col">
-                <div class="border rounded-3 bg-body p-3 h-100 shadow-sm">
-                  <h3 class="font-display h6 fw-bold text-success mb-2">Scrum</h3>
-                  <p class="text-body-secondary small mb-2">Sprints, accountabilities, events, artifacts; mapping to Phases A–F; agentic fit.</p>
-                  <p class="small mb-0"><a href="methodologies-scrum.html" class="link-success">Handbook →</a> · <a href="../methodologies/scrum.md" class="text-secondary">scrum.md</a></p>
-                </div>
-              </div>
-              <div class="col">
-                <div class="border rounded-3 bg-body p-3 h-100 shadow-sm">
-                  <h3 class="font-display h6 fw-bold text-success mb-2">Kanban</h3>
-                  <p class="text-body-secondary small mb-2">Flow, WIP, policies; metrics from the board vs git.</p>
-                  <p class="small mb-0"><a href="methodologies-kanban.html" class="link-success">Handbook →</a> · <a href="../methodologies/kanban.md" class="text-secondary">kanban.md</a></p>
-                </div>
-              </div>
-              <div class="col">
-                <div class="border rounded-3 bg-body p-3 h-100 shadow-sm">
-                  <h3 class="font-display h6 fw-bold text-success mb-2">Phased delivery</h3>
-                  <p class="text-body-secondary small mb-2">Gates, baselines, regulated-style delivery vs iterative hybrids.</p>
-                  <p class="small mb-0"><a href="methodologies-phased.html" class="link-success">Handbook →</a> · <a href="../methodologies/phased-delivery.md" class="text-secondary">phased-delivery.md</a></p>
-                </div>
-              </div>
-              <div class="col">
-                <div class="border rounded-3 bg-body p-3 h-100 shadow-sm">
-                  <h3 class="font-display h6 fw-bold text-success mb-2">XP</h3>
-                  <p class="text-body-secondary small mb-2">TDD, CI, pairing, small releases; technical excellence.</p>
-                  <p class="small mb-0"><a href="methodologies-xp.html" class="link-success">Handbook →</a> · <a href="../methodologies/xp.md" class="text-secondary">xp.md</a></p>
-                </div>
-              </div>
-              <div class="col">
-                <div class="border rounded-3 bg-body p-3 h-100 shadow-sm">
-                  <h3 class="font-display h6 fw-bold text-success mb-2">Agile (umbrella)</h3>
-                  <p class="text-body-secondary small mb-2">Manifesto, principles; how frameworks combine.</p>
-                  <p class="small mb-0"><a href="methodologies-agile.html" class="link-success">Handbook →</a> · <a href="../methodologies/agile.md" class="text-secondary">agile.md</a></p>
-                </div>
-              </div>
-              <div class="col">
-                <div class="border rounded-3 bg-body p-3 h-100 shadow-sm">
-                  <h3 class="font-display h6 fw-bold text-success mb-2">Agentic SDLC</h3>
-                  <p class="text-body-secondary small mb-2">Agents, humans, tracking foundation, risks — cross-cutting.</p>
-                  <p class="small mb-0"><a href="methodologies-agentic.html" class="link-success">Handbook →</a> · <a href="../methodologies/agentic-sdlc.md" class="text-secondary">agentic-sdlc.md</a></p>
-                </div>
-              </div>
+              <div class="col"><div class="border rounded-3 bg-body p-3 h-100 shadow-sm"><h4 class="font-display h6 fw-bold text-success mb-2">Agentic SDLC</h4><p class="text-body-secondary small mb-2">Agents, humans, tracking foundation, risks &mdash; cross-cutting.</p><p class="small mb-0"><a href="methodologies-agentic.html" class="link-success">Handbook &rarr;</a> &middot; <a href="../methodologies/agentic-sdlc.md" class="text-secondary">agentic-sdlc.md</a></p></div></div>
             </div>
             <p class="small text-muted mt-3 mb-0"><a href="../methodologies/README.md" class="link-secondary">Index: methodologies/README.md</a></p>
           </section>
@@ -156,10 +163,12 @@
             <h2 class="font-display h5 fw-semibold">Conceptual map</h2>
             <pre class="doc-tree mb-0 p-3 bg-light border rounded-3 small" role="img" aria-label="Concept hierarchy">Foundation (contributor → events → work units)
     │
-    ├── Scrum          ── sprint windows, ceremonies
-    ├── Kanban         ── flow, WIP (needs board data)
-    ├── Phased         ── phases, milestones, gates (approvals often outside git)
-    └── XP             ── practices + quality streams
+    ├─ Iterative Agile ── Scrum, Kanban, XP, FDD, Crystal, DSDM, Shape Up
+    ├─ Sequential      ── Phased, V-Model, Spiral, RAD
+    ├─ Scaling         ── SAFe, Disciplined Agile
+    ├─ Lean &amp; CD      ── Lean Software Dev, DevOps
+    ├─ Practices       ── BDD, Spec-driven development
+    └─ Cross-cutting   ── Agile umbrella, Agentic SDLC
 
 Challenges (parallel doc) — commit ≠ time, gaming, privacy, per-lens gaps</pre>
           </section>
@@ -170,7 +179,7 @@ Challenges (parallel doc) — commit ≠ time, gaming, privacy, per-lens gaps</p
           </nav>
 
           <footer class="mt-4 pt-3 border-top text-muted small">
-            <p class="mb-1">Handbook last aligned with blueprint Markdown: <strong class="text-body">2026-03-20</strong>.</p>
+            <p class="mb-1">Handbook last aligned with blueprint Markdown: <strong class="text-body">2026-03-22</strong>.</p>
             <p class="mb-0 text-secondary" style="font-size: 0.8rem">Styled with <a href="https://getbootstrap.com/docs/5.3/" class="link-success" rel="noopener">Bootstrap 5.3</a> (CDN).</p>
           </footer>
         </div>
@@ -180,5 +189,6 @@ Challenges (parallel doc) — commit ≠ time, gaming, privacy, per-lens gaps</p
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   <script src="assets/docs-nav.js"></script>
+  <script src="../../docs/assets/portal-nav.js" data-root="../.."></script>
 </body>
 </html>

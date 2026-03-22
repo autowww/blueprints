@@ -20,14 +20,14 @@ It is a **sanity check** that [`templates/sdlc/`](templates/sdlc) matches the in
 
 | Topic | Living `sdlc/README.md` | Generated `sdlc.new/README.md` |
 |--------|-------------------------|----------------------------------|
-| **Project label** | Footer reflects the **living** repo (named project); table rows assume **full** doc tree (`blueprints/docs`, product handbook, etc.). | Footer says **project-only**; several rows are marked **(if adopted)** so greenfield repos can delete unused links. |
+| **Project label** | Footer reflects the **living** repo (named project); table rows assume **full** doc tree (`blueprints/product`, product handbook, etc.). | Footer says **project-only**; several rows are marked **(if adopted)** so greenfield repos can delete unused links. |
 | **Engineering intro** | Mentions [`docs/INDEX.md#engineering-tracking`](../../docs/INDEX.md#engineering-tracking) and [`SDLc-WORKSPACE.md`](SDLc-WORKSPACE.md). | Same ideas; wording tuned for repos that may not have `docs/INDEX.md` yet. |
 
 Titles align (e.g. `# SDLC — MyProduct` when that string was passed to `init-sdlc-workspace.sh`). None of this affects the **TRACKING-*** files.
 
 ## Possible follow-ups (suggestions)
 
-1. **Trim template rows** after init: remove `blueprints/docs` / product handbook lines if the repo only uses `blueprints/sdlc/` + slim `docs/`.
+1. **Trim template rows** after init: remove `blueprints/product` / product handbook lines if the repo only uses `blueprints/sdlc/` + slim `docs/`.
 2. **Promote from template to living**: when you change [`templates/sdlc/README.template.md`](templates/sdlc/README.template.md), consider applying the same table wording to the real **`sdlc/README.md`** if you want them identical.
 3. **Delete `sdlc.new/`** after verification, or add `/sdlc.new/` to `.gitignore` for local scratch compares.
 

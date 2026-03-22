@@ -101,6 +101,10 @@ Below each summary table, **Detail** sections spell out work and handoffs; **Met
 | **Kanban** | **No single prescribed title**; **requester**, **customer**, or **product manager** often plays this archetype. **Replenishment** (or equivalent) replaces sprint-bound selection with **continuous or rolling** prioritization. Demand may sit **off the board** (portfolio) while the delivery board executes pull—clarity of **who pulls what when** is a policy choice, not framework magic. |
 | **Phased delivery** | **Sponsor** and **PM/BA** dominate **early phases** (requirements baselines). After a **baseline freeze**, reordering is **harder**—this archetype shifts toward **change control** and **gate evidence** rather than weekly reprioritization. **Acceptance** may be formal **UAT** or regulated sign-off, not only a sprint review. |
 | **XP** | Classic **Customer** / **onsite customer** is embedded with the team for **fast feedback** and **story acceptance**. Modern teams often use a **PO-like** person in the same archetype. **Small releases** mean this hat accepts **very frequently**; thin handoffs between “ask” and “build.” |
+| **Lean** | Demand is defined through **value-stream** analysis—focus on what the customer values, eliminate everything else. Ordering follows **last responsible moment** and **pull-based** selection. No prescribed title; value-stream manager or product manager typically holds this archetype. |
+| **Spiral** | Demand is framed as **objectives** in each spiral’s Q1. Stakeholders define goals and constraints; **risk analysis** (Q2) may reshape demand before commitment. **Anchor-point milestones** (LCO, LCA, IOC) are the formal acceptance gates. |
+| **V-Model** | Demand is captured as **formal requirements** at the top-left of the V. Requirements must be **testable** — untestable requirements are reworked. **Acceptance testing** (top-right) formally validates against stakeholder needs. |
+| **DevOps** | Demand includes **operability requirements** (SLOs, monitoring, deployment strategy) alongside functional requirements. "Done" means **deployed and observable**, not just "code complete." |
 
 ---
 
@@ -150,6 +154,10 @@ Below each summary table, **Detail** sections spell out work and handoffs; **Met
 | **Kanban** | **Delivery team** / **workers** who **pull** items through explicit policies. Emphasis on **WIP limits** and **flow** over sprint commitment; **roles are organizational**, not defined by the Kanban method itself. **Specialists** (e.g. ops) may appear as **swimlanes** or **classes of service**. |
 | **Phased delivery** | **Build** is often **split by phase**: analysts produce specs, architects produce design packages, developers implement **after** gate approval. **Handoffs** increase the need for **documented** interfaces and **traceability**; “you built the wrong thing” is traced to **baseline** quality, not only to the last coder. |
 | **XP** | **Collective ownership**, **pairing** / ensemble, **coding standard**, **TDD**, **refactoring**—**Build** is a **discipline**, not only a role title. **Sustainable pace** is an explicit value: **Build** should not normalize heroics as process. |
+| **Lean** | **Small batches**, **eliminate waste** (task switching, partially done work, handoffs). Build is empowered to **improve their own process**. Value-stream thinking asks: does this build activity add value or is it waste? |
+| **Spiral** | Build scope is **risk-adjusted** per spiral. Early spirals may produce **disposable prototypes**; later spirals produce production-grade code. Team composition may change across spirals. |
+| **V-Model** | Build descends the left side of the V: system design → detailed design → implementation. Each level’s output defines what the corresponding right-side test level will verify. **Traceability** is a build-time concern, not an afterthought. |
+| **DevOps** | Build includes **infrastructure** (IaC), **pipeline configuration**, and **monitoring instrumentation** alongside application code. "You build it, you run it" — developers own operational readiness. |
 
 ---
 
@@ -197,6 +205,10 @@ Below each summary table, **Detail** sections spell out work and handoffs; **Met
 | **Kanban** | Often **merged** into a **service delivery manager**, **team lead**, or **rotating facilitator**. **Kanban** explicitly includes **feedback loops** (e.g. service delivery review, operations review)—who facilitates is **context-specific**. |
 | **Phased delivery** | **PMO**, **phase manager**, or **QA manager** may own **process compliance** and **gate readiness** more than “team coach.” Improvement is **between phases** or **audit-driven** as much as retro-driven. |
 | **XP** | **Coach** is optional; many XP teams **self-facilitate** improvement with **lightweight** rituals. **Values** (communication, feedback, courage) substitute for a named process role when discipline is high. |
+| **Lean** | **Lean coach / sensei** teaches problem-solving (A3, Five Whys) and facilitates **Kaizen** events. **Value-stream manager** owns end-to-end flow health. Improvement is **continuous and systematic**, not ad-hoc. |
+| **Spiral** | **Project manager** plans spirals and coordinates stakeholders. **Risk analyst** drives Q2 risk identification and resolution. Flow is managed through **quadrant transitions** rather than sprint/flow cadence. |
+| **V-Model** | **Project manager** coordinates design and test phases. **Test manager** orchestrates verification across V-levels. Flow is **sequential** with formal handoffs between levels. |
+| **DevOps** | **Platform engineers** maintain CI/CD infrastructure. **SRE** owns reliability and error budgets. Flow is **automated** — the pipeline itself is the primary flow mechanism. **Pipeline retrospectives** improve delivery speed. |
 
 ---
 
@@ -243,6 +255,10 @@ Below each summary table, **Detail** sections spell out work and handoffs; **Met
 | **Kanban** | **Policies explicit**: per-column **DoD**, **SLAs**, maybe **release train** cadence. **Assure** is often **embedded** in columns (“ready for release”) rather than a separate phase. **Metrics** (cycle time, defects) inform policies. |
 | **Phased delivery** | **Verification** is often a **dedicated phase** with **formal** test levels, **IV&V**, or regulatory **validation**. **Evidence packages** for **gates** are central; **Assure** may be **organizationally separate** from **Build**. |
 | **XP** | **TDD**, **CI**, **collective ownership** **merge** much of **Assure** into **Build**. **Small releases** shrink the batch between “integrated” and “in users’ hands.” Separate QA is **less** common in textbook XP; **discipline** replaces **phase**. |
+| **Lean** | **Built-in quality** — integrity is designed in, not tested in later. Quality practices (TDD, CI, automation) are part of **flow**, not a separate assurance phase. Defects are **waste** to be eliminated at the source. |
+| **Spiral** | **Risk review** (Q2) provides systematic assurance before build commitment. **Anchor-point milestones** (LCO, LCA, IOC) are formal quality/readiness gates. Prototypes in early spirals provide assurance evidence for later build decisions. |
+| **V-Model** | **Formal verification** at each V-level (unit → integration → system → acceptance). **Traceability matrix** links requirements to test evidence. **IV&V** (independent verification and validation) common in regulated contexts. |
+| **DevOps** | **Automated pipeline gates** provide continuous assurance. **SLOs and error budgets** measure production reliability. **Blameless post-mortems** learn from failures. Assurance is **automated and continuous**, not a separate phase. |
 
 ---
 
@@ -289,6 +305,10 @@ Below each summary table, **Detail** sections spell out work and handoffs; **Met
 | **Kanban** | **Portfolio Kanban** or **strategy** boards may sit **above** the delivery board; **Steer** sets **WIP** and **funding** across streams. **Service orientation** can hide weak steering if **Demand** is fragmented—clarity at **portfolio** level still matters. |
 | **Phased delivery** | **Steer & govern** is **central**: **tollgates**, **CCB**, **baselines**, **compliance** artifacts. This archetype is often **heavier** than in pure Scrum/XP teams. |
 | **XP** | **Thin** explicit layer; **Customer** (Demand) is **close** to the team so many **trade-offs** resolve without a large **governance** apparatus—until **regulation** forces **Steer** back in. |
+| **Lean** | **Management as servant-leader** — sets vision and constraints, removes organizational impediments, practices **Gemba** and **Hoshin Kanri** (policy deployment). Steer is about **context**, not commands. |
+| **Spiral** | **Anchor-point milestones** (LCO, LCA, IOC) are the primary steering mechanism. Stakeholders make **explicit go/no-go** decisions based on risk evidence. Governance is **integrated** into the quadrant cycle, not layered on top. |
+| **V-Model** | **Design reviews** (left-side gates) and **test reviews** (right-side gates) provide structured governance. Regulatory standards (ISO 26262, IEC 62304) may mandate specific gate criteria. |
+| **DevOps** | Governance through **automated gates** and **SLO policies**. Error budgets make feature vs reliability trade-offs **explicit and data-driven**. Steer is less about meetings and more about **policies embedded in automation**. |
 
 ---
 
@@ -315,7 +335,7 @@ Typical titles—your org may differ. Cells marked **—** mean the methodology 
 | **Assure & ship** | DoD (team) + PO acceptance; QA org optional | Policies; column DoD; release cadence | QA / IV&V; formal release sign-off | TDD + CI embedded in Developers |
 | **Steer & govern** | Stakeholders; org outside team | Portfolio / steering | Tollgates; CCB; compliance | Light; regulation adds weight |
 
-**Deep dives:** [Scrum](scrum.md) · [Kanban](kanban.md) · [Phased delivery](phased-delivery.md) · [XP](xp.md) · [Agile umbrella](agile.md)
+**Deep dives:** [Scrum](scrum.md) · [Kanban](kanban.md) · [Phased delivery](phased-delivery.md) · [XP](xp.md) · [Lean](lean.md) · [Spiral](spiral.md) · [V-Model](v-model.md) · [DevOps](devops.md) · [Agile umbrella](agile.md)
 
 ---
 
@@ -354,6 +374,38 @@ Use this when you think **methodology-first** (“we picked Scrum—what happens
 - **Flow:** **Light** named role; **team** owns improvement **culturally**.
 - **Assure:** **Merged** into **Build** by default; **release** still needs **operational** clarity.
 - **Steer:** **Minimal** unless **domain regulation** forces **phased-style** **Steer** on top of XP practices.
+
+### Lean Software Development
+
+- **Demand:** Defined through **value-stream** analysis; focus on customer value; **last responsible moment** ordering. No prescribed title; product manager or value-stream owner typically holds this.
+- **Build:** **Empowered** team eliminates waste; small batches; collective process improvement.
+- **Flow:** **Lean coach / sensei** teaches problem-solving; **value-stream manager** owns end-to-end flow. **Kaizen** is continuous, not episodic.
+- **Assure:** **Built-in quality**; defects are waste eliminated at the source. Quality is a practice, not a phase.
+- **Steer:** **Management as servant-leader**; sets context via **Gemba** and **Hoshin Kanri**. Steering is about enabling, not commanding.
+
+### Spiral Model
+
+- **Demand:** Objectives defined per spiral (Q1); risk analysis may reshape demand before commitment. **Anchor-point milestones** are formal acceptance gates.
+- **Build:** Risk-adjusted scope per spiral. Early spirals produce **disposable prototypes**; later spirals produce production-grade work.
+- **Flow:** **Project manager** coordinates spirals; **risk analyst** drives Q2. Flow follows **quadrant transitions**, not sprint/flow cadence.
+- **Assure:** **Risk review** (Q2) provides systematic assurance. **Anchor-point milestones** (LCO, LCA, IOC) are formal gates.
+- **Steer:** Governance **integrated** into quadrant cycle. Stakeholders make explicit **go/no-go** decisions based on risk evidence at milestones.
+
+### V-Model
+
+- **Demand:** Formal **requirements** at the top of the V; must be **testable**. Acceptance testing formally validates against stakeholder needs.
+- **Build:** Descends the left side: system design → detailed design → implementation. Each level defines corresponding test targets.
+- **Flow:** **Sequential** with formal handoffs. Project manager coordinates phases; test manager orchestrates verification levels.
+- **Assure:** **Formal verification** at each V-level. Traceability matrix links requirements → tests → evidence. IV&V for regulated contexts.
+- **Steer:** **Design and test review gates** provide structured governance. Regulatory standards may mandate specific criteria.
+
+### DevOps
+
+- **Demand:** Includes **operability requirements** (SLOs, monitoring, deployment) alongside functional needs. Done = deployed and observable.
+- **Build:** Includes **infrastructure**, **pipeline**, and **monitoring** alongside application code. "You build it, you run it."
+- **Flow:** **Automated** via CI/CD pipelines. Platform engineers maintain infrastructure. Pipeline retrospectives improve delivery speed.
+- **Assure:** **Automated pipeline gates** and **SLO/error budget** management. Post-mortems extract learning from incidents. Continuous, not phase-based.
+- **Steer:** Governance through **automation and policies**. Error budgets make feature vs reliability trade-offs data-driven.
 
 ### Agile umbrella ([`agile.md`](agile.md))
 
@@ -398,4 +450,8 @@ A **Product Owner** who never commits may be **invisible** in commit-only dashbo
 | [Kanban](kanban.md) | Service-oriented **roles** and policies |
 | [Phased delivery](phased-delivery.md) | **Gates** and **Steer & govern** |
 | [XP](xp.md) | Practices that **merge** quality into **Build** |
+| [Lean](lean.md) | Value-stream thinking; eliminate waste; empower the team |
+| [Spiral](spiral.md) | Risk-driven iteration; anchor-point milestones |
+| [V-Model](v-model.md) | Verification/validation pairing; traceability |
+| [DevOps](devops.md) | Culture + practices unifying Dev and Ops; CI/CD, monitoring |
 | [Agentic SDLC](agentic-sdlc.md) | Agents, review, contributor identity |

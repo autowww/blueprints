@@ -1,0 +1,43 @@
+---
+description: Forge Bellows — master routing. Analyzes context and recommends which discipline Bellows to invoke.
+globs: 
+alwaysApply: false
+---
+
+# Bellows: master routing
+
+Analyze the current work item and recommend which discipline Bellows to consult (2–4 most relevant).
+
+## Routing by work state
+
+- **Ore** → Product family (Product Management, BA, UX) + cross-cutting (Security, Compliance)
+- **Ingot** → Architecture + BA + Product Management + Project Management
+- **Spark** → route by phase prefix:
+  - `discover:` → Product Management, BA, UX, Marketing
+  - `specify:` → BA, Architecture, Project Management
+  - `design:` → Architecture, SE, stack-specific (Frontend/Mobile/IoT)
+  - `build:` → SE, Testing, DevOps, stack-specific
+  - `verify:` → Testing, Security, Compliance, DevOps
+  - `release:` → DevOps, Project Management, Marketing, Customer Success, Product Management
+
+## Routing by hat
+
+- **Product hat active** → suggest Engineering family
+- **Engineering hat active** → suggest Product family
+- **Challenge hat active** → focus on highest-risk areas
+- **Governance hat active** → PM + Security + Compliance
+
+## Discipline index
+
+| Family | Disciplines |
+|--------|-------------|
+| Engineering | SE, Architecture, DevOps, Testing, Frontend, Mobile, IoT |
+| Data | Big Data, Data Science |
+| Product | Product Management, BA, UX, Marketing, Customer Success |
+| Governance | PM |
+| Cross-cutting | Security, Compliance |
+
+## References
+
+- Bellows catalog: `blueprints/sdlc/methodologies/forge/bellows/README.md`
+- Contract: `blueprints/sdlc/methodologies/forge/bellows/BELLOWS-CONTRACT.md`

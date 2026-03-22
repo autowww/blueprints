@@ -24,6 +24,8 @@
 | **Archetypes** | **Orchestrator**, **Implementer** (documentation) |
 | **Key outputs** | SRS, use cases, acceptance criteria packs |
 
+**Deeper guide:** [`blueprints/disciplines/product/ba/`](../../../disciplines/product/ba/README.md) — BABOK knowledge areas, techniques catalog, perspectives (agile, BI, business architecture, BPM), and the [BA-SDLC-PDLC bridge](../../../disciplines/product/ba/BA-SDLC-PDLC-BRIDGE.md) for how BA spans both lifecycles.
+
 ## 4. Tech lead / architect
 
 | Aspect | Guidance |

@@ -9,12 +9,12 @@
 | What | Where |
 |------|--------|
 | **Frozen SDLC baseline** (do not change unless policy says so) | [`blueprints/sdlc/README`](../blueprints/sdlc/README.md) · [`POLICY.md`](../blueprints/sdlc/POLICY.md) |
-| **Frozen product-functional IA** (if adopted) | [`blueprints/docs/README`](../blueprints/docs/README.md) · [`STRUCTURE.md`](../blueprints/docs/STRUCTURE.md) |
+| **Frozen product-functional IA** (if adopted) | [`blueprints/product/README`](../blueprints/product/README.md) · [`STRUCTURE.md`](../blueprints/product/STRUCTURE.md) |
 | **Human handbook (SDLC, HTML)** | [`docs/index.html`](../blueprints/sdlc/docs/index.html) · [`MAINTENANCE.md`](../blueprints/sdlc/docs/MAINTENANCE.md) |
-| **Human handbook (product functional, HTML)** (if adopted) | [`docs/index.html`](../blueprints/docs/docs/index.html) |
+| **Human handbook (product functional, HTML)** (if adopted) | [`docs/index.html`](../blueprints/product/docs/index.html) |
 | **Process text** | [`SDLC.md`](../blueprints/sdlc/SDLC.md) · [`DOCUMENTATION-STRUCTURE.md`](../blueprints/sdlc/DOCUMENTATION-STRUCTURE.md) |
 | **Optional templates (SDLC)** | [`templates/`](../blueprints/sdlc/templates/README.md) |
-| **Product functional templates** (if adopted) | [`templates/`](../blueprints/docs/templates/README.md) |
+| **Product functional templates** (if adopted) | [`templates/`](../blueprints/product/templates/README.md) |
 | **Living product functional docs** | [`docs/product/`](../docs/product/INDEX.md) |
 | **Project profile & stack** | [`docs/PROJECT.md`](../docs/PROJECT.md) |
 | **Requirements, WBS, milestones, risks** | [`docs/requirements/`](../docs/requirements/INDEX.md) |
@@ -28,4 +28,4 @@ Add files here (e.g. `NOTES.md`, `CHECKLIST.md`) when you need **project-only** 
 
 ---
 
-*This folder is the working surface; **`blueprints/sdlc/`** is the canonical reusable SDLC template; **`blueprints/docs/`** (if used) is the canonical product-functional IA; **`docs/product/`** holds project prose.*
+*This folder is the working surface; **`blueprints/sdlc/`** is the canonical reusable SDLC template; **`blueprints/product/`** (if used) is the canonical product-functional IA; **`docs/product/`** holds project prose.*

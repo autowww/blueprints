@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light" />
+  <title>Project management — handbook</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            display: ['"Fraunces"', 'Georgia', 'serif'],
+          },
+          colors: {
+            ink: { DEFAULT: '#0f172a', muted: '#64748b' },
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    .nav-scroll::-webkit-scrollbar { width: 6px; }
+    .nav-scroll::-webkit-scrollbar-thumb { background: rgba(148,163,184,.35); border-radius: 3px; }
+    .doc-table-wrap table { min-width: 100%; border-collapse: collapse; font-size: .875rem; }
+    .doc-table-wrap th { background: rgb(248 250 252); padding: .75rem 1rem; text-align: left; font-weight: 600; color: rgb(30 41 59); border-bottom: 1px solid rgb(226 232 240); }
+    .doc-table-wrap td { padding: .75rem 1rem; border-top: 1px solid rgb(241 245 249); color: rgb(71 85 105); vertical-align: top; }
+    .skip-link { position: absolute; left: -9999px; z-index: 100; padding: .5rem 1rem; background: rgb(37 99 235); color: white; border-radius: .5rem; font-weight: 600; }
+    .skip-link:focus { left: 1rem; top: 1rem; outline: 2px solid rgb(96 165 250); outline-offset: 2px; }
+  </style>
+</head>
+<body class="min-h-full bg-slate-100 font-sans text-slate-800 antialiased">
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <div id="nav-backdrop" class="fixed inset-0 z-30 hidden bg-slate-900/40 backdrop-blur-sm lg:hidden" aria-hidden="true"></div>
+
+  <button type="button" id="nav-open"
+    class="fixed left-4 top-4 z-50 flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-700 shadow-md lg:hidden"
+    aria-expanded="false" aria-controls="sidebar">
+    <span class="sr-only">Open navigation</span>
+    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+  </button>
+
+  <div class="flex min-h-screen">
+    <aside id="sidebar"
+      class="nav-scroll fixed inset-y-0 left-0 z-40 flex w-[min(18rem,88vw)] -translate-x-full flex-col border-r border-blue-950/90 bg-blue-950 text-blue-100/90 shadow-2xl transition-transform duration-200 ease-out lg:translate-x-0">
+      <div class="border-b border-blue-800/80 px-5 py-6">
+        <p class="font-display text-lg font-semibold tracking-tight text-white">Project Management</p>
+        <p class="mt-1 text-xs leading-relaxed text-blue-400/90">Handbook &middot; Product-agnostic</p>
+      </div>
+      <nav class="flex-1 overflow-y-auto px-3 py-4" aria-label="Page sections">
+        <p class="mb-2 px-2 text-[10px] font-semibold uppercase tracking-[.2em] text-blue-500">On this page</p>
+        <ul class="space-y-0.5 text-sm">
+          <li><a href="#overview" class="block rounded-lg px-3 py-2 text-blue-100/90 transition hover:bg-blue-900/80 hover:text-white">Overview</a></li>
+          <li><a href="#roles" class="block rounded-lg px-3 py-2 text-blue-100/90 transition hover:bg-blue-900/80 hover:text-white">Roles</a></li>
+          <li><a href="#process-groups" class="block rounded-lg px-3 py-2 text-blue-100/90 transition hover:bg-blue-900/80 hover:text-white">Process groups</a></li>
+          <li><a href="#knowledge-areas" class="block rounded-lg px-3 py-2 text-blue-100/90 transition hover:bg-blue-900/80 hover:text-white">Knowledge areas</a></li>
+          <li><a href="#approaches" class="block rounded-lg px-3 py-2 text-blue-100/90 transition hover:bg-blue-900/80 hover:text-white">Approaches</a></li>
+          <li><a href="#bridges" class="block rounded-lg px-3 py-2 text-blue-100/90 transition hover:bg-blue-900/80 hover:text-white">SDLC &amp; PDLC bridges</a></li>
+          <li><a href="#governance" class="block rounded-lg px-3 py-2 text-blue-100/90 transition hover:bg-blue-900/80 hover:text-white">Governance</a></li>
+        </ul>
+      </nav>
+      <div class="border-t border-blue-800/80 px-4 py-3 text-[11px] text-blue-500">
+        <p>Markdown sources: <code class="rounded bg-blue-900 px-1 py-0.5 text-blue-200">blueprints/disciplines/governance/pm/*.md</code></p>
+      </div>
+    </aside>
+
+    <div class="flex min-h-screen flex-1 flex-col lg:pl-72">
+      <main id="main" class="flex-1 px-4 pb-16 pt-20 sm:px-8 lg:px-12 lg:pt-10">
+        <div class="mx-auto max-w-3xl">
+          <header class="mb-10 border-b border-slate-200/80 pb-8">
+            <p class="mb-2 text-xs font-semibold uppercase tracking-widest text-blue-600">Handbook</p>
+            <h1 class="font-display text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Project management</h1>
+            <p class="mt-3 text-lg text-slate-600">Governing delivery: schedule, budget, resources, risk, and stakeholders &mdash; the discipline that sits <strong class="text-slate-800">between</strong> product strategy (PDLC) and software delivery (SDLC).</p>
+          </header>
+
+          <div class="mb-10 rounded-2xl border border-blue-200/80 bg-blue-50/90 px-4 py-3 text-sm text-blue-950 shadow-sm">
+            <strong class="font-semibold text-blue-900">Source of truth:</strong>
+            Markdown in <code class="rounded bg-blue-100/80 px-1.5 py-0.5 text-blue-950">blueprints/disciplines/governance/pm/</code>
+            (<a href="../PM.md" class="font-medium text-blue-800 underline decoration-blue-400/60 hover:text-blue-950">PM.md</a>,
+            <a href="../PM-SDLC-PDLC-BRIDGE.md" class="font-medium text-blue-800 underline decoration-blue-400/60 hover:text-blue-950">PM-SDLC-PDLC-BRIDGE.md</a>,
+            <a href="../approaches/README.md" class="font-medium text-blue-800 underline decoration-blue-400/60 hover:text-blue-950">approaches/</a>).
+          </div>
+
+          <section id="overview" class="scroll-mt-24">
+            <h2 class="font-display text-2xl font-bold text-slate-900">Overview</h2>
+            <p class="mt-4 text-slate-600 leading-relaxed">Project management is the discipline of initiating, planning, executing, monitoring, and closing work to achieve specific objectives within constraints of scope, time, cost, quality, resources, and risk.</p>
+            <p class="mt-3 text-slate-600 leading-relaxed"><strong class="text-slate-800">SDLC</strong> answers &ldquo;are we building the product right?&rdquo; <strong class="text-slate-800">PDLC</strong> answers &ldquo;are we building the right product?&rdquo; <strong class="text-slate-800">PM</strong> answers &ldquo;are we delivering on time, on budget, within scope, with acceptable risk?&rdquo;</p>
+          </section>
+
+          <section id="roles" class="scroll-mt-24 mt-16">
+            <h2 class="font-display text-2xl font-bold text-slate-900">Roles</h2>
+            <div class="doc-table-wrap mt-4">
+              <table>
+                <thead><tr><th>Role</th><th>Responsibility</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Project Manager</strong></td><td>Plans, executes, monitors, and closes the project. Manages scope, schedule, budget, risk, quality.</td></tr>
+                  <tr><td><strong>Project Sponsor</strong></td><td>Provides authority and funding. Makes go/no-go decisions at major gates.</td></tr>
+                  <tr><td><strong>PMO</strong></td><td>Sets PM standards, provides governance, portfolio visibility, resource allocation.</td></tr>
+                  <tr><td><strong>Steering Committee</strong></td><td>Senior stakeholders providing strategic direction and resolving escalations.</td></tr>
+                  <tr><td><strong>Team Members</strong></td><td>Execute project work &mdash; SDLC and PDLC roles operating under PM governance.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section id="process-groups" class="scroll-mt-24 mt-16">
+            <h2 class="font-display text-2xl font-bold text-slate-900">Process groups</h2>
+            <p class="mt-4 text-slate-600 leading-relaxed">Five overlapping sets of activities that recur throughout the project:</p>
+            <div class="doc-table-wrap mt-4">
+              <table>
+                <thead><tr><th>Group</th><th>Goal</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Initiating</strong></td><td>Establish the project, define scope, secure authorization and funding.</td></tr>
+                  <tr><td><strong>Planning</strong></td><td>Define the roadmap: scope (WBS), schedule, budget, quality, risk, communications.</td></tr>
+                  <tr><td><strong>Executing</strong></td><td>Perform the work, coordinate resources, manage stakeholder engagement.</td></tr>
+                  <tr><td><strong>Monitoring &amp; Controlling</strong></td><td>Track progress, identify variances, take corrective action, manage changes.</td></tr>
+                  <tr><td><strong>Closing</strong></td><td>Formally complete the project, archive artifacts, capture lessons learned.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section id="knowledge-areas" class="scroll-mt-24 mt-16">
+            <h2 class="font-display text-2xl font-bold text-slate-900">Knowledge areas</h2>
+            <p class="mt-4 text-slate-600 leading-relaxed">Ten knowledge areas (PMI/PMBOK-aligned) that cross-cut the process groups:</p>
+            <div class="mt-4 grid grid-cols-2 gap-2 text-sm">
+              <div class="rounded-lg border border-slate-200 bg-white px-3 py-2"><strong>Scope</strong></div>
+              <div class="rounded-lg border border-slate-200 bg-white px-3 py-2"><strong>Schedule</strong></div>
+              <div class="rounded-lg border border-slate-200 bg-white px-3 py-2"><strong>Cost</strong></div>
+              <div class="rounded-lg border border-slate-200 bg-white px-3 py-2"><strong>Quality</strong></div>
+              <div class="rounded-lg border border-slate-200 bg-white px-3 py-2"><strong>Resources</strong></div>
+              <div class="rounded-lg border border-slate-200 bg-white px-3 py-2"><strong>Communications</strong></div>
+              <div class="rounded-lg border border-slate-200 bg-white px-3 py-2"><strong>Risk</strong></div>
+              <div class="rounded-lg border border-slate-200 bg-white px-3 py-2"><strong>Procurement</strong></div>
+              <div class="rounded-lg border border-slate-200 bg-white px-3 py-2"><strong>Stakeholders</strong></div>
+              <div class="rounded-lg border border-slate-200 bg-white px-3 py-2"><strong>Integration</strong></div>
+            </div>
+            <p class="mt-4 text-sm text-slate-500">Full detail in <a href="../PM.md" class="text-blue-600 hover:underline">PM.md &sect;4</a>.</p>
+          </section>
+
+          <section id="approaches" class="scroll-mt-24 mt-16">
+            <h2 class="font-display text-2xl font-bold text-slate-900">Approaches</h2>
+            <div class="doc-table-wrap mt-4">
+              <table>
+                <thead><tr><th>Approach</th><th>Focus</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>PMI / PMBOK</strong></td><td>Standards-based: 5 process groups &times; 10 knowledge areas.</td></tr>
+                  <tr><td><strong>PRINCE2</strong></td><td>Governance-first: 7 principles, 7 themes, 7 processes.</td></tr>
+                  <tr><td><strong>Six Sigma / Lean Six Sigma</strong></td><td>Quality-driven: DMAIC, statistical process control.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="mt-4 text-sm text-slate-500">Deep guides in <a href="../approaches/README.md" class="text-blue-600 hover:underline">approaches/</a>.</p>
+          </section>
+
+          <section id="bridges" class="scroll-mt-24 mt-16">
+            <h2 class="font-display text-2xl font-bold text-slate-900">SDLC &amp; PDLC bridges</h2>
+            <p class="mt-4 text-slate-600 leading-relaxed">PM provides the governance envelope around SDLC delivery and PDLC strategy. The bridge document maps process groups to lifecycle phases, compares roles, and identifies anti-patterns.</p>
+            <p class="mt-3 text-sm text-slate-500">Full mapping: <a href="../PM-SDLC-PDLC-BRIDGE.md" class="text-blue-600 hover:underline">PM-SDLC-PDLC-BRIDGE.md</a>.</p>
+          </section>
+
+          <section id="governance" class="scroll-mt-24 mt-16">
+            <h2 class="font-display text-2xl font-bold text-slate-900">Governance</h2>
+            <p class="mt-4 text-slate-600 leading-relaxed">This directory is governed by <a href="../POLICY.md" class="text-blue-600 hover:underline">POLICY.md</a>: do not edit casually. Project-specific PM artifacts belong in the consuming repo&rsquo;s project management workspace.</p>
+          </section>
+
+          <footer class="mt-20 border-t border-slate-200 pt-8 text-sm text-slate-500">
+            <p>Handbook last aligned with blueprint Markdown: <strong class="text-slate-700">2026-03-22</strong>.</p>
+            <p class="mt-3 text-xs text-slate-400">Styled with <a href="https://tailwindcss.com" class="text-blue-700 hover:underline" rel="noopener">Tailwind CSS</a> (CDN).</p>
+          </footer>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var sidebar = document.getElementById('sidebar');
+      var backdrop = document.getElementById('nav-backdrop');
+      var openBtn = document.getElementById('nav-open');
+      function openNav() { sidebar.classList.remove('-translate-x-full'); backdrop.classList.remove('hidden'); openBtn.setAttribute('aria-expanded','true'); }
+      function closeNav() { sidebar.classList.add('-translate-x-full'); backdrop.classList.add('hidden'); openBtn.setAttribute('aria-expanded','false'); }
+      openBtn.addEventListener('click', function () { sidebar.classList.contains('-translate-x-full') ? openNav() : closeNav(); });
+      backdrop.addEventListener('click', closeNav);
+      sidebar.querySelectorAll('a[href^="#"]').forEach(function (a) { a.addEventListener('click', function () { if (window.matchMedia('(max-width:1023px)').matches) closeNav(); }); });
+      window.addEventListener('resize', function () { if (window.matchMedia('(min-width:1024px)').matches) closeNav(); });
+    })();
+  </script>
+  <script src="../../../../docs/assets/portal-nav.js" data-root="../../../.."></script>
+</body>
+</html>

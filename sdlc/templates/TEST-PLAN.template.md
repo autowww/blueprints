@@ -3,7 +3,8 @@
 **Scope:** [milestone, epic, release, or story group]  
 **Owner:** [name / role]  
 **Status:** draft | ready | executed  
-**Related:** WBS / story IDs: …
+**Related:** WBS / story IDs: …  
+**Reference:** [`testing/APPROACHES.md`](../../disciplines/engineering/testing/APPROACHES.md) (test levels, types, techniques) · [`testing/AUTOMATION-LANDSCAPE.md`](../../disciplines/engineering/testing/AUTOMATION-LANDSCAPE.md) (framework selection)
 
 ## 1. Objectives
 
@@ -17,14 +18,15 @@ What quality bar this plan must demonstrate (e.g. regressions prevented, accepta
 
 ## 3. Test levels
 
-| Level | What | Who | Notes |
-|-------|------|-----|-------|
-| Unit | | | |
-| Integration | | | |
-| UI / instrumented | | | |
-| Manual / exploratory | | | |
+| Level | What | Design techniques | Who | Notes |
+|-------|------|-------------------|-----|-------|
+| Unit | | | | |
+| Integration | | | | |
+| API / contract | | | | |
+| UI / instrumented | | | | |
+| Manual / exploratory | | | | |
 
-Adjust columns to match your stack (e.g. API contract tests, snapshot tests).
+Adjust rows to match your stack (e.g. add visual/snapshot, remove API/contract if not applicable). For **design techniques** see [`testing/APPROACHES.md`](../../disciplines/engineering/testing/APPROACHES.md) §4 (equivalence partitioning, boundary value, decision table, state transition, exploratory, etc.).
 
 ## 4. Environments
 
@@ -50,6 +52,18 @@ Link to `docs/requirements/traceability/tests-matrix.csv` if you maintain one.
 | Risk | Mitigation |
 |------|------------|
 | | |
+
+## 8. Automation stack (optional)
+
+Document the test automation frameworks chosen for this scope. See [`testing/AUTOMATION-LANDSCAPE.md`](../../disciplines/engineering/testing/AUTOMATION-LANDSCAPE.md) §7 for selection guidance.
+
+| Tier | Framework | Version | Notes |
+|------|-----------|---------|-------|
+| Unit / component | | | |
+| API / contract | | | |
+| E2E / UI | | | |
+| BDD runner | | | |
+| Cloud / device farm | | | |
 
 ---
 

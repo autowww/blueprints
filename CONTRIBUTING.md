@@ -6,14 +6,14 @@ Thanks for helping improve these blueprints.
 
 1. **Read the package policy** for the area you touch:
    - [`sdlc/POLICY.md`](sdlc/POLICY.md)
-   - [`docs/POLICY.md`](docs/POLICY.md)
+   - [`product/POLICY.md`](product/POLICY.md)
    - [`agents/POLICY.md`](agents/POLICY.md) (if applicable)
 
    Blueprint text is meant to stay **product-agnostic** and **stable**. Avoid slipping in names, stacks, or living project data from a single product repo.
 
 2. **Keep Markdown and handbook in sync** where required:
    - After substantive changes under `sdlc/`, update the HTML handbook under `sdlc/docs/` per [`sdlc/docs/MAINTENANCE.md`](sdlc/docs/MAINTENANCE.md).
-   - Same idea for `docs/docs/` and `agents/docs/` when those packages change—see each folder’s `MAINTENANCE.md`.
+   - Same idea for `product/docs/` and `agents/docs/` when those packages change—see each folder’s `MAINTENANCE.md`.
 
 3. **Prefer small, focused changes** (one logical fix or improvement per PR) so reviewers can reason about impact.
 

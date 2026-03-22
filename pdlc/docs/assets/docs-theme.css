@@ -1,0 +1,513 @@
+/* SDLC handbook — Bootstrap 5 + typography + compact layout */
+:root {
+  --bs-body-font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --bs-body-font-size: 0.9375rem;
+  --bs-body-line-height: 1.5;
+  --font-display: "Proxima Nova", "Montserrat", sans-serif;
+  --font-mono: "Courier New", Courier, monospace;
+  /* Must clear sticky chapter header (breadcrumb + title + often 2–3 subtitle lines); too small hides mini-TOC under z-index 20 header */
+  --doc-toc-scroll-offset: 9.5rem;
+  /* Gap between sticky chapter panel and sticky “On this page” box */
+  --doc-mini-toc-gap: 0.35rem;
+  /* Space so last lines aren’t hidden under the fixed handbook footer */
+  --doc-footer-reserve: 6.75rem;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--doc-toc-scroll-offset);
+}
+
+body {
+  font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
+  line-height: var(--bs-body-line-height);
+}
+
+/* Display / chapter titles — Proxima Nova Black (900), Montserrat Black fallback */
+.font-display {
+  font-family: var(--font-display);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+/* Monospace — Courier New for code */
+code,
+kbd,
+pre,
+samp,
+.doc-mono {
+  font-family: var(--font-mono) !important;
+  font-size: 0.88em;
+}
+
+pre code {
+  font-size: inherit;
+}
+
+/* Slightly tighter Bootstrap prose */
+.doc-main .lead {
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+
+.doc-content {
+  max-width: 42rem;
+}
+
+/* Wide layout (e.g. documentation chapter with side TOC) */
+.doc-content-wide {
+  max-width: 72rem;
+}
+
+/* In-page TOC — scroll spy offset matches section scroll-margin (see docs-toc-scrollspy.js) */
+
+/* In-page TOC */
+.doc-toc {
+  font-size: 0.875rem;
+  padding: 0.75rem 1rem;
+}
+.doc-toc .doc-toc-title {
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bs-secondary);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.doc-toc .nav-link {
+  padding: 0.3rem 0 0.3rem 0.35rem;
+  color: var(--bs-secondary);
+  border-radius: 0.25rem;
+  transition:
+    color 0.15s ease,
+    font-weight 0.15s ease,
+    box-shadow 0.15s ease,
+    padding-left 0.15s ease,
+    background-color 0.15s ease;
+}
+.doc-toc .nav-link:hover {
+  color: var(--bs-success);
+  background: transparent;
+}
+.doc-toc .nav-link.doc-toc-link--active {
+  color: var(--bs-success);
+  font-weight: 700;
+  padding-left: 0.85rem;
+  margin-left: -0.2rem;
+  box-shadow: inset 4px 0 0 var(--bs-success);
+  background-color: rgba(var(--bs-success-rgb), 0.08);
+}
+.doc-toc .nav {
+  --bs-nav-link-padding-y: 0.2rem;
+  --bs-nav-link-padding-x: 0;
+}
+.doc-toc .nav .nav {
+  margin-top: 0.15rem;
+  margin-left: 0.65rem;
+  padding-left: 0.5rem;
+  border-left: 1px solid var(--bs-border-color);
+}
+/* Nested items: stronger indent when active so the marker lines up with hierarchy */
+.doc-toc .nav .nav .nav-link {
+  padding-left: 0.5rem;
+}
+.doc-toc .nav .nav .nav-link.doc-toc-link--active {
+  padding-left: 1.1rem;
+  margin-left: 0.15rem;
+  box-shadow: inset 4px 0 0 var(--bs-success);
+}
+.doc-toc .nav-link.fw-semibold {
+  color: var(--bs-body-color);
+  font-size: 0.8rem;
+}
+.doc-toc .nav-link.fw-semibold.doc-toc-link--active {
+  color: var(--bs-success);
+}
+
+/*
+ * Sticky “On this page” — top must clear the sticky chapter header (same offset as
+ * --doc-toc-scroll-offset), or the box creeps under the header and appears to scroll.
+ */
+.doc-toc.doc-toc-sticky {
+  position: sticky;
+  position: -webkit-sticky;
+  top: calc(var(--doc-toc-scroll-offset) + var(--doc-mini-toc-gap));
+  align-self: flex-start;
+  max-height: min(50vh, 20rem);
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  z-index: 12;
+}
+.doc-toc.doc-toc-sticky::-webkit-scrollbar {
+  width: 5px;
+}
+.doc-toc.doc-toc-sticky::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+}
+
+@media (max-width: 991.98px) {
+  .doc-toc {
+    margin-bottom: 1rem;
+  }
+  .doc-toc.doc-toc-sticky {
+    top: calc(var(--doc-toc-scroll-offset) + 0.25rem);
+    max-height: min(45vh, calc(100vh - var(--doc-toc-scroll-offset) - 2.5rem));
+  }
+}
+
+@media (min-width: 992px) {
+  .doc-toc.doc-toc-sticky {
+    max-height: calc(100vh - var(--doc-toc-scroll-offset) - var(--doc-mini-toc-gap) - 2rem);
+  }
+}
+
+/* Nested hierarchy callout */
+.doc-hierarchy ul ul {
+  margin-top: 0.35rem;
+}
+.doc-hierarchy li {
+  margin-bottom: 0.25rem;
+}
+
+/* Folder tree block */
+.doc-folder-tree {
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0;
+  background: var(--bs-tertiary-bg);
+  border-radius: var(--bs-border-radius);
+  border: 1px solid var(--bs-border-color);
+}
+
+/* Anchor targets — same offset the TOC scroll spy uses */
+main section[id],
+.doc-main h2[id],
+.doc-main h3[id] {
+  scroll-margin-top: var(--doc-toc-scroll-offset);
+}
+
+/* Collapsible chapter groups (methodology sub-chapters) */
+.doc-nav-group {
+  margin-bottom: 0.15rem;
+}
+.doc-nav-group-row {
+  gap: 0;
+}
+.doc-nav-toggle {
+  color: rgba(255, 255, 255, 0.55) !important;
+  text-decoration: none !important;
+}
+.doc-nav-toggle:hover,
+.doc-nav-toggle:focus-visible {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+.doc-nav-toggle:focus-visible {
+  outline: 2px solid rgba(25, 135, 84, 0.85);
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}
+.doc-nav-chevron {
+  transition: transform 0.2s ease;
+  display: block;
+}
+.doc-nav-toggle[aria-expanded="true"] .doc-nav-chevron {
+  transform: rotate(90deg);
+}
+.doc-nav-subwrap {
+  padding-bottom: 0.2rem;
+}
+aside.bg-dark .doc-nav-sublink,
+.offcanvas.text-bg-dark .doc-nav-sublink {
+  margin-left: 0.5rem;
+  padding-left: 0.85rem !important;
+  font-size: 0.9rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 0 0.375rem 0.375rem 0 !important;
+}
+aside.bg-dark .doc-nav-sublink:hover,
+.offcanvas.text-bg-dark .doc-nav-sublink:hover {
+  border-left-color: rgba(25, 135, 84, 0.65);
+}
+
+/* Nested methodology hubs (Scrum → Foundation, Roles, …) */
+.doc-nav-subgroup {
+  margin-left: 0.25rem;
+  padding-left: 0.35rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: 0.1rem;
+}
+.doc-nav-subhub {
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+aside.bg-dark .doc-nav-subhub.active,
+.offcanvas.text-bg-dark .doc-nav-subhub.active {
+  color: #fff !important;
+}
+.doc-nav-deepwrap {
+  padding-bottom: 0.15rem;
+}
+aside.bg-dark .doc-nav-sublink-deep,
+.offcanvas.text-bg-dark .doc-nav-sublink-deep {
+  margin-left: 0.35rem;
+  padding-left: 0.75rem !important;
+  font-size: 0.82rem;
+  opacity: 0.95;
+  border-left-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Sidebar — slightly tighter links */
+.nav-scroll .nav-link.rounded {
+  padding: 0.35rem 0.65rem !important;
+}
+
+/* Sidebar scroll */
+.nav-scroll {
+  max-height: calc(100vh - 7rem);
+  overflow-y: auto;
+}
+.nav-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+.nav-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  z-index: 1080;
+  padding: 0.4rem 0.85rem;
+  background: var(--bs-success);
+  color: #fff;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  outline: 2px solid var(--bs-success);
+  outline-offset: 2px;
+}
+
+/* Phase cards — tighter */
+.phase-card {
+  border-radius: var(--bs-border-radius-lg);
+  background: var(--bs-body-bg);
+  border: 1px solid var(--bs-border-color);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.phase-card .small.fw-bold {
+  margin-bottom: 0.35rem;
+}
+
+/* Tables inside doc */
+.doc-table-wrap {
+  overflow-x: auto;
+  border-radius: var(--bs-border-radius);
+  border: 1px solid var(--bs-border-color);
+}
+.doc-table-wrap table {
+  margin-bottom: 0;
+}
+.doc-table-wrap .table > :not(caption) > * > * {
+  padding: 0.35rem 0.5rem;
+}
+
+/* External links — one-line executive summary under handbook “Authoritative sources” */
+.doc-external-summary {
+  display: block;
+  font-size: 0.8125rem;
+  line-height: 1.35;
+  color: var(--bs-secondary);
+  margin-top: 0.2rem;
+  margin-bottom: 0.35rem;
+  padding-left: 0.05rem;
+}
+
+/*
+ * Main column: flex fills the viewport height; inner column is flex.
+ * Footer is position:fixed (see below); ::after flex-grow replaces margin-top:auto on the footer for short pages.
+ */
+.doc-main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.doc-main > .doc-content,
+.doc-main > .doc-content-wide {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: var(--doc-footer-reserve);
+}
+
+/* In-flow flex tail so short chapters still fill the column above the fixed footer */
+.doc-main > .doc-content::after,
+.doc-main > .doc-content-wide::after {
+  content: "";
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+/* Sticky chapter header (breadcrumb + title) — viewport top */
+.doc-main > .doc-content > header:first-of-type,
+.doc-main > .doc-content-wide > header:first-of-type {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  margin-top: -0.25rem;
+  margin-left: -0.125rem;
+  margin-right: -0.125rem;
+  padding: 0.65rem 0.25rem 0.85rem;
+  background-color: var(--bs-tertiary-bg);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .doc-main > .doc-content > header:first-of-type,
+  .doc-main > .doc-content-wide > header:first-of-type {
+    box-shadow: none;
+  }
+}
+
+/*
+ * Fixed handbook footer — sticky bottom:0 inside nested flex rarely sticks across engines;
+ * pin to the viewport within the main column (sidebar excluded at lg+).
+ */
+.doc-main > .doc-content > footer,
+.doc-main > .doc-content-wide > footer {
+  position: fixed;
+  z-index: 15;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding: 0.85rem 1rem calc(0.65rem + env(safe-area-inset-bottom, 0px)) !important;
+  color: var(--bs-secondary-color) !important;
+  background-color: var(--bs-tertiary-bg);
+  border-top: 1px solid var(--bs-border-color) !important;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.07);
+}
+
+@media (min-width: 768px) {
+  .doc-main > .doc-content > footer,
+  .doc-main > .doc-content-wide > footer {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .doc-main > .doc-content > footer,
+  .doc-main > .doc-content-wide > footer {
+    left: 25%;
+    right: 0;
+    width: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .doc-main > .doc-content > footer,
+  .doc-main > .doc-content-wide > footer {
+    left: 16.66666667%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .doc-main > .doc-content > footer,
+  .doc-main > .doc-content-wide > footer {
+    box-shadow: none;
+  }
+}
+
+@media print {
+  .doc-main > .doc-content > footer,
+  .doc-main > .doc-content-wide > footer {
+    position: static;
+    left: auto;
+    right: auto;
+    width: auto;
+    box-shadow: none;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .doc-main > .doc-content,
+  .doc-main > .doc-content-wide {
+    padding-bottom: 0;
+  }
+
+  .doc-main > .doc-content::after,
+  .doc-main > .doc-content-wide::after {
+    display: none;
+  }
+}
+
+/* Active chapter in sidebar / offcanvas */
+aside.bg-dark .nav-link.active,
+.offcanvas.text-bg-dark .nav-link.active {
+  background: rgba(255, 255, 255, 0.12);
+  font-weight: 600;
+}
+
+.offcanvas .nav-link {
+  padding-top: 0.35rem !important;
+  padding-bottom: 0.35rem !important;
+}
+
+/* Landing chapter cards */
+a.doc-chapter-card {
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+a.doc-chapter-card:hover {
+  border-color: var(--bs-success) !important;
+  box-shadow: 0 0.35rem 0.85rem rgba(0, 0, 0, 0.07) !important;
+  transform: translateY(-1px);
+}
+
+/* Compact chapter / landing headings */
+.doc-main h1.display-6 {
+  font-size: clamp(1.65rem, 4vw, 2rem);
+  line-height: 1.2;
+}
+.doc-main h1.font-display:not(.display-6) {
+  font-size: 1.45rem;
+  line-height: 1.25;
+}
+/* Section subtitles inside chapters */
+.doc-main section h2.font-display {
+  font-size: 1.1rem;
+  line-height: 1.3;
+}
+/* Landing “Chapters” and similar top-level h2 */
+.doc-content > h2.font-display {
+  font-size: 1.35rem;
+  line-height: 1.3;
+}
+.doc-main h3.font-display {
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+/* ASCII / monospace trees (methodologies chapter) */
+pre.doc-tree {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  overflow-x: auto;
+  tab-size: 2;
+}
