@@ -14,10 +14,10 @@ PM provides the **governance layer** between product strategy (PDLC) and softwar
 
 | Package | How PM relates |
 |---------|---------------|
-| [`blueprints/sdlc/`](../../sdlc/README.md) | SDLC phases A–F execute **inside** PM governance. PM provides schedule, budget, and risk management around SDLC delivery. See [**PM-SDLC-PDLC-BRIDGE.md**](PM-SDLC-PDLC-BRIDGE.md). |
-| [`blueprints/pdlc/`](../../pdlc/README.md) | PDLC decides **what** to build; PM governs **how** the delivery is executed. Product strategy (P1–P3) feeds into project initiation; project outputs feed back into PDLC launch and growth (P4–P6). |
-| [`blueprints/product/`](../../product/README.md) | PM artifacts (project charter, status reports, risk register) complement product-functional docs. |
-| [`blueprints/agents/`](../../agents/README.md) | Automation recipes may support PM activities (status aggregation, risk dashboards, resource tracking). |
+| [`blueprints/sdlc/`](../../../sdlc/README.md) | SDLC phases A–F execute **inside** PM governance. PM provides schedule, budget, and risk management around SDLC delivery. See [**PM-SDLC-PDLC-BRIDGE.md**](PM-SDLC-PDLC-BRIDGE.md). |
+| [`blueprints/pdlc/`](../../../pdlc/README.md) | PDLC decides **what** to build; PM governs **how** the delivery is executed. Product strategy (P1–P3) feeds into project initiation; project outputs feed back into PDLC launch and growth (P4–P6). |
+| [`blueprints/product/`](../../../product/README.md) | PM artifacts (project charter, status reports, risk register) complement product-functional docs. |
+| [`blueprints/agents/`](../../../agents/README.md) | Automation recipes may support PM activities (status aggregation, risk dashboards, resource tracking). |
 
 ## Adopt in your repo
 

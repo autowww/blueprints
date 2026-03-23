@@ -4,10 +4,10 @@
 
 Governance disciplines provide the management framework within which Engineering, Data, and Product operate. They answer questions about timelines, budgets, scope, risk, and process improvement.
 
-| Discipline | Core question | Package |
-|-----------|---------------|---------|
-| [**Project Management**](pm/README.md) | Are we delivering on time, on budget, within scope, with acceptable risk? | Process groups, governance, knowledge areas, metrics, approaches (PMBOK, PRINCE2, Six Sigma) |
-| **Lean** *(planned)* | How do we continuously improve and eliminate waste? | Toyota Production System principles, value stream mapping, waste elimination, kaizen |
+| Discipline | Core question | Package | Deep dives |
+|-----------|---------------|---------|------------|
+| [**Project Management**](pm/README.md) | Are we delivering on time, on budget, within scope, with acceptable risk? | Process groups, governance, knowledge areas, metrics, approaches (PMBOK, PRINCE2, Six Sigma) | [Approaches](pm/approaches/README.md) · [Governance](pm/governance/README.md) |
+| **Lean** *(planned)* | How do we continuously improve and eliminate waste? | Toyota Production System principles, value stream mapping, waste elimination, kaizen | |
 
 ## Relationship to other families
 

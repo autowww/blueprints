@@ -34,13 +34,13 @@ Teams often layer **FP cores**, **OO boundaries**, and **reactive IO**; arrows s
 
 ## Guides
 
-| Guide | Focus |
-|-------|--------|
-| [**OOP**](oop.md) | Encapsulation, polymorphism, composition vs inheritance, language notes, anti-patterns |
-| [**Functional**](functional.md) | Purity, ADTs, FP/OOP matrix, practical functors/monads, ecosystems |
-| [**Reactive**](reactive.md) | Observables, operators, backpressure, Manifesto pillars, frameworks |
-| **Procedural** *(planned)* | Procedures, scripts, CLIs, embedded-style sequencing |
-| **Multi-paradigm** *(planned)* | Layering styles and team conventions |
+| Guide | Focus | See |
+|-------|--------|-----|
+| [**OOP**](oop.md) | Encapsulation, polymorphism, composition vs inheritance, language notes, anti-patterns | |
+| [**Functional**](functional.md) | Purity, ADTs, FP/OOP matrix, practical functors/monads, ecosystems | |
+| [**Reactive**](reactive.md) | Observables, operators, backpressure, Manifesto pillars, frameworks | |
+| **Procedural** *(planned)* | Procedures, scripts, CLIs, embedded-style sequencing | [SOFTWARE-ENGINEERING.md §1](../SOFTWARE-ENGINEERING.md#1-programming-paradigms) |
+| **Multi-paradigm** *(planned)* | Layering styles and team conventions | [SOFTWARE-ENGINEERING.md §1](../SOFTWARE-ENGINEERING.md#1-programming-paradigms) |
 
 ---
 

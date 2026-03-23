@@ -27,13 +27,13 @@ flowchart TD
 
 ## Platform stacks (topic index)
 
-| Platform | Focus |
-|----------|-------|
-| **iOS / Swift** | SwiftUI vs UIKit, Combine/async-await, Swift Package Manager, Xcode configuration, App Clips, Widgets |
-| **Android / Kotlin** | Jetpack Compose vs XML Views, Kotlin coroutines/Flow, Gradle, Android App Bundle, Instant Apps |
-| **React Native** | New Architecture (Fabric, TurboModules), Metro bundler, native module bridging, Expo, CodePush |
-| **Flutter** | Widget tree, Dart isolates, platform channels, Impeller renderer, Dart packages |
-| **Kotlin Multiplatform (KMP)** | Shared module structure, expect/actual, Compose Multiplatform, Kotlin/Native interop |
+| Platform | Focus | See |
+|----------|-------|-----|
+| **iOS / Swift** | SwiftUI vs UIKit, Combine/async-await, Swift Package Manager, Xcode configuration, App Clips, Widgets | [Native iOS & Android](ios-android.md) |
+| **Android / Kotlin** | Jetpack Compose vs XML Views, Kotlin coroutines/Flow, Gradle, Android App Bundle, Instant Apps | [Native iOS & Android](ios-android.md) |
+| **React Native** | New Architecture (Fabric, TurboModules), Metro bundler, native module bridging, Expo, CodePush | [Cross-platform](cross-platform.md) |
+| **Flutter** | Widget tree, Dart isolates, platform channels, Impeller renderer, Dart packages | [Cross-platform](cross-platform.md) |
+| **Kotlin Multiplatform (KMP)** | Shared module structure, expect/actual, Compose Multiplatform, Kotlin/Native interop | [Cross-platform](cross-platform.md) |
 
 Native and cross-platform dimensions are expanded in the two guides above; this table remains a **quick map** of ecosystem topics.
 

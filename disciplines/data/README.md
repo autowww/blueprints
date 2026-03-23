@@ -4,10 +4,10 @@
 
 Data disciplines sit at the intersection of engineering (building pipelines and infrastructure) and product (enabling analytics, experiments, and data-driven decisions).
 
-| Discipline | Core question | Package |
-|-----------|---------------|---------|
-| [**Big Data & Data Engineering**](bigdata/README.md) | How do we engineer, govern, and process data at scale? | Data governance, pipeline patterns, DataOps, architectures (Lambda, Kappa, data mesh), operational data modeling |
-| [**Data Science & ML**](data-science/README.md) | How do we extract knowledge and build predictive models from data? | CRISP-DM, MLOps, model evaluation, responsible AI, experiment management |
+| Discipline | Core question | Package | Deep dives |
+|-----------|---------------|---------|------------|
+| [**Big Data & Data Engineering**](bigdata/README.md) | How do we engineer, govern, and process data at scale? | Data governance, pipeline patterns, DataOps, architectures (Lambda, Kappa, data mesh), operational data modeling | [Architectures](bigdata/architectures/README.md) · [Technologies](bigdata/technologies/README.md) · [Techniques](bigdata/techniques/README.md) |
+| [**Data Science & ML**](data-science/README.md) | How do we extract knowledge and build predictive models from data? | CRISP-DM, MLOps, model evaluation, responsible AI, experiment management | [Approaches](data-science/approaches/README.md) · [Techniques](data-science/techniques/README.md) |
 
 ## Relationship to other families
 

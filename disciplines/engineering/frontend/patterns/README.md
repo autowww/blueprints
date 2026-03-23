@@ -28,15 +28,15 @@ flowchart LR
 
 ## Pattern categories (overview)
 
-| Pattern category | Focus |
-|-----------------|-------|
-| **Component patterns** | Compound components, render delegation, controlled vs uncontrolled, polymorphic components, error boundaries |
-| **State management patterns** | State colocation, derived state, optimistic updates, state machines for complex flows |
-| **Data fetching patterns** | Cache-and-network, stale-while-revalidate, infinite scroll, polling, real-time subscriptions |
-| **Routing patterns** | File-based routing, nested layouts, route-level code splitting, prefetching, auth guards |
-| **Form patterns** | Multi-step forms, field-level validation, server-side validation integration, autosave |
-| **Error handling patterns** | Error boundaries, toast notifications, retry UI, graceful degradation, offline fallbacks |
-| **Internationalization patterns** | ICU message format, locale-aware formatting, RTL layout, translation workflow integration |
+| Pattern category | Focus | See |
+|-----------------|-------|-----|
+| **Component patterns** | Compound components, render delegation, controlled vs uncontrolled, polymorphic components, error boundaries | [Component architecture](component-architecture.md) |
+| **State management patterns** | State colocation, derived state, optimistic updates, state machines for complex flows | [State management](state-management.md) |
+| **Data fetching patterns** | Cache-and-network, stale-while-revalidate, infinite scroll, polling, real-time subscriptions | [State management](state-management.md) |
+| **Routing patterns** | File-based routing, nested layouts, route-level code splitting, prefetching, auth guards | [Component architecture](component-architecture.md) |
+| **Form patterns** | Multi-step forms, field-level validation, server-side validation integration, autosave | [State management](state-management.md) |
+| **Error handling patterns** | Error boundaries, toast notifications, retry UI, graceful degradation, offline fallbacks | [Component architecture](component-architecture.md) |
+| **Internationalization patterns** | ICU message format, locale-aware formatting, RTL layout, translation workflow integration | [FRONTEND.md](../FRONTEND.md) |
 
 ---
 

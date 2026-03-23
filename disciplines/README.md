@@ -4,7 +4,7 @@ Reusable, **project-agnostic** blueprints for **cross-cutting professional disci
 
 **Lifecycles** (SDLC, PDLC) answer *when* work happens — phases, gates, ceremonies. **Disciplines** answer *how* a specific competency is practiced — knowledge areas, techniques, approaches, tools — regardless of which lifecycle phase you are in.
 
-Disciplines are organized into **four families** (by domain affinity) plus **two cross-cutting standalone disciplines** that span every family.
+Disciplines are organized into **four families** (by domain affinity) plus **three cross-cutting standalone disciplines** that span every family.
 
 ---
 
@@ -55,6 +55,7 @@ Standalone disciplines that span every family — they are not grouped under a f
 |-----------|---------------|--------|
 | [**Security**](security/README.md) | Is the product safe from unauthorized access, breaches, and attacks? | [SEC-SDLC-PDLC](security/SEC-SDLC-PDLC-BRIDGE.md) |
 | [**Compliance**](compliance/README.md) | Does the product meet regulatory and legal obligations? | [COMP-SDLC-PDLC](compliance/COMP-SDLC-PDLC-BRIDGE.md) |
+| [**Documentation**](documentation/README.md) | How do we create, maintain, and deliver effective documentation and content? | [DOC-SDLC-PDLC](documentation/DOC-SDLC-PDLC-BRIDGE.md) |
 
 ---
 
@@ -79,12 +80,13 @@ graph TB
   subgraph crossCutLayer ["Cross-cutting"]
     SEC["Security"]
     COMP["Compliance"]
+    DOC["Documentation"]
   end
 
   familiesLayer -->|"techniques, practices, governance"| lifecycleLayer
   lifecycleLayer -.->|"phase context, gates, artifacts"| familiesLayer
-  crossCutLayer -->|"constraints, controls, obligations"| familiesLayer
-  crossCutLayer -->|"shift-left, continuous assurance"| lifecycleLayer
+  crossCutLayer -->|"constraints, controls, obligations, knowledge"| familiesLayer
+  crossCutLayer -->|"shift-left, continuous assurance, continuous docs"| lifecycleLayer
 ```
 
 ## Adopt in your repo

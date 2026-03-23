@@ -28,14 +28,14 @@ flowchart TB
 
 ## Pattern categories (topic index)
 
-| Pattern category | Focus |
-|-----------------|-------|
-| **Navigation patterns** | Stack, tab, drawer, modal; coordinator/router pattern; deep link routing; state restoration |
-| **Push notification patterns** | Token lifecycle, channel management, rich notifications, silent push, deep link from notification |
-| **Deep linking patterns** | Universal Links / App Links, deferred deep links, attribution, navigation resolution |
-| **Background processing** | Background tasks, WorkManager/BGTaskScheduler, geofencing, silent push triggers |
-| **Authentication patterns** | Biometric auth, secure token storage, session management, single sign-on |
-| **Data sync patterns** | Incremental sync, full sync, delta sync, pagination, cursor-based sync |
+| Pattern category | Focus | See |
+|-----------------|-------|-----|
+| **Navigation patterns** | Stack, tab, drawer, modal; coordinator/router pattern; deep link routing; state restoration | [Mobile architecture](mobile-architecture.md) |
+| **Push notification patterns** | Token lifecycle, channel management, rich notifications, silent push, deep link from notification | [Mobile architecture](mobile-architecture.md) |
+| **Deep linking patterns** | Universal Links / App Links, deferred deep links, attribution, navigation resolution | [Mobile architecture](mobile-architecture.md) |
+| **Background processing** | Background tasks, WorkManager/BGTaskScheduler, geofencing, silent push triggers | [Offline-first](offline-first.md) |
+| **Authentication patterns** | Biometric auth, secure token storage, session management, single sign-on | [Mobile architecture](mobile-architecture.md) |
+| **Data sync patterns** | Incremental sync, full sync, delta sync, pagination, cursor-based sync | [Offline-first](offline-first.md) |
 
 Architecture, navigation, data, and offline guidance are expanded in the two guides above; the rows in this table remain a **roadmap** for additional deep-dive documents.
 

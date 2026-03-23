@@ -28,12 +28,12 @@ The loop closes when incidents and test findings **feed** updated threat assumpt
 | Practice | Guide | Focus |
 |----------|-------|-------|
 | **Threat modeling** | [`threat-modeling.md`](threat-modeling.md) | STRIDE, PASTA, LINDDUN, attack trees, DFDs, risk rating, tools, SDLC integration |
-| **Secure code review** | — | Review checklists by language/framework, common vulnerability patterns, reviewer training |
+| **Secure code review** | [SECURITY.md §7](../SECURITY.md#7-secure-sdlc-s-sdlc) | Review checklists by language/framework, common vulnerability patterns, reviewer training |
 | **Security testing** | [`security-testing.md`](security-testing.md) | SAST, SCA, DAST, IAST, CI/CD, container/IaC scanning, vuln lifecycle, metrics |
 | **Penetration testing** | [`security-testing.md`](security-testing.md#penetration-testing) | Scope, rules of engagement, PTES / OWASP Testing Guide, reporting, remediation tracking |
 | **Incident response** | [`incident-response.md`](incident-response.md) | IR plan, NIST lifecycle, roles, containment, comms, tabletops, metrics |
-| **Supply chain security** | — | SBOM generation, dependency management, artifact signing, SLSA framework adoption |
-| **Secrets management** | — | Vault patterns, cloud-native secret stores, rotation policies, secret injection, audit |
+| **Supply chain security** | [SECURITY.md §9](../SECURITY.md#9-supply-chain-security) | SBOM generation, dependency management, artifact signing, SLSA framework adoption |
+| **Secrets management** | [SECURITY.md §5](../SECURITY.md#5-cryptography-fundamentals) | Vault patterns, cloud-native secret stores, rotation policies, secret injection, audit |
 
 ---
 

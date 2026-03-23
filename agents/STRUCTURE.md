@@ -1,6 +1,6 @@
 # Agents blueprint — structure & layers
 
-This document is the **canonical Markdown** for the **agents & automation** blueprint (containerized recipes and workspace layout). The **human handbook** in **`blueprints/sdlc/docs/agents.html`** expands the same material for browser reading — including how this fits **agentic** delivery; keep them aligned when you change either.
+This document is the **canonical Markdown** for the **agents & automation** blueprint (containerized recipes and workspace layout). **Browser handbook** pages are generated from blueprint Markdown by **`blueprints/generator/build-handbook.py`** into **`blueprints/website/`** (for example `agents--index.html`); CI keeps them current — edit this file and related Markdown, not the HTML.
 
 **Related:** [`README.md`](README.md) · [`POLICY.md`](POLICY.md) · [`blueprints/sdlc/DOCUMENTATION-STRUCTURE.md`](../sdlc/DOCUMENTATION-STRUCTURE.md) · [`blueprints/sdlc/SDLC.md`](../sdlc/SDLC.md) §7.
 
@@ -54,7 +54,6 @@ blueprints/agents/
     README.md
   docs/
     README.md
-    index.html
     MAINTENANCE.md
 ```
 
@@ -164,7 +163,7 @@ Creates **`agents/recipes/<name>/README.md`** and **`run.sh`** from [`templates/
 
 ## 10. Handbook alignment
 
-When you change this file or [`README.md`](README.md), update **`blueprints/sdlc/docs/agents.html`** and bump footer dates per **`blueprints/sdlc/docs/MAINTENANCE.md`**.
+When you change this file or [`README.md`](README.md), run **`python3 generator/build-handbook.py agents`** from **`blueprints/`** (or rely on CI) so **`website/agents--*.html`** stays current. See [`docs/MAINTENANCE.md`](docs/MAINTENANCE.md) and [`../docs/MAINTENANCE.md`](../docs/MAINTENANCE.md).
 
 ---
 

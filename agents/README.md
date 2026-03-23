@@ -12,7 +12,7 @@ This folder is a **reusable, product-agnostic** package for **engineering automa
 | [**docker/**](docker/README.md) | Foundational **`Dockerfile.base`**, **`compose.yaml`**, ignore rules. |
 | [**templates/**](templates/README.md) | **Recipe** stub and **mutable `agents/`** workspace seed. |
 | [**scripts/**](scripts/README.md) | **`init-agents-workspace.sh`**, **`new-agent-recipe.sh`** — see [`scripts/README.md`](scripts/README.md). |
-| [**docs/**](docs/README.md) | Short HTML handbook mirror; keep in sync with **`blueprints/sdlc/docs/agents.html`**. |
+| [**docs/**](docs/README.md) | Maintainer notes for handbook generation (`website/agents--*.html` via **`generator/build-handbook.py`**). |
 
 ## What does *not* belong here
 
@@ -26,7 +26,7 @@ This folder is a **reusable, product-agnostic** package for **engineering automa
 2. Add **`agents/`** (mutable): run **`./blueprints/agents/scripts/init-agents-workspace.sh`** from repo root, or copy [`templates/project-agents/`](templates/project-agents/README.md) manually.  
 3. New recipes: follow [**`ORCHESTRATION.md`**](ORCHESTRATION.md); scaffold with **`./blueprints/agents/scripts/new-agent-recipe.sh <name> [--purpose "..."]`**.  
 4. From **`docs/INDEX.md`** (or root `README.md`) and **`blueprints/sdlc/README.md`**, link to **`blueprints/agents/README.md`**.  
-5. Read the **full handbook chapter**: [`../sdlc/docs/agents.html`](../sdlc/docs/agents.html) (multi-layer narrative; canonical Markdown alignment via **`blueprints/sdlc/DOCUMENTATION-STRUCTURE.md`** and **`blueprints/agents/STRUCTURE.md`**).  
+5. **Handbook (browser):** generated under **`blueprints/website/`** (e.g. `agents--index.html`) by **`generator/build-handbook.py`**; canonical Markdown: [`STRUCTURE.md`](STRUCTURE.md), [`DOCUMENTATION-STRUCTURE.md`](../sdlc/DOCUMENTATION-STRUCTURE.md).  
 6. **Build** the base image: `docker compose -f blueprints/agents/docker/compose.yaml build` (from repo root).
 
 ---

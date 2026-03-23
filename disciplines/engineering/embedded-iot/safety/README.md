@@ -23,10 +23,10 @@ flowchart TB
 |----------|--------|-------|-----------|
 | **IEC 61508** | General | Functional safety of E/E/PE safety-related systems — SIL 1–4, V-model, failure modes | [`iec-61508.md`](iec-61508.md) |
 | **ISO 26262** | Automotive | Road vehicle functional safety — ASIL A–D, HARA, HSI, FMEA, production | [`iso-26262.md`](iso-26262.md) |
-| **DO-178C** | Aerospace | Software considerations in airborne systems — DAL A–E, objectives, verification, tool qualification | — |
-| **IEC 62304** | Medical devices | Medical device software lifecycle — safety classes A/B/C, risk management integration, maintenance | — |
-| **MISRA C / C++** | Coding standards | Safe subset of C/C++ for critical systems — rule categories (mandatory, required, advisory), deviation process | — |
-| **EN 50128** | Railway | Railway software — SIL allocation, coding standards, formal methods, independent verification | — |
+| **DO-178C** | Aerospace | Software considerations in airborne systems — DAL A–E, objectives, verification, tool qualification | [EMBEDDED-IOT.md](../EMBEDDED-IOT.md) |
+| **IEC 62304** | Medical devices | Medical device software lifecycle — safety classes A/B/C, risk management integration, maintenance | [EMBEDDED-IOT.md](../EMBEDDED-IOT.md) |
+| **MISRA C / C++** | Coding standards | Safe subset of C/C++ for critical systems — rule categories (mandatory, required, advisory), deviation process | [EMBEDDED-IOT.md §2](../EMBEDDED-IOT.md#2-firmware-development) |
+| **EN 50128** | Railway | Railway software — SIL allocation, coding standards, formal methods, independent verification | [EMBEDDED-IOT.md](../EMBEDDED-IOT.md) |
 
 **For each standard, guides cover:**
 - Scope and applicability criteria

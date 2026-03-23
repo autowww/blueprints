@@ -31,7 +31,7 @@ Optional visuals (redraw if the **meaning** of the process changes):
 | [`assets/cicd-gates.svg`](assets/cicd-gates.svg) | Conceptual CI gate chain (trigger → static → tests → build → merge gate) |
 | [`assets/change-control-flow.svg`](assets/change-control-flow.svg) | Visible scope path vs hidden scope ([`change.html`](change.html)) |
 
-Inventory and future diagram ideas: [`assets/README.md`](assets/README.md).
+The `docs/assets/` tree and hand-maintained HTML chapter set described above were removed; the human handbook is now generated into `blueprints/website/` (run `generator/build-handbook.py`). Treat this file as legacy maintainer notes unless you are reviving a local static `docs/` build.
 
 ## External links (methodologies)
 

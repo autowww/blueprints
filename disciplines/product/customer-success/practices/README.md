@@ -35,8 +35,8 @@ Deep dives: [**Onboarding**](onboarding-design.md), [**Health scoring**](health-
 |----------------|--------|
 | [**Onboarding design**](onboarding-design.md) | Time-to-value, guided setup and progressive disclosure, persona-based journeys, milestone definition, in-product vs. human-led onboarding, completion and activation metrics, handoff from sales/marketing. |
 | [**Health scoring**](health-scoring.md) | Signal selection (product usage, support, billing, sentiment), model design (rules vs. ML), tiering and thresholds, data contracts with engineering/analytics, alert routing, governance and false-positive management. |
-| **Support operations setup** | Tiered support (L1/L2/L3), channel mix, SLA policy and measurement, ticket taxonomy, escalation paths, shift and capacity planning, knowledge base IA, deflection strategy, tooling integrations. |
-| **Feedback program design** | NPS / CSAT / CES program architecture, sampling and timing, survey fatigue controls, linking responses to accounts and journeys, VoC synthesis, routing insights to roadmap and closing the loop with respondents. |
+| [**Support operations setup**](../CUSTOMER-SUCCESS.md#4-support-operations) | Tiered support (L1/L2/L3), channel mix, SLA policy and measurement, ticket taxonomy, escalation paths, shift and capacity planning, knowledge base IA, deflection strategy, tooling integrations. |
+| [**Feedback program design**](../CUSTOMER-SUCCESS.md#6-feedback-loops) | NPS / CSAT / CES program architecture, sampling and timing, survey fatigue controls, linking responses to accounts and journeys, VoC synthesis, routing insights to roadmap and closing the loop with respondents. |
 | [**Churn prevention**](churn-prevention.md) | Risk signals by segment, tiered interventions (digital, CSM, executive), save offers and commercial levers, win-back and exit interviews, involuntary churn (dunning, payments), experiment design for retention initiatives. |
 
 For lifecycle mapping across SDLC/PDLC, see [**CS-SDLC-PDLC-BRIDGE.md**](../CS-SDLC-PDLC-BRIDGE.md).

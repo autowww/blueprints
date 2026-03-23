@@ -6,26 +6,26 @@ PM provides the **governance layer** between product strategy (PDLC) and softwar
 
 | Document | Purpose |
 |----------|---------|
-| [**PM.md**](PM.md) | What PM is, roles, process groups, governance model, metrics |
-| [**PM-SDLC-PDLC-BRIDGE.md**](PM-SDLC-PDLC-BRIDGE.md) | How PM relates to SDLC and PDLC — three-domain comparison, nesting, role mapping, anti-patterns |
-| [**approaches/**](approaches/README.md) | Deeper guides: PMI/PMBOK, PRINCE2, Six Sigma / Lean Six Sigma |
+| [**PM.md**](../disciplines/governance/pm/PM.md) | What PM is, roles, process groups, governance model, metrics |
+| [**PM-SDLC-PDLC-BRIDGE.md**](../disciplines/governance/pm/PM-SDLC-PDLC-BRIDGE.md) | How PM relates to SDLC and PDLC — three-domain comparison, nesting, role mapping, anti-patterns |
+| [**approaches/**](../disciplines/governance/pm/approaches/README.md) | Deeper guides: PMI/PMBOK, PRINCE2, Six Sigma / Lean Six Sigma |
 
 ## Relationship to other packages
 
 | Package | How PM relates |
 |---------|---------------|
-| [`blueprints/sdlc/`](../sdlc/README.md) | SDLC phases A–F execute **inside** PM governance. PM provides schedule, budget, and risk management around SDLC delivery. See [**PM-SDLC-PDLC-BRIDGE.md**](PM-SDLC-PDLC-BRIDGE.md). |
+| [`blueprints/sdlc/`](../sdlc/README.md) | SDLC phases A–F execute **inside** PM governance. PM provides schedule, budget, and risk management around SDLC delivery. See [**PM-SDLC-PDLC-BRIDGE.md**](../disciplines/governance/pm/PM-SDLC-PDLC-BRIDGE.md). |
 | [`blueprints/pdlc/`](../pdlc/README.md) | PDLC decides **what** to build; PM governs **how** the delivery is executed. Product strategy (P1–P3) feeds into project initiation; project outputs feed back into PDLC launch and growth (P4–P6). |
 | [`blueprints/product/`](../product/README.md) | PM artifacts (project charter, status reports, risk register) complement product-functional docs. |
 | [`blueprints/agents/`](../agents/README.md) | Automation recipes may support PM activities (status aggregation, risk dashboards, resource tracking). |
 
 ## Adopt in your repo
 
-1. Copy or submodule `blueprints/pm/` alongside `blueprints/sdlc/` and `blueprints/pdlc/`.
-2. Use [**PM.md**](PM.md) to orient your team on where project governance lives relative to product strategy and software delivery.
-3. If you already use `blueprints/sdlc/` and `blueprints/pdlc/`, read [**PM-SDLC-PDLC-BRIDGE.md**](PM-SDLC-PDLC-BRIDGE.md) to understand how the three domains interact.
-4. Choose an approach from [`approaches/`](approaches/README.md) that fits your organizational context — or use the generic PM model from [**PM.md**](PM.md) and tailor.
+1. Copy or submodule `blueprints/disciplines/governance/pm/` alongside `blueprints/sdlc/` and `blueprints/pdlc/`.
+2. Use [**PM.md**](../disciplines/governance/pm/PM.md) to orient your team on where project governance lives relative to product strategy and software delivery.
+3. If you already use `blueprints/sdlc/` and `blueprints/pdlc/`, read [**PM-SDLC-PDLC-BRIDGE.md**](../disciplines/governance/pm/PM-SDLC-PDLC-BRIDGE.md) to understand how the three domains interact.
+4. Choose an approach from [`approaches/`](../disciplines/governance/pm/approaches/README.md) that fits your organizational context — or use the generic PM model from [**PM.md**](../disciplines/governance/pm/PM.md) and tailor.
 
 ---
 
-*Canonical source is this repository on `main`. See [`POLICY.md`](POLICY.md) for change rules.*
+*Canonical source is this repository on `main`. See [`POLICY.md`](../disciplines/governance/pm/POLICY.md) for change rules.*

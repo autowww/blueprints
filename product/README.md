@@ -8,7 +8,7 @@ This folder is a **reusable, product-agnostic** package: **what the product does
 |-------------|---------|
 | [**POLICY.md**](POLICY.md) | Immutability rules for this blueprint. |
 | [**STRUCTURE.md**](STRUCTURE.md) | Canonical information architecture, document types, conventions. |
-| [**docs/**](docs/README.md) | **Human handbook** ([`index.html`](docs/index.html)) — HTML summary; sync per [`docs/MAINTENANCE.md`](docs/MAINTENANCE.md) when Markdown sources change. |
+| [**docs/**](docs/README.md) | Maintainer notes ([`MAINTENANCE.md`](docs/MAINTENANCE.md)). Handbook HTML is generated into **`blueprints/website/`** by **`generator/build-handbook.py`** (CI). |
 | [**templates/**](templates/README.md) | Copy-paste starters for vision, capabilities, journeys, feature specs. |
 
 ## What does *not* belong here

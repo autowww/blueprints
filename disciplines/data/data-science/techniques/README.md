@@ -29,15 +29,15 @@ flowchart TB
 |----------|-----------|-------------------|-----------|
 | **Feature engineering** | Transform raw inputs into model-ready signals; train/serve consistency | Encoding, scaling, temporal & text features, feature stores | [`feature-engineering.md`](feature-engineering.md) |
 | **Evaluation & validation** | Metrics, splits, tuning, fairness, explainability, production tests | Cross-validation, hyperparameter search, A/B and shadow tests | [`model-evaluation.md`](model-evaluation.md) |
-| **Supervised — classification** | Learn to assign labels from labeled examples | Logistic regression, decision trees, random forests, gradient boosting (XGBoost, LightGBM), SVM, neural networks | — |
-| **Supervised — regression** | Learn to predict continuous values from labeled examples | Linear regression, polynomial regression, gradient boosting, neural networks | — |
-| **Unsupervised — clustering** | Discover natural groupings in unlabeled data | K-means, DBSCAN, hierarchical clustering, Gaussian mixture models | — |
+| **Supervised — classification** | Learn to assign labels from labeled examples | Logistic regression, decision trees, random forests, gradient boosting (XGBoost, LightGBM), SVM, neural networks | [DATA-SCIENCE.md §1–3](../DATA-SCIENCE.md#1-ml-lifecycle-crisp-dm-aligned) |
+| **Supervised — regression** | Learn to predict continuous values from labeled examples | Linear regression, polynomial regression, gradient boosting, neural networks | [DATA-SCIENCE.md §1–3](../DATA-SCIENCE.md#1-ml-lifecycle-crisp-dm-aligned) |
+| **Unsupervised — clustering** | Discover natural groupings in unlabeled data | K-means, DBSCAN, hierarchical clustering, Gaussian mixture models | [DATA-SCIENCE.md §1–3](../DATA-SCIENCE.md#1-ml-lifecycle-crisp-dm-aligned) |
 | **Unsupervised — dimensionality reduction** | Reduce feature space while preserving information | PCA, t-SNE, UMAP, autoencoders | — |
-| **Deep learning** | Multi-layer neural networks for complex pattern recognition | CNNs (vision), RNNs/LSTMs (sequences), Transformers (language, multi-modal) | — |
+| **Deep learning** | Multi-layer neural networks for complex pattern recognition | CNNs (vision), RNNs/LSTMs (sequences), Transformers (language, multi-modal) | [DATA-SCIENCE.md §1–3](../DATA-SCIENCE.md#1-ml-lifecycle-crisp-dm-aligned) |
 | **Natural language processing** | Understanding and generating human language | Transformer models (BERT, GPT), word embeddings, named entity recognition, sentiment analysis | — |
 | **Computer vision** | Understanding and analyzing images and video | CNNs, object detection (YOLO, Faster R-CNN), image segmentation, generative models | — |
 | **Time series** | Forecasting and anomaly detection in temporal data | ARIMA, Prophet, LSTM, temporal convolutional networks, state-space models | — |
-| **Recommender systems** | Predicting user preferences for items | Collaborative filtering, content-based filtering, matrix factorization, neural collaborative filtering | — |
+| **Recommender systems** | Predicting user preferences for items | Collaborative filtering, content-based filtering, matrix factorization, neural collaborative filtering | [DATA-SCIENCE.md §1–3](../DATA-SCIENCE.md#1-ml-lifecycle-crisp-dm-aligned) |
 | **Reinforcement learning** | Learning optimal actions through environment interaction | Q-learning, policy gradient, actor-critic, multi-armed bandits | — |
 
 **Selection guidance:** Technique selection depends on problem type, data volume, interpretability requirements, latency constraints, and team expertise. See [`DATA-SCIENCE.md`](../DATA-SCIENCE.md) §3 (model evaluation) for the evaluation framework.

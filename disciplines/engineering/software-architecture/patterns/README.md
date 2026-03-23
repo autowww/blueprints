@@ -24,6 +24,8 @@ flowchart TD
     E -->|No| HX[Hexagonal / ports-adapters]
 ```
 
+Each pattern's quality-attribute trade-offs are analyzed in [SOFTWARE-ARCHITECTURE.md §1](../SOFTWARE-ARCHITECTURE.md#1-quality-attributes). Record your architecture choice and exceptions as [ADRs](../SOFTWARE-ARCHITECTURE.md#3-architecture-decision-records-adrs).
+
 | Pattern | Core idea | When to use | Trade-offs |
 |---------|-----------|-------------|------------|
 | **Monolith** | Single deployable with all functionality | Small team, early product, low ops maturity | Simple deploy; can become tangled without discipline |

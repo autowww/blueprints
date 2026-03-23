@@ -11,8 +11,8 @@ Techniques here complement **architecture** and **product** docs: modeling and q
 | Technique | Focus | Guide |
 |-----------|-------|-------|
 | **Operational data modeling** | Relational modeling (normalization, ER), indexing strategies, query plan analysis, transaction isolation, schema migration, NoSQL modeling (document, key-value, graph, time-series), polyglot persistence | [`operational-data-modeling.md`](operational-data-modeling.md) |
-| **Pipeline patterns** | ETL/ELT, CDC, idempotency, orchestration integration | *(planned)* |
-| **Data quality** | Validation layers, testing data pipelines, observability for freshness and volume | *(planned)* |
+| **Pipeline patterns** | ETL/ELT, CDC, idempotency, orchestration integration | [BIGDATA.md §3](../BIGDATA.md#3-data-pipeline-patterns) |
+| **Data quality** | Validation layers, testing data pipelines, observability for freshness and volume | [BIGDATA.md §2](../BIGDATA.md#2-data-governance) |
 
 **How to use this section:** Read [`operational-data-modeling.md`](operational-data-modeling.md) when designing schemas, choosing indexes, or comparing relational vs NoSQL shapes. When pipeline-pattern and data-quality guides exist, use them alongside ADRs for **project-specific** pipeline layout and SLAs.
 

@@ -7,12 +7,12 @@ This directory **`blueprints/agents/`** is the **frozen** package for **Docker-b
 1. **Do not edit** files here as part of normal product work (features, app code, WBS updates, etc.).  
 2. **Change only when explicitly requested** — e.g. adopting a new blueprint version, fixing an upstream template bug, or a deliberate policy decision to revise the baseline.  
 3. **Day-to-day automation recipes, secrets, and CI wiring** belong in a **mutable** tree — typically **`agents/`** (or your chosen name) at repository root, seeded from [`templates/project-agents/`](templates/project-agents/README.md) — never put project-specific scripts or credentials inside **`blueprints/agents/`**.  
-4. If you change **`STRUCTURE.md`**, **`ORCHESTRATION.md`**, **`README.md`**, or Docker templates, **update the human handbook** in the consuming repo’s **`blueprints/sdlc/docs/agents.html`** (and [`blueprints/agents/docs/`](docs/README.md) if you maintain a standalone HTML mirror) per **`blueprints/sdlc/docs/MAINTENANCE.md`**. Keep **`.cursor/rules/new-agent-recipe.mdc`** pointing at **`ORCHESTRATION.md`** (no duplicated playbook prose in the rule).
+4. If you change **`STRUCTURE.md`**, **`ORCHESTRATION.md`**, **`README.md`**, or Docker templates, ensure the **generated handbook** is refreshed: run **`python3 generator/build-handbook.py agents`** from **`blueprints/`** or rely on CI (output: `blueprints/website/agents--*.html`). See [`docs/MAINTENANCE.md`](docs/MAINTENANCE.md) and [`../docs/MAINTENANCE.md`](../docs/MAINTENANCE.md). Keep **`.cursor/rules/new-agent-recipe.mdc`** pointing at **`ORCHESTRATION.md`** (no duplicated playbook prose in the rule).
 
 ## Relationship to `blueprints/sdlc/` and `agents/`
 
 - **`blueprints/agents/`** — canonical, generic layout and **foundational** Docker/compose text (immutable by convention).  
-- **`blueprints/sdlc/`** — SDLC process; [`DOCUMENTATION-STRUCTURE.md`](../sdlc/DOCUMENTATION-STRUCTURE.md) references this blueprint in the repository layout and links to the handbook chapter **`docs/agents.html`**.  
+- **`blueprints/sdlc/`** — SDLC process; [`DOCUMENTATION-STRUCTURE.md`](../sdlc/DOCUMENTATION-STRUCTURE.md) references this blueprint in the repository layout; agents handbook HTML is generated into **`blueprints/website/`**.  
 - **`agents/`** (mutable, optional) — where a project **writes** recipes, `compose.override.yaml`, env samples, and CI entrypoints.
 
 Copying this repo: you may copy **`blueprints/agents/`** wholesale to another repository; use **`agents/`** (or equivalent) only in repos that track project-specific automation.

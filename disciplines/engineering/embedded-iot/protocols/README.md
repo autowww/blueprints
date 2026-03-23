@@ -32,10 +32,10 @@ flowchart TB
 |----------|-------|-------|-----------|
 | **MQTT** & **CoAP** | Application | Pub/sub vs REST-like constrained apps — QoS, observe, brokers | [`mqtt-coap.md`](mqtt-coap.md) |
 | **BLE** & **Zigbee** | Link + network / app | GATT, mesh, Thread/Matter context, coexistence | [`ble-zigbee.md`](ble-zigbee.md) |
-| **LoRaWAN** | Network | LPWAN — spreading factors, ADR, class A/B/C, join procedures, fair-use policy | — |
-| **Modbus** | Application (Serial/TCP) | Industrial — RTU vs TCP, function codes, register mapping, polling vs event | — |
-| **OPC UA** | Application (TCP) | Industrial interoperability — information model, security, pub/sub, companion specifications | — |
-| **CAN bus** | Data link | Automotive/industrial — message arbitration, error handling, CANopen, J1939 | — |
+| **LoRaWAN** | Network | LPWAN — spreading factors, ADR, class A/B/C, join procedures, fair-use policy | [EMBEDDED-IOT.md §3](../EMBEDDED-IOT.md#3-communication-protocols) |
+| **Modbus** | Application (Serial/TCP) | Industrial — RTU vs TCP, function codes, register mapping, polling vs event | [EMBEDDED-IOT.md §3](../EMBEDDED-IOT.md#3-communication-protocols) |
+| **OPC UA** | Application (TCP) | Industrial interoperability — information model, security, pub/sub, companion specifications | [EMBEDDED-IOT.md §3](../EMBEDDED-IOT.md#3-communication-protocols) |
+| **CAN bus** | Data link | Automotive/industrial — message arbitration, error handling, CANopen, J1939 | [EMBEDDED-IOT.md §3](../EMBEDDED-IOT.md#3-communication-protocols) |
 | **Matter** | Application | Smart home — Thread/Wi-Fi transport, device types, commissioning, multi-admin | (see [`ble-zigbee.md`](ble-zigbee.md)) |
 
 **Core knowledge:** [`EMBEDDED-IOT.md`](../EMBEDDED-IOT.md) — communication protocol overview and selection criteria.

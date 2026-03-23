@@ -29,15 +29,15 @@ Use the linked guides when you need **comparison matrices**, **decision flowchar
 | **Unified streaming / lakehouse** | One engine and/or table-centric storage for batch + stream + serving (e.g., Flink, Delta/Iceberg/Hudi) | Reducing dual-path cost while keeping reprocessing and analytics | [`lambda-kappa.md`](lambda-kappa.md) |
 | **Data mesh** | Domain-oriented, decentralized data ownership; data as a product; federated governance | Large organizations with multiple domains; autonomous teams; data product thinking | [`data-mesh.md`](data-mesh.md) |
 | **Data lakehouse** | Unified storage combining data lake flexibility with data warehouse reliability (Delta Lake, Iceberg, Hudi) | Organizations wanting to eliminate separate lake + warehouse; ML and BI on same storage | [`lambda-kappa.md`](lambda-kappa.md) |
-| **Medallion (bronze/silver/gold)** | Layered data quality — raw ingestion (bronze), cleaned/conformed (silver), business-ready (gold) | Lakehouse and data lake environments; progressive quality refinement | — |
-| **Data warehouse (Kimball)** | Dimensional modeling — facts and dimensions; star/snowflake schemas; bottom-up | BI and reporting; well-understood business processes; SQL-centric analytics | — |
-| **Data warehouse (Inmon)** | Enterprise data warehouse — normalized; top-down; single source of truth | Enterprise-wide integration; strict consistency requirements | — |
+| **Medallion (bronze/silver/gold)** | Layered data quality — raw ingestion (bronze), cleaned/conformed (silver), business-ready (gold) | Lakehouse and data lake environments; progressive quality refinement | [BIGDATA.md §3](../BIGDATA.md#3-data-pipeline-patterns) |
+| **Data warehouse (Kimball)** | Dimensional modeling — facts and dimensions; star/snowflake schemas; bottom-up | BI and reporting; well-understood business processes; SQL-centric analytics | [BIGDATA.md §1](../BIGDATA.md#1-data-engineering-principles) |
+| **Data warehouse (Inmon)** | Enterprise data warehouse — normalized; top-down; single source of truth | Enterprise-wide integration; strict consistency requirements | [BIGDATA.md §1](../BIGDATA.md#1-data-engineering-principles) |
 
 **Decision guidance:** Architecture selection depends on latency requirements, data volume, team structure, analytics use cases, and operational maturity. See [`BIGDATA.md`](../BIGDATA.md) §1 (principles) for the decision framework and governance/quality context in later sections.
 
 **Cross-reference:** For pipeline patterns (batch ETL/ELT, CDC, micro-batch) and DataOps practices that implement these architectures, use [`BIGDATA.md`](../BIGDATA.md) §§3–4. Processing engine trade-offs are summarized in [`technologies/processing-engines.md`](../technologies/processing-engines.md).
 
-Medallion and dimensional warehouse rows remain **table-only** here; add project-specific star schemas and conformed dimensions in **`docs/adr/`** or modeling appendices as your repo convention requires.
+Medallion and dimensional warehouse rows link to the relevant body-of-knowledge sections in [`BIGDATA.md`](../BIGDATA.md); add project-specific star schemas and conformed dimensions in **`docs/adr/`** or modeling appendices as your repo convention requires.
 
 ---
 

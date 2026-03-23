@@ -36,6 +36,7 @@ Canonical lifecycles: [`blueprints/sdlc/`](../../sdlc/README.md) (build and oper
 | [`blueprints/disciplines/product/ux-design/`](../product/ux-design/README.md) | Consent, notices, accessible UI, and age-appropriate design are compliance-shaped UX problems. |
 | [`blueprints/disciplines/data/bigdata/`](../data/bigdata/README.md) | Large-scale processing intensifies minimization, retention, DPIA, and transfer analysis obligations. |
 | [`blueprints/disciplines/data/data-science/`](../data/data-science/README.md) | Model governance intersects AI Act, automated decision-making rules, and fairness/transparency expectations. |
+| [`blueprints/disciplines/documentation/`](../documentation/README.md) | Compliance requires extensive documentation (DPIAs, ROPA, privacy notices, accessibility statements, policy suites, audit evidence). The Documentation discipline provides methodology for creating, versioning, and maintaining these artifacts. |
 
 ## Scope
 

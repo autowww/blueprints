@@ -126,14 +126,14 @@ graph LR
 
 This is the domain of [`blueprints/sdlc/`](../sdlc/README.md). PDLC does not redefine these phases:
 
-| SDLC Phase | PDLC relevance |
-|------------|----------------|
-| **A Discover** | Receives validated problem + solution from P3. PM becomes Owner. |
-| **B Specify** | Acceptance criteria reflect P3 success metrics. |
-| **C Design** | Architectural decisions informed by P2 feasibility assessment. |
-| **D Build** | Implementation of validated solution. |
-| **E Verify** | Tests validate against P3 success criteria, not just technical correctness. |
-| **F Release** | Shippable increment hands back to PDLC Phase P4 (Launch). |
+| SDLC Phase | PDLC relevance | Detail |
+|------------|----------------|--------|
+| **A Discover** | Receives validated problem + solution from P3. PM becomes Owner. | [SDLC Phase A](../sdlc/SDLC.md#phase-a--discover--prioritize) |
+| **B Specify** | Acceptance criteria reflect P3 success metrics. | [SDLC Phase B](../sdlc/SDLC.md#phase-b--specify) |
+| **C Design** | Architectural decisions informed by P2 feasibility assessment. | [SDLC Phase C](../sdlc/SDLC.md#phase-c--design-lightweight) |
+| **D Build** | Implementation of validated solution. | [SDLC Phase D](../sdlc/SDLC.md#phase-d--build) |
+| **E Verify** | Tests validate against P3 success criteria, not just technical correctness. | [SDLC Phase E](../sdlc/SDLC.md#phase-e--verify) |
+| **F Release** | Shippable increment hands back to PDLC Phase P4 (Launch). | [SDLC Phase F](../sdlc/SDLC.md#phase-f--release) |
 
 **During SDLC:** The product trio stays engaged through ceremonies (C1 Align, C4 Inspect) — they do not disappear until launch. In Dual-Track teams, discovery for the **next** initiative (P1–P2) runs in parallel with current delivery.
 
@@ -216,13 +216,13 @@ A product initiative is **done** when:
 
 Between PDLC phases, explicit **go/kill/pivot** decisions prevent wasted investment. These complement (do not replace) SDLC phase exits.
 
-| Gate | Between | Key question | Evidence required |
-|------|---------|--------------|-------------------|
-| **G1** | P1 → P2 | Is the problem worth solving? | Research synthesis, opportunity size, strategic fit |
-| **G2** | P2 → P3 | Does a viable solution exist? | Validation evidence (desirability + feasibility + viability) |
-| **G3** | P3 → SDLC | Should we invest in building this? | Business case, funded resources, defined success metrics |
-| **G4** | SDLC → P4 | Is it ready to launch? | Shippable increment, GTM plan, support readiness |
-| **G5** | P5 → P6 | Should we continue investing? | Outcome metrics vs targets, competitive position, strategic fit |
+| Gate | Between | Key question | Evidence required | Detail |
+|------|---------|--------------|-------------------|--------|
+| **G1** | P1 → P2 | Is the problem worth solving? | Research synthesis, opportunity size, strategic fit | [Phase P1](#phase-p1--discover-problem) |
+| **G2** | P2 → P3 | Does a viable solution exist? | Validation evidence (desirability + feasibility + viability) | [Phase P2](#phase-p2--validate-solution) |
+| **G3** | P3 → SDLC | Should we invest in building this? | Business case, funded resources, defined success metrics | [Phase P3](#phase-p3--strategize) |
+| **G4** | SDLC → P4 | Is it ready to launch? | Shippable increment, GTM plan, support readiness | [Phase P4](#phase-p4--launch) |
+| **G5** | P5 → P6 | Should we continue investing? | Outcome metrics vs targets, competitive position, strategic fit | [Phase P5](#phase-p5--grow) |
 
 Use [`templates/STAGE-GATE-REVIEW.template.md`](templates/STAGE-GATE-REVIEW.template.md) to document gate decisions.
 

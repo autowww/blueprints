@@ -9,4 +9,4 @@ Blank specs for **ceremony intents** and **process slots** using the [SDD I/O sc
 
 **Copy** into your repo (e.g. `docs/process/sdd/` or next to a story) and rename; fill every **Example** column before marking `status: active`.
 
-**Handbook:** [SDD schema & templates](../../docs/spec-driven-sdd-schema.html) · [Ceremonies (SDD)](../../docs/spec-driven-sdd-ceremonies.html) · [Process (SDD)](../../docs/spec-driven-sdd-process.html)
+**Handbook (generated):** CI runs `blueprints/generator/build-handbook.py`; SDD chapters are emitted under `blueprints/website/` (for example `sdlc--methodologies-spec-driven-sdd-io-schema.html`, `sdlc--methodologies-spec-driven-ceremonies-sdd.html`, `sdlc--methodologies-spec-driven-process-slots-sdd.html`). See [`../../../docs/MAINTENANCE.md`](../../../docs/MAINTENANCE.md).

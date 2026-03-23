@@ -13,9 +13,11 @@ ROOT = pathlib.Path(os.environ["BLUEPRINTS_ROOT"]).resolve()
 OUT = pathlib.Path(os.environ["WIKI_STAGE"]).resolve()
 REPO_BLOB = "https://github.com/autowww/blueprints/blob/main"
 
-SKIP_TOP = frozenset({"wiki-source", ".git"})
-# Template stubs are noisy in the wiki; keep real READMEs under templates/
+SKIP_TOP = frozenset({"wiki-source", ".git", "generator", "website", "docs"})
 SKIP_NAME_SUFFIX = ".template.md"
+
+FORGESDLC_URL = "https://forgesdlc.com"
+BLUEPRINTS_SITE_URL = "https://blueprints.forgesdlc.com"
 
 
 def iter_sources() -> list[tuple[pathlib.Path, str]]:
@@ -32,24 +34,20 @@ def iter_sources() -> list[tuple[pathlib.Path, str]]:
 
 
 def transform(rel: pathlib.Path, text: str) -> str:
-    s = str(rel).replace("\\", "/")
+    # Remove any remaining HTML doc links (they no longer exist in the repo)
+    text = re.sub(r"\]\([^)]*docs/[^)]+\.html\)", f"]({BLUEPRINTS_SITE_URL})", text)
 
-    def blob_sdlc_docs(m: re.Match[str]) -> str:
-        return f"]({REPO_BLOB}/sdlc/docs/{m.group(1)})"
-
-    # Handbook HTML: wiki has no sibling file — link to GitHub code browser
-    if s.startswith("sdlc/"):
-        text = re.sub(r"\]\(docs/([^)]+\.html)\)", blob_sdlc_docs, text)
-        text = text.replace("blueprints/agents/", "../agents/")
-        text = text.replace("blueprints/sdlc/docs/", f"{REPO_BLOB}/sdlc/docs/")
-
-    if s.startswith("sdlc/methodologies/"):
-        text = re.sub(r"\]\(\.\./docs/([^)]+\.html)\)", blob_sdlc_docs, text)
-        # e.g. methodologies/ceremonies/README.md → ../../docs/…
-        text = re.sub(r"\]\(\.\./\.\./docs/([^)]+\.html)\)", blob_sdlc_docs, text)
-
-    if s.startswith("agents/"):
-        text = re.sub(r"\]\(\.\./sdlc/docs/([^)]+\.html)\)", blob_sdlc_docs, text)
+    # Add ForgeSDLC cross-reference tip at the bottom of area README files
+    if rel.name == "README.md" and len(rel.parts) >= 2:
+        tip = (
+            "\n\n---\n\n"
+            "> **Tip**: These blueprints can be used with any methodology. "
+            f"When paired with [ForgeSDLC]({FORGESDLC_URL}), the ceremony "
+            "structure maps directly to blueprint areas for maximum coverage. "
+            f"See [blueprints.forgesdlc.com]({BLUEPRINTS_SITE_URL}) for "
+            "the full framework documentation.\n"
+        )
+        text = text.rstrip() + tip
 
     return text
 

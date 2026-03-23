@@ -4,15 +4,15 @@
 
 Engineering disciplines share a foundation of computer science and software craft ([Software Engineering](software-engineering/README.md)), then specialize by system concern (architecture, delivery, quality) or platform (web, mobile, embedded).
 
-| Discipline | Core question | Package |
-|-----------|---------------|---------|
-| [**Software Engineering**](software-engineering/README.md) | What CS fundamentals, paradigms, and craft practices underpin all engineering work? | Algorithms, data structures, design patterns, paradigms, clean code, concurrency, networking |
-| [**Software Architecture**](software-architecture/README.md) | How are systems structured, and why? | Quality attributes, viewpoints, ADRs, patterns, approaches (C4, DDD, TOGAF) |
-| [**DevOps**](devops/README.md) | How do we deliver and operate continuously and reliably? | CALMS, DORA, SRE, CI/CD, IaC, observability, incident management |
-| [**Testing**](testing/README.md) | Is the software correct, reliable, and fit for purpose? | ISTQB vocabulary, test levels, design techniques, automation landscape |
-| [**Frontend**](frontend/README.md) | How do we build fast, accessible, maintainable web UIs? | Component architecture, rendering strategies, performance, CSS, design system implementation |
-| [**Mobile**](mobile/README.md) | How do we build performant, reliable mobile experiences? | Native/cross-platform, offline-first, push, app store lifecycle, device fragmentation |
-| [**Embedded / IoT**](embedded-iot/README.md) | How do we build reliable, safe software for constrained environments? | Real-time systems, firmware, protocols, OTA, edge computing, safety-critical standards |
+| Discipline | Core question | Package | Deep dives |
+|-----------|---------------|---------|------------|
+| [**Software Engineering**](software-engineering/README.md) | What CS fundamentals, paradigms, and craft practices underpin all engineering work? | Algorithms, data structures, design patterns, paradigms, clean code, concurrency, networking | [Patterns](software-engineering/patterns/README.md) · [Paradigms](software-engineering/paradigms/README.md) |
+| [**Software Architecture**](software-architecture/README.md) | How are systems structured, and why? | Quality attributes, viewpoints, ADRs, patterns, approaches (C4, DDD, TOGAF) | [Patterns](software-architecture/patterns/README.md) · [Approaches](software-architecture/approaches/README.md) |
+| [**DevOps**](devops/README.md) | How do we deliver and operate continuously and reliably? | CALMS, DORA, SRE, CI/CD, IaC, observability, incident management | [Practices](devops/practices/README.md) · [Tooling](devops/tooling/README.md) |
+| [**Testing**](testing/README.md) | Is the software correct, reliable, and fit for purpose? | ISTQB vocabulary, test levels, design techniques, automation landscape | [Techniques](testing/techniques/README.md) · [Strategies](testing/strategies/README.md) |
+| [**Frontend**](frontend/README.md) | How do we build fast, accessible, maintainable web UIs? | Component architecture, rendering strategies, performance, CSS, design system implementation | [Patterns](frontend/patterns/README.md) · [Performance](frontend/performance/README.md) |
+| [**Mobile**](mobile/README.md) | How do we build performant, reliable mobile experiences? | Native/cross-platform, offline-first, push, app store lifecycle, device fragmentation | [Patterns](mobile/patterns/README.md) · [Platforms](mobile/platforms/README.md) |
+| [**Embedded / IoT**](embedded-iot/README.md) | How do we build reliable, safe software for constrained environments? | Real-time systems, firmware, protocols, OTA, edge computing, safety-critical standards | [Protocols](embedded-iot/protocols/README.md) · [Safety](embedded-iot/safety/README.md) |
 
 ## Relationship to other families
 
@@ -26,4 +26,4 @@ Engineering disciplines share a foundation of computer science and software craf
 
 ## Bridge documents
 
-Each discipline has a bridge document (`*-SDLC-PDLC-BRIDGE.md`) mapping its practices to SDLC phases A–F and PDLC phases P1–P6. See [`BRIDGES.md`](../../../BRIDGES.md) for the concept and full index.
+Each discipline has a bridge document (`*-SDLC-PDLC-BRIDGE.md`) mapping its practices to SDLC phases A–F and PDLC phases P1–P6. See [`BRIDGES.md`](../../BRIDGES.md) for the concept and full index.

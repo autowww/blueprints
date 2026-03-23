@@ -4,9 +4,9 @@ This describes a **generic** delivery flow and **which documentation** to update
 
 **PDLC (product lifecycle):** This SDLC covers **how to build the product right** — phases A–F from requirements through release. The **Product Development Life Cycle** ([`blueprints/pdlc/`](../pdlc/README.md)) covers **building the right product** — problem discovery, solution validation, strategy, go-to-market, growth, and sunset. SDLC phases A–F sit **inside** the PDLC as the Build & Release engine. See [`PDLC-SDLC-BRIDGE.md`](../pdlc/PDLC-SDLC-BRIDGE.md) for phase alignment, artifact handoffs, role mapping, and a worked example.
 
-**Methodology depth (Scrum, Kanban, XP, phased, Lean, Spiral, V-Model, DevOps, SAFe, FDD, Crystal, DSDM, Shape Up, DA, BDD, RAD, Agile, agentic SDLC):** see [`methodologies/README.md`](methodologies/README.md) — full guides with external links and adoption notes; the [handbook](docs/methodologies.html) mirrors these as sub-chapters.
+**Methodology depth (Scrum, Kanban, XP, phased, Lean, Spiral, V-Model, DevOps, SAFe, FDD, Crystal, DSDM, Shape Up, DA, BDD, RAD, Agile, agentic SDLC):** see [`methodologies/README.md`](methodologies/README.md) — full guides with external links and adoption notes.
 
-**Ceremonies (foundation vs forks):** methodology-neutral **intent types** (why recurring collaboration exists) and per-methodology mappings — [`methodologies/ceremonies/README.md`](methodologies/ceremonies/README.md); handbook [Ceremonies](docs/methodologies-ceremonies.html).
+**Ceremonies (foundation vs forks):** methodology-neutral **intent types** (why recurring collaboration exists) and per-methodology mappings — [`methodologies/ceremonies/README.md`](methodologies/ceremonies/README.md).
 
 **Bridge (intents ↔ Scrum / Kanban / phased / XP names):** [`methodologies/ceremonies/methodology-bridge.md`](methodologies/ceremonies/methodology-bridge.md) — matrix, blend suggestions, calendar mapping.
 
@@ -23,7 +23,7 @@ This describes a **generic** delivery flow and **which documentation** to update
 | **Owner** | Prioritizes **work breakdown** / backlog; accepts epic or story **done**. |
 | **Implementer** | Implements work items; updates specs, backlog, and traceability as agreed below. |
 
-**Deeper (methodology-neutral):** delivery **archetypes** (demand, build, flow, assurance, governance), how **Scrum / Kanban / phased / XP** map **titles** onto them, and how that relates to **Contributor** in engineering tracking — see [`methodologies/roles-archetypes.md`](methodologies/roles-archetypes.md) and the handbook [`docs/methodologies-roles.html`](docs/methodologies-roles.html).
+**Deeper (methodology-neutral):** delivery **archetypes** (demand, build, flow, assurance, governance), how **Scrum / Kanban / phased / XP** map **titles** onto them, and how that relates to **Contributor** in engineering tracking — see [`methodologies/roles-archetypes.md`](methodologies/roles-archetypes.md).
 
 ---
 
@@ -33,14 +33,14 @@ This describes a **generic** delivery flow and **which documentation** to update
 
 Recurring collaboration (**ceremonies**) should **cover** the six **intent types** over time: **C1** Align, **C2** Commit, **C3** Sync, **C4** Inspect, **C5** Improve, **C6** Assure/release — see [`methodologies/ceremonies/ceremony-foundation.md`](methodologies/ceremonies/ceremony-foundation.md). They **do not replace** the artifact tables below; they explain **why** teams hold planning, reviews, and gates.
 
-| Phase | Intents most engaged (typical) | Illustrative ceremony pressure |
-|-------|-------------------------------|--------------------------------|
-| **A** Discover | **C1**, **C2** | Prioritization, roadmap/backlog sessions |
-| **B** Specify | **C1**, **C6** (readiness) | Refinement, “definition of ready,” risk triage |
-| **C** Design | **C1**, **C6** | Design review, NFR alignment |
-| **D** Build | **C2**, **C3**, **C6** (ongoing) | Pull/commit selection, standups, CI as assurance |
-| **E** Verify | **C3**, **C4**, **C6** | Test progress sync, stakeholder demo, quality gates |
-| **F** Release | **C4**, **C6** | Go/no-go, release approval, post-release learnings → **C5** |
+| Phase | Intents most engaged (typical) | Illustrative ceremony pressure | Detail |
+|-------|-------------------------------|--------------------------------|--------|
+| **A** Discover | **C1**, **C2** | Prioritization, roadmap/backlog sessions | [Phase A](#phase-a--discover--prioritize) |
+| **B** Specify | **C1**, **C6** (readiness) | Refinement, “definition of ready,” risk triage | [Phase B](#phase-b--specify) |
+| **C** Design | **C1**, **C6** | Design review, NFR alignment | [Phase C](#phase-c--design-lightweight) |
+| **D** Build | **C2**, **C3**, **C6** (ongoing) | Pull/commit selection, standups, CI as assurance | [Phase D](#phase-d--build) |
+| **E** Verify | **C3**, **C4**, **C6** | Test progress sync, stakeholder demo, quality gates | [Phase E](#phase-e--verify) |
+| **F** Release | **C4**, **C6** | Go/no-go, release approval, post-release learnings → **C5** | [Phase F](#phase-f--release) |
 
 **Methodology mapping:** the same intents appear as **Sprint Planning**, **replenishment**, **tollgates**, **planning game**, etc. — [`methodologies/ceremonies/methodology-bridge.md`](methodologies/ceremonies/methodology-bridge.md).
 
@@ -106,7 +106,7 @@ Recurring collaboration (**ceremonies**) should **cover** the six **intent types
 | WBS / backlog | Set items to `in_progress` when work starts. |
 | API / public surface | Language-appropriate doc comments (e.g. KDoc, Javadoc, Rustdoc, docstrings). |
 | **CI pipeline config** | e.g. `.github/workflows/`, GitLab CI, Jenkinsfile — lives in-repo; document **what runs** and **merge/release gates** in `docs/development/` (or equivalent). See **§7**. |
-| **Optional agents & automation** | When `blueprints/agents/` is adopted: container **recipes** (e.g. browser/E2E) in `agents/`; document image build and recipe steps beside other CI gates. Broader agentic practices: [`methodologies/agentic-sdlc.md`](methodologies/agentic-sdlc.md). See [`DOCUMENTATION-STRUCTURE.md`](DOCUMENTATION-STRUCTURE.md) and handbook [`docs/agents.html`](docs/agents.html). |
+| **Optional agents & automation** | When `blueprints/agents/` is adopted: container **recipes** (e.g. browser/E2E) in `agents/`; document image build and recipe steps beside other CI gates. Broader agentic practices: [`methodologies/agentic-sdlc.md`](methodologies/agentic-sdlc.md). See [`DOCUMENTATION-STRUCTURE.md`](DOCUMENTATION-STRUCTURE.md) and the [agents blueprint](../agents/README.md). |
 | **Test plan (lightweight)** | For non-trivial scope: outline scope, levels (unit/integration/e2e/manual), and exit criteria — story spec, `docs/testing/`, or [`templates/TEST-PLAN.template.md`](templates/TEST-PLAN.template.md). |
 
 **Exit:** Acceptance criteria met; tests added **or** skip justified in the story/PR.
@@ -172,7 +172,7 @@ An epic is **done** when all **in-scope** child stories are `done`, your **plann
 - **Time and effort:** Git activity shows *when* work touched the repo, not *duration* or billable hours. Explicit time (if needed) lives in a tracker or agreed in-repo log — see project `sdlc/TRACKING-FOUNDATION.md` when present.  
 - **ADRs:** Prefer **supersede** with a new ADR over deleting history.
 
-**Handbook:** [`docs/change.html`](docs/change.html) expands this section (diagram, tables, links to tracking docs).
+See the [change management process](DOCUMENTATION-STRUCTURE.md) for diagram, tables, and links to tracking docs.
 
 ---
 

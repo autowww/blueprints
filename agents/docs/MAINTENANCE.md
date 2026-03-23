@@ -2,16 +2,15 @@
 
 ## Source of truth
 
-| Canonical (edit first) | Human handbook (update when canonical changes) |
-|------------------------|-----------------------------------------------|
-| [`../STRUCTURE.md`](../STRUCTURE.md), [`../ORCHESTRATION.md`](../ORCHESTRATION.md), [`../README.md`](../README.md), [`../docker/README.md`](../docker/README.md) | [`../../sdlc/docs/agents.html`](../../sdlc/docs/agents.html) — full chapter |
-| Same | [`index.html`](index.html) — short mirror |
+| Canonical (edit first) | Published handbook |
+|------------------------|--------------------|
+| [`../STRUCTURE.md`](../STRUCTURE.md), [`../ORCHESTRATION.md`](../ORCHESTRATION.md), [`../README.md`](../README.md), [`../docker/README.md`](../docker/README.md) | Generated HTML under **`blueprints/website/`** (e.g. `agents--*.html`) via **`python3 generator/build-handbook.py agents`** run from **`blueprints/`**, or CI |
 
-When **`blueprints/sdlc/docs/agents.html`** changes for cross-repo consistency, align **wording** in [`../STRUCTURE.md`](../STRUCTURE.md) rather than diverging.
+Do **not** hand-edit HTML under `website/`; change Markdown in **`blueprints/agents/`** and rebuild.
 
-## Relationship to `blueprints/sdlc/docs/MAINTENANCE.md`
+## Relationship to `blueprints/docs/MAINTENANCE.md`
 
-Updates to the **SDLC handbook** chapter **`agents.html`** are listed in **`blueprints/sdlc/docs/MAINTENANCE.md`** under “Chapter files.” Bump footer dates in **`agents.html`** when you sync.
+Cross-area handbook build steps, `website/` layout, and CI deployment are documented in **[`../../docs/MAINTENANCE.md`](../../docs/MAINTENANCE.md)**.
 
 ---
 

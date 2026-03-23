@@ -1,5 +1,9 @@
 # Forge SDLC
 
+## Why AI changes everything
+
+Traditional delivery methodologies — Scrum, SAFe, Kanban, Waterfall — were designed for a world where humans write code and AI assists. That world is ending. AI agents now produce the majority of code, tests, and specifications in leading development teams. **The human role has shifted from producer to governor.** Forge SDLC is built for this inversion: humans own intent, judgment, and evidence-based release decisions; AI produces, and Bellows challenge what AI produces before it ships.
+
 ## What it is
 
 **Forge** is a delivery methodology for work that benefits from rapid iteration, explicit challenge, and evidence-based release decisions. It keeps standard industry terms where the process is standard (backlog, refinement, planning, daily, review, retro, release) and introduces new terms only where the method is genuinely different.
@@ -46,16 +50,16 @@ flowchart LR
 
 ## Core vocabulary (8 terms)
 
-| Term | What it adds |
-|------|-------------|
-| **Ore** | Raw input that is not ready for commitment |
-| **Ingot** | Refined work that is ready for planning |
-| **Spark** | The smallest meaningful executable unit |
-| **Charge** | The daily selected set of Sparks |
-| **Bellows** | AI challenge agents that pressure-test work from discipline perspectives |
-| **Ember Log** | Lightweight record of decisions, assumptions, and unresolved risks |
-| **Banked** | Intentionally paused work with preserved context |
-| **Assay Gate** | Evidence-based release gate |
+| Term | What it adds | Detail |
+|------|-------------|--------|
+| **Ore** | Raw input that is not ready for commitment | [State model](forge/process-and-flows.md#3-state-model) · [Intake ceremony](forge/ceremonies-prescriptive.md#0-ongoing--ore-intake) · [Refinement flow](forge/process-and-flows.md#4-refinement-flow-ore--ingot) |
+| **Ingot** | Refined work that is ready for planning | [Refinement ceremony](forge/ceremonies-prescriptive.md#1-refinement-ore--ingot) · [Planning flow](forge/process-and-flows.md#5-planning-flow-ingot--sparks--iteration-scope) |
+| **Spark** | The smallest meaningful executable unit | [Spark = Task mapping](#spark--task-hierarchy-mapping) · [Work unit hierarchy](forge/process-and-flows.md#2-work-unit-hierarchy) · [Planning ceremony](forge/ceremonies-prescriptive.md#2-planning-ingot--sparks) |
+| **Charge** | The daily selected set of Sparks | [Daily sync ceremony](forge/ceremonies-prescriptive.md#3-daily-sync-charge-confirmation) · [Daily operations](forge/daily/README.md) · [Execution loop](forge/process-and-flows.md#6-daily-execution-loop) |
+| **Bellows** | AI challenge agents that pressure-test work from discipline perspectives | [Bellows overview](forge/bellows/README.md) · [Challenge flow](forge/process-and-flows.md#8-bellows-challenge-flow) · [Template catalog](forge/bellows/README.md#template-catalog) |
+| **Ember Log** | Lightweight record of decisions, assumptions, and unresolved risks | [Daily operations](forge/daily/README.md) · [Review ceremony](forge/ceremonies-prescriptive.md#4-review-evidence-assessment) |
+| **Banked** | Intentionally paused work with preserved context | [State model](forge/process-and-flows.md#3-state-model) |
+| **Assay Gate** | Evidence-based release gate | [Assay Gate ceremony](forge/ceremonies-prescriptive.md#5-assay-gate-release-readiness) · [Assay Gate flow](forge/process-and-flows.md#7-assay-gate-flow) |
 
 ### Spark = Task (hierarchy mapping)
 

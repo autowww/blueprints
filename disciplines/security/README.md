@@ -22,6 +22,7 @@ Security answers **"is the product safe from unauthorized access, data breaches,
 | [`blueprints/disciplines/engineering/testing/`](../engineering/testing/README.md) | Security testing (SAST, DAST, penetration testing, fuzzing) extends the test pyramid. Vulnerability scanning is a quality gate alongside functional testing. |
 | [`blueprints/disciplines/product/ux-design/`](../product/ux-design/README.md) | Security controls (login flows, MFA, consent, error messages) have direct UX implications. Secure-by-default patterns must remain usable — the security-usability trade-off is a shared concern. |
 | [`blueprints/disciplines/data/bigdata/`](../data/bigdata/README.md) | Data security (classification, access control, encryption, audit logging) is a DMBOK knowledge area. BigData governance intersects with compliance (GDPR data protection, right to erasure). |
+| [`blueprints/disciplines/documentation/`](../documentation/README.md) | Security produces documentation artifacts (threat models, incident playbooks, audit evidence, security policies). The Documentation discipline provides standards for structuring, reviewing, and maintaining these artifacts effectively. |
 
 ## Scope
 

@@ -34,11 +34,11 @@ flowchart LR
 
 ## Planned channels
 
-| Topic | Notes |
-|-------|--------|
-| **Email marketing** | Lifecycle, deliverability, compliance — *(planned)* |
-| **Referral / affiliate** | Incentives, attribution, fraud — *(planned)* |
-| **Developer relations** | Docs, advocates, community as acquisition — *(planned)* |
+| Topic | Notes | See |
+|-------|--------|-----|
+| **Email marketing** | Lifecycle, deliverability, compliance — *(planned)* | [MARKETING.md](../MARKETING.md) |
+| **Referral / affiliate** | Incentives, attribution, fraud — *(planned)* | [Growth engineering](../growth/README.md) |
+| **Developer relations** | Docs, advocates, community as acquisition — *(planned)* | [MARKETING.md](../MARKETING.md) |
 
 **Core marketing map:** See [`../MARKETING.md`](../MARKETING.md) for principles, funnel framing, and how channels relate to PDLC.
 

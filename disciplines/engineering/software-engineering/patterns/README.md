@@ -32,11 +32,11 @@ GoF addresses **single-process** collaboration; EIP addresses **cross-service** 
 
 ## Guides
 
-| Guide | Focus |
-|-------|--------|
-| [**GoF design patterns**](gof-patterns.md) | 23 patterns, selection flowchart, modern relevance |
-| [**Enterprise integration**](enterprise-integration.md) | Channels, routing, transformation, sagas, platforms |
-| **Concurrency patterns** *(planned)* | Active object, monitor, fork-join, pipeline |
+| Guide | Focus | See |
+|-------|--------|-----|
+| [**GoF design patterns**](gof-patterns.md) | 23 patterns, selection flowchart, modern relevance | |
+| [**Enterprise integration**](enterprise-integration.md) | Channels, routing, transformation, sagas, platforms | |
+| **Concurrency patterns** *(planned)* | Active object, monitor, fork-join, pipeline | [SOFTWARE-ENGINEERING.md §3](../SOFTWARE-ENGINEERING.md#3-design-patterns) |
 
 ---
 

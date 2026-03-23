@@ -42,4 +42,4 @@ Seed files for a **mutable** `forge/` workspace and `ember-logs/` at repo root. 
 | [**sdd/CEREMONY-INTENT.template.md**](sdd/CEREMONY-INTENT.template.md) | Map **C1–C6** or team rituals to SDD tables. |
 | [**sdd/PROCESS-SLOT.template.md**](sdd/PROCESS-SLOT.template.md) | Gates, release slices, toolchain steps. |
 
-Normative schema and worked examples: [`../methodologies/spec-driven/`](../methodologies/spec-driven/README.md) · handbook [`../docs/spec-driven-sdd-schema.html`](../docs/spec-driven-sdd-schema.html).
+Normative schema and worked examples: [`../methodologies/spec-driven/`](../methodologies/spec-driven/README.md) · handbook HTML: generated under `blueprints/website/` by `generator/build-handbook.py` (e.g. `sdlc--methodologies-spec-driven-sdd-io-schema.html`).

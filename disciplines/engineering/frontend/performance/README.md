@@ -28,16 +28,16 @@ flowchart TD
 
 ## Topic map (overview)
 
-| Topic | Focus |
-|-------|-------|
-| **Core Web Vitals** | LCP, INP, CLS — measurement, diagnosis, optimization strategies |
-| **Bundle optimization** | Code splitting, tree shaking, dynamic imports, dependency audit, compression |
-| **Image and media** | Format selection (WebP, AVIF), responsive images, lazy loading, CDN transforms |
-| **Font optimization** | `font-display` strategies, subsetting, preloading, self-hosting vs CDN |
-| **Caching strategies** | Cache-Control, CDN configuration, service worker caching, stale-while-revalidate |
-| **Rendering performance** | Main-thread optimization, virtual scrolling, Web Workers, `requestIdleCallback` |
-| **Performance budgets** | Setting, enforcing, and evolving budgets; Lighthouse CI integration |
-| **Real User Monitoring (RUM)** | Collecting field data; correlating performance with business metrics |
+| Topic | Focus | See |
+|-------|-------|-----|
+| **Core Web Vitals** | LCP, INP, CLS — measurement, diagnosis, optimization strategies | [Web Vitals](web-vitals.md) |
+| **Bundle optimization** | Code splitting, tree shaking, dynamic imports, dependency audit, compression | [Optimization strategies](optimization-strategies.md) |
+| **Image and media** | Format selection (WebP, AVIF), responsive images, lazy loading, CDN transforms | [Optimization strategies](optimization-strategies.md) |
+| **Font optimization** | `font-display` strategies, subsetting, preloading, self-hosting vs CDN | [Optimization strategies](optimization-strategies.md) |
+| **Caching strategies** | Cache-Control, CDN configuration, service worker caching, stale-while-revalidate | [Optimization strategies](optimization-strategies.md) |
+| **Rendering performance** | Main-thread optimization, virtual scrolling, Web Workers, `requestIdleCallback` | [Optimization strategies](optimization-strategies.md) |
+| **Performance budgets** | Setting, enforcing, and evolving budgets; Lighthouse CI integration | [Web Vitals](web-vitals.md) |
+| **Real User Monitoring (RUM)** | Collecting field data; correlating performance with business metrics | [Web Vitals](web-vitals.md) |
 
 ---
 

@@ -22,12 +22,12 @@ flowchart LR
 
 ## Planned / stub topics
 
-| Topic | Focus |
-|-------|--------|
-| **A/B testing infrastructure** | Randomization units, sample size and power, sequential testing, SRM checks, feature flags, holdouts, and ethical guardrails |
-| **Referral programs** | Loop design, K-factor limitations, incentive economics, invite UX, tracking implementation, fraud and abuse — *(planned)* |
-| **Retention engineering** | Cohort curves, churn drivers, habit formation, lifecycle messaging coordination, win-back experiments — *(planned)* |
-| **Activation optimization** | Time-to-value, aha-moment definition, onboarding experiments, empty states, checklist and progressive disclosure |
+| Topic | Focus | See |
+|-------|--------|-----|
+| **A/B testing infrastructure** | Randomization units, sample size and power, sequential testing, SRM checks, feature flags, holdouts, and ethical guardrails | [Funnel optimization](funnel-optimization.md) |
+| **Referral programs** | Loop design, K-factor limitations, incentive economics, invite UX, tracking implementation, fraud and abuse — *(planned)* | [Funnel optimization](funnel-optimization.md) |
+| **Retention engineering** | Cohort curves, churn drivers, habit formation, lifecycle messaging coordination, win-back experiments — *(planned)* | [Churn prevention](../../customer-success/practices/churn-prevention.md) |
+| **Activation optimization** | Time-to-value, aha-moment definition, onboarding experiments, empty states, checklist and progressive disclosure | [Onboarding design](../../customer-success/practices/onboarding-design.md) |
 
 When a topic is still *(planned)*, use [`funnel-optimization.md`](funnel-optimization.md) for the overlapping AARRR framing and experiment hygiene until a dedicated guide lands.
 

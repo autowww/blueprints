@@ -34,8 +34,8 @@ The diagram is **illustrative**: in practice, experiment tracking starts early (
 |----------|-------|-------------|-------|
 | **CRISP-DM** | Six-phase cross-industry standard process for data mining and ML projects | Default starting point for most ML projects; industry-proven; tool-agnostic | [`crisp-dm.md`](crisp-dm.md) |
 | **MLOps** | Operationalizing ML — CI/CD for models, automated retraining, model monitoring | When ML models run in production and require ongoing management | [`mlops.md`](mlops.md) |
-| **Experiment management** | Systematic approach to running, tracking, and analyzing ML experiments | During model development; comparing approaches; hyperparameter optimization | — |
-| **A/B testing** | Controlled online experimentation to measure model impact on product metrics | When validating model impact in production; PDLC P5 outcome measurement | — |
+| **Experiment management** | Systematic approach to running, tracking, and analyzing ML experiments | During model development; comparing approaches; hyperparameter optimization | [DATA-SCIENCE.md §3](../DATA-SCIENCE.md#3-model-evaluation) |
+| **A/B testing** | Controlled online experimentation to measure model impact on product metrics | When validating model impact in production; PDLC P5 outcome measurement | [DATA-SCIENCE.md §3](../DATA-SCIENCE.md#3-model-evaluation) |
 
 **Related techniques:** For encoding, feature stores, and evaluation metrics used inside these phases, see [`../techniques/feature-engineering.md`](../techniques/feature-engineering.md) and [`../techniques/model-evaluation.md`](../techniques/model-evaluation.md).
 

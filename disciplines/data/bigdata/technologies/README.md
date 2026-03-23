@@ -24,11 +24,11 @@ Storage, streaming buses, orchestration, catalogs, and quality tools **compose**
 | Category | Scope | Guide |
 |----------|-------|-------|
 | **Processing engines & platforms** | Batch (Spark), micro-batch (Spark Structured Streaming), stream (Flink, Kafka Streams), portable pipelines (Beam), interactive SQL warehouses | [`processing-engines.md`](processing-engines.md) |
-| **Storage systems** | Relational (PostgreSQL, MySQL), columnar (ClickHouse, DuckDB), object (S3, GCS, Azure Blob), table formats (Delta Lake, Apache Iceberg, Apache Hudi) | — |
-| **Streaming platforms** | Apache Kafka, Apache Pulsar, AWS Kinesis, Azure Event Hubs, Google Pub/Sub | — |
-| **Orchestration** | Apache Airflow, Dagster, Prefect, Mage — DAG-based pipeline scheduling and monitoring | — |
-| **Data catalogs** | DataHub, OpenMetadata, Apache Atlas, Amundsen — metadata management and discovery | — |
-| **Data quality** | Great Expectations, dbt tests, Soda, Monte Carlo — automated data quality validation | — |
+| **Storage systems** | Relational (PostgreSQL, MySQL), columnar (ClickHouse, DuckDB), object (S3, GCS, Azure Blob), table formats (Delta Lake, Apache Iceberg, Apache Hudi) | [BIGDATA.md §3](../BIGDATA.md#3-data-pipeline-patterns) |
+| **Streaming platforms** | Apache Kafka, Apache Pulsar, AWS Kinesis, Azure Event Hubs, Google Pub/Sub | [BIGDATA.md §3](../BIGDATA.md#3-data-pipeline-patterns) |
+| **Orchestration** | Apache Airflow, Dagster, Prefect, Mage — DAG-based pipeline scheduling and monitoring | [BIGDATA.md §4](../BIGDATA.md#4-dataops) |
+| **Data catalogs** | DataHub, OpenMetadata, Apache Atlas, Amundsen — metadata management and discovery | [BIGDATA.md §2](../BIGDATA.md#2-data-governance) |
+| **Data quality** | Great Expectations, dbt tests, Soda, Monte Carlo — automated data quality validation | [BIGDATA.md §2](../BIGDATA.md#2-data-governance) |
 
 **Core knowledge:** [`BIGDATA.md`](../BIGDATA.md) — principles, governance, quality, pipeline patterns.
 

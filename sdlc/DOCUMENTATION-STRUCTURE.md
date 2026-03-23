@@ -4,7 +4,7 @@ This document defines **where documentation can live** in a repository, **what k
 
 **Related:** [`SDLC.md`](SDLC.md) (phases, gates, doc obligations) · optional **requirements convention** in the consuming repo (e.g. `docs/requirements/STRUCTURE-PROPOSAL.md` if you adopt one).
 
-**Scalability:** The layout below scales from a single deliverable to multiple milestones and teams by **namespacing delivery specs** (often under `docs/requirements/`) and keeping frozen blueprints under **`blueprints/`** at repository root — **`blueprints/sdlc/`** (this SDLC package), optional **`blueprints/product/`** (product-functional IA; mutable prose under **`docs/product/`**), and optional **`blueprints/agents/`** (containerized automation). **Agentic** delivery (IDE/LLM/CI) is covered in **`methodologies/agentic-sdlc.md`**. Mutable jobs live in **`agents/`** at repository root—see **`blueprints/agents/STRUCTURE.md`** and the SDLC handbook chapter **`blueprints/sdlc/docs/agents.html`**. Swap folder names if you use another tool (e.g. `work-items/` instead of `requirements/`)—keep the *separation* between process docs, product-functional docs, delivery specs, and (when used) automation blueprints.
+**Scalability:** The layout below scales from a single deliverable to multiple milestones and teams by **namespacing delivery specs** (often under `docs/requirements/`) and keeping frozen blueprints under **`blueprints/`** at repository root — **`blueprints/sdlc/`** (this SDLC package), optional **`blueprints/product/`** (product-functional IA; mutable prose under **`docs/product/`**), and optional **`blueprints/agents/`** (containerized automation). **Agentic** delivery (IDE/LLM/CI) is covered in **`methodologies/agentic-sdlc.md`**. Mutable jobs live in **`agents/`** at repository root—see **`blueprints/agents/STRUCTURE.md`** and **`blueprints/agents/README.md`**. Swap folder names if you use another tool (e.g. `work-items/` instead of `requirements/`)—keep the *separation* between process docs, product-functional docs, delivery specs, and (when used) automation blueprints.
 
 ---
 
@@ -27,16 +27,15 @@ This blueprint assumes **`blueprints/sdlc/`** (this folder) lives **under `bluep
 ```text
 repository root/
   README.md
+  blueprints/website/           # Generated handbook HTML (CI) — python3 generator/build-handbook.py from blueprints/
+  blueprints/generator/         # build-handbook.py — Markdown under each area → flat website/*.html
+  blueprints/docs/              # MAINTENANCE.md — handbook build, CI, wiki sync
   blueprints/sdlc/               # Frozen SDLC template — see POLICY.md
     README.md
     POLICY.md
     SDLC.md
     DOCUMENTATION-STRUCTURE.md
     methodologies/              # Deep methodology guides (Markdown) — Scrum, Kanban, XP, …
-    docs/                       # Human handbook (HTML + SVG) — sync with MAINTENANCE.md
-      index.html                # Landing; chapters: overview.html, phases.html, dod.html, …
-      MAINTENANCE.md
-      assets/
     templates/                  # Optional copy-paste (ROADMAP, TEST-PLAN, templates/sdlc/ …)
     scripts/                    # init-sdlc-workspace.sh — see scripts/README.md, SDLc-WORKSPACE.md
     SDLc-WORKSPACE.md           # How to bootstrap sibling sdlc/
@@ -45,10 +44,7 @@ repository root/
     README.md
     POLICY.md
     STRUCTURE.md
-    docs/                       # Human handbook (HTML)
-      index.html
-      MAINTENANCE.md
-      assets/
+    docs/                       # Maintainer notes (MAINTENANCE.md); HTML → blueprints/website/ via build-handbook.py
     templates/
 
   blueprints/pdlc/               # Frozen product lifecycle blueprint — see blueprints/pdlc/POLICY.md
@@ -58,10 +54,7 @@ repository root/
     PDLC-SDLC-BRIDGE.md         # How PDLC and SDLC relate — diagrams, role mapping, worked example
     approaches/                 # PDLC approach guides (Dual-Track, Stage-Gate, Design Thinking, …)
     templates/                  # Product vision, experiment log, metrics, GTM, sunset plan
-    docs/                       # Human handbook (HTML)
-      index.html
-      MAINTENANCE.md
-      assets/
+    docs/                       # Maintainer notes (MAINTENANCE.md); HTML → blueprints/website/ via build-handbook.py
 
   blueprints/disciplines/         # Cross-cutting professional disciplines — see blueprints/disciplines/README.md
     README.md                   # Hub: BA, PM, Testing, Software Architecture, DevOps, Big Data, Data Science
@@ -72,8 +65,6 @@ repository root/
     devops/                     # DevOps (CALMS, DORA, SRE, CI/CD, observability)
     bigdata/                    # Big data & data engineering (governance, pipeline patterns, DataOps)
     data-science/               # Data science & ML (CRISP-DM, MLOps, responsible AI)
-    docs/                       # Future human handbook (HTML)
-      MAINTENANCE.md
 
   blueprints/agents/             # Optional frozen Docker automation blueprint — see blueprints/agents/POLICY.md
     README.md
@@ -82,9 +73,7 @@ repository root/
     docker/                     # Dockerfile.base, compose.yaml — build context is blueprints/agents/
     templates/                  # recipe/ + project-agents/ seeds
     scripts/
-    docs/                       # Short HTML mirror; full chapter in blueprints/sdlc/docs/agents.html
-      index.html
-      MAINTENANCE.md
+    docs/                       # Maintainer notes (README.md, MAINTENANCE.md); HTML → blueprints/website/agents--*.html via build-handbook.py
 
   agents/                       # Optional mutable automation workspace (NOT inside blueprints/agents) — recipes, workspaces/, compose.override.yaml
 
@@ -222,7 +211,7 @@ docs/requirements/
 | **Execution** | `agents/recipes/<name>/` — shell, Node, Python, or Playwright-specific images per recipe README. |
 | **Optional LLM runner** | Only if you need a tool-calling loop *inside* the container; most repos stop at scripted recipes. |
 
-**Human handbook:** [`docs/agents.html`](docs/agents.html). **Canonical depth:** [`blueprints/agents/STRUCTURE.md`](../agents/STRUCTURE.md).
+**Handbook (generated):** run `python3 generator/build-handbook.py` from `blueprints/`; agents pages are under `website/agents--*.html`. **Canonical Markdown:** [`blueprints/agents/STRUCTURE.md`](../agents/STRUCTURE.md).
 
 ---
 
@@ -240,7 +229,7 @@ docs/requirements/
 | **Architecture** | `docs/architecture/` | Non-trivial structure or onboarding need. |
 | **ADRs** | `docs/adr/` | Significant, somewhat stable technical choices. |
 | **Development** | `docs/development/` | Build scripts, **CI/CD**, **quality gates**, tasks, style—when root README is too large. |
-| **Agents & automation (optional)** | **`blueprints/agents/`** (frozen) + **`agents/`** (mutable) | Container images, Compose, and **recipes** for repeatable automation (incl. browser/E2E); complements IDE/LLM workflows under review policy. Handbook: [`docs/agents.html`](docs/agents.html); canonical: [`blueprints/agents/STRUCTURE.md`](../agents/STRUCTURE.md). |
+| **Agents & automation (optional)** | **`blueprints/agents/`** (frozen) + **`agents/`** (mutable) | Container images, Compose, and **recipes** for repeatable automation (incl. browser/E2E); complements IDE/LLM workflows under review policy. Handbook HTML: generated to `blueprints/website/` (see `generator/build-handbook.py`); canonical Markdown: [`blueprints/agents/STRUCTURE.md`](../agents/STRUCTURE.md). |
 | **Testing / test plans** | `docs/testing/` (optional); or story spec + [`templates/TEST-PLAN.template.md`](templates/TEST-PLAN.template.md) | Scope-level test strategy; per-milestone or release plan when useful. |
 | **Release & compliance** | `docs/release/` | Distribution, privacy disclosures, signing *process* (not keys). |
 
