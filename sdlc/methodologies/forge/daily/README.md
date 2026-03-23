@@ -14,13 +14,13 @@ Templates and Cursor rule for the daily Forge workflow: Charge management, Ember
 
 | Template | Purpose |
 |----------|---------|
-| [`charge.template.md`](charge.template.md) | Daily Charge file structure |
-| [`ember-log-entry.template.md`](ember-log-entry.template.md) | Single Ember Log entry structure |
-| [`day-journal.template.md`](day-journal.template.md) | Day journal entry structure |
+| [`charge.template.md`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/daily/charge.template.md) | Daily Charge file structure |
+| [`ember-log-entry.template.md`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/daily/ember-log-entry.template.md) | Single Ember Log entry structure |
+| [`day-journal.template.md`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/daily/day-journal.template.md) | Day journal entry structure |
 
 ## Cursor rule
 
-[`forge-daily.mdc.template`](forge-daily.mdc.template) — conversational task delivery agent. When activated:
+[`forge-daily.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/daily/forge-daily.mdc.template) — conversational task delivery agent. When activated:
 
 - Shows the current Charge (today's Sparks).
 - Suggests the next Spark based on priority, dependencies, and current hat.
@@ -30,7 +30,7 @@ Templates and Cursor rule for the daily Forge workflow: Charge management, Ember
 
 ## Scripts
 
-Shell scripts for git-tracked daily operations live in [`../scripts/`](../scripts/README.md):
+Shell scripts for git-tracked daily operations live in [`../scripts/`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/scripts/README.md):
 
 | Script | Purpose |
 |--------|---------|

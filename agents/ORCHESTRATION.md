@@ -2,7 +2,7 @@
 
 **Canonical instructions** for creating automation under **`agents/recipes/<name>/`** in the consuming repository. Cursor rules, docs, and assistants should **point here** instead of duplicating prose.
 
-**Related:** [`STRUCTURE.md`](STRUCTURE.md) · [`docker/README.md`](docker/README.md) · [`scripts/README.md`](scripts/README.md)
+**Related:** [`STRUCTURE.md`](STRUCTURE.md) · [`docker/README.md`](https://github.com/autowww/blueprints/blob/main/agents/docker/README.md) · [`scripts/README.md`](https://github.com/autowww/blueprints/blob/main/agents/scripts/README.md)
 
 ---
 
@@ -46,7 +46,7 @@ Use this **in order** when someone asks to **create a new agent** or **new recip
 ### Step B — Execution shape
 
 - **Entry** — prefer `run.sh` with `set -euo pipefail` unless Node/Python is clearly better.
-- **Image** — default **`agents-blueprint-base:local`** ([`docker/Dockerfile.base`](docker/Dockerfile.base)); use a **Playwright** or other **dedicated image** only when browser/heavy deps are required ([`STRUCTURE.md`](STRUCTURE.md) §4).
+- **Image** — default **`agents-blueprint-base:local`** ([`docker/Dockerfile.base`](https://github.com/autowww/blueprints/blob/main/agents/docker/Dockerfile.base)); use a **Playwright** or other **dedicated image** only when browser/heavy deps are required ([`STRUCTURE.md`](STRUCTURE.md) §4).
 
 ### Step C — Inputs and outputs
 
@@ -82,10 +82,10 @@ After scaffolding with **`new-agent-recipe.sh`**, edit as needed:
 
 ## 5. Scaffold script contract
 
-**[`scripts/new-agent-recipe.sh`](scripts/new-agent-recipe.sh)** must:
+**[`scripts/new-agent-recipe.sh`](https://github.com/autowww/blueprints/blob/main/agents/scripts/new-agent-recipe.sh)** must:
 
 - Run from **repository root** (directory that contains **`blueprints/agents/`** and **`agents/`**).
-- Create **`agents/recipes/<name>/`** with **`README.md`** and **`run.sh`** from [`templates/recipe/`](templates/recipe/README.md).
+- Create **`agents/recipes/<name>/`** with **`README.md`** and **`run.sh`** from [`templates/recipe/`](https://github.com/autowww/blueprints/blob/main/agents/templates/recipe/README.md).
 - Refuse invalid names or missing **`agents/`**.
 
 ---

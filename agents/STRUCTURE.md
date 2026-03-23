@@ -24,8 +24,8 @@ This blueprint does **not** mandate a particular LLM vendor or multi-agent frame
 |-------|------------|-------------------|
 | **L1 — Policy** | Immutability + boundaries | [`POLICY.md`](POLICY.md), [`blueprints/sdlc/POLICY.md`](../sdlc/POLICY.md) |
 | **L2 — Repository layout** | Frozen blueprint vs mutable workspace | `blueprints/agents/` vs `agents/` |
-| **L3 — Container image** | Base OS + runtimes | [`docker/Dockerfile.base`](docker/Dockerfile.base) |
-| **L4 — Orchestration** | Build/run wiring | [`docker/compose.yaml`](docker/compose.yaml), optional `agents/compose.override.yaml` |
+| **L3 — Container image** | Base OS + runtimes | [`docker/Dockerfile.base`](https://github.com/autowww/blueprints/blob/main/agents/docker/Dockerfile.base) |
+| **L4 — Orchestration** | Build/run wiring | [`docker/compose.yaml`](https://github.com/autowww/blueprints/blob/main/agents/docker/compose.yaml), optional `agents/compose.override.yaml` |
 | **L5 — Recipes** | One folder per job | `agents/recipes/<name>/run.sh` (or Makefile, Node, Python) |
 | **L6 — Optional LLM runner** | Tool-calling loop *inside* the container | Small Python/Node app in `agents/runner/` — **only if** you need open-ended automation |
 
@@ -82,7 +82,7 @@ agents/
 
 ### 4.2 Compose
 
-- **Build context:** `blueprints/agents/` (see [`docker/compose.yaml`](docker/compose.yaml)).  
+- **Build context:** `blueprints/agents/` (see [`docker/compose.yaml`](https://github.com/autowww/blueprints/blob/main/agents/docker/compose.yaml)).  
 - **Runtime mounts (pattern):**
   - Repository: **`/work`** read-only when possible.  
   - Writable outputs: **`/workspaces`** → `agents/workspaces/` on the host.  
@@ -147,7 +147,7 @@ agents/
 ./blueprints/agents/scripts/init-agents-workspace.sh
 ```
 
-Creates **`agents/`** with README, **`workspaces/`**, and **`recipes/`** from [`templates/project-agents/`](templates/project-agents/README.md).
+Creates **`agents/`** with README, **`workspaces/`**, and **`recipes/`** from [`templates/project-agents/`](https://github.com/autowww/blueprints/tree/main/agents/templates/project-agents).
 
 **New recipe** — after **`agents/`** exists:
 
@@ -155,9 +155,9 @@ Creates **`agents/`** with README, **`workspaces/`**, and **`recipes/`** from [`
 ./blueprints/agents/scripts/new-agent-recipe.sh <kebab-case-name> [--purpose "one line"]
 ```
 
-Creates **`agents/recipes/<name>/README.md`** and **`run.sh`** from [`templates/recipe/*.template.*`](templates/recipe/README.md).
+Creates **`agents/recipes/<name>/README.md`** and **`run.sh`** from [`templates/recipe/*.template.*`](https://github.com/autowww/blueprints/blob/main/agents/templates/recipe/README.md).
 
-**Playbook for assistants:** [`ORCHESTRATION.md`](ORCHESTRATION.md). See [`scripts/README.md`](scripts/README.md).
+**Playbook for assistants:** [`ORCHESTRATION.md`](ORCHESTRATION.md). See [`scripts/README.md`](https://github.com/autowww/blueprints/blob/main/agents/scripts/README.md).
 
 ---
 

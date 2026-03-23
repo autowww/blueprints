@@ -19,12 +19,12 @@ This maps to the existing WBS hierarchy: Milestone → Epic → Story → Task. 
 
 | File | Purpose |
 |------|---------|
-| [`PLANNING-FLOW.md`](PLANNING-FLOW.md) | Full pipeline from vision to daily Sparks |
-| [`release-plan.template.md`](release-plan.template.md) | Forge release plan template (Product Spark) |
-| [`poc-plan.template.md`](poc-plan.template.md) | PoC planning template |
-| [`mvp-plan.template.md`](mvp-plan.template.md) | MVP planning template |
-| [`phase-plan.template.md`](phase-plan.template.md) | Phase planning template |
-| [`forge-planning.mdc.template`](forge-planning.mdc.template) | Cursor rule for guided planning |
+| [`PLANNING-FLOW.md`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/planning/PLANNING-FLOW.md) | Full pipeline from vision to daily Sparks |
+| [`release-plan.template.md`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/planning/release-plan.template.md) | Forge release plan template (Product Spark) |
+| [`poc-plan.template.md`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/planning/poc-plan.template.md) | PoC planning template |
+| [`mvp-plan.template.md`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/planning/mvp-plan.template.md) | MVP planning template |
+| [`phase-plan.template.md`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/planning/phase-plan.template.md) | Phase planning template |
+| [`forge-planning.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/planning/forge-planning.mdc.template) | Cursor rule for guided planning |
 
 ## Product Spark
 
@@ -38,11 +38,11 @@ A **Product Spark** is a potentially shippable product iteration that may span m
 
 ## Product Manager agent
 
-For **product-level** planning (vision, strategy, roadmap, business case, market analysis, WBS, product bootstrap), see the [Product Manager agent package](../product-manager/README.md). It provides:
+For **product-level** planning (vision, strategy, roadmap, business case, market analysis, WBS, product bootstrap), see the [Product Manager agent package](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/product-manager/README.md). It provides:
 
 - A Cursor rule (`forge-product-manager.mdc.template`) that orchestrates product strategy and bootstrap through dialog.
-- A [product bootstrap flow](../product-manager/product-bootstrap-flow.md) for taking a new product from zero to first Charge.
-- A [first charge template](../product-manager/first-charge.template.md) with pre-defined product bootstrap Sparks.
+- A [product bootstrap flow](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/product-manager/product-bootstrap-flow.md) for taking a new product from zero to first Charge.
+- A [first charge template](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/product-manager/first-charge.template.md) with pre-defined product bootstrap Sparks.
 
 The Product Manager agent is **upstream** of `forge-planning` — it creates the strategic inputs (vision, roadmap, business case) that `forge-planning` then decomposes into Forge work units.
 
@@ -55,4 +55,4 @@ Product planning in Forge connects to PDLC phases:
 - **P4** (Launch) → Product Spark passes Assay Gate and ships
 - **P5** (Grow) → learning feeds new Ore
 
-See [`../FORGE-SDLC-PDLC-BRIDGE.md`](../FORGE-SDLC-PDLC-BRIDGE.md) for the full bridge.
+See [`../FORGE-SDLC-PDLC-BRIDGE.md`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/FORGE-SDLC-PDLC-BRIDGE.md) for the full bridge.

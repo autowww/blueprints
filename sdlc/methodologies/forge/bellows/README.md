@@ -26,52 +26,52 @@ This phase-awareness lets Bellows calibrate challenge intensity based on the cur
 
 | Template | Discipline | Core challenge |
 |----------|-----------|----------------|
-| [`bellows-se.mdc.template`](bellows-se.mdc.template) | Software Engineering | Are CS fundamentals and craft practices sound? |
-| [`bellows-architecture.mdc.template`](bellows-architecture.mdc.template) | Software Architecture | Is this structurally sound and maintainable? |
-| [`bellows-devops.mdc.template`](bellows-devops.mdc.template) | DevOps | Can we deliver and operate this reliably? |
-| [`bellows-testing.mdc.template`](bellows-testing.mdc.template) | Testing & QA | Can we prove this works correctly? |
-| [`bellows-frontend.mdc.template`](bellows-frontend.mdc.template) | Frontend | Is the web UI fast, accessible, and maintainable? |
-| [`bellows-mobile.mdc.template`](bellows-mobile.mdc.template) | Mobile | Is the mobile experience performant and reliable? |
-| [`bellows-iot.mdc.template`](bellows-iot.mdc.template) | Embedded / IoT | Is this reliable and safe for constrained environments? |
+| [`bellows-se.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/bellows/bellows-se.mdc.template) | Software Engineering | Are CS fundamentals and craft practices sound? |
+| [`bellows-architecture.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/bellows/bellows-architecture.mdc.template) | Software Architecture | Is this structurally sound and maintainable? |
+| [`bellows-devops.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/bellows/bellows-devops.mdc.template) | DevOps | Can we deliver and operate this reliably? |
+| [`bellows-testing.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/bellows/bellows-testing.mdc.template) | Testing & QA | Can we prove this works correctly? |
+| [`bellows-frontend.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/bellows/bellows-frontend.mdc.template) | Frontend | Is the web UI fast, accessible, and maintainable? |
+| [`bellows-mobile.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/bellows/bellows-mobile.mdc.template) | Mobile | Is the mobile experience performant and reliable? |
+| [`bellows-iot.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/bellows/bellows-iot.mdc.template) | Embedded / IoT | Is this reliable and safe for constrained environments? |
 
 ### Data family (2 disciplines)
 
 | Template | Discipline | Core challenge |
 |----------|-----------|----------------|
-| [`bellows-bigdata.mdc.template`](bellows-bigdata.mdc.template) | Big Data & Data Engineering | Is data engineered, governed, and processed correctly? |
-| [`bellows-datascience.mdc.template`](bellows-datascience.mdc.template) | Data Science & ML | Are models valid, reproducible, and responsible? |
+| [`bellows-bigdata.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/bellows/bellows-bigdata.mdc.template) | Big Data & Data Engineering | Is data engineered, governed, and processed correctly? |
+| [`bellows-datascience.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/bellows/bellows-datascience.mdc.template) | Data Science & ML | Are models valid, reproducible, and responsible? |
 
 ### Product family (5 disciplines)
 
 | Template | Discipline | Core challenge |
 |----------|-----------|----------------|
-| [`bellows-product-management.mdc.template`](bellows-product-management.mdc.template) | Product Management | Are we building the right product for the right market? |
-| [`bellows-ba.mdc.template`](bellows-ba.mdc.template) | Business Analysis | Do we understand what stakeholders need? |
-| [`bellows-ux.mdc.template`](bellows-ux.mdc.template) | UX / UI Design | Is this usable, desirable, and accessible? |
-| [`bellows-marketing.mdc.template`](bellows-marketing.mdc.template) | Marketing | Can we acquire, engage, and retain users? |
-| [`bellows-cs.mdc.template`](bellows-cs.mdc.template) | Customer Success | Will users achieve their goals? |
+| [`bellows-product-management.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/bellows/bellows-product-management.mdc.template) | Product Management | Are we building the right product for the right market? |
+| [`bellows-ba.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/bellows/bellows-ba.mdc.template) | Business Analysis | Do we understand what stakeholders need? |
+| [`bellows-ux.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/bellows/bellows-ux.mdc.template) | UX / UI Design | Is this usable, desirable, and accessible? |
+| [`bellows-marketing.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/bellows/bellows-marketing.mdc.template) | Marketing | Can we acquire, engage, and retain users? |
+| [`bellows-cs.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/bellows/bellows-cs.mdc.template) | Customer Success | Will users achieve their goals? |
 
 ### Governance family (1 discipline)
 
 | Template | Discipline | Core challenge |
 |----------|-----------|----------------|
-| [`bellows-pm.mdc.template`](bellows-pm.mdc.template) | Project Management | Are we delivering within constraints? |
+| [`bellows-pm.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/bellows/bellows-pm.mdc.template) | Project Management | Are we delivering within constraints? |
 
 ### Cross-cutting (2 disciplines)
 
 | Template | Discipline | Core challenge |
 |----------|-----------|----------------|
-| [`bellows-security.mdc.template`](bellows-security.mdc.template) | Security | Is this safe from attacks and breaches? |
-| [`bellows-compliance.mdc.template`](bellows-compliance.mdc.template) | Compliance | Does this meet regulatory obligations? |
+| [`bellows-security.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/bellows/bellows-security.mdc.template) | Security | Is this safe from attacks and breaches? |
+| [`bellows-compliance.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/bellows/bellows-compliance.mdc.template) | Compliance | Does this meet regulatory obligations? |
 
 ### Family aggregators
 
 | Template | Activates |
 |----------|-----------|
-| [`bellows-family-engineering.mdc.template`](bellows-family-engineering.mdc.template) | All 7 engineering Bellows |
-| [`bellows-family-data.mdc.template`](bellows-family-data.mdc.template) | Both data Bellows |
-| [`bellows-family-product.mdc.template`](bellows-family-product.mdc.template) | All 5 product Bellows |
-| [`bellows-all.mdc.template`](bellows-all.mdc.template) | Master routing — suggests which Bellows based on context |
+| [`bellows-family-engineering.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/bellows/bellows-family-engineering.mdc.template) | All 7 engineering Bellows |
+| [`bellows-family-data.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/bellows/bellows-family-data.mdc.template) | Both data Bellows |
+| [`bellows-family-product.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/bellows/bellows-family-product.mdc.template) | All 5 product Bellows |
+| [`bellows-all.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/bellows/bellows-all.mdc.template) | Master routing — suggests which Bellows based on context |
 
 ## Adopting Bellows in a consuming repo
 
