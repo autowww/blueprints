@@ -2,7 +2,7 @@
 
 **Purpose:** Prescriptive detail for **stage-gated** or **waterfall-leaning** delivery aligned with the blueprint **tracking spine** and **ceremony intents**.
 
-**Executive summary:** [`../phased-delivery.md`](../phased-delivery.md)
+**Executive summary:** [`https://forgesdlc.com/methodologies-phased-delivery.html`](https://forgesdlc.com/methodologies-phased-delivery.html)
 
 | Chapter | File |
 |---------|------|

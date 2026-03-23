@@ -61,5 +61,5 @@ These are identical to single-team Agile roles; SAFe does not redefine them.
 ## 6. References
 
 - [`../roles-archetypes.md`](../roles-archetypes.md) — methodology-neutral archetypes
-- [`../safe.md`](../safe.md) — SAFe methodology summary
+- [`https://forgesdlc.com/methodology-safe.html`](https://forgesdlc.com/methodology-safe.html) — SAFe methodology summary
 - [`foundation-connection.md`](foundation-connection.md) — SDLC phase and tracking mapping

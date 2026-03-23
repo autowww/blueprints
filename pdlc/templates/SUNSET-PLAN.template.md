@@ -4,7 +4,7 @@
   Copy this template into docs/product/lifecycle/ (or equivalent).
   Complete during P6 Mature / Sunset when a sunset decision is made.
   See blueprints/pdlc/PDLC.md Phase P6 and
-  blueprints/pdlc/approaches/product-lifecycle-management.md for context.
+  blueprints/pdlc/https://forgesdlc.com/pdlc-approaches-product-lifecycle-management.html for context.
 -->
 
 ## 1. Decision summary

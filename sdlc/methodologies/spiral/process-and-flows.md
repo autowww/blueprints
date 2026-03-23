@@ -84,4 +84,4 @@ Full curated list: [`REFERENCE-LINKS.md`](../REFERENCE-LINKS.md).
 
 ## 8. Internal links
 
-- [Ceremonies](ceremonies-prescriptive.md) · [Overview](../spiral.md)
+- [Ceremonies](ceremonies-prescriptive.md) · [Overview](https://forgesdlc.com/methodologies-spiral.html)

@@ -8,7 +8,7 @@ This file is the **crosswalk** between methodology-neutral **intent types** (C1�
 - You rename meetings but want to verify **no intent is orphaned**.
 - You **onboard** people who know one methodology and need to map vocabulary.
 
-**Forks (detail + event-level suggestions):** [Scrum](scrum.md) · [Kanban](kanban.md) · [Phased](phased.md) · [XP](xp.md) · [SAFe](safe.md) · [Lean](lean.md) · [Spiral](spiral.md) · [V-Model](v-model.md) · [DevOps](devops.md) · [Forge](forge.md)
+**Forks (detail + event-level suggestions):** [Scrum](https://forgesdlc.com/methodology-scrum.html) · [Kanban](https://forgesdlc.com/methodology-kanban.html) · [Phased](phased.md) · [XP](https://forgesdlc.com/methodology-xp.html) · [SAFe](https://forgesdlc.com/methodology-safe.html) · [Lean](https://forgesdlc.com/methodology-lean.html) · [Spiral](https://forgesdlc.com/methodologies-spiral.html) · [V-Model](https://forgesdlc.com/methodologies-v-model.html) · [DevOps](https://forgesdlc.com/methodologies-devops.html) · [Forge](https://forgesdlc.com/methodology-overview.html)
 
 ---
 
@@ -25,7 +25,7 @@ Cells list **common names** for practices that **primarily** serve that intent. 
 | **C5 Improve** | **Sprint Retrospective** | Ops review; Kaizen / retrospective cadence | **Post-phase** lessons; process audits (lighter between gates) | Team reflection; coach feedback loops | **I&A** (problem-solving workshop); Iteration Retrospective | **Kaizen** events; **A3** problem-solving; **Five Whys** | **Retrospective**; risk-prediction accuracy review | **Post-phase lessons** (often deferred; better teams add mid-cycle retros) | **Blameless post-mortem**; **pipeline retrospective** | **Retro** (metrics, Ember Log review, Bellows tuning); learning → new Ore |
 | **C6 Assure** | **Definition of Done** + increment quality; release may be separate | **Policies** / DoD per column; release train | **IV&V**; test phase exit; **release approval** | **TDD**, **CI**, collective ownership | **Continuous delivery pipeline**; built-in quality; release on demand | **Built-in quality** practices; policy-driven DoD | **Risk review** (Q2); evidence-based milestone gates | **Test readiness review**; traceability gates per V-level | **Automated pipeline gates**; CI/CD quality checks | **Assay Gate** (evidence-based release decision); per-work-type evidence |
 
-**Empty-looking cells:** XP often **embeds** C3/C6 in practices rather than a named meeting—see [XP fork](xp.md). Lean **embeds** C6 in engineering practices rather than ceremonies. Spiral **embeds** C6 in Q2 risk analysis. **Forge** adds Bellows (discipline challenge agents) as a cross-cutting challenge mechanism activated at any ceremony—see [Forge fork](forge.md).
+**Empty-looking cells:** XP often **embeds** C3/C6 in practices rather than a named meeting—see [XP fork](https://forgesdlc.com/methodology-xp.html). Lean **embeds** C6 in engineering practices rather than ceremonies. Spiral **embeds** C6 in Q2 risk analysis. **Forge** adds Bellows (discipline challenge agents) as a cross-cutting challenge mechanism activated at any ceremony—see [Forge fork](https://forgesdlc.com/methodology-overview.html).
 
 ---
 
@@ -39,7 +39,7 @@ These apply **regardless** of framework; tune with your [roles](../roles-archety
 | **Don’t double-book intents** | If **C2** happens only in a giant monthly meeting, **C3** still needs a **lighter** rhythm or async channel so blockers don’t wait four weeks. |
 | **Name intents in invites** | e.g. “Daily — **C3** sync; not for backlog reorder (**C2**)” reduces PO hijack. |
 | **Blends** | **Scrumban:** keep Scrum **C2/C4** time-boxes if helpful; add Kanban **WIP** and **aging** to **C3/C5**. **Phased + iterative:** use **gates** for **C6** at phase exits; use **Sprint Review–style C4** inside implementation for stakeholders. **SAFe + Kanban teams:** ART cadence (PI Planning, System Demo) provides **C1/C4** at program level; individual teams may use Kanban flow instead of iteration time-boxes. |
-| **Evidence** | For **C6** in regulated contexts, store **decisions** where **Steer** expects them ([`phased-delivery.md`](../phased-delivery.md)); git activity alone is rarely enough. |
+| **Evidence** | For **C6** in regulated contexts, store **decisions** where **Steer** expects them ([`phased-delivery.md`](https://forgesdlc.com/methodologies-phased-delivery.html)); git activity alone is rarely enough. |
 | **Tracking** | Ceremonies **consume** aggregates from [`sdlc/TRACKING-FOUNDATION.md`](../../../../sdlc/TRACKING-FOUNDATION.md) pattern repos—they don’t replace **work-unit ids** in commits. |
 
 ---
@@ -137,4 +137,4 @@ These apply **regardless** of framework; tune with your [roles](../roles-archety
 | [`ceremony-foundation.md`](ceremony-foundation.md) | Phase × intent matrix; **suggestions by intent** |
 | [`README.md`](README.md) | Package index |
 | [`roles-archetypes.md`](../roles-archetypes.md) | Who leads each intent |
-| [`agile.md`](../agile.md) | Blending under Agile umbrella |
+| [`agile.md`](https://forgesdlc.com/methodologies-agile.html) | Blending under Agile umbrella |

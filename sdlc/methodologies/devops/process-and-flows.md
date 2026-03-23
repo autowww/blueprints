@@ -108,4 +108,4 @@ Full curated list: [`REFERENCE-LINKS.md`](../REFERENCE-LINKS.md).
 
 ## 9. Internal links
 
-- [Ceremonies](ceremonies-prescriptive.md) · [Overview](../devops.md)
+- [Ceremonies](ceremonies-prescriptive.md) · [Overview](https://forgesdlc.com/methodologies-devops.html)

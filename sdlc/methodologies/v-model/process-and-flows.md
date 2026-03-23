@@ -83,4 +83,4 @@ Full curated list: [`REFERENCE-LINKS.md`](../REFERENCE-LINKS.md).
 
 ## 8. Internal links
 
-- [Ceremonies](ceremonies-prescriptive.md) · [Overview](../v-model.md)
+- [Ceremonies](ceremonies-prescriptive.md) · [Overview](https://forgesdlc.com/methodologies-v-model.html)

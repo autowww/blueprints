@@ -2,7 +2,7 @@
 
 **Purpose:** Map **DevOps** operational practices and feedback loops to methodology-neutral **intent types** in [`ceremony-foundation.md`](ceremony-foundation.md).
 
-**Canonical DevOps narrative:** [`../devops.md`](../devops.md) · [DORA](https://dora.dev/) · [Wikipedia — DevOps](https://en.wikipedia.org/wiki/DevOps)
+**Canonical DevOps narrative:** [`https://forgesdlc.com/methodologies-devops.html`](https://forgesdlc.com/methodologies-devops.html) · [DORA](https://dora.dev/) · [Wikipedia — DevOps](https://en.wikipedia.org/wiki/DevOps)
 
 **Note:** DevOps ceremonies **complement** development ceremonies (Scrum, Kanban, XP). Below covers **operational** and **pipeline** practices.
 

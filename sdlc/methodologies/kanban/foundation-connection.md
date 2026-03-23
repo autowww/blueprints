@@ -63,4 +63,4 @@ Kanban optimizes **flow** through a **visualized value stream** with **explicit 
 
 ## 7. Links
 
-- [`../kanban.md`](../kanban.md) · [ceremonies/kanban.md](../ceremonies/kanban.md) · [SDLC.md](../../SDLC.md)
+- [`https://forgesdlc.com/methodology-kanban.html`](https://forgesdlc.com/methodology-kanban.html) · [ceremonies/kanban.md](../ceremonies/kanban.md) · [SDLC.md](../../SDLC.md)

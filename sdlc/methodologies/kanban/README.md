@@ -2,7 +2,7 @@
 
 **Purpose:** Prescriptive operating detail for **flow-based** delivery using Kanban with this blueprint’s **tracking spine** and **ceremony intents (C1–C6)**.
 
-**Executive summary:** [`../kanban.md`](../kanban.md) · [Kanban Guide for Scrum Teams](https://kanbanguides.org/) (complementary) · [Essential Kanban Condensed](https://kanban.university/) (principles).
+**Executive summary:** [`https://forgesdlc.com/methodology-kanban.html`](https://forgesdlc.com/methodology-kanban.html) · [Kanban Guide for Scrum Teams](https://kanbanguides.org/) (complementary) · [Essential Kanban Condensed](https://kanban.university/) (principles).
 
 | Chapter | File |
 |---------|------|

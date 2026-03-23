@@ -2,7 +2,7 @@
 
 **Purpose:** Prescriptive **operating detail** for teams running Scrum alongside this blueprint: **roles**, **foundation fit** (tracking + ceremonies C1–C6 + archetypes), **events** with inputs/outputs/participants, and **process maps**.  
 
-**Executive summary + diagram:** [`../scrum.md`](../scrum.md) · [**Scrum Guide**](https://scrumguides.org/scrum-guide.html) (normative for Scrum terms).
+**Executive summary + diagram:** [`https://forgesdlc.com/methodology-scrum.html`](https://forgesdlc.com/methodology-scrum.html) · [**Scrum Guide**](https://scrumguides.org/scrum-guide.html) (normative for Scrum terms).
 
 | Chapter | File | Contents |
 |---------|------|----------|

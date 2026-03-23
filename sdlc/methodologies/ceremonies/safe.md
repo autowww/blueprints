@@ -2,7 +2,7 @@
 
 **Purpose:** Map **SAFe events** (team-level and program-level) to methodology-neutral **intent types** in [`ceremony-foundation.md`](ceremony-foundation.md).
 
-**Canonical SAFe narrative:** [`../safe.md`](../safe.md) · [**Scaled Agile Framework**](https://scaledagileframework.com/)
+**Canonical SAFe narrative:** [`https://forgesdlc.com/methodology-safe.html`](https://forgesdlc.com/methodology-safe.html) · [**Scaled Agile Framework**](https://scaledagileframework.com/)
 
 ---
 
@@ -63,7 +63,7 @@ See project [`TRACKING-CHALLENGES.md`](../../../../sdlc/TRACKING-CHALLENGES.md).
 | **System Demo** | Demo **integrated, working software** — not slides. Product Management should actively accept/reject features against criteria, not defer to later. |
 | **I&A** | Dedicate real time to the **problem-solving workshop** — do not let the quantitative review consume the entire session. Limit improvement items to top 1–3 that will actually be actioned. |
 | **ART Sync** | Keep focused on **impediments and dependencies** — not a status report. If no blockers, keep it short. |
-| **Iteration events** | Same as Scrum suggestions — see [`scrum.md`](scrum.md). Ensure team retro themes that affect the ART bubble up to I&A. |
+| **Iteration events** | Same as Scrum suggestions — see [`scrum.md`](https://forgesdlc.com/methodology-scrum.html). Ensure team retro themes that affect the ART bubble up to I&A. |
 
 For **cross-methodology** blend tips (e.g. SAFe ART with Kanban teams), see [`methodology-bridge.md`](methodology-bridge.md).
 

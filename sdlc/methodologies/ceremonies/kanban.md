@@ -2,7 +2,7 @@
 
 **Purpose:** Map **Kanban** feedback loops and common rituals to methodology-neutral **intent types** in [`ceremony-foundation.md`](ceremony-foundation.md).
 
-**Canonical Kanban narrative:** [`../kanban.md`](../kanban.md) · [Kanban Guide for Scrum Teams](https://www.scrum.org/resources/kanban-guide-scrum-teams) (when blending) · [Kanban University — Kanban Guide](https://kanban.university/kanban-guide)
+**Canonical Kanban narrative:** [`https://forgesdlc.com/methodology-kanban.html`](https://forgesdlc.com/methodology-kanban.html) · [Kanban Guide for Scrum Teams](https://www.scrum.org/resources/kanban-guide-scrum-teams) (when blending) · [Kanban University — Kanban Guide](https://kanban.university/kanban-guide)
 
 **Note:** Kanban does not mandate **one** global meeting set; names and cadence are **team and service** specific. Below maps **typical** practices.
 
@@ -25,7 +25,7 @@
 
 ## Tracking
 
-**Cycle time** and **queue time** need **board/tracker** data; git shows **activity**, not **waiting** or **blocked** time—[`../kanban.md`](../kanban.md).
+**Cycle time** and **queue time** need **board/tracker** data; git shows **activity**, not **waiting** or **blocked** time—[`https://forgesdlc.com/methodology-kanban.html`](https://forgesdlc.com/methodology-kanban.html).
 
 ---
 

@@ -76,6 +76,6 @@ Detail: [roles-archetypes.md](../roles-archetypes.md), [Spiral roles chapter](ro
 
 ## 7. References in-repo
 
-- [`../spiral.md`](../spiral.md) — methodology summary + diagram  
+- [`https://forgesdlc.com/methodologies-spiral.html`](https://forgesdlc.com/methodologies-spiral.html) — methodology summary + diagram  
 - [`../ceremonies/spiral.md`](../ceremonies/spiral.md) — fork table C1–C6  
 - [`../../SDLC.md`](../../SDLC.md) — phases and ceremony-intent overview  

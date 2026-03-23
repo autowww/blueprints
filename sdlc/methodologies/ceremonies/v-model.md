@@ -2,7 +2,7 @@
 
 **Purpose:** Map **V-Model** design reviews and test gates to methodology-neutral **intent types** in [`ceremony-foundation.md`](ceremony-foundation.md).
 
-**Canonical V-Model narrative:** [`../v-model.md`](../v-model.md) · [Wikipedia — V-model](https://en.wikipedia.org/wiki/V-model_(software_development))
+**Canonical V-Model narrative:** [`https://forgesdlc.com/methodologies-v-model.html`](https://forgesdlc.com/methodologies-v-model.html) · [Wikipedia — V-model](https://en.wikipedia.org/wiki/V-model_(software_development))
 
 **Note:** The V-Model's ceremonies center on **left-side reviews** (design gates) and **right-side reviews** (test gates). Below maps typical practices.
 

@@ -74,6 +74,6 @@ Detail: [roles-archetypes.md](../roles-archetypes.md), [Lean roles chapter](role
 
 ## 7. References in-repo
 
-- [`../lean.md`](../lean.md) — methodology summary + diagram  
+- [`https://forgesdlc.com/methodology-lean.html`](https://forgesdlc.com/methodology-lean.html) — methodology summary + diagram  
 - [`../ceremonies/lean.md`](../ceremonies/lean.md) — fork table C1–C6  
 - [`../../SDLC.md`](../../SDLC.md) — phases and ceremony-intent overview  

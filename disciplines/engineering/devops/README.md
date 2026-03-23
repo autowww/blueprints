@@ -6,7 +6,7 @@ DevOps answers **"how do we bridge development and operations for continuous, re
 
 | Document | Purpose |
 |----------|---------|
-| [**DEVOPS.md**](DEVOPS.md) | CALMS framework, Three Ways, DORA metrics, maturity model, cultural principles, competencies |
+| [**DEVOPS.md**](https://forgesdlc.com/discipline-devops.html) | CALMS framework, Three Ways, DORA metrics, maturity model, cultural principles, competencies |
 | [**DEVOPS-SDLC-PDLC-BRIDGE.md**](DEVOPS-SDLC-PDLC-BRIDGE.md) | How DevOps maps across SDLC phases A–F and PDLC phases P1–P6 — emphasis on Build/Verify/Release/Operate |
 | [**practices/**](practices/README.md) | Deep guides: CI/CD pipelines, infrastructure as code, GitOps, observability, incident management, chaos engineering |
 | [**tooling/**](tooling/README.md) | Container orchestration, artifact management, secrets management, deployment strategies |

@@ -82,7 +82,7 @@ Detail: [roles-archetypes.md](../roles-archetypes.md), [Forge roles chapter](rol
 
 ## 7. References in-repo
 
-- [`../forge.md`](../forge.md) — methodology summary + diagram
+- [`https://forgesdlc.com/methodology-overview.html`](https://forgesdlc.com/methodology-overview.html) — methodology summary + diagram
 - [`../ceremonies/forge.md`](../ceremonies/forge.md) — fork table C1–C6
 - [`../../SDLC.md`](../../SDLC.md) — phases and ceremony-intent overview
 - [`bellows/README.md`](bellows/README.md) — discipline challenge agents

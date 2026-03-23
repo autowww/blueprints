@@ -2,7 +2,7 @@
 
 **Purpose:** Prescriptive **operating detail** for teams running Forge alongside this blueprint: **roles**, **foundation fit** (tracking + ceremonies C1–C6 + archetypes), **ceremonies** with inputs/outputs/participants, **process maps**, **Bellows** (discipline challenge agents), **daily operations**, **product planning**, and **project setup**.
 
-**Executive summary + diagram:** [`../forge.md`](../forge.md)
+**Executive summary + diagram:** [`https://forgesdlc.com/methodology-overview.html`](https://forgesdlc.com/methodology-overview.html)
 
 | Chapter | File | Contents |
 |---------|------|----------|
@@ -21,6 +21,6 @@
 **Key references:**
 
 - **Spark = Task:** Spark occupies the Task level in any existing WBS hierarchy. No parallel namespace — enrich, don't duplicate. See [process-and-flows.md § Spark = Task](process-and-flows.md#spark--task-wbs-mapping) and [foundation-connection.md § tracking spine](foundation-connection.md).
-- **Lean tenets:** Forge must never add more ceremony than it removes waste. See [forge.md § Lean tenets](../forge.md#lean-tenets-keeping-forge-lightweight) and [foundation-connection.md § anti-patterns](foundation-connection.md#6-anti-patterns-prescriptive-dont).
+- **Lean tenets:** Forge must never add more ceremony than it removes waste. See [forge.md § Lean tenets](https://forgesdlc.com/methodology-overview.html#lean-tenets-keeping-forge-lightweight) and [foundation-connection.md § anti-patterns](foundation-connection.md#6-anti-patterns-prescriptive-dont).
 
 **Related blueprint:** [Roles & archetypes](../roles-archetypes.md) · [Ceremony foundation](../ceremonies/ceremony-foundation.md) · [Methodology bridge](../ceremonies/methodology-bridge.md) · [Forge ceremonies fork](../ceremonies/forge.md) · [Agentic SDLC](../agentic-sdlc.md) · [Disciplines hub](../../../disciplines/README.md)

@@ -54,4 +54,4 @@ XP emphasizes **technical excellence** (TDD, refactoring, CI, simple design) and
 
 ## 6. Links
 
-- [`../xp.md`](../xp.md) · [ceremonies/xp.md](../ceremonies/xp.md)
+- [`https://forgesdlc.com/methodology-xp.html`](https://forgesdlc.com/methodology-xp.html) · [ceremonies/xp.md](../ceremonies/xp.md)

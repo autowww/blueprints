@@ -4,7 +4,7 @@
   Copy this template into docs/product/discovery/ (or equivalent).
   Add one row per experiment. Keep invalidated experiments visible — they are organizational learning.
   See blueprints/pdlc/PDLC.md Phases P1–P2, P5 for context.
-  See blueprints/pdlc/approaches/lean-startup.md for experiment types.
+  See blueprints/pdlc/https://forgesdlc.com/pdlc-approaches-lean-startup.html for experiment types.
 -->
 
 ## Active opportunity

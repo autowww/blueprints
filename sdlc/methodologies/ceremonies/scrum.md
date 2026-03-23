@@ -2,7 +2,7 @@
 
 **Purpose:** Map **Scrum events** (Scrum Guide) to methodology-neutral **intent types** in [`ceremony-foundation.md`](ceremony-foundation.md).
 
-**Canonical Scrum narrative:** [`../scrum.md`](../scrum.md) · [**The Scrum Guide**](https://scrumguides.org/scrum-guide.html)
+**Canonical Scrum narrative:** [`https://forgesdlc.com/methodology-scrum.html`](https://forgesdlc.com/methodology-scrum.html) · [**The Scrum Guide**](https://scrumguides.org/scrum-guide.html)
 
 ---
 

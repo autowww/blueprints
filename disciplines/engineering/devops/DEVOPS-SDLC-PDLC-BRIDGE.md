@@ -10,7 +10,7 @@ This document maps **DevOps** practices to the two lifecycle frameworks:
 
 DevOps accelerates the feedback loop between product intent (PDLC) and technical execution (SDLC) by automating delivery, improving observability, and enabling rapid iteration.
 
-**Canonical sources:** [`DEVOPS.md`](DEVOPS.md) (this package) · [`PDLC.md`](../../../pdlc/PDLC.md) · [`SDLC.md`](../../../sdlc/SDLC.md).
+**Canonical sources:** [`DEVOPS.md`](https://forgesdlc.com/discipline-devops.html) (this package) · [`PDLC.md`](../../../pdlc/PDLC.md) · [`SDLC.md`](../../../sdlc/SDLC.md).
 
 ---
 
@@ -248,7 +248,7 @@ DevOps practices apply across all SDLC methodologies, with different emphasis:
 
 | Doc | Why |
 |-----|-----|
-| [`DEVOPS.md`](DEVOPS.md) | CALMS, Three Ways, DORA metrics, SRE, DevSecOps |
+| [`DEVOPS.md`](https://forgesdlc.com/discipline-devops.html) | CALMS, Three Ways, DORA metrics, SRE, DevSecOps |
 | [`practices/README.md`](practices/README.md) | CI/CD, IaC, GitOps, observability, incident management |
 | [`tooling/README.md`](tooling/README.md) | Container orchestration, deployment strategies, secrets management |
 | [`SDLC.md`](../../../sdlc/SDLC.md) | Delivery phases A–F, DoD, CI/CD section |

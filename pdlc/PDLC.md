@@ -50,7 +50,7 @@ graph LR
   P5 -.->|"continuous discovery"| P1
 ```
 
-**Continuous discovery:** In mature teams, P1–P2 run **in parallel** with SDLC delivery (Dual-Track Agile — see [`approaches/dual-track-agile.md`](approaches/dual-track-agile.md)). The sequential diagram shows logical dependency; real cadence overlaps.
+**Continuous discovery:** In mature teams, P1–P2 run **in parallel** with SDLC delivery (Dual-Track Agile — see [`https://forgesdlc.com/pdlc-approaches-dual-track-agile.html`](https://forgesdlc.com/pdlc-approaches-dual-track-agile.html)). The sequential diagram shows logical dependency; real cadence overlaps.
 
 ---
 
@@ -72,7 +72,7 @@ graph LR
 
 **Exit:** The team has **evidence** (not just intuition) that a meaningful, underserved problem exists for a defined audience. Stakeholders agree the problem is worth exploring solutions for.
 
-**Approaches that help here:** [Design Thinking](approaches/design-thinking.md) (Empathize + Define), [Opportunity Solution Trees](approaches/opportunity-solution-trees.md), [Lean Startup](approaches/lean-startup.md) (problem interviews).
+**Approaches that help here:** [Design Thinking](https://forgesdlc.com/pdlc-approaches-design-thinking.html) (Empathize + Define), [Opportunity Solution Trees](https://forgesdlc.com/pdlc-approaches-opportunity-solution-trees.html), [Lean Startup](https://forgesdlc.com/pdlc-approaches-lean-startup.html) (problem interviews).
 
 ---
 
@@ -94,7 +94,7 @@ graph LR
 
 **Exit:** At least one solution concept has **evidence** of desirability (users want it), viability (business case exists), feasibility (team can build it), and usability (users can use it). The team is ready to commit strategy and resources.
 
-**Approaches that help here:** [Design Thinking](approaches/design-thinking.md) (Ideate + Prototype + Test), [Lean Startup](approaches/lean-startup.md) (Build-Measure-Learn), [Stage-Gate](approaches/stage-gate.md) (Gate 2: business case).
+**Approaches that help here:** [Design Thinking](https://forgesdlc.com/pdlc-approaches-design-thinking.html) (Ideate + Prototype + Test), [Lean Startup](https://forgesdlc.com/pdlc-approaches-lean-startup.html) (Build-Measure-Learn), [Stage-Gate](https://forgesdlc.com/pdlc-approaches-stage-gate.html) (Gate 2: business case).
 
 ---
 
@@ -176,7 +176,7 @@ This is the domain of [`blueprints/sdlc/`](../sdlc/README.md). PDLC does not red
 
 **Exit:** Product health targets are met (adoption, retention, revenue within acceptable range), **or** the team makes a strategic decision — **pivot** (back to P1 with new evidence), **invest** (more P5 iteration), or **harvest** (transition to P6).
 
-**Feedback loop:** Insights from P5 are the **primary input** to continuous discovery (P1). In Dual-Track teams, this loop runs continuously. See [`approaches/dual-track-agile.md`](approaches/dual-track-agile.md).
+**Feedback loop:** Insights from P5 are the **primary input** to continuous discovery (P1). In Dual-Track teams, this loop runs continuously. See [`https://forgesdlc.com/pdlc-approaches-dual-track-agile.html`](https://forgesdlc.com/pdlc-approaches-dual-track-agile.html).
 
 ---
 
@@ -226,7 +226,7 @@ Between PDLC phases, explicit **go/kill/pivot** decisions prevent wasted investm
 
 Use [`templates/STAGE-GATE-REVIEW.template.md`](templates/STAGE-GATE-REVIEW.template.md) to document gate decisions.
 
-See [`approaches/stage-gate.md`](approaches/stage-gate.md) for the full Stage-Gate framework.
+See [`https://forgesdlc.com/pdlc-approaches-stage-gate.html`](https://forgesdlc.com/pdlc-approaches-stage-gate.html) for the full Stage-Gate framework.
 
 ---
 

@@ -4,7 +4,7 @@
   Copy this template into docs/product/ (or equivalent).
   Complete one review per gate decision.
   See blueprints/pdlc/PDLC.md §4 for gate definitions G1–G5.
-  See blueprints/pdlc/approaches/stage-gate.md for the full framework.
+  See blueprints/pdlc/https://forgesdlc.com/pdlc-approaches-stage-gate.html for the full framework.
 -->
 
 ## Gate information

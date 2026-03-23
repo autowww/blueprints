@@ -2,7 +2,7 @@
 
 **Purpose:** Map **Spiral Model** quadrant events and anchor-point milestones to methodology-neutral **intent types** in [`ceremony-foundation.md`](ceremony-foundation.md).
 
-**Canonical Spiral narrative:** [`../spiral.md`](../spiral.md) · [Wikipedia — Spiral model](https://en.wikipedia.org/wiki/Spiral_model)
+**Canonical Spiral narrative:** [`https://forgesdlc.com/methodologies-spiral.html`](https://forgesdlc.com/methodologies-spiral.html) · [Wikipedia — Spiral model](https://en.wikipedia.org/wiki/Spiral_model)
 
 **Note:** The Spiral Model's ceremonies revolve around **quadrant transitions** and **milestone gates**. Below maps typical practices; actual cadence depends on spiral scope and risk profile.
 

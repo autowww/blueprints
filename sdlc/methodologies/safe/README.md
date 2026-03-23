@@ -2,7 +2,7 @@
 
 **Purpose:** Prescriptive **operating detail** for teams running SAFe alongside this blueprint: **roles**, **foundation fit** (tracking + ceremonies C1–C6 + archetypes), **events** with inputs/outputs/participants, and **process maps**.
 
-**Executive summary:** [`../safe.md`](../safe.md) · [**Scaled Agile Framework**](https://scaledagileframework.com/) (normative for SAFe terms).
+**Executive summary:** [`https://forgesdlc.com/methodology-safe.html`](https://forgesdlc.com/methodology-safe.html) · [**Scaled Agile Framework**](https://scaledagileframework.com/) (normative for SAFe terms).
 
 | Chapter | File | Contents |
 |---------|------|----------|

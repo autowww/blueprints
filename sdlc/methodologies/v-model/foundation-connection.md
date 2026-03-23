@@ -71,6 +71,6 @@ V-Model teams maintain the blueprint tracking spine with traceability emphasis:
 
 ## 7. References in-repo
 
-- [`../v-model.md`](../v-model.md) — methodology summary + diagram  
+- [`https://forgesdlc.com/methodologies-v-model.html`](https://forgesdlc.com/methodologies-v-model.html) — methodology summary + diagram  
 - [`../ceremonies/v-model.md`](../ceremonies/v-model.md) — fork table C1–C6  
 - [`../../SDLC.md`](../../SDLC.md) — phases and ceremony-intent overview  

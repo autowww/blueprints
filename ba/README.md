@@ -6,7 +6,7 @@ BA answers **"what do stakeholders need, and does the solution satisfy those nee
 
 | Document | Purpose |
 |----------|---------|
-| [**BABOK.md**](../disciplines/product/ba/BABOK.md) | Six knowledge areas, underlying competencies, BABOK v3 alignment |
+| [**BABOK.md**](../https://forgesdlc.com/discipline-business-analysis.html) | Six knowledge areas, underlying competencies, BABOK v3 alignment |
 | [**BA-SDLC-PDLC-BRIDGE.md**](../disciplines/product/ba/BA-SDLC-PDLC-BRIDGE.md) | How BA maps across PDLC P1–P6 and SDLC A–F — role mapping, technique selection, anti-patterns |
 | [**knowledge-areas/**](../disciplines/product/ba/knowledge-areas/README.md) | Deep guides per knowledge area |
 | [**techniques/**](../disciplines/product/ba/techniques/README.md) | Master catalog of BA techniques mapped to knowledge areas and lifecycle phases |

@@ -2,7 +2,7 @@
 
 **Purpose:** Define a **repeatable, machine- and human-friendly** shape for specifying **inputs, outputs, preconditions, and artifacts** for any **ceremony intent (C1–C6)** or **named process slot** (planning, gate, refinement, …). Use this so **agents**, **engineers**, and **product** share one contract.
 
-**Pairs with:** [Spec-driven development overview](../spec-driven-development.md) · [Ceremony foundation](../ceremonies/ceremony-foundation.md) · Templates in [`../../templates/sdd/`](../../templates/sdd/README.md)
+**Pairs with:** [Spec-driven development overview](https://forgesdlc.com/methodology-spec-driven.html) · [Ceremony foundation](../ceremonies/ceremony-foundation.md) · Templates in [`../../templates/sdd/`](../../templates/sdd/README.md)
 
 ---
 

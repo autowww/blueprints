@@ -2,7 +2,7 @@
 
 **Purpose:** Map **Lean Software Development** practices and improvement rituals to methodology-neutral **intent types** in [`ceremony-foundation.md`](ceremony-foundation.md).
 
-**Canonical Lean narrative:** [`../lean.md`](../lean.md) · [Wikipedia — Lean software development](https://en.wikipedia.org/wiki/Lean_software_development)
+**Canonical Lean narrative:** [`https://forgesdlc.com/methodology-lean.html`](https://forgesdlc.com/methodology-lean.html) · [Wikipedia — Lean software development](https://en.wikipedia.org/wiki/Lean_software_development)
 
 **Note:** Lean does not mandate a fixed ceremony calendar. It provides **improvement practices** that teams schedule based on need and cadence. Below maps **typical** Lean practices to foundation intents.
 
@@ -28,7 +28,7 @@
 
 ## Tracking
 
-**Lead time** (demand → delivery) and **cycle time** (start → done) are the primary Lean metrics. Git shows **activity timestamps**, not **queue time** or **blocked time** — use board/tracker data for accurate flow measurement. See [`../lean.md`](../lean.md).
+**Lead time** (demand → delivery) and **cycle time** (start → done) are the primary Lean metrics. Git shows **activity timestamps**, not **queue time** or **blocked time** — use board/tracker data for accurate flow measurement. See [`https://forgesdlc.com/methodology-lean.html`](https://forgesdlc.com/methodology-lean.html).
 
 ---
 

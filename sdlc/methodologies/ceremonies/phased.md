@@ -2,7 +2,7 @@
 
 **Purpose:** Map **phase gates**, reviews, and formal assurance to methodology-neutral **intent types** in [`ceremony-foundation.md`](ceremony-foundation.md).
 
-**Canonical narrative:** [`../phased-delivery.md`](../phased-delivery.md)
+**Canonical narrative:** [`https://forgesdlc.com/methodologies-phased-delivery.html`](https://forgesdlc.com/methodologies-phased-delivery.html)
 
 ---
 
@@ -25,7 +25,7 @@ Names vary by standard (e.g. ISO/IEC/IEEE 12207-style lifecycles). Illustrative 
 
 ## Tracking vs compliance
 
-**Git** shows engineering **activity**; **signatures**, **baselines**, and **gate minutes** usually live in **ALM, QMS, or document control**—[`../phased-delivery.md`](../phased-delivery.md).
+**Git** shows engineering **activity**; **signatures**, **baselines**, and **gate minutes** usually live in **ALM, QMS, or document control**—[`https://forgesdlc.com/methodologies-phased-delivery.html`](https://forgesdlc.com/methodologies-phased-delivery.html).
 
 ---
 

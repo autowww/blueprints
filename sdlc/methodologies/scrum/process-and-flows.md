@@ -110,4 +110,4 @@ Full curated URL list with executive summaries: [`REFERENCE-LINKS.md`](../REFERE
 
 ## 9. Internal links
 
-- [Ceremonies detail](ceremonies-prescriptive.md) · [Foundation](foundation-connection.md) · [Overview](../scrum.md)
+- [Ceremonies detail](ceremonies-prescriptive.md) · [Foundation](foundation-connection.md) · [Overview](https://forgesdlc.com/methodology-scrum.html)

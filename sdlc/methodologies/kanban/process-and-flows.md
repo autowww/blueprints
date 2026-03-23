@@ -78,4 +78,4 @@ Full curated list: [`REFERENCE-LINKS.md`](../REFERENCE-LINKS.md).
 
 ## 8. Internal links
 
-- [Ceremonies](ceremonies-prescriptive.md) · [Overview](../kanban.md)
+- [Ceremonies](ceremonies-prescriptive.md) · [Overview](https://forgesdlc.com/methodology-kanban.html)

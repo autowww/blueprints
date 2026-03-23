@@ -72,6 +72,6 @@ Detail: [roles-archetypes.md](../roles-archetypes.md), [Scrum roles chapter](rol
 
 ## 7. References in-repo
 
-- [`../scrum.md`](../scrum.md) — methodology summary + diagram  
+- [`https://forgesdlc.com/methodology-scrum.html`](https://forgesdlc.com/methodology-scrum.html) — methodology summary + diagram  
 - [`../ceremonies/scrum.md`](../ceremonies/scrum.md) — fork table C1–C6  
 - [`../../SDLC.md`](../../SDLC.md) — phases and ceremony-intent overview  

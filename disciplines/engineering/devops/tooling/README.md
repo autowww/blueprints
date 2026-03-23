@@ -26,13 +26,13 @@
 | **Deployment strategies** | [`../practices/ci-cd.md`](../practices/ci-cd.md) | Blue-green, canary, rolling, feature flags, dark launches — selection by risk tolerance |
 | **Platform engineering** | [`container-orchestration.md`](container-orchestration.md) (platform layer) | Internal developer platforms, self-service provisioning, golden paths, developer experience |
 
-**Core knowledge:** [`DEVOPS.md`](../DEVOPS.md) — CALMS, Three Ways, DORA metrics, and how tooling supports the Three Ways.
+**Core knowledge:** [`DEVOPS.md`](https://forgesdlc.com/discipline-devops.html) — CALMS, Three Ways, DORA metrics, and how tooling supports the Three Ways.
 
 **Practices:** [`practices/README.md`](../practices/README.md) — CI/CD, IaC/GitOps, observability, incident management.
 
 **Note:** Artifact and secrets tooling evolves quickly; compare vendor roadmaps against your compliance tier (e.g. FedRAMP, SOC 2) before standardizing. Deep pipeline patterns remain in [`../practices/ci-cd.md`](../practices/ci-cd.md); cluster delivery patterns in [`../practices/iac-gitops.md`](../practices/iac-gitops.md).
 
-**Quick links:** [Container & platform](container-orchestration.md) · [Practices index](../practices/README.md) · [DevOps body of knowledge](../DEVOPS.md)
+**Quick links:** [Container & platform](container-orchestration.md) · [Practices index](../practices/README.md) · [DevOps body of knowledge](https://forgesdlc.com/discipline-devops.html)
 
 ---
 

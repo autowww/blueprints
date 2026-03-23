@@ -78,4 +78,4 @@ flowchart LR
 
 ## 8. Internal links
 
-- [Ceremonies](ceremonies-prescriptive.md) · [Overview](../phased-delivery.md)
+- [Ceremonies](ceremonies-prescriptive.md) · [Overview](https://forgesdlc.com/methodologies-phased-delivery.html)

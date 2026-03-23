@@ -10,7 +10,7 @@ This document closes the **understanding gap** between business analysis (BA) an
 
 BA is the discipline that feeds both lifecycles with structured understanding of needs, constraints, and value — and evaluates whether the delivered solution meets those needs.
 
-**Canonical sources:** [`BABOK.md`](BABOK.md) (this package) · [`PDLC.md`](../../../pdlc/PDLC.md) · [`SDLC.md`](../../../sdlc/SDLC.md) · [`PDLC-SDLC-BRIDGE.md`](../../../pdlc/PDLC-SDLC-BRIDGE.md).
+**Canonical sources:** [`BABOK.md`](https://forgesdlc.com/discipline-business-analysis.html) (this package) · [`PDLC.md`](../../../pdlc/PDLC.md) · [`SDLC.md`](../../../sdlc/SDLC.md) · [`PDLC-SDLC-BRIDGE.md`](../../../pdlc/PDLC-SDLC-BRIDGE.md).
 
 ---
 
@@ -328,7 +328,7 @@ Requirements baselined after stakeholder review. Change control: any addition re
 
 | Doc | Why |
 |-----|-----|
-| [`BABOK.md`](BABOK.md) | Knowledge areas, competencies, perspectives overview |
+| [`BABOK.md`](https://forgesdlc.com/discipline-business-analysis.html) | Knowledge areas, competencies, perspectives overview |
 | [`PDLC-SDLC-BRIDGE.md`](../../../pdlc/PDLC-SDLC-BRIDGE.md) | How PDLC and SDLC relate without the BA lens |
 | [`SDLC.md`](../../../sdlc/SDLC.md) | Delivery phases A–F, DoD |
 | [`PDLC.md`](../../../pdlc/PDLC.md) | Product phases P1–P6, stage gates |

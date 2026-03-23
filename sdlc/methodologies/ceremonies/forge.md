@@ -2,7 +2,7 @@
 
 **Purpose:** Map **Forge ceremonies** to methodology-neutral **intent types** in [`ceremony-foundation.md`](ceremony-foundation.md).
 
-**Canonical Forge narrative:** [`../forge.md`](../forge.md) · [Prescriptive ceremonies](../forge/ceremonies-prescriptive.md)
+**Canonical Forge narrative:** [`https://forgesdlc.com/methodology-overview.html`](https://forgesdlc.com/methodology-overview.html) · [Prescriptive ceremonies](../forge/ceremonies-prescriptive.md)
 
 ---
 
@@ -47,7 +47,7 @@
 
 For **cross-methodology** blend tips (e.g. Forge + Kanban flow), see [`methodology-bridge.md`](methodology-bridge.md).
 
-For **lean tenets** (keeping Forge lightweight), see [`../forge.md` § Lean tenets](../forge.md#lean-tenets-keeping-forge-lightweight).
+For **lean tenets** (keeping Forge lightweight), see [`https://forgesdlc.com/methodology-overview.html` § Lean tenets](https://forgesdlc.com/methodology-overview.html#lean-tenets-keeping-forge-lightweight).
 
 ---
 

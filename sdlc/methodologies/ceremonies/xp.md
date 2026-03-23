@@ -2,7 +2,7 @@
 
 **Purpose:** Map **XP practices** that behave like **recurring collaboration** to methodology-neutral **intent types** in [`ceremony-foundation.md`](ceremony-foundation.md).
 
-**Canonical narrative:** [`../xp.md`](../xp.md)
+**Canonical narrative:** [`https://forgesdlc.com/methodology-xp.html`](https://forgesdlc.com/methodology-xp.html)
 
 XP emphasizes **values** and **technical practices**; some map cleanly to **ceremony intents**, others are **habits** rather than meetings.
 
@@ -19,7 +19,7 @@ XP emphasizes **values** and **technical practices**; some map cleanly to **cere
 | **Pair programming / ensemble** | **C3 Sync** (micro) + **C6** (continuous review) | **Review in the moment**; not a calendar ceremony but satisfies **coordination** and **quality** intent. |
 | **On-site customer** | **C1** + **C4** (ongoing) | **Demand** archetype **embedded**—reduces need for heavy periodic **C4** batches. |
 
-**C6** is **strongly embedded** in **TDD**, **CI**, and **collective ownership**—see [`../xp.md`](../xp.md).
+**C6** is **strongly embedded** in **TDD**, **CI**, and **collective ownership**—see [`https://forgesdlc.com/methodology-xp.html`](https://forgesdlc.com/methodology-xp.html).
 
 ---
 

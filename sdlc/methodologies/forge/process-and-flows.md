@@ -207,4 +207,4 @@ flowchart TD
 
 ## 11. Links
 
-- [Ceremonies detail](ceremonies-prescriptive.md) · [Foundation](foundation-connection.md) · [Overview](../forge.md)
+- [Ceremonies detail](ceremonies-prescriptive.md) · [Foundation](foundation-connection.md) · [Overview](https://forgesdlc.com/methodology-overview.html)

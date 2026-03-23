@@ -2,7 +2,7 @@
 
 **Purpose:** Prescriptive detail for XP **practices** and **events** mapped to the blueprint **foundation**.
 
-**Executive summary:** [`../xp.md`](../xp.md) · [Extreme Programming](http://www.extremeprogramming.org/) (community reference).
+**Executive summary:** [`https://forgesdlc.com/methodology-xp.html`](https://forgesdlc.com/methodology-xp.html) · [Extreme Programming](http://www.extremeprogramming.org/) (community reference).
 
 | Chapter | File |
 |---------|------|

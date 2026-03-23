@@ -71,6 +71,6 @@ DevOps teams maintain the blueprint tracking spine with pipeline emphasis:
 
 ## 7. References in-repo
 
-- [`../devops.md`](../devops.md) — methodology summary + diagram  
+- [`https://forgesdlc.com/methodologies-devops.html`](https://forgesdlc.com/methodologies-devops.html) — methodology summary + diagram  
 - [`../ceremonies/devops.md`](../ceremonies/devops.md) — fork table C1–C6  
 - [`../../SDLC.md`](../../SDLC.md) — phases and ceremony-intent overview  

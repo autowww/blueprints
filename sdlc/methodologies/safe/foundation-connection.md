@@ -81,6 +81,6 @@ Detail: [roles-archetypes.md](../roles-archetypes.md), [SAFe roles chapter](role
 
 ## 7. References in-repo
 
-- [`../safe.md`](../safe.md) — methodology summary
+- [`https://forgesdlc.com/methodology-safe.html`](https://forgesdlc.com/methodology-safe.html) — methodology summary
 - [`../ceremonies/safe.md`](../ceremonies/safe.md) — fork table C1–C6
 - [`../../SDLC.md`](../../SDLC.md) — phases and ceremony-intent overview

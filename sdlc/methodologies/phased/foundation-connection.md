@@ -60,4 +60,4 @@ Phased projects often use documents more than boards; still maintain:
 
 ## 6. Links
 
-- [`../phased-delivery.md`](../phased-delivery.md) · [ceremonies/phased.md](../ceremonies/phased.md)
+- [`https://forgesdlc.com/methodologies-phased-delivery.html`](https://forgesdlc.com/methodologies-phased-delivery.html) · [ceremonies/phased.md](../ceremonies/phased.md)

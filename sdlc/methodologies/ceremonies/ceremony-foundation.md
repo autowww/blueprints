@@ -6,7 +6,7 @@ This file defines **why** recurring delivery collaboration exists in this bluepr
 
 **Pairs with:** [`roles-archetypes.md`](../roles-archetypes.md) (**who**), [`SDLC.md`](../../SDLC.md) Phases A–F (**what artifacts the lifecycle expects**), and (in adopting repos) [`sdlc/TRACKING-FOUNDATION.md`](../../../../sdlc/TRACKING-FOUNDATION.md) (**contributor → events → work units**). **SDD I/O (inputs/outputs/examples per C1–C6):** [`spec-driven/ceremonies-sdd.md`](../spec-driven/ceremonies-sdd.md) · template [`templates/sdd/CEREMONY-INTENT.template.md`](../../templates/sdd/CEREMONY-INTENT.template.md).
 
-**Forks (methodology-specific):** [Scrum](scrum.md) · [Kanban](kanban.md) · [Phased](phased.md) · [XP](xp.md) · [Index](README.md)
+**Forks (methodology-specific):** [Scrum](https://forgesdlc.com/methodology-scrum.html) · [Kanban](https://forgesdlc.com/methodology-kanban.html) · [Phased](phased.md) · [XP](https://forgesdlc.com/methodology-xp.html) · [Index](README.md)
 
 **Bridge (intents ↔ methodology names):** [`methodology-bridge.md`](methodology-bridge.md) — crosswalk matrix, blend suggestions, how to map your calendar.
 
@@ -139,7 +139,7 @@ Methodology-neutral **hints** for running or replacing ceremonies. For **named**
 
 1. **Ceremony ≠ meeting** — The **outcome** matters; async boards, recorded reviews, or written gate packets can satisfy the **intent** if transparency and decisions are real.
 2. **Foundation does not prescribe cadence** — Sprints, weekly replenishment, or phase gates live in **methodology forks** and project policy.
-3. **Git is not the ceremony** — Commits support **C3/C4/C6** narratives; **Sprint Goals**, **blockers**, **acceptance**, and **sign-offs** usually need **ALM, board, or compliance** records—see [Scrum fork](scrum.md) table “What git approximates.”
+3. **Git is not the ceremony** — Commits support **C3/C4/C6** narratives; **Sprint Goals**, **blockers**, **acceptance**, and **sign-offs** usually need **ALM, board, or compliance** records—see [Scrum fork](https://forgesdlc.com/methodology-scrum.html) table “What git approximates.”
 4. **One pipeline for identity** — Repos using the tracking foundation keep **Contributor** in the **event stream**; ceremony attendance does not replace **work-unit linkage** in commits when that is your convention.
 5. **Avoid duplicate foundations** — Do not invent parallel “ceremony taxonomies” per team; add **project** notes in `sdlc/`, not new blueprint intent types, unless you extend this file deliberately.
 
@@ -151,9 +151,9 @@ Methodology-neutral **hints** for running or replacing ceremonies. For **named**
 |-----|-----|
 | [`methodology-bridge.md`](methodology-bridge.md) | **Crosswalk** C1–C6 ↔ Scrum/Kanban/phased/XP names |
 | [`roles-archetypes.md`](../roles-archetypes.md) | **Who** leads and tweaks by methodology |
-| [`scrum.md`](../scrum.md) | Scrum events (source narrative) |
-| [`kanban.md`](../kanban.md) | Flow, replenishment, reviews |
-| [`phased-delivery.md`](../phased-delivery.md) | Gates and baselines |
-| [`xp.md`](../xp.md) | Practices and rhythm |
+| [`scrum.md`](https://forgesdlc.com/methodology-scrum.html) | Scrum events (source narrative) |
+| [`kanban.md`](https://forgesdlc.com/methodology-kanban.html) | Flow, replenishment, reviews |
+| [`phased-delivery.md`](https://forgesdlc.com/methodologies-phased-delivery.html) | Gates and baselines |
+| [`xp.md`](https://forgesdlc.com/methodology-xp.html) | Practices and rhythm |
 | [`agentic-sdlc.md`](../agentic-sdlc.md) | Human vs agent in rituals |
 | [Project `TRACKING-CHALLENGES`](../../../../sdlc/TRACKING-CHALLENGES.md) | Limits of commit-based proxies |

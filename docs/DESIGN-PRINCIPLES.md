@@ -158,7 +158,7 @@ Links in Markdown source **must** use descriptive, human-readable text — never
 | Bad | Good |
 |-----|------|
 | `` [`blueprints/sdlc/`](../sdlc/README.md) `` | `[SDLC handbook](../sdlc/README.md)` |
-| `` [`DEVOPS.md`](DEVOPS.md) `` | `[DevOps body of knowledge](DEVOPS.md)` |
+| `` [`DEVOPS.md`](https://forgesdlc.com/discipline-devops.html) `` | `[DevOps body of knowledge](https://forgesdlc.com/discipline-devops.html)` |
 | `` [`practices/README.md`](practices/README.md) `` | `[Practices overview](practices/README.md)` |
 
 The reader should understand where a link goes without seeing the URL. The builder automatically rewrites `.md` hrefs to their corresponding HTML handbook pages, and replaces path-like link text with the target page's title — but well-authored source should not rely on this fallback.

@@ -140,5 +140,5 @@ Team-level events are identical to Scrum events — see [`../scrum/ceremonies-pr
 
 - [`../ceremonies/safe.md`](../ceremonies/safe.md) — intent mapping table
 - [`../ceremonies/ceremony-foundation.md`](../ceremonies/ceremony-foundation.md) — C1–C6 intents
-- [`../safe.md`](../safe.md) — SAFe methodology summary
+- [`https://forgesdlc.com/methodology-safe.html`](https://forgesdlc.com/methodology-safe.html) — SAFe methodology summary
 - [`roles.md`](roles.md) — event participation matrix

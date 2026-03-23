@@ -12,4 +12,4 @@
 
 **Handbook:** [Overview](../../docs/spec-driven.html) · [SDD schema](../../docs/spec-driven-sdd-schema.html) · [Ceremonies SDD](../../docs/spec-driven-sdd-ceremonies.html) · [Process SDD](../../docs/spec-driven-sdd-process.html)
 
-**Umbrella overview:** [spec-driven-development.md](../spec-driven-development.md)
+**Umbrella overview:** [spec-driven-development.md](https://forgesdlc.com/methodology-spec-driven.html)

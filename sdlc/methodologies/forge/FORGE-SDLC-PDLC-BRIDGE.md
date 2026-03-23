@@ -6,7 +6,7 @@
 
 | Domain | Source |
 |--------|--------|
-| **Forge** | [`../forge.md`](../forge.md), this package |
+| **Forge** | [`https://forgesdlc.com/methodology-overview.html`](https://forgesdlc.com/methodology-overview.html), this package |
 | **SDLC** | [`../../SDLC.md`](../../SDLC.md) — phases A–F, DoD, ceremonies |
 | **PDLC** | [`../../../pdlc/PDLC.md`](../../../pdlc/PDLC.md) — phases P1–P6, stage gates |
 | **PDLC ↔ SDLC** | [`../../../pdlc/PDLC-SDLC-BRIDGE.md`](../../../pdlc/PDLC-SDLC-BRIDGE.md) — cross-lifecycle alignment |
@@ -160,7 +160,7 @@ flowchart LR
 
 | Doc | Why |
 |-----|-----|
-| [`forge.md`](../forge.md) | Forge methodology summary |
+| [`forge.md`](https://forgesdlc.com/methodology-overview.html) | Forge methodology summary |
 | [`../../SDLC.md`](../../SDLC.md) | Delivery phases A–F |
 | [`../../../pdlc/PDLC.md`](../../../pdlc/PDLC.md) | Product phases P1–P6 |
 | [`../../../pdlc/PDLC-SDLC-BRIDGE.md`](../../../pdlc/PDLC-SDLC-BRIDGE.md) | Cross-lifecycle bridge |

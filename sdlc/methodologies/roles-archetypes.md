@@ -335,7 +335,7 @@ Typical titles—your org may differ. Cells marked **—** mean the methodology 
 | **Assure & ship** | DoD (team) + PO acceptance; QA org optional | Policies; column DoD; release cadence | QA / IV&V; formal release sign-off | TDD + CI embedded in Developers |
 | **Steer & govern** | Stakeholders; org outside team | Portfolio / steering | Tollgates; CCB; compliance | Light; regulation adds weight |
 
-**Deep dives:** [Scrum](scrum.md) · [Kanban](kanban.md) · [Phased delivery](phased-delivery.md) · [XP](xp.md) · [Lean](lean.md) · [Spiral](spiral.md) · [V-Model](v-model.md) · [DevOps](devops.md) · [Agile umbrella](agile.md)
+**Deep dives:** [Scrum](https://forgesdlc.com/methodology-scrum.html) · [Kanban](https://forgesdlc.com/methodology-kanban.html) · [Phased delivery](https://forgesdlc.com/methodologies-phased-delivery.html) · [XP](https://forgesdlc.com/methodology-xp.html) · [Lean](https://forgesdlc.com/methodology-lean.html) · [Spiral](https://forgesdlc.com/methodologies-spiral.html) · [V-Model](https://forgesdlc.com/methodologies-v-model.html) · [DevOps](https://forgesdlc.com/methodologies-devops.html) · [Agile umbrella](https://forgesdlc.com/methodologies-agile.html)
 
 ---
 
@@ -407,7 +407,7 @@ Use this when you think **methodology-first** (“we picked Scrum—what happens
 - **Assure:** **Automated pipeline gates** and **SLO/error budget** management. Post-mortems extract learning from incidents. Continuous, not phase-based.
 - **Steer:** Governance through **automation and policies**. Error budgets make feature vs reliability trade-offs data-driven.
 
-### Agile umbrella ([`agile.md`](agile.md))
+### Agile umbrella ([`agile.md`](https://forgesdlc.com/methodologies-agile.html))
 
 **Agile** does not add a sixth archetype. Teams **blend**: e.g. **Scrum** cadence + **Kanban** flow metrics + **XP** practices. **Tweaks stack**: name **who** holds each archetype after you choose the **primary** cadence (iteration vs flow vs gates).
 
@@ -436,7 +436,7 @@ If the project adds **`sdlc/TRACKING-FOUNDATION.md`**, remember:
 - **Archetypes / titles** answer **process** (“who decides?”).
 - **Contributor** answers **telemetry** (“who appears in commits or logged events?”).
 
-A **Product Owner** who never commits may be **invisible** in commit-only dashboards; that is a **reporting limit**, not proof they did not contribute. See [agentic SDLC](agentic-sdlc.md) for **human vs bot** identity policy.
+A **Product Owner** who never commits may be **invisible** in commit-only dashboards; that is a **reporting limit**, not proof they did not contribute. See [agentic SDLC](https://forgesdlc.com/agentic-sdlc.html) for **human vs bot** identity policy.
 
 ---
 
@@ -446,12 +446,12 @@ A **Product Owner** who never commits may be **invisible** in commit-only dashbo
 |-----|-----|
 | [`SDLC.md`](../SDLC.md) §1–2 | Minimal **Owner** / **Implementer** and phase obligations |
 | [Ceremonies — foundation](ceremonies/ceremony-foundation.md) | **Intent types** C1–C6 × phases × archetypes (who leads rituals) |
-| [Scrum](scrum.md) | Official **accountabilities** and events |
-| [Kanban](kanban.md) | Service-oriented **roles** and policies |
-| [Phased delivery](phased-delivery.md) | **Gates** and **Steer & govern** |
-| [XP](xp.md) | Practices that **merge** quality into **Build** |
-| [Lean](lean.md) | Value-stream thinking; eliminate waste; empower the team |
-| [Spiral](spiral.md) | Risk-driven iteration; anchor-point milestones |
-| [V-Model](v-model.md) | Verification/validation pairing; traceability |
-| [DevOps](devops.md) | Culture + practices unifying Dev and Ops; CI/CD, monitoring |
-| [Agentic SDLC](agentic-sdlc.md) | Agents, review, contributor identity |
+| [Scrum](https://forgesdlc.com/methodology-scrum.html) | Official **accountabilities** and events |
+| [Kanban](https://forgesdlc.com/methodology-kanban.html) | Service-oriented **roles** and policies |
+| [Phased delivery](https://forgesdlc.com/methodologies-phased-delivery.html) | **Gates** and **Steer & govern** |
+| [XP](https://forgesdlc.com/methodology-xp.html) | Practices that **merge** quality into **Build** |
+| [Lean](https://forgesdlc.com/methodology-lean.html) | Value-stream thinking; eliminate waste; empower the team |
+| [Spiral](https://forgesdlc.com/methodologies-spiral.html) | Risk-driven iteration; anchor-point milestones |
+| [V-Model](https://forgesdlc.com/methodologies-v-model.html) | Verification/validation pairing; traceability |
+| [DevOps](https://forgesdlc.com/methodologies-devops.html) | Culture + practices unifying Dev and Ops; CI/CD, monitoring |
+| [Agentic SDLC](https://forgesdlc.com/agentic-sdlc.html) | Agents, review, contributor identity |

@@ -165,7 +165,7 @@ Dependencies are first surfaced at **PI Planning** and tracked throughout the PI
 
 ## 7. References
 
-- [`../safe.md`](../safe.md) — SAFe methodology summary
+- [`https://forgesdlc.com/methodology-safe.html`](https://forgesdlc.com/methodology-safe.html) — SAFe methodology summary
 - [`ceremonies-prescriptive.md`](ceremonies-prescriptive.md) — event detail with inputs/outputs
 - [`roles.md`](roles.md) — who does what
 - [`foundation-connection.md`](foundation-connection.md) — SDLC phase mapping
