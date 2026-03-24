@@ -84,7 +84,50 @@ This phase-awareness lets Versonas calibrate challenge intensity based on the cu
 Small **single-operation** Cursor rules and an installer script live in [`../tasklets/README.md`](../tasklets/README.md). They demonstrate how a **meta-Versona** (e.g. **Sampling**) can chain **tasklets** before deeper discipline Versonas.
 
 - **Install:** `bash blueprints/sdlc/methodologies/forge/tasklets/install-tasklets.sh` from the consuming repo root (requires `blueprints/` submodule).
-- **Docs:** [`../tasklets/README.md`](../tasklets/README.md)
+- **Docs:** [`../tasklets/README.md`](../tasklets/README.md) · [`../tasklets/TASKLET-TAXONOMY.md`](../tasklets/TASKLET-TAXONOMY.md)
+- **Product `globs`:** [`RECOMMENDED-GLOBS.md`](RECOMMENDED-GLOBS.md)
+- **Align rules with `forge.config.yaml`:** [`../setup/CURSOR-RULES-ALIGNMENT.md`](../setup/CURSOR-RULES-ALIGNMENT.md)
+
+### Discipline overlay (neutral tasklets + normative Versona)
+
+```mermaid
+flowchart LR
+  T[Tasklet_mechanical_IO]
+  V[Versona_discipline_overlay]
+  R[Versona_contract_output]
+  T --> V
+  V --> R
+```
+
+### Sampling Versona sequence (demo)
+
+```mermaid
+sequenceDiagram
+  participant User
+  participant S as Sampling_Versona
+  participant A as Tasklet_assumptions
+  participant U as Tasklet_unknowns
+  participant Q as Tasklet_triage
+  User->>S: Invoke
+  S->>A: Charter_1
+  A-->>S: Output
+  S->>U: Charter_2
+  U-->>S: Output
+  S->>Q: Charter_3
+  Q-->>S: Output
+  S-->>User: Merged_challenge
+```
+
+### Where documentation is published
+
+```mermaid
+flowchart LR
+  BP[blueprints_GitHub_MD]
+  BPW[blueprints_handbook_HTML]
+  FS[forgesdlc_com_HTML]
+  BP -->|submodule| BPW
+  BP -->|submodule| FS
+```
 
 ## Adopting Versonas in a consuming repo
 

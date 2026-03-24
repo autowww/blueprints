@@ -4,6 +4,37 @@
 
 They are **not** a replacement for discipline Versonas (Product Management, BA, Testing, …). Use them as **building blocks** and teaching aids.
 
+Full taxonomy (execution plane, operation class, discipline overlay): [`TASKLET-TAXONOMY.md`](TASKLET-TAXONOMY.md).
+
+### Mental model: layers
+
+```mermaid
+flowchart TB
+  subgraph meta [Meta_layer]
+    Versona[Versona_or_family]
+  end
+  subgraph cognition [Cognition_plane_Cursor]
+    Tasklets[Tasklets_mdc]
+  end
+  subgraph execution [Execution_plane_optional]
+    Recipes[agents_recipes_Docker]
+  end
+  Versona -->|select_merge| Tasklets
+  Versona -->|manifest| Recipes
+  Recipes -->|artifacts_logs| Versona
+```
+
+### Install: file flow
+
+```mermaid
+flowchart LR
+  BP[blueprints_tasklets_templates]
+  SH[install_tasklets_sh]
+  CR[dot_cursor_rules]
+  BP --> SH
+  SH --> CR
+```
+
 ## Install (project root)
 
 From a repository that already contains the `blueprints/` submodule (run at **repository root**):
@@ -43,7 +74,7 @@ See **[`versona-sampling.mdc.template`](../versona/versona-sampling.mdc.template
 
 ## Relationship to execution-plane work
 
-Tasklets in this folder are **cognition-plane** (in-IDE LLM only). **Docker / browser / API** steps belong in [`blueprints/agents/`](../../../../agents/README.md) recipes; a Versona can reference those as **separate execution tasklets** with a manifest (see parent plan / future docs).
+Tasklets in this folder are **cognition-plane** (in-IDE LLM only). **Docker / browser / API** steps belong in [`blueprints/agents/`](../../../../agents/README.md) recipes; a Versona can reference those as **execution tasklets** with a manifest — see [`agents/docs/VERSONA-EXECUTION-TASKLETS.md`](../../../../agents/docs/VERSONA-EXECUTION-TASKLETS.md).
 
 ## See also
 

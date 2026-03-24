@@ -89,6 +89,7 @@ repository root/
     charge-archive/              # Archived daily Charge files
     journal/                     # Day journals (YYYY-MM-DD.md)
     releases/                    # Product Spark release plans
+  .cursor/rules/                 # Optional: Forge Cursor rules (versona-*.mdc, forge-*.mdc, forge-tasklet-*.mdc) — align forge.config with rules via setup/check-forge-cursor-alignment.sh; example tasklets: blueprints/sdlc/methodologies/forge/tasklets/install-tasklets.sh
   ember-logs/                    # Ember Log entries (YYYY-MM-DD.md) — decision memory
 
   docs/

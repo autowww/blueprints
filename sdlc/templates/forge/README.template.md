@@ -43,6 +43,9 @@ Active Forge rules in `.cursor/rules/`:
 | `forge-planning.mdc` | Product planning: Ore, Product Sparks, iterations |
 | `forge-setup.mdc` | Setup wizard (can be removed after initial setup) |
 | `forge-versona.mdc` | Master Versona routing |
+| `forge-product-manager.mdc` | Product strategy orchestration (optional; product-led teams) |
 | `forge-versona-*.mdc` | Discipline-specific Versonas (per active disciplines) |
 | `forge-tasklet-*.mdc` | Example tasklets (install via `blueprints/sdlc/methodologies/forge/tasklets/install-tasklets.sh`) |
 | `versona-sampling.mdc` | Demo meta-Versona (optional; same installer) |
+
+Copy optional **Skills** from `blueprints/sdlc/templates/forge/cursor-skills/` into `.cursor/skills/`. Align `forge/forge.config.yaml` with installed Versonas: `bash blueprints/sdlc/methodologies/forge/setup/check-forge-cursor-alignment.sh`.

@@ -19,6 +19,8 @@ A guided flow for consuming repos to adopt Forge SDLC. Includes a questionnaire 
 | [`forge.config.template.yaml`](forge.config.template.yaml) | Configuration template |
 | [`forge-setup.mdc.template`](forge-setup.mdc.template) | Cursor rule for guided setup |
 | [`../tasklets/install-tasklets.sh`](../tasklets/install-tasklets.sh) | Copy example **tasklets** + **Sampling Versona** into `.cursor/rules/` |
+| [`CURSOR-RULES-ALIGNMENT.md`](CURSOR-RULES-ALIGNMENT.md) | Map `forge.config.yaml` `versona.*` flags → expected `versona-*.mdc` files |
+| [`check-forge-cursor-alignment.sh`](check-forge-cursor-alignment.sh) | Script: list missing Versona rules under `.cursor/rules/` (needs PyYAML) |
 
 ## Quick start
 

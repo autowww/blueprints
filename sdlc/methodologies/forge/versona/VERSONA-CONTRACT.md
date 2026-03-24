@@ -75,3 +75,8 @@ Every Versona challenge produces structured output:
 3. Update Knowledge references to point to the correct discipline package.
 4. Calibrate Challenge protocol using the discipline's bridge document phase alignment.
 5. Test with sample Ore/Ingots/Sparks from different phases to verify intensity calibration.
+6. **Optional thin operations:** reuse or add **tasklets** (single-operation Cursor rules) under [`../tasklets/`](../tasklets/README.md); see [`TASKLET-TAXONOMY.md`](../tasklets/TASKLET-TAXONOMY.md) for execution plane vs cognition and **discipline overlay** rules.
+
+## Recommended globs (Product family)
+
+See [`RECOMMENDED-GLOBS.md`](RECOMMENDED-GLOBS.md) when shipping Versonas with file-scoped Cursor attachment.
