@@ -1,0 +1,34 @@
+---
+description: Forge tasklet — list unknowns, missing evidence, and unresolved decisions.
+globs: 
+alwaysApply: false
+---
+
+# Tasklet: list unknowns
+
+## Operation
+
+From the **current context or pasted content**, list what is **unknown**, **unverified**, or **not yet decided**.
+
+## Output (use exactly this shape)
+
+```markdown
+## Tasklet output: unknowns
+
+**Source:** (file paths, Spark ID, or “pasted text”)
+
+### Missing evidence
+- …
+
+### Open questions (need a human or specialist)
+- …
+
+### Decisions deferred or unclear
+- …
+```
+
+## Rules
+
+- Each bullet should be **one line**, **specific**, and **testable** when resolved (e.g. “We have not measured X” not “needs work”).
+- Max **12** bullets total.
+- Do not design the solution — only catalog gaps.

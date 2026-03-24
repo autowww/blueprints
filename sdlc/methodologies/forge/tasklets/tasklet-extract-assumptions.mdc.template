@@ -1,0 +1,34 @@
+---
+description: Forge tasklet — list explicit and implicit assumptions from the current context or pasted text.
+globs: 
+alwaysApply: false
+---
+
+# Tasklet: extract assumptions
+
+## Operation
+
+Given the **work item, selection, or pasted content**, list **assumptions** the material relies on but does not prove.
+
+## Output (use exactly this shape)
+
+```markdown
+## Tasklet output: assumptions
+
+**Source:** (file paths, Spark ID, or “pasted text”)
+
+### Explicit assumptions
+- …
+
+### Implicit assumptions (inferred)
+- …
+
+### Would invalidate the plan if false
+- …
+```
+
+## Rules
+
+- Separate **facts stated** from **assumptions** (if it is hedged, marked TBD, or depends on unstated belief → assumption).
+- Max **12** bullets total across sections; merge duplicates.
+- Do not propose solutions here — only surface assumptions.

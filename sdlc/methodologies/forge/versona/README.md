@@ -64,6 +64,12 @@ This phase-awareness lets Versonas calibrate challenge intensity based on the cu
 | [`versona-security.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/versona-security.mdc.template) | Security | Is this safe from attacks and breaches? |
 | [`versona-compliance.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/versona-compliance.mdc.template) | Compliance | Does this meet regulatory obligations? |
 
+### Methodology / demo (1)
+
+| Template | Discipline | Core challenge |
+|----------|-----------|----------------|
+| [`versona-sampling.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/versona-sampling.mdc.template) | Sampling (demo) | What assumptions, unknowns, and top signals appear before a full Versona pass? |
+
 ### Family aggregators
 
 | Template | Activates |
@@ -73,11 +79,19 @@ This phase-awareness lets Versonas calibrate challenge intensity based on the cu
 | [`versona-family-product.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/versona-family-product.mdc.template) | All 5 product Versonas |
 | [`versona-all.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/versona-all.mdc.template) | Master routing — suggests which Versonas based on context |
 
+## Tasklets (example bundle)
+
+Small **single-operation** Cursor rules and an installer script live in [`../tasklets/README.md`](../tasklets/README.md). They demonstrate how a **meta-Versona** (e.g. **Sampling**) can chain **tasklets** before deeper discipline Versonas.
+
+- **Install:** `bash blueprints/sdlc/methodologies/forge/tasklets/install-tasklets.sh` from the consuming repo root (requires `blueprints/` submodule).
+- **Docs:** [`../tasklets/README.md`](../tasklets/README.md)
+
 ## Adopting Versonas in a consuming repo
 
 1. Copy the templates you need to `.cursor/rules/` in your repo (remove `.template` suffix).
-2. Update `globs:` in each rule to match your project's file structure.
-3. Configure which Versonas are active in `forge.config.yaml` (via the setup wizard).
-4. Use family aggregators to activate discipline groups without configuring each individually.
+2. **Optional:** Install the example tasklets + Sampling Versona via [`tasklets/install-tasklets.sh`](tasklets/install-tasklets.sh).
+3. Update `globs:` in each rule to match your project's file structure.
+4. Configure which Versonas are active in `forge.config.yaml` (via the setup wizard).
+5. Use family aggregators to activate discipline groups without configuring each individually.
 
 See [`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md) for the standard structure every Versona rule must follow.

@@ -18,6 +18,7 @@ A guided flow for consuming repos to adopt Forge SDLC. Includes a questionnaire 
 | [`forge-init.sh`](forge-init.sh) | Scaffold script — creates workspace directories and seed files |
 | [`forge.config.template.yaml`](forge.config.template.yaml) | Configuration template |
 | [`forge-setup.mdc.template`](forge-setup.mdc.template) | Cursor rule for guided setup |
+| [`../tasklets/install-tasklets.sh`](../tasklets/install-tasklets.sh) | Copy example **tasklets** + **Sampling Versona** into `.cursor/rules/` |
 
 ## Quick start
 

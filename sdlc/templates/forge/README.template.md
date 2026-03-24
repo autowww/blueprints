@@ -44,3 +44,5 @@ Active Forge rules in `.cursor/rules/`:
 | `forge-setup.mdc` | Setup wizard (can be removed after initial setup) |
 | `forge-versona.mdc` | Master Versona routing |
 | `forge-versona-*.mdc` | Discipline-specific Versonas (per active disciplines) |
+| `forge-tasklet-*.mdc` | Example tasklets (install via `blueprints/sdlc/methodologies/forge/tasklets/install-tasklets.sh`) |
+| `versona-sampling.mdc` | Demo meta-Versona (optional; same installer) |

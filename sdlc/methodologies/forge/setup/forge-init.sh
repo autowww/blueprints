@@ -72,6 +72,7 @@ if [[ -d "$CURSOR_DIR" ]]; then
 else
   echo "  .cursor/rules/ does not exist. Create it and copy templates when ready."
 fi
+echo "  Example tasklets + Sampling Versona: bash blueprints/sdlc/methodologies/forge/tasklets/install-tasklets.sh"
 
 echo ""
 echo "=== Forge workspace initialized ==="

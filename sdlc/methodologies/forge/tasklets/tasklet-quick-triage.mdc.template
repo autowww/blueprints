@@ -1,0 +1,30 @@
+---
+description: Forge tasklet — at most five quick signals with severity and a one-line next step.
+globs: 
+alwaysApply: false
+---
+
+# Tasklet: quick triage
+
+## Operation
+
+Scan the **work item or selection** for the **highest-impact** issues. This is a **shallow** pass — not a full review.
+
+## Output (use exactly this shape)
+
+```markdown
+## Tasklet output: quick triage
+
+**Source:** (file paths, Spark ID, or “pasted text”)
+
+| # | Signal | Severity | Next step |
+|---|--------|----------|-----------|
+| 1 | … | critical / significant / minor | … |
+| 2 | … | … | … |
+```
+
+## Rules
+
+- **At most 5 rows.** If more issues exist, keep the top five by impact.
+- **Next step** must be **one short imperative** (e.g. “Confirm with legal”, “Add acceptance test for error path”).
+- Do not duplicate full assumption or unknown lists — point to the **worst** cluster only.
