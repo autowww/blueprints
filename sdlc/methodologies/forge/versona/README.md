@@ -64,11 +64,12 @@ This phase-awareness lets Versonas calibrate challenge intensity based on the cu
 | [`versona-security.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/versona-security.mdc.template) | Security | Is this safe from attacks and breaches? |
 | [`versona-compliance.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/versona-compliance.mdc.template) | Compliance | Does this meet regulatory obligations? |
 
-### Methodology / demo (1)
+### Methodology / demo (2)
 
 | Template | Discipline | Core challenge |
 |----------|-----------|----------------|
 | [`versona-sampling.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/versona-sampling.mdc.template) | Sampling (demo) | What assumptions, unknowns, and top signals appear before a full Versona pass? |
+| [`versona-project-setup.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/versona-project-setup.mdc.template) | Project setup (onboarding) | What is missing for blueprints + Forge + Cursor alignment, and what commands should run next? Invoke with **`setup`** or `@versona-project-setup` after copying to `.cursor/rules/`. |
 
 ### Family aggregators
 
@@ -132,9 +133,10 @@ flowchart LR
 ## Adopting Versonas in a consuming repo
 
 1. Copy the templates you need to `.cursor/rules/` in your repo (remove `.template` suffix).
-2. **Optional:** Install the example tasklets + Sampling Versona via [`tasklets/install-tasklets.sh`](tasklets/install-tasklets.sh).
-3. Update `globs:` in each rule to match your project's file structure.
-4. Configure which Versonas are active in `forge.config.yaml` (via the setup wizard).
-5. Use family aggregators to activate discipline groups without configuring each individually.
+2. **Optional:** Copy [`versona-project-setup.mdc.template`](versona-project-setup.mdc.template) for **repo bootstrap** (keyword **`setup`**) — orchestrates checklist and gap analysis; pair with [`../setup/forge-setup.mdc.template`](../setup/forge-setup.mdc.template) for the questionnaire wizard.
+3. **Optional:** Install the example tasklets + Sampling Versona via [`tasklets/install-tasklets.sh`](tasklets/install-tasklets.sh).
+4. Update `globs:` in each rule to match your project's file structure.
+5. Configure which Versonas are active in `forge.config.yaml` (via the setup wizard).
+6. Use family aggregators to activate discipline groups without configuring each individually.
 
 See [`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md) for the standard structure every Versona rule must follow.

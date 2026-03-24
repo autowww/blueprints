@@ -47,5 +47,6 @@ Active Forge rules in `.cursor/rules/`:
 | `forge-versona-*.mdc` | Discipline-specific Versonas (per active disciplines) |
 | `forge-tasklet-*.mdc` | Example tasklets (install via `blueprints/sdlc/methodologies/forge/tasklets/install-tasklets.sh`) |
 | `versona-sampling.mdc` | Demo meta-Versona (optional; same installer) |
+| `versona-project-setup.mdc` | Project bootstrap checklist (`setup` / `@versona-project-setup`; copy from `blueprints/sdlc/methodologies/forge/versona/versona-project-setup.mdc.template`) |
 
 Copy optional **Skills** from `blueprints/sdlc/templates/forge/cursor-skills/` into `.cursor/skills/`. Align `forge/forge.config.yaml` with installed Versonas: `bash blueprints/sdlc/methodologies/forge/setup/check-forge-cursor-alignment.sh`.

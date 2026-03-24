@@ -63,3 +63,12 @@ Usually copied from `blueprints/sdlc/templates/forge/cursor-rules/`:
 ## Tasklets (optional)
 
 Run `blueprints/sdlc/methodologies/forge/tasklets/install-tasklets.sh` for example **tasklets** + **Sampling Versona** — not controlled by `forge.config.yaml` today.
+
+## Optional Versonas (not driven by `forge.config.yaml`)
+
+These templates are **not** mapped from `versona.*` YAML flags today. Install manually if you want them in `.cursor/rules/`:
+
+| Template | Installed rule (example) | Purpose |
+|----------|--------------------------|---------|
+| `versona-sampling.mdc.template` | `versona-sampling.mdc` | Demo meta-Versona + tasklets (often installed via `install-tasklets.sh`) |
+| `versona-project-setup.mdc.template` | `versona-project-setup.mdc` | Repo bootstrap checklist and gap analysis; trigger **`setup`** or `@versona-project-setup` |

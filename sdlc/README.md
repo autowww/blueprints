@@ -9,6 +9,7 @@ This folder is a **reusable, product-agnostic** package: **process** (phases, De
 | [**POLICY.md**](POLICY.md) | Immutability rules for this blueprint. |
 | [**SDLC.md**](SDLC.md) | Phases A–F, documentation obligations, Definition of Done, change control. |
 | [**DOCUMENTATION-STRUCTURE.md**](DOCUMENTATION-STRUCTURE.md) | Suggested `docs/` layout, document types, conventions, evolution notes. |
+| [**SETUP.md**](SETUP.md) | **Consuming-repo checklist** — submodule, Forge, Cursor rules, alignment (for projects using `blueprints/` at repo root). |
 | [**docs/**](docs/README.md) | **Human handbook** ([`index.html`](docs/index.html) + chapter pages, incl. optional [`methodologies.html`](docs/methodologies.html)) — HTML + diagrams; keep in sync per [`docs/MAINTENANCE.md`](docs/MAINTENANCE.md) when Markdown sources change. |
 | [**templates/**](templates/README.md) | Optional copy-paste starters: `docs/` (`ROADMAP`, `TEST-PLAN`) and **`sdlc/`** workspace (`README` + `TRACKING-*`) — not required to run the SDLC. |
 | [**Agents blueprint (optional)**](../agents/README.md) | Frozen **`blueprints/agents/`** — Docker base image, Compose, recipe templates for repeatable automation (alongside IDE/LLM workflows); mutable **`agents/`** at repo root. **Handbook:** [`docs/agents.html`](docs/agents.html); canonical: [`blueprints/agents/STRUCTURE.md`](../agents/STRUCTURE.md). |
