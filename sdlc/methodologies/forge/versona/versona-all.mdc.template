@@ -1,12 +1,12 @@
 ---
-description: Forge Bellows — master routing rule. Analyzes context and recommends which discipline Bellows to invoke.
+description: Forge Versonas — master routing rule. Analyzes context and recommends which discipline Versonas to invoke.
 globs: 
 alwaysApply: false
 ---
 
-# Bellows: master routing
+# Versonas: master routing
 
-When invoked, analyze the current work item and context to recommend which discipline Bellows should be consulted. This rule does **not** run all 17 Bellows — it identifies the 2–4 most relevant ones.
+When invoked, analyze the current work item and context to recommend which discipline Versonas should be consulted. This rule does **not** run all 17 Versonas — it identifies the 2–4 most relevant ones.
 
 ## Routing logic
 
@@ -25,10 +25,10 @@ Determine what is being challenged:
 
 ### Step 2: Consider the hat
 
-- **Product hat active** → Engineering family Bellows provide the missing perspective
-- **Engineering hat active** → Product family Bellows provide the missing perspective
+- **Product hat active** → Engineering family Versonas provide the missing perspective
+- **Engineering hat active** → Product family Versonas provide the missing perspective
 - **Challenge hat active** → All families may be relevant; focus on highest-risk areas
-- **Governance hat active** → PM + Security + Compliance Bellows
+- **Governance hat active** → PM  + Security + Compliance Versonas
 
 ### Step 3: Consider team scale
 
@@ -39,23 +39,23 @@ Determine what is being challenged:
 ## Output format
 
 ```markdown
-## Bellows routing recommendation
+## Versona routing recommendation
 
 **Work item:** {ID and title}
 **State:** {Ore / Ingot / Spark}
 **Phase:** {if Spark, the phase prefix}
 **Current hat:** {if declared}
 
-### Recommended Bellows (invoke these)
+### Recommended Versonas (invoke these)
 
-| Priority | Bellows | Why |
+| Priority | Versonas | Why |
 |----------|---------|-----|
 | 1 | {discipline} | {reason} |
 | 2 | {discipline} | {reason} |
 
-### Optional Bellows (invoke if time permits)
+### Optional Versonas (invoke if time permits)
 
-| Bellows | Why |
+| Versonas | Why |
 |---------|-----|
 | {discipline} | {reason} |
 

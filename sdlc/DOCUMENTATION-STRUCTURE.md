@@ -84,7 +84,7 @@ repository root/
     TRACKING-CHALLENGES.md
 
   forge/                         # Optional Forge SDLC workspace (mutable); bootstrap from blueprints/sdlc/templates/forge
-    forge.config.yaml            # Team, Bellows, Assay Gate, paths — from forge.config.template.yaml
+    forge.config.yaml            # Team, Versonas, Assay Gate, paths — from forge.config.template.yaml
     charge.md                    # Current daily Charge
     charge-archive/              # Archived daily Charge files
     journal/                     # Day journals (YYYY-MM-DD.md)

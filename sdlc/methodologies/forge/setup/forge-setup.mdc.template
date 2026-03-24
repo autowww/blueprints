@@ -16,7 +16,7 @@ You are a Forge SDLC setup assistant. You help the user configure Forge for thei
 
 3. **Product stage** — Ask: "Is this a PoC, MVP, growing product, or mature product?" This determines planning templates and Assay Gate criteria.
 
-4. **Active disciplines** — Ask: "Which discipline families are relevant?" Show the list: Engineering (7 sub-disciplines), Data (2), Product (5), Governance (1), Security, Compliance. Help the user select appropriate Bellows.
+4. **Active disciplines** — Ask: "Which discipline families are relevant?" Show the list: Engineering (7 sub-disciplines), Data (2), Product (5), Governance (1), Security, Compliance. Help the user select appropriate Versonas.
 
 5. **Ceremony weight** — Recommend based on team size:
    - Solo → Light
@@ -37,6 +37,6 @@ You are a Forge SDLC setup assistant. You help the user configure Forge for thei
 - Questionnaire: [`blueprints/sdlc/methodologies/forge/setup/QUESTIONNAIRE.md`](QUESTIONNAIRE.md)
 - Config template: [`blueprints/sdlc/methodologies/forge/setup/forge.config.template.yaml`](forge.config.template.yaml)
 - Forge methodology: [`blueprints/sdlc/methodologies/forge.md`](../../forge.md)
-- Bellows catalog: [`blueprints/sdlc/methodologies/forge/bellows/README.md`](../bellows/README.md)
+- Versona catalog: [`blueprints/sdlc/methodologies/forge/versona/README.md`](../versona/README.md)
 - Product Manager agent: [`blueprints/sdlc/methodologies/forge/product-manager/README.md`](../product-manager/README.md)
 - Scaling model: [`blueprints/sdlc/methodologies/forge/roles.md`](../roles.md) section 3

@@ -27,12 +27,12 @@ Seed files for a **mutable** `forge/` workspace and `ember-logs/` at repo root. 
 | Path | Use |
 |------|-----|
 | [**forge/README.template.md**](forge/README.template.md) | Forge workspace README with directory structure and script references. |
-| [**forge/forge.config.template.yaml**](forge/forge.config.template.yaml) | Project Forge configuration (team, Bellows, Assay Gate, paths). |
+| [**forge/forge.config.template.yaml**](forge/forge.config.template.yaml) | Project Forge configuration (team, Versonas, Assay Gate, paths). |
 | [**forge/charge.template.md**](forge/charge.template.md) | Daily Charge seed file. |
 | [**forge/ember-log-entry.template.md**](forge/ember-log-entry.template.md) | Ember Log daily file seed. |
 | [**forge/journal-entry.template.md**](forge/journal-entry.template.md) | Day journal seed. |
 | [**forge/assay-gate.template.md**](forge/assay-gate.template.md) | Assay Gate evidence checklist. |
-| **forge/cursor-rules/** | Ready-to-use Cursor rules: `forge-daily.mdc`, `forge-planning.mdc`, `forge-setup.mdc`, `forge-bellows.mdc`. |
+| **forge/cursor-rules/** | Ready-to-use Cursor rules: `forge-daily.mdc`, `forge-planning.mdc`, `forge-setup.mdc`, `forge-versona.mdc`. |
 
 ## Spec-driven (SDD) — ceremony & process I/O
 

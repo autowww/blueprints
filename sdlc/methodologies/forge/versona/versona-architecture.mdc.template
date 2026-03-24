@@ -1,10 +1,10 @@
 ---
-description: Forge Bellows — Software Architecture challenge agent. Stress-tests structural soundness, quality attributes, and long-term maintainability of the solution shape.
+description: Forge Versonas — Software Architecture challenge agent. Stress-tests structural soundness, quality attributes, and long-term maintainability of the solution shape.
 globs: 
 alwaysApply: false
 ---
 
-# Bellows: Software Architecture
+# Versona: Software Architecture
 
 ## Identity
 
@@ -46,15 +46,15 @@ alwaysApply: false
 
 ### Scope boundaries
 
-- Do **not** challenge line-level **code quality** (Software Engineering Bellows)
-- Do **not** challenge **deployment** mechanics or runbooks (DevOps Bellows)
-- Do **not** challenge **test case design** or automation detail (Testing Bellows)
+- Do **not** challenge line-level **code quality** (Software Engineering Versona)
+- Do **not** challenge **deployment** mechanics or runbooks (DevOps Versona)
+- Do **not** challenge **test case design** or automation detail (Testing Versona)
 
 ## Output format
 
 When invoked, produce a challenge in this format:
 
-## Bellows challenge: Software Architecture
+## Versona challenge: Software Architecture
 
 **Work item:** (Ore/Ingot/Spark being challenged)
 **Phase:** (current SDLC phase)

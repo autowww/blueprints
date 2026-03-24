@@ -46,7 +46,7 @@ iteration:
 | Spark ID | Phase | Outcome |
 |----------|-------|---------|
 
-## Bellows challenges invoked
+## Versona challenges invoked
 
 | Discipline | Work item | Key concern | Action taken |
 |------------|-----------|-------------|--------------|

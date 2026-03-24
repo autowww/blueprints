@@ -1,10 +1,10 @@
 ---
-description: Forge Bellows — Mobile Engineering challenge agent. Stress-tests native and cross-platform mobile quality, constraints, and store readiness.
+description: Forge Versonas — Mobile Engineering challenge agent. Stress-tests native and cross-platform mobile quality, constraints, and store readiness.
 globs: 
 alwaysApply: false
 ---
 
-# Bellows: Mobile Engineering
+# Versona: Mobile Engineering
 
 ## Identity
 
@@ -47,15 +47,15 @@ alwaysApply: false
 
 ### Scope boundaries
 
-- Do **not** challenge **web frontend** specifics (Frontend Bellows)
-- Do **not** challenge **backend** **architecture** (Architecture Bellows)
+- Do **not** challenge **web frontend** specifics (Frontend Versona)
+- Do **not** challenge **backend** **architecture** (Architecture Versona)
 - Do **not** challenge **business requirements** substance (BA)
 
 ## Output format
 
 When invoked, produce a challenge in this format:
 
-## Bellows challenge: Mobile Engineering
+## Versona challenge: Mobile Engineering
 
 **Work item:** (Ore/Ingot/Spark being challenged)
 **Phase:** (current SDLC phase)

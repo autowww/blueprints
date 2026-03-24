@@ -21,7 +21,7 @@ result: (pass / fail)
 - [ ] Performance within acceptable thresholds
 - [ ] Documentation updated
 
-### Security (if Security Bellows active)
+### Security (if Security Versona active)
 
 - [ ] Security review completed
 - [ ] No critical/high vulnerabilities unresolved

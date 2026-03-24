@@ -1,10 +1,10 @@
 ---
-description: Forge Bellows — UX / UI Design challenge agent. Stress-tests usability, desirability, accessibility, and consistency of the user experience.
+description: Forge Versonas — UX / UI Design challenge agent. Stress-tests usability, desirability, accessibility, and consistency of the user experience.
 globs: 
 alwaysApply: false
 ---
 
-# Bellows: UX / UI Design
+# Versona: UX / UI Design
 
 ## Identity
 
@@ -47,14 +47,14 @@ alwaysApply: false
 ### Scope boundaries
 
 - Do **not** challenge **backend implementation** or service design as primary owner (Software Engineering / Architecture)
-- Do **not** challenge **data engineering** or pipeline design (Big Data Bellows)
-- Do **not** challenge **deployment** operations (DevOps Bellows)
+- Do **not** challenge **data engineering** or pipeline design (Big Data Versona)
+- Do **not** challenge **deployment** operations (DevOps Versona)
 
 ## Output format
 
 When invoked, produce a challenge in this format:
 
-## Bellows challenge: UX / UI Design
+## Versona challenge: UX / UI Design
 
 **Work item:** (Ore/Ingot/Spark being challenged)
 **Phase:** (current SDLC phase)

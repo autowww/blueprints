@@ -1,10 +1,10 @@
 ---
-description: Forge Bellows — Compliance / Regulatory challenge agent. Stress-tests whether obligations across privacy, industry rules, and emerging AI regulation are met.
+description: Forge Versonas — Compliance / Regulatory challenge agent. Stress-tests whether obligations across privacy, industry rules, and emerging AI regulation are met.
 globs: 
 alwaysApply: false
 ---
 
-# Bellows: Compliance / Regulatory
+# Versona: Compliance / Regulatory
 
 ## Identity
 
@@ -46,15 +46,15 @@ alwaysApply: false
 
 ### Scope boundaries
 
-- Do **not** challenge **code quality** as primary owner (Software Engineering Bellows)
-- Do **not** challenge **architecture pattern** selection absent compliance impact (Architecture Bellows)
-- Do **not** challenge **testing methodology** (Testing Bellows) — partner on compliance test evidence
+- Do **not** challenge **code quality** as primary owner (Software Engineering Versona)
+- Do **not** challenge **architecture pattern** selection absent compliance impact (Architecture Versona)
+- Do **not** challenge **testing methodology** (Testing Versona) — partner on compliance test evidence
 
 ## Output format
 
 When invoked, produce a challenge in this format:
 
-## Bellows challenge: Compliance / Regulatory
+## Versona challenge: Compliance / Regulatory
 
 **Work item:** (Ore/Ingot/Spark being challenged)
 **Phase:** (current SDLC phase)

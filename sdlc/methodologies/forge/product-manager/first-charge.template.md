@@ -51,6 +51,6 @@ This is a pre-defined first Charge for bootstrapping a new product. It contains 
 <!-- This Charge is designed for a single-day or multi-day product bootstrap session.
      Work through Sparks sequentially (discover → specify → design).
      Hat: Product throughout. Switch to Challenge hat after completing each
-     discovery Spark to invoke Product Management Bellows for validation.
+     discovery Spark to invoke Product Management Versona for validation.
      After completing this Charge, transition to implementation Charges
      using the standard charge.template.md. -->

@@ -1,12 +1,12 @@
 ---
-description: Forge Bellows — master routing. Analyzes context and recommends which discipline Bellows to invoke.
+description: Forge Versonas — master routing. Analyzes context and recommends which discipline Versonas to invoke.
 globs: 
 alwaysApply: false
 ---
 
-# Bellows: master routing
+# Versonas: master routing
 
-Analyze the current work item and recommend which discipline Bellows to consult (2–4 most relevant).
+Analyze the current work item and recommend which discipline Versonas to consult (2–4 most relevant).
 
 ## Routing by work state
 
@@ -39,5 +39,5 @@ Analyze the current work item and recommend which discipline Bellows to consult 
 
 ## References
 
-- Bellows catalog: `blueprints/sdlc/methodologies/forge/bellows/README.md`
-- Contract: `blueprints/sdlc/methodologies/forge/bellows/BELLOWS-CONTRACT.md`
+- Versona catalog: `blueprints/sdlc/methodologies/forge/versona/README.md`
+- Contract: `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md`

@@ -1,10 +1,10 @@
 ---
-description: Forge Bellows — Testing & QA challenge agent. Stress-tests whether quality evidence and test design prove correctness and guard against regressions.
+description: Forge Versonas — Testing & QA challenge agent. Stress-tests whether quality evidence and test design prove correctness and guard against regressions.
 globs: 
 alwaysApply: false
 ---
 
-# Bellows: Testing & QA
+# Versona: Testing & QA
 
 ## Identity
 
@@ -46,15 +46,15 @@ alwaysApply: false
 
 ### Scope boundaries
 
-- Do **not** challenge **architecture** structure (Architecture Bellows)
-- Do **not** challenge **deployment** strategy or infra (DevOps Bellows)
+- Do **not** challenge **architecture** structure (Architecture Versona)
+- Do **not** challenge **deployment** strategy or infra (DevOps Versona)
 - Do **not** challenge **business value** or prioritization (BA / product)
 
 ## Output format
 
 When invoked, produce a challenge in this format:
 
-## Bellows challenge: Testing & QA
+## Versona challenge: Testing & QA
 
 **Work item:** (Ore/Ingot/Spark being challenged)
 **Phase:** (current SDLC phase)

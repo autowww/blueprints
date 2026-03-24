@@ -1,10 +1,10 @@
 ---
-description: Forge Bellows — Product family aggregator. Invokes all 5 product discipline challenges.
+description: Forge Versonas — Product family aggregator. Invokes all 5 product discipline challenges.
 globs: 
 alwaysApply: false
 ---
 
-# Bellows: Product family
+# Versona: Product family
 
 When invoked, run challenges from **all 5 product disciplines** against the current work item.
 
@@ -19,13 +19,13 @@ When invoked, run challenges from **all 5 product disciplines** against the curr
 ## Protocol
 
 1. Identify which product disciplines are **relevant** (e.g., skip Marketing for internal tooling).
-2. For each relevant discipline, produce a challenge following [`BELLOWS-CONTRACT.md`](BELLOWS-CONTRACT.md).
+2. For each relevant discipline, produce a challenge following [`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md).
 3. Consolidate into a single report.
 
 ## Consolidated output format
 
 ```markdown
-## Bellows challenge: Product family
+## Versona challenge: Product family
 
 **Work item:** {ID and title}
 **Disciplines consulted:** {list}

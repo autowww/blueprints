@@ -1,6 +1,6 @@
-# Bellows contract
+# Versona contract
 
-Every Bellows Cursor rule template follows this standard structure to ensure consistency, bridge-awareness, and structured output.
+Every Versona Cursor rule template follows this standard structure to ensure consistency, bridge-awareness, and structured output.
 
 ## Required sections
 
@@ -8,7 +8,7 @@ Every Bellows Cursor rule template follows this standard structure to ensure con
 
 ```
 ---
-description: Forge Bellows — {Discipline} challenge agent. {One-sentence purpose.}
+description: Forge Versonas — {Discipline} challenge agent. {One-sentence purpose.}
 globs: (configured by consuming repo — e.g. docs/requirements/**/*, docs/architecture/**/*)
 alwaysApply: false
 ---
@@ -23,7 +23,7 @@ alwaysApply: false
 
 ### 3. Knowledge references
 
-List the key documents the Bellows agent should reference:
+List the key documents the Versona agent should reference:
 
 - Discipline README (body of knowledge overview).
 - Bridge document (phase alignment, anti-patterns, role mapping).
@@ -31,17 +31,17 @@ List the key documents the Bellows agent should reference:
 
 ### 4. Challenge protocol
 
-- **When to challenge:** Which Forge ceremonies and decision points activate this Bellows.
+- **When to challenge:** Which Forge ceremonies and decision points activate this Versona.
 - **Phase awareness:** How challenge intensity maps to SDLC phases A–F (from the bridge document's phase alignment table).
 - **What to inspect:** Specific aspects of work items (Ore, Ingots, Sparks, evidence) to examine.
-- **Scope boundaries:** What this Bellows does NOT challenge (to avoid overlap with other disciplines).
+- **Scope boundaries:** What this Versona does NOT challenge (to avoid overlap with other disciplines).
 
 ### 5. Output format
 
-Every Bellows challenge produces structured output:
+Every Versona challenge produces structured output:
 
 ```markdown
-## Bellows challenge: {Discipline}
+## Versona challenge: {Discipline}
 
 **Work item:** {Ore/Ingot/Spark ID and title}
 **Phase:** {current SDLC phase}
@@ -68,7 +68,7 @@ Every Bellows challenge produces structured output:
 - **Hat awareness:** Recognize which hat the user is wearing and adjust challenge accordingly.
 - **Ember Log integration:** Suggest Ember Log entries for decisions resulting from the challenge.
 
-## Creating a new Bellows
+## Creating a new Versona
 
 1. Copy the closest existing template.
 2. Update Identity with the new discipline's details.

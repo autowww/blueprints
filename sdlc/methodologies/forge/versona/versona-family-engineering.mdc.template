@@ -1,10 +1,10 @@
 ---
-description: Forge Bellows — Engineering family aggregator. Invokes all 7 engineering discipline challenges in sequence.
+description: Forge Versonas — Engineering family aggregator. Invokes all 7 engineering discipline challenges in sequence.
 globs: 
 alwaysApply: false
 ---
 
-# Bellows: Engineering family
+# Versona: Engineering family
 
 When invoked, run challenges from **all 7 engineering disciplines** against the current work item. Present a consolidated report.
 
@@ -21,14 +21,14 @@ When invoked, run challenges from **all 7 engineering disciplines** against the 
 ## Protocol
 
 1. Identify which engineering disciplines are **relevant** to the work item (skip disciplines that clearly do not apply — e.g., skip Mobile for a backend-only Spark).
-2. For each relevant discipline, produce a challenge following [`BELLOWS-CONTRACT.md`](BELLOWS-CONTRACT.md) output format.
+2. For each relevant discipline, produce a challenge following [`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md) output format.
 3. Consolidate into a single report with a summary table of all concerns across disciplines.
 4. Recommend the highest-severity action across all challenges.
 
 ## Consolidated output format
 
 ```markdown
-## Bellows challenge: Engineering family
+## Versona challenge: Engineering family
 
 **Work item:** {ID and title}
 **Disciplines consulted:** {list}

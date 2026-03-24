@@ -109,8 +109,8 @@ flowchart TD
   B -->|Yes| D{Acceptance route defined?}
   D -->|No| E[Define acceptance criteria]
   E --> D
-  D -->|Yes| F{Bellows challenge needed?}
-  F -->|Yes| G[Invoke relevant Bellows]
+  D -->|Yes| F{Versona challenge needed?}
+  F -->|Yes| G[Invoke relevant Versonas]
   G --> H{Concerns raised?}
   H -->|Critical| I[Rework or Bank]
   I --> A
@@ -170,12 +170,12 @@ flowchart TD
   Fix --> C
 ```
 
-## 8. Bellows challenge flow
+## 8. Versona challenge flow
 
 ```mermaid
 flowchart TD
   DP[Decision point reached] --> ID[Identify relevant disciplines]
-  ID --> INV[Invoke Bellows for selected disciplines]
+  ID --> INV[Invoke Versonas for selected disciplines]
   INV --> CH[Challenge runs: concerns, severity, recommendation]
   CH --> SEV{Critical concerns?}
   SEV -->|Yes| ACT[Act: rework, split, Bank, or accept risk]
@@ -203,7 +203,7 @@ flowchart TD
 
 **State model** — The key distinctions from a simple Kanban board: (1) Banked vs Blocked separates strategic pause from external impediment, (2) Done is not Released until the Assay Gate passes, and (3) Rejected items are closed with a reason rather than silently deleted.
 
-**Bellows challenge** — Bellows are invoked at decision points (refinement, pre-build, pre-release), not on every action. Each Bellows references its discipline's bridge document to calibrate challenge intensity to the current SDLC phase.
+**Versona challenge** — Versonas are invoked at decision points (refinement, pre-build, pre-release), not on every action. Each Versona references its discipline's bridge document to calibrate challenge intensity to the current SDLC phase.
 
 ## 11. Links
 

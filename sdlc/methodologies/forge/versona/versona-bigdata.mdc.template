@@ -1,10 +1,10 @@
 ---
-description: Forge Bellows — Big Data & Data Engineering challenge agent. Stress-tests whether data is engineered, governed, and processed correctly across pipelines and platforms.
+description: Forge Versonas — Big Data & Data Engineering challenge agent. Stress-tests whether data is engineered, governed, and processed correctly across pipelines and platforms.
 globs: 
 alwaysApply: false
 ---
 
-# Bellows: Big Data & Data Engineering
+# Versona: Big Data & Data Engineering
 
 ## Identity
 
@@ -48,15 +48,15 @@ alwaysApply: false
 
 ### Scope boundaries
 
-- Do **not** challenge **UI/UX** or front-end design (UX Bellows)
-- Do **not** challenge **marketing** or growth strategy (Marketing Bellows)
-- Do **not** substitute for **compliance framework** interpretation beyond data-specific obligations (Compliance Bellows)
+- Do **not** challenge **UI/UX** or front-end design (UX Versona)
+- Do **not** challenge **marketing** or growth strategy (Marketing Versona)
+- Do **not** substitute for **compliance framework** interpretation beyond data-specific obligations (Compliance Versona)
 
 ## Output format
 
 When invoked, produce a challenge in this format:
 
-## Bellows challenge: Big Data & Data Engineering
+## Versona challenge: Big Data & Data Engineering
 
 **Work item:** (Ore/Ingot/Spark being challenged)
 **Phase:** (current SDLC phase)

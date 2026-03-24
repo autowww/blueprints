@@ -6,7 +6,7 @@ A guided flow for consuming repos to adopt Forge SDLC. Includes a questionnaire 
 
 1. **Answer the questionnaire** — determine team size, roles, product stage, and active disciplines.
 2. **Run the scaffold script** — creates `forge/`, `ember-logs/`, and initial configuration.
-3. **Configure Bellows** — copy relevant Bellows templates to `.cursor/rules/`.
+3. **Configure Versonas** — copy relevant Versonas templates to `.cursor/rules/`.
 4. **Configure Cursor rules** — copy daily and planning rules to `.cursor/rules/`.
 5. **Start working** — first refinement, first Charge, first Ember Log entry.
 

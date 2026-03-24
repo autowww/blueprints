@@ -1,10 +1,10 @@
 ---
-description: Forge Bellows — Data family aggregator. Invokes both data discipline challenges.
+description: Forge Versonas — Data family aggregator. Invokes both data discipline challenges.
 globs: 
 alwaysApply: false
 ---
 
-# Bellows: Data family
+# Versona: Data family
 
 When invoked, run challenges from **both data disciplines** against the current work item.
 
@@ -16,13 +16,13 @@ When invoked, run challenges from **both data disciplines** against the current 
 ## Protocol
 
 1. Identify which data disciplines are **relevant** (skip if the work item has no data component).
-2. For each relevant discipline, produce a challenge following [`BELLOWS-CONTRACT.md`](BELLOWS-CONTRACT.md).
+2. For each relevant discipline, produce a challenge following [`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md).
 3. Consolidate into a single report.
 
 ## Consolidated output format
 
 ```markdown
-## Bellows challenge: Data family
+## Versona challenge: Data family
 
 **Work item:** {ID and title}
 **Disciplines consulted:** {list}

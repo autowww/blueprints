@@ -1,10 +1,10 @@
 ---
-description: Forge Bellows — Embedded / IoT Engineering challenge agent. Stress-tests reliability, safety, and fitness for constrained and connected devices.
+description: Forge Versonas — Embedded / IoT Engineering challenge agent. Stress-tests reliability, safety, and fitness for constrained and connected devices.
 globs: 
 alwaysApply: false
 ---
 
-# Bellows: Embedded / IoT Engineering
+# Versona: Embedded / IoT Engineering
 
 ## Identity
 
@@ -47,7 +47,7 @@ alwaysApply: false
 
 ### Scope boundaries
 
-- Do **not** challenge **web** or **mobile UI** product decisions (Frontend / Mobile Bellows)
+- Do **not** challenge **web** or **mobile UI** product decisions (Frontend / Mobile Versonas)
 - Do **not** challenge **business analysis** or market definition (BA)
 - Do **not** challenge **marketing** claims or GTM (Marketing)
 
@@ -55,7 +55,7 @@ alwaysApply: false
 
 When invoked, produce a challenge in this format:
 
-## Bellows challenge: Embedded / IoT Engineering
+## Versona challenge: Embedded / IoT Engineering
 
 **Work item:** (Ore/Ingot/Spark being challenged)
 **Phase:** (current SDLC phase)

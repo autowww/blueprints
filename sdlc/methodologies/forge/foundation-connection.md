@@ -26,7 +26,7 @@ Forge teams **still** maintain the blueprint tracking spine:
 | **Plan** | Sparks decomposed from Ingots; Charge is the daily plan |
 | **Tasks** | Sparks (the finest executable grain — same hierarchy level, richer contract) |
 | **PRs** | Implementation slices for `build:` and `verify:` Sparks |
-| **Reviews** | Bellows challenges + peer review + Assay Gate evidence |
+| **Reviews** | Versona challenges + peer review + Assay Gate evidence |
 | **Release** | Assay Gate pass; ship decision based on evidence |
 
 **Prescriptive rule:** Every Spark that ships should be **linkable** to its parent Ingot and the original Ore. The Ember Log captures decision context that links and commits alone cannot convey.
@@ -35,11 +35,11 @@ Forge teams **still** maintain the blueprint tracking spine:
 
 | Intent | Primary Forge ceremony | Secondary |
 |--------|------------------------|-----------|
-| **C1 — Align & decide** | Refinement (Ore → Ingot), Bellows challenge | Stakeholder sessions, hat-switching declarations |
+| **C1 — Align & decide** | Refinement (Ore → Ingot), Versona challenge | Stakeholder sessions, hat-switching declarations |
 | **C2 — Plan the slice** | Planning (Ingot → Sparks), Charge selection | Iteration scope negotiation |
-| **C3 — Execute & unblock** | Daily sync (Charge confirmation) | Ad-hoc pairing, Bellows for blocked Sparks |
-| **C4 — Review & quality** | Review (evidence assessment) | Bellows challenges at decision points |
-| **C5 — Reflect & improve** | Retro (learning → new Ore) | Ember Log review, Bellows reliability assessment |
+| **C3 — Execute & unblock** | Daily sync (Charge confirmation) | Ad-hoc pairing, Versonas for blocked Sparks |
+| **C4 — Review & quality** | Review (evidence assessment) | Versona challenges at decision points |
+| **C5 — Reflect & improve** | Retro (learning → new Ore) | Ember Log review, Versona reliability assessment |
 | **C6 — Assure / release** | Assay Gate (evidence-based release decision) | Continuous via quality gates in CI |
 
 See [ceremony foundation](../ceremonies/ceremony-foundation.md) and [methodology bridge](../ceremonies/methodology-bridge.md).
@@ -50,7 +50,7 @@ See [ceremony foundation](../ceremonies/ceremony-foundation.md) and [methodology
 |-----------|----------------------------|-------|
 | **Product** | **Sponsor proxy** + **Orchestrator** (prioritization) | Owns Ore intake and Ingot acceptance; decides value |
 | **Engineering** | **Implementer** (primary) + **Quality advocate** | Builds Sparks; owns technical quality and DoD |
-| **Challenge** | **Quality advocate** (cross-cutting) | Bellows agents + human challenge; surfaces blind spots |
+| **Challenge** | **Quality advocate** (cross-cutting) | Versona agents + human challenge; surfaces blind spots |
 | **Governance** | **Orchestrator** (process) + **Quality advocate** (compliance) | Assay Gate steward; release evidence; Ember Log discipline |
 
 Detail: [roles-archetypes.md](../roles-archetypes.md), [Forge roles chapter](roles.md).
@@ -58,7 +58,7 @@ Detail: [roles-archetypes.md](../roles-archetypes.md), [Forge roles chapter](rol
 ## 5. What Forge adds beyond the foundation
 
 - **Work state precision:** Ore → Ingot → Spark → Charge (not just "to do / doing / done").
-- **Explicit challenge:** Bellows agents linked to discipline knowledge bases and bridge documents.
+- **Explicit challenge:** Versona agents linked to discipline knowledge bases and bridge documents.
 - **Decision memory:** Ember Log captures *why* at decision points.
 - **Strategic pause:** Banked vs Blocked distinction prevents hidden prioritization.
 - **Evidence-based release:** Assay Gate with per-work-type evidence requirements.
@@ -71,7 +71,7 @@ Detail: [roles-archetypes.md](../roles-archetypes.md), [Forge roles chapter](rol
 |--------------|-----|
 | Committing Ore directly to execution | Enforce refinement: Ore must become Ingot before planning |
 | Sparks too large (multi-day) | Split: a Spark should complete in one focused session (1–4 hours) |
-| Bellows as bureaucracy (challenge everything) | Time-box Bellows; use at decision points, not on routine work |
+| Versonas as bureaucracy (challenge everything) | Time-box Versona; use at decision points, not on routine work |
 | Ember Log as status report | Keep it concise: decisions, trade-offs, assumptions — not narration |
 | Skipping Assay Gate under schedule pressure | Assay Gate is non-negotiable; adjust scope, not evidence standards |
 | Hiding prioritization as "blocked" | Use Banked for strategic pause; Blocked is for external impediments only |
@@ -85,4 +85,4 @@ Detail: [roles-archetypes.md](../roles-archetypes.md), [Forge roles chapter](rol
 - [`https://forgesdlc.com/methodology-overview.html`](https://forgesdlc.com/methodology-overview.html) — methodology summary + diagram
 - [`../ceremonies/forge.md`](../ceremonies/forge.md) — fork table C1–C6
 - [`../../SDLC.md`](../../SDLC.md) — phases and ceremony-intent overview
-- [`bellows/README.md`](bellows/README.md) — discipline challenge agents
+- [`versona/README.md`](versona/README.md) — discipline challenge agents

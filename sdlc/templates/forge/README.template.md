@@ -42,5 +42,5 @@ Active Forge rules in `.cursor/rules/`:
 | `forge-daily.mdc` | Daily operations: Charge, hats, Ember Log, journal |
 | `forge-planning.mdc` | Product planning: Ore, Product Sparks, iterations |
 | `forge-setup.mdc` | Setup wizard (can be removed after initial setup) |
-| `forge-bellows.mdc` | Master Bellows routing |
-| `forge-bellows-*.mdc` | Discipline-specific Bellows (per active disciplines) |
+| `forge-versona.mdc` | Master Versona routing |
+| `forge-versona-*.mdc` | Discipline-specific Versonas (per active disciplines) |

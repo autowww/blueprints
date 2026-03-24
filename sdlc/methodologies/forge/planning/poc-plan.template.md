@@ -44,9 +44,9 @@ target_date:
 - [ ] Hypothesis validated or invalidated with evidence
 - [ ] Key findings documented in Ember Log
 - [ ] Decision captured: proceed to MVP, pivot, or stop
-- [ ] Technical feasibility assessed (Architecture Bellows)
+- [ ] Technical feasibility assessed (Architecture Versona)
 
-## Bellows challenges
+## Versona challenges
 
 | Discipline | Question |
 |------------|----------|
@@ -58,4 +58,4 @@ target_date:
 | Risk | Mitigation |
 |------|------------|
 | PoC scope creep | Strict "skip" list; timebox |
-| Confirmation bias | Pre-register hypothesis; Bellows challenge results |
+| Confirmation bias | Pre-register hypothesis; Versona challenge results |

@@ -1,10 +1,10 @@
 ---
-description: Forge Bellows — Software Engineering challenge agent. Stress-tests implementation craft, fundamentals, and maintainability of code-level decisions.
+description: Forge Versonas — Software Engineering challenge agent. Stress-tests implementation craft, fundamentals, and maintainability of code-level decisions.
 globs: 
 alwaysApply: false
 ---
 
-# Bellows: Software Engineering
+# Versona: Software Engineering
 
 ## Identity
 
@@ -46,15 +46,15 @@ alwaysApply: false
 
 ### Scope boundaries
 
-- Do **not** challenge system or solution **architecture** (Architecture Bellows)
-- Do **not** challenge **deployment**, pipelines, or operations (DevOps Bellows)
-- Do **not** own **test strategy**, coverage philosophy, or QA process (Testing Bellows)
+- Do **not** challenge system or solution **architecture** (Architecture Versona)
+- Do **not** challenge **deployment**, pipelines, or operations (DevOps Versona)
+- Do **not** own **test strategy**, coverage philosophy, or QA process (Testing Versona)
 
 ## Output format
 
 When invoked, produce a challenge in this format:
 
-## Bellows challenge: Software Engineering
+## Versona challenge: Software Engineering
 
 **Work item:** (Ore/Ingot/Spark being challenged)
 **Phase:** (current SDLC phase)

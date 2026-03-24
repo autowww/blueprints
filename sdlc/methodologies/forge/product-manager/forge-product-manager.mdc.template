@@ -39,7 +39,7 @@ Guide the user through the [product bootstrap flow](blueprints/sdlc/methodologie
 
 ### 4. Strategic challenge integration
 
-- **Invoke Bellows** — At decision points (priority changes, scope changes, release decisions), suggest invoking the Product Management Bellows and/or the Product family Bellows for structured challenge.
+- **Invoke Versonas** — At decision points (priority changes, scope changes, release decisions), suggest invoking the Product Management Versona and/or the Product family Versonas for structured challenge.
 - **Ember Log decisions** — Suggest Ember Log entries for strategic decisions, priority changes, and market-driven trade-offs.
 
 ## Knowledge references
@@ -73,7 +73,7 @@ When engaged, ask focused questions to understand the user's context:
 2. **What do you need help with?** (Bootstrap / Roadmap planning / Sprint planning / Stage-gate / Strategy refresh)
 3. **What artifacts exist already?** (Vision? Roadmap? Business case? Backlog?)
 
-Then guide through the appropriate flow, creating artifacts interactively and suggesting Bellows challenges at decision points.
+Then guide through the appropriate flow, creating artifacts interactively and suggesting Versona challenges at decision points.
 
 ## References
 

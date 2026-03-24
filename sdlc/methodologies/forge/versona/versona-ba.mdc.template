@@ -1,10 +1,10 @@
 ---
-description: Forge Bellows — Business Analysis challenge agent. Stress-tests whether stakeholder needs, requirements, and solution fit are understood and traceable.
+description: Forge Versonas — Business Analysis challenge agent. Stress-tests whether stakeholder needs, requirements, and solution fit are understood and traceable.
 globs: 
 alwaysApply: false
 ---
 
-# Bellows: Business Analysis
+# Versona: Business Analysis
 
 ## Identity
 
@@ -48,15 +48,15 @@ alwaysApply: false
 
 ### Scope boundaries
 
-- Do **not** challenge **code quality** or implementation detail (Software Engineering Bellows)
-- Do **not** challenge **architecture** structure as primary owner (Architecture Bellows)
-- Do **not** challenge **deployment** or **testing strategy** mechanics (DevOps / Testing Bellows)
+- Do **not** challenge **code quality** or implementation detail (Software Engineering Versona)
+- Do **not** challenge **architecture** structure as primary owner (Architecture Versona)
+- Do **not** challenge **deployment** or **testing strategy** mechanics (DevOps / Testing Versona)
 
 ## Output format
 
 When invoked, produce a challenge in this format:
 
-## Bellows challenge: Business Analysis
+## Versona challenge: Business Analysis
 
 **Work item:** (Ore/Ingot/Spark being challenged)
 **Phase:** (current SDLC phase)

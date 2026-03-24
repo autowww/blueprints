@@ -49,7 +49,7 @@ target_date:
 - [ ] Stakeholder acceptance confirmed
 - [ ] Release notes drafted
 
-## Bellows challenges planned
+## Versona challenges planned
 
 | Discipline | Timing | Focus |
 |------------|--------|-------|

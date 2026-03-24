@@ -1,6 +1,6 @@
 # Forge setup questionnaire
 
-Answer these questions to configure Forge for your project. The setup wizard (Cursor rule or manual) uses these answers to determine scaling tier, active Bellows, ceremony weight, and directory structure.
+Answer these questions to configure Forge for your project. The setup wizard (Cursor rule or manual) uses these answers to determine scaling tier, active Versonas, ceremony weight, and directory structure.
 
 ---
 
@@ -65,9 +65,9 @@ Within Engineering, which sub-disciplines apply?
 
 How formal should ceremonies be?
 
-- [ ] **Light** — solo or very small team; minimal ceremony; AI Bellows primary
-- [ ] **Standard** — small to medium team; regular ceremonies; mix of AI and human Bellows
-- [ ] **Formal** — larger team or regulated domain; full ceremony set; stakeholder sign-offs; compliance Bellows
+- [ ] **Light** — solo or very small team; minimal ceremony; AI Versonas primary
+- [ ] **Standard** — small to medium team; regular ceremonies; mix of AI and human Versonas
+- [ ] **Formal** — larger team or regulated domain; full ceremony set; stakeholder sign-offs; compliance Versona
 
 ## 7. CI/CD maturity
 

@@ -23,14 +23,14 @@ The **Product Manager agent** is a Cursor rule that orchestrates product-level p
 
 The Product Manager agent is **upstream** of `forge-planning` — it creates the strategic inputs (vision, roadmap, business case) that `forge-planning` then decomposes into Forge work units.
 
-## Relationship to Bellows
+## Relationship to Versonas
 
-The **Product Management Bellows** (`bellows-product-management.mdc.template`) is a **challenge agent** — it questions and stress-tests product decisions. The Product Manager agent is an **orchestrator** — it guides the user through creating product artifacts and planning work. They are complementary:
+The **Product Management Versona** (`versona-product-management.mdc.template`) is a **challenge agent** — it questions and stress-tests product decisions. The Product Manager agent is an **orchestrator** — it guides the user through creating product artifacts and planning work. They are complementary:
 
 - The Product Manager agent **creates** artifacts (vision, roadmap, business case, WBS, Charges).
-- The Product Management Bellows **challenges** those artifacts (is the strategy coherent? are priorities defensible?).
+- The Product Management Versona **challenges** those artifacts (is the strategy coherent? are priorities defensible?).
 
-The Product Manager agent will suggest invoking the Product Management Bellows at appropriate decision points.
+The Product Manager agent will suggest invoking the Product Management Versona at appropriate decision points.
 
 ## Files in this package
 
@@ -54,4 +54,4 @@ The Product Manager agent will suggest invoking the Product Management Bellows a
 - [`PRODMGMT-SDLC-PDLC-BRIDGE.md`](../../../../disciplines/product/product-management/PRODMGMT-SDLC-PDLC-BRIDGE.md) — lifecycle bridge
 - [`PLANNING-FLOW.md`](../planning/PLANNING-FLOW.md) — Forge planning pipeline
 - [`FORGE-SDLC-PDLC-BRIDGE.md`](../FORGE-SDLC-PDLC-BRIDGE.md) — Forge lifecycle bridge
-- [`bellows-product-management.mdc.template`](../bellows/bellows-product-management.mdc.template) — Product Management Bellows
+- [`versona-product-management.mdc.template`](../versona/versona-product-management.mdc.template) — Product Management Versona

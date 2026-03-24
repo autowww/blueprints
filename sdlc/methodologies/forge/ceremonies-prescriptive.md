@@ -29,7 +29,7 @@ Default iteration length: **1 week** (configurable to 2 weeks for exploratory wo
 |--|--|
 | **Inputs** | Ore backlog, product context, known constraints, discipline knowledge bases |
 | **Outputs** | Ingots with: problem statement, value proposition, acceptance route, key constraints, evidence-of-done criteria |
-| **Participants** | Product hat (**R**), Engineering hat (**R**), Challenge hat (**O** — Bellows at decision points) |
+| **Participants** | Product hat (**R**), Engineering hat (**R**), Challenge hat (**O** — Versonas at decision points) |
 | **Timebox** | ≤ **1 hour** per session; ~10–15% of iteration capacity on refinement |
 | **Cadence** | 1–2× per week |
 
@@ -37,7 +37,7 @@ Default iteration length: **1 week** (configurable to 2 weeks for exploratory wo
 
 1. Product hat presents top Ore items (5–10 min).
 2. Clarify problem, value, and constraints; Engineering hat assesses feasibility (15–20 min).
-3. Invoke Bellows on high-risk or high-value items — time-boxed challenge (10–15 min).
+3. Invoke Versonas on high-risk or high-value items — time-boxed challenge (10–15 min).
 4. Decide: promote to Ingot, merge, Bank, or reject. Document decisions in Ember Log (5–10 min).
 
 **Definition of Ready (Ingot):**
@@ -67,7 +67,7 @@ Default iteration length: **1 week** (configurable to 2 weeks for exploratory wo
 2. Engineering hat decomposes Ingots into Sparks (30–45 min).
 3. Sequence Sparks by risk reduction and learning value (15 min).
 4. Confirm scope fits capacity; intentionally leave margin for interruption (10 min).
-5. Identify Bellows challenges needed before key Sparks begin (5 min).
+5. Identify Versona challenges needed before key Sparks begin (5 min).
 
 **Spark quality check:**
 
@@ -97,7 +97,7 @@ Default iteration length: **1 week** (configurable to 2 weeks for exploratory wo
 2. Confirm today's Charge: which Sparks are active (3 min).
 3. Surface blockers and Banking decisions (3 min).
 4. Declare hat for the day's primary focus (1 min).
-5. Identify any Bellows challenges needed (2 min).
+5. Identify any Versona challenges needed (2 min).
 
 **Prescriptive rule:** The Charge should be intentionally smaller than theoretical capacity, leaving room for interruption, rework, and learning.
 
@@ -111,14 +111,14 @@ Default iteration length: **1 week** (configurable to 2 weeks for exploratory wo
 |--|--|
 | **Inputs** | Completed Sparks, increment, Assay Gate criteria, Ember Log |
 | **Outputs** | Evidence assessment, stakeholder feedback, backlog updates, Assay Gate readiness determination |
-| **Participants** | Product hat (**R**), Engineering hat (**R**), Challenge hat (**R** — Bellows), Governance hat (**R**), stakeholders (**O**) |
+| **Participants** | Product hat (**R**), Engineering hat (**R**), Challenge hat (**R** — Versonas), Governance hat (**R**), stakeholders (**O**) |
 | **Timebox** | ≤ **1.5 hours** per 1-week iteration |
 
 **Agenda:**
 
 1. Engineering hat demonstrates working increment (30 min).
 2. Product hat assesses against Ingot acceptance criteria (15 min).
-3. Bellows challenge: discipline-specific review of increment quality (15 min).
+3. Versona challenge: discipline-specific review of increment quality (15 min).
 4. Governance hat reviews evidence against Assay Gate criteria (10 min).
 5. Decide: ready for Assay Gate, needs more evidence, or scope adjustment (10 min).
 
@@ -139,7 +139,7 @@ Default iteration length: **1 week** (configurable to 2 weeks for exploratory wo
 
 - Tests passed (unit, integration, E2E as applicable).
 - Acceptance criteria met and documented.
-- Risk checks completed (security, compliance Bellows if applicable).
+- Risk checks completed (security, compliance Versona if applicable).
 - Performance / quality thresholds met.
 - Stakeholder validation completed (for user-facing changes).
 - Rollback or support readiness confirmed.
@@ -154,8 +154,8 @@ Default iteration length: **1 week** (configurable to 2 weeks for exploratory wo
 
 | | |
 |--|--|
-| **Inputs** | Iteration metrics (Spark throughput, Ore→Ingot conversion, Assay Gate pass rate), Ember Log, Bellows challenge trends, team experience |
-| **Outputs** | 1–3 improvement experiments with owners; new Ore from learnings; Bellows configuration adjustments |
+| **Inputs** | Iteration metrics (Spark throughput, Ore→Ingot conversion, Assay Gate pass rate), Ember Log, Versona challenge trends, team experience |
+| **Outputs** | 1–3 improvement experiments with owners; new Ore from learnings; Versona configuration adjustments |
 | **Participants** | All hats (**R**) |
 | **Timebox** | ≤ **1 hour** per 1-week iteration |
 
@@ -163,7 +163,7 @@ Default iteration length: **1 week** (configurable to 2 weeks for exploratory wo
 
 1. Review metrics: Spark throughput, Charge completion rate, Assay Gate results (10 min).
 2. Ember Log review: which decisions worked, which assumptions were wrong (10 min).
-3. Bellows effectiveness: which challenges added value, which created noise (10 min).
+3. Versona effectiveness: which challenges added value, which created noise (10 min).
 4. Generate insights: patterns, systemic issues, process friction (15 min).
 5. Commit to 1–3 experiments with owners and due dates (10 min).
 6. Feed learnings back as new Ore where applicable (5 min).

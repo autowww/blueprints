@@ -42,7 +42,7 @@ flowchart TD
 - `blueprints/product/templates/VISION.template.md` (lightweight) or
 - `blueprints/pdlc/templates/PRODUCT-VISION.template.md` (comprehensive)
 
-**Bellows checkpoint:** Consider invoking BA Bellows to challenge problem clarity.
+**Versona checkpoint:** Consider invoking BA Versona to challenge problem clarity.
 
 ---
 
@@ -82,7 +82,7 @@ flowchart TD
 **Output:** Create `docs/product/discovery/competitive-analysis.md` using template:
 - `blueprints/pdlc/templates/COMPETITIVE-ANALYSIS.template.md`
 
-**Bellows checkpoint:** Consider invoking Product Management Bellows to challenge competitive positioning.
+**Versona checkpoint:** Consider invoking Product Management Versona to challenge competitive positioning.
 
 ---
 
@@ -159,7 +159,7 @@ Structure the roadmap as: NOW (committed, next 1–2 iterations) / NEXT (planned
 
 Use the project's ID scheme (e.g. `M1E1S1T1`) as defined in `PLANNING-FLOW.md`.
 
-**Bellows checkpoint:** Consider invoking BA Bellows to challenge requirements completeness and PM Bellows (Governance) to challenge scope and schedule feasibility.
+**Versona checkpoint:** Consider invoking BA Versona to challenge requirements completeness and PM Versona (Governance) to challenge scope and schedule feasibility.
 
 ---
 
@@ -213,7 +213,7 @@ If Steps 1–8 are complete, skip to Step 10 and create a Charge with implementa
    - `release:` — deployment, documentation, communication
 3. Estimate each Spark (1–4 hours).
 4. Assign Sparks to Forge iterations.
-5. Identify which Bellows should challenge which Sparks.
+5. Identify which Versonas should challenge which Sparks.
 
 **Output:** Updated backlog with phase-tagged Sparks assigned to iterations.
 
@@ -224,7 +224,7 @@ If Steps 1–8 are complete, skip to Step 10 and create a Charge with implementa
 Once the first Charge is populated and Sparks are planned:
 
 1. **Begin daily execution** using `forge-daily` — pull Sparks into Charge, switch hats, log in journal.
-2. **Run Bellows challenges** at refinement and review ceremonies.
+2. **Run Versona challenges** at refinement and review ceremonies.
 3. **Update the roadmap** as you learn — new Ore from P5 discovery.
 4. **Prepare for Assay Gate** — assemble evidence against the Product Spark's criteria.
 

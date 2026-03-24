@@ -44,7 +44,7 @@ target_date:
 
 <!-- Add criteria appropriate to the Product Spark type (PoC / MVP / Phase) -->
 
-## Bellows challenges planned
+## Versona challenges planned
 
 | Discipline | Timing | Focus |
 |------------|--------|-------|

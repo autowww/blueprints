@@ -1,10 +1,10 @@
 ---
-description: Forge Bellows — Marketing challenge agent. Stress-tests whether the product can acquire, engage, and retain users with aligned messaging and measurement.
+description: Forge Versonas — Marketing challenge agent. Stress-tests whether the product can acquire, engage, and retain users with aligned messaging and measurement.
 globs: 
 alwaysApply: false
 ---
 
-# Bellows: Marketing
+# Versona: Marketing
 
 ## Identity
 
@@ -43,15 +43,15 @@ alwaysApply: false
 
 ### Scope boundaries
 
-- Do **not** challenge **code quality** or implementation standards (Software Engineering Bellows)
-- Do **not** challenge **system architecture** (Architecture Bellows)
-- Do **not** challenge **testing** methodology or automation depth (Testing Bellows)
+- Do **not** challenge **code quality** or implementation standards (Software Engineering Versona)
+- Do **not** challenge **system architecture** (Architecture Versona)
+- Do **not** challenge **testing** methodology or automation depth (Testing Versona)
 
 ## Output format
 
 When invoked, produce a challenge in this format:
 
-## Bellows challenge: Marketing
+## Versona challenge: Marketing
 
 **Work item:** (Ore/Ingot/Spark being challenged)
 **Phase:** (current SDLC phase)

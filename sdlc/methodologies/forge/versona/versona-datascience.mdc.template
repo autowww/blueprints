@@ -1,10 +1,10 @@
 ---
-description: Forge Bellows — Data Science & ML challenge agent. Stress-tests whether models are valid, reproducible, and responsible from problem framing through operations.
+description: Forge Versonas — Data Science & ML challenge agent. Stress-tests whether models are valid, reproducible, and responsible from problem framing through operations.
 globs: 
 alwaysApply: false
 ---
 
-# Bellows: Data Science & ML
+# Versona: Data Science & ML
 
 ## Identity
 
@@ -46,15 +46,15 @@ alwaysApply: false
 
 ### Scope boundaries
 
-- Do **not** challenge **infrastructure deployment** mechanics as primary owner (DevOps Bellows)
-- Do **not** challenge **UI design** or interaction patterns (UX Bellows)
+- Do **not** challenge **infrastructure deployment** mechanics as primary owner (DevOps Versona)
+- Do **not** challenge **UI design** or interaction patterns (UX Versona)
 - Do **not** substitute for **business strategy** or portfolio prioritization (PM / leadership)
 
 ## Output format
 
 When invoked, produce a challenge in this format:
 
-## Bellows challenge: Data Science & ML
+## Versona challenge: Data Science & ML
 
 **Work item:** (Ore/Ingot/Spark being challenged)
 **Phase:** (current SDLC phase)

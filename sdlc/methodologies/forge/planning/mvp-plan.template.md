@@ -46,12 +46,12 @@ target_date:
 - [ ] Core user journey works end-to-end
 - [ ] Tests pass (unit, integration; E2E for critical paths)
 - [ ] Performance acceptable for target user volume
-- [ ] Security review completed (Security Bellows)
+- [ ] Security review completed (Security Versona)
 - [ ] Onboarding / documentation sufficient for target users
 - [ ] Rollback plan in place
 - [ ] Monitoring and alerting configured
 
-## Bellows challenges planned
+## Versona challenges planned
 
 | Discipline | Timing | Focus |
 |------------|--------|-------|

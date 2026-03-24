@@ -1,10 +1,10 @@
 ---
-description: Forge Bellows — Frontend / Web Engineering challenge agent. Stress-tests web UI performance, accessibility, and long-term frontend maintainability.
+description: Forge Versonas — Frontend / Web Engineering challenge agent. Stress-tests web UI performance, accessibility, and long-term frontend maintainability.
 globs: 
 alwaysApply: false
 ---
 
-# Bellows: Frontend / Web Engineering
+# Versona: Frontend / Web Engineering
 
 ## Identity
 
@@ -47,15 +47,15 @@ alwaysApply: false
 
 ### Scope boundaries
 
-- Do **not** challenge **backend** or service **architecture** (Architecture Bellows)
-- Do **not** challenge **native mobile** app specifics (Mobile Bellows)
+- Do **not** challenge **backend** or service **architecture** (Architecture Versona)
+- Do **not** challenge **native mobile** app specifics (Mobile Versona)
 - Do **not** challenge **business requirements** content (BA)
 
 ## Output format
 
 When invoked, produce a challenge in this format:
 
-## Bellows challenge: Frontend / Web Engineering
+## Versona challenge: Frontend / Web Engineering
 
 **Work item:** (Ore/Ingot/Spark being challenged)
 **Phase:** (current SDLC phase)

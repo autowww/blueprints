@@ -86,7 +86,7 @@ Methodologies designed for **AI-augmented** development with explicit challenge 
 
 | Guide | Topics |
 |-------|--------|
-| [**Forge SDLC**](https://forgesdlc.com/methodology-overview.html) | AI-native delivery methodology: Ore→Ingot→Spark→Charge pipeline; Bellows (discipline challenge agents covering 16 disciplines); Ember Log (decision memory); Assay Gate (evidence-based release); hat-switching for solo-to-enterprise scaling. **Prescriptive package:** [`forge/README.md`](forge/README.md). |
+| [**Forge SDLC**](https://forgesdlc.com/methodology-overview.html) | AI-native delivery methodology: Ore→Ingot→Spark→Charge pipeline; Versonas (discipline challenge agents covering 16 disciplines); Ember Log (decision memory); Assay Gate (evidence-based release); hat-switching for solo-to-enterprise scaling. **Prescriptive package:** [`forge/README.md`](forge/README.md). |
 
 ---
 
