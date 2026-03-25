@@ -6,16 +6,9 @@
 
 **Platform strategy** is a product and staffing decision, not only a technical one: native stacks optimize **fidelity and OS access**; cross-platform stacks optimize **shared velocity** at the cost of integration depth and occasional framework lag. Use the guides below to align engineering leads, mobile chapter leads, and architects before locking choices in ADRs.
 
-```mermaid
-flowchart TD
-  S[Platform strategy] --> Q1{Need maximum performance<br/>and day-one OS APIs?}
-  Q1 -->|Yes| N[**Native**<br/>iOS + Android]
-  Q1 -->|No| Q2{Primary goal?}
-  Q2 -->|Shared UI + logic| X[**Cross-platform**<br/>RN / Flutter / hybrid]
-  Q2 -->|Shared logic only| K[**KMP + native UI**<br/>see cross-platform guide]
-  N --> IA[ios-android.md]
-  X --> CP[cross-platform.md]
-  K --> CP
+```ks-diagram
+key: decision
+alt: Diagram
 ```
 
 ## Platform guides

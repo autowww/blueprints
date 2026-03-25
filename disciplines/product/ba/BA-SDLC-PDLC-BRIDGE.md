@@ -31,22 +31,9 @@ BA is the discipline that feeds both lifecycles with structured understanding of
 
 ## 1. The three-discipline model
 
-```mermaid
-graph TB
-  subgraph pdlcLayer ["PDLC — Product Lifecycle"]
-    direction LR
-    rightProduct["Build the RIGHT product"]
-    subgraph sdlcLayer ["SDLC — Delivery"]
-      productRight["Build the product RIGHT"]
-    end
-  end
-
-  baLayer["BA — Understand needs, define solutions"]
-
-  baLayer -->|"strategy analysis, elicitation"| pdlcLayer
-  baLayer -->|"requirements, design definition"| sdlcLayer
-  pdlcLayer -.->|"solution evaluation feedback"| baLayer
-  sdlcLayer -.->|"verification results"| baLayer
+```ks-diagram
+key: swimlane
+alt: Diagram
 ```
 
 | Dimension | BA | PDLC | SDLC |

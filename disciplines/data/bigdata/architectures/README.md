@@ -8,12 +8,9 @@
 
 ### Architecture evolution (conceptual timeline)
 
-```mermaid
-flowchart LR
-  B[Batch-only] --> L[Lambda]
-  L --> K[Kappa]
-  K --> H[Lakehouse / unified streaming]
-  H --> M[Data mesh]
+```ks-diagram
+key: linear
+alt: Diagram
 ```
 
 Mesh is not a strict successor to lakehouse — it is primarily an **operating model** that can sit on top of lakehouse or warehouse technology.

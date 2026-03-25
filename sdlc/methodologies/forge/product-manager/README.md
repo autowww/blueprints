@@ -54,4 +54,4 @@ The Product Manager agent will suggest invoking the Product Management Versona a
 - [`PRODMGMT-SDLC-PDLC-BRIDGE.md`](../../../../disciplines/product/product-management/PRODMGMT-SDLC-PDLC-BRIDGE.md) — lifecycle bridge
 - [`PLANNING-FLOW.md`](../planning/PLANNING-FLOW.md) — Forge planning pipeline
 - [`FORGE-SDLC-PDLC-BRIDGE.md`](../FORGE-SDLC-PDLC-BRIDGE.md) — Forge lifecycle bridge
-- [`versona-product-management.mdc.template`](../versona/versona-product-management.mdc.template) — Product Management Versona
+- [`versona-product-management.mdc.template`](../versona/catalog/discipline/product/versona-product-management.mdc.template) — Product Management Versona

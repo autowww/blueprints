@@ -23,7 +23,7 @@ description: >-
 
 ## Install reference
 
-- Versona templates: `blueprints/sdlc/methodologies/forge/versona/*.mdc.template`
+- Versona templates: `blueprints/sdlc/methodologies/forge/versona/` — `versona-generic.mdc.template` at root; everything else under `catalog/` (`discipline/<domain>/`, `discipline/<domain>/family/` for aggregators, `routing/`, `meta/`, `workflow/`). See `versona/catalog/TEMPLATE-INDEX.md`.
 - Tasklets + Sampling: `bash blueprints/sdlc/methodologies/forge/tasklets/install-tasklets.sh`
 - Align rules with `forge.config.yaml`: `bash blueprints/sdlc/methodologies/forge/setup/check-forge-cursor-alignment.sh`
 

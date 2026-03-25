@@ -10,14 +10,9 @@
 
 Documentation practices are **proactive knowledge management**: they turn "someone should write that down" into **repeatable activities** that capture knowledge early, maintain accuracy continuously, and ensure content reaches the right audience in the right format. Together they connect **authoring**, **publishing**, and **measurement** so documentation quality is owned by the whole team, not isolated in a late-stage writing sprint.
 
-```mermaid
-flowchart LR
-  CS[Content strategy] --> IA[Information architecture]
-  IA --> AUTH[Authoring and review]
-  AUTH --> PUB[Publishing and delivery]
-  PUB --> MEAS[Analytics and feedback]
-  MEAS --> IMP[Improvement loop]
-  IMP --> CS
+```ks-diagram
+key: linear
+alt: Diagram
 ```
 
 The loop closes when analytics and user feedback **feed** updated content plans, restructured navigation, and refreshed content — documented at the project level in **`docs/`** and tracked in the content calendar.

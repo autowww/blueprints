@@ -2,48 +2,32 @@
 
 ## 1. Pull through the value stream
 
-```mermaid
-flowchart LR
-  O[Options / funnel] --> R[Ready]
-  R --> D[Doing]
-  D --> V[Verify]
-  V --> Rel[Released]
+```ks-diagram
+key: linear
+alt: Diagram
 ```
 
 Customize column names to your **Definition of Workflow**.
 
 ## 2. Replenishment decision
 
-```mermaid
-flowchart TD
-  A[Top options] --> B{Fits WIP / policy?}
-  B -->|No| C[Defer or split]
-  C --> A
-  B -->|Yes| D{Dependencies clear?}
-  D -->|No| E[Spike or align]
-  E --> A
-  D -->|Yes| F[Pull to Ready / Doing]
+```ks-diagram
+key: decision
+alt: Diagram
 ```
 
 ## 3. Blocked work escalation
 
-```mermaid
-flowchart TD
-  X[Blocker raised] --> Y{Team can fix in 24h?}
-  Y -->|Yes| Z[Swarm / pair]
-  Z --> W[Resume flow]
-  Y -->|No| U[Escalate to SRM / Steer]
-  U --> P[Policy or priority decision]
-  P --> W
+```ks-diagram
+key: decision
+alt: Diagram
 ```
 
 ## 4. Release train (optional policy)
 
-```mermaid
-flowchart LR
-  Done[Done column] --> RC[Release candidate]
-  RC --> T[Train date T]
-  T --> Prod[Production]
+```ks-diagram
+key: linear
+alt: Diagram
 ```
 
 ## 5. Phase mapping (A–F)

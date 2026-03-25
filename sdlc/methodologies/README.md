@@ -101,7 +101,7 @@ Guides that apply **alongside** any methodology, addressing how **agents**, **au
 
 ---
 
-**Handbook (HTML):** [`docs/methodologies.html`](../docs/methodologies.html) (hub) and `docs/methodologies-*.html`; **spec-driven** is [`docs/spec-driven.html`](../docs/spec-driven.html). **Scrum/Kanban/phased/XP** subchapters (Foundation, Ceremonies, Process) are generated with tables + Mermaid via [`docs/build_methodology_chapters.py`](../docs/build_methodology_chapters.py); **Scrum — Roles** is hand-maintained in HTML.
+**Handbook (HTML):** [`docs/methodologies.html`](../docs/methodologies.html) (hub) and `docs/methodologies-*.html`; **spec-driven** is [`docs/spec-driven.html`](../docs/spec-driven.html). **Scrum/Kanban/phased/XP** subchapters (Foundation, Ceremonies, Process) may use [`docs/build_methodology_chapters.py`](../docs/build_methodology_chapters.py) when present; handbook diagrams use **` ```ks-diagram `** in Markdown. **Scrum — Roles** is hand-maintained in HTML.
 
 **Maintainers:** curated external URLs, **executive summaries** (why each link matters here), and a quick `curl` check pattern — [`REFERENCE-LINKS.md`](REFERENCE-LINKS.md). Keep handbook [`methodologies-*.html`](../docs/methodologies.html) blurbs in sync when URLs or intent change.
 

@@ -8,20 +8,9 @@
 2. **Recipe** under `agents/recipes/<name>/` implements the run (see [`ORCHESTRATION.md`](../ORCHESTRATION.md)).
 3. **Cursor / CI** invokes the recipe; the **LLM** does not replace the container — it **interprets** outputs.
 
-```mermaid
-flowchart TB
-  subgraph cognition [Cognition_plane]
-    Versona[Versona_or_meta]
-    CTasklets[Cursor_tasklets]
-  end
-  subgraph execution [Execution_plane]
-    Recipe[agents_recipes_run_sh]
-    Docker[Docker_job]
-  end
-  Versona --> CTasklets
-  Versona -->|"manifest_JSON"| Recipe
-  Recipe --> Docker
-  Docker -->|"artifacts_logs"| Versona
+```ks-diagram
+key: swimlane
+alt: Diagram
 ```
 
 ## Example manifest (conceptual)

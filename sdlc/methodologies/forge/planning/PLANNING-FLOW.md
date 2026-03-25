@@ -4,25 +4,9 @@ This document describes the complete pipeline from a product vision through busi
 
 ## The pipeline
 
-```mermaid
-flowchart TD
-  subgraph pdlc ["PDLC (product strategy)"]
-    V[Vision] --> BD[Business Drivers]
-    BD --> PS[Product Sparks]
-  end
-  subgraph forge ["Forge (delivery)"]
-    PS --> FI[Forge Iterations]
-    FI --> ORE[Ore intake]
-    ORE --> ING[Ingot refinement]
-    ING --> SPK[Spark decomposition]
-    SPK --> CHG[Daily Charge]
-  end
-  subgraph release ["Release"]
-    CHG --> REV[Review]
-    REV --> AG[Assay Gate]
-    AG --> REL[Release]
-  end
-  REL -->|"learning"| ORE
+```ks-diagram
+key: swimlane
+alt: Diagram
 ```
 
 ## Level 1: Business Drivers → Product Sparks

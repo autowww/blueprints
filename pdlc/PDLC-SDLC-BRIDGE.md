@@ -31,15 +31,9 @@ Both are necessary. Neither is sufficient alone. This bridge explains how they r
 
 ## 1. The core distinction
 
-```mermaid
-flowchart TB
-  subgraph pdlcBox["PDLC — Product Development Life Cycle"]
-    direction TB
-    rightProduct["Build the RIGHT product"]
-    subgraph sdlcBox["SDLC — Software Development Life Cycle"]
-      productRight["Build the product RIGHT"]
-    end
-  end
+```ks-diagram
+key: swimlane
+alt: Diagram
 ```
 
 SDLC is **nested inside** PDLC. A team can execute SDLC flawlessly — shipping on time, with quality, and with clean CI — and still fail if it built something nobody needs. PDLC ensures the **what** and **why** are validated before and measured after the **how**.
@@ -75,38 +69,9 @@ SDLC is **nested inside** PDLC. A team can execute SDLC flawlessly — shipping 
 
 ### The full lifecycle
 
-```mermaid
-flowchart LR
-  subgraph pdlcPre ["PDLC: Pre-build"]
-    P1["P1 Discover Problem"]
-    P2["P2 Validate Solution"]
-    P3["P3 Strategize"]
-  end
-
-  subgraph sdlcPhases ["SDLC: Build & Release"]
-    A["A Discover"]
-    B["B Specify"]
-    C["C Design"]
-    D["D Build"]
-    E["E Verify"]
-    F["F Release"]
-  end
-
-  subgraph pdlcPost ["PDLC: Post-launch"]
-    P4["P4 Launch"]
-    P5["P5 Grow"]
-    P6["P6 Mature/Sunset"]
-  end
-
-  P1 -->|"evidence of problem"| P2
-  P2 -->|"validated solution"| P3
-  P3 -->|"funded initiative"| A
-  A --> B --> C --> D --> E --> F
-  F -->|"shippable increment"| P4
-  P4 -->|"market activation"| P5
-  P5 -->|"lifecycle decision"| P6
-  P5 -.->|"continuous discovery"| P1
-  P6 -.->|"new opportunity"| P1
+```ks-diagram
+key: swimlane
+alt: Diagram
 ```
 
 ### Phase-by-phase alignment
@@ -223,32 +188,9 @@ SDLC and PDLC use fundamentally different metrics. Neither set replaces the othe
 
 ### Which metrics matter when
 
-```mermaid
-graph LR
-  subgraph discovery ["P1-P2 Discovery"]
-    desirability["Desirability signals"]
-    viability["Viability estimates"]
-  end
-
-  subgraph strategy ["P3 Strategy"]
-    businessCase["Business case metrics"]
-  end
-
-  subgraph delivery ["SDLC A-F"]
-    velocity["Velocity / cycle time"]
-    quality["Quality / test coverage"]
-    dora["DORA metrics"]
-  end
-
-  subgraph postLaunch ["P4-P6 Post-launch"]
-    adoption["Adoption / activation"]
-    retention["Retention / churn"]
-    revenue["Revenue / LTV"]
-    satisfaction["NPS / CSAT"]
-  end
-
-  discovery --> strategy --> delivery --> postLaunch
-  postLaunch -.->|"insights feed discovery"| discovery
+```ks-diagram
+key: swimlane
+alt: Diagram
 ```
 
 ### The metrics trap
@@ -288,37 +230,9 @@ Not every situation needs equal investment across all phases. Use this guide to 
 
 ### Decision flowchart
 
-```mermaid
-graph TD
-  start["New work request"] --> known{"Problem already validated?"}
-
-  known -->|"Yes — data exists"| lightP1["Light P1-P2: confirm with data"]
-  known -->|"No — assumption only"| fullP1["Full P1: research + validate problem"]
-  known -->|"It's a bug/outage"| skipPDLC["Skip PDLC: go to SDLC D-F"]
-
-  fullP1 --> gate1{"G1: Problem worth solving?"}
-  gate1 -->|"No"| kill["Kill / park the idea"]
-  gate1 -->|"Yes"| fullP2["Full P2: validate solution"]
-
-  lightP1 --> lightP2["Light P2: quick prototype/test"]
-  lightP2 --> gate2{"G2: Solution viable?"}
-  fullP2 --> gate2
-
-  gate2 -->|"No — pivot"| P1again["Back to P1 with new framing"]
-  gate2 -->|"Yes"| P3["P3: Strategize + fund"]
-
-  P3 --> gate3{"G3: Invest in building?"}
-  gate3 -->|"No"| kill2["Kill / defer"]
-  gate3 -->|"Yes"| sdlc["SDLC A-F: Build & Release"]
-
-  sdlc --> P4["P4: Launch"]
-  P4 --> P5["P5: Grow + measure outcomes"]
-  skipPDLC --> sdlc
-
-  P5 --> gate5{"G5: Continue investing?"}
-  gate5 -->|"Invest more"| P5
-  gate5 -->|"New opportunity"| P1again
-  gate5 -->|"Harvest/sunset"| P6["P6: Mature / Sunset"]
+```ks-diagram
+key: decision
+alt: Diagram
 ```
 
 ---

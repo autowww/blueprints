@@ -2,64 +2,30 @@
 
 ## 1. CI/CD pipeline (conceptual)
 
-```mermaid
-flowchart LR
-  CO[Commit] --> BU[Build]
-  BU --> UT[Unit tests]
-  UT --> SA[Static analysis]
-  SA --> IT[Integration tests]
-  IT --> SEC[Security scan]
-  SEC --> STG[Stage deploy]
-  STG --> AT[Acceptance tests]
-  AT --> PRD[Production deploy]
-  PRD --> MON[Monitor]
+```ks-diagram
+key: linear
+alt: Diagram
 ```
 
 ## 2. DevOps infinity loop
 
-```mermaid
-flowchart LR
-  PL[Plan] --> CD[Code]
-  CD --> BU[Build]
-  BU --> TE[Test]
-  TE --> RE[Release]
-  RE --> DP[Deploy]
-  DP --> OP[Operate]
-  OP --> MN[Monitor]
-  MN --> PL
+```ks-diagram
+key: linear
+alt: Diagram
 ```
 
 ## 3. Incident response flow
 
-```mermaid
-flowchart TD
-  AL[Alert / detection] --> TR[Triage]
-  TR --> SEV{Severity?}
-  SEV -->|High| IC[Incident commander assigned]
-  SEV -->|Low| OC[On-call resolves]
-  IC --> DG[Diagnose]
-  OC --> DG
-  DG --> FX[Fix / mitigate]
-  FX --> VR[Verify resolution]
-  VR --> PM[Post-mortem]
+```ks-diagram
+key: decision
+alt: Diagram
 ```
 
 ## 4. Deployment strategy decision
 
-```mermaid
-flowchart TD
-  DS{Deployment strategy?}
-  DS -->|Low risk| RO[Rolling update]
-  DS -->|Medium risk| CN[Canary release]
-  DS -->|High risk| BG[Blue-green deploy]
-  DS -->|Feature control| FF[Feature flag]
-  RO --> MN[Monitor]
-  CN --> MN
-  BG --> MN
-  FF --> MN
-  MN --> RB{Issues?}
-  RB -->|Yes| RBK[Rollback]
-  RB -->|No| OK[Stable]
+```ks-diagram
+key: decision
+alt: Diagram
 ```
 
 ## 5. Phases A–F (DevOps emphasis)
@@ -75,16 +41,9 @@ flowchart TD
 
 ## 6. DORA metrics collection
 
-```mermaid
-flowchart LR
-  VC[Version control] --> DF[Deployment frequency]
-  VC --> LT[Lead time for changes]
-  PRD[Production monitoring] --> CFR[Change failure rate]
-  PRD --> MTTR[Mean time to restore]
-  DF --> DB[DORA dashboard]
-  LT --> DB
-  CFR --> DB
-  MTTR --> DB
+```ks-diagram
+key: linear
+alt: Diagram
 ```
 
 ## 7. Flow details (walkthrough)

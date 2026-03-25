@@ -8,14 +8,9 @@
 
 ## Pattern categories (overview)
 
-```mermaid
-flowchart TB
-  subgraph OO["Single process"]
-    GoF[GoF creational structural behavioral] --> IP[In-process OO design]
-  end
-  subgraph Dist["Cross service"]
-    EIP[EIP channels routers endpoints] --> DIST[Distributed messaging]
-  end
+```ks-diagram
+key: swimlane
+alt: Diagram
 ```
 
 GoF addresses **single-process** collaboration; EIP addresses **cross-service** messaging and evolution.

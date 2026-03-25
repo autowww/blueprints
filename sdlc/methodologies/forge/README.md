@@ -9,9 +9,9 @@
 | **Foundation & fit** | [`foundation-connection.md`](foundation-connection.md) | SDLC A–F mapping, tracking spine, ceremony intents C1–C6, role archetypes |
 | **Roles** | [`roles.md`](roles.md) | Owner/Implementer, hat-switching protocol, Versonas as challenge functions, scaling tiers |
 | **Ceremonies (prescriptive)** | [`ceremonies-prescriptive.md`](ceremonies-prescriptive.md) | Each ceremony: inputs, outputs, agenda, participants, timebox |
-| **Process & flows** | [`process-and-flows.md`](process-and-flows.md) | State model, work unit hierarchy, iteration lifecycle, Mermaid diagrams |
+| **Process & flows** | [`process-and-flows.md`](process-and-flows.md) | State model, work unit hierarchy, iteration lifecycle, KS diagram templates |
 | **Bridge** | [`FORGE-SDLC-PDLC-BRIDGE.md`](FORGE-SDLC-PDLC-BRIDGE.md) | How Forge connects to PDLC P1–P6 and SDLC A–F |
-| **Versonas** | [`versona/README.md`](versona/README.md) | Discipline challenge agents: contract, templates, bridge-awareness |
+| **Versonas** | [`versona/README.md`](versona/README.md) | Discipline challenge agents: contract, templates, bridge-awareness — **layout:** generic at `versona/` root; other templates under `versona/catalog/` |
 | **Daily operations** | [`daily/README.md`](daily/README.md) | Charge, Ember Log, day journal: templates and scripts |
 | **Product planning** | [`planning/README.md`](planning/README.md) | PoC/MVP/Phased planning, Product Spark hierarchy, Ore pipeline |
 | **Product Manager agent** | [`product-manager/README.md`](product-manager/README.md) | Product strategy orchestrator, product bootstrap flow, first Charge template |

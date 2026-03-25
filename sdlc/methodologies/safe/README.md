@@ -9,6 +9,6 @@
 | **Foundation & fit** | [`foundation-connection.md`](foundation-connection.md) | SDLC A–F, tracking spine, ceremony intents, bridge to blueprint docs |
 | **Roles** | [`roles.md`](roles.md) | RTE, Product Management, System Architect, PO, SM — accountabilities, archetypes, event matrix |
 | **Ceremonies (prescriptive)** | [`ceremonies-prescriptive.md`](ceremonies-prescriptive.md) | Each SAFe event: inputs, outputs, agenda, participants, timebox |
-| **Process & flows** | [`process-and-flows.md`](process-and-flows.md) | PI lifecycle, iteration flow, release on demand, Mermaid diagrams |
+| **Process & flows** | [`process-and-flows.md`](process-and-flows.md) | PI lifecycle, iteration flow, release on demand, KS diagram templates |
 
 **Related blueprint:** [Roles & archetypes](../roles-archetypes.md) · [Ceremony foundation](../ceremonies/ceremony-foundation.md) · [Methodology bridge](../ceremonies/methodology-bridge.md) · [SAFe ceremonies fork](../ceremonies/safe.md)

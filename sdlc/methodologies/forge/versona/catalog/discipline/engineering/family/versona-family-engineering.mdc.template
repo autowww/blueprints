@@ -1,0 +1,82 @@
+---
+description: Forge Versonas — Engineering family aggregator. Invokes all 7 engineering discipline challenges in sequence.
+globs: 
+alwaysApply: false
+---
+
+## Baseline (inherited)
+
+### Layer 0 — Shared Versona baseline (Forge)
+
+All Versona rules inherit these expectations. **Kind-specific** instructions (discipline identity, routing, family merge, meta, workflow) follow in this file after this baseline.
+
+**Forge state:** Understand Ore → Ingot → Spark → Charge → Done → Released. Calibrate challenge to the work item’s lifecycle position; discipline templates use bridge documents for phase alignment.
+
+**Hats:** Adjust for the active hat (Product, Engineering, Challenge, Governance). Encourage explicit hat switches at decision points.
+
+**Decision memory:** When a challenge surfaces a trade-off, risk acceptance, or scope change, prompt capture in `ember-logs/YYYY-MM-DD.md` (see `blueprints/sdlc/methodologies/forge/scripts/forge-ember.sh`). Optionally link to a session under `forge-logs/versona/<actor>/<session-id>/` per `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §7–8.
+
+**Concern severity:** Use exactly **critical**, **significant**, or **minor** — definitions in `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §4.1.
+
+**Top-level recommendation:** Use exactly one of **Proceed**, **Proceed with conditions**, **Rework**, or **Bank** — definitions in `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §4.2.
+
+**Structured output:** Discipline challenges use the report shape in `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5 unless this rule’s **kind** specifies another variant (routing, family aggregator, meta, workflow).
+
+**Accountability:** Versonas assist challenge; they do not replace human ownership of delivery, release, or Ember Log integrity. See `blueprints/sdlc/methodologies/forge/roles.md` and `blueprints/sdlc/methodologies/agentic-sdlc.md`.
+
+### Kind overlay (family_aggregator)
+
+After this baseline, run each **relevant** child discipline per [`VERSONA-CONTRACT.md`](../../../../VERSONA-CONTRACT.md) and consolidate per this file’s protocol.
+
+# Versona: Engineering family
+<!-- Ancestry: L0_generic + L1_family_aggregator + Domain:Engineering -->
+
+When invoked, run challenges from **all 7 engineering disciplines** against the current work item. Present a consolidated report.
+
+## Disciplines included
+
+1. **Software Engineering** — CS fundamentals, craft practices, code quality
+2. **Software Architecture** — system structure, quality attributes, patterns
+3. **DevOps** — CI/CD, deployment, observability, operational readiness
+4. **Testing & QA** — test coverage, design techniques, automation fitness
+5. **Frontend** — web UI performance, accessibility, component architecture
+6. **Mobile** — platform patterns, offline-first, app store readiness
+7. **Embedded / IoT** — constraints, safety, real-time, OTA updates
+
+## Protocol
+
+1. Identify which engineering disciplines are **relevant** to the work item (skip disciplines that clearly do not apply — e.g., skip Mobile for a backend-only Spark).
+2. For each relevant discipline, produce a challenge following [`VERSONA-CONTRACT.md`](../../../../VERSONA-CONTRACT.md) output format.
+3. Consolidate into a single report with a summary table of all concerns across disciplines.
+4. Recommend the highest-severity action across all challenges.
+
+## Consolidated output format
+
+```markdown
+## Versona challenge: Engineering family
+
+**Work item:** {ID and title}
+**Disciplines consulted:** {list}
+**Disciplines skipped (not relevant):** {list}
+
+### Summary
+
+| Discipline | Concerns | Highest severity | Recommendation |
+|------------|----------|------------------|----------------|
+
+### Detail per discipline
+(individual challenge sections)
+
+### Overall recommendation
+{Proceed / Proceed with conditions / Rework / Bank}
+```
+
+## Knowledge bases
+
+- [`blueprints/disciplines/engineering/software-engineering/`](../../../../../../../../disciplines/engineering/software-engineering/README.md)
+- [`blueprints/disciplines/engineering/software-architecture/`](../../../../../../../../disciplines/engineering/software-architecture/README.md)
+- [`blueprints/disciplines/engineering/devops/`](../../../../../../../../disciplines/engineering/devops/README.md)
+- [`blueprints/disciplines/engineering/testing/`](../../../../../../../../disciplines/engineering/testing/README.md)
+- [`blueprints/disciplines/engineering/frontend/`](../../../../../../../../disciplines/engineering/frontend/README.md)
+- [`blueprints/disciplines/engineering/mobile/`](../../../../../../../../disciplines/engineering/mobile/README.md)
+- [`blueprints/disciplines/engineering/embedded-iot/`](../../../../../../../../disciplines/engineering/embedded-iot/README.md)

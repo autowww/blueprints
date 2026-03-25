@@ -8,12 +8,9 @@
 
 ## Paradigm relationships (mental model)
 
-```mermaid
-flowchart LR
-    P[Procedural] --> O[OOP]
-    P --> F[FP]
-    F --> R[Reactive]
-    O --> R
+```ks-diagram
+key: linear
+alt: Diagram
 ```
 
 Teams often layer **FP cores**, **OO boundaries**, and **reactive IO**; arrows suggest common teaching lineage, not hard dependencies.

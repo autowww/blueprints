@@ -35,7 +35,7 @@ Canonical layout and conventions: [`DOCUMENTATION-STRUCTURE.md`](DOCUMENTATION-S
 
 ## Cursor: Project Setup Versona
 
-- **Template:** [`methodologies/forge/versona/versona-project-setup.mdc.template`](methodologies/forge/versona/versona-project-setup.mdc.template) → `.cursor/rules/versona-project-setup.mdc`
+- **Template:** [`methodologies/forge/versona/catalog/workflow/versona-project-setup.mdc.template`](methodologies/forge/versona/catalog/workflow/versona-project-setup.mdc.template) → `.cursor/rules/versona-project-setup.mdc`
 - **Trigger:** **`setup`** or `@versona-project-setup` — checklist and gap analysis (pair with **`@forge-setup`** from [`methodologies/forge/setup/forge-setup.mdc.template`](methodologies/forge/setup/forge-setup.mdc.template) for the questionnaire).
 
 ## See also

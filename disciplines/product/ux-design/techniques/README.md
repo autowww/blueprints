@@ -10,11 +10,9 @@
 
 ## Design phases and techniques
 
-```mermaid
-flowchart LR
-  Discover[Discover: interviews inquiry analytics] --> Define[Define: affinity JTBD journeys]
-  Define --> Develop[Develop: sprints prototyping IA]
-  Develop --> Deliver[Deliver: usability A-B tests]
+```ks-diagram
+key: linear
+alt: Diagram
 ```
 
 ---

@@ -1,6 +1,6 @@
 # SAFe — process and flows
 
-**Purpose:** Visual and narrative description of SAFe process flows at **team**, **program (ART)**, and **portfolio** levels. Mermaid diagrams for key lifecycle patterns.
+**Purpose:** Visual and narrative description of SAFe process flows at **team**, **program (ART)**, and **portfolio** levels. KS diagram templates for key lifecycle patterns.
 
 ---
 
@@ -8,23 +8,9 @@
 
 A **Program Increment (PI)** is the primary planning and delivery cadence in SAFe — typically 8–12 weeks containing 4–5 iterations plus an Innovation & Planning (IP) iteration.
 
-```mermaid
-flowchart LR
-    A[PI Planning<br/>2 days] --> B[Iteration 1]
-    B --> C[System Demo 1]
-    C --> D[Iteration 2]
-    D --> E[System Demo 2]
-    E --> F[Iteration 3]
-    F --> G[System Demo 3]
-    G --> H[Iteration 4]
-    H --> I[System Demo 4]
-    I --> J[IP Iteration<br/>Innovation &<br/>Planning]
-    J --> K[I&A<br/>Inspect &<br/>Adapt]
-    K --> L[Next PI Planning]
-
-    style A fill:#4a90d9,color:#fff
-    style K fill:#d94a4a,color:#fff
-    style J fill:#4ad97a,color:#fff
+```ks-diagram
+key: linear
+alt: Diagram
 ```
 
 ### IP iteration
@@ -44,20 +30,9 @@ Teams should **not** plan feature work into the IP iteration.
 
 Within each iteration, team-level flow follows standard Scrum/Kanban patterns:
 
-```mermaid
-flowchart LR
-    A[Iteration<br/>Planning] --> B[Daily execution]
-    B --> C{Daily<br/>Stand-up}
-    C -->|Continue| B
-    C -->|Blocker| D[ART Sync<br/>escalation]
-    D --> B
-    B --> E[Iteration<br/>Review]
-    E --> F[System Demo<br/>contribution]
-    F --> G[Iteration<br/>Retrospective]
-    G --> A
-
-    style A fill:#4a90d9,color:#fff
-    style F fill:#d9a54a,color:#fff
+```ks-diagram
+key: linear
+alt: Diagram
 ```
 
 **SAFe-specific addition:** team iterations feed into the **System Demo** every iteration, ensuring continuous cross-team integration.
@@ -66,26 +41,9 @@ flowchart LR
 
 ## 3. ART coordination flow
 
-```mermaid
-flowchart TD
-    subgraph "Weekly / bi-weekly"
-        A[Scrum of Scrums<br/>SM delegates] --> B[PO Sync<br/>PO delegates]
-        A --> C[RTE aggregates<br/>risks & impediments]
-        B --> C
-    end
-
-    subgraph "Per iteration"
-        D[Team iteration<br/>reviews] --> E[System Demo<br/>integrated]
-    end
-
-    subgraph "Per PI"
-        F[PI Planning] --> G[4-5 iterations]
-        G --> H[I&A]
-        H --> F
-    end
-
-    C --> D
-    E --> G
+```ks-diagram
+key: swimlane
+alt: Diagram
 ```
 
 ---
@@ -94,18 +52,9 @@ flowchart TD
 
 Epics flow through the portfolio Kanban system before reaching ARTs:
 
-```mermaid
-flowchart LR
-    A[Funnel] --> B[Reviewing]
-    B --> C[Analyzing]
-    C --> D{Go / No-Go}
-    D -->|Go| E[Portfolio<br/>Backlog]
-    D -->|No-Go| F[Archive]
-    E --> G[Implementing<br/>on ART]
-    G --> H[Done]
-
-    style D fill:#d9a54a,color:#fff
-    style F fill:#999,color:#fff
+```ks-diagram
+key: linear
+alt: Diagram
 ```
 
 | Stage | Activity |
@@ -128,13 +77,9 @@ SAFe decouples **release** from **PI cadence**. Teams can release at any point w
 2. Continuous delivery pipeline is green (build, test, stage)
 3. Business decides to release (business value, market timing)
 
-```mermaid
-flowchart LR
-    A[Continuous<br/>exploration] --> B[Continuous<br/>integration]
-    B --> C[Continuous<br/>deployment]
-    C --> D[Release on<br/>demand]
-
-    style D fill:#4ad97a,color:#fff
+```ks-diagram
+key: linear
+alt: Diagram
 ```
 
 The **continuous delivery pipeline** spans all four activities. PI cadence provides **alignment**; release cadence provides **value delivery**. They need not be the same.

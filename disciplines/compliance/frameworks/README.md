@@ -14,17 +14,9 @@ Compliance frameworks are **guardrails for digital products**: they turn statute
 
 ### Which framework applies? (high level)
 
-```mermaid
-flowchart TD
-  Start[New or changed product capability] --> EU{Handle EU personal data?}
-  EU -->|Yes| GDPR[GDPR — lawful basis rights transfers ROPA]
-  EU -->|No| H{Handle US health data PHI?}
-  H -->|Yes| HIPAA[HIPAA — PHI safeguards BAAs breach rule]
-  H -->|No| P{Handle payment cards PAN?}
-  P -->|Yes| PCI[PCI-DSS — CDE scope 12 reqs SAQ/ROC]
-  P -->|No| W{Web or digital product UX?}
-  W -->|Yes| WCAG[WCAG / ADA / EAA — accessibility conformance]
-  W -->|No| More[See table: AI Act SOC2 ISO27001 etc]
+```ks-diagram
+key: decision
+alt: Diagram
 ```
 
 ---

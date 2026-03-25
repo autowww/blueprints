@@ -10,18 +10,9 @@ This document describes the step-by-step process for bootstrapping a new product
 
 ## The pipeline
 
-```mermaid
-flowchart TD
-  S1["Step 1\nProblem definition"] --> S2["Step 2\nMarket analysis"]
-  S2 --> S3["Step 3\nCompetitive landscape"]
-  S3 --> S4["Step 4\nBusiness case"]
-  S4 --> S5["Step 5\nProduct vision and metrics"]
-  S5 --> S6["Step 6\nHigh-level roadmap"]
-  S6 --> S7["Step 7\nWBS decomposition"]
-  S7 --> S8["Step 8\nFirst Product Spark"]
-  S8 --> S9["Step 9\nFirst Charge"]
-  S9 --> S10["Step 10\nPlan Sparks"]
-  S10 --> EXEC["Begin execution"]
+```ks-diagram
+key: linear
+alt: Diagram
 ```
 
 ---

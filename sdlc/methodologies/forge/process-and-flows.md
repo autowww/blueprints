@@ -1,34 +1,12 @@
 # Forge — major processes & flow maps
 
-Mermaid diagrams below render on GitHub and in many Markdown viewers.
+Diagrams below use **` ```ks-diagram `** fences (Kitchen Sink SVG templates) on the published handbook.
 
 ## 1. Forge iteration lifecycle (high level)
 
-```mermaid
-flowchart LR
-  subgraph intake["Continuous intake"]
-    OreIntake[Ore intake]
-  end
-  subgraph iteration["Forge iteration"]
-    Refine[Refinement]
-    Plan[Planning]
-    Daily[Daily sync loop]
-    Review[Review]
-    Assay[Assay Gate]
-  end
-  subgraph ship["Ship and learn"]
-    Release[Release]
-    Retro[Retro]
-  end
-  OreIntake --> Refine
-  Refine --> Plan
-  Plan --> Daily
-  Daily --> Daily
-  Daily --> Review
-  Review --> Assay
-  Assay --> Release
-  Release --> Retro
-  Retro --> OreIntake
+```ks-diagram
+key: swimlane
+alt: Diagram
 ```
 
 ## 2. Work unit hierarchy
@@ -72,23 +50,9 @@ Spark IDs inherit from the WBS scheme. Spark-specific data (state, DoD, journal)
 
 ## 3. State model
 
-```mermaid
-stateDiagram-v2
-  [*] --> Ore
-  Ore --> Ingot: refine
-  Ore --> Rejected: reject
-  Ingot --> Spark: decompose
-  Ingot --> Banked: bank
-  Spark --> InCharge: pull
-  Spark --> Banked: bank
-  InCharge --> Done: evidence gathered
-  InCharge --> Blocked: external impediment
-  InCharge --> Banked: bank
-  Blocked --> InCharge: unblock
-  Banked --> Spark: unbank
-  Banked --> Ingot: unbank
-  Done --> Released: Assay Gate pass
-  Done --> Spark: Assay Gate fail
+```ks-diagram
+key: state
+alt: Diagram
 ```
 
 | State | Meaning |
@@ -105,87 +69,37 @@ stateDiagram-v2
 
 ## 4. Refinement flow (Ore → Ingot)
 
-```mermaid
-flowchart TD
-  A[Ore item] --> B{Problem and value clear?}
-  B -->|No| C[Clarify with stakeholders]
-  C --> A
-  B -->|Yes| D{Acceptance route defined?}
-  D -->|No| E[Define acceptance criteria]
-  E --> D
-  D -->|Yes| F{Versona challenge needed?}
-  F -->|Yes| G[Invoke relevant Versonas]
-  G --> H{Concerns raised?}
-  H -->|Critical| I[Rework or Bank]
-  I --> A
-  H -->|Minor or none| J[Promote to Ingot]
-  F -->|No| J
-  J --> K[Ingot in backlog]
+```ks-diagram
+key: decision
+alt: Diagram
 ```
 
 ## 5. Planning flow (Ingot → Sparks → iteration scope)
 
-```mermaid
-flowchart TD
-  A[Ordered Ingots] --> B[Decompose into Sparks]
-  B --> C{Spark small enough?}
-  C -->|No| D[Split further]
-  D --> C
-  C -->|Yes| E[Assign phase prefix]
-  E --> F[Add to iteration backlog]
-  F --> G{Capacity remaining?}
-  G -->|Yes| A
-  G -->|No| H[Iteration scope locked]
-  H --> I[Leave margin for interruption]
+```ks-diagram
+key: decision
+alt: Diagram
 ```
 
 ## 6. Daily execution loop
 
-```mermaid
-flowchart TD
-  S[Start of day] --> M[Daily sync 15m]
-  M --> C[Confirm Charge]
-  C --> W[Work Sparks]
-  W --> B{Blocked?}
-  B -->|Yes| BK{Strategic or external?}
-  BK -->|External| BL[Mark Blocked; escalate]
-  BL --> W
-  BK -->|Strategic| BA[Bank with context]
-  BA --> C
-  B -->|No| D{Decision point?}
-  D -->|Yes| EL[Ember Log entry]
-  D -->|No| W
-  EL --> W
-  W --> E[End of day: journal entry]
+```ks-diagram
+key: decision
+alt: Diagram
 ```
 
 ## 7. Assay Gate flow
 
-```mermaid
-flowchart TD
-  C[Completed Sparks] --> T[Tests pass]
-  T --> A[Acceptance criteria met]
-  A --> R[Risk checks completed]
-  R --> P[Performance thresholds met]
-  P --> AG{All evidence present?}
-  AG -->|Yes| Pass[Assay Gate PASS → Release]
-  AG -->|No| Gap[Identify gaps]
-  Gap --> Fix[Gather missing evidence]
-  Fix --> C
+```ks-diagram
+key: decision
+alt: Diagram
 ```
 
 ## 8. Versona challenge flow
 
-```mermaid
-flowchart TD
-  DP[Decision point reached] --> ID[Identify relevant disciplines]
-  ID --> INV[Invoke Versonas for selected disciplines]
-  INV --> CH[Challenge runs: concerns, severity, recommendation]
-  CH --> SEV{Critical concerns?}
-  SEV -->|Yes| ACT[Act: rework, split, Bank, or accept risk]
-  ACT --> EL[Ember Log: capture decision]
-  SEV -->|No| PROC[Proceed with work]
-  PROC --> EL
+```ks-diagram
+key: decision
+alt: Diagram
 ```
 
 ## 9. Cross-phase mapping (A–F) in one iteration

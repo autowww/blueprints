@@ -14,26 +14,9 @@ Different audiences need different documentation forms. A developer consuming an
 
 ### Choosing the right type
 
-```mermaid
-flowchart TD
-  Start[New documentation need] --> WHO{Who is the audience?}
-  WHO -->|Developers| DEV{What do they need?}
-  DEV -->|API details| API[API documentation]
-  DEV -->|Setup and contribute| DEVG[Developer guide]
-  DEV -->|System structure| ARCH[Architecture docs]
-  WHO -->|End users| USR{What do they need?}
-  USR -->|Learn the product| TUT[Tutorial]
-  USR -->|Accomplish a task| HOW[How-to guide]
-  USR -->|Look up details| REF[Knowledge base / FAQ]
-  WHO -->|Operations| OPS[Runbook / SOP]
-  WHO -->|Stakeholders| STK{What do they need?}
-  STK -->|Product capabilities| PROD[Product docs / feature docs]
-  STK -->|Project status| GOV[Reports / decision logs]
-  WHO -->|Prospects or community| MKT{What format?}
-  MKT -->|Written| BLOG[Blog post / white paper]
-  MKT -->|Visual| PRES[Presentation]
-  MKT -->|Audio| POD[Podcast / voiceover]
-  MKT -->|Video| VID[Video / demo]
+```ks-diagram
+key: decision
+alt: Diagram
 ```
 
 ---

@@ -2,54 +2,32 @@
 
 ## 1. Value-stream overview (idea to production)
 
-```mermaid
-flowchart LR
-  D[Demand signal] --> S[Shape / specify]
-  S --> P[Plan / pull]
-  P --> B[Build]
-  B --> V[Verify]
-  V --> R[Release]
-  R --> O[Operate & learn]
-  O -->|feedback| D
+```ks-diagram
+key: linear
+alt: Diagram
 ```
 
 Lean measures **lead time** across the entire stream and **waiting time** between steps.
 
 ## 2. Waste identification loop
 
-```mermaid
-flowchart TD
-  M[Map current value stream] --> I[Identify waste]
-  I --> A[Analyze root cause]
-  A --> C[Design countermeasure]
-  C --> T[Test change]
-  T --> S{Improved?}
-  S -->|Yes| ST[Standardize]
-  S -->|No| A
-  ST --> M
+```ks-diagram
+key: decision
+alt: Diagram
 ```
 
 ## 3. A3 problem-solving flow
 
-```mermaid
-flowchart LR
-  BG[Background] --> CC[Current condition]
-  CC --> RC[Root-cause analysis]
-  RC --> TC[Target condition]
-  TC --> CM[Countermeasures]
-  CM --> AP[Action plan]
-  AP --> FU[Follow-up]
+```ks-diagram
+key: linear
+alt: Diagram
 ```
 
 ## 4. Pull-based work selection
 
-```mermaid
-flowchart TD
-  CAP[Capacity available?] -->|Yes| PL[Pull highest-value item]
-  CAP -->|No| W[Wait / finish current WIP]
-  PL --> WK[Work on item]
-  WK --> DN[Done]
-  DN --> CAP
+```ks-diagram
+key: linear
+alt: Diagram
 ```
 
 ## 5. Phases A–F (Lean focus areas)

@@ -143,53 +143,23 @@ Small **single-operation** Cursor rules and an installer script live in [`../tas
 
 ### Discipline overlay (neutral tasklets + normative Versona)
 
-```mermaid
-flowchart LR
-  subgraph Mechanical["Mechanical I/O"]
-    T[Tasklet fixed shape]
-  end
-  subgraph Overlay["Discipline overlay"]
-    V[Versona challenge]
-  end
-  subgraph Output["Normative output"]
-    R[Contract structured result]
-  end
-  T --> V
-  V --> R
+```ks-diagram
+key: swimlane
+alt: Diagram
 ```
 
 ### Sampling Versona sequence (demo)
 
-```mermaid
-sequenceDiagram
-  participant User
-  participant S as Sampling_Versona
-  participant A as Tasklet_assumptions
-  participant U as Tasklet_unknowns
-  participant Q as Tasklet_triage
-  User->>S: Invoke
-  S->>A: Charter_1
-  A-->>S: Output
-  S->>U: Charter_2
-  U-->>S: Output
-  S->>Q: Charter_3
-  Q-->>S: Output
-  S-->>User: Merged_challenge
+```ks-diagram
+key: sequence
+alt: Diagram
 ```
 
 ### Where documentation is published
 
-```mermaid
-flowchart LR
-  subgraph Source["Source of truth"]
-    BP[blueprints Markdown]
-  end
-  subgraph Sites["Published HTML"]
-    BPW[blueprints handbook]
-    FS[forgesdlc product site]
-  end
-  BP -->|submodule build| BPW
-  BP -->|submodule build| FS
+```ks-diagram
+key: swimlane
+alt: Diagram
 ```
 
 ## Adopting Versonas in a consuming repo

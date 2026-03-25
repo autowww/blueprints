@@ -30,22 +30,9 @@ Testing is the discipline that verifies SDLC execution quality and validates tha
 
 ## 1. The three-domain model
 
-```mermaid
-graph TB
-  subgraph pdlcLayer ["PDLC — Product Lifecycle"]
-    direction LR
-    rightProduct["Build the RIGHT product"]
-    subgraph sdlcLayer ["SDLC — Delivery"]
-      productRight["Build the product RIGHT"]
-    end
-  end
-
-  testLayer["Testing — Verify correctness, validate fitness"]
-
-  testLayer -->|"verification: test levels, quality gates"| sdlcLayer
-  testLayer -->|"validation: acceptance, outcome measurement"| pdlcLayer
-  sdlcLayer -.->|"test results, coverage data"| testLayer
-  pdlcLayer -.->|"acceptance criteria, success metrics"| testLayer
+```ks-diagram
+key: swimlane
+alt: Diagram
 ```
 
 ### Comparison table

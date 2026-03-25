@@ -1,0 +1,14 @@
+# Optional machine-readable twin of SESSION.md frontmatter.
+# Copy to session.manifest.yaml inside the session folder and keep in sync with SESSION.md, or delete if you use only SESSION.md.
+
+session_id: "<session-id>"
+started_at: "YYYY-MM-DDTHH:MM:SSZ"
+work_item_refs: []
+work_item_kind: spark
+# ore | ingot | spark | spike_discipline | spike_general | other
+process_id: null
+versona_kind: discipline
+# discipline | routing | family_aggregator | meta | workflow
+discipline: null
+parent_session: null
+ember_log_ref: null

@@ -2,48 +2,32 @@
 
 ## 1. Classic stage sequence (simplified)
 
-```mermaid
-flowchart LR
-  I[Initiate] --> P[Plan]
-  P --> D[Design]
-  D --> B[Build]
-  B --> T[Test]
-  T --> U[UAT]
-  U --> R[Release]
-  R --> O[Operate]
+```ks-diagram
+key: linear
+alt: Diagram
 ```
 
 Overlap stages where policy allows; **gates** sit on arrows.
 
 ## 2. Gate decision
 
-```mermaid
-flowchart TD
-  G[Gate pack submitted] --> C{Exit criteria met?}
-  C -->|No| H[Hold + actions]
-  H --> G
-  C -->|Yes| N{Steer / sponsor approves?}
-  N -->|No| X[Defer / kill / replan]
-  N -->|Yes| Y[Enter next stage]
+```ks-diagram
+key: decision
+alt: Diagram
 ```
 
 ## 3. Change control path (scope)
 
-```mermaid
-flowchart LR
-  CR[Change request] --> IA[Impact analysis]
-  IA --> B{Steer decision}
-  B -->|Approve| BL[Re-baseline]
-  B -->|Reject| Q[Queue or drop]
+```ks-diagram
+key: linear
+alt: Diagram
 ```
 
 ## 4. Traceability thread
 
-```mermaid
-flowchart LR
-  Req[Requirement ID] --> DS[Design ref]
-  DS --> TC[Test case]
-  TC --> RN[Release note]
+```ks-diagram
+key: linear
+alt: Diagram
 ```
 
 ## 5. Phases A–F (typical mapping)

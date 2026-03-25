@@ -10,19 +10,9 @@
 
 **Core knowledge:** [`DATA-SCIENCE.md`](../DATA-SCIENCE.md) — ML lifecycle (CRISP-DM aligned), statistics, model evaluation, MLOps, responsible AI.
 
-```mermaid
-flowchart TB
-  subgraph Phases["Typical ML workflow"]
-    DU[Data understanding]
-    FE[Features & preparation]
-    MOD[Modeling]
-    EV[Evaluation & selection]
-    DEP[Deployment & monitoring]
-    DU --> FE --> MOD --> EV --> DEP
-  end
-  FE -.->|deep dive| FG[feature-engineering.md]
-  MOD -.->|algorithm families| AT[Table below]
-  EV -.->|deep dive| MG[model-evaluation.md]
+```ks-diagram
+key: swimlane
+alt: Diagram
 ```
 
 | Category | Core idea | Common algorithms | Deep dive |

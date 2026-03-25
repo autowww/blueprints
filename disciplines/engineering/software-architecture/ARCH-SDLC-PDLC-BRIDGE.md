@@ -75,22 +75,9 @@ Architecture provides the structural reasoning that connects product vision (PDL
 
 ## How architecture connects PDLC and SDLC
 
-```mermaid
-graph TB
-  subgraph pdlcLayer ["PDLC — Product lifecycle"]
-    direction LR
-    rightProduct["Right product?"]
-    subgraph sdlcLayer ["SDLC — Delivery"]
-      productRight["Product built right?"]
-    end
-  end
-
-  archLayer["Architecture — Structure, qualities, evolution"]
-
-  archLayer -->|"NFRs, diagrams, ADRs, fitness functions"| sdlcLayer
-  archLayer -->|"feasibility, options, runway, debt posture"| pdlcLayer
-  sdlcLayer -.->|"build feedback, incidents, drift"| archLayer
-  pdlcLayer -.->|"outcomes, scale, strategy shifts"| archLayer
+```ks-diagram
+key: swimlane
+alt: Diagram
 ```
 
 ### PDLC phases (reference)

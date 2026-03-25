@@ -106,7 +106,7 @@ else:
 
 print()
 if missing:
-    print(f"Summary: {len(missing)} missing (copy from blueprints/.../versona/*.mdc.template).")
+    print(f"Summary: {len(missing)} missing (copy from blueprints/.../versona/…/*.mdc.template — see CURSOR-RULES-ALIGNMENT.md).")
     print("See: blueprints/sdlc/methodologies/forge/setup/CURSOR-RULES-ALIGNMENT.md")
     sys.exit(1)
 print("All expected Versona rules present.")

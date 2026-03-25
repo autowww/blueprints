@@ -6,13 +6,9 @@
 
 UI pattern thinking means naming recurring structures—composition, state ownership, data flow—so teams can reuse solutions deliberately instead of reinventing ad hoc trees and stores. Start from the **component boundary**, then decide **where state lives**, then **how data crosses the network**; routing and forms sit on top of those choices.
 
-```mermaid
-flowchart LR
-  CA[Component architecture] --> SM[State management]
-  SM --> DF[Data fetching]
-  DF --> RT[Routing]
-  CA --> FR[Forms]
-  SM --> FR
+```ks-diagram
+key: linear
+alt: Diagram
 ```
 
 **Core knowledge:** [`FRONTEND.md`](../FRONTEND.md) — component architecture, rendering, state management, CSS.

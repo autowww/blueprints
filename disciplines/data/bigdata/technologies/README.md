@@ -8,11 +8,9 @@
 
 ### Processing paradigm spectrum
 
-```mermaid
-flowchart LR
-  B[Batch] --> MB[Micro-batch]
-  MB --> S[Streaming]
-  S --> I[Interactive SQL]
+```ks-diagram
+key: linear
+alt: Diagram
 ```
 
 Interactive analytics often **consumes** outputs of batch or stream pipelines rather than replacing them.

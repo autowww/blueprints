@@ -2,51 +2,32 @@
 
 ## 1. V-Model structure (classic)
 
-```mermaid
-flowchart TD
-  REQ["Requirements analysis"] --> SD["System design"]
-  SD --> DD["Detailed design"]
-  DD --> IMPL["Implementation"]
-  IMPL --> UT["Unit testing"]
-  UT --> IT["Integration testing"]
-  IT --> ST["System testing"]
-  ST --> AT["Acceptance testing"]
-  REQ -.->|traces to| AT
-  SD -.->|traces to| ST
-  DD -.->|traces to| IT
+```ks-diagram
+key: linear
+alt: Diagram
 ```
 
 Left side descends (decomposition); right side ascends (integration and verification). Dotted arrows show traceability pairing.
 
 ## 2. Traceability flow
 
-```mermaid
-flowchart LR
-  R[Requirement ID] --> D[Design element]
-  D --> TC[Test case]
-  TC --> TR[Test result]
-  TR --> EV[Evidence package]
+```ks-diagram
+key: linear
+alt: Diagram
 ```
 
 ## 3. Test-level gate decision
 
-```mermaid
-flowchart TD
-  TRR["Test readiness review"] --> EX["Execute tests"]
-  EX --> RES{Results}
-  RES -->|All pass| NXT["Proceed to next V-level"]
-  RES -->|Failures| DEF["Defect resolution"]
-  DEF --> EX
+```ks-diagram
+key: linear
+alt: Diagram
 ```
 
 ## 4. Change impact (V-Model perspective)
 
-```mermaid
-flowchart LR
-  CR["Change request"] --> IA["Impact analysis across V-levels"]
-  IA --> AFF["Affected: req + design + tests"]
-  AFF --> UPD["Update all affected levels"]
-  UPD --> RET["Retest affected V-levels"]
+```ks-diagram
+key: linear
+alt: Diagram
 ```
 
 A change to a requirement potentially impacts design, implementation, and tests at multiple V-levels.

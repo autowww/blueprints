@@ -6,23 +6,9 @@ These **project-agnostic** guides support **proactive customer management**: ins
 
 ## Where practices sit in the customer lifecycle
 
-```mermaid
-flowchart LR
-  subgraph adopt["Adoption"]
-    O[Onboarding]
-  end
-  subgraph operate["Ongoing value"]
-    H[Health monitoring]
-    C[Churn prevention]
-  end
-  subgraph grow["Growth"]
-    E[Expansion & advocacy]
-  end
-  O --> H
-  H --> C
-  H --> E
-  C -.->|save or exit| W[Win-back / feedback loop]
-  W --> O
+```ks-diagram
+key: swimlane
+alt: Diagram
 ```
 
 Deep dives: [**Onboarding**](onboarding-design.md), [**Health scoring**](health-scoring.md), [**Churn prevention**](churn-prevention.md). **Expansion and advocacy** remain in [**CUSTOMER-SUCCESS.md**](../CUSTOMER-SUCCESS.md).

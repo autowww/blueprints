@@ -32,7 +32,10 @@ Seed files for a **mutable** `forge/` workspace and `ember-logs/` at repo root. 
 | [**forge/ember-log-entry.template.md**](forge/ember-log-entry.template.md) | Ember Log daily file seed. |
 | [**forge/journal-entry.template.md**](forge/journal-entry.template.md) | Day journal seed. |
 | [**forge/assay-gate.template.md**](forge/assay-gate.template.md) | Assay Gate evidence checklist. |
-| **forge/cursor-rules/** | Ready-to-use Cursor rules: `forge-daily.mdc`, `forge-planning.mdc`, `forge-setup.mdc`, `forge-versona.mdc`, `forge-product-manager.mdc`. |
+| [**forge/versona-session.template.md**](forge/versona-session.template.md) | Versona session folder seed (`SESSION.md` + manifest fields) — see [`../methodologies/forge/versona/VERSONA-FRAMEWORK.md`](../methodologies/forge/versona/VERSONA-FRAMEWORK.md) §7. |
+| [**forge/session.manifest.yaml.template**](forge/session.manifest.yaml.template) | Optional YAML twin of session manifest. |
+| [**forge/versona-process.template.md**](forge/versona-process.template.md) | Repeatable multi-step Versona / human process doc (mermaid placeholders). |
+| **forge/cursor-rules/** | Ready-to-use Cursor rules: `forge-daily.mdc`, `forge-planning.mdc`, `forge-setup.mdc`, `forge-versona.mdc`, `forge-product-manager.mdc`. Optional Layer-0 baseline: copy `../methodologies/forge/versona/versona-generic.mdc.template` from blueprints (see `versona/catalog/ANCESTRY.md`, `versona/catalog/TEMPLATE-INDEX.md`). |
 | **forge/cursor-skills/** | Optional Cursor **Skills** to copy into `.cursor/skills/` (e.g. `run-product-versona-challenge`). |
 | **—** | Align `forge.config.yaml` with `.cursor/rules/`: [`../methodologies/forge/setup/check-forge-cursor-alignment.sh`](../methodologies/forge/setup/check-forge-cursor-alignment.sh) |
 

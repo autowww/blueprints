@@ -6,17 +6,9 @@
 
 Mobile patterns sit at the intersection of **threading and lifecycle** (main-thread UI, process death), **navigation graphs** (deep links, restoration), and **data contracts** (offline queues, sync). Treat patterns as a **stack**: pick an **architecture** first, then align **navigation**, **data/API boundaries**, and **offline** behavior so they compose without leaking concerns across layers.
 
-```mermaid
-flowchart TB
-  subgraph concerns["Mobile pattern layers"]
-    A[Architecture<br/>MVVM / MVI / Clean / modular]
-    N[Navigation<br/>stack / tabs / deep links]
-    D[Data & API<br/>repository / DTOs / errors]
-    O[Offline & sync<br/>cache / queue / conflicts]
-  end
-  A --> N
-  A --> D
-  D --> O
+```ks-diagram
+key: swimlane
+alt: Diagram
 ```
 
 ## Pattern guides

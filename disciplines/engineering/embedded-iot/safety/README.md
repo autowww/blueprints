@@ -8,15 +8,9 @@
 
 ### Safety standard family (conceptual)
 
-```mermaid
-flowchart TB
-  IEC[IEC 61508<br/>E/E/PE functional safety]
-  IEC --> ISO26262[ISO 26262<br/>Road vehicles]
-  IEC --> EN50128[EN 50128 / EN 50657<br/>Rail / road vehicles]
-  IEC --> IEC61511[IEC 61511<br/>Process industry]
-  IEC --> IEC62061[IEC 62061<br/>Machinery]
-  IEC --> IEC62304[IEC 62304<br/>Medical device software]
-  ISO26262 -.->|+ cybersecurity| ISO21434[ISO/SAE 21434]
+```ks-diagram
+key: linear
+alt: Diagram
 ```
 
 | Standard | Domain | Focus | Deep dive |

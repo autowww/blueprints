@@ -8,24 +8,9 @@
 
 ### Protocol stack (reference layers)
 
-```mermaid
-flowchart TB
-  subgraph app [Application]
-    M[MQTT / CoAP / OPC UA / Matter ...]
-  end
-  subgraph trans [Transport]
-    T[TCP / UDP / QUIC ...]
-  end
-  subgraph net [Network]
-    N[IP / 6LoWPAN ...]
-  end
-  subgraph link [Link]
-    L[802.15.4 / BLE / Wi-Fi / Ethernet ...]
-  end
-  subgraph phy [Physical]
-    P[Radio / wire]
-  end
-  M --> T --> N --> L --> P
+```ks-diagram
+key: swimlane
+alt: Diagram
 ```
 
 | Protocol | Layer | Focus | Deep dive |

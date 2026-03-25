@@ -6,23 +6,9 @@
 
 **Audience:** Teams adopting [`blueprints/disciplines/engineering/software-architecture/`](../README.md). Project-specific architecture lives in **`docs/architecture/`**; decisions belong in **`docs/adr/`**.
 
-```mermaid
-flowchart TD
-    Start[Need an architecture approach?]
-    E{Enterprise / portfolio / EA office?}
-    D{Communicate structure at multiple zoom levels?}
-    T{One canonical architecture document?}
-    Dom{Complex domain / many models?}
-
-    Start --> E
-    E -->|Yes| TOGAF[TOGAF ADM + repository]
-    E -->|No| D
-    D -->|Yes| C4[C4 model]
-    D -->|No| T
-    T -->|Yes| arc42[arc42 template]
-    T -->|No| Dom
-    Dom -->|Yes| DDD[DDD + context map]
-    Dom -->|No| Lite[ADRs + minimal views / 4+1 as needed]
+```ks-diagram
+key: decision
+alt: Diagram
 ```
 
 | Approach | Guide | Focus | When to use |

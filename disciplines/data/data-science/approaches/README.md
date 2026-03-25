@@ -12,20 +12,9 @@ Pick a **process scaffold** first (goals, data reality, deployment), then layer 
 
 **Bridge:** [`DS-SDLC-PDLC-BRIDGE.md`](../DS-SDLC-PDLC-BRIDGE.md) — how data science maps to delivery and product lifecycles.
 
-```mermaid
-flowchart TB
-  subgraph Process["Process frameworks"]
-    CRISP[CRISP-DM\nphases & iteration]
-    MLO[MLOps\npipelines & prod]
-  end
-  subgraph Learning["Learning & proof"]
-    EXP[Experiment management]
-    AB[A/B testing]
-  end
-  CRISP --> EXP
-  EXP --> MLO
-  MLO --> AB
-  CRISP -.->|deployment feedback| MLO
+```ks-diagram
+key: swimlane
+alt: Diagram
 ```
 
 The diagram is **illustrative**: in practice, experiment tracking starts early (often during Data Preparation / Modeling in CRISP-DM terms), and A/B tests may run only after a first deployment — but the dependencies (sound process → disciplined experiments → reliable production → measured impact) stay the same.

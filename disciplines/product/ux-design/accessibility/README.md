@@ -10,15 +10,9 @@
 
 ## Accessibility implementation workflow
 
-```mermaid
-flowchart TD
-  P[Policy e.g. WCAG 2.2 AA] --> DS[Design system a11y tokens]
-  DS --> DEV[Build and code review]
-  DEV --> AUTO[Automated CI checks]
-  AUTO --> MAN[Manual test pass]
-  MAN --> AT[Assistive technology smoke]
-  AT --> REL[Release]
-  REL --> MON[Regression monitoring]
+```ks-diagram
+key: linear
+alt: Diagram
 ```
 
 ---

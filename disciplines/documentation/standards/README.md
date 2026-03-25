@@ -14,19 +14,9 @@ Documentation without standards drifts into inconsistency — every author inven
 
 ### Choosing a standard
 
-```mermaid
-flowchart TD
-  Start[Documentation challenge] --> ORG{Need to organize content?}
-  ORG -->|Yes| DIA[Diátaxis — four modes]
-  ORG -->|No| PROC{Need a development process?}
-  PROC -->|Yes| DAC[Docs-as-code — version control and CI]
-  PROC -->|No| REUSE{Need content reuse at scale?}
-  REUSE -->|Yes| DITA[DITA — modular XML authoring]
-  REUSE -->|No| CLAR{Need maximum clarity?}
-  CLAR -->|Yes| STE[ASD-STE100 — controlled language]
-  CLAR -->|No| FORMAL{Need formal compliance?}
-  FORMAL -->|Yes| ISO[ISO/IEC/IEEE 26511-26515]
-  FORMAL -->|No| STYLE[Style guide — Google or Microsoft]
+```ks-diagram
+key: decision
+alt: Diagram
 ```
 
 ---

@@ -37,4 +37,5 @@ Shell scripts for git-tracked daily operations live in [`../scripts/`](https://g
 | `forge-charge.sh` | Create/update today's Charge; show status; mark Sparks done |
 | `forge-ember.sh` | Append an Ember Log entry with optional YAML frontmatter |
 | `forge-journal.sh` | Create today's journal entry; commit and push daily activity |
+| `forge-versona-session.sh` | Create `forge-logs/versona/<actor>/<session-id>/` with `SESSION.md` (see [`../versona/VERSONA-FRAMEWORK.md`](../versona/VERSONA-FRAMEWORK.md) §7) |
 | `forge-status.sh` | Show current Forge iteration status |

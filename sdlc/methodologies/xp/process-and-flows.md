@@ -2,42 +2,30 @@
 
 ## 1. Iteration loop
 
-```mermaid
-flowchart LR
-  IP[Iteration planning] --> DEV[Build: pair + TDD + CI]
-  DEV --> ACC[Acceptance]
-  ACC --> DEMO[Demo]
-  DEMO --> RT[Retrospective]
-  RT --> IP
+```ks-diagram
+key: linear
+alt: Diagram
 ```
 
 ## 2. TDD micro-loop (within story)
 
-```mermaid
-flowchart TD
-  R[Red: failing test] --> G[Green: minimal code]
-  G --> RF[Refactor]
-  RF --> R
+```ks-diagram
+key: linear
+alt: Diagram
 ```
 
 ## 3. Story lifecycle
 
-```mermaid
-flowchart LR
-  S[Story drafted] --> AT[Acceptance tests agreed]
-  AT --> IMPL[Implement + unit tests]
-  IMPL --> CI[CI green]
-  CI --> ACP[Customer accepts]
+```ks-diagram
+key: linear
+alt: Diagram
 ```
 
 ## 4. Planning game (priorities vs estimates)
 
-```mermaid
-flowchart TD
-  C[Customer: highest value story?] --> T[Team: estimate cost]
-  T --> D{Fits iteration?}
-  D -->|Yes| P[Pull to iteration]
-  D -->|No| C
+```ks-diagram
+key: decision
+alt: Diagram
 ```
 
 ## 5. Phases A–F (XP locus)

@@ -63,30 +63,9 @@ Standalone disciplines that span every family — they are not grouped under a f
 
 Each discipline has a **bridge document** (`*-SDLC-PDLC-BRIDGE.md`) that maps its practices to SDLC phases A–F and PDLC phases P1–P6. Disciplines are not sequential — they provide expertise that is drawn upon at the right lifecycle moments. See [`BRIDGES.md`](../BRIDGES.md) for the concept, full index, and standard structure.
 
-```mermaid
-flowchart TB
-  subgraph lifecycleLayer ["Lifecycles (when)"]
-    SDLC["SDLC — phases A-F"]
-    PDLC["PDLC — phases P1-P6"]
-  end
-
-  subgraph familiesLayer ["Discipline families (how)"]
-    ENG["Engineering: SE, Arch, DevOps, Testing, FE, Mobile, IoT"]
-    DAT["Data: Big Data, Data Science"]
-    PRD["Product: BA, UX, Marketing, Customer Success"]
-    GOV["Governance: PM, Lean"]
-  end
-
-  subgraph crossCutLayer ["Cross-cutting"]
-    SEC["Security"]
-    COMP["Compliance"]
-    DOC["Documentation"]
-  end
-
-  familiesLayer -->|"techniques, practices, governance"| lifecycleLayer
-  lifecycleLayer -.->|"phase context, gates, artifacts"| familiesLayer
-  crossCutLayer -->|"constraints, controls, obligations, knowledge"| familiesLayer
-  crossCutLayer -->|"shift-left, continuous assurance, continuous docs"| lifecycleLayer
+```ks-diagram
+key: swimlane
+alt: Diagram
 ```
 
 ## Adopt in your repo

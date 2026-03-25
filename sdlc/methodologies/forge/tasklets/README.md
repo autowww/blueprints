@@ -8,35 +8,16 @@ Full taxonomy (execution plane, operation class, discipline overlay): [`TASKLET-
 
 ### Mental model: layers
 
-```mermaid
-flowchart TB
-  subgraph meta [Meta_layer]
-    Versona[Versona_or_family]
-  end
-  subgraph cognition [Cognition_plane_Cursor]
-    Tasklets[Tasklets_mdc]
-  end
-  subgraph execution [Execution_plane_optional]
-    Recipes[agents_recipes_Docker]
-  end
-  Versona -->|select_merge| Tasklets
-  Versona -->|manifest| Recipes
-  Recipes -->|artifacts_logs| Versona
+```ks-diagram
+key: swimlane
+alt: Diagram
 ```
 
 ### Install: file flow
 
-```mermaid
-flowchart LR
-  subgraph Pack["Blueprint bundle"]
-    BP[tasklet templates]
-    SH[install-tasklets.sh]
-  end
-  subgraph Target["Consuming repo"]
-    CR[".cursor/rules/"]
-  end
-  BP --> SH
-  SH -->|copy strip .template| CR
+```ks-diagram
+key: swimlane
+alt: Diagram
 ```
 
 ## Install (project root)

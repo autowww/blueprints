@@ -6,22 +6,9 @@
 
 **Audience:** Teams adopting [`blueprints/disciplines/engineering/software-architecture/`](../README.md). Per-project pattern choices and exceptions belong in **`docs/adr/`**.
 
-```mermaid
-flowchart TD
-    Start[Architectural style?]
-    S{Single deployment unit acceptable?}
-    D{Distributed / independent scaling or teams?}
-    E{Loose coupling via asynchronous facts?}
-
-    Start --> S
-    S -->|Yes| M{Need strong internal boundaries?}
-    M -->|Yes| MM[Modular monolith]
-    M -->|No| MO[Monolith or layered]
-    S -->|No| D
-    D -->|Yes| MS[Microservices / service mesh]
-    D -->|No| E
-    E -->|Yes| ED[Event-driven / CQRS variants]
-    E -->|No| HX[Hexagonal / ports-adapters]
+```ks-diagram
+key: decision
+alt: Diagram
 ```
 
 Each pattern's quality-attribute trade-offs are analyzed in [SOFTWARE-ARCHITECTURE.md §1](../SOFTWARE-ARCHITECTURE.md#1-quality-attributes). Record your architecture choice and exceptions as [ADRs](../SOFTWARE-ARCHITECTURE.md#3-architecture-decision-records-adrs).

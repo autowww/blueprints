@@ -78,35 +78,9 @@
 
 ## 6. Artifact flow
 
-```mermaid
-flowchart LR
-  subgraph pdlc ["PDLC (product)"]
-    P1["P1: Validated problem"]
-    P3["P3: Strategy + metrics"]
-    P5["P5: Growth data"]
-  end
-  subgraph forge ["Forge (delivery)"]
-    Ore["Ore pipeline"]
-    Ingot["Ingots"]
-    Spark["Sparks"]
-    AG["Assay Gate"]
-    EL["Ember Log"]
-  end
-  subgraph sdlc ["SDLC (lifecycle)"]
-    Phases["Phases A-F"]
-    DoD["Definition of Done"]
-    CI["CI/CD quality gates"]
-  end
-  P1 -->|"feeds"| Ore
-  P3 -->|"scopes"| Ingot
-  Ore -->|"refine"| Ingot
-  Ingot -->|"decompose"| Spark
-  Spark -->|"phase-tagged"| Phases
-  DoD -->|"informs"| AG
-  CI -->|"evidence"| AG
-  AG -->|"released"| P5
-  EL -->|"decision context"| P5
-  P5 -->|"learnings"| Ore
+```ks-diagram
+key: swimlane
+alt: Diagram
 ```
 
 ---

@@ -1,6 +1,8 @@
 # Versona contract
 
-Every Versona Cursor rule template follows this standard structure to ensure consistency, bridge-awareness, and structured output.
+Every **discipline** Versona Cursor rule template follows this standard structure to ensure consistency, bridge-awareness, and structured output. For **kinds** (routing, family aggregators, meta, workflow), **interfaces**, **processes**, **sessions**, and **logging** alignment, see [`VERSONA-FRAMEWORK.md`](VERSONA-FRAMEWORK.md). For the **kind/domain tree** and template index, see [`catalog/ANCESTRY.md`](catalog/ANCESTRY.md). **Source files:** templates live under [`versona/catalog/`](catalog/) (and optional [`versona-generic.mdc.template`](versona-generic.mdc.template) at the `versona/` root); exact paths are in [`catalog/TEMPLATE-INDEX.md`](catalog/TEMPLATE-INDEX.md).
+
+**Shared baseline:** Each `versona-*.mdc.template` includes a duplicated **`## Baseline (inherited)`** section (Layer 0). The canonical source is [`_includes/GENERIC-VERSONA-BASELINE.md`](_includes/GENERIC-VERSONA-BASELINE.md)—update that file first, then propagate verbatim into all templates.
 
 ## Required sections
 
@@ -70,12 +72,15 @@ Every Versona challenge produces structured output:
 
 ## Creating a new Versona
 
-1. Copy the closest existing template.
-2. Update Identity with the new discipline's details.
-3. Update Knowledge references to point to the correct discipline package.
-4. Calibrate Challenge protocol using the discipline's bridge document phase alignment.
-5. Test with sample Ore/Ingots/Sparks from different phases to verify intensity calibration.
-6. **Optional thin operations:** reuse or add **tasklets** (single-operation Cursor rules) under [`../tasklets/`](../tasklets/README.md); see [`TASKLET-TAXONOMY.md`](../tasklets/TASKLET-TAXONOMY.md) for execution plane vs cognition and **discipline overlay** rules.
+1. Confirm **kind** (`discipline`, `routing`, `family_aggregator`, `meta`, `workflow`) per [`VERSONA-FRAMEWORK.md`](VERSONA-FRAMEWORK.md) §2; discipline templates follow §1–§6 below.
+2. Copy the closest existing template.
+3. Update Identity with the new discipline's details.
+4. Update Knowledge references to point to the correct discipline package.
+5. Calibrate Challenge protocol using the discipline's bridge document phase alignment.
+6. Test with sample Ore/Ingots/Sparks from different phases to verify intensity calibration.
+7. **Optional thin operations:** reuse or add **tasklets** (single-operation Cursor rules) under [`../tasklets/`](../tasklets/README.md); see [`TASKLET-TAXONOMY.md`](../tasklets/TASKLET-TAXONOMY.md) for execution plane vs cognition and **discipline overlay** rules.
+8. For **session folders**, **process diagrams**, and **handoffs**, use [`VERSONA-FRAMEWORK.md`](VERSONA-FRAMEWORK.md) §§5–8.
+9. Keep **`## Baseline (inherited)`** in sync with [`_includes/GENERIC-VERSONA-BASELINE.md`](_includes/GENERIC-VERSONA-BASELINE.md); set the `<!-- Ancestry: ... -->` line per [`catalog/ANCESTRY.md`](catalog/ANCESTRY.md).
 
 ## Recommended globs (Product family)
 

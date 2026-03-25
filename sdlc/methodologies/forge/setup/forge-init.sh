@@ -65,7 +65,7 @@ echo ""
 echo "Cursor rules..."
 if [[ -d "$CURSOR_DIR" ]]; then
   echo "  .cursor/rules/ exists — copy Versona templates and daily rules manually from:"
-  echo "    blueprints/sdlc/methodologies/forge/versona/*.mdc.template"
+  echo "    blueprints/sdlc/methodologies/forge/versona/ (versona-generic at root; other templates under catalog/)"
   echo "    blueprints/sdlc/methodologies/forge/daily/forge-daily.mdc.template"
   echo "    blueprints/sdlc/methodologies/forge/planning/forge-planning.mdc.template"
   echo "  Remove the .template suffix after copying."

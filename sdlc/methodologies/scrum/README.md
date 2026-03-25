@@ -9,7 +9,7 @@
 | **Foundation & fit** | [`foundation-connection.md`](foundation-connection.md) | SDLC A–F, tracking spine, ceremony intents, bridge to blueprint docs |
 | **Roles** | [`roles.md`](roles.md) | PO, SM, Developers — accountabilities, archetypes, event RACI-style matrix |
 | **Ceremonies (prescriptive)** | [`ceremonies-prescriptive.md`](ceremonies-prescriptive.md) | Each official event: inputs, outputs, agenda, participants, timebox |
-| **Process & flows** | [`process-and-flows.md`](process-and-flows.md) | Sprint lifecycle, refinement, release, Mermaid diagrams |
+| **Process & flows** | [`process-and-flows.md`](process-and-flows.md) | Sprint lifecycle, refinement, release, KS diagram templates |
 
 **Related blueprint:** [Roles & archetypes](../roles-archetypes.md) · [Ceremony foundation](../ceremonies/ceremony-foundation.md) · [Methodology bridge](../ceremonies/methodology-bridge.md) · [Scrum ceremonies fork](../ceremonies/scrum.md)
 

@@ -10,13 +10,9 @@
 
 Security practices are **proactive defense**: they turn “hope we are safe” into **repeatable activities** that catch design flaws early, validate implementations continuously, and ensure the organization can **respond and learn** when something goes wrong. Together they connect **architecture**, **delivery**, and **operations** so security is owned by the whole team, not isolated in a late gate.
 
-```mermaid
-flowchart LR
-  TM[Threat modeling] --> SD[Secure development]
-  SD --> ST[Security testing]
-  ST --> IR[Incident response]
-  IR --> IMP[Improvement loop]
-  IMP --> TM
+```ks-diagram
+key: linear
+alt: Diagram
 ```
 
 The loop closes when incidents and test findings **feed** updated threat assumptions, requirements, and detection — documented at the project level in **`docs/security/`**, **`docs/security/threat-models/`**, and **`docs/adr/`** as appropriate.

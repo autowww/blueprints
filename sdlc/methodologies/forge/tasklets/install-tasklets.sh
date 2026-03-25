@@ -48,7 +48,7 @@ if ((${#positional[@]} > 0)); then
 fi
 
 RULES_DIR="${DEST_ROOT%/}/.cursor/rules"
-SAMPLING_SRC="${VERSONA_DIR}/versona-sampling.mdc.template"
+SAMPLING_SRC="${VERSONA_DIR}/catalog/meta/versona-sampling.mdc.template"
 
 echo "=== Forge tasklets install ==="
 echo "Target root: ${DEST_ROOT}"

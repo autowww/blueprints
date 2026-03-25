@@ -6,13 +6,9 @@
 
 Performance is **user experience**: latency, stability, and loading behavior shape trust, task completion, and accessibility. These blueprints separate **how to think** about metrics and optimization from **where this repo records** concrete budgets and regressions.
 
-```mermaid
-flowchart TD
-  M[Measure field + lab] --> A[Analyze bottlenecks]
-  A --> P[Prioritize by user impact]
-  P --> O[Optimize]
-  O --> V[Validate in CI + RUM]
-  V --> M
+```ks-diagram
+key: linear
+alt: Diagram
 ```
 
 **Core knowledge:** [`FRONTEND.md`](../FRONTEND.md) — web performance fundamentals, rendering strategies.

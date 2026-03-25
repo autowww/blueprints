@@ -15,6 +15,7 @@ Shell scripts for git-tracked daily Forge operations. Run from the **consuming r
 | [`forge-charge.sh`](forge-charge.sh) | Manage today's Charge | `./blueprints/sdlc/methodologies/forge/scripts/forge-charge.sh [show\|new\|done SPARK_ID\|block SPARK_ID\|bank SPARK_ID]` |
 | [`forge-ember.sh`](forge-ember.sh) | Append an Ember Log entry | `./blueprints/sdlc/methodologies/forge/scripts/forge-ember.sh "Decision summary"` |
 | [`forge-journal.sh`](forge-journal.sh) | Create/commit day journal | `./blueprints/sdlc/methodologies/forge/scripts/forge-journal.sh [new\|commit]` |
+| [`forge-versona-session.sh`](forge-versona-session.sh) | Scaffold Versona session folder under `forge-logs/versona/` | `./blueprints/sdlc/methodologies/forge/scripts/forge-versona-session.sh <actor> [session-id] [--with-yaml-manifest]` |
 | [`forge-status.sh`](forge-status.sh) | Show iteration status | `./blueprints/sdlc/methodologies/forge/scripts/forge-status.sh` |
 
 ## Convention

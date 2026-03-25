@@ -31,19 +31,9 @@ All three are necessary in non-trivial software delivery. None is sufficient alo
 
 ## 1. Three questions, three domains
 
-```mermaid
-graph TB
-  subgraph pdlcBox ["PDLC — Product Development Life Cycle"]
-    direction TB
-    rightProduct["Right product?"]
-    subgraph pmBox ["PM — Project Management"]
-      direction TB
-      governed["Governed delivery?"]
-      subgraph sdlcBox ["SDLC — Software Development Life Cycle"]
-        productRight["Product built right?"]
-      end
-    end
-  end
+```ks-diagram
+key: swimlane
+alt: Diagram
 ```
 
 ### Comparison table
@@ -117,47 +107,9 @@ The three-layer model is the **general case**. In practice, layers often collaps
 
 ### The full three-domain lifecycle
 
-```mermaid
-graph LR
-  subgraph pdlcPre ["PDLC: Pre-build"]
-    P1["P1 Discover Problem"]
-    P2["P2 Validate Solution"]
-    P3["P3 Strategize"]
-  end
-
-  subgraph pmPhases ["PM: Project governance"]
-    PMInit["Initiate"]
-    PMPlan["Plan"]
-    PMExec["Execute + Monitor"]
-    PMClose["Close"]
-  end
-
-  subgraph sdlcPhases ["SDLC: Build & Release"]
-    A["A Discover"]
-    B["B Specify"]
-    C["C Design"]
-    D["D Build"]
-    E["E Verify"]
-    F["F Release"]
-  end
-
-  subgraph pdlcPost ["PDLC: Post-launch"]
-    P4["P4 Launch"]
-    P5["P5 Grow"]
-    P6["P6 Mature/Sunset"]
-  end
-
-  P1 -->|"evidence"| P2
-  P2 -->|"validated solution"| P3
-  P3 -->|"funded initiative"| PMInit
-  PMInit -->|"charter"| PMPlan
-  PMPlan -->|"baselined plan"| PMExec
-  PMExec -->|"governs"| A
-  A --> B --> C --> D --> E --> F
-  F -->|"deliverables accepted"| PMClose
-  PMClose -->|"project closed"| P4
-  P4 --> P5 --> P6
-  P5 -.->|"continuous discovery"| P1
+```ks-diagram
+key: swimlane
+alt: Diagram
 ```
 
 ### Phase-by-phase alignment

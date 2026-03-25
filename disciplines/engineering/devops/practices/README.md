@@ -8,16 +8,9 @@ DevOps practices are the **how** of continuous delivery: they turn culture and g
 
 **Audience:** Teams adopting [`blueprints/disciplines/engineering/devops/`](../README.md); project-specific CI/CD and operations configuration stays in **`docs/development/`** (see [`docs/development/CI-CD.md`](../../../../../docs/development/CI-CD.md)) and **`docs/operations/`**.
 
-```mermaid
-flowchart LR
-  CI[CI/CD]
-  IAC[IaC / GitOps]
-  OBS[Observability / SRE]
-  INC[Incident management]
-  CI --> IAC
-  IAC --> OBS
-  OBS --> INC
-  INC -->|postmortems, error budgets| CI
+```ks-diagram
+key: linear
+alt: Diagram
 ```
 
 | Practice | Guide | Focus |

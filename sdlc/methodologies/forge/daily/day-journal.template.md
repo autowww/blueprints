@@ -19,9 +19,9 @@ iteration: F{n}
 
 ## Versona challenges invoked
 
-| Discipline | Work item | Key concern | Action taken |
-|------------|-----------|-------------|--------------|
-| | | | |
+| Discipline | Work item | Key concern | Action taken | Session (optional) | Duration (optional) | Process (optional) | Outcome (optional) |
+|------------|-----------|-------------|--------------|-------------------|---------------------|--------------------|--------------------|
+| | | | | | | | |
 
 ## Learnings
 

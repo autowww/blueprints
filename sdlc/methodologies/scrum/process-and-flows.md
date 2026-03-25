@@ -1,79 +1,40 @@
 # Scrum — major processes & flow maps
 
-Mermaid diagrams below render on GitHub and in many Markdown viewers. For print/PDF, export from Mermaid Live or duplicate in draw.io.
+Diagrams below use **` ```ks-diagram `** fences (Kitchen Sink SVG templates) on the published handbook; GitHub shows the source as a code block. For print/PDF, use the site or export static SVG.
 
 ## 1. Sprint lifecycle (high level)
 
-```mermaid
-flowchart LR
-  subgraph refine[Ongoing refinement]
-    R[Refinement]
-  end
-  subgraph sprint[Sprint]
-    P[Sprint Planning]
-    D[Daily Scrum loop]
-    V[Sprint Review]
-    RT[Sprint Retrospective]
-  end
-  R --> P
-  P --> D
-  D --> D
-  D --> V
-  V --> RT
-  RT --> R
+```ks-diagram
+key: swimlane
+alt: Diagram
 ```
 
 ## 2. Planning flow (Part 1 → Part 2)
 
-```mermaid
-flowchart TD
-  A[Product Backlog top items] --> B{Value clear & ordered?}
-  B -->|No| C[Refinement / spike]
-  C --> A
-  B -->|Yes| D[Select PBIs for capacity]
-  D --> E[Draft Sprint Goal]
-  E --> F{Team confident?}
-  F -->|No| G[Remove or swap items]
-  G --> D
-  F -->|Yes| H[Part 2: break into Sprint Backlog]
-  H --> I[Sprint starts]
+```ks-diagram
+key: decision
+alt: Diagram
 ```
 
 ## 3. Daily execution loop
 
-```mermaid
-flowchart TD
-  S[Start of day] --> M[Daily Scrum 15m]
-  M --> W[Work toward Sprint Goal]
-  W --> I{Impediment?}
-  I -->|Yes| X[SM / team remove blocker]
-  X --> W
-  I -->|No| W
-  W --> E[End of day: board updated]
-  E --> S
+```ks-diagram
+key: decision
+alt: Diagram
 ```
 
 ## 4. Definition of Done gate (increment)
 
-```mermaid
-flowchart TD
-  C[Code complete] --> T[Tests pass / agreed quality]
-  T --> R[Review / PR merged per policy]
-  R --> Doc[Docs & release notes if required]
-  Doc --> Rel{Release-ready per DoD?}
-  Rel -->|Yes| Done[Done increment]
-  Rel -->|No| Fix[Fix or pull from sprint scope]
-  Fix --> C
+```ks-diagram
+key: decision
+alt: Diagram
 ```
 
 ## 5. Stakeholder feedback loop (Review → Backlog)
 
-```mermaid
-flowchart LR
-  Demo[Increment demo] --> FB[Feedback captured]
-  FB --> PO[PO synthesizes]
-  PO --> BL[Product Backlog updates]
-  BL --> NS[Next Sprint Planning input]
+```ks-diagram
+key: linear
+alt: Diagram
 ```
 
 ## 6. Cross-phase mapping (A–F) in one sprint

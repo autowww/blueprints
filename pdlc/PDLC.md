@@ -35,19 +35,9 @@ Product lifecycle work involves different accountabilities than delivery. These 
 
 ### Phase overview
 
-```mermaid
-graph LR
-  P1["P1 Discover Problem"]
-  P2["P2 Validate Solution"]
-  P3["P3 Strategize"]
-  SDLC["SDLC A–F"]
-  P4["P4 Launch"]
-  P5["P5 Grow"]
-  P6["P6 Mature / Sunset"]
-
-  P1 --> P2 --> P3 --> SDLC --> P4 --> P5 --> P6
-  P6 -.->|"new opportunity"| P1
-  P5 -.->|"continuous discovery"| P1
+```ks-diagram
+key: linear
+alt: Diagram
 ```
 
 **Continuous discovery:** In mature teams, P1–P2 run **in parallel** with SDLC delivery (Dual-Track Agile — see [`https://forgesdlc.com/pdlc-approaches-dual-track-agile.html`](https://forgesdlc.com/pdlc-approaches-dual-track-agile.html)). The sequential diagram shows logical dependency; real cadence overlaps.
