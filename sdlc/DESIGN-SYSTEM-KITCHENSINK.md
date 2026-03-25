@@ -62,6 +62,36 @@ flowchart LR
   end
 ```
 
+### Click-to-expand (lightbox)
+
+Use a **` ```mermaid-expand `** fence when you want the diagram to open full-size in the Forge lightbox after Mermaid renders (same `openDiagramModal` behavior as `render_mermaid_block(..., expandable=True)` in Python). The handbook and forgesdlc.com product layout inject the modal shell whenever the page includes any Mermaid.
+
+````markdown
+```mermaid-expand
+flowchart LR
+  A[Step 1] --> B[Step 2]
+```
+````
+
+GitHub and other Markdown viewers may not treat `mermaid-expand` as Mermaid; keep a **` ```mermaid `** copy in the same doc for portability if needed, or rely on the HTML site as the interactive view.
+
+### Previews “like” the diagram catalog (authored flows)
+
+The Kitchen Sink **diagram gallery** (`diagrams.html`) pairs **static SVG thumbs**, **per-key legends**, and optional **Mermaid parallels** — that full behavior needs `showcase.js` and is aimed at the KS showcase. For handbook pages:
+
+| Approach | Use when |
+|----------|-----------|
+| **Archetype reference** | You only need “which shape matches my story?” — link to the hosted **Diagram templates** / **Mermaid examples** pages (or the static `template-*.svg` images below). |
+| **Companion still** | You want a thumbnail in prose **and** live Mermaid — add an image line above the fence, e.g. `![Overview](assets/template-linear-flow.svg)` or an export from Mermaid Live / a KS template, and keep the fenced Mermaid as the editable source. |
+
+### Consuming the catalog in another repository
+
+1. Add **forgesdlc-kitchensink** as a **submodule** (or vendor the pieces you need).  
+2. Copy **`assets/svg/template-*.svg`** (and theme CSS/JS) in your site build the same way **blueprints-website** and **forgesdlc** do.  
+3. **Python:** import **`handbook_page`**, **`render_mermaid_block`**, **`apply_all`** / **`convert_mermaid_blocks`** from Kitchen Sink `components` with your `PYTHONPATH` set like the existing generators.  
+4. **Interactive catalog** (clickable thumbs + `DIAGRAM_DETAILS` legend): either ship **`showcase.js`** + modal markup on that page only, or **link out** to the published KS showcase instead of duplicating JS.  
+5. **Catalog keys** (`linear`, `orgchart`, …) and filenames are defined in **`generator/pages/_diagram_gallery.py`** (`_FAMILIES`); **`DIAGRAM_DETAILS`** in **`js/showcase.js`** is still maintained alongside that list (not generated from one file yet).
+
 ## Related links
 
 - [Documentation structure](./DOCUMENTATION-STRUCTURE.md) — how SDLC docs are organized  
