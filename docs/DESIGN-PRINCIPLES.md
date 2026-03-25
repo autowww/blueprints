@@ -91,13 +91,16 @@ Mermaid diagrams are authored directly in the `.md` source as fenced code blocks
 ~~~markdown
 ```mermaid
 flowchart LR
-  A[Discover] --> B[Specify] --> C[Design] --> D[Build] --> E[Verify] --> F[Release]
+  subgraph SDLC["Phases A–F"]
+    A[Discover] --> B[Specify] --> C[Design]
+    C --> D[Build] --> E[Verify] --> F[Release]
+  end
 ```
 ~~~
 
 This renders natively on GitHub and is automatically converted to interactive diagrams in the HTML handbook. Every body-of-knowledge document and bridge document should include at least one diagram showing the key flow or relationship.
 
-**Showcase SVG diagram templates** (the static thumbnails used in the kitchensink diagram gallery and similar grids) should use a **consistent vertical artboard**—typically about **280px height** in `viewBox`, with content letterboxed or padded so wide flows do not collapse into a thin strip next to taller chart thumbs. Match **title line** styling (cyan accent `#06B6D4`, 12px bold) and **card-like corners** (`rx` ~8 on primary boxes) to the Data Charts templates. The canonical set lives in **forgesdlc-kitchensink** at `assets/svg/`; the **Diagram gallery** page in the kitchensink showcase is the reference for how thumbs render in a bento grid.
+**Showcase SVG diagram templates** (the static thumbnails used in the kitchensink diagram gallery and similar grids) should use a **consistent vertical artboard**—typically about **280px height** in `viewBox`, with content letterboxed or padded so wide flows do not collapse into a thin strip next to taller chart thumbs. Match **title line** styling (cyan accent `#06B6D4`, 12px bold) and **card-like corners** (`rx` ~8 on primary boxes) to the Data Charts templates. The canonical **catalog** lives in **forgesdlc-kitchensink** at `assets/svg/template-*.svg`; it is **extensible** (not a fixed count)—new archetypes are added with gallery entries, modal metadata in `showcase.js`, and optional Mermaid parallels. The **Diagram gallery** page in the kitchensink showcase is the reference for how thumbs render in a bento grid; **tree** vs **org chart** distinguishes generic hierarchy boxes from people cards (avatar, name, title, team).
 
 ## 4. CSS framework and fonts
 

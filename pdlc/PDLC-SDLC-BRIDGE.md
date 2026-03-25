@@ -32,11 +32,11 @@ Both are necessary. Neither is sufficient alone. This bridge explains how they r
 ## 1. The core distinction
 
 ```mermaid
-graph TB
-  subgraph pdlcBox ["PDLC — Product Development Life Cycle"]
-    direction LR
+flowchart TB
+  subgraph pdlcBox["PDLC — Product Development Life Cycle"]
+    direction TB
     rightProduct["Build the RIGHT product"]
-    subgraph sdlcBox ["SDLC — Software Development Life Cycle"]
+    subgraph sdlcBox["SDLC — Software Development Life Cycle"]
       productRight["Build the product RIGHT"]
     end
   end
@@ -76,7 +76,7 @@ SDLC is **nested inside** PDLC. A team can execute SDLC flawlessly — shipping 
 ### The full lifecycle
 
 ```mermaid
-graph LR
+flowchart LR
   subgraph pdlcPre ["PDLC: Pre-build"]
     P1["P1 Discover Problem"]
     P2["P2 Validate Solution"]

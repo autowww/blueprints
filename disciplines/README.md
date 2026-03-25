@@ -64,7 +64,7 @@ Standalone disciplines that span every family — they are not grouped under a f
 Each discipline has a **bridge document** (`*-SDLC-PDLC-BRIDGE.md`) that maps its practices to SDLC phases A–F and PDLC phases P1–P6. Disciplines are not sequential — they provide expertise that is drawn upon at the right lifecycle moments. See [`BRIDGES.md`](../BRIDGES.md) for the concept, full index, and standard structure.
 
 ```mermaid
-graph TB
+flowchart TB
   subgraph lifecycleLayer ["Lifecycles (when)"]
     SDLC["SDLC — phases A-F"]
     PDLC["PDLC — phases P1-P6"]

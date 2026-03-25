@@ -6,20 +6,20 @@ Mermaid diagrams below render on GitHub and in many Markdown viewers.
 
 ```mermaid
 flowchart LR
-  subgraph intake[Continuous]
+  subgraph intake["Continuous intake"]
     OreIntake[Ore intake]
   end
-  subgraph iteration[Forge iteration]
+  subgraph iteration["Forge iteration"]
     Refine[Refinement]
     Plan[Planning]
     Daily[Daily sync loop]
     Review[Review]
     Assay[Assay Gate]
   end
-  subgraph ship[Ship]
+  subgraph ship["Ship and learn"]
     Release[Release]
+    Retro[Retro]
   end
-  Retro[Retro]
   OreIntake --> Refine
   Refine --> Plan
   Plan --> Daily
@@ -65,6 +65,10 @@ In projects with an existing **milestone → epic → story → task** hierarchy
 | Task (implementation slice) | **Spark** | `M1E3S2T4` |
 
 Spark IDs inherit from the WBS scheme. Spark-specific data (state, DoD, journal) lives in `forge-logs/`, not in the requirements tree. If existing Stories already carry clear acceptance criteria, they are effectively Ingots — no extra ceremony needed.
+
+### Versona sessions under `forge-logs/`
+
+**Versona** invocation context (per-call folders, inputs/outputs, optional transcripts) should live under **`forge-logs/versona/<actor>/<session-id>/`** as the default layout—see [`versona/VERSONA-FRAMEWORK.md`](versona/VERSONA-FRAMEWORK.md) §7. Teams that keep all Forge state under `forge/` may use the alias **`forge/versona-sessions/`** instead; pick one convention per repo and document it in `forge/` or `sdlc/README.md`. Cursor rule **templates** in blueprints live under [`versona/README.md`](versona/README.md) (see **Source layout** there).
 
 ## 3. State model
 

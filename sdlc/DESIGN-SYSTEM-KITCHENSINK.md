@@ -44,6 +44,24 @@ Below are a few SVG templates shipped with Kitchen Sink. They illustrate the vis
 2. Put shared figures in blueprint `docs/assets/` *or* rely on copied Kitchen Sink `assets/template-*.svg` after build.  
 3. Keep tables and headings so **`transforms`** (e.g. table wrappers) can run consistently.
 
+## Mermaid style (Forge)
+
+- **Live catalog:** the Kitchen Sink showcase **Mermaid diagram examples** page (`mermaid-examples.html` in the KS repo’s built `showcase/`) is the reference for grammar coverage and how diagrams render with the Forge theme. **Static SVG archetypes** and per-template **Mermaid parallels** live on the **Diagram templates** page (`diagrams.html`).  
+- **Readability:** prefer `flowchart` / `subgraph` with short quoted titles, decision nodes `{question?}`, and enough intermediate steps that GitHub and the handbook show the same story.  
+- **Minimal vs rich:** hub READMEs may keep a tiny overview diagram; methodology and bridge pages should use richer structure (subgraphs, loops, gates) when the prose is multi-phase.
+
+Handbook build turns ` ```mermaid ` fences into the same `.forge-diagram` + `.mermaid` wrapper as the showcase. Example:
+
+```mermaid
+flowchart LR
+  subgraph Plan["Plan"]
+    A[Backlog] --> B[Refine]
+  end
+  subgraph Build["Build"]
+    B --> C[Ship]
+  end
+```
+
 ## Related links
 
 - [Documentation structure](./DOCUMENTATION-STRUCTURE.md) — how SDLC docs are organized  

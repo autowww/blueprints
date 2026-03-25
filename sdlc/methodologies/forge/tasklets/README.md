@@ -28,11 +28,15 @@ flowchart TB
 
 ```mermaid
 flowchart LR
-  BP[blueprints_tasklets_templates]
-  SH[install_tasklets_sh]
-  CR[dot_cursor_rules]
+  subgraph Pack["Blueprint bundle"]
+    BP[tasklet templates]
+    SH[install-tasklets.sh]
+  end
+  subgraph Target["Consuming repo"]
+    CR[".cursor/rules/"]
+  end
   BP --> SH
-  SH --> CR
+  SH -->|copy strip .template| CR
 ```
 
 ## Install (project root)
@@ -70,7 +74,7 @@ After install, tune **`globs:`** in each `.mdc` for your repo (defaults are empt
 
 ## Bundled meta-Versona
 
-See **[`versona-sampling.mdc.template`](../versona/versona-sampling.mdc.template)** — **Sampling Versona** demonstrates **meta-Versona + tasklets** with a simple, readable flow. Install copies it to `.cursor/rules/versona-sampling.mdc`.
+See **[`versona-sampling.mdc.template`](../versona/catalog/meta/versona-sampling.mdc.template)** — **Sampling Versona** demonstrates **meta-Versona + tasklets** with a simple, readable flow. Install copies it to `.cursor/rules/versona-sampling.mdc`.
 
 ## Relationship to execution-plane work
 
