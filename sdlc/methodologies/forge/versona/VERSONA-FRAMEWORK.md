@@ -2,7 +2,7 @@
 
 This document defines **generic** concepts for Forge **Versonas**: taxonomy by kind, input/output interfaces, repeatable **process** documentation, **inter-Versona** interaction patterns, **session** storage in the consuming repo, and alignment with **Ember Log** and **day journal**. It complements the Cursor rule shape in [`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md); it does not replace per-discipline templates.
 
-**Related:** [`README.md`](README.md) (hub — **Source layout** for paths on disk) · [`catalog/TEMPLATE-INDEX.md`](catalog/TEMPLATE-INDEX.md) (authoritative path per template) · [`catalog/ANCESTRY.md`](catalog/ANCESTRY.md) (kinds, domains) · [`../tasklets/TASKLET-TAXONOMY.md`](../tasklets/TASKLET-TAXONOMY.md) · [`../../../../agents/docs/VERSONA-EXECUTION-TASKLETS.md`](../../../../agents/docs/VERSONA-EXECUTION-TASKLETS.md) · [`../../../../agents/ORCHESTRATION.md`](../../../../agents/ORCHESTRATION.md)
+**Related:** [`README.md`](README.md) (hub — **Source layout** for paths on disk) · [`DISCIPLINE-SPIKE.md`](DISCIPLINE-SPIKE.md) (exploration spike lifecycle, anchors, open/close) · [`catalog/TEMPLATE-INDEX.md`](catalog/TEMPLATE-INDEX.md) (authoritative path per template) · [`catalog/ANCESTRY.md`](catalog/ANCESTRY.md) (kinds, domains) · [`../tasklets/TASKLET-TAXONOMY.md`](../tasklets/TASKLET-TAXONOMY.md) · [`../../../../agents/docs/VERSONA-EXECUTION-TASKLETS.md`](../../../../agents/docs/VERSONA-EXECUTION-TASKLETS.md) · [`../../../../agents/ORCHESTRATION.md`](../../../../agents/ORCHESTRATION.md)
 
 ---
 
@@ -16,6 +16,7 @@ alt: Diagram
 | Term | Meaning |
 |------|---------|
 | **Work item reference** | Any stable handle the team uses: Forge **Ore**, **Ingot**, or **Spark** IDs; external epic/story/task IDs; or a **spike** label. This framework does **not** introduce a new ID scheme—teams map to what they already track. |
+| **Exploration spike** | Time-boxed **discipline** learning work (feasibility, unknowns)—**not** the same as a Forge **Spark** (delivery task). Lifecycle, anchors, and templates: [`DISCIPLINE-SPIKE.md`](DISCIPLINE-SPIKE.md). |
 | **Activity** | One **unit of Versona work** inside a **session** (e.g. one challenge pass, one sub-step of a larger process). Same concept if your team says “job”; this doc uses **activity** only. |
 | **Process template** | A named, repeatable **sequence** of activities, optional **human gates**, and optional **handoffs** to another Versona or to a recipe. |
 | **Session** | One user-visible “call”: a folder (or linked set of files) holding context, artifacts, and pointers to logs. A session may contain **multiple** activities. |
@@ -189,6 +190,14 @@ Populate `SESSION.md` YAML frontmatter (and optionally mirror in `session.manife
 | `discipline` | Optional | Display name when kind is `discipline`. |
 | `parent_session` | Optional | Relative path to parent session folder for chains. |
 | `ember_log_ref` | Optional | Path to `ember-logs/YYYY-MM-DD.md` and anchor or summary line. |
+
+**Optional hints for exploration spikes** (not enforced by blueprints; for tooling or human clarity—see [`DISCIPLINE-SPIKE.md`](DISCIPLINE-SPIKE.md)):
+
+| Field | Description |
+|-------|-------------|
+| `spike_timebox` | End date or duration (e.g. `2025-04-02` or `3d`). |
+| `spike_hypothesis` | One-line question the spike must answer. |
+| `anchor_notes` | Free text for product, roadmap, or WBS paths when ids are not yet stable. |
 
 Copy the template from [`../../../templates/forge/versona-session.template.md`](../../../templates/forge/versona-session.template.md).
 

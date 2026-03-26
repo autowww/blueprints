@@ -12,3 +12,7 @@ versona_kind: discipline
 discipline: null
 parent_session: null
 ember_log_ref: null
+# Optional — exploration spikes (VERSONA-FRAMEWORK.md §7.4, DISCIPLINE-SPIKE.md):
+# spike_timebox: null
+# spike_hypothesis: null
+# anchor_notes: null

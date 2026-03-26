@@ -10,6 +10,10 @@ discipline: null
 parent_session: null
 ember_log_ref: null
 # e.g. ember-logs/YYYY-MM-DD.md — set after logging a decision
+# Optional — exploration spikes only (see VERSONA-FRAMEWORK.md §7.4, DISCIPLINE-SPIKE.md):
+# spike_timebox: null
+# spike_hypothesis: null
+# anchor_notes: null
 ---
 
 # Versona session — <session-id>
@@ -43,3 +47,4 @@ ember_log_ref: null
 
 - Day journal row: `forge/journal/YYYY-MM-DD.md`
 - Framework: `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md`
+- Exploration spikes: `blueprints/sdlc/methodologies/forge/versona/DISCIPLINE-SPIKE.md` · open/close templates in `blueprints/sdlc/templates/forge/discipline-spike-*.template.md`

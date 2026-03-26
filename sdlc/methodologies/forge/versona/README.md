@@ -8,7 +8,7 @@ Repo-wide documentation habits (single source of truth, link don’t duplicate) 
 
 | Mode | Start here | Role |
 |------|------------|------|
-| **Explanation** | [`VERSONA-FRAMEWORK.md`](VERSONA-FRAMEWORK.md), [How Versonas work](#how-versonas-work) (below) | Kinds, sessions, processes, handoffs |
+| **Explanation** | [`VERSONA-FRAMEWORK.md`](VERSONA-FRAMEWORK.md), [`DISCIPLINE-SPIKE.md`](DISCIPLINE-SPIKE.md), [How Versonas work](#how-versonas-work) (below) | Kinds, sessions, exploration spikes, handoffs |
 | **How-to** | [`../../../SETUP.md`](../../../SETUP.md), [`../setup/CURSOR-RULES-ALIGNMENT.md`](../setup/CURSOR-RULES-ALIGNMENT.md), [`../tasklets/install-tasklets.sh`](../tasklets/install-tasklets.sh) | Install rules, align `forge.config.yaml`, tasklets + Sampling |
 | **Reference** | [`catalog/TEMPLATE-INDEX.md`](catalog/TEMPLATE-INDEX.md), [`catalog/ANCESTRY.md`](catalog/ANCESTRY.md), [`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md), [`RECOMMENDED-GLOBS.md`](RECOMMENDED-GLOBS.md) | Authoritative paths, kind/domain tables, rule shape, globs |
 

@@ -33,6 +33,8 @@ Seed files for a **mutable** `forge/` workspace and `ember-logs/` at repo root. 
 | [**forge/journal-entry.template.md**](forge/journal-entry.template.md) | Day journal seed. |
 | [**forge/assay-gate.template.md**](forge/assay-gate.template.md) | Assay Gate evidence checklist. |
 | [**forge/versona-session.template.md**](forge/versona-session.template.md) | Versona session folder seed (`SESSION.md` + manifest fields) — see [`../methodologies/forge/versona/VERSONA-FRAMEWORK.md`](../methodologies/forge/versona/VERSONA-FRAMEWORK.md) §7. |
+| [**forge/discipline-spike-open.template.md**](forge/discipline-spike-open.template.md) | Exploration spike open checklist (hypothesis, anchors, no-roadmap branch) — [`../methodologies/forge/versona/DISCIPLINE-SPIKE.md`](../methodologies/forge/versona/DISCIPLINE-SPIKE.md). |
+| [**forge/discipline-spike-close.template.md**](forge/discipline-spike-close.template.md) | Exploration spike close record (`outputs/SPIKE-CLOSE.md`), Ember Log + git prompts. |
 | [**forge/session.manifest.yaml.template**](forge/session.manifest.yaml.template) | Optional YAML twin of session manifest. |
 | [**forge/versona-process.template.md**](forge/versona-process.template.md) | Repeatable multi-step Versona / human process doc (mermaid placeholders). |
 | **forge/cursor-rules/** | Ready-to-use Cursor rules: `forge-daily.mdc`, `forge-planning.mdc`, `forge-setup.mdc`, `forge-versona.mdc`, `forge-product-manager.mdc`. Optional Layer-0 baseline: copy `../methodologies/forge/versona/versona-generic.mdc.template` from blueprints (see `versona/catalog/ANCESTRY.md`, `versona/catalog/TEMPLATE-INDEX.md`). |

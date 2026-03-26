@@ -79,6 +79,7 @@ Infer state from the filesystem (OK = path exists and looks used; Missing = abse
 
 - If **`forge/forge.config.yaml`** is still the seed-only default or **discipline flags** were never chosen: recommend **`@forge-setup`** for interactive configuration.
 - If the user is **greenfield product**: point to `blueprints/sdlc/methodologies/forge/product-manager/product-bootstrap-flow.md` and optional `forge-product-manager.mdc.template`.
+- If the user is running a **discipline exploration spike** that needs stable **roadmap/WBS anchors** but those files are missing: point to `blueprints/sdlc/methodologies/forge/versona/DISCIPLINE-SPIKE.md` §5 and product bootstrap **Steps 6–7** (or `first-charge.template.md` roadmap/WBS Sparks).
 
 ### 4. Scope boundaries
 
@@ -119,6 +120,7 @@ Infer state from the filesystem (OK = path exists and looks used; Missing = abse
 
 - If team config incomplete: use **@forge-setup** or `blueprints/sdlc/methodologies/forge/setup/QUESTIONNAIRE.md`
 - If product bootstrap: `blueprints/sdlc/methodologies/forge/product-manager/product-bootstrap-flow.md`
+- If spike needs WBS/roadmap anchors: `blueprints/sdlc/methodologies/forge/versona/DISCIPLINE-SPIKE.md` + bootstrap Steps 6–7
 
 ### Recommendation
 

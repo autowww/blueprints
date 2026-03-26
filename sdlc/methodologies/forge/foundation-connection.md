@@ -28,6 +28,7 @@ Forge teams **still** maintain the blueprint tracking spine:
 | **PRs** | Implementation slices for `build:` and `verify:` Sparks |
 | **Reviews** | Versona challenges + peer review + Assay Gate evidence |
 | **Release** | Assay Gate pass; ship decision based on evidence |
+| **Exploration spike (discipline)** | Versona session + `outputs/SPIKE-CLOSE.md` under `forge-logs/versona/`; may link to Ore/WBS when stable — see [`versona/DISCIPLINE-SPIKE.md`](versona/DISCIPLINE-SPIKE.md) |
 
 **Prescriptive rule:** Every Spark that ships should be **linkable** to its parent Ingot and the original Ore. The Ember Log captures decision context that links and commits alone cannot convey.
 

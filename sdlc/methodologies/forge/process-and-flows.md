@@ -44,6 +44,12 @@ In projects with an existing **milestone → epic → story → task** hierarchy
 
 Spark IDs inherit from the WBS scheme. Spark-specific data (state, DoD, journal) lives in `forge-logs/`, not in the requirements tree. If existing Stories already carry clear acceptance criteria, they are effectively Ingots — no extra ceremony needed.
 
+### Exploration spike vs Forge Spark
+
+An **exploration spike** (also **discipline spike**) is **time-boxed learning**—prototyping, feasibility checks, unknowns—whose primary outcome is **evidence and a written record**, not a shippable increment. It is **not** a Forge **Spark**: a Spark is the smallest **committed delivery** unit (task-level) in the Ore → Ingot → Spark → Charge pipeline.
+
+Exploration spikes often use Versona **sessions** with `work_item_kind` `spike_discipline` or `spike_general`, live under `forge-logs/versona/`, and close with `outputs/SPIKE-CLOSE.md` plus Ember Log when decisions are made. They may **spawn** new Ore, Ingots, or WBS lines; follow-up work then appears as normal Sparks (often `discover:` or `design:` flavored). Full lifecycle: [`versona/DISCIPLINE-SPIKE.md`](versona/DISCIPLINE-SPIKE.md).
+
 ### Versona sessions under `forge-logs/`
 
 **Versona** invocation context (per-call folders, inputs/outputs, optional transcripts) should live under **`forge-logs/versona/<actor>/<session-id>/`** as the default layout—see [`versona/VERSONA-FRAMEWORK.md`](versona/VERSONA-FRAMEWORK.md) §7. Teams that keep all Forge state under `forge/` may use the alias **`forge/versona-sessions/`** instead; pick one convention per repo and document it in `forge/` or `sdlc/README.md`. Cursor rule **templates** in blueprints live under [`versona/README.md`](versona/README.md) (see **Source layout** there).
