@@ -10,6 +10,8 @@
 | **Roles** | [`roles.md`](roles.md) | Owner/Implementer, hat-switching protocol, Versonas as challenge functions, scaling tiers |
 | **Ceremonies (prescriptive)** | [`ceremonies-prescriptive.md`](ceremonies-prescriptive.md) | Each ceremony: inputs, outputs, agenda, participants, timebox |
 | **Process & flows** | [`process-and-flows.md`](process-and-flows.md) | State model, work unit hierarchy, iteration lifecycle, KS diagram templates |
+| **Naming reference** | [`NAMING-REFERENCE.md`](NAMING-REFERENCE.md) | Forge terms, meanings, and source file paths |
+| **Product → delivery IPE** | [`PRODUCT-DELIVERY-FORGE-IPE.md`](PRODUCT-DELIVERY-FORGE-IPE.md) | PDLC/SDLC phases: industry + Forge + Inputs–Process–Outputs + example Sparks |
 | **Bridge** | [`FORGE-SDLC-PDLC-BRIDGE.md`](FORGE-SDLC-PDLC-BRIDGE.md) | How Forge connects to PDLC P1–P6 and SDLC A–F |
 | **Versonas** | [`versona/README.md`](versona/README.md) | Discipline challenge agents: contract, templates, bridge-awareness — **layout:** generic at `versona/` root; other templates under `versona/catalog/` |
 | **Discipline exploration spike** | [`versona/DISCIPLINE-SPIKE.md`](versona/DISCIPLINE-SPIKE.md) | Time-boxed learning spikes: anchors, open/close, roadmap/WBS handoffs (vs Forge Spark) |
