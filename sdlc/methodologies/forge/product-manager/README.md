@@ -32,6 +32,8 @@ The **Product Management Versona** (`versona-product-management.mdc.template`) i
 
 The Product Manager agent will suggest invoking the Product Management Versona at appropriate decision points.
 
+Colloquial **“product spike”** means a **discipline exploration spike** on product/strategy questions—not a **Product Spark**; see [`../versona/DISCIPLINE-SPIKE.md`](../versona/DISCIPLINE-SPIKE.md) §1.
+
 ## Files in this package
 
 | File | Purpose |

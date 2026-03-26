@@ -16,6 +16,8 @@ This document defines **discipline exploration spikes** in Forge: time-boxed lea
 
 **Prescriptive rule:** In prose, say **exploration spike** or **discipline spike** when ambiguity with **Forge Spark** or **Product Spark** would confuse readers.
 
+**Informal speech:** Teams sometimes say **“product spike.”** That is **not** a fourth official type. Prefer **exploration spike** or **discipline spike** with product anchors and, when the lens is product strategy, **Product Management** as the owning discipline (`spike_discipline`). The [**Product Management Versona**](catalog/discipline/product/versona-product-management.mdc.template) is often invoked at **spike close** for a structured challenge. It remains distinct from a [**Product Spark**](../planning/PLANNING-FLOW.md) (planning slice: PoC / MVP / phase).
+
 ---
 
 ## 2. Who runs it
