@@ -69,11 +69,11 @@ Infer state from the filesystem (OK = path exists and looks used; Missing = abse
 | 3 | `sdlc/README.md` (project workspace) | `./blueprints/sdlc/scripts/init-sdlc-workspace.sh "Project Name"` |
 | 4 | `forge/forge.config.yaml` | `./blueprints/sdlc/methodologies/forge/setup/forge-init.sh` |
 | 5 | `forge.config.yaml` tailored to team | `@forge-setup` or `QUESTIONNAIRE.md` |
-| 6 | `.cursor/rules/` with Forge dailies | `bash blueprints/sdlc/methodologies/forge/setup/install-versona-cursor-rules.sh --with-standard-forge-rules` **or** copy from `blueprints/sdlc/templates/forge/cursor-rules/` |
-| 7 | `versona-*.mdc` per YAML | `bash blueprints/sdlc/methodologies/forge/setup/install-versona-cursor-rules.sh` **or** copy from `blueprints/.../versona/` per `CURSOR-RULES-ALIGNMENT.md` / `versona/catalog/TEMPLATE-INDEX.md` |
+| 6 | `.cursor/rules/` with Forge + Versonas | `bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh sync --preset recommended` **or** copy from `blueprints/sdlc/templates/forge/cursor-rules/` + `versona/` per `CURSOR-RULES-QUICKSTART.md` |
+| 7 | `versona-*.mdc` per YAML (YAML-only path) | `bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh sync` (no `--preset`) **or** copy from `blueprints/.../versona/` per `CURSOR-RULES-ALIGNMENT.md` / `versona/catalog/TEMPLATE-INDEX.md` |
 | 8 | Tasklets + Sampling (optional) | `bash blueprints/sdlc/methodologies/forge/tasklets/install-tasklets.sh` |
 | 9 | Optional Skills | Copy from `blueprints/sdlc/templates/forge/cursor-skills/` into `.cursor/skills/` |
-| 10 | Align config ↔ rules | `bash blueprints/sdlc/methodologies/forge/setup/check-forge-cursor-alignment.sh` (needs PyYAML) |
+| 10 | Align config ↔ rules | `bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh check` (needs PyYAML) |
 
 ### 3. Handoff
 
@@ -121,7 +121,7 @@ Infer state from the filesystem (OK = path exists and looks used; Missing = abse
 - If team config incomplete: use **@forge-setup** or `blueprints/sdlc/methodologies/forge/setup/QUESTIONNAIRE.md`
 - If product bootstrap: `blueprints/sdlc/methodologies/forge/product-manager/product-bootstrap-flow.md`
 - If spike needs WBS/roadmap anchors: `blueprints/sdlc/methodologies/forge/versona/DISCIPLINE-SPIKE.md` + bootstrap Steps 6–7
-- To **install or diff** Versona `.mdc` files: `bash blueprints/sdlc/methodologies/forge/setup/install-versona-cursor-rules.sh` or **`@versona-cursor-rules-sync`**
+- To **sync or diff** Versona `.mdc` files: `bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh sync --preset recommended` or **`@versona-cursor-rules-sync`**
 
 ### Recommendation
 

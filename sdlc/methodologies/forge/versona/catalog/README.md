@@ -9,4 +9,4 @@
 
 **Hub:** [Versonas README](../README.md) — documentation map (Diátaxis-style), ASCII source tree, adoption steps.
 
-**Install into Cursor:** from the consuming repo, [`../../setup/install-versona-cursor-rules.sh`](../../setup/install-versona-cursor-rules.sh) (driven by `forge.config.yaml`); drift check: [`../../setup/diff-versona-cursor-rules.sh`](../../setup/diff-versona-cursor-rules.sh). Logic: [`../../setup/versona_cursor_rules.py`](../../setup/versona_cursor_rules.py).
+**Install into Cursor:** from the consuming repo, [`../../setup/sync-forge-cursor-rules.sh`](../../setup/sync-forge-cursor-rules.sh) `sync --preset recommended` (driven by `forge.config.yaml`); drift / status: same script `diff` / `status`. Quick ref: [`../../setup/CURSOR-RULES-QUICKSTART.md`](../../setup/CURSOR-RULES-QUICKSTART.md). Logic: [`../../setup/versona_cursor_rules.py`](../../setup/versona_cursor_rules.py).

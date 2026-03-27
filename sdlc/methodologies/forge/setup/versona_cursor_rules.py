@@ -3,7 +3,7 @@
 Single source of truth: forge.config.yaml versona.* → expected Cursor rule filenames
 and template paths under blueprints' forge/versona/.
 
-Used by check-forge-cursor-alignment.sh and install-versona-cursor-rules.sh.
+Used by sync-forge-cursor-rules.sh, check-forge-cursor-alignment.sh, and install/diff wrappers.
 """
 from __future__ import annotations
 
@@ -44,6 +44,7 @@ OPTIONAL_VERSONA_TEMPLATE_REL: dict[str, str] = {
     "versona-all.mdc": "catalog/routing/versona-all.mdc.template",
     "versona-project-setup.mdc": "catalog/workflow/versona-project-setup.mdc.template",
     "versona-roadmap-gate.mdc": "catalog/workflow/versona-roadmap-gate.mdc.template",
+    "versona-cursor-rules-sync.mdc": "catalog/workflow/versona-cursor-rules-sync.mdc.template",
     "versona-sampling.mdc": "catalog/meta/versona-sampling.mdc.template",
     "versona-generic.mdc": "versona-generic.mdc.template",
     "versona-family-engineering.mdc": "catalog/discipline/engineering/family/versona-family-engineering.mdc.template",
@@ -146,6 +147,68 @@ def expected_versona_filenames(data: dict) -> list[str]:
     return uniq
 
 
+def merge_install_options(args: argparse.Namespace) -> tuple[list[str], bool]:
+    """
+    Preset bundles optional Versona files + whether to copy standard Forge .mdc rules.
+    --with-* flags add on top (additive). No --preset (or minimal) = YAML-driven Versonas only.
+    """
+    preset = getattr(args, "preset", None)
+    if preset in (None, "minimal"):
+        optional: list[str] = []
+        wf = False
+    elif preset == "recommended":
+        optional = [
+            "versona-all.mdc",
+            "versona-project-setup.mdc",
+            "versona-roadmap-gate.mdc",
+            "versona-cursor-rules-sync.mdc",
+        ]
+        wf = True
+    elif preset == "full":
+        optional = [
+            "versona-all.mdc",
+            "versona-project-setup.mdc",
+            "versona-roadmap-gate.mdc",
+            "versona-cursor-rules-sync.mdc",
+            "versona-family-engineering.mdc",
+            "versona-family-data.mdc",
+            "versona-family-product.mdc",
+            "versona-generic.mdc",
+        ]
+        wf = True
+    else:
+        print(f"Error: unknown preset {preset!r}", file=sys.stderr)
+        sys.exit(2)
+
+    def add(name: str) -> None:
+        if name not in optional:
+            optional.append(name)
+
+    if args.with_project_setup:
+        add("versona-project-setup.mdc")
+    if args.with_roadmap_gate:
+        add("versona-roadmap-gate.mdc")
+    if args.with_all_routing:
+        add("versona-all.mdc")
+    if args.with_family_product:
+        add("versona-family-product.mdc")
+    if args.with_family_engineering:
+        add("versona-family-engineering.mdc")
+    if args.with_family_data:
+        add("versona-family-data.mdc")
+    if args.with_sampling:
+        add("versona-sampling.mdc")
+    if args.with_generic:
+        add("versona-generic.mdc")
+    if args.with_cursor_rules_sync:
+        add("versona-cursor-rules-sync.mdc")
+
+    if args.with_standard_forge_rules:
+        wf = True
+
+    return optional, wf
+
+
 def _sha256_file(path: Path) -> str:
     h = hashlib.sha256()
     with path.open("rb") as f:
@@ -189,8 +252,8 @@ def cmd_check(args: argparse.Namespace) -> int:
     if missing:
         print(
             f"Summary: {len(missing)} missing — run:\n"
-            f"  bash blueprints/sdlc/methodologies/forge/setup/install-versona-cursor-rules.sh\n"
-            "See: blueprints/sdlc/methodologies/forge/setup/CURSOR-RULES-ALIGNMENT.md"
+            "  bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh sync\n"
+            "See: blueprints/sdlc/methodologies/forge/setup/CURSOR-RULES-QUICKSTART.md"
         )
         return 1
     print("All expected Versona rules present.")
@@ -223,7 +286,11 @@ def collect_install_jobs(
             continue
         jobs.append((src, rules_dir / name, "versona"))
 
+    seen_opt: set[str] = set()
     for name in optional_names:
+        if name in seen_opt:
+            continue
+        seen_opt.add(name)
         rel = OPTIONAL_VERSONA_TEMPLATE_REL.get(name)
         if not rel:
             print(f"Warning: unknown optional rule {name}", file=sys.stderr)
@@ -253,35 +320,18 @@ def cmd_install(args: argparse.Namespace) -> int:
         return 1
 
     data = load_cfg(cfg)
-
-    optional: list[str] = []
-    if args.with_project_setup:
-        optional.append("versona-project-setup.mdc")
-    if args.with_roadmap_gate:
-        optional.append("versona-roadmap-gate.mdc")
-    if args.with_all_routing:
-        optional.append("versona-all.mdc")
-    if args.with_family_product:
-        optional.append("versona-family-product.mdc")
-    if args.with_family_engineering:
-        optional.append("versona-family-engineering.mdc")
-    if args.with_family_data:
-        optional.append("versona-family-data.mdc")
-    if args.with_sampling:
-        optional.append("versona-sampling.mdc")
-    if args.with_generic:
-        optional.append("versona-generic.mdc")
+    optional, wf = merge_install_options(args)
 
     jobs = collect_install_jobs(
         root,
         data,
         optional_names=optional,
-        with_standard_forge=args.with_standard_forge_rules,
+        with_standard_forge=wf,
     )
 
     rules_dir = root / ".cursor" / "rules"
     if args.dry_run:
-        print("=== install-versona-cursor-rules (dry-run) ===")
+        print("=== sync-forge-cursor-rules install (dry-run) ===")
         print(f"Target: {rules_dir}")
         for src, dest, label in jobs:
             print(f"  [{label}] {src} -> {dest}")
@@ -313,30 +363,13 @@ def cmd_diff(args: argparse.Namespace) -> int:
         print(f"Error: missing {cfg}", file=sys.stderr)
         return 1
     data = load_cfg(cfg)
-
-    optional: list[str] = []
-    if args.with_project_setup:
-        optional.append("versona-project-setup.mdc")
-    if args.with_roadmap_gate:
-        optional.append("versona-roadmap-gate.mdc")
-    if args.with_all_routing:
-        optional.append("versona-all.mdc")
-    if args.with_family_product:
-        optional.append("versona-family-product.mdc")
-    if args.with_family_engineering:
-        optional.append("versona-family-engineering.mdc")
-    if args.with_family_data:
-        optional.append("versona-family-data.mdc")
-    if args.with_sampling:
-        optional.append("versona-sampling.mdc")
-    if args.with_generic:
-        optional.append("versona-generic.mdc")
+    optional, wf = merge_install_options(args)
 
     jobs = collect_install_jobs(
         root,
         data,
         optional_names=optional,
-        with_standard_forge=args.with_standard_forge_rules,
+        with_standard_forge=wf,
     )
     rules_dir = root / ".cursor" / "rules"
 
@@ -378,8 +411,98 @@ def cmd_diff(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_status(args: argparse.Namespace) -> int:
+    root = Path(args.repo_root).resolve()
+    cfg = root / "forge" / "forge.config.yaml"
+    if not cfg.is_file():
+        print(f"Error: missing {cfg}", file=sys.stderr)
+        return 1
+    data = load_cfg(cfg)
+    optional, wf = merge_install_options(args)
+    jobs = collect_install_jobs(
+        root,
+        data,
+        optional_names=optional,
+        with_standard_forge=wf,
+    )
+    rules_dir = root / ".cursor" / "rules"
+
+    print("=== Forge Cursor rules — status ===")
+    preset = getattr(args, "preset", None)
+    if preset:
+        print(f"Preset: {preset}")
+    print(f"Rules dir: {rules_dir}")
+    print()
+
+    missing: list[str] = []
+    drift: list[str] = []
+    ok_count = 0
+    no_template: list[str] = []
+
+    for src, dest, label in jobs:
+        if not src.is_file():
+            print(f"  ! no template  {dest.name}  [{label}]")
+            no_template.append(dest.name)
+            continue
+        if not dest.is_file():
+            print(f"  missing  {dest.name}  [{label}]")
+            missing.append(dest.name)
+            continue
+        if _sha256_file(src) == _sha256_file(dest):
+            print(f"  ok  {dest.name}  [{label}]")
+            ok_count += 1
+        else:
+            print(f"  drift  {dest.name}  [{label}]")
+            drift.append(dest.name)
+
+    print()
+    n_bad = len(missing) + len(drift) + len(no_template)
+    setup_rel = "blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh"
+    if preset in (None, "minimal"):
+        suggest = f"bash {setup_rel} sync --force"
+    else:
+        suggest = f"bash {setup_rel} sync --preset {preset} --force"
+
+    if n_bad:
+        print(
+            f"Summary: {ok_count} ok, {len(missing)} missing, {len(drift)} drift, "
+            f"{len(no_template)} missing template in blueprints"
+        )
+        print(f"Next: {suggest}")
+        return 1
+    print(f"Summary: {ok_count} ok — all expected files present and match templates.")
+    return 0
+
+
+def _add_preset_and_optional_rule_flags(p: argparse.ArgumentParser) -> None:
+    p.add_argument(
+        "--preset",
+        choices=["minimal", "recommended", "full"],
+        default=None,
+        help="Bundle: minimal (default, YAML Versonas only), recommended, or full",
+    )
+    p.add_argument("--with-project-setup", action="store_true")
+    p.add_argument("--with-roadmap-gate", action="store_true")
+    p.add_argument("--with-all-routing", action="store_true")
+    p.add_argument("--with-family-product", action="store_true")
+    p.add_argument("--with-family-engineering", action="store_true")
+    p.add_argument("--with-family-data", action="store_true")
+    p.add_argument("--with-sampling", action="store_true")
+    p.add_argument("--with-generic", action="store_true")
+    p.add_argument(
+        "--with-cursor-rules-sync",
+        action="store_true",
+        help="Optional versona-cursor-rules-sync.mdc (also in recommended/full presets)",
+    )
+    p.add_argument(
+        "--with-standard-forge-rules",
+        action="store_true",
+        help="Also copy forge-daily, forge-planning, forge-versona, forge-setup, forge-product-manager",
+    )
+
+
 def main() -> int:
-    p = argparse.ArgumentParser(description="Forge Versona Cursor rules: check, install, diff")
+    p = argparse.ArgumentParser(description="Forge Versona Cursor rules: check, install, diff, status")
     sub = p.add_subparsers(dest="cmd", required=True)
 
     p_check = sub.add_parser("check", help="Compare forge.config.yaml to .cursor/rules (like check-forge-cursor-alignment.sh)")
@@ -390,36 +513,21 @@ def main() -> int:
     p_inst.add_argument("repo_root", nargs="?", default=".", help="Repository root (default: .)")
     p_inst.add_argument("--dry-run", action="store_true")
     p_inst.add_argument("--force", action="store_true", help="Overwrite existing rule files")
-    p_inst.add_argument("--with-project-setup", action="store_true")
-    p_inst.add_argument("--with-roadmap-gate", action="store_true")
-    p_inst.add_argument("--with-all-routing", action="store_true")
-    p_inst.add_argument("--with-family-product", action="store_true")
-    p_inst.add_argument("--with-family-engineering", action="store_true")
-    p_inst.add_argument("--with-family-data", action="store_true")
-    p_inst.add_argument("--with-sampling", action="store_true")
-    p_inst.add_argument("--with-generic", action="store_true")
-    p_inst.add_argument(
-        "--with-standard-forge-rules",
-        action="store_true",
-        help="Also copy forge-daily, forge-planning, forge-versona, forge-setup, forge-product-manager",
-    )
+    _add_preset_and_optional_rule_flags(p_inst)
     p_inst.set_defaults(func=cmd_install)
 
     p_diff = sub.add_parser("diff", help="SHA256 compare installed .mdc vs blueprint sources")
     p_diff.add_argument("repo_root", nargs="?", default=".", help="Repository root (default: .)")
-    for flag in [
-        "with_project_setup",
-        "with_roadmap_gate",
-        "with_all_routing",
-        "with_family_product",
-        "with_family_engineering",
-        "with_family_data",
-        "with_sampling",
-        "with_generic",
-    ]:
-        p_diff.add_argument(f"--{flag.replace('_', '-')}", action="store_true")
-    p_diff.add_argument("--with-standard-forge-rules", action="store_true")
+    _add_preset_and_optional_rule_flags(p_diff)
     p_diff.set_defaults(func=cmd_diff)
+
+    p_stat = sub.add_parser(
+        "status",
+        help="Per-file missing/drift/ok vs templates (exit 1 if any missing or drift)",
+    )
+    p_stat.add_argument("repo_root", nargs="?", default=".", help="Repository root (default: .)")
+    _add_preset_and_optional_rule_flags(p_stat)
+    p_stat.set_defaults(func=cmd_status)
 
     args = p.parse_args()
     return int(args.func(args))

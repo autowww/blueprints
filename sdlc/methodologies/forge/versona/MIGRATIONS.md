@@ -4,7 +4,7 @@ When **blueprints** changes Versona **session** layouts, **manifest** fields, or
 
 ## Cursor rules (`.mdc`)
 
-- **No automatic rewrite** of `.cursor/rules/` — use [`../setup/install-versona-cursor-rules.sh`](../setup/install-versona-cursor-rules.sh) after `git submodule update`, then [`../setup/diff-versona-cursor-rules.sh`](../setup/diff-versona-cursor-rules.sh) before `--force`.
+- **No automatic rewrite** of `.cursor/rules/` — after `git submodule update`, run [`../setup/sync-forge-cursor-rules.sh`](../setup/sync-forge-cursor-rules.sh) `diff --preset recommended` (or `status`) before `sync … --force`. See [`../setup/CURSOR-RULES-QUICKSTART.md`](../setup/CURSOR-RULES-QUICKSTART.md).
 - Local **globs** or edits in installed `.mdc` files are overwritten by `--force`; re-apply custom globs after sync if needed.
 
 ## Session folders and manifests

@@ -39,4 +39,5 @@
 
 - From the blueprints repo root: search for stale path segments such as `versona/baseline/`, top-level `versona/discipline/` (without `catalog/`), or `versona/family/` (family templates now live under `catalog/discipline/<domain>/family/`).
 - `bash blueprints/sdlc/methodologies/forge/tasklets/install-tasklets.sh --dry-run` — resolves `catalog/meta/versona-sampling.mdc.template`.
-- `bash blueprints/sdlc/methodologies/forge/setup/install-versona-cursor-rules.sh --dry-run` — lists `versona_cursor_rules.py` install plan from `forge.config.yaml`.
+- `bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh sync --dry-run` — YAML-driven plan from `forge.config.yaml` (no preset bundle).
+- `bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh sync --preset recommended --dry-run` — same plus standard Forge rules and recommended optional Versonas (see [`../setup/CURSOR-RULES-ALIGNMENT.md`](../setup/CURSOR-RULES-ALIGNMENT.md)).

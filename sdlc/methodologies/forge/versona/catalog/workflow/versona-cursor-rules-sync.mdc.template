@@ -59,31 +59,34 @@ After this baseline, this rule is **not** a challenge gate—produce the **Curso
 
 ### Commands (run at repo root)
 
-1. Check expected rules vs disk:
-   bash blueprints/sdlc/methodologies/forge/setup/check-forge-cursor-alignment.sh
+1. Check expected YAML-driven Versonas vs disk:
+   bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh check
 
-2. See drift vs current blueprints templates (add same --with-* flags you use for install):
-   bash blueprints/sdlc/methodologies/forge/setup/diff-versona-cursor-rules.sh
+2. Status (missing / drift / ok) — use same `--preset` and `--with-*` as you use for sync:
+   bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh status --preset recommended
 
-3. Install missing copies from forge.config.yaml:
-   bash blueprints/sdlc/methodologies/forge/setup/install-versona-cursor-rules.sh
+3. Diff vs blueprints templates:
+   bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh diff --preset recommended
 
-4. Optional — also standard Forge rules (daily, planning, routing, setup, product manager):
-   bash blueprints/sdlc/methodologies/forge/setup/install-versona-cursor-rules.sh --with-standard-forge-rules
+4. Recommended one-shot install (YAML Versonas + standard Forge + routing + key workflows + this playbook):
+   bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh sync --preset recommended
 
-5. Optional — routing + workflows (adjust to taste):
-   bash blueprints/sdlc/methodologies/forge/setup/install-versona-cursor-rules.sh --with-all-routing --with-project-setup --with-roadmap-gate
+5. YAML-only (no preset bundle — matches older CI/scripts):
+   bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh sync
 
-6. After submodule update — overwrite only if diff reviewed:
-   bash blueprints/sdlc/methodologies/forge/setup/install-versona-cursor-rules.sh --force
+6. Full bundle (recommended + family aggregators + versona-generic):
+   bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh sync --preset full
+
+7. After submodule update — overwrite only if diff/status reviewed:
+   bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh sync --preset recommended --force
 
 ### Dry-run
 
-   bash blueprints/sdlc/methodologies/forge/setup/install-versona-cursor-rules.sh --dry-run
+   bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh sync --preset recommended --dry-run
 
 ### Notes
 
-- Python 3 + PyYAML required for install/check/diff (see CURSOR-RULES-ALIGNMENT.md).
+- Python 3 + PyYAML required for install/check/diff/status (see CURSOR-RULES-QUICKSTART.md, CURSOR-RULES-ALIGNMENT.md).
 - Tasklets + Sampling: `bash blueprints/sdlc/methodologies/forge/tasklets/install-tasklets.sh`
 - Session folder migrations when blueprint formats change: `blueprints/sdlc/methodologies/forge/versona/MIGRATIONS.md`
 
@@ -94,4 +97,4 @@ After this baseline, this rule is **not** a challenge gate—produce the **Curso
 
 ## Forge context
 
-Cursor lists **`@`** rules from **`.cursor/rules/`** only; the **blueprints submodule** does not auto-populate them. This playbook points to the **supported** install and diff scripts shared with [`check-forge-cursor-alignment.sh`](../../../setup/check-forge-cursor-alignment.sh).
+Cursor lists **`@`** rules from **`.cursor/rules/`** only; the **blueprints submodule** does not auto-populate them. This playbook points to [`sync-forge-cursor-rules.sh`](../../../setup/sync-forge-cursor-rules.sh) (subcommands `sync`, `diff`, `status`, `check`).

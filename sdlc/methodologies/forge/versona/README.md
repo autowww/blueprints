@@ -9,7 +9,7 @@ Repo-wide documentation habits (single source of truth, link don’t duplicate) 
 | Mode | Start here | Role |
 |------|------------|------|
 | **Explanation** | [`VERSONA-FRAMEWORK.md`](VERSONA-FRAMEWORK.md), [`DISCIPLINE-SPIKE.md`](DISCIPLINE-SPIKE.md), [How Versonas work](#how-versonas-work) (below) | Kinds, sessions, exploration spikes, handoffs |
-| **How-to** | [`../../../SETUP.md`](../../../SETUP.md), [`../setup/CURSOR-RULES-ALIGNMENT.md`](../setup/CURSOR-RULES-ALIGNMENT.md), [`../tasklets/install-tasklets.sh`](../tasklets/install-tasklets.sh) | Install rules, align `forge.config.yaml`, tasklets + Sampling |
+| **How-to** | [`../../../SETUP.md`](../../../SETUP.md), [`../setup/CURSOR-RULES-QUICKSTART.md`](../setup/CURSOR-RULES-QUICKSTART.md), [`../setup/CURSOR-RULES-ALIGNMENT.md`](../setup/CURSOR-RULES-ALIGNMENT.md), [`../tasklets/install-tasklets.sh`](../tasklets/install-tasklets.sh) | Install rules, align `forge.config.yaml`, tasklets + Sampling |
 | **Reference** | [`catalog/TEMPLATE-INDEX.md`](catalog/TEMPLATE-INDEX.md), [`catalog/ANCESTRY.md`](catalog/ANCESTRY.md), [`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md), [`RECOMMENDED-GLOBS.md`](RECOMMENDED-GLOBS.md) | Authoritative paths, kind/domain tables, rule shape, globs |
 
 **Single source of truth for paths:** [`catalog/TEMPLATE-INDEX.md`](catalog/TEMPLATE-INDEX.md) — other pages summarize and link there.
@@ -168,12 +168,12 @@ alt: Diagram
 
 ## Adopting Versonas in a consuming repo
 
-1. **Recommended:** Run [`../setup/install-versona-cursor-rules.sh`](../setup/install-versona-cursor-rules.sh) from the **consuming repo root** (requires `forge/forge.config.yaml` and `blueprints/`). Use `--dry-run` to preview, `--force` after submodule updates. See [`../setup/CURSOR-RULES-ALIGNMENT.md`](../setup/CURSOR-RULES-ALIGNMENT.md). **Or** copy templates manually to `.cursor/rules/` (remove `.template` suffix).
-2. **Optional:** Copy [`versona-generic.mdc.template`](versona-generic.mdc.template) if you want an explicit Layer-0 baseline rule to pair with discipline Versonas.
-3. **Optional:** Copy [`catalog/workflow/versona-project-setup.mdc.template`](catalog/workflow/versona-project-setup.mdc.template) for **repo bootstrap** (keyword **`setup`**) — orchestrates checklist and gap analysis; pair with [`../setup/forge-setup.mdc.template`](../setup/forge-setup.mdc.template) for the questionnaire wizard.
-4. **Optional:** Copy [`catalog/workflow/versona-roadmap-gate.mdc.template`](catalog/workflow/versona-roadmap-gate.mdc.template) for a **roadmap quality gate** before deep WBS (`@versona-roadmap-gate`).
+1. **Recommended:** From the **consuming repo root**, run [`../setup/sync-forge-cursor-rules.sh`](../setup/sync-forge-cursor-rules.sh) `sync --preset recommended` (requires `forge/forge.config.yaml` and `blueprints/`). Quick ref: [`../setup/CURSOR-RULES-QUICKSTART.md`](../setup/CURSOR-RULES-QUICKSTART.md); full detail: [`../setup/CURSOR-RULES-ALIGNMENT.md`](../setup/CURSOR-RULES-ALIGNMENT.md). Use `--dry-run` to preview, `--force` only after reviewing `diff` / `status`. YAML-only install: `sync sync` with no `--preset`. **Or** copy templates manually to `.cursor/rules/` (remove `.template` suffix).
+2. **Optional:** `sync … sync --preset full` includes [`versona-generic.mdc.template`](versona-generic.mdc.template) and family aggregators; or copy individual templates.
+3. **Included in recommended preset:** [`catalog/workflow/versona-project-setup.mdc.template`](catalog/workflow/versona-project-setup.mdc.template) (**`setup`**) — pair with [`../setup/forge-setup.mdc.template`](../setup/forge-setup.mdc.template) for the questionnaire wizard.
+4. **Included in recommended preset:** [`catalog/workflow/versona-roadmap-gate.mdc.template`](catalog/workflow/versona-roadmap-gate.mdc.template) — roadmap quality gate (`@versona-roadmap-gate`).
 5. **Optional:** Install the example tasklets + Sampling Versona via [`../tasklets/install-tasklets.sh`](../tasklets/install-tasklets.sh).
-6. **Optional:** Copy [`catalog/workflow/versona-cursor-rules-sync.mdc.template`](catalog/workflow/versona-cursor-rules-sync.mdc.template) for a chat playbook that prints **install/diff** shell commands (`@versona-cursor-rules-sync`).
+6. **Included in recommended preset:** [`catalog/workflow/versona-cursor-rules-sync.mdc.template`](catalog/workflow/versona-cursor-rules-sync.mdc.template) — chat playbook for **sync/diff** commands (`@versona-cursor-rules-sync`).
 7. Update `globs:` in each rule to match your project's file structure.
 8. Configure which Versonas are active in `forge.config.yaml` (via the setup wizard).
 9. Use family aggregators to activate discipline groups without configuring each individually.
