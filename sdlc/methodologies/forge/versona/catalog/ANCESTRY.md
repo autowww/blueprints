@@ -42,7 +42,7 @@ alt: Diagram
 
 | Template | Core challenge (short) | Output variant |
 |----------|------------------------|----------------|
-| [`versona-product-management.mdc.template`](discipline/product/versona-product-management.mdc.template) | Product/market fit | Contract §5 |
+| [`versona-product-management.mdc.template`](discipline/product/versona-product-management.mdc.template) | Product/market fit | Contract §5 + optional handoffs |
 | [`versona-ba.mdc.template`](discipline/product/versona-ba.mdc.template) | Stakeholder needs | Contract §5 |
 | [`versona-ux.mdc.template`](discipline/product/versona-ux.mdc.template) | Usability / design | Contract §5 |
 | [`versona-marketing.mdc.template`](discipline/product/versona-marketing.mdc.template) | Acquisition / retention | Contract §5 |
@@ -120,7 +120,7 @@ alt: Diagram
 | versona-iot.mdc.template | discipline | Engineering | — | Contract §5 |
 | versona-bigdata.mdc.template | discipline | Data | — | Contract §5 |
 | versona-datascience.mdc.template | discipline | Data | — | Contract §5 |
-| versona-product-management.mdc.template | discipline | Product | — | Contract §5 |
+| versona-product-management.mdc.template | discipline | Product | — | Contract §5 + optional handoffs |
 | versona-ba.mdc.template | discipline | Product | — | Contract §5 |
 | versona-ux.mdc.template | discipline | Product | — | Contract §5 |
 | versona-marketing.mdc.template | discipline | Product | — | Contract §5 |
