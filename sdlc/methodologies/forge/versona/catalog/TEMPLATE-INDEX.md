@@ -32,9 +32,11 @@
 | `versona-sampling.mdc.template` | `catalog/meta/versona-sampling.mdc.template` | meta | — | `../../VERSONA-CONTRACT`; `../../../tasklets/` |
 | `versona-project-setup.mdc.template` | `catalog/workflow/versona-project-setup.mdc.template` | workflow | — | `../../../VERSONA-CONTRACT`; `../../../setup/` |
 | `versona-roadmap-gate.mdc.template` | `catalog/workflow/versona-roadmap-gate.mdc.template` | workflow | — | `../../../VERSONA-CONTRACT`; `../discipline/product/` |
+| `versona-cursor-rules-sync.mdc.template` | `catalog/workflow/versona-cursor-rules-sync.mdc.template` | workflow | — | `../../../VERSONA-CONTRACT`; `../../../setup/` |
 | `versona-generic.mdc.template` | `versona-generic.mdc.template` (root) | baseline_only | — | `catalog/ANCESTRY`; `VERSONA-*` (siblings) |
 
 ## Verification commands
 
 - From the blueprints repo root: search for stale path segments such as `versona/baseline/`, top-level `versona/discipline/` (without `catalog/`), or `versona/family/` (family templates now live under `catalog/discipline/<domain>/family/`).
 - `bash blueprints/sdlc/methodologies/forge/tasklets/install-tasklets.sh --dry-run` — resolves `catalog/meta/versona-sampling.mdc.template`.
+- `bash blueprints/sdlc/methodologies/forge/setup/install-versona-cursor-rules.sh --dry-run` — lists `versona_cursor_rules.py` install plan from `forge.config.yaml`.

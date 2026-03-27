@@ -96,6 +96,7 @@ alt: Diagram
 |----------|--------|----------------|
 | [`versona-project-setup.mdc.template`](workflow/versona-project-setup.mdc.template) | — | Setup / audit report |
 | [`versona-roadmap-gate.mdc.template`](workflow/versona-roadmap-gate.mdc.template) | — | Roadmap gate playbook |
+| [`versona-cursor-rules-sync.mdc.template`](workflow/versona-cursor-rules-sync.mdc.template) | — | Cursor rules install/diff playbook |
 
 ---
 
@@ -136,6 +137,7 @@ alt: Diagram
 | versona-sampling.mdc.template | meta | — | — | Shortened |
 | versona-project-setup.mdc.template | workflow | — | — | Setup report |
 | versona-roadmap-gate.mdc.template | workflow | — | — | Roadmap gate playbook |
+| versona-cursor-rules-sync.mdc.template | workflow | — | — | Cursor rules sync playbook |
 | versona-generic.mdc.template | baseline_only | — | — | Layer 0 only |
 
 ---

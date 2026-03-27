@@ -8,3 +8,5 @@
 | [`TEMPLATE-INDEX.md`](TEMPLATE-INDEX.md) | Authoritative source path and checks per template |
 
 **Hub:** [Versonas README](../README.md) — documentation map (Diátaxis-style), ASCII source tree, adoption steps.
+
+**Install into Cursor:** from the consuming repo, [`../../setup/install-versona-cursor-rules.sh`](../../setup/install-versona-cursor-rules.sh) (driven by `forge.config.yaml`); drift check: [`../../setup/diff-versona-cursor-rules.sh`](../../setup/diff-versona-cursor-rules.sh). Logic: [`../../setup/versona_cursor_rules.py`](../../setup/versona_cursor_rules.py).

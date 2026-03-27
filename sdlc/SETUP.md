@@ -25,11 +25,11 @@ Canonical layout and conventions: [`DOCUMENTATION-STRUCTURE.md`](DOCUMENTATION-S
 4. **Forge workspace** — `./blueprints/sdlc/methodologies/forge/setup/forge-init.sh`  
    Creates `forge/`, `ember-logs/`, seeds `forge/forge.config.yaml`.
 5. **Configure Forge in YAML** — Edit `forge/forge.config.yaml`; questionnaire: [`methodologies/forge/setup/QUESTIONNAIRE.md`](methodologies/forge/setup/QUESTIONNAIRE.md).
-6. **Cursor — standard Forge rules** — From [`templates/forge/cursor-rules/`](templates/forge/cursor-rules/) into `.cursor/rules/`: `forge-daily.mdc`, `forge-planning.mdc`, `forge-versona.mdc`, optional `forge-setup.mdc`, optional `forge-product-manager.mdc`. See [`methodologies/forge/setup/CURSOR-RULES-ALIGNMENT.md`](methodologies/forge/setup/CURSOR-RULES-ALIGNMENT.md).
-7. **Cursor — discipline Versonas** — For each active flag in `forge.config.yaml`, copy matching `versona-*.mdc.template` from [`methodologies/forge/versona/`](methodologies/forge/versona/) to `.cursor/rules/` (drop `.template`).
+6. **Cursor — install rules** — From repo root, run [`methodologies/forge/setup/install-versona-cursor-rules.sh`](methodologies/forge/setup/install-versona-cursor-rules.sh) (uses `forge.config.yaml`; add `--with-standard-forge-rules` for `forge-daily`, `forge-planning`, `forge-versona`, `forge-setup`, `forge-product-manager`). Or copy manually — see [`methodologies/forge/setup/CURSOR-RULES-ALIGNMENT.md`](methodologies/forge/setup/CURSOR-RULES-ALIGNMENT.md).
+7. **Cursor — optional extras** — Flags on the same script: `--with-project-setup`, `--with-roadmap-gate`, `--with-all-routing`, family aggregators, etc. After `git submodule update` on `blueprints/`, re-run install; use [`diff-versona-cursor-rules.sh`](methodologies/forge/setup/diff-versona-cursor-rules.sh) to see drift before `--force`.
 8. **Cursor — tasklets + Sampling (optional)** — `bash blueprints/sdlc/methodologies/forge/tasklets/install-tasklets.sh`
 9. **Optional Skills** — Copy from [`templates/forge/cursor-skills/`](templates/forge/cursor-skills/) into `.cursor/skills/`.
-10. **Validate alignment** — `bash blueprints/sdlc/methodologies/forge/setup/check-forge-cursor-alignment.sh` (Python 3 + PyYAML).
+10. **Validate alignment** — `bash blueprints/sdlc/methodologies/forge/setup/check-forge-cursor-alignment.sh` (Python 3 + PyYAML; uses [`versona_cursor_rules.py`](methodologies/forge/setup/versona_cursor_rules.py) `check` — same map as the install script).
 11. **Operational start** — Forge scripts: [`methodologies/forge/scripts/README.md`](methodologies/forge/scripts/README.md); workspace overview: [`templates/forge/README.template.md`](templates/forge/README.template.md).
 12. **Optional product-led path** — [`methodologies/forge/product-manager/README.md`](methodologies/forge/product-manager/README.md), [`methodologies/forge/product-manager/product-bootstrap-flow.md`](methodologies/forge/product-manager/product-bootstrap-flow.md).
 

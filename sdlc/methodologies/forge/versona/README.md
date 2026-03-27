@@ -34,6 +34,7 @@ versona/
     ├── meta/versona-sampling.mdc.template
     ├── workflow/versona-project-setup.mdc.template
     ├── workflow/versona-roadmap-gate.mdc.template
+    ├── workflow/versona-cursor-rules-sync.mdc.template
     └── routing/versona-all.mdc.template
 ```
 
@@ -116,7 +117,7 @@ This phase-awareness lets Versonas calibrate challenge intensity based on the cu
 | [`versona-security.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/catalog/discipline/cross-cutting/versona-security.mdc.template) | Security | Is this safe from attacks and breaches? |
 | [`versona-compliance.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/catalog/discipline/cross-cutting/versona-compliance.mdc.template) | Compliance | Does this meet regulatory obligations? |
 
-### Methodology / demo (4)
+### Methodology / demo (5)
 
 | Template | Discipline | Core challenge |
 |----------|-----------|----------------|
@@ -124,6 +125,7 @@ This phase-awareness lets Versonas calibrate challenge intensity based on the cu
 | [`versona-sampling.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/catalog/meta/versona-sampling.mdc.template) | Sampling (demo) | What assumptions, unknowns, and top signals appear before a full Versona pass? |
 | [`versona-project-setup.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/catalog/workflow/versona-project-setup.mdc.template) | Project setup (onboarding) | What is missing for blueprints + Forge + Cursor alignment, and what commands should run next? Invoke with **`setup`** or `@versona-project-setup` after copying to `.cursor/rules/`. |
 | [`versona-roadmap-gate.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/catalog/workflow/versona-roadmap-gate.mdc.template) | Roadmap gate (workflow) | Playbook after drafting a roadmap: Definition of Ready, optional routing, Product Management Versona, follow-on Versonas, Ember Log. Invoke with `@versona-roadmap-gate`. |
+| [`versona-cursor-rules-sync.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/catalog/workflow/versona-cursor-rules-sync.mdc.template) | Cursor rules sync (workflow) | Prints exact shell commands to install or diff Versona `.mdc` files from blueprints into `.cursor/rules/`. |
 
 ### Family aggregators
 
@@ -166,13 +168,14 @@ alt: Diagram
 
 ## Adopting Versonas in a consuming repo
 
-1. Copy the templates you need to `.cursor/rules/` in your repo (remove `.template` suffix).
+1. **Recommended:** Run [`../setup/install-versona-cursor-rules.sh`](../setup/install-versona-cursor-rules.sh) from the **consuming repo root** (requires `forge/forge.config.yaml` and `blueprints/`). Use `--dry-run` to preview, `--force` after submodule updates. See [`../setup/CURSOR-RULES-ALIGNMENT.md`](../setup/CURSOR-RULES-ALIGNMENT.md). **Or** copy templates manually to `.cursor/rules/` (remove `.template` suffix).
 2. **Optional:** Copy [`versona-generic.mdc.template`](versona-generic.mdc.template) if you want an explicit Layer-0 baseline rule to pair with discipline Versonas.
 3. **Optional:** Copy [`catalog/workflow/versona-project-setup.mdc.template`](catalog/workflow/versona-project-setup.mdc.template) for **repo bootstrap** (keyword **`setup`**) — orchestrates checklist and gap analysis; pair with [`../setup/forge-setup.mdc.template`](../setup/forge-setup.mdc.template) for the questionnaire wizard.
 4. **Optional:** Copy [`catalog/workflow/versona-roadmap-gate.mdc.template`](catalog/workflow/versona-roadmap-gate.mdc.template) for a **roadmap quality gate** before deep WBS (`@versona-roadmap-gate`).
 5. **Optional:** Install the example tasklets + Sampling Versona via [`../tasklets/install-tasklets.sh`](../tasklets/install-tasklets.sh).
-6. Update `globs:` in each rule to match your project's file structure.
-7. Configure which Versonas are active in `forge.config.yaml` (via the setup wizard).
-8. Use family aggregators to activate discipline groups without configuring each individually.
+6. **Optional:** Copy [`catalog/workflow/versona-cursor-rules-sync.mdc.template`](catalog/workflow/versona-cursor-rules-sync.mdc.template) for a chat playbook that prints **install/diff** shell commands (`@versona-cursor-rules-sync`).
+7. Update `globs:` in each rule to match your project's file structure.
+8. Configure which Versonas are active in `forge.config.yaml` (via the setup wizard).
+9. Use family aggregators to activate discipline groups without configuring each individually.
 
 See [`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md) for the standard structure **discipline** Versonas follow. See [`VERSONA-FRAMEWORK.md`](VERSONA-FRAMEWORK.md) for kinds, sessions, processes, and logging conventions. See [`catalog/ANCESTRY.md`](catalog/ANCESTRY.md) for the kind/domain tree and [`catalog/TEMPLATE-INDEX.md`](catalog/TEMPLATE-INDEX.md) for every template source path.

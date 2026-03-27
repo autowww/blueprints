@@ -190,6 +190,7 @@ Populate `SESSION.md` YAML frontmatter (and optionally mirror in `session.manife
 | `discipline` | Optional | Display name when kind is `discipline`. |
 | `parent_session` | Optional | Relative path to parent session folder for chains. |
 | `ember_log_ref` | Optional | Path to `ember-logs/YYYY-MM-DD.md` and anchor or summary line. |
+| `versona_session_schema_version` | Optional | Integer or semver string for the **session/manifest shape** this folder uses — enables migration notes when blueprints evolves fields (see [`MIGRATIONS.md`](MIGRATIONS.md)). Not enforced by blueprints v1. |
 
 **Optional hints for exploration spikes** (not enforced by blueprints; for tooling or human clarity—see [`DISCIPLINE-SPIKE.md`](DISCIPLINE-SPIKE.md)):
 
