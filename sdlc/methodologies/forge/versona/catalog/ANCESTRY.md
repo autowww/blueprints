@@ -95,6 +95,7 @@ alt: Diagram
 | Template | Domain | Output variant |
 |----------|--------|----------------|
 | [`versona-project-setup.mdc.template`](workflow/versona-project-setup.mdc.template) | — | Setup / audit report |
+| [`versona-roadmap-gate.mdc.template`](workflow/versona-roadmap-gate.mdc.template) | — | Roadmap gate playbook |
 
 ---
 
@@ -134,6 +135,7 @@ alt: Diagram
 | forge-versona.mdc (templates) | routing | — | — | Routing tables |
 | versona-sampling.mdc.template | meta | — | — | Shortened |
 | versona-project-setup.mdc.template | workflow | — | — | Setup report |
+| versona-roadmap-gate.mdc.template | workflow | — | — | Roadmap gate playbook |
 | versona-generic.mdc.template | baseline_only | — | — | Layer 0 only |
 
 ---

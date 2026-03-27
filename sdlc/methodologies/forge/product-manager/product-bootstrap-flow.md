@@ -131,6 +131,10 @@ alt: Diagram
 
 Structure the roadmap as: NOW (committed, next 1–2 iterations) / NEXT (planned, next quarter) / LATER (aspirational, 2+ quarters).
 
+Before **Step 7**, apply **Roadmap Definition of Ready** to each theme or row (**Outcome**, **Evidence**, **Horizon**, **OKR / strategy fit**, **Dependencies**, **Non-goals**, **Next gate**) — see [`forge-product-manager.mdc.template`](forge-product-manager.mdc.template).
+
+**Versona checkpoint:** After the roadmap is drafted, run **Product Management Versona** (`versona-product-management`) or **`versona-all`** if routing is unclear; follow **Suggested next Versonas** in the challenge output before deep WBS. Optional playbook: [`../versona/catalog/workflow/versona-roadmap-gate.mdc.template`](../versona/catalog/workflow/versona-roadmap-gate.mdc.template).
+
 ---
 
 ## Step 7: WBS decomposition
@@ -150,7 +154,7 @@ Structure the roadmap as: NOW (committed, next 1–2 iterations) / NEXT (planned
 
 Use the project's ID scheme (e.g. `M1E1S1T1`) as defined in `PLANNING-FLOW.md`.
 
-**Versona checkpoint:** Consider invoking BA Versona to challenge requirements completeness and PM Versona (Governance) to challenge scope and schedule feasibility.
+**Versona checkpoint:** Consider **BA Versona** for requirements completeness, **Project Management Versona** (governance) for delivery constraints and schedule feasibility. **Product Management Versona** should already have challenged the roadmap at Step 6; do not substitute governance PM for that product-strategy pass.
 
 ---
 

@@ -33,6 +33,7 @@ versona/
     │   └── cross-cutting/
     ├── meta/versona-sampling.mdc.template
     ├── workflow/versona-project-setup.mdc.template
+    ├── workflow/versona-roadmap-gate.mdc.template
     └── routing/versona-all.mdc.template
 ```
 
@@ -115,13 +116,14 @@ This phase-awareness lets Versonas calibrate challenge intensity based on the cu
 | [`versona-security.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/catalog/discipline/cross-cutting/versona-security.mdc.template) | Security | Is this safe from attacks and breaches? |
 | [`versona-compliance.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/catalog/discipline/cross-cutting/versona-compliance.mdc.template) | Compliance | Does this meet regulatory obligations? |
 
-### Methodology / demo (3)
+### Methodology / demo (4)
 
 | Template | Discipline | Core challenge |
 |----------|-----------|----------------|
 | [`versona-generic.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/versona-generic.mdc.template) | Generic baseline (optional) | Layer 0 only—pair with a discipline Versona for full challenges. |
 | [`versona-sampling.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/catalog/meta/versona-sampling.mdc.template) | Sampling (demo) | What assumptions, unknowns, and top signals appear before a full Versona pass? |
 | [`versona-project-setup.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/catalog/workflow/versona-project-setup.mdc.template) | Project setup (onboarding) | What is missing for blueprints + Forge + Cursor alignment, and what commands should run next? Invoke with **`setup`** or `@versona-project-setup` after copying to `.cursor/rules/`. |
+| [`versona-roadmap-gate.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/catalog/workflow/versona-roadmap-gate.mdc.template) | Roadmap gate (workflow) | Playbook after drafting a roadmap: Definition of Ready, optional routing, Product Management Versona, follow-on Versonas, Ember Log. Invoke with `@versona-roadmap-gate`. |
 
 ### Family aggregators
 
@@ -167,9 +169,10 @@ alt: Diagram
 1. Copy the templates you need to `.cursor/rules/` in your repo (remove `.template` suffix).
 2. **Optional:** Copy [`versona-generic.mdc.template`](versona-generic.mdc.template) if you want an explicit Layer-0 baseline rule to pair with discipline Versonas.
 3. **Optional:** Copy [`catalog/workflow/versona-project-setup.mdc.template`](catalog/workflow/versona-project-setup.mdc.template) for **repo bootstrap** (keyword **`setup`**) — orchestrates checklist and gap analysis; pair with [`../setup/forge-setup.mdc.template`](../setup/forge-setup.mdc.template) for the questionnaire wizard.
-4. **Optional:** Install the example tasklets + Sampling Versona via [`../tasklets/install-tasklets.sh`](../tasklets/install-tasklets.sh).
-5. Update `globs:` in each rule to match your project's file structure.
-6. Configure which Versonas are active in `forge.config.yaml` (via the setup wizard).
-7. Use family aggregators to activate discipline groups without configuring each individually.
+4. **Optional:** Copy [`catalog/workflow/versona-roadmap-gate.mdc.template`](catalog/workflow/versona-roadmap-gate.mdc.template) for a **roadmap quality gate** before deep WBS (`@versona-roadmap-gate`).
+5. **Optional:** Install the example tasklets + Sampling Versona via [`../tasklets/install-tasklets.sh`](../tasklets/install-tasklets.sh).
+6. Update `globs:` in each rule to match your project's file structure.
+7. Configure which Versonas are active in `forge.config.yaml` (via the setup wizard).
+8. Use family aggregators to activate discipline groups without configuring each individually.
 
 See [`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md) for the standard structure **discipline** Versonas follow. See [`VERSONA-FRAMEWORK.md`](VERSONA-FRAMEWORK.md) for kinds, sessions, processes, and logging conventions. See [`catalog/ANCESTRY.md`](catalog/ANCESTRY.md) for the kind/domain tree and [`catalog/TEMPLATE-INDEX.md`](catalog/TEMPLATE-INDEX.md) for every template source path.

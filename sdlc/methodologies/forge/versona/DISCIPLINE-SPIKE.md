@@ -16,7 +16,7 @@ This document defines **discipline exploration spikes** in Forge: time-boxed lea
 
 **Prescriptive rule:** In prose, say **exploration spike** or **discipline spike** when ambiguity with **Forge Spark** or **Product Spark** would confuse readers.
 
-**Informal speech:** Teams sometimes say **“product spike.”** That is **not** a fourth official type. Prefer **exploration spike** or **discipline spike** with product anchors and, when the lens is product strategy, **Product Management** as the owning discipline (`spike_discipline`). The [**Product Management Versona**](catalog/discipline/product/versona-product-management.mdc.template) is often invoked at **spike close** for a structured challenge. It remains distinct from a [**Product Spark**](../planning/PLANNING-FLOW.md) (planning slice: PoC / MVP / phase).
+**Informal speech:** Teams sometimes say **“product spike.”** That is **not** a fourth official type. Prefer **exploration spike** or **discipline spike** with product anchors and, when the lens is product strategy, **Product Management** as the owning discipline (`spike_discipline`). The [**Product Management Versona**](catalog/discipline/product/versona-product-management.mdc.template) is often invoked at **spike close** for a structured challenge (report includes **Suggested next Versonas** per [`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md) §5). It remains distinct from a [**Product Spark**](../planning/PLANNING-FLOW.md) (planning slice: PoC / MVP / phase).
 
 ---
 
@@ -71,6 +71,7 @@ Two allowed paths (cross-links only — do not duplicate full bootstrap text her
 2. Create roadmap and WBS via the **Product Manager** path:
    - [`../product-manager/product-bootstrap-flow.md`](../product-manager/product-bootstrap-flow.md) **Steps 6–7** — `docs/ROADMAP.md` from [`../../../templates/ROADMAP.template.md`](../../../templates/ROADMAP.template.md), `docs/requirements/WBS.md` from [`../../../../pdlc/templates/WBS.template.md`](../../../../pdlc/templates/WBS.template.md), **or**
    - Equivalent Sparks in [`../product-manager/first-charge.template.md`](../product-manager/first-charge.template.md) (roadmap / WBS rows).
+   - Between roadmap and deep WBS: apply **Roadmap Definition of Ready**, run **Product Management Versona** (expect **Suggested next Versonas** in output), or use [`catalog/workflow/versona-roadmap-gate.mdc.template`](catalog/workflow/versona-roadmap-gate.mdc.template) as a playbook.
 
 **Minimal — time-box or product layer not ready**
 

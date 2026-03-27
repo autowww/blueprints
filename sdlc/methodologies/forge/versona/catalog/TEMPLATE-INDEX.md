@@ -31,6 +31,7 @@
 | `versona-all.mdc.template` | `catalog/routing/versona-all.mdc.template` | routing | — | Baseline; ancestry; `blueprints/…` refs |
 | `versona-sampling.mdc.template` | `catalog/meta/versona-sampling.mdc.template` | meta | — | `../../VERSONA-CONTRACT`; `../../../tasklets/` |
 | `versona-project-setup.mdc.template` | `catalog/workflow/versona-project-setup.mdc.template` | workflow | — | `../../../VERSONA-CONTRACT`; `../../../setup/` |
+| `versona-roadmap-gate.mdc.template` | `catalog/workflow/versona-roadmap-gate.mdc.template` | workflow | — | `../../../VERSONA-CONTRACT`; `../discipline/product/` |
 | `versona-generic.mdc.template` | `versona-generic.mdc.template` (root) | baseline_only | — | `catalog/ANCESTRY`; `VERSONA-*` (siblings) |
 
 ## Verification commands

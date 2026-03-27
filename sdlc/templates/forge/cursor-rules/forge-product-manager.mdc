@@ -19,11 +19,25 @@ Guide the user through the [product bootstrap flow](blueprints/sdlc/methodologie
 3. **Competitive landscape** — Map competitors and differentiation using `COMPETITIVE-ANALYSIS.template.md` from `blueprints/pdlc/templates/`.
 4. **Business case** — Build the justification using `business-case.template.md` from `blueprints/disciplines/product/ba/templates/`.
 5. **Product vision and metrics** — Define vision, OKRs, and success metrics using `PRODUCT-VISION.template.md` and `PRODUCT-METRICS.template.md` from `blueprints/pdlc/templates/`.
-6. **High-level roadmap** — Create an outcome-driven roadmap using `ROADMAP.template.md` from `blueprints/sdlc/templates/`.
-7. **WBS decomposition** — Break the roadmap into Themes → Epics → Stories → Tasks using `WBS.template.md` from `blueprints/pdlc/templates/`.
+6. **High-level roadmap** — Create an outcome-driven roadmap using `ROADMAP.template.md` from `blueprints/sdlc/templates/`. Apply **Roadmap Definition of Ready** (below) to each theme or row before treating the roadmap as complete.
+7. **WBS decomposition** — Break the roadmap into Themes → Epics → Stories → Tasks using `WBS.template.md` from `blueprints/pdlc/templates/`. **After step 6**, offer **`@versona-product-management`** to challenge the roadmap (or **`versona-all`** if discipline routing is unclear); follow **Suggested next Versonas** in the challenge output before deep WBS. Optional playbook: `blueprints/sdlc/methodologies/forge/versona/catalog/workflow/versona-roadmap-gate.mdc.template`.
 8. **First Product Spark** — Select the delivery approach (PoC/MVP/Phase) and create a plan using templates from `blueprints/sdlc/methodologies/forge/planning/`.
 9. **First Charge** — Populate the first Forge Charge using `first-charge.template.md` from this package.
 10. **Plan Sparks** — Decompose the first Product Spark into phase-tagged Sparks through dialog.
+
+### Roadmap Definition of Ready (before WBS)
+
+For each **roadmap row** or **theme**, before moving to WBS (step 7), confirm:
+
+- **Outcome** — User or business result (not only a feature label).
+- **Evidence** — Why now; what is known vs assumed.
+- **Horizon** — Timebox or sequencing (e.g. NOW / NEXT / LATER).
+- **OKR / strategy fit** — Which objective this serves, or explicit rationale if none.
+- **Dependencies** — Internal or external prerequisites.
+- **Non-goals** — Explicit exclusions for this row.
+- **Next gate** — What unlocks the next step (e.g. Product Management Versona challenge, stakeholder sign-off).
+
+The Product Management Versona challenge report shape—including **Suggested next Versonas**—is defined in `blueprints/sdlc/methodologies/forge/versona/catalog/discipline/product/versona-product-management.mdc.template` and `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5.
 
 ### 2. Ongoing product planning
 
@@ -40,6 +54,7 @@ Guide the user through the [product bootstrap flow](blueprints/sdlc/methodologie
 ### 4. Strategic challenge integration
 
 - **Invoke Versonas** — At decision points (priority changes, scope changes, release decisions), suggest invoking the Product Management Versona and/or the Product family Versonas for structured challenge.
+- **Multi-theme or quarterly roadmap reviews** — Routinely include the **Product Management Versona** for **Definition of Ready** and prioritization challenge (after drafting; before committing to heavy WBS or resourcing).
 - **Ember Log decisions** — Suggest Ember Log entries for strategic decisions, priority changes, and market-driven trade-offs.
 
 ## Knowledge references
@@ -53,6 +68,8 @@ Guide the user through the [product bootstrap flow](blueprints/sdlc/methodologie
 - BA templates: `blueprints/disciplines/product/ba/templates/`
 - PDLC templates: `blueprints/pdlc/templates/`
 - Forge planning templates: `blueprints/sdlc/methodologies/forge/planning/`
+- Product Management Versona: `blueprints/sdlc/methodologies/forge/versona/catalog/discipline/product/versona-product-management.mdc.template`
+- Roadmap gate workflow (optional): `blueprints/sdlc/methodologies/forge/versona/catalog/workflow/versona-roadmap-gate.mdc.template`
 
 ## Forge vocabulary
 
@@ -77,7 +94,7 @@ Then guide through the appropriate flow, creating artifacts interactively and su
 
 ## References
 
-- Product bootstrap flow: [`product-bootstrap-flow.md`](product-bootstrap-flow.md)
-- First charge template: [`first-charge.template.md`](first-charge.template.md)
-- Planning flow: [`blueprints/sdlc/methodologies/forge/planning/PLANNING-FLOW.md`](../planning/PLANNING-FLOW.md)
-- Forge ceremonies: [`blueprints/sdlc/methodologies/forge/ceremonies-prescriptive.md`](../ceremonies-prescriptive.md)
+- Product bootstrap flow: `blueprints/sdlc/methodologies/forge/product-manager/product-bootstrap-flow.md`
+- First charge template: `blueprints/sdlc/methodologies/forge/product-manager/first-charge.template.md`
+- Planning flow: `blueprints/sdlc/methodologies/forge/planning/PLANNING-FLOW.md`
+- Forge ceremonies: `blueprints/sdlc/methodologies/forge/ceremonies-prescriptive.md`

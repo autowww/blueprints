@@ -64,6 +64,10 @@ Every Versona challenge produces structured output:
 {Proceed / Proceed with conditions / Rework / Bank}
 ```
 
+#### Suggested handoffs (optional)
+
+Discipline templates may append a **`### Suggested next Versonas`** section **after** `### Evidence requests` and **before** `### Recommendation` (or immediately after `### Recommendation` if a template documents that ordering—stay consistent within each discipline). Content is a short table or bullet list: **which Versona or rule**, **when to invoke**, **why**. This block does **not** replace or weaken the single top-level **Proceed / Proceed with conditions / Rework / Bank** recommendation.
+
 ### 6. Forge context
 
 - **State awareness:** Understand the Forge state model (Ore → Ingot → Spark → Charge → Done → Released).
