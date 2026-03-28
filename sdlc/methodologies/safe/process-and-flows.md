@@ -8,7 +8,7 @@
 
 A **Program Increment (PI)** is the primary planning and delivery cadence in SAFe — typically 8–12 weeks containing 4–5 iterations plus an Innovation & Planning (IP) iteration.
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```
@@ -30,7 +30,7 @@ Teams should **not** plan feature work into the IP iteration.
 
 Within each iteration, team-level flow follows standard Scrum/Kanban patterns:
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```
@@ -41,7 +41,7 @@ alt: Diagram
 
 ## 3. ART coordination flow
 
-```ks-diagram
+```blueprint-diagram
 key: swimlane
 alt: Diagram
 ```
@@ -52,7 +52,7 @@ alt: Diagram
 
 Epics flow through the portfolio Kanban system before reaching ARTs:
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```
@@ -77,7 +77,7 @@ SAFe decouples **release** from **PI cadence**. Teams can release at any point w
 2. Continuous delivery pipeline is green (build, test, stage)
 3. Business decides to release (business value, market timing)
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```

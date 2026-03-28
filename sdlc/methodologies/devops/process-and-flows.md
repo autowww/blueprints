@@ -2,28 +2,28 @@
 
 ## 1. CI/CD pipeline (conceptual)
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```
 
 ## 2. DevOps infinity loop
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```
 
 ## 3. Incident response flow
 
-```ks-diagram
+```blueprint-diagram
 key: decision
 alt: Diagram
 ```
 
 ## 4. Deployment strategy decision
 
-```ks-diagram
+```blueprint-diagram
 key: decision
 alt: Diagram
 ```
@@ -41,7 +41,7 @@ alt: Diagram
 
 ## 6. DORA metrics collection
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```

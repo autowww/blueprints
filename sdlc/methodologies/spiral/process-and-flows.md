@@ -2,7 +2,7 @@
 
 ## 1. Spiral quadrant cycle
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```
@@ -11,14 +11,14 @@ Each pass through the four quadrants is one **spiral**. Risk analysis (Q2) gates
 
 ## 2. Risk-driven decision (Q2 detail)
 
-```ks-diagram
+```blueprint-diagram
 key: decision
 alt: Diagram
 ```
 
 ## 3. Anchor-point milestone sequence
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```
@@ -27,7 +27,7 @@ Milestone count and spiral numbering are illustrative; actual projects adjust ba
 
 ## 4. Spiral scope evolution
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```

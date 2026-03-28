@@ -2,7 +2,7 @@
 
 ## 1. Value-stream overview (idea to production)
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```
@@ -11,21 +11,21 @@ Lean measures **lead time** across the entire stream and **waiting time** betwee
 
 ## 2. Waste identification loop
 
-```ks-diagram
+```blueprint-diagram
 key: decision
 alt: Diagram
 ```
 
 ## 3. A3 problem-solving flow
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```
 
 ## 4. Pull-based work selection
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```

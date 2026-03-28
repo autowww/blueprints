@@ -2,7 +2,7 @@
 
 ## 1. Pull through the value stream
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```
@@ -11,21 +11,21 @@ Customize column names to your **Definition of Workflow**.
 
 ## 2. Replenishment decision
 
-```ks-diagram
+```blueprint-diagram
 key: decision
 alt: Diagram
 ```
 
 ## 3. Blocked work escalation
 
-```ks-diagram
+```blueprint-diagram
 key: decision
 alt: Diagram
 ```
 
 ## 4. Release train (optional policy)
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```

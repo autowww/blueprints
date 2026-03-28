@@ -1,38 +1,38 @@
 # Scrum — major processes & flow maps
 
-Diagrams below use **` ```ks-diagram `** fences (Kitchen Sink SVG templates) on the published handbook; GitHub shows the source as a code block. For print/PDF, use the site or export static SVG.
+Diagrams below use **` ```blueprint-diagram `** fences on the published handbook; GitHub shows the source as a fenced block. For print/PDF, use the site or export static SVG.
 
 ## 1. Sprint lifecycle (high level)
 
-```ks-diagram
+```blueprint-diagram
 key: swimlane
 alt: Diagram
 ```
 
 ## 2. Planning flow (Part 1 → Part 2)
 
-```ks-diagram
+```blueprint-diagram
 key: decision
 alt: Diagram
 ```
 
 ## 3. Daily execution loop
 
-```ks-diagram
+```blueprint-diagram
 key: decision
 alt: Diagram
 ```
 
 ## 4. Definition of Done gate (increment)
 
-```ks-diagram
+```blueprint-diagram
 key: decision
 alt: Diagram
 ```
 
 ## 5. Stakeholder feedback loop (Review → Backlog)
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```

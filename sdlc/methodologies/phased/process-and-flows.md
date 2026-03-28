@@ -2,7 +2,7 @@
 
 ## 1. Classic stage sequence (simplified)
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```
@@ -11,21 +11,21 @@ Overlap stages where policy allows; **gates** sit on arrows.
 
 ## 2. Gate decision
 
-```ks-diagram
+```blueprint-diagram
 key: decision
 alt: Diagram
 ```
 
 ## 3. Change control path (scope)
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```
 
 ## 4. Traceability thread
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```

@@ -2,7 +2,7 @@
 
 ## 1. V-Model structure (classic)
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```
@@ -11,21 +11,21 @@ Left side descends (decomposition); right side ascends (integration and verifica
 
 ## 2. Traceability flow
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```
 
 ## 3. Test-level gate decision
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```
 
 ## 4. Change impact (V-Model perspective)
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```

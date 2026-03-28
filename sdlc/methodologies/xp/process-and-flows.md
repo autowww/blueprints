@@ -2,28 +2,28 @@
 
 ## 1. Iteration loop
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```
 
 ## 2. TDD micro-loop (within story)
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```
 
 ## 3. Story lifecycle
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```
 
 ## 4. Planning game (priorities vs estimates)
 
-```ks-diagram
+```blueprint-diagram
 key: decision
 alt: Diagram
 ```
