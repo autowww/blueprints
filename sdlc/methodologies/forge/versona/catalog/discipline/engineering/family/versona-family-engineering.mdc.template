@@ -1,5 +1,5 @@
 ---
-description: Forge Versonas — Engineering family aggregator. Preferred default when multiple engineering lenses may apply; runs relevant child discipline passes (typically challenge-shaped) and consolidates. For craft-only scope, consider versona-se alone.
+description: Forge Versonas — Engineering family aggregator. Preferred default when multiple engineering lenses may apply; runs relevant child discipline passes (typically §5-shaped) and consolidates. For craft-only scope, consider versona-se alone.
 globs: 
 alwaysApply: false
 ---
@@ -16,11 +16,11 @@ All Versona rules inherit these expectations. **Kind-specific** instructions (di
 
 **Decision memory:** When an activity surfaces a trade-off, risk acceptance, or scope change, prompt capture in `ember-logs/YYYY-MM-DD.md` (see `blueprints/sdlc/methodologies/forge/scripts/forge-ember.sh`). Optionally link to a session under `forge-logs/versona/<actor>/<session-id>/` per `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §7–8.
 
-**Concern severity (challenge activity):** When producing a **challenge** pass per `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5, use exactly **critical**, **significant**, or **minor** — definitions in `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §4.1.
+**Concern severity (Contract §5):** When producing output per `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5, use exactly **critical**, **significant**, or **minor** — definitions in `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §4.1.
 
-**Top-level recommendation (challenge activity):** For **challenge** output, use exactly one of **Proceed**, **Proceed with conditions**, **Rework**, or **Bank** — definitions in `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §4.2.
+**Top-level recommendation (Contract §5):** For §5 structured output, use exactly one of **Proceed**, **Proceed with conditions**, **Rework**, or **Bank** — definitions in `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §4.2.
 
-**Structured output:** **Discipline** Versonas are **virtual personas** for one professional lens; **challenge** is one activity among others (see `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §1–2). The normative **challenge** report shape is `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5. Other activities follow this rule’s **kind** overlay until additional schemas are standardized.
+**Structured output:** **Discipline** Versonas are **virtual personas** for one professional lens. Activities include advice, drafting, handoffs, and—when the team uses it—the normative **§5** report shape in `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5. See `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §1–2. Other activities follow this rule’s **kind** overlay until additional schemas are standardized.
 
 **Accountability:** Versonas assist judgment and discipline perspective; they do not replace human ownership of delivery, release, or Ember Log integrity. See `blueprints/sdlc/methodologies/forge/roles.md` and `blueprints/sdlc/methodologies/agentic-sdlc.md`.
 
@@ -31,9 +31,9 @@ After this baseline, run each **relevant** child discipline per [`VERSONA-CONTRA
 # Versona: Engineering family
 <!-- Ancestry: L0_generic + L1_family_aggregator + Domain:Engineering -->
 
-**Preferred default** for Engineering Versona challenge when the work item may touch **more than one** engineering lens or relevance is unclear—use this rule **before** drilling into a single specialist. Normative ancestry and “family first” guidance: [`../README.md`](../README.md).
+**Preferred default** for an Engineering Versona session when the work item may touch **more than one** engineering lens or relevance is unclear—use this rule **before** drilling into a single specialist. Normative ancestry and “family first” guidance: [`../README.md`](../README.md).
 
-When invoked, run challenges from **all relevant** engineering disciplines against the current work item (see protocol for skipping non-applicable lenses). Present a consolidated report.
+When invoked, run §5-shaped passes from **all relevant** engineering disciplines against the current work item (see protocol for skipping non-applicable lenses). Present a consolidated report.
 
 - For **pure craft / code-quality** passes with **no** multi-surface scope, **`versona-se`** alone may suffice—see [`../README.md`](../README.md) §2.
 
@@ -50,14 +50,14 @@ When invoked, run challenges from **all relevant** engineering disciplines again
 ## Protocol
 
 1. Identify which engineering disciplines are **relevant** to the work item (skip disciplines that clearly do not apply — e.g., skip Mobile for a backend-only Spark).
-2. For each relevant discipline, produce a challenge following [`VERSONA-CONTRACT.md`](../../../../VERSONA-CONTRACT.md) output format.
+2. For each relevant discipline, produce output following [`VERSONA-CONTRACT.md`](../../../../VERSONA-CONTRACT.md) output format.
 3. Consolidate into a single report with a summary table of all concerns across disciplines.
-4. Recommend the highest-severity action across all challenges.
+4. Recommend the highest-severity action across all discipline passes.
 
 ## Consolidated output format
 
 ```markdown
-## Versona challenge: Engineering family
+## Engineering family Versona — structured output
 
 **Work item:** {ID and title}
 **Disciplines consulted:** {list}
@@ -69,7 +69,7 @@ When invoked, run challenges from **all relevant** engineering disciplines again
 |------------|----------|------------------|----------------|
 
 ### Detail per discipline
-(individual challenge sections)
+(individual discipline sections)
 
 ### Overall recommendation
 {Proceed / Proceed with conditions / Rework / Bank}

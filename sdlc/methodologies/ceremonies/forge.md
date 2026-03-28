@@ -10,10 +10,10 @@
 
 | Forge ceremony | Foundation intents (primary → secondary) | Notes |
 |----------------|------------------------------------------|-------|
-| **Refinement** (Ore → Ingot) | **C1 Align** → **C2 Commit** | Shape Ore into Ingots; Versona challenge at decision points; Ember Log captures trade-offs. |
+| **Refinement** (Ore → Ingot) | **C1 Align** → **C2 Commit** | Shape Ore into Ingots; discipline Versona sessions at decision points; Ember Log captures trade-offs. |
 | **Planning** (Ingot → Sparks) | **C2 Commit** → **C1 Align** | Decompose Ingots into Sparks with phase prefixes; scope the iteration; sequence by risk reduction. |
 | **Daily sync** (Charge) | **C3 Sync** | Confirm today's Charge; surface blockers; declare hat; Banking decisions. 15-minute timebox. |
-| **Review** (evidence assessment) | **C4 Inspect** → **C1 Align** | Demonstrate increment; assess evidence; Versona challenge; determine Assay Gate readiness. |
+| **Review** (evidence assessment) | **C4 Inspect** → **C1 Align** | Demonstrate increment; assess evidence; discipline Versona session; determine Assay Gate readiness. |
 | **Assay Gate** (release readiness) | **C6 Assure** | Evidence-based release decision; per-work-type evidence requirements. Separate from Review. |
 | **Retro** (learning) | **C5 Improve** | Metrics review, Ember Log review, Versona effectiveness, improvement experiments; learning feeds new Ore. |
 
@@ -25,7 +25,7 @@
 
 | Ceremony | Git / commits approximate | You still need (human / AI) |
 |----------|---------------------------|------------------------------|
-| Refinement | Linked work units, spec changes | **Versona challenge**, stakeholder input, Ember Log |
+| Refinement | Linked work units, spec changes | **Versona session**, stakeholder input, Ember Log |
 | Planning | Work decomposition in issues/tasks | **Capacity**, sequencing, **phase assignment** |
 | Daily sync | Activity per contributor | **Charge declaration**, verbal blockers, hat declaration |
 | Review | Merged work, test results | **Stakeholder feedback**, evidence assessment |
@@ -38,10 +38,10 @@
 
 | Ceremony | Suggestions |
 |----------|-------------|
-| **Refinement** | Time-box Versona invocation; do not challenge every Ore item. Focus on high-value, high-risk items. Write Ember Log entries during refinement, not after. |
+| **Refinement** | Time-box Versona invocation; do not run a session on every Ore item. Focus on high-value, high-risk items. Write Ember Log entries during refinement, not after. |
 | **Planning** | Verify every Spark has a phase prefix. Intentionally undercommit — leave margin in the Charge for interruption and learning. |
 | **Daily sync** | Declare your hat for the day. Keep to 15 minutes; defer problem-solving to follow-up huddles. |
-| **Review** | Show working software; Versona challenges should surface new concerns, not repeat known issues. Feed backlog changes visibly. |
+| **Review** | Show working software; Versona sessions should surface new concerns, not repeat known issues. Feed backlog changes visibly. |
 | **Assay Gate** | Keep it strict and short. If evidence is missing, the answer is "not yet" — adjust scope, not standards. |
 | **Retro** | Review the Ember Log for decision patterns. Assess which Versonas disciplines added value and which created noise. |
 

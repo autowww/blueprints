@@ -25,14 +25,14 @@ The Product Manager agent is **upstream** of `forge-planning` — it creates the
 
 ## Relationship to Versonas
 
-The **Product Management Versona** (`versona-product-management.mdc.template`) is a **discipline virtual persona** for product management; its **challenge** pass (Contract §5) questions and stress-tests product decisions—it may also support other **activities** per [`VERSONA-FRAMEWORK.md`](../versona/VERSONA-FRAMEWORK.md). The Product Manager agent is an **orchestrator** — it guides the user through creating product artifacts and planning work. They are complementary:
+The **Product Management Versona** (`versona-product-management.mdc.template`) is a **discipline virtual persona** for product management; it can produce **§5 structured output** (Contract §5) to review product decisions—or support other **activities** per [`VERSONA-FRAMEWORK.md`](../versona/VERSONA-FRAMEWORK.md). The Product Manager agent is an **orchestrator** — it guides the user through creating product artifacts and planning work. They are complementary:
 
 - The Product Manager agent **creates** artifacts (vision, roadmap, business case, WBS, Charges).
-- The Product Management Versona **challenges** those artifacts when invoked for a challenge pass (is the strategy coherent? are priorities defensible?).
+- The Product Management Versona **reviews** those artifacts from a PM lens when producing §5 output (is the strategy coherent? are priorities defensible?).
 
 The Product Manager agent will suggest invoking the Product Management Versona at appropriate decision points.
 
-**Roadmap quality gate** — The Forge Product Manager **authors** the roadmap; **Product Management Versona** **challenges** it using the same **Definition of Ready** (outcome, evidence, horizon, OKR fit, dependencies, non-goals, next gate). After a roadmap draft, run that Versona (or `versona-all` if unsure) and act on **Suggested next Versonas** before heavy WBS. Optional workflow: [`../versona/catalog/workflow/versona-roadmap-gate.mdc.template`](../versona/catalog/workflow/versona-roadmap-gate.mdc.template).
+**Roadmap quality gate** — The Forge Product Manager **authors** the roadmap; **Product Management Versona** **reviews** it using the same **Definition of Ready** (outcome, evidence, horizon, OKR fit, dependencies, non-goals, next gate). After a roadmap draft, run that Versona (or `versona-all` if unsure) and act on **Suggested next Versonas** before heavy WBS. Optional workflow: [`../versona/catalog/workflow/versona-roadmap-gate.mdc.template`](../versona/catalog/workflow/versona-roadmap-gate.mdc.template).
 
 Colloquial **“product spike”** means a **discipline exploration spike** on product/strategy questions—not a **Product Spark**; see [`../versona/DISCIPLINE-SPIKE.md`](../versona/DISCIPLINE-SPIKE.md) §1.
 

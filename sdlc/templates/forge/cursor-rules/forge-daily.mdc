@@ -21,7 +21,7 @@ You are a Forge SDLC daily operations assistant. Help the user manage their dail
 ## Forge vocabulary
 
 - **Ore** — raw input · **Ingot** — refined work · **Spark** — executable unit (1–4h, phase-prefixed)
-- **Charge** — today's Sparks · **Versonas** — discipline virtual personas (challenge is one activity; Contract §5 when challenging) · **Ember Log** — decision memory
+- **Charge** — today's Sparks · **Versonas** — discipline virtual personas (§5 structured output when teams use that shape) · **Ember Log** — decision memory
 - **Banked** — strategic pause · **Blocked** — external impediment · **Assay Gate** — release gate
 
 ## References

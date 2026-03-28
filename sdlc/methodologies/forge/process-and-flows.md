@@ -1,10 +1,10 @@
 # Forge — major processes & flow maps
 
-Diagrams below use **` ```ks-diagram `** fences (Kitchen Sink SVG templates) on the published handbook.
+Diagrams below use **` ```blueprint-diagram `** fences on the published handbook; GitHub shows the source as a fenced block.
 
 ## 1. Forge iteration lifecycle (high level)
 
-```ks-diagram
+```blueprint-diagram
 key: swimlane
 alt: Diagram
 ```
@@ -56,7 +56,7 @@ Exploration spikes often use Versona **sessions** with `work_item_kind` `spike_d
 
 ## 3. State model
 
-```ks-diagram
+```blueprint-diagram
 key: state
 alt: Diagram
 ```
@@ -75,35 +75,35 @@ alt: Diagram
 
 ## 4. Refinement flow (Ore → Ingot)
 
-```ks-diagram
+```blueprint-diagram
 key: decision
 alt: Diagram
 ```
 
 ## 5. Planning flow (Ingot → Sparks → iteration scope)
 
-```ks-diagram
+```blueprint-diagram
 key: decision
 alt: Diagram
 ```
 
 ## 6. Daily execution loop
 
-```ks-diagram
+```blueprint-diagram
 key: decision
 alt: Diagram
 ```
 
 ## 7. Assay Gate flow
 
-```ks-diagram
+```blueprint-diagram
 key: decision
 alt: Diagram
 ```
 
-## 8. Versona flow (challenge and other activities)
+## 8. Versona flow (sessions and discipline work)
 
-```ks-diagram
+```blueprint-diagram
 key: decision
 alt: Diagram
 ```
@@ -127,7 +127,7 @@ alt: Diagram
 
 **State model** — The key distinctions from a simple Kanban board: (1) Banked vs Blocked separates strategic pause from external impediment, (2) Done is not Released until the Assay Gate passes, and (3) Rejected items are closed with a reason rather than silently deleted.
 
-**Versonas** — Discipline **virtual personas** are invoked at **decision points** (refinement, pre-build, pre-release) for a **challenge** pass or other discipline work—not on every action. For **challenge**, each Versona uses its bridge document to calibrate intensity to the current SDLC phase ([`versona/VERSONA-FRAMEWORK.md`](versona/VERSONA-FRAMEWORK.md) §1–2).
+**Versonas** — Discipline **virtual personas** are invoked at **decision points** (refinement, pre-build, pre-release) for §5 structured output or other discipline work—not on every action. When using the §5 report shape, each Versona uses its bridge document to calibrate **review depth** to the current SDLC phase ([`versona/VERSONA-FRAMEWORK.md`](versona/VERSONA-FRAMEWORK.md) §1–2).
 
 ## 11. Links
 

@@ -15,7 +15,7 @@ iteration: F1
 | Spark ID | Phase | Outcome |
 |----------|-------|---------|
 
-## Versona challenges invoked
+## Versona sessions invoked
 
 | Discipline | Work item | Key concern | Action taken | Session (optional) | Duration (optional) | Process (optional) | Outcome (optional) |
 |------------|-----------|-------------|--------------|-------------------|---------------------|--------------------|--------------------|

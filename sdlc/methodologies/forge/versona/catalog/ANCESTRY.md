@@ -8,7 +8,7 @@ Normative layering for Forge Versonas: **generic baseline** (Layer 0), **kind** 
 
 ## Conceptual tree
 
-```ks-diagram
+```blueprint-diagram
 key: swimlane
 alt: Diagram
 ```
@@ -23,7 +23,7 @@ alt: Diagram
 
 **Related:** [`discipline/engineering/README.md`](discipline/engineering/README.md) — normative **ancestry** (`versona-se` as craft ancestor, specialists, family-first entry, process vs discipline “done”).
 
-| Template | Core challenge (short) | Output variant |
+| Template | Core question (short) | Output variant |
 |----------|------------------------|----------------|
 | [`versona-se.mdc.template`](discipline/engineering/versona-se.mdc.template) | CS fundamentals and craft | Contract §5 |
 | [`versona-architecture.mdc.template`](discipline/engineering/versona-architecture.mdc.template) | Structure and maintainability | Contract §5 |
@@ -35,14 +35,14 @@ alt: Diagram
 
 ### Domain: Data
 
-| Template | Core challenge (short) | Output variant |
+| Template | Core question (short) | Output variant |
 |----------|------------------------|----------------|
 | [`versona-bigdata.mdc.template`](discipline/data/versona-bigdata.mdc.template) | Data engineering / pipelines | Contract §5 |
 | [`versona-datascience.mdc.template`](discipline/data/versona-datascience.mdc.template) | ML / DS responsibility | Contract §5 |
 
 ### Domain: Product
 
-| Template | Core challenge (short) | Output variant |
+| Template | Core question (short) | Output variant |
 |----------|------------------------|----------------|
 | [`versona-product-management.mdc.template`](discipline/product/versona-product-management.mdc.template) | Product/market fit | Contract §5 + optional handoffs |
 | [`versona-ba.mdc.template`](discipline/product/versona-ba.mdc.template) | Stakeholder needs | Contract §5 |
@@ -52,13 +52,13 @@ alt: Diagram
 
 ### Domain: Governance
 
-| Template | Core challenge (short) | Output variant |
+| Template | Core question (short) | Output variant |
 |----------|------------------------|----------------|
 | [`versona-pm.mdc.template`](discipline/governance/versona-pm.mdc.template) | Constraints and delivery | Contract §5 |
 
 ### Domain: Cross-cutting
 
-| Template | Core challenge (short) | Output variant |
+| Template | Core question (short) | Output variant |
 |----------|------------------------|----------------|
 | [`versona-security.mdc.template`](discipline/cross-cutting/versona-security.mdc.template) | Security posture | Contract §5 |
 | [`versona-compliance.mdc.template`](discipline/cross-cutting/versona-compliance.mdc.template) | Regulatory fit | Contract §5 |

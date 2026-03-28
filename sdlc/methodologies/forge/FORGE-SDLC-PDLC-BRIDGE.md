@@ -17,7 +17,7 @@
 
 | Dimension | Forge SDLC | SDLC (phases A–F) | PDLC (phases P1–P6) |
 |-----------|-----------|-------------------|---------------------|
-| **Core question** | Is this idea refined, challenged, evidenced, and releasable? | Are we building the product right? | Are we building the right product? |
+| **Core question** | Is this idea refined, reviewed, evidenced, and releasable? | Are we building the product right? | Are we building the right product? |
 | **Scope** | Iteration-level delivery methodology | Lifecycle-wide delivery phases | Product-wide discovery through sunset |
 | **Primary owner** | Delivery team (all hats) | Engineering + delivery | Product + strategy |
 | **Timeline** | 1–2 week iterations | Phase-gated (variable) | Months to years |
@@ -34,7 +34,7 @@
 |----------|-------------|
 | Forge without SDLC awareness | Sparks lack phase context; quality gates are ad hoc; no lifecycle traceability |
 | Forge without PDLC awareness | Ore pipeline disconnected from validated product needs; building the wrong thing precisely |
-| SDLC without Forge | Standard delivery without challenge discipline, decision memory, or evidence-based release rigor |
+| SDLC without Forge | Standard delivery without discipline Versonas, decision memory, or evidence-based release rigor |
 | PDLC without Forge | Product strategy exists but execution lacks the Ore→Spark refinement pipeline and daily focus |
 
 ---
@@ -57,7 +57,7 @@
 | PDLC Phase | Forge touchpoint | Direction |
 |------------|-----------------|-----------|
 | **P1 Discover problem** | Feeds Ore pipeline with validated problems | PDLC → Forge |
-| **P2 Validate solution** | Versona challenge validates feasibility; PoC planning | PDLC ↔ Forge |
+| **P2 Validate solution** | Discipline Versona sessions validate feasibility; PoC planning | PDLC ↔ Forge |
 | **P3 Strategize** | Product Sparks (PoC/MVP/Phase) defined; Ingots scoped | PDLC → Forge |
 | **P4 Launch** | Assay Gate ensures launch readiness; `release:` Sparks | Forge → PDLC |
 | **P5 Grow** | Learning from released work feeds new Ore; metrics feed Versonas | Forge ↔ PDLC |
@@ -78,7 +78,7 @@
 
 ## 6. Artifact flow
 
-```ks-diagram
+```blueprint-diagram
 key: swimlane
 alt: Diagram
 ```
@@ -92,7 +92,7 @@ alt: Diagram
 | Releases frequently have quality issues | Strengthen Assay Gate evidence; add Versonas | — |
 | Decisions are revisited without context | Expand Ember Log practice | — |
 | Team is slow despite clear requirements | — | Reduce ceremony overhead; shorter iterations |
-| Stakeholder surprises at review | Strengthen Refinement and Versona challenge | — |
+| Stakeholder surprises at review | Strengthen Refinement and Versona sessions | — |
 | Solo developer with stable product | — | Minimal ceremonies; AI Versonas; self-Assay |
 
 ---
@@ -115,7 +115,7 @@ alt: Diagram
 
 1. **Ore intake:** "Users want push notifications" enters as Ore (from PDLC P3 output).
 2. **Refinement:** Product hat shapes Ore into Ingot: "Push notification system for engagement reminders" with acceptance criteria, constraints (FCM, APNs), and evidence-of-done.
-3. **Versona challenge:** Architecture Versona flags scalability concern; Security Versona flags token storage risk. Both captured in Ember Log.
+3. **Versona session:** Architecture Versona flags scalability concern; Security Versona flags token storage risk. Both captured in Ember Log.
 4. **Planning:** Ingot decomposed into Sparks:
    - `design: notification service architecture + ADR` (C phase)
    - `build: implement FCM integration` (D phase)

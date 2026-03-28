@@ -44,7 +44,7 @@ target_date:
 
 <!-- Add criteria appropriate to the Product Spark type (PoC / MVP / Phase) -->
 
-## Versona challenges planned
+## Versona sessions planned
 
 | Discipline | Timing | Focus |
 |------------|--------|-------|

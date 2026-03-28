@@ -1,5 +1,5 @@
 ---
-description: Forge Versonas — Roadmap gate playbook. Use after drafting or refreshing a high-level roadmap; orchestrates routing, Product Management Versona challenge, follow-on Versonas, and Ember Log capture.
+description: Forge Versonas — Roadmap gate playbook. Use after drafting or refreshing a high-level roadmap; orchestrates routing, Product Management Versona session, follow-on Versonas, and Ember Log capture.
 globs: 
 alwaysApply: false
 ---
@@ -16,17 +16,17 @@ All Versona rules inherit these expectations. **Kind-specific** instructions (di
 
 **Decision memory:** When an activity surfaces a trade-off, risk acceptance, or scope change, prompt capture in `ember-logs/YYYY-MM-DD.md` (see `blueprints/sdlc/methodologies/forge/scripts/forge-ember.sh`). Optionally link to a session under `forge-logs/versona/<actor>/<session-id>/` per `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §7–8.
 
-**Concern severity (challenge activity):** When producing a **challenge** pass per `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5, use exactly **critical**, **significant**, or **minor** — definitions in `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §4.1.
+**Concern severity (Contract §5):** When producing output per `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5, use exactly **critical**, **significant**, or **minor** — definitions in `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §4.1.
 
-**Top-level recommendation (challenge activity):** For **challenge** output, use exactly one of **Proceed**, **Proceed with conditions**, **Rework**, or **Bank** — definitions in `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §4.2.
+**Top-level recommendation (Contract §5):** For §5 structured output, use exactly one of **Proceed**, **Proceed with conditions**, **Rework**, or **Bank** — definitions in `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §4.2.
 
-**Structured output:** **Discipline** Versonas are **virtual personas** for one professional lens; **challenge** is one activity among others (see `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §1–2). The normative **challenge** report shape is `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5. Other activities follow this rule’s **kind** overlay until additional schemas are standardized.
+**Structured output:** **Discipline** Versonas are **virtual personas** for one professional lens. Activities include advice, drafting, handoffs, and—when the team uses it—the normative **§5** report shape in `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5. See `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §1–2. Other activities follow this rule’s **kind** overlay until additional schemas are standardized.
 
 **Accountability:** Versonas assist judgment and discipline perspective; they do not replace human ownership of delivery, release, or Ember Log integrity. See `blueprints/sdlc/methodologies/forge/roles.md` and `blueprints/sdlc/methodologies/agentic-sdlc.md`.
 
 ### Kind overlay (workflow)
 
-After this baseline, this rule is **not** a challenge gate—produce the **roadmap gate playbook** below (numbered steps and optional report).
+After this baseline, this rule is **not** a discipline gate—produce the **roadmap gate playbook** below (numbered steps and optional report).
 
 # Versona: Roadmap gate (product planning)
 <!-- Ancestry: L0_generic + L1_workflow -->
@@ -37,18 +37,18 @@ After this baseline, this rule is **not** a challenge gate—produce the **roadm
 - **Family:** Cross-cutting (methodology playbook — not a substitute for discipline Versonas)
 - **Core question:** Is the roadmap ready for decomposition, and which Versonas should run next?
 - **Knowledge base:** `blueprints/sdlc/methodologies/forge/product-manager/product-bootstrap-flow.md`, `blueprints/sdlc/methodologies/forge/product-manager/forge-product-manager.mdc.template`, `blueprints/sdlc/methodologies/forge/versona/catalog/discipline/product/versona-product-management.mdc.template`
-- **Bridge:** `blueprints/disciplines/product/product-management/PRODMGMT-SDLC-PDLC-BRIDGE.md` — **intensity:** N/A (playbook, not a single-discipline challenge)
+- **Bridge:** `blueprints/disciplines/product/product-management/PRODMGMT-SDLC-PDLC-BRIDGE.md` — **intensity:** N/A (playbook, not a single-discipline §5 review)
 
 ## Invocation
 
-- **Also:** `@versona-roadmap-gate`, or natural phrases like “roadmap gate,” “challenge the roadmap before WBS.”
+- **Also:** `@versona-roadmap-gate`, or natural phrases like “roadmap gate,” “review the roadmap before WBS.”
 - **After install:** copy this template to `.cursor/rules/versona-roadmap-gate.mdc` (drop `.template`).
 
 ## Knowledge references
 
-- [`VERSONA-CONTRACT.md`](../../../VERSONA-CONTRACT.md) §5 — challenge report shape + optional **Suggested next Versonas**
+- [`VERSONA-CONTRACT.md`](../../../VERSONA-CONTRACT.md) §5 — structured report shape + optional **Suggested next Versonas**
 - [`versona-all.mdc.template`](../routing/versona-all.mdc.template) — routing when discipline is unclear
-- [`versona-product-management.mdc.template`](../discipline/product/versona-product-management.mdc.template) — Product Management challenge + handoffs
+- [`versona-product-management.mdc.template`](../discipline/product/versona-product-management.mdc.template) — Product Management Versona + handoffs
 
 ## Protocol
 
@@ -95,7 +95,7 @@ Capture trade-offs, accepted risks, and roadmap changes in `ember-logs/YYYY-MM-D
 
 1. Definition of Ready — (pass / gaps noted)
 2. Routing — (skipped / versona-all / …)
-3. Product Management Versona — (summary or link to challenge output)
+3. Product Management Versona — (summary or link to §5 output)
 4. Follow-on Versonas — (which ran / pending)
 5. Ember Log — (ref or “pending”)
 

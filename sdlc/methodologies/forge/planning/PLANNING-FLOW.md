@@ -4,7 +4,7 @@ This document describes the complete pipeline from a product vision through busi
 
 ## The pipeline
 
-```ks-diagram
+```blueprint-diagram
 key: swimlane
 alt: Diagram
 ```
@@ -19,7 +19,7 @@ Business drivers come from PDLC P1–P3 (problem discovery, solution validation,
 | **MVP** | Core value delivery | 4–12 weeks | Adoption: do users get value from the minimum feature set? |
 | **Phased** | Incremental capability | Per phase (weeks–months) | Completeness: is this phase releasable? |
 
-**Decision:** Which approach to use is a Product hat decision, informed by Versona challenge (BA for requirements clarity, Architecture for feasibility, PM for constraints).
+**Decision:** Which approach to use is a Product hat decision, informed by Versona sessions (BA for requirements clarity, Architecture for feasibility, PM for constraints).
 
 ## Level 2: Product Sparks → Forge Iterations
 
@@ -38,7 +38,7 @@ Within each iteration:
 1. **Ore intake** — continuous; captures new ideas, defects, and learnings.
 2. **Refinement** — selected Ore becomes Ingots with acceptance criteria.
 3. **Planning** — Ingots decomposed into phase-tagged Sparks; iteration scope locked.
-4. **Daily execution** — Sparks pulled into the Charge; hat-switching; Versona challenges.
+4. **Daily execution** — Sparks pulled into the Charge; hat-switching; Versona sessions.
 5. **Review** — evidence assessed.
 6. **Assay Gate** — release decision.
 7. **Retro** — learning feeds new Ore.

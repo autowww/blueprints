@@ -1,6 +1,6 @@
 # Forge — deep-dive package (blueprint)
 
-**Purpose:** Prescriptive **operating detail** for teams running Forge alongside this blueprint: **roles**, **foundation fit** (tracking + ceremonies C1–C6 + archetypes), **ceremonies** with inputs/outputs/participants, **process maps**, **Versonas** (discipline-focused virtual personas; **challenge** is one specified activity), **daily operations**, **product planning**, and **project setup**.
+**Purpose:** Prescriptive **operating detail** for teams running Forge alongside this blueprint: **roles**, **foundation fit** (tracking + ceremonies C1–C6 + archetypes), **ceremonies** with inputs/outputs/participants, **process maps**, **Versonas** (discipline-focused virtual personas; §5 structured output when teams use that shape), **daily operations**, **product planning**, and **project setup**.
 
 **Executive summary + diagram:** [`https://forgesdlc.com/methodology-overview.html`](https://forgesdlc.com/methodology-overview.html)
 

@@ -1,5 +1,5 @@
 ---
-description: Forge Versonas — Data family aggregator. Runs both data discipline passes (typically challenge-shaped) and consolidates.
+description: Forge Versonas — Data family aggregator. Runs both data discipline passes (typically §5-shaped) and consolidates.
 globs: 
 alwaysApply: false
 ---
@@ -16,11 +16,11 @@ All Versona rules inherit these expectations. **Kind-specific** instructions (di
 
 **Decision memory:** When an activity surfaces a trade-off, risk acceptance, or scope change, prompt capture in `ember-logs/YYYY-MM-DD.md` (see `blueprints/sdlc/methodologies/forge/scripts/forge-ember.sh`). Optionally link to a session under `forge-logs/versona/<actor>/<session-id>/` per `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §7–8.
 
-**Concern severity (challenge activity):** When producing a **challenge** pass per `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5, use exactly **critical**, **significant**, or **minor** — definitions in `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §4.1.
+**Concern severity (Contract §5):** When producing output per `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5, use exactly **critical**, **significant**, or **minor** — definitions in `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §4.1.
 
-**Top-level recommendation (challenge activity):** For **challenge** output, use exactly one of **Proceed**, **Proceed with conditions**, **Rework**, or **Bank** — definitions in `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §4.2.
+**Top-level recommendation (Contract §5):** For §5 structured output, use exactly one of **Proceed**, **Proceed with conditions**, **Rework**, or **Bank** — definitions in `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §4.2.
 
-**Structured output:** **Discipline** Versonas are **virtual personas** for one professional lens; **challenge** is one activity among others (see `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §1–2). The normative **challenge** report shape is `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5. Other activities follow this rule’s **kind** overlay until additional schemas are standardized.
+**Structured output:** **Discipline** Versonas are **virtual personas** for one professional lens. Activities include advice, drafting, handoffs, and—when the team uses it—the normative **§5** report shape in `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5. See `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §1–2. Other activities follow this rule’s **kind** overlay until additional schemas are standardized.
 
 **Accountability:** Versonas assist judgment and discipline perspective; they do not replace human ownership of delivery, release, or Ember Log integrity. See `blueprints/sdlc/methodologies/forge/roles.md` and `blueprints/sdlc/methodologies/agentic-sdlc.md`.
 
@@ -31,7 +31,7 @@ After this baseline, run each **relevant** child discipline per [`VERSONA-CONTRA
 # Versona: Data family
 <!-- Ancestry: L0_generic + L1_family_aggregator + Domain:Data -->
 
-When invoked, run challenges from **both data disciplines** against the current work item.
+When invoked, run §5-shaped passes from **both data disciplines** against the current work item.
 
 ## Disciplines included
 
@@ -41,13 +41,13 @@ When invoked, run challenges from **both data disciplines** against the current 
 ## Protocol
 
 1. Identify which data disciplines are **relevant** (skip if the work item has no data component).
-2. For each relevant discipline, produce a challenge following [`VERSONA-CONTRACT.md`](../../../../VERSONA-CONTRACT.md).
+2. For each relevant discipline, produce output following [`VERSONA-CONTRACT.md`](../../../../VERSONA-CONTRACT.md).
 3. Consolidate into a single report.
 
 ## Consolidated output format
 
 ```markdown
-## Versona challenge: Data family
+## Data family Versona — structured output
 
 **Work item:** {ID and title}
 **Disciplines consulted:** {list}
@@ -58,7 +58,7 @@ When invoked, run challenges from **both data disciplines** against the current 
 |------------|----------|------------------|----------------|
 
 ### Detail per discipline
-(individual challenge sections)
+(individual discipline sections)
 
 ### Overall recommendation
 {Proceed / Proceed with conditions / Rework / Bank}

@@ -1,6 +1,6 @@
 # Versonas — discipline-focused virtual personas
 
-**Versonas** are AI **virtual personas** for **one professional discipline** each (Engineering, Data, Product, …). They are **not** human job titles or org **roles**—see [`../roles.md`](../roles.md). A discipline Versona may run **several activities** in a session: **challenge** (structured pass per [`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md) §5), **advice**, **drafting**, **handoffs** / routing—always within its **bridge** scope. **Challenge** remains the **primary specified** activity in the contract; it is **one trait among several**, not the whole definition of “Versona.”
+**Versonas** are AI **virtual personas**—**discipline specialists** for **one professional domain** each (Engineering, Data, Product, …). They are **not** human job titles or org **roles**—see [`../roles.md`](../roles.md). In a session a Versona may **advise**, **draft**, **route handoffs**, or produce the **standard structured report** in [`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md) §5 when the team wants that shape—always within its **bridge** scope. No single activity defines a Versona; identity is the **discipline lens**.
 
 Repo-wide documentation habits (single source of truth, link don’t duplicate) are summarized in [`sdlc/DOCUMENTATION-STRUCTURE.md`](../../../DOCUMENTATION-STRUCTURE.md).
 
@@ -60,7 +60,7 @@ Normative concepts—**Versona kinds**, input/output **interfaces**, repeatable 
 1. A **decision point** or working session needs a **discipline lens** (refinement, pre-build, pre-release, drafting, exploration).
 2. The team identifies which **discipline perspectives** are relevant.
 3. The appropriate Versonas are **invoked** (via Cursor rule or manual prompt).
-4. Each Versona operates from its discipline’s perspective—often via a **challenge** pass ([`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md) §5), or via other **activities** per [`VERSONA-FRAMEWORK.md`](VERSONA-FRAMEWORK.md).
+4. Each Versona operates from its discipline’s perspective—via a §5 structured review when useful ([`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md) §5), or via other **activities** per [`VERSONA-FRAMEWORK.md`](VERSONA-FRAMEWORK.md).
 5. The team **acts** on results (concerns, drafts, handoffs), capturing **decisions** in the Ember Log when trade-offs or scope change.
 
 ## Bridge-awareness
@@ -71,7 +71,7 @@ Each Versona template references its discipline's **bridge document** (`*-SDLC-P
 - **Testing** Versona activates at phases D–E (build, verify) and during Assay Gate.
 - **BA** Versona is strongest at phases A–B (discover, specify) and at Review.
 
-This phase-awareness lets Versonas calibrate **challenge** intensity (and other work) based on the current Spark's phase prefix (`discover:`, `build:`, `verify:`, etc.).
+This phase-awareness lets Versonas calibrate **review depth** and other work based on the current Spark's phase prefix (`discover:`, `build:`, `verify:`, etc.).
 
 ## Template catalog
 
@@ -79,8 +79,8 @@ This phase-awareness lets Versonas calibrate **challenge** intensity (and other 
 
 **Ancestry and when to invoke:** [`catalog/discipline/engineering/README.md`](catalog/discipline/engineering/README.md) — `versona-se` as the shared craft ancestor, **`versona-family-engineering`** as the preferred default when multiple lenses may apply, specialists and handoffs.
 
-| Template | Discipline | Core challenge |
-|----------|-----------|----------------|
+| Template | Discipline | Core question |
+|----------|-----------|---------------|
 | [`versona-se.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/catalog/discipline/engineering/versona-se.mdc.template) | Software Engineering | Are CS fundamentals and craft practices sound? |
 | [`versona-architecture.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/catalog/discipline/engineering/versona-architecture.mdc.template) | Software Architecture | Is this structurally sound and maintainable? |
 | [`versona-devops.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/catalog/discipline/engineering/versona-devops.mdc.template) | DevOps | Can we deliver and operate this reliably? |
@@ -91,15 +91,15 @@ This phase-awareness lets Versonas calibrate **challenge** intensity (and other 
 
 ### Data family (2 disciplines)
 
-| Template | Discipline | Core challenge |
-|----------|-----------|----------------|
+| Template | Discipline | Core question |
+|----------|-----------|---------------|
 | [`versona-bigdata.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/catalog/discipline/data/versona-bigdata.mdc.template) | Big Data & Data Engineering | Is data engineered, governed, and processed correctly? |
 | [`versona-datascience.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/catalog/discipline/data/versona-datascience.mdc.template) | Data Science & ML | Are models valid, reproducible, and responsible? |
 
 ### Product family (5 disciplines)
 
-| Template | Discipline | Core challenge |
-|----------|-----------|----------------|
+| Template | Discipline | Core question |
+|----------|-----------|---------------|
 | [`versona-product-management.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/catalog/discipline/product/versona-product-management.mdc.template) | Product Management | Are we building the right product for the right market? |
 | [`versona-ba.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/catalog/discipline/product/versona-ba.mdc.template) | Business Analysis | Do we understand what stakeholders need? |
 | [`versona-ux.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/catalog/discipline/product/versona-ux.mdc.template) | UX / UI Design | Is this usable, desirable, and accessible? |
@@ -108,25 +108,25 @@ This phase-awareness lets Versonas calibrate **challenge** intensity (and other 
 
 ### Governance family (1 discipline)
 
-| Template | Discipline | Core challenge |
-|----------|-----------|----------------|
+| Template | Discipline | Core question |
+|----------|-----------|---------------|
 | [`versona-pm.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/catalog/discipline/governance/versona-pm.mdc.template) | Project Management | Are we delivering within constraints? |
 
 ### Cross-cutting (2 disciplines)
 
-| Template | Discipline | Core challenge |
-|----------|-----------|----------------|
+| Template | Discipline | Core question |
+|----------|-----------|---------------|
 | [`versona-security.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/catalog/discipline/cross-cutting/versona-security.mdc.template) | Security | Is this safe from attacks and breaches? |
 | [`versona-compliance.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/catalog/discipline/cross-cutting/versona-compliance.mdc.template) | Compliance | Does this meet regulatory obligations? |
 
 ### Methodology / demo (5)
 
-| Template | Discipline | Core challenge |
-|----------|-----------|----------------|
-| [`versona-generic.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/versona-generic.mdc.template) | Generic baseline (optional) | Layer 0 only—pair with a discipline Versona for shared baseline + discipline activities (e.g. challenge). |
+| Template | Discipline | Core question |
+|----------|-----------|---------------|
+| [`versona-generic.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/versona-generic.mdc.template) | Generic baseline (optional) | Layer 0 only—pair with a discipline Versona for shared baseline + full discipline behavior (including §5 when used). |
 | [`versona-sampling.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/catalog/meta/versona-sampling.mdc.template) | Sampling (demo) | What assumptions, unknowns, and top signals appear before a full Versona pass? |
 | [`versona-project-setup.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/catalog/workflow/versona-project-setup.mdc.template) | Project setup (onboarding) | What is missing for blueprints + Forge + Cursor alignment, and what commands should run next? Invoke with **`setup`** or `@versona-project-setup` after copying to `.cursor/rules/`. |
-| [`versona-roadmap-gate.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/catalog/workflow/versona-roadmap-gate.mdc.template) | Roadmap gate (workflow) | Playbook after drafting a roadmap: Definition of Ready, optional routing, Product Management Versona, follow-on Versonas, Ember Log. Invoke with `@versona-roadmap-gate`. |
+| [`versona-roadmap-gate.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/catalog/workflow/versona-roadmap-gate.mdc.template) | Roadmap gate (workflow) | Playbook after drafting a roadmap: Definition of Ready, optional routing, Product Management Versona session, follow-on Versonas, Ember Log. Invoke with `@versona-roadmap-gate`. |
 | [`versona-cursor-rules-sync.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/catalog/workflow/versona-cursor-rules-sync.mdc.template) | Cursor rules sync (workflow) | Prints exact shell commands to install or diff Versona `.mdc` files from blueprints into `.cursor/rules/`. |
 
 ### Family aggregators
@@ -149,21 +149,21 @@ Small **single-operation** Cursor rules and an installer script live in [`../tas
 
 ### Discipline overlay (neutral tasklets + normative Versona)
 
-```ks-diagram
+```blueprint-diagram
 key: swimlane
 alt: Diagram
 ```
 
 ### Sampling Versona sequence (demo)
 
-```ks-diagram
+```blueprint-diagram
 key: sequence
 alt: Diagram
 ```
 
 ### Where documentation is published
 
-```ks-diagram
+```blueprint-diagram
 key: swimlane
 alt: Diagram
 ```

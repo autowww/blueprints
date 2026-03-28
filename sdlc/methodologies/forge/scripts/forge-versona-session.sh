@@ -95,5 +95,5 @@ fi
 echo "Created: ${SESSION_DIR}"
 echo "Edit: ${SESSION_DIR}/SESSION.md"
 echo ""
-echo "Optional day journal row (${TODAY_JOURNAL}) — paste under 'Versona challenges invoked' or 'Versona sessions' columns:"
+echo "Optional day journal row (${TODAY_JOURNAL}) — paste under 'Versona sessions invoked' or session columns:"
 echo "| (discipline) | (work item) | (concern) | (action) | forge-logs/versona/${ACTOR}/${SESSION_ID} |  |  |  |"

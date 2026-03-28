@@ -1,6 +1,6 @@
 # Discipline exploration spike — lifecycle and anchors
 
-This document defines **discipline exploration spikes** in Forge: time-boxed learning work that any discipline may run before committing to delivery scope. It complements [`VERSONA-FRAMEWORK.md`](VERSONA-FRAMEWORK.md) (session kinds, manifest fields) and [`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md) (challenge report shape when a spike closes with a Versona pass).
+This document defines **discipline exploration spikes** in Forge: time-boxed learning work that any discipline may run before committing to delivery scope. It complements [`VERSONA-FRAMEWORK.md`](VERSONA-FRAMEWORK.md) (session kinds, manifest fields) and [`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md) (§5 report shape when a spike closes with a Versona pass).
 
 **Related:** [`../process-and-flows.md`](../process-and-flows.md) (Forge Spark vs exploration spike) · [`../planning/PLANNING-FLOW.md`](../planning/PLANNING-FLOW.md) (Product Spark) · [`../../../templates/sdlc/TRACKING-FOUNDATION.md`](../../../templates/sdlc/TRACKING-FOUNDATION.md) (backlog tree in the consuming repo) · templates [`../../../templates/forge/discipline-spike-open.template.md`](../../../templates/forge/discipline-spike-open.template.md) · [`../../../templates/forge/discipline-spike-close.template.md`](../../../templates/forge/discipline-spike-close.template.md)
 
@@ -16,13 +16,13 @@ This document defines **discipline exploration spikes** in Forge: time-boxed lea
 
 **Prescriptive rule:** In prose, say **exploration spike** or **discipline spike** when ambiguity with **Forge Spark** or **Product Spark** would confuse readers.
 
-**Informal speech:** Teams sometimes say **“product spike.”** That is **not** a fourth official type. Prefer **exploration spike** or **discipline spike** with product anchors and, when the lens is product strategy, **Product Management** as the owning discipline (`spike_discipline`). The [**Product Management Versona**](catalog/discipline/product/versona-product-management.mdc.template) is often invoked at **spike close** for a structured challenge (report includes **Suggested next Versonas** per [`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md) §5). It remains distinct from a [**Product Spark**](../planning/PLANNING-FLOW.md) (planning slice: PoC / MVP / phase).
+**Informal speech:** Teams sometimes say **“product spike.”** That is **not** a fourth official type. Prefer **exploration spike** or **discipline spike** with product anchors and, when the lens is product strategy, **Product Management** as the owning discipline (`spike_discipline`). The [**Product Management Versona**](catalog/discipline/product/versona-product-management.mdc.template) is often invoked at **spike close** for a structured §5 review (report includes **Suggested next Versonas** per [`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md) §5). It remains distinct from a [**Product Spark**](../planning/PLANNING-FLOW.md) (planning slice: PoC / MVP / phase).
 
 ---
 
 ## 2. Who runs it
 
-Any **discipline** (or cross-functional pair) may propose or own an exploration spike. **Versona** use is optional during the spike (e.g. routing or discipline challenge on partial findings) and common at **close** when the team wants a structured challenge of conclusions before promoting work to Ingots or the backlog.
+Any **discipline** (or cross-functional pair) may propose or own an exploration spike. **Versona** use is optional during the spike (e.g. routing or a discipline lens on partial findings) and common at **close** when the team wants a structured review of conclusions before promoting work to Ingots or the backlog.
 
 Session manifest `work_item_kind` values (see [VERSONA-FRAMEWORK.md](VERSONA-FRAMEWORK.md) §7.4):
 

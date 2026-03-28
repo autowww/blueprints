@@ -20,7 +20,7 @@ Guide the user through the [product bootstrap flow](blueprints/sdlc/methodologie
 4. **Business case** — Build the justification using `business-case.template.md` from `blueprints/disciplines/product/ba/templates/`.
 5. **Product vision and metrics** — Define vision, OKRs, and success metrics using `PRODUCT-VISION.template.md` and `PRODUCT-METRICS.template.md` from `blueprints/pdlc/templates/`.
 6. **High-level roadmap** — Create an outcome-driven roadmap using `ROADMAP.template.md` from `blueprints/sdlc/templates/`. Apply **Roadmap Definition of Ready** (below) to each theme or row before treating the roadmap as complete.
-7. **WBS decomposition** — Break the roadmap into Themes → Epics → Stories → Tasks using `WBS.template.md` from `blueprints/pdlc/templates/`. **After step 6**, offer **`@versona-product-management`** to challenge the roadmap (or **`versona-all`** if discipline routing is unclear); follow **Suggested next Versonas** in the challenge output before deep WBS. Optional playbook: `blueprints/sdlc/methodologies/forge/versona/catalog/workflow/versona-roadmap-gate.mdc.template`.
+7. **WBS decomposition** — Break the roadmap into Themes → Epics → Stories → Tasks using `WBS.template.md` from `blueprints/pdlc/templates/`. **After step 6**, offer **`@versona-product-management`** to review the roadmap (or **`versona-all`** if discipline routing is unclear); follow **Suggested next Versonas** in the §5 output before deep WBS. Optional playbook: `blueprints/sdlc/methodologies/forge/versona/catalog/workflow/versona-roadmap-gate.mdc.template`.
 8. **First Product Spark** — Select the delivery approach (PoC/MVP/Phase) and create a plan using templates from `blueprints/sdlc/methodologies/forge/planning/`.
 9. **First Charge** — Populate the first Forge Charge using `first-charge.template.md` from this package.
 10. **Plan Sparks** — Decompose the first Product Spark into phase-tagged Sparks through dialog.
@@ -35,9 +35,9 @@ For each **roadmap row** or **theme**, before moving to WBS (step 7), confirm:
 - **OKR / strategy fit** — Which objective this serves, or explicit rationale if none.
 - **Dependencies** — Internal or external prerequisites.
 - **Non-goals** — Explicit exclusions for this row.
-- **Next gate** — What unlocks the next step (e.g. Product Management Versona challenge, stakeholder sign-off).
+- **Next gate** — What unlocks the next step (e.g. Product Management Versona session, stakeholder sign-off).
 
-The Product Management Versona challenge report shape—including **Suggested next Versonas**—is defined in `blueprints/sdlc/methodologies/forge/versona/catalog/discipline/product/versona-product-management.mdc.template` and `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5.
+The Product Management Versona §5 report shape—including **Suggested next Versonas**—is defined in `blueprints/sdlc/methodologies/forge/versona/catalog/discipline/product/versona-product-management.mdc.template` and `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5.
 
 ### 2. Ongoing product planning
 
@@ -51,10 +51,10 @@ The Product Management Versona challenge report shape—including **Suggested ne
 - **Stage-gate preparation** — Help assemble evidence for PDLC stage gates (G1–G5) using `STAGE-GATE-REVIEW.template.md` from `blueprints/pdlc/templates/`.
 - **Phase transition guidance** — Advise when the product is ready to move from P1→P2→P3→SDLC→P4→P5→P6.
 
-### 4. Strategic challenge integration
+### 4. Strategic Versona integration
 
-- **Invoke Versonas** — At decision points (priority changes, scope changes, release decisions), suggest invoking the Product Management Versona and/or the Product family Versonas for structured challenge.
-- **Multi-theme or quarterly roadmap reviews** — Routinely include the **Product Management Versona** for **Definition of Ready** and prioritization challenge (after drafting; before committing to heavy WBS or resourcing).
+- **Invoke Versonas** — At decision points (priority changes, scope changes, release decisions), suggest invoking the Product Management Versona and/or the Product family Versonas for a structured §5 review when appropriate.
+- **Multi-theme or quarterly roadmap reviews** — Routinely include the **Product Management Versona** for **Definition of Ready** and prioritization review (after drafting; before committing to heavy WBS or resourcing).
 - **Ember Log decisions** — Suggest Ember Log entries for strategic decisions, priority changes, and market-driven trade-offs.
 
 ## Knowledge references
@@ -90,7 +90,7 @@ When engaged, ask focused questions to understand the user's context:
 2. **What do you need help with?** (Bootstrap / Roadmap planning / Sprint planning / Stage-gate / Strategy refresh)
 3. **What artifacts exist already?** (Vision? Roadmap? Business case? Backlog?)
 
-Then guide through the appropriate flow, creating artifacts interactively and suggesting Versona challenges at decision points.
+Then guide through the appropriate flow, creating artifacts interactively and suggesting Versona sessions at decision points.
 
 ## References
 

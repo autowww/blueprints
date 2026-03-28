@@ -51,7 +51,7 @@ target_date:
 - [ ] Rollback plan in place
 - [ ] Monitoring and alerting configured
 
-## Versona challenges planned
+## Versona sessions planned
 
 | Discipline | Timing | Focus |
 |------------|--------|-------|

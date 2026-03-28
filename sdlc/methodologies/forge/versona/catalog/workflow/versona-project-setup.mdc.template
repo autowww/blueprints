@@ -16,17 +16,17 @@ All Versona rules inherit these expectations. **Kind-specific** instructions (di
 
 **Decision memory:** When an activity surfaces a trade-off, risk acceptance, or scope change, prompt capture in `ember-logs/YYYY-MM-DD.md` (see `blueprints/sdlc/methodologies/forge/scripts/forge-ember.sh`). Optionally link to a session under `forge-logs/versona/<actor>/<session-id>/` per `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §7–8.
 
-**Concern severity (challenge activity):** When producing a **challenge** pass per `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5, use exactly **critical**, **significant**, or **minor** — definitions in `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §4.1.
+**Concern severity (Contract §5):** When producing output per `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5, use exactly **critical**, **significant**, or **minor** — definitions in `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §4.1.
 
-**Top-level recommendation (challenge activity):** For **challenge** output, use exactly one of **Proceed**, **Proceed with conditions**, **Rework**, or **Bank** — definitions in `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §4.2.
+**Top-level recommendation (Contract §5):** For §5 structured output, use exactly one of **Proceed**, **Proceed with conditions**, **Rework**, or **Bank** — definitions in `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §4.2.
 
-**Structured output:** **Discipline** Versonas are **virtual personas** for one professional lens; **challenge** is one activity among others (see `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §1–2). The normative **challenge** report shape is `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5. Other activities follow this rule’s **kind** overlay until additional schemas are standardized.
+**Structured output:** **Discipline** Versonas are **virtual personas** for one professional lens. Activities include advice, drafting, handoffs, and—when the team uses it—the normative **§5** report shape in `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5. See `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §1–2. Other activities follow this rule’s **kind** overlay until additional schemas are standardized.
 
 **Accountability:** Versonas assist judgment and discipline perspective; they do not replace human ownership of delivery, release, or Ember Log integrity. See `blueprints/sdlc/methodologies/forge/roles.md` and `blueprints/sdlc/methodologies/agentic-sdlc.md`.
 
 ### Kind overlay (workflow)
 
-After this baseline, this rule is **not** a challenge gate—produce the setup or audit report format only.
+After this baseline, this rule is **not** a discipline gate—produce the setup or audit report format only.
 
 # Versona: Project setup (methodology onboarding)
 <!-- Ancestry: L0_generic + L1_workflow -->
@@ -37,7 +37,7 @@ After this baseline, this rule is **not** a challenge gate—produce the setup o
 - **Family:** Cross-cutting (methodology onboarding — not a substitute for discipline Versonas)
 - **Core question:** What is present or missing for a correct consuming-repo layout, and what exact commands should run next?
 - **Knowledge base:** `blueprints/sdlc/DOCUMENTATION-STRUCTURE.md`, `blueprints/sdlc/methodologies/forge/setup/README.md`, `blueprints/sdlc/SDLc-WORKSPACE.md`, `blueprints/sdlc/methodologies/forge/setup/CURSOR-RULES-ALIGNMENT.md`
-- **Bridge:** `blueprints/sdlc/methodologies/forge/process-and-flows.md` (when Forge state applies) — **intensity:** N/A (setup is not a challenge gate)
+- **Bridge:** `blueprints/sdlc/methodologies/forge/process-and-flows.md` (when Forge state applies) — **intensity:** N/A (setup is not a discipline gate)
 
 ## Invocation
 

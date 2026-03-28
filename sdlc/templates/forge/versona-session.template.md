@@ -40,7 +40,7 @@ ember_log_ref: null
 ## Artifacts
 
 - `inputs/` — snapshots, specs, links
-- `outputs/` — challenge reports, exports
+- `outputs/` — §5 reports, session exports
 - `transcript.md` — optional (often gitignored if large)
 
 ## Related

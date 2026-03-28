@@ -1,6 +1,6 @@
 # Versona migrations
 
-When **blueprints** changes Versona **session** layouts, **manifest** fields, or **challenge report** shapes, consuming repos may need to adjust existing `forge-logs/versona/**` trees or local conventions.
+When **blueprints** changes Versona **session** layouts, **manifest** fields, or **§5 report** shapes, consuming repos may need to adjust existing `forge-logs/versona/**` trees or local conventions.
 
 ## Cursor rules (`.mdc`)
 
@@ -25,4 +25,4 @@ Add a row here when session or manifest **contracts** change in a way that affec
 
 | Blueprint change (summary) | Affected artifacts | Migration hint |
 |----------------------------|-------------------|----------------|
-| *(none yet)* | — | — |
+| Terminology: “Versona challenge” → sessions / §5 structured output; example heading `## {Discipline} Versona — structured output`; **Review depth** replaces “Challenge intensity”; Cursor skill folder `run-product-versona-challenge` → `run-product-versona-session` | Installed `.mdc` rules; day journal / planning templates; copied skills; historical session markdown under `outputs/` | Old headings in saved logs are still readable; optional rename for consistency. Re-copy skill from `sdlc/templates/forge/cursor-skills/run-product-versona-session/`. Re-sync Versona rules from blueprints. |

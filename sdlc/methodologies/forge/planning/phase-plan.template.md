@@ -49,7 +49,7 @@ target_date:
 - [ ] Stakeholder acceptance confirmed
 - [ ] Release notes drafted
 
-## Versona challenges planned
+## Versona sessions planned
 
 | Discipline | Timing | Focus |
 |------------|--------|-------|

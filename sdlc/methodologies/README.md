@@ -82,11 +82,11 @@ Practices that **enhance** any methodology rather than replacing it. They addres
 
 ## AI-native delivery
 
-Methodologies designed for **AI-augmented** development with explicit challenge discipline, decision memory, and evidence-based release rigor.
+Methodologies designed for **AI-augmented** development with explicit discipline Versonas, decision memory, and evidence-based release rigor.
 
 | Guide | Topics |
 |-------|--------|
-| [**Forge SDLC**](https://forgesdlc.com/methodology-overview.html) | AI-native delivery methodology: Ore→Ingot→Spark→Charge pipeline; Versonas (discipline challenge agents covering 16 disciplines); Ember Log (decision memory); Assay Gate (evidence-based release); hat-switching for solo-to-enterprise scaling. **Prescriptive package:** [`forge/README.md`](forge/README.md). |
+| [**Forge SDLC**](https://forgesdlc.com/methodology-overview.html) | AI-native delivery methodology: Ore→Ingot→Spark→Charge pipeline; Versonas (discipline virtual personas across 16 disciplines); Ember Log (decision memory); Assay Gate (evidence-based release); hat-switching for solo-to-enterprise scaling. **Prescriptive package:** [`forge/README.md`](forge/README.md). |
 
 ---
 
@@ -101,7 +101,7 @@ Guides that apply **alongside** any methodology, addressing how **agents**, **au
 
 ---
 
-**Handbook (HTML):** [`docs/methodologies.html`](../docs/methodologies.html) (hub) and `docs/methodologies-*.html`; **spec-driven** is [`docs/spec-driven.html`](../docs/spec-driven.html). **Scrum/Kanban/phased/XP** subchapters (Foundation, Ceremonies, Process) may use [`docs/build_methodology_chapters.py`](../docs/build_methodology_chapters.py) when present; handbook diagrams use **` ```ks-diagram `** in Markdown. **Scrum — Roles** is hand-maintained in HTML.
+**Handbook (HTML):** [`docs/methodologies.html`](../docs/methodologies.html) (hub) and `docs/methodologies-*.html`; **spec-driven** is [`docs/spec-driven.html`](../docs/spec-driven.html). **Scrum/Kanban/phased/XP** subchapters (Foundation, Ceremonies, Process) may use [`docs/build_methodology_chapters.py`](../docs/build_methodology_chapters.py) when present; handbook diagrams use **` ```blueprint-diagram `** in Markdown. **Scrum — Roles** is hand-maintained in HTML.
 
 **Maintainers:** curated external URLs, **executive summaries** (why each link matters here), and a quick `curl` check pattern — [`REFERENCE-LINKS.md`](REFERENCE-LINKS.md). Keep handbook [`methodologies-*.html`](../docs/methodologies.html) blurbs in sync when URLs or intent change.
 

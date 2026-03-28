@@ -1,6 +1,6 @@
 # Forge — connection to the SDLC foundation
 
-This blueprint treats **Forge as a delivery methodology** that plugs into a **shared foundation**: **tracking** (spine + artifacts) and **ceremony intents** (C1–C6). Forge does **not** replace the foundation; it defines **how** the team refines, challenges, executes, and releases work.
+This blueprint treats **Forge as a delivery methodology** that plugs into a **shared foundation**: **tracking** (spine + artifacts) and **ceremony intents** (C1–C6). Forge does **not** replace the foundation; it defines **how** the team refines, scrutinizes, executes, and releases work.
 
 ## 1. SDLC phases A–F (how Forge maps)
 
@@ -26,7 +26,7 @@ Forge teams **still** maintain the blueprint tracking spine:
 | **Plan** | Sparks decomposed from Ingots; Charge is the daily plan |
 | **Tasks** | Sparks (the finest executable grain — same hierarchy level, richer contract) |
 | **PRs** | Implementation slices for `build:` and `verify:` Sparks |
-| **Reviews** | Versona challenges + peer review + Assay Gate evidence |
+| **Reviews** | Versona sessions + peer review + Assay Gate evidence |
 | **Release** | Assay Gate pass; ship decision based on evidence |
 | **Exploration spike (discipline)** | Versona session + `outputs/SPIKE-CLOSE.md` under `forge-logs/versona/`; may link to Ore/WBS when stable — see [`versona/DISCIPLINE-SPIKE.md`](versona/DISCIPLINE-SPIKE.md) |
 
@@ -36,10 +36,10 @@ Forge teams **still** maintain the blueprint tracking spine:
 
 | Intent | Primary Forge ceremony | Secondary |
 |--------|------------------------|-----------|
-| **C1 — Align & decide** | Refinement (Ore → Ingot), Versona challenge | Stakeholder sessions, hat-switching declarations |
+| **C1 — Align & decide** | Refinement (Ore → Ingot), Versona session | Stakeholder sessions, hat-switching declarations |
 | **C2 — Plan the slice** | Planning (Ingot → Sparks), Charge selection | Iteration scope negotiation |
 | **C3 — Execute & unblock** | Daily sync (Charge confirmation) | Ad-hoc pairing, Versonas for blocked Sparks |
-| **C4 — Review & quality** | Review (evidence assessment) | Versona challenges at decision points |
+| **C4 — Review & quality** | Review (evidence assessment) | Versona sessions at decision points |
 | **C5 — Reflect & improve** | Retro (learning → new Ore) | Ember Log review, Versona reliability assessment |
 | **C6 — Assure / release** | Assay Gate (evidence-based release decision) | Continuous via quality gates in CI |
 
@@ -51,7 +51,7 @@ See [ceremony foundation](../ceremonies/ceremony-foundation.md) and [methodology
 |-----------|----------------------------|-------|
 | **Product** | **Sponsor proxy** + **Orchestrator** (prioritization) | Owns Ore intake and Ingot acceptance; decides value |
 | **Engineering** | **Implementer** (primary) + **Quality advocate** | Builds Sparks; owns technical quality and DoD |
-| **Challenge** | **Quality advocate** (cross-cutting) | Versona agents + human challenge; surfaces blind spots |
+| **Challenge** | **Quality advocate** (cross-cutting) | Versona agents + human critique; surfaces blind spots |
 | **Governance** | **Orchestrator** (process) + **Quality advocate** (compliance) | Assay Gate steward; release evidence; Ember Log discipline |
 
 Detail: [roles-archetypes.md](../roles-archetypes.md), [Forge roles chapter](roles.md).
@@ -59,7 +59,7 @@ Detail: [roles-archetypes.md](../roles-archetypes.md), [Forge roles chapter](rol
 ## 5. What Forge adds beyond the foundation
 
 - **Work state precision:** Ore → Ingot → Spark → Charge (not just "to do / doing / done").
-- **Explicit challenge:** Versona agents linked to discipline knowledge bases and bridge documents.
+- **Explicit discipline lenses:** Versona agents linked to discipline knowledge bases and bridge documents.
 - **Decision memory:** Ember Log captures *why* at decision points.
 - **Strategic pause:** Banked vs Blocked distinction prevents hidden prioritization.
 - **Evidence-based release:** Assay Gate with per-work-type evidence requirements.
@@ -72,7 +72,7 @@ Detail: [roles-archetypes.md](../roles-archetypes.md), [Forge roles chapter](rol
 |--------------|-----|
 | Committing Ore directly to execution | Enforce refinement: Ore must become Ingot before planning |
 | Sparks too large (multi-day) | Split: a Spark should complete in one focused session (1–4 hours) |
-| Versonas as bureaucracy (challenge everything) | Time-box Versona; use at decision points, not on routine work |
+| Versonas as bureaucracy (invoke on everything) | Time-box Versona; use at decision points, not on routine work |
 | Ember Log as status report | Keep it concise: decisions, trade-offs, assumptions — not narration |
 | Skipping Assay Gate under schedule pressure | Assay Gate is non-negotiable; adjust scope, not evidence standards |
 | Hiding prioritization as "blocked" | Use Banked for strategic pause; Blocked is for external impediments only |

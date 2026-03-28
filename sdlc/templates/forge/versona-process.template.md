@@ -26,7 +26,7 @@ Owner type values: `Human` | `Versona:discipline` | `Versona:routing` | `Versona
 
 ## Flow
 
-```ks-diagram
+```blueprint-diagram
 key: sequence
 alt: Diagram
 ```

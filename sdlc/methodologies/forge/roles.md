@@ -17,7 +17,7 @@ A Forge team consists of people who **own**, **implement**, **challenge**, and *
 
 ## 0.2 Versonas: virtual personas, not roles
 
-Versonas are **not** team roles. They are **discipline-specific virtual personas** (typically AI-instantiated via Cursor rules) that bring a professional lens to the work. **Challenge**—a structured pressure-test per [`versona/VERSONA-CONTRACT.md`](versona/VERSONA-CONTRACT.md) §5—is a **common** activity but **not** the only one; see [`versona/VERSONA-FRAMEWORK.md`](versona/VERSONA-FRAMEWORK.md) §1–2. A Versona does not own delivery; it assists judgment within its discipline scope.
+Versonas are **not** team roles. They are **discipline-specific virtual personas** (typically AI-instantiated via Cursor rules) that bring a professional lens to the work. Teams may use the **§5 structured report** in [`versona/VERSONA-CONTRACT.md`](versona/VERSONA-CONTRACT.md) §5 when they want a comparable discipline review; other activities (advise, draft, handoffs) are equally valid per [`versona/VERSONA-FRAMEWORK.md`](versona/VERSONA-FRAMEWORK.md) §1–2. A Versona does not own delivery; it assists judgment within its discipline scope.
 
 | Versona family | Disciplines covered | When most active |
 |----------------|--------------------|--------------------|
@@ -56,7 +56,7 @@ Each Versona references its discipline's knowledge base and bridge document in [
 | **Accountable for** | Surfacing blind spots, risks, and alternatives before costly commitments |
 | **Key question** | *What are we missing?* |
 | **Typical archetype** | Quality advocate (cross-cutting) |
-| **Outputs** | Versona challenge results, risk flags, alternative proposals, evidence requests |
+| **Outputs** | Versona session results, risk flags, alternative proposals, evidence requests |
 
 ### Governance hat
 

@@ -1,5 +1,5 @@
 ---
-description: Forge Versonas — Sampling (demo). Meta-Versona that runs three bundled tasklets and merges a short report (challenge-style); for learning Forge and shallow triage only.
+description: Forge Versonas — Sampling (demo). Meta-Versona that runs three bundled tasklets and merges a short report (§5-like); for learning Forge and shallow triage only.
 globs: 
 alwaysApply: false
 ---
@@ -16,11 +16,11 @@ All Versona rules inherit these expectations. **Kind-specific** instructions (di
 
 **Decision memory:** When an activity surfaces a trade-off, risk acceptance, or scope change, prompt capture in `ember-logs/YYYY-MM-DD.md` (see `blueprints/sdlc/methodologies/forge/scripts/forge-ember.sh`). Optionally link to a session under `forge-logs/versona/<actor>/<session-id>/` per `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §7–8.
 
-**Concern severity (challenge activity):** When producing a **challenge** pass per `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5, use exactly **critical**, **significant**, or **minor** — definitions in `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §4.1.
+**Concern severity (Contract §5):** When producing output per `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5, use exactly **critical**, **significant**, or **minor** — definitions in `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §4.1.
 
-**Top-level recommendation (challenge activity):** For **challenge** output, use exactly one of **Proceed**, **Proceed with conditions**, **Rework**, or **Bank** — definitions in `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §4.2.
+**Top-level recommendation (Contract §5):** For §5 structured output, use exactly one of **Proceed**, **Proceed with conditions**, **Rework**, or **Bank** — definitions in `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §4.2.
 
-**Structured output:** **Discipline** Versonas are **virtual personas** for one professional lens; **challenge** is one activity among others (see `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §1–2). The normative **challenge** report shape is `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5. Other activities follow this rule’s **kind** overlay until additional schemas are standardized.
+**Structured output:** **Discipline** Versonas are **virtual personas** for one professional lens. Activities include advice, drafting, handoffs, and—when the team uses it—the normative **§5** report shape in `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5. See `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §1–2. Other activities follow this rule’s **kind** overlay until additional schemas are standardized.
 
 **Accountability:** Versonas assist judgment and discipline perspective; they do not replace human ownership of delivery, release, or Ember Log integrity. See `blueprints/sdlc/methodologies/forge/roles.md` and `blueprints/sdlc/methodologies/agentic-sdlc.md`.
 
@@ -37,14 +37,14 @@ After this baseline, use the **shortened** output shape in this file; apply base
 - **Family:** Cross-cutting (non-substitute for real discipline Versonas)
 - **Core question:** What assumptions, unknowns, and top signals should we see before spending a full Versona pass?
 - **Knowledge base:** `blueprints/sdlc/methodologies/forge/tasklets/README.md`
-- **Bridge:** `blueprints/sdlc/methodologies/forge/process-and-flows.md` (Versona challenge flow) — use **light** intensity only
+- **Bridge:** `blueprints/sdlc/methodologies/forge/process-and-flows.md` (Versona flow) — use **light** intensity only
 
 ## Knowledge references
 
 - [`VERSONA-CONTRACT.md`](../../VERSONA-CONTRACT.md) — full discipline rules use this shape; Sampling uses a **shortened** variant below
 - Bundled **tasklets** (after [`install-tasklets.sh`](../../../tasklets/install-tasklets.sh)): `forge-tasklet-extract-assumptions`, `forge-tasklet-list-unknowns`, `forge-tasklet-quick-triage`
 
-## Challenge protocol
+## Session protocol (meta / demo)
 
 ### When to use
 
@@ -76,11 +76,11 @@ After this baseline, use the **shortened** output shape in this file; apply base
 ## Output format
 
 ```markdown
-## Versona challenge: Sampling (demo)
+## Sampling (demo) Versona — structured output
 
 **Work item:** (title / ID / path)
 **Phase:** (if known, else “unspecified”)
-**Challenge intensity:** low
+**Review depth:** low
 
 ### Summary
 (2–4 sentences merging the three tasklet passes)

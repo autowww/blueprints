@@ -19,7 +19,7 @@ Cursor rules do **not** inherit at runtime—each `.mdc` duplicates the shared b
    - [`versona-frontend.mdc.template`](versona-frontend.mdc.template)
    - [`versona-mobile.mdc.template`](versona-mobile.mdc.template)
    - [`versona-iot.mdc.template`](versona-iot.mdc.template)
-4. **Family aggregator** — [`versona-family-engineering.mdc.template`](family/versona-family-engineering.mdc.template): merges **relevant** disciplines into one consolidated challenge report.
+4. **Family aggregator** — [`versona-family-engineering.mdc.template`](family/versona-family-engineering.mdc.template): merges **relevant** disciplines into one consolidated §5-style report.
 
 The **baseline set** may **grow** over time (e.g. cloud- or platform-specific templates). New specialists should follow the same pattern: **narrow scope**, **explicit bridge**, **hand off** work outside that scope.
 
@@ -29,7 +29,7 @@ The **baseline set** may **grow** over time (e.g. cloud- or platform-specific te
 
 | Situation | Preferred rule |
 |-----------|----------------|
-| **Unclear** which engineering lens applies, or **multiple** surfaces (e.g. code + ops + tests) | **`versona-family-engineering`** first — **default entry** for cross-cutting Engineering challenge |
+| **Unclear** which engineering lens applies, or **multiple** surfaces (e.g. code + ops + tests) | **`versona-family-engineering`** first — **default entry** for cross-cutting Engineering review |
 | **Pure craft / code-quality** pass (fundamentals, readability, patterns at implementation level) | **`versona-se`** alone |
 | Work clearly in **one** domain only (e.g. only CI/CD, only web UI, only embedded constraints) | The matching **specialist** template |
 
@@ -44,16 +44,16 @@ Separate **delivery process** from **engineering completion signals**:
 | Layer | Role |
 |-------|------|
 | **Process / methodology** | How work flows (Forge Sparks, Scrum, Kanban, etc.—often coordinated under the **Forge** umbrella in this repo). Lived in methodology docs and project `sdlc/` / ceremonies—not duplicated in full inside each Versona. |
-| **Engineering discipline** | Whether the **work product** meets discipline expectations: documentation, tests (unit / UI / integration as appropriate), user-facing docs where applicable, **evidence and reporting** back to a human or invoker (another Versona, session, or Ember Log). Exact DoD is **team-defined**; Versonas **challenge** fit to stated criteria. |
+| **Engineering discipline** | Whether the **work product** meets discipline expectations: documentation, tests (unit / UI / integration as appropriate), user-facing docs where applicable, **evidence and reporting** back to a human or invoker (another Versona, session, or Ember Log). Exact DoD is **team-defined**; Versonas **assess** fit to stated criteria. |
 
 ---
 
 ## 4. Narrow specialists and handoffs
 
-A specialist Versona **challenges only within its bridge** (architecture vs DevOps vs frontend, etc.). It **does not** assert authority outside that scope—recommend **handoff** to another discipline Versona or use **`versona-all`** when routing is unclear. Future **deep** specialists (e.g. single-cloud) should **defer** out-of-scope stacks explicitly (same handoff rule).
+A specialist Versona **works only within its bridge** (architecture vs DevOps vs frontend, etc.). It **does not** assert authority outside that scope—recommend **handoff** to another discipline Versona or use **`versona-all`** when routing is unclear. Future **deep** specialists (e.g. single-cloud) should **defer** out-of-scope stacks explicitly (same handoff rule).
 
 ---
 
-## 5. Activities beyond a single challenge pass
+## 5. Activities beyond a single §5 report
 
-Discipline Versonas are **virtual personas**; **challenge** output is **normative** and fully specified in [`VERSONA-CONTRACT.md`](../../VERSONA-CONTRACT.md) §5. Other **activities** (advise, draft, orchestration of handoffs within discipline scope) are allowed per [`VERSONA-FRAMEWORK.md`](../../VERSONA-FRAMEWORK.md) §1–2 until additional output schemas ship. This Engineering ancestry still applies: **SE as craft ancestor**, **specialists as extensions**, **family first** for multi-lens work, **process vs discipline** as in §3.
+Discipline Versonas are **virtual personas**; **§5 structured output** is **normative** when teams use that shape—see [`VERSONA-CONTRACT.md`](../../VERSONA-CONTRACT.md) §5. Other **activities** (advise, draft, orchestration of handoffs within discipline scope) are allowed per [`VERSONA-FRAMEWORK.md`](../../VERSONA-FRAMEWORK.md) §1–2 until additional output schemas ship. This Engineering ancestry still applies: **SE as craft ancestor**, **specialists as extensions**, **family first** for multi-lens work, **process vs discipline** as in §3.

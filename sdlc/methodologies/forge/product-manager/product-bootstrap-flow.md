@@ -10,7 +10,7 @@ This document describes the step-by-step process for bootstrapping a new product
 
 ## The pipeline
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```
@@ -33,7 +33,7 @@ alt: Diagram
 - `blueprints/product/templates/VISION.template.md` (lightweight) or
 - `blueprints/pdlc/templates/PRODUCT-VISION.template.md` (comprehensive)
 
-**Versona checkpoint:** Consider invoking BA Versona to challenge problem clarity.
+**Versona checkpoint:** Consider invoking BA Versona to review problem clarity.
 
 ---
 
@@ -73,7 +73,7 @@ alt: Diagram
 **Output:** Create `docs/product/discovery/competitive-analysis.md` using template:
 - `blueprints/pdlc/templates/COMPETITIVE-ANALYSIS.template.md`
 
-**Versona checkpoint:** Consider invoking Product Management Versona to challenge competitive positioning.
+**Versona checkpoint:** Consider invoking Product Management Versona to review competitive positioning.
 
 ---
 
@@ -133,7 +133,7 @@ Structure the roadmap as: NOW (committed, next 1–2 iterations) / NEXT (planned
 
 Before **Step 7**, apply **Roadmap Definition of Ready** to each theme or row (**Outcome**, **Evidence**, **Horizon**, **OKR / strategy fit**, **Dependencies**, **Non-goals**, **Next gate**) — see [`forge-product-manager.mdc.template`](forge-product-manager.mdc.template).
 
-**Versona checkpoint:** After the roadmap is drafted, run **Product Management Versona** (`versona-product-management`) or **`versona-all`** if routing is unclear; follow **Suggested next Versonas** in the challenge output before deep WBS. Optional playbook: [`../versona/catalog/workflow/versona-roadmap-gate.mdc.template`](../versona/catalog/workflow/versona-roadmap-gate.mdc.template).
+**Versona checkpoint:** After the roadmap is drafted, run **Product Management Versona** (`versona-product-management`) or **`versona-all`** if routing is unclear; follow **Suggested next Versonas** in the §5 output before deep WBS. Optional playbook: [`../versona/catalog/workflow/versona-roadmap-gate.mdc.template`](../versona/catalog/workflow/versona-roadmap-gate.mdc.template).
 
 ---
 
@@ -154,7 +154,7 @@ Before **Step 7**, apply **Roadmap Definition of Ready** to each theme or row (*
 
 Use the project's ID scheme (e.g. `M1E1S1T1`) as defined in `PLANNING-FLOW.md`.
 
-**Versona checkpoint:** Consider **BA Versona** for requirements completeness, **Project Management Versona** (governance) for delivery constraints and schedule feasibility. **Product Management Versona** should already have challenged the roadmap at Step 6; do not substitute governance PM for that product-strategy pass.
+**Versona checkpoint:** Consider **BA Versona** for requirements completeness, **Project Management Versona** (governance) for delivery constraints and schedule feasibility. **Product Management Versona** should already have reviewed the roadmap at Step 6; do not substitute governance PM for that product-strategy pass.
 
 ---
 
@@ -208,7 +208,7 @@ If Steps 1–8 are complete, skip to Step 10 and create a Charge with implementa
    - `release:` — deployment, documentation, communication
 3. Estimate each Spark (1–4 hours).
 4. Assign Sparks to Forge iterations.
-5. Identify which Versonas should challenge which Sparks.
+5. Identify which Versonas should review which Sparks (discipline lens / §5 when used).
 
 **Output:** Updated backlog with phase-tagged Sparks assigned to iterations.
 
@@ -219,7 +219,7 @@ If Steps 1–8 are complete, skip to Step 10 and create a Charge with implementa
 Once the first Charge is populated and Sparks are planned:
 
 1. **Begin daily execution** using `forge-daily` — pull Sparks into Charge, switch hats, log in journal.
-2. **Run Versona challenges** at refinement and review ceremonies.
+2. **Run Versona sessions** at refinement and review ceremonies.
 3. **Update the roadmap** as you learn — new Ore from P5 discovery.
 4. **Prepare for Assay Gate** — assemble evidence against the Product Spark's criteria.
 

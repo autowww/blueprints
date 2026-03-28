@@ -46,7 +46,7 @@ target_date:
 - [ ] Decision captured: proceed to MVP, pivot, or stop
 - [ ] Technical feasibility assessed (Architecture Versona)
 
-## Versona challenges
+## Versona sessions
 
 | Discipline | Question |
 |------------|----------|
@@ -58,4 +58,4 @@ target_date:
 | Risk | Mitigation |
 |------|------------|
 | PoC scope creep | Strict "skip" list; timebox |
-| Confirmation bias | Pre-register hypothesis; Versona challenge results |
+| Confirmation bias | Pre-register hypothesis; Versona §5 / session results |

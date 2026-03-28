@@ -62,7 +62,7 @@ Each discipline has a bridge that maps its practices to SDLC phases A–F and PD
 
 | Bridge | File | Connects |
 |---|---|---|
-| **Forge ↔ SDLC ↔ PDLC** | [`sdlc/methodologies/forge/FORGE-SDLC-PDLC-BRIDGE.md`](sdlc/methodologies/forge/FORGE-SDLC-PDLC-BRIDGE.md) | Forge delivery methodology ↔ SDLC phases A–F ↔ PDLC phases P1–P6: Ore pipeline to PDLC discovery, Assay Gate to launch readiness, Versonas to discipline challenges |
+| **Forge ↔ SDLC ↔ PDLC** | [`sdlc/methodologies/forge/FORGE-SDLC-PDLC-BRIDGE.md`](sdlc/methodologies/forge/FORGE-SDLC-PDLC-BRIDGE.md) | Forge delivery methodology ↔ SDLC phases A–F ↔ PDLC phases P1–P6: Ore pipeline to PDLC discovery, Assay Gate to launch readiness, Versonas as discipline lenses |
 
 ### Intra-lifecycle bridges
 

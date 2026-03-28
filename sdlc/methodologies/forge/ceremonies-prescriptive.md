@@ -37,7 +37,7 @@ Default iteration length: **1 week** (configurable to 2 weeks for exploratory wo
 
 1. Product hat presents top Ore items (5–10 min).
 2. Clarify problem, value, and constraints; Engineering hat assesses feasibility (15–20 min).
-3. Invoke Versonas on high-risk or high-value items — time-boxed challenge (10–15 min).
+3. Invoke Versonas on high-risk or high-value items — time-boxed session (10–15 min).
 4. Decide: promote to Ingot, merge, Bank, or reject. Document decisions in Ember Log (5–10 min).
 
 **Definition of Ready (Ingot):**
@@ -67,7 +67,7 @@ Default iteration length: **1 week** (configurable to 2 weeks for exploratory wo
 2. Engineering hat decomposes Ingots into Sparks (30–45 min).
 3. Sequence Sparks by risk reduction and learning value (15 min).
 4. Confirm scope fits capacity; intentionally leave margin for interruption (10 min).
-5. Identify Versona challenges needed before key Sparks begin (5 min).
+5. Identify Versona sessions needed before key Sparks begin (5 min).
 
 **Spark quality check:**
 
@@ -97,7 +97,7 @@ Default iteration length: **1 week** (configurable to 2 weeks for exploratory wo
 2. Confirm today's Charge: which Sparks are active (3 min).
 3. Surface blockers and Banking decisions (3 min).
 4. Declare hat for the day's primary focus (1 min).
-5. Identify any Versona challenges needed (2 min).
+5. Identify any Versona sessions needed (2 min).
 
 **Prescriptive rule:** The Charge should be intentionally smaller than theoretical capacity, leaving room for interruption, rework, and learning.
 
@@ -118,7 +118,7 @@ Default iteration length: **1 week** (configurable to 2 weeks for exploratory wo
 
 1. Engineering hat demonstrates working increment (30 min).
 2. Product hat assesses against Ingot acceptance criteria (15 min).
-3. Versona challenge: discipline-specific review of increment quality (15 min).
+3. Versona session: discipline-specific review of increment quality (15 min).
 4. Governance hat reviews evidence against Assay Gate criteria (10 min).
 5. Decide: ready for Assay Gate, needs more evidence, or scope adjustment (10 min).
 
@@ -154,7 +154,7 @@ Default iteration length: **1 week** (configurable to 2 weeks for exploratory wo
 
 | | |
 |--|--|
-| **Inputs** | Iteration metrics (Spark throughput, Ore→Ingot conversion, Assay Gate pass rate), Ember Log, Versona challenge trends, team experience |
+| **Inputs** | Iteration metrics (Spark throughput, Ore→Ingot conversion, Assay Gate pass rate), Ember Log, Versona session trends, team experience |
 | **Outputs** | 1–3 improvement experiments with owners; new Ore from learnings; Versona configuration adjustments |
 | **Participants** | All hats (**R**) |
 | **Timebox** | ≤ **1 hour** per 1-week iteration |
@@ -163,7 +163,7 @@ Default iteration length: **1 week** (configurable to 2 weeks for exploratory wo
 
 1. Review metrics: Spark throughput, Charge completion rate, Assay Gate results (10 min).
 2. Ember Log review: which decisions worked, which assumptions were wrong (10 min).
-3. Versona effectiveness: which challenges added value, which created noise (10 min).
+3. Versona effectiveness: which sessions added value, which created noise (10 min).
 4. Generate insights: patterns, systemic issues, process friction (15 min).
 5. Commit to 1–3 experiments with owners and due dates (10 min).
 6. Feed learnings back as new Ore where applicable (5 min).
