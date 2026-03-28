@@ -101,7 +101,7 @@ key: decision
 alt: Diagram
 ```
 
-## 8. Versona challenge flow
+## 8. Versona flow (challenge and other activities)
 
 ```ks-diagram
 key: decision
@@ -127,7 +127,7 @@ alt: Diagram
 
 **State model** — The key distinctions from a simple Kanban board: (1) Banked vs Blocked separates strategic pause from external impediment, (2) Done is not Released until the Assay Gate passes, and (3) Rejected items are closed with a reason rather than silently deleted.
 
-**Versona challenge** — Versonas are invoked at decision points (refinement, pre-build, pre-release), not on every action. Each Versona references its discipline's bridge document to calibrate challenge intensity to the current SDLC phase.
+**Versonas** — Discipline **virtual personas** are invoked at **decision points** (refinement, pre-build, pre-release) for a **challenge** pass or other discipline work—not on every action. For **challenge**, each Versona uses its bridge document to calibrate intensity to the current SDLC phase ([`versona/VERSONA-FRAMEWORK.md`](versona/VERSONA-FRAMEWORK.md) §1–2).
 
 ## 11. Links
 

@@ -25,10 +25,10 @@ The Product Manager agent is **upstream** of `forge-planning` — it creates the
 
 ## Relationship to Versonas
 
-The **Product Management Versona** (`versona-product-management.mdc.template`) is a **challenge agent** — it questions and stress-tests product decisions. The Product Manager agent is an **orchestrator** — it guides the user through creating product artifacts and planning work. They are complementary:
+The **Product Management Versona** (`versona-product-management.mdc.template`) is a **discipline virtual persona** for product management; its **challenge** pass (Contract §5) questions and stress-tests product decisions—it may also support other **activities** per [`VERSONA-FRAMEWORK.md`](../versona/VERSONA-FRAMEWORK.md). The Product Manager agent is an **orchestrator** — it guides the user through creating product artifacts and planning work. They are complementary:
 
 - The Product Manager agent **creates** artifacts (vision, roadmap, business case, WBS, Charges).
-- The Product Management Versona **challenges** those artifacts (is the strategy coherent? are priorities defensible?).
+- The Product Management Versona **challenges** those artifacts when invoked for a challenge pass (is the strategy coherent? are priorities defensible?).
 
 The Product Manager agent will suggest invoking the Product Management Versona at appropriate decision points.
 

@@ -1,6 +1,6 @@
-# Versonas — discipline challenge agents
+# Versonas — discipline-focused virtual personas
 
-**Versonas** are AI challenge agents that pressure-test work from discipline-specific perspectives. They are **not** team roles — they are challenge functions that strengthen thinking before costly commitments.
+**Versonas** are AI **virtual personas** for **one professional discipline** each (Engineering, Data, Product, …). They are **not** human job titles or org **roles**—see [`../roles.md`](../roles.md). A discipline Versona may run **several activities** in a session: **challenge** (structured pass per [`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md) §5), **advice**, **drafting**, **handoffs** / routing—always within its **bridge** scope. **Challenge** remains the **primary specified** activity in the contract; it is **one trait among several**, not the whole definition of “Versona.”
 
 Repo-wide documentation habits (single source of truth, link don’t duplicate) are summarized in [`sdlc/DOCUMENTATION-STRUCTURE.md`](../../../DOCUMENTATION-STRUCTURE.md).
 
@@ -57,11 +57,11 @@ Normative concepts—**Versona kinds**, input/output **interfaces**, repeatable 
 
 ## How Versonas work
 
-1. A **decision point** is reached (refinement, pre-build, pre-release, architecture choice).
+1. A **decision point** or working session needs a **discipline lens** (refinement, pre-build, pre-release, drafting, exploration).
 2. The team identifies which **discipline perspectives** are relevant.
 3. The appropriate Versonas are **invoked** (via Cursor rule or manual prompt).
-4. Each Versona **challenges** the work from its discipline's perspective, producing structured output.
-5. The team **acts** on concerns or accepts the risk, capturing the decision in the Ember Log.
+4. Each Versona operates from its discipline’s perspective—often via a **challenge** pass ([`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md) §5), or via other **activities** per [`VERSONA-FRAMEWORK.md`](VERSONA-FRAMEWORK.md).
+5. The team **acts** on results (concerns, drafts, handoffs), capturing **decisions** in the Ember Log when trade-offs or scope change.
 
 ## Bridge-awareness
 
@@ -71,7 +71,7 @@ Each Versona template references its discipline's **bridge document** (`*-SDLC-P
 - **Testing** Versona activates at phases D–E (build, verify) and during Assay Gate.
 - **BA** Versona is strongest at phases A–B (discover, specify) and at Review.
 
-This phase-awareness lets Versonas calibrate challenge intensity based on the current Spark's phase prefix (`discover:`, `build:`, `verify:`, etc.).
+This phase-awareness lets Versonas calibrate **challenge** intensity (and other work) based on the current Spark's phase prefix (`discover:`, `build:`, `verify:`, etc.).
 
 ## Template catalog
 
@@ -123,7 +123,7 @@ This phase-awareness lets Versonas calibrate challenge intensity based on the cu
 
 | Template | Discipline | Core challenge |
 |----------|-----------|----------------|
-| [`versona-generic.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/versona-generic.mdc.template) | Generic baseline (optional) | Layer 0 only—pair with a discipline Versona for full challenges. |
+| [`versona-generic.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/versona-generic.mdc.template) | Generic baseline (optional) | Layer 0 only—pair with a discipline Versona for shared baseline + discipline activities (e.g. challenge). |
 | [`versona-sampling.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/catalog/meta/versona-sampling.mdc.template) | Sampling (demo) | What assumptions, unknowns, and top signals appear before a full Versona pass? |
 | [`versona-project-setup.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/catalog/workflow/versona-project-setup.mdc.template) | Project setup (onboarding) | What is missing for blueprints + Forge + Cursor alignment, and what commands should run next? Invoke with **`setup`** or `@versona-project-setup` after copying to `.cursor/rules/`. |
 | [`versona-roadmap-gate.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/catalog/workflow/versona-roadmap-gate.mdc.template) | Roadmap gate (workflow) | Playbook after drafting a roadmap: Definition of Ready, optional routing, Product Management Versona, follow-on Versonas, Ember Log. Invoke with `@versona-roadmap-gate`. |

@@ -1,8 +1,8 @@
 # Forge tasklets — small Cursor operations
 
-**Tasklets** are **single-operation** Cursor rules (`.mdc`) with a **fixed output shape**. A **meta-Versona** (for example **Sampling Versona**) can invoke them **in sequence** and merge results into a [`Versona`-style report](../versona/VERSONA-CONTRACT.md).
+**Tasklets** are **single-operation** Cursor rules (`.mdc`) with a **fixed output shape**. A **meta-Versona** (for example **Sampling Versona**) can invoke them **in sequence** and merge results into a report shaped like a **challenge** pass or other agreed structure (see [`VERSONA-CONTRACT.md`](../versona/VERSONA-CONTRACT.md)).
 
-They are **not** a replacement for discipline Versonas (Product Management, BA, Testing, …). Use them as **building blocks** and teaching aids.
+They are **not** a replacement for **discipline** Versonas (virtual personas for Product Management, BA, Testing, …). Use tasklets as **building blocks** and teaching aids.
 
 Full taxonomy (execution plane, operation class, discipline overlay): [`TASKLET-TAXONOMY.md`](TASKLET-TAXONOMY.md).
 

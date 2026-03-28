@@ -17,7 +17,8 @@ alt: Diagram
 |------|---------|
 | **Work item reference** | Any stable handle the team uses: Forge **Ore**, **Ingot**, or **Spark** IDs; external epic/story/task IDs; or a **spike** label. This framework does **not** introduce a new ID scheme—teams map to what they already track. |
 | **Exploration spike** | Time-boxed **discipline** learning work (feasibility, unknowns)—**not** the same as a Forge **Spark** (delivery task). Lifecycle, anchors, and templates: [`DISCIPLINE-SPIKE.md`](DISCIPLINE-SPIKE.md). |
-| **Activity** | One **unit of Versona work** inside a **session** (e.g. one challenge pass, one sub-step of a larger process). Same concept if your team says “job”; this doc uses **activity** only. |
+| **Discipline Versona (virtual persona)** | An AI **embodiment** of one professional **discipline**—**not** a human job title or org role (see [`roles.md`](../roles.md)). In a session it may run **activities** such as **challenge**, advice, drafting, or handoff orchestration, always within that discipline’s bridge and scope. |
+| **Activity** | One **unit of Versona work** inside a **session** (e.g. one **challenge** pass, a draft artifact step, a routing suggestion, one sub-step of a larger process). Same concept if your team says “job”; this doc uses **activity** only. |
 | **Process template** | A named, repeatable **sequence** of activities, optional **human gates**, and optional **handoffs** to another Versona or to a recipe. |
 | **Session** | One user-visible “call”: a folder (or linked set of files) holding context, artifacts, and pointers to logs. A session may contain **multiple** activities. |
 
@@ -25,13 +26,13 @@ alt: Diagram
 
 ## 2. Versona kinds
 
-Not every `.mdc` under `versona/` is a **discipline** challenge agent. Use this taxonomy when authoring or extending templates.
+Not every `.mdc` under `versona/` is a **discipline** template (`kind: discipline`). Use this taxonomy when authoring or extending templates.
 
 | Kind | Purpose | Required content (in rule or linked doc) | Output variant | Bridge to discipline package |
 |------|---------|-------------------------------------------|----------------|------------------------------|
-| **discipline** | Challenge from one professional lens | Full [`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md) sections 1–6 | Contract challenge report (concerns table, evidence, recommendation) | **Yes** — `*-SDLC-PDLC-BRIDGE.md` under `blueprints/disciplines/` |
+| **discipline** | **Virtual persona** for one professional lens; **activities** may include **challenge**, advice, drafting, handoffs—within bridge scope | Full [`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md) sections 1–6 for **discipline** rules | **[Challenge activity:]** report per Contract §5. **Other activities:** team- or template-defined until standardized | **Yes** — `*-SDLC-PDLC-BRIDGE.md` under `blueprints/disciplines/` |
 | **routing** | Recommend which discipline Versonas to invoke | Routing rules (work item state, phase prefix, hat, scale); discipline index | Routing table (priority / optional / not recommended) | **N/A** |
-| **family_aggregator** | Run several discipline challenges and merge | List of child disciplines; relevance skip rules; consolidation rules | Consolidated report + per-discipline detail | **Per child** (links to their packages) |
+| **family_aggregator** | Run several **discipline** passes (typically **challenge**-shaped) and merge | List of child disciplines; relevance skip rules; consolidation rules | Consolidated report + per-discipline detail | **Per child** (links to their packages) |
 | **meta** | Thin orchestration over **tasklets** or shallow triage | Identity, when to use / **not** use, merge protocol; link to tasklets | Shortened or merged report (still structured) | **Optional** — may point at methodology docs only |
 | **workflow** | Repo or methodology bootstrap (not a challenge gate) | Invocation triggers, checklist, handoffs to other rules | Setup or audit report (tabular status) | **N/A** or **optional** |
 
@@ -72,7 +73,7 @@ An activity is **bounded work** with a clear stop condition:
 
 ### 3.3 Output interface
 
-**Discipline** Versonas use the structured report in [`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md) §5.
+**Discipline** Versonas use the structured report in [`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md) §5 when the activity is a **challenge** pass. Other activities use shapes defined in the rule, process doc, or team convention until standardized.
 
 **Handoff payload** (when another Versona or human picks up next): define minimally:
 
@@ -87,7 +88,7 @@ Other kinds use their **output variant** from the table in §2.
 
 ## 4. Severity and recommendation rubric
 
-Use **consistent** labels across discipline Versonas so merged and family reports stay comparable.
+Use **consistent** labels across discipline Versonas so merged and family reports stay comparable. **§4.1–4.2 apply to the output of a challenge activity** (Contract §5). Non-challenge activities may use other rubrics until standardized.
 
 ### 4.1 Concern severity
 
@@ -253,7 +254,7 @@ Optional helper: [`../scripts/forge-versona-session.sh`](../scripts/forge-verson
 2. Document **input interface** (what artifacts and IDs it needs) in the template or a short companion note.
 3. If the Versona participates in a **process**, add or link a process doc (§5) with mermaid handoffs.
 4. For **execution** steps, link to recipes under `agents/recipes/` per [`VERSONA-EXECUTION-TASKLETS.md`](../../../../agents/docs/VERSONA-EXECUTION-TASKLETS.md).
-5. Calibrate **severity** using §4; test outputs against sample work items.
+5. Calibrate **challenge** severity using §4; test **challenge** outputs against sample work items.
 6. Recommend **session** use for multi-step engagements (§7).
 
 ---

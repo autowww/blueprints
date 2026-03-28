@@ -1,6 +1,6 @@
 # Forge — roles (prescriptive)
 
-Forge keeps standard role names and uses the blueprint's **Owner / Implementer** model. It adds a **hat-switching protocol** for teams where one person holds multiple perspectives and **Versonas** as challenge functions (not roles).
+Forge keeps standard role names and uses the blueprint's **Owner / Implementer** model. It adds a **hat-switching protocol** for teams where one person holds multiple perspectives and **Versonas** as **discipline-focused virtual personas** (not org roles).
 
 ## 0. Forge team vs sub-accountabilities
 
@@ -15,9 +15,9 @@ A Forge team consists of people who **own**, **implement**, **challenge**, and *
 | **Ceremony intents C1–C6** | **C1/C2** in refinement & planning | **C2–C4** execution and review | **C1/C4** challenge at decision points | **C6** Assay Gate steward |
 | **Archetypes** | Sponsor proxy, Orchestrator | Implementer, Quality advocate | Quality advocate (cross-cutting) | Orchestrator, Quality advocate |
 
-## 0.2 Versonas: challenge functions, not roles
+## 0.2 Versonas: virtual personas, not roles
 
-Versonas are **not** team roles. They are discipline-specific challenge agents (AI or human) that pressure-test work from particular perspectives. A Versona challenge does not own delivery; it strengthens thinking.
+Versonas are **not** team roles. They are **discipline-specific virtual personas** (typically AI-instantiated via Cursor rules) that bring a professional lens to the work. **Challenge**—a structured pressure-test per [`versona/VERSONA-CONTRACT.md`](versona/VERSONA-CONTRACT.md) §5—is a **common** activity but **not** the only one; see [`versona/VERSONA-FRAMEWORK.md`](versona/VERSONA-FRAMEWORK.md) §1–2. A Versona does not own delivery; it assists judgment within its discipline scope.
 
 | Versona family | Disciplines covered | When most active |
 |----------------|--------------------|--------------------|

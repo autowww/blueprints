@@ -86,4 +86,4 @@ Detail: [roles-archetypes.md](../roles-archetypes.md), [Forge roles chapter](rol
 - [`https://forgesdlc.com/methodology-overview.html`](https://forgesdlc.com/methodology-overview.html) — methodology summary + diagram
 - [`../ceremonies/forge.md`](../ceremonies/forge.md) — fork table C1–C6
 - [`../../SDLC.md`](../../SDLC.md) — phases and ceremony-intent overview
-- [`versona/README.md`](versona/README.md) — discipline challenge agents
+- [`versona/README.md`](versona/README.md) — discipline Versonas (virtual personas)

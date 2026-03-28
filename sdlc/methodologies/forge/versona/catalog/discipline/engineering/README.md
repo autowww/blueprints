@@ -54,6 +54,6 @@ A specialist Versona **challenges only within its bridge** (architecture vs DevO
 
 ---
 
-## 5. Challenge and future modes
+## 5. Activities beyond a single challenge pass
 
-Today, discipline templates produce a **challenge report** per [`VERSONA-CONTRACT.md`](../../VERSONA-CONTRACT.md) §5. If **advise**, **draft**, or **orchestrate** modes are added later, they should **reuse** this ancestry split: **SE as craft ancestor**, **specialists as extensions**, **family first** for multi-lens work, **process vs discipline** as above.
+Discipline Versonas are **virtual personas**; **challenge** output is **normative** and fully specified in [`VERSONA-CONTRACT.md`](../../VERSONA-CONTRACT.md) §5. Other **activities** (advise, draft, orchestration of handoffs within discipline scope) are allowed per [`VERSONA-FRAMEWORK.md`](../../VERSONA-FRAMEWORK.md) §1–2 until additional output schemas ship. This Engineering ancestry still applies: **SE as craft ancestor**, **specialists as extensions**, **family first** for multi-lens work, **process vs discipline** as in §3.

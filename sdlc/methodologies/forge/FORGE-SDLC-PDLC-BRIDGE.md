@@ -139,5 +139,5 @@ alt: Diagram
 | [`../../../pdlc/PDLC.md`](../../../pdlc/PDLC.md) | Product phases P1–P6 |
 | [`../../../pdlc/PDLC-SDLC-BRIDGE.md`](../../../pdlc/PDLC-SDLC-BRIDGE.md) | Cross-lifecycle bridge |
 | [`../../../disciplines/README.md`](../../../disciplines/README.md) | Discipline hub (Versonas knowledge bases) |
-| [`versona/README.md`](versona/README.md) | Versona challenge agents |
+| [`versona/README.md`](versona/README.md) | Versonas — discipline virtual personas |
 | [`planning/README.md`](planning/README.md) | Product planning (PoC/MVP/Phased) |
