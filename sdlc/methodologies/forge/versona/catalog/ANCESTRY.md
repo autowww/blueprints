@@ -21,6 +21,8 @@ alt: Diagram
 
 ### Domain: Engineering
 
+**Related:** [`discipline/engineering/README.md`](discipline/engineering/README.md) — normative **ancestry** (`versona-se` as craft ancestor, specialists, family-first entry, process vs discipline “done”).
+
 | Template | Core challenge (short) | Output variant |
 |----------|------------------------|----------------|
 | [`versona-se.mdc.template`](discipline/engineering/versona-se.mdc.template) | CS fundamentals and craft | Contract §5 |

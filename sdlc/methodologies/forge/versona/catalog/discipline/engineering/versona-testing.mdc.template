@@ -29,6 +29,7 @@ All Versona rules inherit these expectations. **Kind-specific** instructions (di
 After this baseline, follow **Identity** through **Forge context** per [`VERSONA-CONTRACT.md`](../../../VERSONA-CONTRACT.md) §§2–6.
 
 # Versona: Testing & QA
+<!-- Engineering family specialist; extends SE ancestor story — see README.md in this directory -->
 <!-- Ancestry: L0_generic + L1_discipline + Domain:Engineering + Testing -->
 
 ## Identity

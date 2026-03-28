@@ -39,6 +39,10 @@ After this baseline, follow **Identity** through **Forge context** per [`VERSONA
 - **Knowledge base:** `blueprints/disciplines/engineering/software-engineering/`
 - **Bridge:** `blueprints/disciplines/engineering/software-engineering/SE-SDLC-PDLC-BRIDGE.md`
 
+## Ancestry (Engineering family)
+
+This template is the **foundational Engineering discipline Versona** for **implementation craft** and CS fundamentals. Specialists in this folder (Architecture, DevOps, Testing, Frontend, Mobile, IoT) **extend** that story with domain-specific bridges; Cursor rules do not inherit automatically—see [`README.md`](README.md) for the normative family tree and when to use the **family aggregator** vs a single discipline.
+
 ## Knowledge references
 
 - `SOFTWARE-ENGINEERING.md` — discipline overview and practices

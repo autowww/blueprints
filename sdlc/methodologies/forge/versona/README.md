@@ -77,6 +77,8 @@ This phase-awareness lets Versonas calibrate challenge intensity based on the cu
 
 ### Engineering family (7 disciplines)
 
+**Ancestry and when to invoke:** [`catalog/discipline/engineering/README.md`](catalog/discipline/engineering/README.md) — `versona-se` as the shared craft ancestor, **`versona-family-engineering`** as the preferred default when multiple lenses may apply, specialists and handoffs.
+
 | Template | Discipline | Core challenge |
 |----------|-----------|----------------|
 | [`versona-se.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/versona/catalog/discipline/engineering/versona-se.mdc.template) | Software Engineering | Are CS fundamentals and craft practices sound? |

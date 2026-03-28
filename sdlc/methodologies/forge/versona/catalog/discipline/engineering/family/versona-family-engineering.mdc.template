@@ -1,5 +1,5 @@
 ---
-description: Forge Versonas — Engineering family aggregator. Invokes all 7 engineering discipline challenges in sequence.
+description: Forge Versonas — Engineering family aggregator. Preferred default for Engineering challenge when multiple lenses may apply; runs relevant child disciplines and consolidates. For pure craft/code-quality only, consider versona-se alone.
 globs: 
 alwaysApply: false
 ---
@@ -31,7 +31,11 @@ After this baseline, run each **relevant** child discipline per [`VERSONA-CONTRA
 # Versona: Engineering family
 <!-- Ancestry: L0_generic + L1_family_aggregator + Domain:Engineering -->
 
-When invoked, run challenges from **all 7 engineering disciplines** against the current work item. Present a consolidated report.
+**Preferred default** for Engineering Versona challenge when the work item may touch **more than one** engineering lens or relevance is unclear—use this rule **before** drilling into a single specialist. Normative ancestry and “family first” guidance: [`../README.md`](../README.md).
+
+When invoked, run challenges from **all relevant** engineering disciplines against the current work item (see protocol for skipping non-applicable lenses). Present a consolidated report.
+
+- For **pure craft / code-quality** passes with **no** multi-surface scope, **`versona-se`** alone may suffice—see [`../README.md`](../README.md) §2.
 
 ## Disciplines included
 
