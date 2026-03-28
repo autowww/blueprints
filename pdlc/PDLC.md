@@ -35,7 +35,7 @@ Product lifecycle work involves different accountabilities than delivery. These 
 
 ### Phase overview
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```

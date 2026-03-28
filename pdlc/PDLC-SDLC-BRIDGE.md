@@ -31,7 +31,7 @@ Both are necessary. Neither is sufficient alone. This bridge explains how they r
 
 ## 1. The core distinction
 
-```ks-diagram
+```blueprint-diagram
 key: swimlane
 alt: Diagram
 ```
@@ -69,7 +69,7 @@ SDLC is **nested inside** PDLC. A team can execute SDLC flawlessly — shipping 
 
 ### The full lifecycle
 
-```ks-diagram
+```blueprint-diagram
 key: swimlane
 alt: Diagram
 ```
@@ -188,7 +188,7 @@ SDLC and PDLC use fundamentally different metrics. Neither set replaces the othe
 
 ### Which metrics matter when
 
-```ks-diagram
+```blueprint-diagram
 key: swimlane
 alt: Diagram
 ```
@@ -230,7 +230,7 @@ Not every situation needs equal investment across all phases. Use this guide to 
 
 ### Decision flowchart
 
-```ks-diagram
+```blueprint-diagram
 key: decision
 alt: Diagram
 ```
