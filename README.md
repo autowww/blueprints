@@ -64,6 +64,10 @@ Cross-cutting professional competencies organized into **four families** and **t
 
 **Canonical source** is this repository on `main`. The wiki is a convenience mirror—refresh it with [`wiki-source/sync-wiki.sh`](wiki-source/sync-wiki.sh) when you have push access to the wiki remote.
 
+## Maintainer roadmap & adoption
+
+Framework **positioning**, **roadmap**, and **adopter quickstart** live under [`docs/`](docs/INDEX.md): [Roadmap](docs/ROADMAP.md) · [Adoption](docs/ADOPTION.md) · [Positioning & first MVP](docs/product/discovery/framework-positioning-and-mvp.md). Work breakdown for the current Product Spark is in [`docs/requirements/WBS.md`](docs/requirements/WBS.md).
+
 ## Adopt in your repo
 
 Copy or add as a **git submodule** under `blueprints/`, then bootstrap project-specific folders (e.g. `sdlc/`, `docs/product/`) using the scripts and templates linked from each package README.

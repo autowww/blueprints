@@ -8,7 +8,7 @@
 2. **Recipe** under `agents/recipes/<name>/` implements the run (see [`ORCHESTRATION.md`](../ORCHESTRATION.md)).
 3. **Cursor / CI** invokes the recipe; the **LLM** does not replace the container — it **interprets** outputs.
 
-```ks-diagram
+```blueprint-diagram
 key: swimlane
 alt: Diagram
 ```

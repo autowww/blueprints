@@ -75,7 +75,7 @@ Raw Markdown is the source of truth, but the HTML handbook must present content 
 | Element | When to use |
 |---------|-------------|
 | **Tables** | Comparisons, role matrices, RACI charts, artifact inventories |
-| **KS diagram fences (`ks-diagram`)** | Process flows, lifecycle mappings, relationship graphs, architecture layers (static SVG templates + optional expand modal on the handbook) |
+| **Blueprint diagram fences (`blueprint-diagram`)** | Process flows, lifecycle mappings, relationship graphs, architecture layers (static SVG templates + optional expand modal on the handbook) |
 | **Code examples** | CLI commands, configuration snippets, API shapes |
 | **Callout boxes** | Key takeaways, warnings, cross-references to other areas |
 | **Numbered steps** | Procedures, adoption guides, ceremony agendas |
@@ -86,10 +86,10 @@ When authoring Markdown, prefer visual structures over long prose paragraphs. A 
 
 ## 3. Diagram-first authoring
 
-Use **` ```ks-diagram `** / **` ```ks-diagram-expand `** fenced blocks in `.md` source (see `sdlc/DESIGN-SYSTEM-KITCHENSINK.md`). The handbook and forgesdlc.com generators resolve `key:` to Kitchen Sink SVG templates and optional legend modal; GitHub shows the fence as a code block.
+Use **` ```blueprint-diagram `** / **` ```blueprint-diagram-expand `** fenced blocks in `.md` source. The handbook and forgesdlc.com site generators resolve `key:` to shared SVG diagram templates and an optional expand/legend experience on published pages; GitHub shows the fence as a code block.
 
 ~~~markdown
-```ks-diagram
+```blueprint-diagram
 key: swimlane
 alt: Diagram
 ```
@@ -97,7 +97,7 @@ alt: Diagram
 
 Every body-of-knowledge document and bridge document should include at least one diagram showing the key flow or relationship.
 
-**Showcase SVG diagram templates** (the static thumbnails used in the kitchensink diagram gallery and similar grids) should use a **consistent vertical artboard**—typically about **280px height** in `viewBox`, with content letterboxed or padded so wide flows do not collapse into a thin strip next to taller chart thumbs. Match **title line** styling (cyan accent `#06B6D4`, 12px bold) and **card-like corners** (`rx` ~8 on primary boxes) to the Data Charts templates. The canonical **catalog** lives in **forgesdlc-kitchensink** at `assets/svg/template-*.svg`; it is **extensible** (not a fixed count)—new archetypes are added with gallery entries, modal metadata in `showcase.js`, and optional Mermaid parallels. The **Diagram gallery** page in the kitchensink showcase is the reference for how thumbs render in a bento grid; **tree** vs **org chart** distinguishes generic hierarchy boxes from people cards (avatar, name, title, team).
+**Template SVG figures** used in handbook grids should use a **consistent vertical artboard**—typically about **280px height** in `viewBox`, with content letterboxed or padded so wide flows do not collapse into a thin strip next to taller chart thumbs. Match **title line** styling (cyan accent `#06B6D4`, 12px bold) and **card-like corners** (`rx` ~8 on primary boxes) to the Data Charts templates. Maintainer-facing details for adding templates, catalog keys, and modal metadata live in the documentation toolchain repository used by site generators—not in this framework text.
 
 ## 4. CSS framework and fonts
 
@@ -160,7 +160,7 @@ Links in Markdown source **must** use descriptive, human-readable text — never
 | Bad | Good |
 |-----|------|
 | `` [`blueprints/sdlc/`](../sdlc/README.md) `` | `[SDLC handbook](../sdlc/README.md)` |
-| `` [`DEVOPS.md`](https://forgesdlc.com/discipline-devops.html) `` | `[DevOps body of knowledge](https://forgesdlc.com/discipline-devops.html)` |
+| `` [`DEVOPS.md`](https://blueprints.forgesdlc.com/disciplines-engineering-devops.html) `` | `[DevOps body of knowledge](https://blueprints.forgesdlc.com/disciplines-engineering-devops.html)` |
 | `` [`practices/README.md`](practices/README.md) `` | `[Practices overview](practices/README.md)` |
 
 The reader should understand where a link goes without seeing the URL. The builder automatically rewrites `.md` hrefs to their corresponding HTML handbook pages, and replaces path-like link text with the target page's title — but well-authored source should not rely on this fallback.
