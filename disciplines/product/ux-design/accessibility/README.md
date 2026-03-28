@@ -10,7 +10,7 @@
 
 ## Accessibility implementation workflow
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```

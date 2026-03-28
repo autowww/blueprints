@@ -4,7 +4,7 @@
 
 **Relationship to channels:** Acquisition levers (SEO, paid, social) live under [`../channels/`](../channels/README.md); this folder focuses on **funnel mechanics**, prioritization, and experimentation discipline once traffic exists or loops are designed.
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```

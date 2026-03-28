@@ -6,7 +6,7 @@ These **project-agnostic** guides support **proactive customer management**: ins
 
 ## Where practices sit in the customer lifecycle
 
-```ks-diagram
+```blueprint-diagram
 key: swimlane
 alt: Diagram
 ```

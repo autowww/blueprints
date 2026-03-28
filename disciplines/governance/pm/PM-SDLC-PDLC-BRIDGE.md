@@ -31,7 +31,7 @@ All three are necessary in non-trivial software delivery. None is sufficient alo
 
 ## 1. Three questions, three domains
 
-```ks-diagram
+```blueprint-diagram
 key: swimlane
 alt: Diagram
 ```
@@ -107,7 +107,7 @@ The three-layer model is the **general case**. In practice, layers often collaps
 
 ### The full three-domain lifecycle
 
-```ks-diagram
+```blueprint-diagram
 key: swimlane
 alt: Diagram
 ```

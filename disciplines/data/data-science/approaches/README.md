@@ -12,7 +12,7 @@ Pick a **process scaffold** first (goals, data reality, deployment), then layer 
 
 **Bridge:** [`DS-SDLC-PDLC-BRIDGE.md`](../DS-SDLC-PDLC-BRIDGE.md) — how data science maps to delivery and product lifecycles.
 
-```ks-diagram
+```blueprint-diagram
 key: swimlane
 alt: Diagram
 ```

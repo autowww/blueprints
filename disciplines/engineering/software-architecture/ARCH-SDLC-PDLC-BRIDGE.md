@@ -75,7 +75,7 @@ Architecture provides the structural reasoning that connects product vision (PDL
 
 ## How architecture connects PDLC and SDLC
 
-```ks-diagram
+```blueprint-diagram
 key: swimlane
 alt: Diagram
 ```

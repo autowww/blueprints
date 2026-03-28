@@ -8,7 +8,7 @@
 
 ## Pattern categories (overview)
 
-```ks-diagram
+```blueprint-diagram
 key: swimlane
 alt: Diagram
 ```

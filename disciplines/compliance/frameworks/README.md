@@ -14,7 +14,7 @@ Compliance frameworks are **guardrails for digital products**: they turn statute
 
 ### Which framework applies? (high level)
 
-```ks-diagram
+```blueprint-diagram
 key: decision
 alt: Diagram
 ```

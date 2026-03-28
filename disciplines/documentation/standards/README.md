@@ -14,7 +14,7 @@ Documentation without standards drifts into inconsistency — every author inven
 
 ### Choosing a standard
 
-```ks-diagram
+```blueprint-diagram
 key: decision
 alt: Diagram
 ```

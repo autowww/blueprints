@@ -2,7 +2,7 @@
 
 **Multi-channel marketing** spreads acquisition, consideration, and retention work across complementary surfaces so no single algorithm change or budget cut defines the business. Blueprint guides here are **discipline-level**: how SEO, content, paid media, and social fit the funnel — not campaign copy or channel-specific runbooks for one product.
 
-```ks-diagram
+```blueprint-diagram
 key: swimlane
 alt: Diagram
 ```

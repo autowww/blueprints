@@ -10,7 +10,7 @@
 
 Documentation practices are **proactive knowledge management**: they turn "someone should write that down" into **repeatable activities** that capture knowledge early, maintain accuracy continuously, and ensure content reaches the right audience in the right format. Together they connect **authoring**, **publishing**, and **measurement** so documentation quality is owned by the whole team, not isolated in a late-stage writing sprint.
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```

@@ -6,7 +6,7 @@
 
 **Audience:** Teams adopting [`blueprints/disciplines/engineering/software-architecture/`](../README.md). Per-project pattern choices and exceptions belong in **`docs/adr/`**.
 
-```ks-diagram
+```blueprint-diagram
 key: decision
 alt: Diagram
 ```

@@ -6,7 +6,7 @@
 
 **Audience:** Teams adopting [`blueprints/disciplines/engineering/software-architecture/`](../README.md). Project-specific architecture lives in **`docs/architecture/`**; decisions belong in **`docs/adr/`**.
 
-```ks-diagram
+```blueprint-diagram
 key: decision
 alt: Diagram
 ```

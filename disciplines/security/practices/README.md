@@ -10,7 +10,7 @@
 
 Security practices are **proactive defense**: they turn “hope we are safe” into **repeatable activities** that catch design flaws early, validate implementations continuously, and ensure the organization can **respond and learn** when something goes wrong. Together they connect **architecture**, **delivery**, and **operations** so security is owned by the whole team, not isolated in a late gate.
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```

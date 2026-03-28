@@ -6,7 +6,7 @@
 
 Performance is **user experience**: latency, stability, and loading behavior shape trust, task completion, and accessibility. These blueprints separate **how to think** about metrics and optimization from **where this repo records** concrete budgets and regressions.
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```

@@ -6,7 +6,7 @@
 
 **Platform strategy** is a product and staffing decision, not only a technical one: native stacks optimize **fidelity and OS access**; cross-platform stacks optimize **shared velocity** at the cost of integration depth and occasional framework lag. Use the guides below to align engineering leads, mobile chapter leads, and architects before locking choices in ADRs.
 
-```ks-diagram
+```blueprint-diagram
 key: decision
 alt: Diagram
 ```

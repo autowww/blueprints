@@ -8,7 +8,7 @@
 
 ### Protocol stack (reference layers)
 
-```ks-diagram
+```blueprint-diagram
 key: swimlane
 alt: Diagram
 ```

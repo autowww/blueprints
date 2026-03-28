@@ -8,7 +8,7 @@
 
 ### Architecture evolution (conceptual timeline)
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```

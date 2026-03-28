@@ -14,7 +14,7 @@ Different audiences need different documentation forms. A developer consuming an
 
 ### Choosing the right type
 
-```ks-diagram
+```blueprint-diagram
 key: decision
 alt: Diagram
 ```

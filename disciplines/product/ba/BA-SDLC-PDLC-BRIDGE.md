@@ -31,7 +31,7 @@ BA is the discipline that feeds both lifecycles with structured understanding of
 
 ## 1. The three-discipline model
 
-```ks-diagram
+```blueprint-diagram
 key: swimlane
 alt: Diagram
 ```

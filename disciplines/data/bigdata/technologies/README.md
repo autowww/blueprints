@@ -8,7 +8,7 @@
 
 ### Processing paradigm spectrum
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```

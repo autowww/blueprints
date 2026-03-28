@@ -30,7 +30,7 @@ Testing is the discipline that verifies SDLC execution quality and validates tha
 
 ## 1. The three-domain model
 
-```ks-diagram
+```blueprint-diagram
 key: swimlane
 alt: Diagram
 ```

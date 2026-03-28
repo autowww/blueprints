@@ -10,7 +10,7 @@
 
 ## Design phases and techniques
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```

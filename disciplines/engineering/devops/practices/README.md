@@ -8,7 +8,7 @@ DevOps practices are the **how** of continuous delivery: they turn culture and g
 
 **Audience:** Teams adopting [`blueprints/disciplines/engineering/devops/`](../README.md); project-specific CI/CD and operations configuration stays in **`docs/development/`** (see [`docs/development/CI-CD.md`](../../../../../docs/development/CI-CD.md)) and **`docs/operations/`**.
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```

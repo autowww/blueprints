@@ -10,7 +10,7 @@
 
 **Core knowledge:** [`DATA-SCIENCE.md`](../DATA-SCIENCE.md) — ML lifecycle (CRISP-DM aligned), statistics, model evaluation, MLOps, responsible AI.
 
-```ks-diagram
+```blueprint-diagram
 key: swimlane
 alt: Diagram
 ```

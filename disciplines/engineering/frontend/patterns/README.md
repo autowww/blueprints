@@ -6,7 +6,7 @@
 
 UI pattern thinking means naming recurring structures—composition, state ownership, data flow—so teams can reuse solutions deliberately instead of reinventing ad hoc trees and stores. Start from the **component boundary**, then decide **where state lives**, then **how data crosses the network**; routing and forms sit on top of those choices.
 
-```ks-diagram
+```blueprint-diagram
 key: linear
 alt: Diagram
 ```
