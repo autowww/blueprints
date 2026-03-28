@@ -1,2 +1,5 @@
 # lenses — machine-local state (forge-lenses)
 .lenses-local/
+
+# local forge session logs (not source)
+forge-logs/
