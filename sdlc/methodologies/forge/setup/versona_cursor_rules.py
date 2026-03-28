@@ -9,9 +9,12 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import json
+import subprocess
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
-from typing import Iterable
+from typing import Any, Iterable
 
 try:
     import yaml
@@ -217,6 +220,55 @@ def _sha256_file(path: Path) -> str:
     return h.hexdigest()
 
 
+def _blueprints_git_sha(bp_root: Path) -> str | None:
+    try:
+        r = subprocess.run(
+            ["git", "-C", str(bp_root), "rev-parse", "HEAD"],
+            capture_output=True,
+            text=True,
+            timeout=15,
+            check=False,
+        )
+        if r.returncode == 0:
+            return r.stdout.strip()
+    except (OSError, subprocess.TimeoutExpired):
+        pass
+    return None
+
+
+def write_cursor_rules_manifest(
+    repo_root: Path,
+    jobs: list[tuple[Path, Path, str]],
+    *,
+    preset: str | None,
+) -> Path:
+    """Write `.forge/cursor-rules-manifest.json` with template hashes, installed hashes, and blueprints git HEAD when available."""
+    bp_root, _ = discover_blueprints_and_versona(repo_root)
+    rules: list[dict[str, Any]] = []
+    for src, dest, label in jobs:
+        rules.append(
+            {
+                "name": dest.name,
+                "label": label,
+                "source_sha256": _sha256_file(src) if src.is_file() else None,
+                "installed_sha256": _sha256_file(dest) if dest.is_file() else None,
+            }
+        )
+
+    manifest = {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "blueprints_commit": _blueprints_git_sha(bp_root),
+        "preset": preset,
+        "rules": rules,
+    }
+
+    forge_dir = repo_root / ".forge"
+    forge_dir.mkdir(parents=True, exist_ok=True)
+    out = forge_dir / "cursor-rules-manifest.json"
+    out.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+    return out
+
+
 def cmd_check(args: argparse.Namespace) -> int:
     root = Path(args.repo_root).resolve()
     cfg = root / "forge" / "forge.config.yaml"
@@ -353,6 +405,13 @@ def cmd_install(args: argparse.Namespace) -> int:
     print()
     print(f"Done. Installed {copied}, skipped {skipped} (use --force to overwrite).")
     print("Tune globs in each .mdc if you use file-scoped attachment.")
+    if not args.no_write_manifest:
+        mpath = write_cursor_rules_manifest(
+            root,
+            jobs,
+            preset=getattr(args, "preset", None),
+        )
+        print(f"Wrote {mpath.relative_to(root)} (template vs installed SHA256; blueprints git HEAD when available).")
     return 0
 
 
@@ -513,6 +572,11 @@ def main() -> int:
     p_inst.add_argument("repo_root", nargs="?", default=".", help="Repository root (default: .)")
     p_inst.add_argument("--dry-run", action="store_true")
     p_inst.add_argument("--force", action="store_true", help="Overwrite existing rule files")
+    p_inst.add_argument(
+        "--no-write-manifest",
+        action="store_true",
+        help="Do not write .forge/cursor-rules-manifest.json after install",
+    )
     _add_preset_and_optional_rule_flags(p_inst)
     p_inst.set_defaults(func=cmd_install)
 

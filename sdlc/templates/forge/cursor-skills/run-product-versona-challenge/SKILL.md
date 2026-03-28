@@ -25,7 +25,7 @@ description: >-
 
 - Versona templates: `blueprints/sdlc/methodologies/forge/versona/` — `versona-generic.mdc.template` at root; everything else under `catalog/` (`discipline/<domain>/`, `discipline/<domain>/family/` for aggregators, `routing/`, `meta/`, `workflow/`). See `versona/catalog/TEMPLATE-INDEX.md`.
 - Tasklets + Sampling: `bash blueprints/sdlc/methodologies/forge/tasklets/install-tasklets.sh`
-- Align rules with `forge.config.yaml`: `bash blueprints/sdlc/methodologies/forge/setup/check-forge-cursor-alignment.sh`
+- Align rules with `forge.config.yaml`: `bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh check` — full install/status: `blueprints/sdlc/methodologies/forge/setup/CURSOR-RULES-QUICKSTART.md`
 
 ## Adoption
 

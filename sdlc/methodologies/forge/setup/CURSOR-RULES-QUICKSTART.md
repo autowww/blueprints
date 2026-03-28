@@ -54,3 +54,7 @@ Requires **Python 3** and **PyYAML** (`pip install pyyaml`).
 | `full` | recommended + three family aggregators + `versona-generic` |
 
 Extra `--with-*` flags **add** on top of a preset. See **Reference: granular flags** in [`CURSOR-RULES-ALIGNMENT.md`](CURSOR-RULES-ALIGNMENT.md).
+
+## Manifest after sync
+
+Each successful **`sync`** (install) writes **`.forge/cursor-rules-manifest.json`** at the repository root (unless `--no-write-manifest`): UTC timestamp, **`blueprints_commit`** when `blueprints/` is a git checkout, active **`preset`**, and per-rule **`source_sha256`** / **`installed_sha256`** for the install job list. Use it to see whether installed files still match templates after local edits or a submodule bump.

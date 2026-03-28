@@ -60,6 +60,10 @@ bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh check
 
 Requires **Python 3** and **PyYAML** (`pip install pyyaml`). If PyYAML is missing, use the tables below manually.
 
+### Manifest (`.forge/cursor-rules-manifest.json`)
+
+After each successful **`sync`** (non–dry-run `install`), the tool writes **`.forge/cursor-rules-manifest.json`** at the **repository root** unless you pass **`--no-write-manifest`**. It records a UTC **`generated_at`**, optional **`blueprints_commit`** (`git rev-parse HEAD` in the resolved `blueprints/` root when it is a git work tree), the **`preset`** used (if any), and for each file in the install job list: **`name`**, **`label`**, **`source_sha256`**, **`installed_sha256`**. Compare `source` vs `installed` to spot drift; compare `blueprints_commit` across machines to confirm submodule alignment.
+
 ## Reference: granular flags (`sync` / install)
 
 Use these with **`sync-forge-cursor-rules.sh sync`** (or `install-versona-cursor-rules.sh`, which delegates to `sync`).
@@ -70,6 +74,7 @@ Use these with **`sync-forge-cursor-rules.sh sync`** (or `install-versona-cursor
 | `--preset minimal`, `recommended`, or `full` | See [Presets](#presets) above |
 | `--force` | Overwrite existing files |
 | `--dry-run` | Print source → dest |
+| `--no-write-manifest` | Skip writing `.forge/cursor-rules-manifest.json` |
 | `--with-project-setup` | Also `versona-project-setup.mdc` |
 | `--with-roadmap-gate` | Also `versona-roadmap-gate.mdc` |
 | `--with-all-routing` | Also `versona-all.mdc` |
