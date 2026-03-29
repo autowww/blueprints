@@ -51,7 +51,7 @@ See [ceremony foundation](../ceremonies/ceremony-foundation.md) and [methodology
 |-----------|----------------------------|-------|
 | **Product** | **Sponsor proxy** + **Orchestrator** (prioritization) | Owns Ore intake and Ingot acceptance; decides value |
 | **Engineering** | **Implementer** (primary) + **Quality advocate** | Builds Sparks; owns technical quality and DoD |
-| **Challenge** | **Quality advocate** (cross-cutting) | Versona agents + human critique; surfaces blind spots |
+| **Challenge** | **Quality advocate** (cross-cutting) | Discipline Versonas (virtual personas) + human critique; surfaces blind spots |
 | **Governance** | **Orchestrator** (process) + **Quality advocate** (compliance) | Assay Gate steward; release evidence; Ember Log discipline |
 
 Detail: [roles-archetypes.md](../roles-archetypes.md), [Forge roles chapter](roles.md).
@@ -59,7 +59,7 @@ Detail: [roles-archetypes.md](../roles-archetypes.md), [Forge roles chapter](rol
 ## 5. What Forge adds beyond the foundation
 
 - **Work state precision:** Ore → Ingot → Spark → Charge (not just "to do / doing / done").
-- **Explicit discipline lenses:** Versona agents linked to discipline knowledge bases and bridge documents.
+- **Explicit discipline lenses:** Discipline Versonas linked to discipline knowledge bases and bridge documents.
 - **Decision memory:** Ember Log captures *why* at decision points.
 - **Strategic pause:** Banked vs Blocked distinction prevents hidden prioritization.
 - **Evidence-based release:** Assay Gate with per-work-type evidence requirements.

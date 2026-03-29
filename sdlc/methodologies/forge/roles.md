@@ -82,7 +82,7 @@ In smaller teams (especially solo practitioners), one person holds multiple hats
 |-------|-----------|------------------|-----------------------|
 | **Solo** | 1 | One person, all hats, explicit switching | AI Versonas for all uncovered perspectives |
 | **Small team** | 2–5 | Hats shared; designate primary per person | AI Versonas + peer challenge |
-| **Team** | 5–12 | Dedicated hat holders possible; Versona disciplines assigned | Mix of AI and specialist human Versonas |
+| **Team** | 5–12 | Dedicated hat holders possible; Versona disciplines assigned | AI Versonas + human specialists in session (peer challenge) |
 | **Multi-team** | 12+ | Full role separation; cross-team Versonas | Dedicated challenge roles + AI augmentation |
 
 **Scaling rule:** add formality only when the cost of a mistake exceeds the cost of the ceremony.
