@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 100" width="780" height="100" role="img" aria-labelledby="title desc">
-  <title id="title">SDLC phases A through F</title>
-  <desc id="desc">Linear flow: Discover, Specify, Design, Build, Verify, Release</desc>
+  <title id="title">SDLC delivery phases (names; A–F shorthand)</title>
+  <desc id="desc">Linear flow: Discover / Prioritize through Release; letters A–F are optional shorthand</desc>
   <rect width="100%" height="100%" fill="none"/>
   <g font-family="system-ui, Segoe UI, sans-serif" font-size="11" fill="#F1F5F9">
-    <text x="390" y="16" text-anchor="middle" font-weight="700" font-size="12" fill="#06B6D4">Phases A–F (typical delivery)</text>
+    <text x="390" y="16" text-anchor="middle" font-weight="700" font-size="12" fill="#06B6D4">Discover → Release (A–F shorthand)</text>
   </g>
   <g stroke="#0e7490" stroke-width="1.5" fill="none">
     <path d="M 118 58 L 128 58"/>
@@ -27,18 +27,19 @@
     <rect x="370" y="32" width="108" height="52" rx="4" fill="#744210"/>
     <rect x="490" y="32" width="108" height="52" rx="4" fill="#6b2c5c"/>
     <rect x="610" y="32" width="108" height="52" rx="4" fill="#822659"/>
-    <text x="64" y="52" text-anchor="middle" fill="#fff" font-weight="700" font-size="13">A</text>
-    <text x="64" y="68" text-anchor="middle" fill="#fff" font-size="9.5">Discover</text>
-    <text x="184" y="52" text-anchor="middle" fill="#fff" font-weight="700" font-size="13">B</text>
-    <text x="184" y="68" text-anchor="middle" fill="#fff" font-size="9.5">Specify</text>
-    <text x="304" y="52" text-anchor="middle" fill="#fff" font-weight="700" font-size="13">C</text>
-    <text x="304" y="68" text-anchor="middle" fill="#fff" font-size="9.5">Design</text>
-    <text x="424" y="52" text-anchor="middle" fill="#fff" font-weight="700" font-size="13">D</text>
-    <text x="424" y="68" text-anchor="middle" fill="#fff" font-size="9.5">Build</text>
-    <text x="544" y="52" text-anchor="middle" fill="#fff" font-weight="700" font-size="13">E</text>
-    <text x="544" y="68" text-anchor="middle" fill="#fff" font-size="9.5">Verify</text>
-    <text x="664" y="52" text-anchor="middle" fill="#fff" font-weight="700" font-size="13">F</text>
-    <text x="664" y="68" text-anchor="middle" fill="#fff" font-size="9.5">Release</text>
+    <text x="64" y="48" text-anchor="middle" fill="#fff" font-weight="700" font-size="9.5">Discover /</text>
+    <text x="64" y="60" text-anchor="middle" fill="#fff" font-weight="700" font-size="9.5">prioritize</text>
+    <text x="64" y="74" text-anchor="middle" fill="#fff" font-size="8">(A)</text>
+    <text x="184" y="52" text-anchor="middle" fill="#fff" font-weight="700" font-size="12">Specify</text>
+    <text x="184" y="68" text-anchor="middle" fill="#fff" font-size="8">(B)</text>
+    <text x="304" y="52" text-anchor="middle" fill="#fff" font-weight="700" font-size="12">Design</text>
+    <text x="304" y="68" text-anchor="middle" fill="#fff" font-size="8">(C)</text>
+    <text x="424" y="52" text-anchor="middle" fill="#fff" font-weight="700" font-size="12">Build</text>
+    <text x="424" y="68" text-anchor="middle" fill="#fff" font-size="8">(D)</text>
+    <text x="544" y="52" text-anchor="middle" fill="#fff" font-weight="700" font-size="12">Verify</text>
+    <text x="544" y="68" text-anchor="middle" fill="#fff" font-size="8">(E)</text>
+    <text x="664" y="52" text-anchor="middle" fill="#fff" font-weight="700" font-size="12">Release</text>
+    <text x="664" y="68" text-anchor="middle" fill="#fff" font-size="8">(F)</text>
   </g>
   <text x="390" y="94" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8.5" fill="#708090">Iterate as needed — not always strictly linear</text>
 </svg>
