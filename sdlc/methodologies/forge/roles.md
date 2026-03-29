@@ -73,7 +73,7 @@ In smaller teams (especially solo practitioners), one person holds multiple hats
 
 1. **Declare the hat.** Before a decision, state which perspective you are prioritizing. In conversation or commits, prefix with the hat: `[Product]`, `[Engineering]`, `[Challenge]`, `[Governance]`.
 2. **Separate the concerns.** Do not mix "should we build this?" (Product) with "how should we build this?" (Engineering) without marking the transition.
-3. **Use Versonas for hats you are not wearing.** When deep in Engineering, invoke a Versona agent for the Product or Challenge perspective you might neglect.
+3. **Use Versonas for hats you are not wearing.** When deep in Engineering, invoke a **discipline Versona** for the Product or Challenge perspective you might neglect.
 4. **Log hat-switching decisions.** When a hat-switch changes direction (e.g., Engineering hat overrules Product hat on feasibility), capture the trade-off in the Ember Log.
 
 ## 3. Scaling model

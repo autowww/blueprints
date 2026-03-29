@@ -21,6 +21,8 @@ alt: Diagram
 | **Activity** | One **unit of Versona work** inside a **session** (e.g. one §5-shaped report, a draft artifact step, a routing suggestion, one sub-step of a larger process). Same concept if your team says “job”; this doc uses **activity** only. |
 | **Process template** | A named, repeatable **sequence** of activities, optional **human gates**, and optional **handoffs** to another Versona or to a recipe. |
 | **Session** | One user-visible “call”: a folder (or linked set of files) holding context, artifacts, and pointers to logs. A session may contain **multiple** activities. |
+| **Challenge pass** (informal) | A **session** (or **activity**) where the team uses the **§5 structured discipline review** shape from [`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md) §5 to pressure-test a work item—**one** possible session type, not the definition of “Versona.” |
+| **Human reviewer / SME** | People participating in reviews or peer challenge; **not** a Versona (Versona = virtual persona). |
 
 ---
 
