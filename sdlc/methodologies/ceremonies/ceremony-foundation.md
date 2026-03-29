@@ -142,6 +142,7 @@ Methodology-neutral **hints** for running or replacing ceremonies. For **named**
 3. **Git is not the ceremony** — Commits support **C3/C4/C6** narratives; **Sprint Goals**, **blockers**, **acceptance**, and **sign-offs** usually need **ALM, board, or compliance** records—see [Scrum fork](https://forgesdlc.com/methodology-scrum.html) table “What git approximates.”
 4. **One pipeline for identity** — Repos using the tracking foundation keep **Contributor** in the **event stream**; ceremony attendance does not replace **work-unit linkage** in commits when that is your convention.
 5. **Avoid duplicate foundations** — Do not invent parallel “ceremony taxonomies” per team; add **project** notes in `sdlc/`, not new blueprint intent types, unless you extend this file deliberately.
+6. **Fork cadence complements decision-triggered work** — **Methodology forks** (e.g. Forge) name **recurring** events and typical **cadence** for covering C1–C6. **Decision-triggered** sessions (e.g. discipline Versonas) address specific gates; they **complement** that cadence and are not a substitute for **core intents** such as **C3 sync** or **C5 improve** unless the team **explicitly** merges them in policy.
 
 ---
 

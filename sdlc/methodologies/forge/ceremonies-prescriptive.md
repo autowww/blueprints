@@ -101,6 +101,8 @@ Default iteration length: **1 week** (configurable to 2 weeks for exploratory wo
 
 **Prescriptive rule:** The Charge should be intentionally smaller than theoretical capacity, leaving room for interruption, rework, and learning.
 
+**Same-day follow-up:** When the sync surfaces a blocker, a need for replanning, or a **discipline Versona**, schedule a **separate, time-boxed** session afterward—analogous to the Scrum Guide’s Daily Scrum plus optional follow-on collaboration. **Do not** add standing **extra** sync meetings that only repeat status without new decisions or outcomes.
+
 ---
 
 ## 4. Review (evidence assessment)

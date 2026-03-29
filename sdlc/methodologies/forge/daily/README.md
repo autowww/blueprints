@@ -2,6 +2,8 @@
 
 Templates and Cursor rule for the daily Forge workflow: Charge management, Ember Log maintenance, and day journaling.
 
+The **daily sync** ceremony (**C3** — sync progress) confirms the Charge and surfaces blockers; see [§3 Daily sync (Charge confirmation)](../ceremonies-prescriptive.md#3-daily-sync-charge-confirmation) in the prescriptive ceremonies package.
+
 ## How the three artifacts work together
 
 | Artifact | Purpose | Cadence | Location (consuming repo) |

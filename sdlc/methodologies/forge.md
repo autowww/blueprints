@@ -101,7 +101,7 @@ Forge must never add more ceremony than it removes waste. Key tenets:
 - **Charge is a view, not a board.** Label or filter, not a separate tracking surface.
 - **Scale formality to risk.** Solo: self-assessment checklist. Enterprise: gate meeting.
 - **Defer tooling until volume demands it.** Start with journal + git; add dashboards later.
-- **No new meetings.** Standard ceremony names, Forge mechanics inside.
+- **No shadow rituals.** Standard Forge ceremony names and mechanics inside—no parallel standing meetings for the same intent.
 
 ---
 
