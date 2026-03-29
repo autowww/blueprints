@@ -94,7 +94,7 @@ Quick reference — which techniques to reach for at each phase:
 |-------|------------------------|
 | **P1 Discover Problem** | Interviews, observation, document analysis, SWOT, PESTLE, benchmarking, stakeholder analysis, root cause analysis, process modeling |
 | **P2 Validate Solution** | Prototyping, workshops, use case modeling, user stories, feasibility analysis, risk analysis, reviews, acceptance criteria |
-| **P3 Strategize** | Decision analysis, business model canvas, cost-benefit analysis, MoSCoW, scope modeling, RACI, estimation, weighted scoring, traceability matrix |
+| **P3 Plan & Commit** | Decision analysis, business model canvas, cost-benefit analysis, MoSCoW, scope modeling, RACI, estimation, weighted scoring, traceability matrix |
 | **A Discover** | Story mapping, user stories, scope modeling, stakeholder analysis, estimation, backlog management |
 | **B Specify** | Acceptance criteria, use cases, data modeling, state modeling, business rules, NFR analysis, interface analysis, reviews |
 | **C Design** | Decision analysis, feasibility analysis, prototyping, NFR analysis |

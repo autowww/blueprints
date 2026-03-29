@@ -68,7 +68,7 @@ alt: Diagram
 |-------|-------------|----------------|---------|
 | **P1 Discover** | — | Minimal direct involvement; may review testability of proposed concepts | Testability notes (informal) |
 | **P2 Validate** | **Prototype tester** | Usability testing of prototypes; feasibility spike validation; identify high-risk areas | Usability test results, risk-based test scope estimate |
-| **P3 Strategize** | **Quality planner** | Define quality strategy; estimate testing effort; identify non-functional requirements from success criteria | Quality strategy, NFR catalog, test effort estimate |
+| **P3 Plan & Commit** | **Quality planner** | Define quality strategy; estimate testing effort; identify non-functional requirements from success criteria | Quality strategy, NFR catalog, test effort estimate |
 | **P4 Launch** | **Acceptance gatekeeper** | Final acceptance testing; smoke tests in production; canary monitoring | Acceptance sign-off, production smoke results |
 | **P5 Grow** | **Outcome validator** | Monitor production quality metrics; track escaped defects against outcomes; regression analysis | Quality dashboards, escaped defect reports, outcome validation |
 | **P6 Sunset** | **Migration tester** | Test data migration; verify graceful degradation; validate sunset completeness | Migration test results, sunset verification report |
@@ -93,7 +93,7 @@ alt: Diagram
 | Phase(s) | Testing role | PDLC role | SDLC role | Archetype |
 |----------|-------------|-----------|-----------|-----------|
 | **P1–P2** (Discovery) | Testability advisor (lightweight) | PM, UX Researcher | — (upstream) | Demand & value |
-| **P3** (Strategize) | Quality strategy definer | PM, GTM Lead | Owner (entering SDLC) | Steer & govern |
+| **P3** (Plan & Commit) | Quality strategy definer | PM, GTM Lead | Owner (entering SDLC) | Steer & govern |
 | **A–B** (Discover, Specify) | Requirements reviewer, BDD author | — | Owner (priorities), Implementer | Assure & ship |
 | **C** (Design) | Test architect, framework selector | — | Implementer (architecture) | Build & integrate |
 | **D** (Build) | Unit/integration test author, CI gate builder | — | Implementer | Build & integrate |
@@ -218,7 +218,7 @@ The product trio builds a Figma prototype of the checkout flow. QA reviews the p
 
 **Usability test results:** 5/6 participants completed checkout in under 2 minutes. One participant confused by the address auto-complete behavior. Design updated.
 
-### P3 Strategize — quality strategy
+### P3 Plan & Commit — quality strategy
 
 Quality strategy defined based on P3 success metrics:
 - **Functional:** all payment methods (card, ACH, wallet) must pass end-to-end

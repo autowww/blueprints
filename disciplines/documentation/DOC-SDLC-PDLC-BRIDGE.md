@@ -66,7 +66,7 @@ Documentation is **continuous** across all lifecycle phases — every phase prod
 |-------|-------------------|----------------|---------|
 | **P1 Discover** | **Knowledge capturer** | Document problem space research, user interviews, competitive analysis; capture discovery insights | Discovery reports, interview summaries, problem statements |
 | **P2 Validate** | **Experiment recorder** | Document hypotheses, experiment designs, validation results, pivot decisions | Experiment logs, validation learnings, decision records |
-| **P3 Strategize** | **Strategy communicator** | Create strategy decks, roadmap docs, market briefs, white papers; plan documentation needs for target audience | Strategy presentations, roadmap docs, documentation plan, content strategy |
+| **P3 Plan & Commit** | **Strategy communicator** | Create strategy decks, roadmap docs, market briefs, white papers; plan documentation needs for target audience | Strategy presentations, roadmap docs, documentation plan, content strategy |
 | **A Discover** | **Requirements documenter** | Document user stories, acceptance criteria, non-functional requirements; draft data dictionaries | Requirements docs, user stories, NFR catalog |
 | **B Specify** | **Specification author** | Write detailed specs, create wireframe annotations, document data models and API contracts | Specifications, API contracts (OpenAPI/AsyncAPI), data dictionaries |
 | **C Design** | **Architecture documenter** | Create/update architecture docs (C4, arc42), write ADRs, document design decisions and trade-offs | ADRs, architecture diagrams, design docs |

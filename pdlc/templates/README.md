@@ -4,7 +4,7 @@ Copy-paste starters for product lifecycle artifacts. Copy into your project's `d
 
 | Template | PDLC phase | Purpose |
 |----------|-----------|---------|
-| [`PRODUCT-VISION.template.md`](PRODUCT-VISION.template.md) | P3 Strategize | Product vision, target audience, value proposition, success criteria |
+| [`PRODUCT-VISION.template.md`](PRODUCT-VISION.template.md) | P3 Plan & Commit | Product vision, target audience, value proposition, success criteria |
 | [`MARKET-ANALYSIS.template.md`](MARKET-ANALYSIS.template.md) | P1 Discover | Market sizing (TAM/SAM/SOM), segmentation, dynamics, regulatory landscape |
 | [`COMPETITIVE-ANALYSIS.template.md`](COMPETITIVE-ANALYSIS.template.md) | P1 Discover | Competitor inventory, feature comparison, positioning, differentiation, moats |
 | [`WBS.template.md`](WBS.template.md) | P3, SDLC-A | Work breakdown structure: Themes → Epics → Stories → Tasks with Forge ID mapping |

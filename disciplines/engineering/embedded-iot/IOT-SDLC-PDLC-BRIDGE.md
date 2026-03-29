@@ -33,7 +33,7 @@ Embedded/IoT engineering extends standard SDLC with hardware-software co-design,
 |-------|--------------|----------------|---------|
 | **P1 Discover** | **Feasibility assessor** | Evaluate hardware constraints, sensor availability, connectivity options, power budget | Feasibility report, component shortlist |
 | **P2 Validate** | **Prototype builder** | Hardware prototype (dev board), proof-of-concept firmware, sensor integration test | Working prototype, power measurements |
-| **P3 Strategize** | **Platform architect** | RTOS selection, SoC/MCU selection, connectivity stack, safety certification scope, BOM cost | Platform ADR, BOM estimate, certification plan |
+| **P3 Plan & Commit** | **Platform architect** | RTOS selection, SoC/MCU selection, connectivity stack, safety certification scope, BOM cost | Platform ADR, BOM estimate, certification plan |
 | **A Discover** | **System designer** | Hardware-software interface definition; partition responsibilities between edge and cloud | System architecture, HW/SW interface spec |
 | **B Specify** | **Firmware specifier** | Real-time requirements (WCET, jitter), memory budget, power budget, protocol selection | Firmware requirements, timing spec, memory map |
 | **C Design** | **HAL/BSP designer** | Hardware Abstraction Layer, Board Support Package, driver architecture, RTOS task design | HAL API, task graph, interrupt map |

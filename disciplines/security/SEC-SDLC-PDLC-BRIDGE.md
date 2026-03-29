@@ -65,7 +65,7 @@ Security integrates into both lifecycles as a shift-left discipline — embeddin
 |-------|--------------|----------------|---------|
 | **P1 Discover** | **Risk identifier** | Identify data sensitivity in proposed problem space; regulatory landscape scan | Data classification draft, regulatory applicability matrix |
 | **P2 Validate** | **Trust assessor** | Evaluate trust implications of solution concepts; identify authentication/privacy needs | Trust requirements, privacy impact assessment (draft) |
-| **P3 Strategize** | **Compliance scoper** | Define compliance requirements; security budget; penetration testing cadence | Compliance requirements doc, security investment plan |
+| **P3 Plan & Commit** | **Compliance scoper** | Define compliance requirements; security budget; penetration testing cadence | Compliance requirements doc, security investment plan |
 | **A Discover** | **Security requirements analyst** | Elicit security requirements; identify abuse cases; map data flows | Security requirements, abuse case catalog |
 | **B Specify** | **Threat modeler** | STRIDE/PASTA threat modeling on specified design; security acceptance criteria | Threat model, security-specific acceptance criteria |
 | **C Design** | **Secure architect** | Authentication/authorization design; encryption approach; network segmentation; API security | Security architecture document, crypto design, zero-trust boundaries |

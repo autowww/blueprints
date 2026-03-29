@@ -66,7 +66,7 @@ The **SDLC** connection is essential: CS at scale depends on **support tooling**
 |-------|---------|----------------|---------|
 | **P1 Discover** | **VoC partner** | Mine support themes, churn interviews, community signals; frame outcome hypotheses | Problem themes, jobs-to-be-done evidence, segment pain inventory |
 | **P2 Validate** | **Pilot success designer** | Define pilot success criteria with design partners; measure TTV in controlled cohorts | Pilot scorecards, onboarding requirements for MVP |
-| **P3 Strategize** | **Coverage & economics partner** | Model CS coverage (high/low touch), support SLAs by tier, success KPIs in business case | Operating model proposal, entitlements vs. promises alignment |
+| **P3 Plan & Commit** | **Coverage & economics partner** | Model CS coverage (high/low touch), support SLAs by tier, success KPIs in business case | Operating model proposal, entitlements vs. promises alignment |
 | **A Discover** | **Requirements stakeholder** | Specify needs for health telemetry, admin tools, in-app help, integrations | CS epics / FRs for instrumentation and tooling |
 | **B Specify** | **Workflow co-owner** | Ticket taxonomy, escalation rules, CRM/CS platform fields, success-plan templates | Specs for support and CS workflows; data contracts |
 | **C Design** | **UX partner for help surfaces** | Help center IA, in-app guidance flows, error messages that reduce tickets | Designs for self-service and recovery paths |

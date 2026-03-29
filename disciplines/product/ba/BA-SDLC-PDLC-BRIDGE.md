@@ -76,7 +76,7 @@ alt: Diagram
 | Analyze current state | P1 (Discover) | — | Document existing capabilities, processes, pain points, organizational context |
 | Define future state | P1–P2 | — | Articulate desired outcomes, capability gaps, opportunity definition |
 | Assess risks | P2–P3 | — | Identify risks to change success (organizational, technical, market) |
-| Define change strategy | P3 (Strategize) | — | Recommend solution approach, scope boundaries, transition needs |
+| Define change strategy | P3 (Plan & Commit) | — | Recommend solution approach, scope boundaries, transition needs |
 | Define solution scope | P3 | A (Discover) | Delineate what is in/out of scope for the delivery team |
 
 ### Elicitation & Collaboration
@@ -129,7 +129,7 @@ alt: Diagram
 | Phase(s) | BA Role | PDLC Role | SDLC Role | Archetype |
 |----------|---------|-----------|-----------|-----------|
 | **P1–P2** (Discovery) | Elicitation lead, stakeholder analyst | PM, UX Researcher | — (upstream) | Demand & value |
-| **P3** (Strategize) | Requirements owner, scope definer | PM, GTM Lead | Owner (entering SDLC) | Demand & value + Steer & govern |
+| **P3** (Plan & Commit) | Requirements owner, scope definer | PM, GTM Lead | Owner (entering SDLC) | Demand & value + Steer & govern |
 | **A–B** (Discover, Specify) | Requirements analyst, modeler | — | Owner (priorities), Implementer (specs) | Build & integrate |
 | **C** (Design) | Design option evaluator | — | Implementer (architecture) | Build & integrate |
 | **D–E** (Build, Verify) | Acceptance criteria verifier | — | Implementer, QA | Assure & ship |
@@ -159,7 +159,7 @@ This table maps commonly used BA techniques to lifecycle phases. The full catalo
 |-----------------|---------------------------|
 | **P1 Discover Problem** | Stakeholder analysis, interviews, observation, document analysis, SWOT analysis, benchmarking, focus groups |
 | **P2 Validate Solution** | Prototyping, use case modeling, user stories, process modeling, acceptance criteria definition, MoSCoW prioritization |
-| **P3 Strategize** | Business case development, decision analysis, scope modeling, risk analysis, estimation, stakeholder mapping |
+| **P3 Plan & Commit** | Business case development, decision analysis, scope modeling, risk analysis, estimation, stakeholder mapping |
 | **A Discover** | Backlog refinement, user story mapping, story decomposition, acceptance criteria writing |
 | **B Specify** | Use cases, data modeling, state diagrams, business rules analysis, interface analysis, non-functional requirements analysis |
 | **C Design** | Design option evaluation, trade-off analysis, architectural constraint analysis, feasibility assessment |

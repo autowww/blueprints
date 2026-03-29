@@ -53,7 +53,7 @@ Design Thinking maps most strongly to PDLC P1–P2 (pre-build discovery and vali
 |------------|------------------------|------------|
 | **P1 Discover Problem** | **Empathize** + **Define** | User research, empathy mapping, problem framing, "How Might We" synthesis |
 | **P2 Validate Solution** | **Ideate** + **Prototype** + **Test** | Brainstorming, rapid prototyping, usability testing, concept validation |
-| **P3 Strategize** | Outputs inform strategy | Validated problem statement and solution concept feed vision, OKRs, business case |
+| **P3 Plan & Commit** | Outputs inform strategy | Validated problem statement and solution concept feed vision, OKRs, business case |
 | **SDLC C Design** | **Prototype** (refined) | Higher-fidelity design artifacts inform engineering design phase |
 | **P5 Grow** | **Empathize** + **Test** (continuous) | Post-launch user research and testing for iteration |
 

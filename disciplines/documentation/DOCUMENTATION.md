@@ -73,7 +73,7 @@ This document maps the core concerns of **Documentation** for digital products â
 | **Feature documentation** | Detailed descriptions of individual features | Users, support, sales | P4 Launch |
 | **Journey maps** | Document user flows through the product | UX, product, engineering | P1 Discover, B Specify |
 | **Data dictionaries** | Define data entities, fields, types, relationships | Data engineers, analysts, developers | B Specify, C Design |
-| **Capability docs** | High-level descriptions of product capabilities and boundaries | Stakeholders, sales | P3 Strategize |
+| **Capability docs** | High-level descriptions of product capabilities and boundaries | Stakeholders, sales | P3 Plan & Commit |
 
 ### 2.5 Content and media
 
@@ -87,7 +87,7 @@ This document maps the core concerns of **Documentation** for digital products â
 | **Video scripts** | Structured scripts for product demos, tutorials, explainers | Users, prospects | P4 Launch, P5 Grow |
 | **Newsletters** | Regular updates to subscribers â€” features, tips, news | Users, community | P5 Grow |
 | **Social media content** | Short-form content for engagement and awareness | Community, prospects | P4 Launch, P5 Grow |
-| **White papers / case studies** | In-depth analysis or customer success stories for credibility | Decision-makers, enterprise buyers | P3 Strategize, P5 Grow |
+| **White papers / case studies** | In-depth analysis or customer success stories for credibility | Decision-makers, enterprise buyers | P3 Plan & Commit, P5 Grow |
 
 ### 2.6 Governance and compliance documentation
 

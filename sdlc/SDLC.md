@@ -2,7 +2,7 @@
 
 This describes a **generic** delivery flow and **which documentation** to update at each step. It pairs with [`DOCUMENTATION-STRUCTURE.md`](DOCUMENTATION-STRUCTURE.md) (where files live, including the optional **milestone → epic → story → task** hierarchy in §2.1) and your project’s **own** requirements or backlog convention (where you keep epics, stories, and IDs).
 
-**PDLC (product lifecycle):** This SDLC covers **how to build the product right** — phases A–F from requirements through release. The **Product Development Life Cycle** ([`blueprints/pdlc/`](../pdlc/README.md)) covers **building the right product** — problem discovery, solution validation, strategy, go-to-market, growth, and sunset. SDLC phases A–F sit **inside** the PDLC as the Build & Release engine. See [`PDLC-SDLC-BRIDGE.md`](../pdlc/PDLC-SDLC-BRIDGE.md) for phase alignment, artifact handoffs, role mapping, and a worked example.
+**PDLC (product lifecycle):** This SDLC covers **how to build the product right** — phases A–F from requirements through release. The **Product Development Life Cycle** ([`blueprints/pdlc/`](../pdlc/README.md)) covers **building the right product** — problem discovery, solution validation, planning and commitment, go-to-market, growth, and sunset. SDLC phases A–F sit **inside** the PDLC as the Build & Release engine. See [`PDLC-SDLC-BRIDGE.md`](../pdlc/PDLC-SDLC-BRIDGE.md) for phase alignment, artifact handoffs, role mapping, and a worked example.
 
 **Methodology depth (Scrum, Kanban, XP, phased, Lean, Spiral, V-Model, DevOps, SAFe, FDD, Crystal, DSDM, Shape Up, DA, BDD, RAD, Agile, agentic SDLC):** see [`methodologies/README.md`](methodologies/README.md) — full guides with external links and adoption notes.
 

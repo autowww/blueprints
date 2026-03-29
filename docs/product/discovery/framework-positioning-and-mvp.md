@@ -1,7 +1,7 @@
 # Framework positioning and first MVP — Blueprints
 
 **Status:** Draft (from spike **SPIKE-BP-ROADMAP-MVP**, 2026-03-27)  
-**PDLC:** P1–P3 slice (discover → strategize) for the *framework as product*  
+**PDLC:** P1–P3 slice (discover → plan & commit) for the *framework as product*  
 **Related:** [`../plans/mvp-adoption-spine.md`](../plans/mvp-adoption-spine.md) · [`../../ROADMAP.md`](../../ROADMAP.md) · [`../../ADOPTION.md`](../../ADOPTION.md)
 
 ---

@@ -36,7 +36,7 @@ alt: Diagram
 
 | Layer | Question it answers | Source of content | PDLC phase |
 |-------|-------------------|-------------------|------------|
-| **Outcome** | What measurable result do we want? | Product strategy, OKRs, P3 success metrics | P3 Strategize |
+| **Outcome** | What measurable result do we want? | Product strategy, OKRs, P3 success metrics | P3 Plan & Commit |
 | **Opportunities** | What customer needs could drive that outcome? | User interviews, analytics, support data (P1 evidence) | P1 Discover Problem |
 | **Solutions** | What could we build to address this opportunity? | Ideation, design thinking, competitive analysis | P2 Validate Solution |
 | **Experiments** | How do we know this solution works? | Lean Startup experiments, usability tests, A/B tests | P2 Validate Solution |
@@ -57,7 +57,7 @@ alt: Diagram
 |------------|---------------------|----------|
 | **P1 Discover Problem** | **Opportunities** | User interviews and data analysis populate the opportunity branches |
 | **P2 Validate Solution** | **Solutions** + **Experiments** | Ideation generates solution branches; experiments validate them |
-| **P3 Strategize** | **Outcome** | Strategic goals define the tree's root outcome |
+| **P3 Plan & Commit** | **Outcome** | Strategic goals define the tree's root outcome |
 | **SDLC A–F** | **Solutions** (validated) | Validated solutions with successful experiments become backlog items |
 | **P5 Grow** | All layers | Usage data reveals new opportunities; A/B tests are experiments; iteration updates solutions |
 

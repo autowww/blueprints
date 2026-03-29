@@ -45,7 +45,7 @@ alt: Diagram
 | Identify stakeholders | Stakeholder register: interests, influence, engagement strategy |
 | Define success criteria | Measurable criteria that determine project completion |
 
-**PDLC connection:** Initiating receives the funded initiative from PDLC Phase P3 (Strategize). The project charter references the validated problem, solution concept, and success metrics from P1–P3.
+**PDLC connection:** Initiating receives the funded initiative from PDLC Phase P3 (Plan & Commit). The project charter references the validated problem, solution concept, and success metrics from P1–P3.
 
 ### Planning
 
@@ -218,8 +218,8 @@ alt: Diagram
 
 | Phase | PM focus | PDLC overlap | SDLC overlap |
 |-------|----------|--------------|--------------|
-| **Feasibility** | Is this project worth doing? Business case, high-level estimates. | P1–P3 (Discover, Validate, Strategize) | — |
-| **Initiation** | Charter, stakeholder register, PM assignment, authorization. | P3 (Strategize) output triggers initiation. | — |
+| **Feasibility** | Is this project worth doing? Business case, high-level estimates. | P1–P3 (Discover, Validate, Plan & Commit) | — |
+| **Initiation** | Charter, stakeholder register, PM assignment, authorization. | P3 (Plan & Commit) output triggers initiation. | — |
 | **Planning** | Detailed scope, schedule, budget, risk, quality, comms plans. | — | Phase A (Discover) overlaps for scope decomposition. |
 | **Execution** | Direct work, manage team, coordinate deliverables. | — | Phases A–F (full SDLC delivery). |
 | **Closing** | Formal acceptance, lessons learned, resource release. | P4 (Launch) — project closes, product continues. | Phase F (Release) — technical release precedes or coincides with project closure. |

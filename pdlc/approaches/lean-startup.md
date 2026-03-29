@@ -64,7 +64,7 @@ Not all MVPs require code. Choose based on what you need to learn:
 |------------|----------------------|
 | **P1 Discover Problem** | **Problem interviews** and **Customer Discovery** (Blank) — validate that the problem exists and matters |
 | **P2 Validate Solution** | **Build-Measure-Learn** loops: MVP experiments, usability tests, concept validation — validate that the solution addresses the problem |
-| **P3 Strategize** | **Innovation accounting**: define success metrics, establish baseline, set targets that indicate product-market fit |
+| **P3 Plan & Commit** | **Innovation accounting**: define success metrics, establish baseline, set targets that indicate product-market fit |
 | **SDLC A–F** | Build the validated solution. Lean Startup's "Build" phase for production (vs experiments) |
 | **P4 Launch** | **Customer Creation** (Blank) — test go-to-market channels, pricing, positioning |
 | **P5 Grow** | **Ongoing Build-Measure-Learn**: A/B tests, feature experiments, retention optimization. Pivot/persevere at product level. |

@@ -243,7 +243,7 @@ Full detail: [`SDLC.md`](SDLC.md). **PDLC context:** [`blueprints/pdlc/PDLC-SDLC
 
 | Phase | Typical documentation | PDLC context |
 |-------|------------------------|--------------|
-| **Discover / ideate** | WBS/backlog (and optional high-level planning doc); optional notes in `architecture/` or ADR draft. | Receives validated problem + solution from PDLC P3 Strategize. |
+| **Discover / ideate** | WBS/backlog (and optional high-level planning doc); optional notes in `architecture/` or ADR draft. | Receives validated problem + solution from PDLC P3 Plan & Commit. |
 | **Specify** | Story acceptance criteria; risks; themes row if used. | Acceptance criteria reflect PDLC P3 success metrics. |
 | **Design** | Story/epic detail or ADR if cross-cutting. | Informed by PDLC P2 feasibility assessment. |
 | **Build** | Task notes; API comments; backlog status; CI config; optional test plan; optional **agents** recipes under `agents/` when `blueprints/agents/` is adopted. | — |

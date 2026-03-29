@@ -80,7 +80,7 @@ alt: Diagram
 |------------|-------------|--------------|
 | **P1 Discover Problem** | — | **Upstream** of SDLC. No engineering commitment yet. Product trio validates that a problem exists. |
 | **P2 Validate Solution** | — | **Upstream** of SDLC. Prototypes and experiments, not production code. Tech Lead contributes feasibility, not implementation. |
-| **P3 Strategize** | — | **Upstream** of SDLC. Outputs become SDLC Phase A inputs: validated problem, solution concept, success metrics, resources. |
+| **P3 Plan & Commit** | — | **Upstream** of SDLC. Outputs become SDLC Phase A inputs: validated problem, solution concept, success metrics, resources. |
 | — | **A Discover** | Receives P3 outputs. PM becomes **Owner** per [`SDLC.md`](../sdlc/SDLC.md) §1. Backlog items created from validated intent. |
 | — | **B Specify** | Acceptance criteria reflect P3 success metrics, not just functional requirements. |
 | — | **C Design** | Informed by P2 feasibility assessment and architectural constraints surfaced during validation. |
@@ -95,7 +95,7 @@ alt: Diagram
 
 The boundary between PDLC and SDLC is not a hard wall — it's a **gradient**:
 
-- **SDLC Phase A (Discover)** overlaps with **PDLC P3 (Strategize)**: both involve prioritization, but P3 asks "should we build this?" while Phase A asks "how do we break this into deliverable work?"
+- **SDLC Phase A (Discover)** overlaps with **PDLC P3 (Plan & Commit)**: both involve prioritization, but P3 asks "should we build this?" while Phase A asks "how do we break this into deliverable work?"
 - **SDLC Phase F (Release)** overlaps with **PDLC P4 (Launch)**: release is a technical event; launch is a market event. In simple products, they are the same moment. In complex products, release may precede launch by weeks (beta periods, staged rollouts).
 - **PDLC P5 (Grow)** feeds **SDLC Phase A** continuously: growth insights become backlog items, creating a loop rather than a one-way flow.
 
@@ -108,7 +108,7 @@ The boundary between PDLC and SDLC is not a hard wall — it's a **gradient**:
 | Phase(s) | Primary roles | SDLC equivalent | Blueprint archetype |
 |----------|---------------|------------------|---------------------|
 | **P1–P2** (Discovery) | Product Manager, UX Researcher, Designer, Tech Lead | — (upstream of SDLC) | **Demand & value** (extended with design + feasibility) |
-| **P3** (Strategize) | Product Manager, GTM Lead, Finance/Exec sponsor | **Owner** (when entering SDLC) | **Demand & value** + **Steer & govern** |
+| **P3** (Plan & Commit) | Product Manager, GTM Lead, Finance/Exec sponsor | **Owner** (when entering SDLC) | **Demand & value** + **Steer & govern** |
 | **A–F** (SDLC) | Owner, Implementer | Owner, Implementer per [`SDLC.md`](../sdlc/SDLC.md) §1 | **Build & integrate**, **Assure & ship**, **Flow & improvement** |
 | **P4** (Launch) | GTM Lead, Product Manager, Support Lead, Marketing | — (downstream of SDLC) | **Demand & value** (market-facing) |
 | **P5** (Grow) | Product Manager, Data/Analytics, Growth Engineer | **Owner** (for iteration backlog) | **Demand & value** + **Assure & ship** (metrics) |
@@ -122,7 +122,7 @@ The **product trio** (PM + Designer + Tech Lead) is the cross-functional unit th
 |----------------|----------|----------------|-----------------|
 | **P1 Discover** | Problem prioritization, stakeholder alignment | User research support, empathy mapping | Domain feasibility, data availability |
 | **P2 Validate** | Hypothesis framing, experiment design | Prototyping, usability testing | Feasibility spikes, architecture constraints |
-| **P3 Strategize** | Vision, OKRs, business case | Solution refinement, UX strategy | Technical roadmap, risk assessment |
+| **P3 Plan & Commit** | Vision, OKRs, business case | Solution refinement, UX strategy | Technical roadmap, risk assessment |
 | **SDLC A–F** | Owner (priorities, acceptance) | UI/UX spec support | Technical leadership, code review |
 | **P4–P5** | Outcome measurement, iteration priority | UX iteration, feedback synthesis | Performance, scalability, experimentation infrastructure |
 
@@ -132,7 +132,7 @@ The **product trio** (PM + Designer + Tech Lead) is the cross-functional unit th
 
 ### PDLC → SDLC (entering build)
 
-These artifacts cross from **P3 Strategize** into **SDLC Phase A (Discover)**:
+These artifacts cross from **P3 Plan & Commit** into **SDLC Phase A (Discover)**:
 
 | Artifact | From (PDLC) | To (SDLC) | Example |
 |----------|-------------|-----------|---------|
@@ -278,7 +278,7 @@ They build **Figma prototypes** for all three and run **usability tests** with 6
 
 **Gate G2 decision: GO** — Sample dataset (primary) + deferred connection (secondary) validated for desirability, feasibility, and viability.
 
-### P3 — Strategize
+### P3 — Plan & Commit
 
 **Product vision update:** "Every new user experiences the product's core value within 5 minutes of sign-up."
 

@@ -110,7 +110,7 @@ Estimate the expected benefits of proposed solutions before committing to build.
 |-------|--------|
 | Design options, business objectives, current state baseline | Value assessment (expected benefits, costs, ROI, payback period) |
 
-**PDLC connection:** Value analysis feeds into **PDLC P3 (Strategize)** — it provides the quantitative backbone for the business case and stage gate (G3) decision.
+**PDLC connection:** Value analysis feeds into **PDLC P3 (Plan & Commit)** — it provides the quantitative backbone for the business case and stage gate (G3) decision.
 
 ---
 

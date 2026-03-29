@@ -46,7 +46,7 @@ alt: Diagram
 | **Discover** | Identify process boundaries, stakeholders, inputs/outputs | P1 Discover | — |
 | **Model As-Is** | Document current process in BPMN; capture metrics | P1 Discover | A Discover |
 | **Analyze** | Identify bottlenecks, waste, errors, compliance gaps | P1–P2 | — |
-| **Redesign** | Design target process; evaluate automation opportunities | P2 Validate, P3 Strategize | B Specify, C Design |
+| **Redesign** | Design target process; evaluate automation opportunities | P2 Validate, P3 Plan & Commit | B Specify, C Design |
 | **Implement** | Execute process changes (may include software, training, org change) | SDLC A–F | A–F |
 | **Monitor** | Track process performance against targets; identify further improvements | P5 Grow | — |
 

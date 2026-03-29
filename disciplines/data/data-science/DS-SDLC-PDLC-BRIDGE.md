@@ -37,7 +37,7 @@ Data science extends both lifecycles with predictive capabilities, experimental 
 | Dimension | Data Science | SDLC | PDLC |
 |-----------|--------------|------|------|
 | **Core question** | Can we learn from data to create value (prediction, personalization, automation, insight)? | Are we building the product right (quality, feasibility, release readiness)? | Are we building the right product (desirability, viability, strategy)? |
-| **Scope** | Problem framing, data, modeling, evaluation, deployment patterns, monitoring, responsible AI | Requirements through release: specify, design, build, verify, ship | Problem discovery through growth and sunset: validate, strategize, launch, evolve |
+| **Scope** | Problem framing, data, modeling, evaluation, deployment patterns, monitoring, responsible AI | Requirements through release: specify, design, build, verify, ship | Problem discovery through growth and sunset: validate, plan & commit, launch, evolve |
 | **Primary owner** | Data scientist / ML engineer (often with research or analytics lead); MLOps for production path | Engineering / delivery team; QA; release management | Product manager / product trio; leadership at stage gates |
 | **Timeline** | Experiment cycles and model iterations (days to weeks); retraining and drift cadence (ongoing) | Sprint / iteration / release train | Product lifetime (quarters to years) |
 | **Success metric** | Predictive quality plus business lift (precision/recall, calibration, uplift), latency/cost SLAs, fairness and explainability targets | Defect rate, CI/CD health, DORA, on-time release, non-functional compliance | Adoption, retention, revenue, experiment win rate, strategic outcomes |
@@ -66,7 +66,7 @@ Data science extends both lifecycles with predictive capabilities, experimental 
 |-------|-------------------|----------------|---------|
 | **P1 Discover** | **Pattern finder** | Exploratory data analysis on existing data; identify ML opportunities; assess data availability | EDA reports, ML opportunity assessment |
 | **P2 Validate** | **Hypothesis tester** | Build ML prototypes to validate product hypotheses; feasibility spikes for ML-powered features | Prototype models, feasibility assessment, data gap analysis |
-| **P3 Strategize** | **ML strategist** | Define ML success metrics; estimate data/compute requirements; build-vs-buy for ML capabilities | ML requirements, resource estimates, vendor assessment |
+| **P3 Plan & Commit** | **ML strategist** | Define ML success metrics; estimate data/compute requirements; build-vs-buy for ML capabilities | ML requirements, resource estimates, vendor assessment |
 | **A Discover** | **Problem framer** | Translate business requirements into ML problems; define features and labels; success criteria | ML problem definition, feature candidates, evaluation plan |
 | **B Specify** | **Data specifier** | Specify training data requirements; define feature engineering pipeline; model performance SLA | Data specifications, feature definitions, model SLA |
 | **C Design** | **Model architect** | Select model architecture; design training pipeline; plan experiment infrastructure | Model architecture, training pipeline design, experiment plan |

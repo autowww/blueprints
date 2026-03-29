@@ -5,7 +5,7 @@
   A business case justifies the investment in an initiative by quantifying
   costs, benefits, risks, and alternatives.
   See blueprints/ba/knowledge-areas/strategy-analysis.md §1.4 for context.
-  See blueprints/pdlc/PDLC.md Phase P3 (Strategize) for lifecycle context.
+  See blueprints/pdlc/PDLC.md Phase P3 (Plan & Commit) for lifecycle context.
 -->
 
 ## 1. Executive summary

@@ -74,7 +74,7 @@ The default relationship is **nesting**: PDLC wraps PM wraps SDLC.
 ```
 ┌─────────────────────────────────────────────────────────┐
 │  PDLC: Product Development Life Cycle                   │
-│  P1 Discover → P2 Validate → P3 Strategize             │
+│  P1 Discover → P2 Validate → P3 Plan & Commit             │
 │  ┌───────────────────────────────────────────────────┐  │
 │  │  PM: Project Management                           │  │
 │  │  Initiate → Plan → Execute → Monitor → Close      │  │
@@ -118,7 +118,7 @@ alt: Diagram
 |------|----|----- |--------------|
 | **P1 Discover Problem** | — | — | Upstream of both PM and SDLC. No project exists yet. |
 | **P2 Validate Solution** | — | — | Still upstream. Feasibility spikes may involve engineering, but no formal project. |
-| **P3 Strategize** | **Initiate** | — | PDLC gates the decision to invest. PM Initiation creates the project charter from P3 outputs. |
+| **P3 Plan & Commit** | **Initiate** | — | PDLC gates the decision to invest. PM Initiation creates the project charter from P3 outputs. |
 | — | **Plan** | **A Discover** | PM creates the WBS, schedule, budget. SDLC Phase A decomposes scope into backlog items. These overlap: scope definition serves both. |
 | — | **Execute + Monitor** | **A–F** | PM governs while SDLC delivers. PM tracks schedule/budget/risk; SDLC tracks velocity/quality/CI. |
 | — | **Close** | **F Release** | SDLC releases the increment. PM obtains formal acceptance and closes the project. |
@@ -135,7 +135,7 @@ alt: Diagram
 | Phase(s) | PDLC role | PM role | SDLC role |
 |----------|-----------|---------|-----------|
 | **P1–P2** (Discovery) | Product Manager, UX Researcher, Designer, Tech Lead | — | — |
-| **P3** (Strategize) → **PM Initiate** | Product Manager (requests investment) | Sponsor (authorizes), PM (assigned) | — |
+| **P3** (Plan & Commit) → **PM Initiate** | Product Manager (requests investment) | Sponsor (authorizes), PM (assigned) | — |
 | **PM Plan** → **SDLC A–B** | Product Manager (acceptance criteria) | PM (WBS, schedule, budget) | Owner (backlog), Implementer (estimates) |
 | **PM Execute** → **SDLC C–F** | Product trio (engaged via ceremonies) | PM (tracks, reports, manages risk) | Owner + Implementer (build, verify, release) |
 | **PM Close** → **P4 Launch** | Product Manager (GTM) | PM (formal acceptance, lessons learned) | — (deployment done) |

@@ -65,7 +65,7 @@ alt: Diagram
 | **Feature documentation** | [DOCUMENTATION.md §2.4](../DOCUMENTATION.md#24-product-documentation) | Users, support, sales | P4 Launch | Diátaxis (reference) |
 | **Journey maps** | [DOCUMENTATION.md §2.4](../DOCUMENTATION.md#24-product-documentation) | UX, product, engineering | P1 Discover, B Specify | — |
 | **Data dictionaries** | [DOCUMENTATION.md §2.4](../DOCUMENTATION.md#24-product-documentation) | Data engineers, analysts | B Specify, C Design | DMBOK |
-| **Capability docs** | [DOCUMENTATION.md §2.4](../DOCUMENTATION.md#24-product-documentation) | Stakeholders, sales | P3 Strategize | — |
+| **Capability docs** | [DOCUMENTATION.md §2.4](../DOCUMENTATION.md#24-product-documentation) | Stakeholders, sales | P3 Plan & Commit | — |
 
 ### Content and media
 
@@ -79,7 +79,7 @@ alt: Diagram
 | **Video scripts** | [`video-scripts.md`](video-scripts.md) | Users, prospects | P4 Launch, P5 Grow | Captions, accessibility |
 | **Newsletters** | [DOCUMENTATION.md §2.5](../DOCUMENTATION.md#25-content-and-media) | Users, community | P5 Grow | CAN-SPAM, GDPR consent |
 | **Social media content** | [DOCUMENTATION.md §2.5](../DOCUMENTATION.md#25-content-and-media) | Community, prospects | P4 Launch, P5 Grow | Platform guidelines |
-| **White papers / case studies** | [DOCUMENTATION.md §2.5](../DOCUMENTATION.md#25-content-and-media) | Decision-makers, enterprise buyers | P3 Strategize, P5 Grow | — |
+| **White papers / case studies** | [DOCUMENTATION.md §2.5](../DOCUMENTATION.md#25-content-and-media) | Decision-makers, enterprise buyers | P3 Plan & Commit, P5 Grow | — |
 
 ### Governance and compliance documentation
 

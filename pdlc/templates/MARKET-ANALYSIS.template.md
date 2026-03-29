@@ -2,7 +2,7 @@
 
 <!--
   Copy this template into docs/product/discovery/ (or equivalent).
-  Complete during P1 Discover; revisit during P3 Strategize and P5 Grow.
+  Complete during P1 Discover; revisit during P3 Plan & Commit and P5 Grow.
   See blueprints/pdlc/PDLC.md Phase P1 for context.
   See blueprints/disciplines/product/product-management/PRODUCT-MANAGEMENT.md §4 for guidance.
 -->

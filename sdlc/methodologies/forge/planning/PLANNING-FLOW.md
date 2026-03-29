@@ -11,7 +11,7 @@ alt: Diagram
 
 ## Level 1: Business Drivers → Product Sparks
 
-Business drivers come from PDLC P1–P3 (problem discovery, solution validation, strategy). Each driver is decomposed into **Product Sparks** — potentially shippable product iterations.
+Business drivers come from PDLC P1–P3 (problem discovery, solution validation, plan & commit). Each driver is decomposed into **Product Sparks** — potentially shippable product iterations.
 
 | Approach | Product Spark type | Duration | Evidence focus |
 |----------|--------------------|----------|----------------|

@@ -58,7 +58,7 @@
 |------------|-----------------|-----------|
 | **P1 Discover problem** | Feeds Ore pipeline with validated problems | PDLC → Forge |
 | **P2 Validate solution** | Discipline Versona sessions validate feasibility; PoC planning | PDLC ↔ Forge |
-| **P3 Strategize** | Product Sparks (PoC/MVP/Phase) defined; Ingots scoped | PDLC → Forge |
+| **P3 Plan & Commit** | Product Sparks (PoC/MVP/Phase) defined; Ingots scoped | PDLC → Forge |
 | **P4 Launch** | Assay Gate ensures launch readiness; `release:` Sparks | Forge → PDLC |
 | **P5 Grow** | Learning from released work feeds new Ore; metrics feed Versonas | Forge ↔ PDLC |
 | **P6 Sunset** | Deprecation Sparks; migration Ore | Forge → PDLC |

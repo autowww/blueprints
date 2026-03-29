@@ -1,8 +1,12 @@
 # Product development lifecycle (PDLC)
 
+There is **no single universal PDLC phase standard** — Stage-Gate describes a gated new-product-development model; vendors publish different stage counts and labels (for example, seven-stage or six-stage product-development lifecycles). The common pattern is still recognizable: problem discovery, solution validation, business case and planning, development and delivery, launch and commercialization, then post-launch growth or retirement. Forge does **not** claim a new global standard; it adopts one **explicit, mainstream-shaped** variant and states it clearly here.
+
+**Forge’s PDLC in one line:** Discover → Validate → Plan & Commit → [**embedded SDLC:**](https://forgesdlc.com/sdlc-overview.html) Discover / Prioritize → Specify → Design → Build → Verify → Release → Launch → Grow → Mature / Retire — so **P4 Launch** stays standard product language and SDLC remains the Build & Release engine inside the product lifecycle.
+
 This describes a **generic** product lifecycle — from validating that a problem is worth solving, through delivery (via [`SDLC.md`](../sdlc/SDLC.md) phases A–F), to post-launch growth and eventual sunset. It defines **which product artifacts** to produce at each stage and **who** is accountable.
 
-**How PDLC relates to SDLC:** SDLC answers "are we building the product right?" — phases, DoD, CI/CD, ceremonies. PDLC answers "are we building the right product?" — problem validation, strategy, go-to-market, outcome measurement. SDLC sits **inside** PDLC as the Build & Release engine. See [`PDLC-SDLC-BRIDGE.md`](PDLC-SDLC-BRIDGE.md) for the full mapping, diagrams, and worked example.
+**How PDLC relates to SDLC:** SDLC answers "are we building the product right?" — phases, DoD, CI/CD, ceremonies. PDLC answers "are we building the right product?" — problem validation, planning and commitment, go-to-market, outcome measurement. SDLC sits **inside** PDLC as the Build & Release engine. See [`PDLC-SDLC-BRIDGE.md`](PDLC-SDLC-BRIDGE.md) for the full mapping, diagrams, and worked example.
 
 **Discipline bridges:** Cross-cutting disciplines each have a bridge mapping their practices to PDLC P1–P6 and SDLC A–F — see [`BRIDGES.md`](../BRIDGES.md) for the full index, or jump to a specific discipline: [BA](../disciplines/product/ba/BA-SDLC-PDLC-BRIDGE.md) · [PM](../disciplines/governance/pm/PM-SDLC-PDLC-BRIDGE.md) · [Testing](../disciplines/engineering/testing/TESTING-SDLC-PDLC-BRIDGE.md) · [Architecture](../disciplines/engineering/software-architecture/ARCH-SDLC-PDLC-BRIDGE.md) · [DevOps](../disciplines/engineering/devops/DEVOPS-SDLC-PDLC-BRIDGE.md) · [Big Data](../disciplines/data/bigdata/BIGDATA-SDLC-PDLC-BRIDGE.md) · [Data Science](../disciplines/data/data-science/DS-SDLC-PDLC-BRIDGE.md).
 
@@ -82,13 +86,15 @@ alt: Diagram
 | **Feasibility assessment** | Tech Lead's evaluation: technical risk, dependencies, estimated complexity, architectural fit. |
 | **Usability evidence** | Test results showing whether users can achieve goals with the proposed solution. |
 
-**Exit:** At least one solution concept has **evidence** of desirability (users want it), viability (business case exists), feasibility (team can build it), and usability (users can use it). The team is ready to commit strategy and resources.
+**Exit:** At least one solution concept has **evidence** of desirability (users want it), viability (business case exists), feasibility (team can build it), and usability (users can use it). The team is ready to **plan, commit resources, and define success** for the next stage.
 
 **Approaches that help here:** [Design Thinking](https://forgesdlc.com/pdlc-approaches-design-thinking.html) (Ideate + Prototype + Test), [Lean Startup](https://forgesdlc.com/pdlc-approaches-lean-startup.html) (Build-Measure-Learn), [Stage-Gate](https://forgesdlc.com/pdlc-approaches-stage-gate.html) (Gate 2: business case).
 
 ---
 
-### Phase P3 — Strategize
+### Phase P3 — Plan & Commit
+
+> *Business case & plan* — vision, OKRs, roadmap, metrics, GTM, resourcing, and the handoff into SDLC.
 
 **Goal:** Commit organizational resources — budget, people, timeline — to the validated solution. Define success metrics and go-to-market approach.
 
@@ -210,7 +216,7 @@ Between PDLC phases, explicit **go/kill/pivot** decisions prevent wasted investm
 |------|---------|--------------|-------------------|--------|
 | **G1** | P1 → P2 | Is the problem worth solving? | Research synthesis, opportunity size, strategic fit | [Phase P1](#phase-p1--discover-problem) |
 | **G2** | P2 → P3 | Does a viable solution exist? | Validation evidence (desirability + feasibility + viability) | [Phase P2](#phase-p2--validate-solution) |
-| **G3** | P3 → SDLC | Should we invest in building this? | Business case, funded resources, defined success metrics | [Phase P3](#phase-p3--strategize) |
+| **G3** | P3 → SDLC | Should we invest in building this? | Business case, funded resources, defined success metrics | [Phase P3](#phase-p3-plan-commit) |
 | **G4** | SDLC → P4 | Is it ready to launch? | Shippable increment, GTM plan, support readiness | [Phase P4](#phase-p4--launch) |
 | **G5** | P5 → P6 | Should we continue investing? | Outcome metrics vs targets, competitive position, strategic fit | [Phase P5](#phase-p5--grow) |
 

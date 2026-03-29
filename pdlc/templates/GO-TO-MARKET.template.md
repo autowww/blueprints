@@ -2,7 +2,7 @@
 
 <!--
   Copy this template into docs/product/ (or equivalent).
-  Complete during P3 Strategize; execute during P4 Launch.
+  Complete during P3 Plan & Commit; execute during P4 Launch.
   See blueprints/pdlc/PDLC.md Phases P3–P4 for context.
 -->
 

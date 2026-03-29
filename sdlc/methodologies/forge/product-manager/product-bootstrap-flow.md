@@ -79,7 +79,7 @@ alt: Diagram
 
 ## Step 4: Business case
 
-**PDLC phase:** P3 (Strategize) — or P1 for lightweight version
+**PDLC phase:** P3 (Plan & Commit) — or P1 for lightweight version
 
 **Goal:** Justify the investment with costs, benefits, and risks.
 
@@ -97,7 +97,7 @@ alt: Diagram
 
 ## Step 5: Product vision and metrics
 
-**PDLC phase:** P3 (Strategize)
+**PDLC phase:** P3 (Plan & Commit)
 
 **Goal:** Define the product vision, OKRs, and success metrics.
 
@@ -116,7 +116,7 @@ alt: Diagram
 
 ## Step 6: High-level roadmap
 
-**PDLC phase:** P3 (Strategize)
+**PDLC phase:** P3 (Plan & Commit)
 
 **Goal:** Sequence initiatives against the strategy.
 

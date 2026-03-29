@@ -50,7 +50,7 @@ Architecture provides the structural reasoning that connects product vision (PDL
 | Dimension | Architecture | SDLC | PDLC |
 |-----------|--------------|------|------|
 | **Core question** | How should the system be structured to satisfy quality and business needs? | Are we building the product right? | Are we building the right product? |
-| **Scope** | Structure, constraints, evolution — quality attributes, boundaries, decisions, technical debt | Requirements through release — specify, build, verify, ship increments | Problem discovery through sunset — validate, strategize, launch, grow, retire |
+| **Scope** | Structure, constraints, evolution — quality attributes, boundaries, decisions, technical debt | Requirements through release — specify, build, verify, ship increments | Problem discovery through sunset — validate, plan & commit, launch, grow, retire |
 | **Primary owner** | Tech lead / architect / architecture chapter (calibrated by context) | Engineering / delivery team (Owner + Implementer) | Product manager / product trio |
 | **Timeline** | Long-horizon — spans releases; decisions outlive individual projects | Sprint / iteration / release cycle | Product lifetime (months to years) |
 | **Success metric** | Fitness for NFRs, sustainable evolution, decision traceability, controlled debt | Velocity, defect rate, DORA metrics, CI quality gates | Adoption, retention, revenue, outcome metrics |
@@ -86,7 +86,7 @@ alt: Diagram
 |-------|------|
 | **P1** | Discover Problem |
 | **P2** | Validate Solution |
-| **P3** | Strategize |
+| **P3** | Plan & Commit |
 | **P4** | Launch |
 | **P5** | Grow |
 | **P6** | Mature / Sunset |
@@ -112,7 +112,7 @@ PDLC and SDLC run on **different clocks** — one product outcome may span many 
 |-------|-------------------|----------------|---------|
 | **P1 Discover** | — | Minimal; awareness of existing system constraints | — |
 | **P2 Validate** | **Feasibility assessor** | Technical feasibility spikes; early NFR identification; "can we build this?" | Feasibility assessment, technology risk notes |
-| **P3 Strategize** | **Solution shaper** | Define NFRs from success criteria; high-level architectural options; build-vs-buy decisions | Architecture options paper, high-level diagrams (C4 L1–L2), NFR catalog |
+| **P3 Plan & Commit** | **Solution shaper** | Define NFRs from success criteria; high-level architectural options; build-vs-buy decisions | Architecture options paper, high-level diagrams (C4 L1–L2), NFR catalog |
 | **A Discover** | **Design authority** | Decompose NFRs into architectural constraints; identify cross-cutting concerns; draft system context | C4 context diagram, initial ADRs, cross-cutting concerns register |
 | **B Specify** | **Design authority** | Define component boundaries; specify interfaces and contracts; create data models | C4 container/component diagrams, API contracts, data models, ADRs |
 | **C Design** | **Lead designer** | Detailed design of complex components; pattern selection; prototype critical paths | Detailed design docs, pattern decisions, spike results |
@@ -133,7 +133,7 @@ PDLC and SDLC run on **different clocks** — one product outcome may span many 
 |----------|----------------------------|-----------|-----------|-----------|
 | **P1 Discover** | Passive context awareness | PM, UX Researcher | — (upstream) | Demand & value |
 | **P2 Validate** | Feasibility and risk voice | PM, UX Researcher; engineering in spikes | Implementer (spikes) | Build & integrate + Demand & value |
-| **P3 Strategize** | Options, NFRs, major technical boundaries | PM, GTM Lead | Owner (prioritization), Implementer (estimates) | Steer & govern + Demand & value |
+| **P3 Plan & Commit** | Options, NFRs, major technical boundaries | PM, GTM Lead | Owner (prioritization), Implementer (estimates) | Steer & govern + Demand & value |
 | **A–B Discover / Specify** | Design authority for structure and contracts | — | Owner (scope trade-offs), Implementer (detailed specs) | Build & integrate |
 | **C Design** | Lead designer for complex or novel areas | — | Implementer (design execution), Owner (acceptance of trade-offs) | Build & integrate |
 | **D Build** | Reviewer / guardian — patterns, boundaries, debt signals | — | Implementer (commits), Owner (ordering) | Build & integrate + Flow & improvement |
@@ -171,7 +171,7 @@ PDLC and SDLC run on **different clocks** — one product outcome may span many 
 | Architecture artifact | PDLC destination | Usage |
 |----------------------|------------------|--------|
 | Feasibility assessments | P2 Validate | Evidence for build-vs-experiment decisions |
-| Architecture options paper | P3 Strategize | Informs investment, sequencing, and risk disclosures at stage gates |
+| Architecture options paper | P3 Plan & Commit | Informs investment, sequencing, and risk disclosures at stage gates |
 | NFR catalog linked to success metrics | P3, P5 Grow | Aligns technical limits with outcome targets (latency, availability, cost) |
 | Evolution roadmap / scalability assessment | P5 Grow | Supports capacity planning, pricing, and platform bets |
 | Migration / sunset architecture | P6 Mature / Sunset | De-risks customer transition and data exit |
@@ -243,7 +243,7 @@ Engineering runs a one-week spike: stream existing request logs into a warehouse
 
 **Outputs:** Feasibility note, rough order-of-magnitude for storage growth, initial NFR candidates (query latency, data freshness, retention).
 
-### P3 Strategize — options and product-aligned qualities
+### P3 Plan & Commit — options and product-aligned qualities
 
 Product defines success: self-serve dashboard, daily freshness acceptable, 13-month retention for enterprise tiers. **Architecture** publishes an options paper: (1) columnar warehouse + materialized views, (2) managed analytics DB with denormalized fact tables, (3) hybrid — recent data hot, historical cold.
 

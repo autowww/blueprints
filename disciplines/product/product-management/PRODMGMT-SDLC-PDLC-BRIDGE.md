@@ -64,7 +64,7 @@ Product management is the discipline that owns the "what and why" across the ful
 |-------|---------|----------------|---------|
 | **P1 Discover** | **Problem space owner** | Customer interviews, market analysis, competitive scanning, opportunity identification, JTBD analysis | Problem statement, market analysis, competitive landscape, opportunity assessment |
 | **P2 Validate** | **Hypothesis driver** | Solution ideation, experiment design, prototype-driven validation, feasibility triage with Engineering | Experiment log, validated hypotheses, PMF early signals, feasibility assessment |
-| **P3 Strategize** | **Strategy owner** | Vision articulation, roadmap creation, OKR definition, business case, pricing/positioning, GTM strategy, stakeholder alignment | Product vision, roadmap, OKRs, business case, GTM plan, stage-gate evidence |
+| **P3 Plan & Commit** | **Strategy owner** | Vision articulation, roadmap creation, OKR definition, business case, pricing/positioning, GTM strategy, stakeholder alignment | Product vision, roadmap, OKRs, business case, GTM plan, stage-gate evidence |
 | **A Discover** | **Priority setter** | Feed validated Ore into backlog, provide context and rationale, define outcome goals for iteration | Prioritized backlog, outcome goals, acceptance criteria context |
 | **B Specify** | **Trade-off arbiter** | Resolve scope questions, clarify priorities when requirements conflict, review specs for strategic alignment | Scope decisions, priority rationale, strategic alignment sign-off |
 | **C Design** | **Value guardian** | Ensure design decisions serve product strategy; challenge over-engineering or under-investment | Design trade-off decisions, value-alignment reviews |
@@ -199,7 +199,7 @@ The PM designs a **fake door test** — a "Client Portal" button in the nav that
 
 **Outputs:** Experiment log with evidence, feasibility assessment from Engineering (low complexity — read-only views of existing data).
 
-### P3 — Strategize
+### P3 — Plan & Commit
 
 The PM creates a **product vision update** ("the agency tool that keeps clients in the loop without the overhead"), defines **OKRs** (O: "Agencies share project status effortlessly"; KR1: "40% of paid accounts activate client portal in 90 days"; KR2: "NPS increases by 10 points"), and drafts a **business case** (expected impact on retention: +5% logo retention; expected impact on expansion: upsell to higher tier).
 

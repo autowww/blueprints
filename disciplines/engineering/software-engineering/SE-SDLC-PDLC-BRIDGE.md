@@ -76,7 +76,7 @@ SE is not a separate delivery lane; it is the **competence substrate** for imple
 | Phase | SE role | Key activities | Outputs |
 |-------|---------|----------------|---------|
 | **P1–P2 Discover/Validate** | **Prototype engineer** | Time-boxed spikes; throwaway or branch experiments; instrumented mocks | Spike code, complexity notes, feasibility flags |
-| **P3 Strategize** | **Technical sounding board** | Estimate implementation surfaces; call out paradigm and concurrency constraints; DS&A risks for scale | T-shirt sizes grounded in structure, risk register inputs |
+| **P3 Plan & Commit** | **Technical sounding board** | Estimate implementation surfaces; call out paradigm and concurrency constraints; DS&A risks for scale | T-shirt sizes grounded in structure, risk register inputs |
 | **A Discover** | **Exploration coder** | Read codebase; trace dependencies; propose seams for change | Onboarding notes, risk list for **B** |
 | **B Specify** | **Contract thinker** | Clarify APIs, error models, SLIs that code must satisfy; define acceptance tests shape | API sketches, test outline, complexity budget |
 | **C Design** | **Module designer** | Apply patterns/principles; decide data structures; concurrency model; logging/metrics hooks | Design notes, interface boundaries, diagram or ADR pointer |

@@ -76,7 +76,7 @@ DevOps accelerates the feedback loop between product intent (PDLC) and technical
 | Phase | DevOps role | Key activities | Outputs |
 |-------|-------------|----------------|---------|
 | **P1–P2 Discover/Validate** | — | Minimal direct involvement; may support prototype environments | Sandbox environments for experiments |
-| **P3 Strategize** | **Infrastructure planner** | Estimate infrastructure needs; identify build/deploy constraints; cost modeling | Infrastructure requirements, cost estimates |
+| **P3 Plan & Commit** | **Infrastructure planner** | Estimate infrastructure needs; identify build/deploy constraints; cost modeling | Infrastructure requirements, cost estimates |
 | **A Discover** | **Pipeline designer** | Define CI/CD strategy; select tools; plan environments (dev/staging/prod) | Pipeline architecture, environment strategy |
 | **B Specify** | **Automation architect** | Define deployment topology; IaC approach; monitoring requirements; SLO targets | IaC templates, SLO definitions, monitoring plan |
 | **C Design** | **Infrastructure designer** | Design cloud architecture; networking; container orchestration; secrets management | Cloud architecture diagrams, IaC modules |

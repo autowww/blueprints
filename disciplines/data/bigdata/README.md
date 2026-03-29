@@ -17,7 +17,7 @@ Data engineering answers **"how do we engineer, govern, and process data at scal
 | Package | How Big Data relates |
 |---------|----------------------|
 | [`blueprints/sdlc/`](../../../sdlc/README.md) | Data pipelines are software — they go through SDLC phases (design, build, test, deploy). Schema design happens in Specify; pipeline implementation in Build; data validation in Verify. |
-| [`blueprints/pdlc/`](../../../pdlc/README.md) | PDLC P1–P3 (Discover, Validate, Strategize) define data strategy and analytics requirements. P5 (Grow) relies on data infrastructure for usage analytics, A/B testing, and outcome measurement. |
+| [`blueprints/pdlc/`](../../../pdlc/README.md) | PDLC P1–P3 (Discover, Validate, Plan & Commit) define data strategy and analytics requirements. P5 (Grow) relies on data infrastructure for usage analytics, A/B testing, and outcome measurement. |
 | [`blueprints/disciplines/product/ba/`](../../product/ba/README.md) | BA Business Intelligence perspective covers data requirements, analytics, and data quality. Data engineering provides the infrastructure that makes BI possible. |
 | [`blueprints/disciplines/engineering/software-architecture/`](../../engineering/software-architecture/README.md) | Data architecture is a subset of system architecture. Storage choices, processing patterns, and data flow design are architectural decisions. |
 | [`blueprints/disciplines/engineering/devops/`](../../engineering/devops/README.md) | DataOps applies DevOps principles to data pipelines — CI/CD for data, data quality gates, pipeline observability, infrastructure as code for data infrastructure. |

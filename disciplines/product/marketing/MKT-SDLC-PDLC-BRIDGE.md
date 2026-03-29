@@ -65,7 +65,7 @@ Marketing is **PDLC-heavy**: positioning and GTM crystallize in **P3**, launch c
 |-------|----------------|----------------|---------|
 | **P1 Discover** | **Market listener** | Category and competitor scans, search demand signals, community listening, early message tests | Hypothesis briefs, search insight summaries, ICP draft inputs |
 | **P2 Validate** | **Experiment partner** | Landing page smoke tests, waitlist campaigns, pricing sensitivity probes (ethical, non-deceptive) | Channel feasibility readout, early funnel baselines |
-| **P3 Strategize** | **Positioning owner** | STP, messaging hierarchy, GTM motion (PLG vs SLG), packaging narrative, martech & measurement plan | Positioning doc, ICP, launch themes, analytics / UTM standard |
+| **P3 Plan & Commit** | **Positioning owner** | STP, messaging hierarchy, GTM motion (PLG vs SLG), packaging narrative, martech & measurement plan | Positioning doc, ICP, launch themes, analytics / UTM standard |
 | **A Discover** | **Requirements partner** | Surface SEO, tracking, and consent constraints as discovery inputs | Marketing NFRs — e.g. crawlability, event taxonomy needs |
 | **B Specify** | **Spec reviewer** | Event names, attribution fields, landing URLs, email triggers, CMS requirements | Marketing acceptance criteria in specs / tickets |
 | **C Design** | **Experience aligner** | Landing and onboarding **copy, CTA, and proof** aligned with UX flows | Creative specs, content-model needs |

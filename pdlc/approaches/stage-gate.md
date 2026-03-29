@@ -71,7 +71,7 @@ Stage-Gate maps directly to PDLC phases and gates:
 | Gate 0: Idea Screen | — | Pre-P1 screening |
 | Stage 1: Scoping | **P1 Discover Problem** | — |
 | Gate 1: Second Screen | — | **G1** (problem worth solving?) |
-| Stage 2: Business Case | **P2 Validate Solution** + **P3 Strategize** | — |
+| Stage 2: Business Case | **P2 Validate Solution** + **P3 Plan & Commit** | — |
 | Gate 2: Go to Development | — | **G2** (solution viable?) + **G3** (invest in building?) |
 | Stage 3: Development | **SDLC A–F** | — |
 | Gate 3: Go to Testing | — | (SDLC Phase E exit) |

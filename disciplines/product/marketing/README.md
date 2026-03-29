@@ -2,7 +2,7 @@
 
 Reusable, **project-agnostic** blueprint for **Marketing** — the discipline of acquiring, engaging, and retaining users for digital products through positioning, channels, growth systems, and measurable go-to-market execution.
 
-Marketing answers **"how do we acquire, engage, and retain users?"** — a question that is **PDLC-heavy** (especially P3 Strategize, P4 Launch, P5 Grow) and depends on **SDLC** for instrumentation, SEO implementation, and experiment infrastructure.
+Marketing answers **"how do we acquire, engage, and retain users?"** — a question that is **PDLC-heavy** (especially P3 Plan & Commit, P4 Launch, P5 Grow) and depends on **SDLC** for instrumentation, SEO implementation, and experiment infrastructure.
 
 | Document | Purpose |
 |----------|---------|

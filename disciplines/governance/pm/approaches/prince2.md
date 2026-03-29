@@ -141,7 +141,7 @@ When a tolerance is forecast to be exceeded, the managing level creates an **exc
 | PRINCE2 element | PDLC connection |
 |-----------------|-----------------|
 | **Business Case theme** | Directly maps to PDLC's continued problem/solution validation. PRINCE2 requires the business case to be reviewed and updated at every stage boundary — this parallels PDLC stage gates G1–G5. |
-| **Starting Up a Project** | Receives PDLC P3 (Strategize) outputs. The project brief references the validated problem and solution concept. |
+| **Starting Up a Project** | Receives PDLC P3 (Plan & Commit) outputs. The project brief references the validated problem and solution concept. |
 | **Stage Boundaries** | PRINCE2 stage-boundary reviews parallel PDLC's stage gates. The "continued business justification" principle ensures the product is still worth building — a PDLC concern embedded in PM governance. |
 | **Closing a Project** | Hands over to PDLC P4 (Launch). Products are accepted; the product lifecycle continues beyond the project. |
 | **Benefits review** | PRINCE2 recommends post-project benefits reviews — these map directly to PDLC P5 (Grow) outcome measurement. |

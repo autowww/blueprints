@@ -36,7 +36,7 @@ Data engineering provides the infrastructure that product analytics (PDLC P5) an
 | Dimension | Data engineering | SDLC | PDLC |
 |-----------|------------------|------|------|
 | **Core question** | How do we collect, process, store, and govern data so consumers can trust it and ship on it? | Are we building the product **right**? | Are we building the **right** product? |
-| **Scope** | Ingestion through governed consumption: pipelines, storage tiers, metadata, quality, access, cost | Discovery through release: specify, design, build, verify, deploy | Problem discovery through sunset: validate, strategize, launch, grow, retire |
+| **Scope** | Ingestion through governed consumption: pipelines, storage tiers, metadata, quality, access, cost | Discovery through release: specify, design, build, verify, deploy | Problem discovery through sunset: validate, plan & commit, launch, grow, retire |
 | **Primary owner** | Data engineering lead, data platform team, or domain data owner (e.g. data mesh) | Engineering / delivery team | Product manager / product trio |
 | **Timeline** | Platform and pipeline roadmaps; cadence often tied to product increments and compliance cycles | Sprint, iteration, or release train | Quarters to years on the product horizon |
 | **Success metric** | Quality (accuracy, completeness, consistency, timeliness, validity, uniqueness), pipeline SLAs, freshness, lineage coverage, cost per useful dataset | Velocity, defect rate, DORA-style delivery metrics, release health | Adoption, retention, revenue, experiment outcomes, strategic fit |
@@ -63,7 +63,7 @@ Data engineering provides the infrastructure that product analytics (PDLC P5) an
 |-----------|-------|-----------------------------------------------------------------------------------------------------|
 | **PDLC** | P1 | Discover Problem |
 | **PDLC** | P2 | Validate Solution |
-| **PDLC** | P3 | Strategize |
+| **PDLC** | P3 | Plan & Commit |
 | **PDLC** | P4 | Launch |
 | **PDLC** | P5 | Grow |
 | **PDLC** | P6 | Mature / Sunset |
@@ -82,7 +82,7 @@ Data engineering provides the infrastructure that product analytics (PDLC P5) an
 |-------|----------------------|----------------|---------|
 | **P1 Discover** | **Data assessor** | Assess existing data landscape; identify data sources for research | Data source inventory, data availability assessment |
 | **P2 Validate** | **Data prototype builder** | Build data prototypes for hypothesis testing; quick analytics pipelines | Prototype pipelines, experimental data sets |
-| **P3 Strategize** | **Data strategist** | Define data strategy; estimate data infrastructure needs; data architecture options | Data strategy document, infrastructure cost model |
+| **P3 Plan & Commit** | **Data strategist** | Define data strategy; estimate data infrastructure needs; data architecture options | Data strategy document, infrastructure cost model |
 | **A Discover** | **Requirements analyst** | Identify data requirements for features; define data entities and relationships | Data requirements, entity-relationship models |
 | **B Specify** | **Data modeler** | Design schemas; define data contracts; specify quality rules; plan migrations | Schema designs, data contracts, quality specifications |
 | **C Design** | **Pipeline architect** | Design data flow; select processing patterns (batch/stream); integration architecture | Data flow diagrams, pipeline architecture, integration design |
@@ -103,7 +103,7 @@ Data engineering decisions should be explicit at phase boundaries so accountabil
 |-------|----------------------------------|-------------------------------|--------------|-------------------------|
 | **P1 Discover** | Which sources exist, what is usable for research, legal/ethical constraints | Data engineer or analyst embedded with discovery | PM, UX research | **Demand & value** |
 | **P2 Validate** | Fast, disposable pipelines vs production-grade paths for experiments | Data engineer + analyst | PM, experiment owner | **Demand & value** |
-| **P3 Strategize** | Target architecture (lakehouse, mesh, batch/stream), cost envelope, governance model | Data architect / DE lead + finance partner | PM, exec sponsor | **Steer & govern**; **Demand & value** |
+| **P3 Plan & Commit** | Target architecture (lakehouse, mesh, batch/stream), cost envelope, governance model | Data architect / DE lead + finance partner | PM, exec sponsor | **Steer & govern**; **Demand & value** |
 | **A Discover** | Data entities, relationships, and feature-level data needs | DE lead with product and engineering | PM (priorities) | **Demand & value**; **Build & integrate** |
 | **B Specify** | Contracts, schemas, quality rules, migration approach | Data modeler / DE lead | Owner (scope), Implementer | **Build & integrate** |
 | **C Design** | ETL/ELT vs streaming, Lambda/Kappa fit, integration boundaries | Pipeline architect / tech lead | Implementer, Architect | **Build & integrate** |
@@ -229,7 +229,7 @@ Not every initiative warrants the same depth of data engineering. Calibrate usin
 
 Product and research confirm that clickstream and purchase history exist but **event definitions differ** between web and mobile. Data engineering produces a short-lived **prototype pipeline** that joins the two sources for a sandbox cohort. P2 runs an offline evaluation: can a simple collaborative filter beat the baseline? Outcome: hypothesis is promising; gaps in **event completeness** and **timeliness** are documented. The team explicitly decides which **quality dimensions** must improve before production promotion (for example, stricter **validity** rules on item IDs and **uniqueness** on impression keys).
 
-### P3 (strategize)
+### P3 (plan & commit)
 
 The team chooses a **lakehouse** landing with a **medallion-style** refinement (bronze raw events, silver conformed sessions, gold recommendation-ready features), batch scoring with a path toward near-real-time updates later. Data engineering supplies an **infrastructure cost model** and **data governance** notes: PII handling, retention, and which domains own which datasets. A **Kappa-style** stream path is captured as a **future option** if latency becomes a product constraint; v1 stays batch-first to reduce operational risk.
 

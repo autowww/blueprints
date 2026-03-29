@@ -4,7 +4,7 @@ Defines the **business need**, understands the **current state**, envisions the 
 
 **BABOK alignment:** Knowledge Area 3 (Strategy Analysis).
 
-**Lifecycle mapping:** Primarily **PDLC P1–P3** (Discover Problem, Validate Solution, Strategize). Strategy Analysis provides the analytical backbone for product discovery and investment decisions.
+**Lifecycle mapping:** Primarily **PDLC P1–P3** (Discover Problem, Validate Solution, Plan & Commit). Strategy Analysis provides the analytical backbone for product discovery and investment decisions.
 
 ---
 
@@ -79,7 +79,7 @@ Recommend the overall approach to achieving the future state — build vs buy, p
 - Resource and timeline estimates
 - Success criteria and measurement approach
 
-**PDLC connection:** Maps to **P3 Strategize** — the change strategy becomes the business case and investment decision for the stage gate (G3). It shapes what enters SDLC Phase A.
+**PDLC connection:** Maps to **P3 Plan & Commit** — the change strategy becomes the business case and investment decision for the stage gate (G3). It shapes what enters SDLC Phase A.
 
 ### 1.5 Define solution scope
 
@@ -128,7 +128,7 @@ Full technique catalog: [`techniques/README.md`](../techniques/README.md).
 | Analyze current state | P1 Discover Problem: structured analysis of the problem space | — (upstream of delivery) |
 | Define future state | P1–P2: future state vision complements product vision | — (upstream of delivery) |
 | Assess risks | P2–P3: risk assessment informs stage gate decisions (G1, G2, G3) | Risk register feeds into `docs/requirements/risks/` |
-| Define change strategy | P3 Strategize: change strategy shapes investment decision and GTM plan | — (upstream of delivery) |
+| Define change strategy | P3 Plan & Commit: change strategy shapes investment decision and GTM plan | — (upstream of delivery) |
 | Define solution scope | P3 → SDLC handoff: scope definition creates the boundary for SDLC Phase A | Phase A receives scope as input |
 
 ### Overlap with PDLC

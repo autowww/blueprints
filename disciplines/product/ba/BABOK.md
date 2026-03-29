@@ -44,7 +44,7 @@ Each knowledge area has a **primary** lifecycle alignment and **secondary** touc
 | Knowledge Area | PDLC Phases | SDLC Phases | Primary Alignment |
 |----------------|-------------|-------------|-------------------|
 | **BA Planning & Monitoring** | Across P1–P6 | Across A–F | Governance layer — scoped per initiative |
-| **Strategy Analysis** | P1–P3 (Discover, Validate, Strategize) | — | PDLC — defines why change is needed |
+| **Strategy Analysis** | P1–P3 (Discover, Validate, Plan & Commit) | — | PDLC — defines why change is needed |
 | **Elicitation & Collaboration** | P1–P2 (research, interviews) | A–B (requirements gathering) | Both — techniques serve discovery and specification |
 | **Requirements Life Cycle Management** | P3 (scope definition) | A–B (specs, traceability) | Both — bridges validated intent to delivery specs |
 | **Requirements Analysis & Design Definition** | P2 (solution validation) | B–C (specify, design) | SDLC-heavy — models and specifies the solution |

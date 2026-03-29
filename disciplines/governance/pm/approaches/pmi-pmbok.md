@@ -111,7 +111,7 @@ alt: Diagram
 | PMBOK domain | PDLC connection |
 |--------------|-----------------|
 | **Stakeholders** | Maps to PDLC's product trio and stakeholder engagement. PM stakeholder management extends PDLC's user-centric discovery to include sponsors, governance, and organizational stakeholders. |
-| **Planning** | PM planning receives PDLC P3 (Strategize) outputs: validated problem, solution concept, success metrics. These become the project's objectives and scope. |
+| **Planning** | PM planning receives PDLC P3 (Plan & Commit) outputs: validated problem, solution concept, success metrics. These become the project's objectives and scope. |
 | **Delivery** | PMBOK delivery produces the increment that crosses into PDLC P4 (Launch). PM ensures the deliverable meets the quality and scope criteria before handoff to market activation. |
 | **Measurement** | PMBOK tracks project metrics (on time, on budget). PDLC P5 (Grow) tracks outcome metrics (adoption, retention). Both are needed; neither substitutes for the other. |
 

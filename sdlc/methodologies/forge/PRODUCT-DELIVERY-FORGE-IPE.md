@@ -61,7 +61,7 @@
 
 ---
 
-## PDLC P3 — Strategize
+## PDLC P3 — Plan & Commit
 
 | **Inputs** | **Process / practices** | **Outputs** |
 |------------|---------------------------|-------------|

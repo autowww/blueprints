@@ -2,7 +2,7 @@
 
 <!--
   Copy this template into docs/requirements/ (or equivalent).
-  Complete during P3 Strategize / SDLC Phase A Discover.
+  Complete during P3 Plan & Commit / SDLC Phase A Discover.
   See blueprints/pdlc/PDLC.md Phase P3 and blueprints/sdlc/SDLC.md Phase A for context.
   See blueprints/sdlc/methodologies/forge/planning/PLANNING-FLOW.md for Forge mapping.
 

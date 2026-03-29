@@ -51,7 +51,7 @@ The Product Manager agent is **upstream** of `forge-planning` — it creates the
 Product planning in Forge connects to PDLC phases:
 
 - **P1–P2** (Discover/Validate) → generates the business drivers that become Ore
-- **P3** (Strategize) → defines Product Sparks and their scope
+- **P3** (Plan & Commit) → defines Product Sparks and their scope
 - **P4** (Launch) → Product Spark passes Assay Gate and ships
 - **P5** (Grow) → learning feeds new Ore
 

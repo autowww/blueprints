@@ -67,7 +67,7 @@ Compliance is **front-loaded** in PDLC (**P3** scoping — jurisdictions, data c
 |-------|-----------------|----------------|---------|
 | **P1 Discover** | **Obligations explorer** | Scan jurisdictions, user types (children, employees), sensitive data in problem space | Draft applicability matrix, stakeholder map for legal/privacy |
 | **P2 Validate** | **Constraint tester** | Prototype flows for consent, notices, accessibility; test if value prop survives minimization | Validation learnings, “compliance feasible” hypotheses |
-| **P3 Strategize** | **Regulatory scoper** | Fix target markets; certification needs (SOC 2, ISO); vendor strategy; AI risk class | Compliance scope doc, budget for audits/legal, roadmap constraints |
+| **P3 Plan & Commit** | **Regulatory scoper** | Fix target markets; certification needs (SOC 2, ISO); vendor strategy; AI risk class | Compliance scope doc, budget for audits/legal, roadmap constraints |
 | **A Discover** | **Requirements analyst (compliance)** | Elicit lawful basis, retention, rights, accessibility acceptance criteria | Compliance-related user stories, legal non-functionals |
 | **B Specify** | **Control designer** | Specify data categories, flows, subprocessors; accessibility criteria per epic | Updated specs, DPIA trigger assessment |
 | **C Design** | **Architectural compliance** | Privacy boundaries, residency, audit logs, segregation of duties, accessible component patterns | Architecture decision records (compliance), threat+privacy combined reviews |

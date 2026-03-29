@@ -67,7 +67,7 @@ The **product trio** — PM, Designer, and Tech Lead — co-owns the discovery t
 |------------|----------------|
 | **P1 Discover Problem** | Discovery track: user interviews, data analysis, opportunity identification |
 | **P2 Validate Solution** | Discovery track: prototyping, usability testing, feasibility spikes, experiments |
-| **P3 Strategize** | Product trio: vision, OKRs, roadmap based on discovery evidence |
+| **P3 Plan & Commit** | Product trio: vision, OKRs, roadmap based on discovery evidence |
 | **SDLC A–F** | Delivery track: build validated ideas |
 | **P4 Launch** | Both tracks: discovery measures launch impact; delivery handles rollout |
 | **P5 Grow** | Discovery track: continuous — usage data feeds new discovery cycles |

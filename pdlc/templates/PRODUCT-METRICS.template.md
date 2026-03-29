@@ -2,7 +2,7 @@
 
 <!--
   Copy this template into docs/product/metrics/ (or equivalent).
-  Define metrics during P3 Strategize; track during P4–P5.
+  Define metrics during P3 Plan & Commit; track during P4–P5.
   See blueprints/pdlc/PDLC.md §5 for the metrics framework.
   See blueprints/pdlc/PDLC-SDLC-BRIDGE.md §5 for PDLC vs SDLC metrics comparison.
 -->

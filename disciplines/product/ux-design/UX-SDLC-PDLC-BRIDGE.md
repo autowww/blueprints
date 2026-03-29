@@ -65,7 +65,7 @@ UX Design fuels PDLC discovery and validation with user evidence, and shapes SDL
 |-------|---------------|----------------|---------|
 | **P1 Discover** | **User researcher** | Generative research — interviews, contextual inquiry, diary studies, analytics review | Personas, empathy maps, journey maps, opportunity areas |
 | **P2 Validate** | **Concept designer** | Concept testing, prototype testing, Wizard-of-Oz experiments | Validated concepts, usability findings, pivot/persevere recommendations |
-| **P3 Strategize** | **Design strategist** | Design principles, experience vision, accessibility requirements scoping | Design principles doc, experience strategy, accessibility conformance target |
+| **P3 Plan & Commit** | **Design strategist** | Design principles, experience vision, accessibility requirements scoping | Design principles doc, experience strategy, accessibility conformance target |
 | **A Discover** | **Interaction designer** | Translate product requirements into user flows, task analysis, edge-case identification | User flows, task models, content requirements |
 | **B Specify** | **Specification designer** | Wireframes, interaction specs, design token definitions, accessibility annotation | Wireframes, interaction specs, component specs, WCAG mapping |
 | **C Design** | **Visual / system designer** | High-fidelity mockups, design system components, motion design, responsive layouts | Mockups, Figma/Sketch files, design tokens (code-ready), Storybook stories |
