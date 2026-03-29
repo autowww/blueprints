@@ -7,7 +7,7 @@ This folder is a **reusable, product-agnostic** package: **process** (phases, De
 | Deliverable | Purpose |
 |-------------|---------|
 | [**POLICY.md**](POLICY.md) | Immutability rules for this blueprint. |
-| [**SDLC.md**](SDLC.md) | Phases A–F, documentation obligations, Definition of Done, change control. |
+| [**SDLC.md**](SDLC.md) | Delivery phases (**Discover / Prioritize → … → Release**); **A–F** shorthand in bridges; documentation obligations, Definition of Done, change control. |
 | [**DOCUMENTATION-STRUCTURE.md**](DOCUMENTATION-STRUCTURE.md) | Suggested `docs/` layout, document types, conventions, evolution notes. |
 | [**SETUP.md**](SETUP.md) | **Consuming-repo checklist** — submodule, Forge, Cursor rules, alignment (for projects using `blueprints/` at repo root). |
 | [**docs/**](docs/README.md) | **Human handbook** ([`index.html`](docs/index.html) + chapter pages, incl. optional [`methodologies.html`](docs/methodologies.html)) — HTML + diagrams; keep in sync per [`docs/MAINTENANCE.md`](docs/MAINTENANCE.md) when Markdown sources change. |

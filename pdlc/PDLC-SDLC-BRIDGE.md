@@ -99,6 +99,8 @@ The boundary between PDLC and SDLC is not a hard wall — it's a **gradient**:
 - **SDLC Phase F (Release)** overlaps with **PDLC P4 (Launch)**: release is a technical event; launch is a market event. In simple products, they are the same moment. In complex products, release may precede launch by weeks (beta periods, staged rollouts).
 - **PDLC P5 (Grow)** feeds **SDLC Phase A** continuously: growth insights become backlog items, creating a loop rather than a one-way flow.
 
+**Where maintenance sits:** Ongoing operations, growth, and sunset are **PDLC P5/P6**, not extra SDLC phases. How feedback re-enters delivery as **Ore** is summarized on [`SDLC.md`](../sdlc/SDLC.md#after-release-operations-pdlc-and-new-ore).
+
 ---
 
 ## 3. Role mapping

@@ -2,7 +2,9 @@
 
 This describes a **generic** delivery flow and **which documentation** to update at each step. It pairs with [`DOCUMENTATION-STRUCTURE.md`](DOCUMENTATION-STRUCTURE.md) (where files live, including the optional **milestone → epic → story → task** hierarchy in §2.1) and your project’s **own** requirements or backlog convention (where you keep epics, stories, and IDs).
 
-**PDLC (product lifecycle):** This SDLC covers **how to build the product right** — phases A–F from requirements through release. The **Product Development Life Cycle** ([`blueprints/pdlc/`](../pdlc/README.md)) covers **building the right product** — problem discovery, solution validation, planning and commitment, go-to-market, growth, and sunset. SDLC phases A–F sit **inside** the PDLC as the Build & Release engine. See [`PDLC-SDLC-BRIDGE.md`](../pdlc/PDLC-SDLC-BRIDGE.md) for phase alignment, artifact handoffs, role mapping, and a worked example.
+**Delivery phases (reader-facing):** **Discover / Prioritize → Specify → Design → Build → Verify → Release.** These names match ordinary software-delivery language. **Letters A–F** are optional **internal shorthand** (still used in methodology bridges, examples, and cross-maps)—they are not the primary vocabulary on this page.
+
+**PDLC (product lifecycle):** This SDLC covers **how to build the product right** — from discovery and prioritization through specification, implementation, verification, and release. The **Product Development Life Cycle** ([`blueprints/pdlc/`](../pdlc/README.md)) covers **building the right product** — problem discovery, solution validation, planning and commitment, go-to-market, growth, and sunset. The named SDLC phases above sit **inside** the PDLC as the Build & Release engine. See [`PDLC-SDLC-BRIDGE.md`](../pdlc/PDLC-SDLC-BRIDGE.md) for phase alignment, artifact handoffs, role mapping, and a worked example.
 
 **Methodology depth (Scrum, Kanban, XP, phased, Lean, Spiral, V-Model, DevOps, SAFe, FDD, Crystal, DSDM, Shape Up, DA, BDD, RAD, Agile, agentic SDLC):** see [`methodologies/README.md`](methodologies/README.md) — full guides with external links and adoption notes.
 
@@ -10,7 +12,7 @@ This describes a **generic** delivery flow and **which documentation** to update
 
 **Bridge (intents ↔ Scrum / Kanban / phased / XP names):** [`methodologies/ceremonies/methodology-bridge.md`](methodologies/ceremonies/methodology-bridge.md) — matrix, blend suggestions, calendar mapping.
 
-**Discipline bridges:** Cross-cutting disciplines each have a bridge mapping their practices to SDLC phases A–F and PDLC P1–P6 — see [`BRIDGES.md`](../BRIDGES.md) for the full index, or jump to a specific discipline: [BA](../disciplines/product/ba/BA-SDLC-PDLC-BRIDGE.md) · [PM](../disciplines/governance/pm/PM-SDLC-PDLC-BRIDGE.md) · [Testing](../disciplines/engineering/testing/TESTING-SDLC-PDLC-BRIDGE.md) · [Architecture](../disciplines/engineering/software-architecture/ARCH-SDLC-PDLC-BRIDGE.md) · [DevOps](../disciplines/engineering/devops/DEVOPS-SDLC-PDLC-BRIDGE.md) · [Big Data](../disciplines/data/bigdata/BIGDATA-SDLC-PDLC-BRIDGE.md) · [Data Science](../disciplines/data/data-science/DS-SDLC-PDLC-BRIDGE.md).
+**Discipline bridges:** Cross-cutting disciplines each have a bridge mapping their practices to SDLC phases (A–F shorthand) and PDLC P1–P6 — see [`BRIDGES.md`](../BRIDGES.md) for the full index, or jump to a specific discipline: [BA](../disciplines/product/ba/BA-SDLC-PDLC-BRIDGE.md) · [PM](../disciplines/governance/pm/PM-SDLC-PDLC-BRIDGE.md) · [Testing](../disciplines/engineering/testing/TESTING-SDLC-PDLC-BRIDGE.md) · [Architecture](../disciplines/engineering/software-architecture/ARCH-SDLC-PDLC-BRIDGE.md) · [DevOps](../disciplines/engineering/devops/DEVOPS-SDLC-PDLC-BRIDGE.md) · [Big Data](../disciplines/data/bigdata/BIGDATA-SDLC-PDLC-BRIDGE.md) · [Data Science](../disciplines/data/data-science/DS-SDLC-PDLC-BRIDGE.md).
 
 **Path examples** below use a common `docs/` layout; adjust names if your tree differs.
 
@@ -33,20 +35,20 @@ This describes a **generic** delivery flow and **which documentation** to update
 
 Recurring collaboration (**ceremonies**) should **cover** the six **intent types** over time: **C1** Align, **C2** Commit, **C3** Sync, **C4** Inspect, **C5** Improve, **C6** Assure/release — see [`methodologies/ceremonies/ceremony-foundation.md`](methodologies/ceremonies/ceremony-foundation.md). They **do not replace** the artifact tables below; they explain **why** teams hold planning, reviews, and gates.
 
-| Phase | Intents most engaged (typical) | Illustrative ceremony pressure | Detail |
-|-------|-------------------------------|--------------------------------|--------|
-| **A** Discover | **C1**, **C2** | Prioritization, roadmap/backlog sessions | [Phase A](#phase-a--discover--prioritize) |
-| **B** Specify | **C1**, **C6** (readiness) | Refinement, “definition of ready,” risk triage | [Phase B](#phase-b--specify) |
-| **C** Design | **C1**, **C6** | Design review, NFR alignment | [Phase C](#phase-c--design-lightweight) |
-| **D** Build | **C2**, **C3**, **C6** (ongoing) | Pull/commit selection, standups, CI as assurance | [Phase D](#phase-d--build) |
-| **E** Verify | **C3**, **C4**, **C6** | Test progress sync, stakeholder demo, quality gates | [Phase E](#phase-e--verify) |
-| **F** Release | **C4**, **C6** | Go/no-go, release approval, post-release learnings → **C5** | [Phase F](#phase-f--release) |
+| Phase | Shorthand | Intents most engaged (typical) | Illustrative ceremony pressure | Detail |
+|-------|-----------|-------------------------------|--------------------------------|--------|
+| Discover / Prioritize | (A) | **C1**, **C2** | Prioritization, roadmap/backlog sessions | [Discover / Prioritize](#discover--prioritize) |
+| Specify | (B) | **C1**, **C6** (readiness) | Refinement, “definition of ready,” risk triage | [Specify](#specify) |
+| Design (lightweight) | (C) | **C1**, **C6** | Design review, NFR alignment | [Design (lightweight)](#design-lightweight) |
+| Build | (D) | **C2**, **C3**, **C6** (ongoing) | Pull/commit selection, standups, CI as assurance | [Build](#build) |
+| Verify | (E) | **C3**, **C4**, **C6** | Test progress sync, stakeholder demo, quality gates | [Verify](#verify) |
+| Release | (F) | **C4**, **C6** | Go/no-go, release approval, post-release learnings → **C5** | [Release](#release) |
 
 **Methodology mapping:** the same intents appear as **Sprint Planning**, **replenishment**, **tollgates**, **planning game**, etc. — [`methodologies/ceremonies/methodology-bridge.md`](methodologies/ceremonies/methodology-bridge.md).
 
 ---
 
-### Phase A — Discover / prioritize
+### Discover / Prioritize
 
 **Activities:** Ideas, rough sizing, ordering.
 
@@ -62,7 +64,7 @@ Recurring collaboration (**ceremonies**) should **cover** the six **intent types
 
 ---
 
-### Phase B — Specify
+### Specify
 
 **Activities:** Acceptance criteria, edge cases, dependencies, risks.
 
@@ -78,7 +80,7 @@ Recurring collaboration (**ceremonies**) should **cover** the six **intent types
 
 ---
 
-### Phase C — Design (lightweight)
+### Design (lightweight)
 
 **Activities:** Enough design to implement without rework; record durable decisions only when useful.
 
@@ -94,7 +96,7 @@ Recurring collaboration (**ceremonies**) should **cover** the six **intent types
 
 ---
 
-### Phase D — Build
+### Build
 
 **Activities:** Implementation, tests, local verification.
 
@@ -113,7 +115,7 @@ Recurring collaboration (**ceremonies**) should **cover** the six **intent types
 
 ---
 
-### Phase E — Verify
+### Verify
 
 **Activities:** Automated tests, manual checks, regression of related behavior.
 
@@ -129,7 +131,7 @@ Recurring collaboration (**ceremonies**) should **cover** the six **intent types
 
 ---
 
-### Phase F — Release
+### Release
 
 **Activities:** Versioning, packaging, distribution, compliance checks.
 
@@ -143,6 +145,12 @@ Recurring collaboration (**ceremonies**) should **cover** the six **intent types
 | **Release CI (optional)** | Tag/build pipelines, store upload, or signing orchestration — **secrets** in CI vault, not in Git; document **process** in `docs/release/` or `docs/development/`. |
 
 **Exit:** Artifact published to the intended **distribution channel** (app store, registry, fleet, etc.); status docs updated.
+
+---
+
+### After release: operations, PDLC, and new Ore
+
+**Operations, maintenance, growth, maturity, and sunset are not a seventh SDLC phase.** They belong to the **product** lifecycle: especially **PDLC P5 (Grow)** and **P6 (Mature / Sunset)** in [`PDLC.md`](../pdlc/PDLC.md). Signal from production, customers, and the business feeds **continuous discovery and prioritization**; in Forge terms, new demand and learning typically re-enter as **Ore** (see [`methodologies/forge/foundation-connection.md`](methodologies/forge/foundation-connection.md) and [`FORGE-SDLC-PDLC-BRIDGE.md`](methodologies/forge/FORGE-SDLC-PDLC-BRIDGE.md)). For the full PDLC ↔ SDLC map, see [`PDLC-SDLC-BRIDGE.md`](../pdlc/PDLC-SDLC-BRIDGE.md).
 
 ---
 

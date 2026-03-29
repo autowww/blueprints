@@ -4,11 +4,11 @@ There is **no single universal PDLC phase standard** — Stage-Gate describes a 
 
 **Forge’s PDLC in one line:** Discover → Validate → Plan & Commit → [**embedded SDLC:**](https://forgesdlc.com/sdlc-overview.html) Discover / Prioritize → Specify → Design → Build → Verify → Release → Launch → Grow → Mature / Retire — so **P4 Launch** stays standard product language and SDLC remains the Build & Release engine inside the product lifecycle.
 
-This describes a **generic** product lifecycle — from validating that a problem is worth solving, through delivery (via [`SDLC.md`](../sdlc/SDLC.md) phases A–F), to post-launch growth and eventual sunset. It defines **which product artifacts** to produce at each stage and **who** is accountable.
+This describes a **generic** product lifecycle — from validating that a problem is worth solving, through delivery (via [`SDLC.md`](../sdlc/SDLC.md): **Discover / Prioritize → … → Release**; **A–F** shorthand in bridges), to post-launch growth and eventual sunset. It defines **which product artifacts** to produce at each stage and **who** is accountable.
 
 **How PDLC relates to SDLC:** SDLC answers "are we building the product right?" — phases, DoD, CI/CD, ceremonies. PDLC answers "are we building the right product?" — problem validation, planning and commitment, go-to-market, outcome measurement. SDLC sits **inside** PDLC as the Build & Release engine. See [`PDLC-SDLC-BRIDGE.md`](PDLC-SDLC-BRIDGE.md) for the full mapping, diagrams, and worked example.
 
-**Discipline bridges:** Cross-cutting disciplines each have a bridge mapping their practices to PDLC P1–P6 and SDLC A–F — see [`BRIDGES.md`](../BRIDGES.md) for the full index, or jump to a specific discipline: [BA](../disciplines/product/ba/BA-SDLC-PDLC-BRIDGE.md) · [PM](../disciplines/governance/pm/PM-SDLC-PDLC-BRIDGE.md) · [Testing](../disciplines/engineering/testing/TESTING-SDLC-PDLC-BRIDGE.md) · [Architecture](../disciplines/engineering/software-architecture/ARCH-SDLC-PDLC-BRIDGE.md) · [DevOps](../disciplines/engineering/devops/DEVOPS-SDLC-PDLC-BRIDGE.md) · [Big Data](../disciplines/data/bigdata/BIGDATA-SDLC-PDLC-BRIDGE.md) · [Data Science](../disciplines/data/data-science/DS-SDLC-PDLC-BRIDGE.md).
+**Discipline bridges:** Cross-cutting disciplines each have a bridge mapping their practices to PDLC P1–P6 and SDLC (A–F shorthand; see [`SDLC.md`](../sdlc/SDLC.md) for names) — see [`BRIDGES.md`](../BRIDGES.md) for the full index, or jump to a specific discipline: [BA](../disciplines/product/ba/BA-SDLC-PDLC-BRIDGE.md) · [PM](../disciplines/governance/pm/PM-SDLC-PDLC-BRIDGE.md) · [Testing](../disciplines/engineering/testing/TESTING-SDLC-PDLC-BRIDGE.md) · [Architecture](../disciplines/engineering/software-architecture/ARCH-SDLC-PDLC-BRIDGE.md) · [DevOps](../disciplines/engineering/devops/DEVOPS-SDLC-PDLC-BRIDGE.md) · [Big Data](../disciplines/data/bigdata/BIGDATA-SDLC-PDLC-BRIDGE.md) · [Data Science](../disciplines/data/data-science/DS-SDLC-PDLC-BRIDGE.md).
 
 **Approaches depth (Dual-Track, Stage-Gate, Lean Startup, Design Thinking, …):** see [`approaches/README.md`](approaches/README.md) — full guides with external links and adoption notes.
 
@@ -110,26 +110,26 @@ alt: Diagram
 | **Go-to-market plan** | Launch strategy, channels, positioning, pricing. Use [`templates/GO-TO-MARKET.template.md`](templates/GO-TO-MARKET.template.md). |
 | **Stage-gate review** | Formal go/kill/pivot decision with criteria. Use [`templates/STAGE-GATE-REVIEW.template.md`](templates/STAGE-GATE-REVIEW.template.md). |
 
-**Exit:** Initiative is **funded**, **staffed**, and **prioritized**. Success metrics are defined. The product trio is ready to hand validated intent into SDLC Phase A (Discover / prioritize).
+**Exit:** Initiative is **funded**, **staffed**, and **prioritized**. Success metrics are defined. The product trio is ready to hand validated intent into SDLC [**Discover / Prioritize**](../sdlc/SDLC.md#discover--prioritize).
 
-**Handoff to SDLC:** At this point, the validated problem, solution concept, personas, success metrics, and high-level scope cross into [`SDLC.md`](../sdlc/SDLC.md) Phase A — where they become backlog items, WBS entries, and story specifications. See [`PDLC-SDLC-BRIDGE.md`](PDLC-SDLC-BRIDGE.md) §4 for the artifact handoff table.
+**Handoff to SDLC:** At this point, the validated problem, solution concept, personas, success metrics, and high-level scope cross into [`SDLC.md`](../sdlc/SDLC.md#discover--prioritize) — where they become backlog items, WBS entries, and story specifications. See [`PDLC-SDLC-BRIDGE.md`](PDLC-SDLC-BRIDGE.md) §4 for the artifact handoff table.
 
 ---
 
-### SDLC Phases A–F — Build & Release
+### SDLC — Build & release
 
 **Goal:** Turn validated product intent into **shippable software** — with quality, traceability, and governance.
 
-This is the domain of [`blueprints/sdlc/`](../sdlc/README.md). PDLC does not redefine these phases:
+This is the domain of [`blueprints/sdlc/`](../sdlc/README.md). PDLC does not redefine these phases. Reader-facing names and obligations live in [`SDLC.md`](../sdlc/SDLC.md); **A–F** in the table below is shorthand (also used in bridges and methodology cross-maps).
 
-| SDLC Phase | PDLC relevance | Detail |
+| SDLC (shorthand) | PDLC relevance | Detail |
 |------------|----------------|--------|
-| **A Discover** | Receives validated problem + solution from P3. PM becomes Owner. | [SDLC Phase A](../sdlc/SDLC.md#phase-a--discover--prioritize) |
-| **B Specify** | Acceptance criteria reflect P3 success metrics. | [SDLC Phase B](../sdlc/SDLC.md#phase-b--specify) |
-| **C Design** | Architectural decisions informed by P2 feasibility assessment. | [SDLC Phase C](../sdlc/SDLC.md#phase-c--design-lightweight) |
-| **D Build** | Implementation of validated solution. | [SDLC Phase D](../sdlc/SDLC.md#phase-d--build) |
-| **E Verify** | Tests validate against P3 success criteria, not just technical correctness. | [SDLC Phase E](../sdlc/SDLC.md#phase-e--verify) |
-| **F Release** | Shippable increment hands back to PDLC Phase P4 (Launch). | [SDLC Phase F](../sdlc/SDLC.md#phase-f--release) |
+| **A** Discover | Receives validated problem + solution from P3. PM becomes Owner. | [Discover / Prioritize](../sdlc/SDLC.md#discover--prioritize) |
+| **B** Specify | Acceptance criteria reflect P3 success metrics. | [Specify](../sdlc/SDLC.md#specify) |
+| **C** Design | Architectural decisions informed by P2 feasibility assessment. | [Design (lightweight)](../sdlc/SDLC.md#design-lightweight) |
+| **D** Build | Implementation of validated solution. | [Build](../sdlc/SDLC.md#build) |
+| **E** Verify | Tests validate against P3 success criteria, not just technical correctness. | [Verify](../sdlc/SDLC.md#verify) |
+| **F** Release | Shippable increment hands back to PDLC Phase P4 (Launch). | [Release](../sdlc/SDLC.md#release) |
 
 **During SDLC:** The product trio stays engaged through ceremonies (C1 Align, C4 Inspect) — they do not disappear until launch. In Dual-Track teams, discovery for the **next** initiative (P1–P2) runs in parallel with current delivery.
 

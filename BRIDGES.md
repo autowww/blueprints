@@ -32,11 +32,11 @@ This keeps discovery natural (looking at a discipline? its bridge is right there
 
 | Bridge | File | Connects |
 |---|---|---|
-| **PDLC ↔ SDLC** | [`pdlc/PDLC-SDLC-BRIDGE.md`](pdlc/PDLC-SDLC-BRIDGE.md) | Product lifecycle (P1–P6) ↔ delivery lifecycle (A–F): phase alignment, role mapping, artifact handoffs, metrics comparison, decision framework |
+| **PDLC ↔ SDLC** | [`pdlc/PDLC-SDLC-BRIDGE.md`](pdlc/PDLC-SDLC-BRIDGE.md) | Product lifecycle (P1–P6) ↔ delivery lifecycle (Discover→Release; **A–F** shorthand): phase alignment, role mapping, artifact handoffs, metrics comparison, decision framework |
 
 ### Discipline-to-lifecycle bridges
 
-Each discipline has a bridge that maps its practices to SDLC phases A–F and PDLC phases P1–P6.
+Each discipline has a bridge that maps its practices to SDLC phases (A–F shorthand; see [`sdlc/SDLC.md`](sdlc/SDLC.md) for names) and PDLC phases P1–P6.
 
 | Discipline | Bridge file | Core question |
 |---|---|---|
@@ -62,7 +62,7 @@ Each discipline has a bridge that maps its practices to SDLC phases A–F and PD
 
 | Bridge | File | Connects |
 |---|---|---|
-| **Forge ↔ SDLC ↔ PDLC** | [`sdlc/methodologies/forge/FORGE-SDLC-PDLC-BRIDGE.md`](sdlc/methodologies/forge/FORGE-SDLC-PDLC-BRIDGE.md) | Forge delivery methodology ↔ SDLC phases A–F ↔ PDLC phases P1–P6: Ore pipeline to PDLC discovery, Assay Gate to launch readiness, Versonas as discipline lenses |
+| **Forge ↔ SDLC ↔ PDLC** | [`sdlc/methodologies/forge/FORGE-SDLC-PDLC-BRIDGE.md`](sdlc/methodologies/forge/FORGE-SDLC-PDLC-BRIDGE.md) | Forge delivery methodology ↔ SDLC (A–F shorthand) ↔ PDLC phases P1–P6: Ore pipeline to PDLC discovery, Assay Gate to launch readiness, Versonas as discipline lenses |
 
 ### Intra-lifecycle bridges
 
@@ -82,7 +82,7 @@ Discipline-to-lifecycle bridges follow a consistent structure. Not every section
 | 2 | **Canonical sources** | Links to the authoritative docs for each bridged domain |
 | 3 | **Comparison table** | Side-by-side dimensions: core question, scope, primary owner, timeline, success metric, risk focus, artifacts, failure mode |
 | 4 | **"When one is missing"** | Consequences of practicing one domain without the other |
-| 5 | **Phase alignment / lifecycle table** | Mapping discipline activities to PDLC P1–P6 and SDLC A–F |
+| 5 | **Phase alignment / lifecycle table** | Mapping discipline activities to PDLC P1–P6 and SDLC (A–F shorthand) |
 | 6 | **Role mapping** | Who owns what across domains at each phase |
 | 7 | **Artifact flow** | What crosses between domains and in which direction |
 | 8 | **Calibration / decision framework** | When to invest more or less in this discipline |
@@ -109,5 +109,5 @@ The PDLC package's own cross-lifecycle bridge uses `PDLC-SDLC-BRIDGE.md` (the tw
 | Doc | Why |
 |-----|-----|
 | [`disciplines/README.md`](disciplines/README.md) | Discipline hub — lists all disciplines and their relationship to lifecycles |
-| [`sdlc/SDLC.md`](sdlc/SDLC.md) | Delivery phases A–F, DoD, ceremonies |
+| [`sdlc/SDLC.md`](sdlc/SDLC.md) | Named delivery phases, DoD, ceremonies (**A–F** in bridges) |
 | [`pdlc/PDLC.md`](pdlc/PDLC.md) | Product phases P1–P6, stage gates, artifacts |
