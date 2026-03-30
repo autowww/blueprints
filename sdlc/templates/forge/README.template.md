@@ -54,4 +54,11 @@ Active Forge rules in `.cursor/rules/`:
 | `versona-sampling.mdc` | Demo meta-Versona (optional; same installer) |
 | `versona-project-setup.mdc` | Project bootstrap checklist (`setup` / `@versona-project-setup`; copy from `blueprints/sdlc/methodologies/forge/versona/catalog/workflow/versona-project-setup.mdc.template`) |
 
-Copy optional **Skills** from `blueprints/sdlc/templates/forge/cursor-skills/` into `.cursor/skills/`. Install and align Cursor rules: `bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh sync --preset recommended` — see `blueprints/sdlc/methodologies/forge/setup/CURSOR-RULES-QUICKSTART.md`.
+Copy optional **Skills** from `blueprints/sdlc/templates/forge/cursor-skills/` into `.cursor/skills/`, for example:
+
+| Skill folder | Use |
+|--------------|-----|
+| `run-product-versona-session/` | Product-family Versona pass (roadmap / assumptions) |
+| `run-engineering-ai-code-review/` | Engineering-family **AI code review** (diff/PR, §5 Versona output) |
+
+Install and align Cursor rules: `bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh sync --preset recommended` — see `blueprints/sdlc/methodologies/forge/setup/CURSOR-RULES-QUICKSTART.md`.

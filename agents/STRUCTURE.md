@@ -31,6 +31,8 @@ This blueprint does **not** mandate a particular LLM vendor or multi-agent frame
 
 **Rule of thumb:** Most teams use **L1–L5** only. **L6** is optional and increases operational and security surface.
 
+**Optional AI-assisted diff review:** a **frozen template** lives at [`templates/recipe/llm-diff-review/`](templates/recipe/llm-diff-review/README.md) — copy into `agents/recipes/` and call an OpenAI-compatible HTTP API with **`curl` + `jq`** (no extra runtime in the default base image). Align prompts and governance with [`blueprints/sdlc/methodologies/agentic-coding-standards.md`](../sdlc/methodologies/agentic-coding-standards.md).
+
 ---
 
 ## 3. Directory layout (frozen vs mutable)
@@ -49,6 +51,7 @@ blueprints/agents/
     README.md
   templates/
     recipe/
+      llm-diff-review/   # optional template: diff → LLM Markdown (see README)
     project-agents/
   scripts/
     README.md

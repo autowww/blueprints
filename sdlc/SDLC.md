@@ -110,7 +110,7 @@ Recurring collaboration (**ceremonies**) should **cover** the six **intent types
 | WBS / backlog | Set items to `in_progress` when work starts. |
 | API / public surface | Language-appropriate doc comments (e.g. KDoc, Javadoc, Rustdoc, docstrings). |
 | **CI pipeline config** | e.g. `.github/workflows/`, GitLab CI, Jenkinsfile — lives in-repo; document **what runs** and **merge/release gates** in `docs/development/` (or equivalent). See **§7**. |
-| **Optional agents & automation** | When `blueprints/agents/` is adopted: container **recipes** (e.g. browser/E2E) in `agents/`; document image build and recipe steps beside other CI gates. Broader agentic practices: [`methodologies/agentic-sdlc.md`](methodologies/agentic-sdlc.md). See [`DOCUMENTATION-STRUCTURE.md`](DOCUMENTATION-STRUCTURE.md) and the [agents blueprint](../agents/README.md). |
+| **Optional agents & automation** | When `blueprints/agents/` is adopted: container **recipes** (e.g. browser/E2E) in `agents/`; document image build and recipe steps beside other CI gates. Broader agentic practices: [`methodologies/agentic-sdlc.md`](methodologies/agentic-sdlc.md); **coding and AI review standards:** [`methodologies/agentic-coding-standards.md`](methodologies/agentic-coding-standards.md). See [`DOCUMENTATION-STRUCTURE.md`](DOCUMENTATION-STRUCTURE.md) and the [agents blueprint](../agents/README.md). |
 | **Test plan (lightweight)** | For non-trivial scope: outline scope, levels (unit/integration/e2e/manual), and exit criteria — story spec, `docs/testing/`, or [`templates/TEST-PLAN.template.md`](templates/TEST-PLAN.template.md). |
 
 **Exit:** Acceptance criteria met; tests added **or** skip justified in the story/PR.

@@ -4,7 +4,7 @@ This document defines **where documentation can live** in a repository, **what k
 
 **Related:** [`SDLC.md`](SDLC.md) (phases, gates, doc obligations) · optional **requirements convention** in the consuming repo (e.g. `docs/requirements/STRUCTURE-PROPOSAL.md` if you adopt one).
 
-**Scalability:** The layout below scales from a single deliverable to multiple milestones and teams by **namespacing delivery specs** (often under `docs/requirements/`) and keeping frozen blueprints under **`blueprints/`** at repository root — **`blueprints/sdlc/`** (this SDLC package), optional **`blueprints/product/`** (product-functional IA; mutable prose under **`docs/product/`**), and optional **`blueprints/agents/`** (containerized automation). **Agentic** delivery (IDE/LLM/CI) is covered in **`methodologies/agentic-sdlc.md`**. Mutable jobs live in **`agents/`** at repository root—see **`blueprints/agents/STRUCTURE.md`** and **`blueprints/agents/README.md`**. Swap folder names if you use another tool (e.g. `work-items/` instead of `requirements/`)—keep the *separation* between process docs, product-functional docs, delivery specs, and (when used) automation blueprints.
+**Scalability:** The layout below scales from a single deliverable to multiple milestones and teams by **namespacing delivery specs** (often under `docs/requirements/`) and keeping frozen blueprints under **`blueprints/`** at repository root — **`blueprints/sdlc/`** (this SDLC package), optional **`blueprints/product/`** (product-functional IA; mutable prose under **`docs/product/`**), and optional **`blueprints/agents/`** (containerized automation). **Agentic** delivery (IDE/LLM/CI) is covered in **`methodologies/agentic-sdlc.md`**; prescriptive **coding and review** norms for AI-assisted work are in **`methodologies/agentic-coding-standards.md`**. Mutable jobs live in **`agents/`** at repository root—see **`blueprints/agents/STRUCTURE.md`** and **`blueprints/agents/README.md`**. Swap folder names if you use another tool (e.g. `work-items/` instead of `requirements/`)—keep the *separation* between process docs, product-functional docs, delivery specs, and (when used) automation blueprints.
 
 ---
 
@@ -204,7 +204,7 @@ docs/requirements/
 
 ### 2.2 Agents blueprint (optional, automation)
 
-**Software agents** in this repo’s sense include **LLM assistants**, **IDE tooling**, **CI bots**, and **containerized** jobs — see [`methodologies/agentic-sdlc.md`](methodologies/agentic-sdlc.md). **`blueprints/agents/`** is the **optional execution layer** for **repeatable, isolated** work (Docker images, Compose, `agents/recipes/`). When you adopt it, treat it like **`blueprints/product/`**: **frozen** generic package at repository root; **mutable** content in **`agents/`** (recipes, workspaces, optional `compose.override.yaml`). Full sub-layer model:
+**Software agents** in this repo’s sense include **LLM assistants**, **IDE tooling**, **CI bots**, and **containerized** jobs — see [`methodologies/agentic-sdlc.md`](methodologies/agentic-sdlc.md) and [`methodologies/agentic-coding-standards.md`](methodologies/agentic-coding-standards.md). **`blueprints/agents/`** is the **optional execution layer** for **repeatable, isolated** work (Docker images, Compose, `agents/recipes/`). When you adopt it, treat it like **`blueprints/product/`**: **frozen** generic package at repository root; **mutable** content in **`agents/`** (recipes, workspaces, optional `compose.override.yaml`). Full sub-layer model:
 
 | Layer | Contents |
 |-------|----------|

@@ -42,7 +42,7 @@ Seed files for a **mutable** `forge/` workspace and `ember-logs/` at repo root. 
 | [**forge/session.manifest.yaml.template**](forge/session.manifest.yaml.template) | Optional YAML twin of session manifest. |
 | [**forge/versona-process.template.md**](forge/versona-process.template.md) | Repeatable multi-step Versona / human process doc (mermaid placeholders). |
 | **forge/cursor-rules/** | Ready-to-use Cursor rules: `forge-daily.mdc`, `forge-planning.mdc`, `forge-setup.mdc`, `forge-versona.mdc`, `forge-product-manager.mdc`. Optional Layer-0 baseline: copy `../methodologies/forge/versona/versona-generic.mdc.template` from blueprints (see `versona/catalog/ANCESTRY.md`, `versona/catalog/TEMPLATE-INDEX.md`). |
-| **forge/cursor-skills/** | Optional Cursor **Skills** to copy into `.cursor/skills/` (e.g. `run-product-versona-session`). |
+| **forge/cursor-skills/** | Optional Cursor **Skills** to copy into `.cursor/skills/` (e.g. `run-product-versona-session`, `run-engineering-ai-code-review`). |
 | **—** | Cursor rules: [`../methodologies/forge/setup/sync-forge-cursor-rules.sh`](../methodologies/forge/setup/sync-forge-cursor-rules.sh) (`sync` / `diff` / `status` / `check`) — quick ref [`../methodologies/forge/setup/CURSOR-RULES-QUICKSTART.md`](../methodologies/forge/setup/CURSOR-RULES-QUICKSTART.md) |
 
 ## Spec-driven (SDD) — ceremony & process I/O

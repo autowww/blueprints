@@ -72,6 +72,7 @@ This template is the **foundational Engineering discipline Versona** for **imple
 - SOLID and related structural principles at module/class level
 - Appropriate use of design patterns; avoidance of pattern abuse
 - Algorithmic complexity and data-structure choices for stated constraints
+- **AI-assisted changes:** alignment with [`agentic-coding-standards.md`](../../../../../agentic-coding-standards.md) — scoped diffs, PR granularity, attribution/audit expectations, verification before merge, and when to add Security / Testing lenses
 
 ### Scope boundaries
 

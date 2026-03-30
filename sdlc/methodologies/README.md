@@ -97,6 +97,7 @@ Guides that apply **alongside** any methodology, addressing how **agents**, **au
 | Guide | Topics |
 |-------|--------|
 | [**Agentic SDLC**](https://forgesdlc.com/agentic-sdlc.html) | Cross-cutting: agents, review, identity, limits — not a replacement for the guides above. |
+| [**Agentic coding standards**](agentic-coding-standards.md) | Prescriptive standards for AI-assisted coding and review (verification, attribution, security); optional Forge mapping to Charge, Ember Log, Versonas, and Assay. |
 | [**Testing knowledge base**](../../disciplines/engineering/testing/README.md) | Test levels, types, and design techniques (ISTQB-aligned); modern strategies (shift-left, TDD, BDD, contract testing, AI-augmented); test automation frameworks landscape and selection guidance. Not a methodology — a **reference** that all methodologies draw from. Now a standalone discipline package under [`blueprints/disciplines/engineering/testing/`](../../disciplines/engineering/testing/README.md). |
 
 ---
