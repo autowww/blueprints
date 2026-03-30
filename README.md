@@ -64,6 +64,13 @@ Cross-cutting professional competencies organized into **four families** and **t
 
 **Canonical source** is this repository on `main`. The wiki is a convenience mirror—refresh it with [`wiki-source/sync-wiki.sh`](wiki-source/sync-wiki.sh) when you have push access to the wiki remote.
 
+## Published handbook site (Forge)
+
+The static handbook at [blueprints.forgesdlc.com](https://blueprints.forgesdlc.com/) is generated from this repo’s Markdown (see the **blueprints-website** consumer). The same site also publishes companion docs from adjacent repositories:
+
+- [forge-lenses](https://blueprints.forgesdlc.com/lenses/index.html) — workspace dashboard (`docs/` + `lenses/website/` merged for navigation)
+- [Kitchensink and forge-autodoc](https://blueprints.forgesdlc.com/ks/index.html) — shared design system and Markdown→HTML handbook builder shipped inside **forgesdlc-kitchensink**
+
 ## Maintainer roadmap & adoption
 
 Framework **positioning**, **roadmap**, and **adopter quickstart** live under [`docs/`](docs/INDEX.md): [Roadmap](docs/ROADMAP.md) · [Adoption](docs/ADOPTION.md) · [Positioning & first MVP](docs/product/discovery/framework-positioning-and-mvp.md). Work breakdown for the current Product Spark is in [`docs/requirements/WBS.md`](docs/requirements/WBS.md).
