@@ -37,11 +37,18 @@ Each row includes an **executive summary**: what the link is and **why this blue
 | British Design Council — Double Diamond | https://www.designcouncil.org.uk/our-resources/the-double-diamond/ | **Double Diamond model** — canonical visualization of diverge/converge across problem and solution spaces. |
 | Nielsen Norman Group — Design Thinking | https://www.nngroup.com/articles/design-thinking/ | **Evidence-based** practitioner summary of when Design Thinking works and its limitations. |
 
+## Agile product delivery (vendor context)
+
+| Topic | URL | Executive summary (why it's linked here) |
+|-------|-----|----------------------------------------|
+| Atlassian — Product development | https://www.atlassian.com/agile/product-management/product-development | **Practitioner overview** of product development in an Agile context — complements Forge’s PDLC ↔ SDLC bridge for software teams. |
+
 ## Stage-Gate & governance
 
 | Topic | URL | Executive summary (why it's linked here) |
 |-------|-----|----------------------------------------|
 | Stage-Gate International | https://www.stage-gate.com/ | **Official** Stage-Gate body of knowledge — Robert Cooper's framework, 5th-generation updates, research. Authority for gate criteria and stage definitions. |
+| Stage-Gate — Discovery-to-launch process | https://www.stage-gate.com/about/stage-gate-innovation-performance-framework/discovery-to-launch-process/ | **Discovery-to-launch** framing from Stage-Gate International — aligns with gated NPD vocabulary used alongside Forge P1–P6. |
 | 5th-Generation Stage-Gate Model | https://www.stage-gate.com/about/5th-generation-stage-gate-model/ | **Current evolution**: iterative stages, Agile integration, lean gates, adaptive governance. Addresses historical rigidity criticism. |
 | PDMA — Product Development and Management Association | https://community.pdma.org/ | **Practitioner community** for product development — research, benchmarking, and Stage-Gate updates from Robert Cooper. |
 
@@ -49,6 +56,7 @@ Each row includes an **executive summary**: what the link is and **why this blue
 
 | Topic | URL | Executive summary (why it's linked here) |
 |-------|-----|----------------------------------------|
+| ProductPlan — Product development cycle | https://www.productplan.com/glossary/product-development-cycle/ | **Definition overview** of the product development cycle — helps teams compare generic phase language to Forge P1–P6 without claiming one global standard. |
 | ProductPlan — Product Lifecycle | https://productplan.com/glossary/product-lifecycle/ | **Clear overview** of lifecycle stages (Introduction, Growth, Maturity, Decline) with strategic implications. Starting reference for PLM. |
 | ProductPlan — End-of-Life | https://productplan.com/learn/how-to-end-of-life-product/ | **Practical checklist** for product retirement — communications, migration, support wind-down. Informs P6 sunset planning. |
 | Product Marketing Alliance — Sunsetting | https://productmarketingalliance.com/how-to-sunset-product-complete-guide-examples/ | **Complete guide** with real examples of product sunset strategies — phased approach, stakeholder management. |
@@ -66,7 +74,10 @@ urls=(
   http://theleanstartup.com/
   https://designthinking.ideo.com/
   https://www.stage-gate.com/
+  https://www.stage-gate.com/about/stage-gate-innovation-performance-framework/discovery-to-launch-process/
   https://productplan.com/glossary/product-lifecycle/
+  https://www.productplan.com/glossary/product-development-cycle/
+  https://www.atlassian.com/agile/product-management/product-development
   https://dora.dev/
   https://www.designcouncil.org.uk/our-resources/the-double-diamond/
 )

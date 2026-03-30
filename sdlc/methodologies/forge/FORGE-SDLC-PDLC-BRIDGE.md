@@ -2,6 +2,8 @@
 
 **Purpose:** Map how **Forge SDLC** connects to both the software delivery lifecycle (SDLC phases A–F) and the product development lifecycle (PDLC phases P1–P6). This bridge closes the gap between product discovery and daily execution.
 
+For the **full** PDLC ↔ SDLC lifecycle bridge (plain-language comparisons, nested-loop view, artifact handoffs, metrics, and a worked example without Forge-specific mechanics), see **[PDLC ↔ SDLC bridge](https://forgesdlc.com/pdlc-sdlc-bridge.html)** on forgesdlc.com.
+
 ## 1. Canonical sources
 
 | Domain | Source |

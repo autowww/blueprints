@@ -17,6 +17,9 @@ Companies using modern Stage-Gate achieve **63–78% product success rates**, co
 | [Stage-Gate International](https://www.stage-gate.com/) | **Official** Stage-Gate body of knowledge — Robert Cooper's framework, 5th-generation updates, research, and case studies. The authority for gate criteria and stage definitions. |
 | [5th-Generation Stage-Gate Model](https://www.stage-gate.com/about/5th-generation-stage-gate-model/) | **Current evolution** of Stage-Gate: iterative stages, Agile integration, lean gates, adaptive governance — addresses historical criticisms of rigidity. |
 | [PDMA — Stage-Gate 2026](https://community.pdma.org/) | **Product Development and Management Association** — practitioner community, research, and updated Stage-Gate guidance. Hosts Cooper's latest articles. |
+| [ProductPlan — Product development cycle](https://www.productplan.com/glossary/product-development-cycle/) | **Glossary overview** of the product development cycle — useful when comparing vendor phase counts and labels to Forge P1–P6. |
+| [Stage-Gate — Discovery-to-launch process](https://www.stage-gate.com/about/stage-gate-innovation-performance-framework/discovery-to-launch-process/) | **Official** discovery-to-launch framing from Stage-Gate International — aligns with gated NPD and complements this blueprint’s mapping table. |
+| [Atlassian — Product development](https://www.atlassian.com/agile/product-management/product-development) | **Practitioner summary** of product development in Agile delivery — how discovery and delivery connect in software teams. |
 
 ---
 
@@ -59,6 +62,26 @@ Each gate uses **explicit criteria** — not opinions:
 | **Spiral / iterative stages** | Stages iterate internally (build-test-learn) rather than being strictly sequential |
 | **Adaptive** | Gate criteria adjust based on project risk and novelty — higher risk = more rigorous gates |
 | **AI-assisted** | AI can prepare gate materials, analyze market data, and flag risks — humans make decisions |
+
+---
+
+## Discovery-to-launch reference framing (seven stages)
+
+There is **no single universal PDLC phase model**. Teams differ on how many phases they use, where one phase ends and the next begins, and whether the lifecycle stops at launch or continues into post-launch learning. Strong practice is to define each phase by **purpose**, **required activities**, **deliverables**, **exit criteria**, and **gate decisions**, while treating the flow as **iterative and cross-functional**, not as a rigid one-way handoff. (See also [ProductPlan — product development cycle](https://www.productplan.com/glossary/product-development-cycle/).)
+
+The table below is a **mainstream seven-stage** discovery-to-launch shape (similar to [Stage-Gate’s discovery-to-launch material](https://www.stage-gate.com/about/stage-gate-innovation-performance-framework/discovery-to-launch-process/)), with **one distinct decision question per stage** — a quick sanity check that each stage earns its place. **Forge’s canonical lifecycle** remains P1–P6 plus embedded SDLC A–F in [`PDLC.md`](../PDLC.md) and [`PDLC-SDLC-BRIDGE.md`](../PDLC-SDLC-BRIDGE.md); use the mapping column to translate vocabulary.
+
+| Stage | Distinct decision question | Typical Forge mapping |
+|-------|-------------------------|---------------------|
+| **1. Discovery** | Is this a real opportunity? | **P1** Discover Problem |
+| **2. Scoping / screening** | Is it promising enough to justify deeper work? | **P1** → **P2** (lightweight; may align with early **G1**) |
+| **3. Business case / planning** | Is it worth funding? | **P2** + **P3** (validation + commit; **G2**, **G3**) |
+| **4. Design / prototype** | Do we know what to build with enough confidence? | Late **P2** + handoff into **SDLC A–C** |
+| **5. Development** | Can we build it to the agreed bar? | **SDLC D** (and supporting **C**) |
+| **6. Test and validate** | Does it work in reality (users, ops, market)? | **SDLC E–F** + **P4** (beta / readiness) |
+| **7. Launch and learn** | Can we win with it, operate it, and learn? | **P4** Launch + **P5** Grow ( **G4**, **G5** ) |
+
+**Merging or splitting phases** is normal. For example, some teams merge design into development; others treat post-launch learning as its own emphasis inside **P5**. What matters is that each phase still has a **clear purpose**, **explicit deliverables**, and **exit criteria** — not the label count.
 
 ---
 
@@ -106,6 +129,6 @@ Use [`templates/STAGE-GATE-REVIEW.template.md`](../templates/STAGE-GATE-REVIEW.t
 ## Further reading
 
 - [PDLC.md §4 — Stage gates](../PDLC.md) — Gate definitions G1–G5 in this blueprint
-- [PDLC-SDLC Bridge §6 — Decision framework](../PDLC-SDLC-BRIDGE.md) — When to use heavy vs light gates
+- [PDLC-SDLC Bridge §6 — Decision framework](../PDLC-SDLC-BRIDGE.md) — Meeting questions, when to use heavy vs light gates, plain-language gates vs G1–G5
 - [Lean Startup](lean-startup.md) — Complementary: hypothesis-driven validation within stages
 - [Design Thinking](design-thinking.md) — Complementary: human-centered methods for Stages 1–2

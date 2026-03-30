@@ -11,18 +11,27 @@ Both are necessary. Neither is sufficient alone. This bridge explains how they r
 
 **Canonical sources:** [`PDLC.md`](PDLC.md) (this package) · [`SDLC.md`](../sdlc/SDLC.md) (sibling package).
 
+### Simple mental model
+
+For a **software product**, treat PDLC and SDLC as **complementary**, not competing. In most organizations, **SDLC sits inside PDLC** as the delivery engine.
+
+- **PDLC** — Building the **right** product: what to build, for whom, and why it matters (customer value, market fit, business outcomes).
+- **SDLC** — Building the product **right**: how to specify, build, test, release, and operate (quality, reliability, engineering health).
+
+Real-world usage and learning connect both: PDLC sets direction; SDLC produces working software; outcomes feed the next PDLC cycle. See [§2](#2-phase-alignment) for nesting and loops.
+
 ---
 
 ## Document map
 
 | Section | Contents |
 |---------|----------|
-| [1. The core distinction](#1-the-core-distinction) | Side-by-side comparison: scope, ownership, metrics, risk, failure modes |
-| [2. Phase alignment](#2-phase-alignment) | How PDLC P1–P6 maps to SDLC A–F — diagrams and handoff points |
+| [1. The core distinction](#1-the-core-distinction) | Side-by-side comparison, plain-language table, generic phase labels, failure modes |
+| [2. Phase alignment](#2-phase-alignment) | Plain-text loop diagram, PDLC P1–P6 ↔ SDLC A–F, convergence practices, shared gates, eight-step integrated view |
 | [3. Role mapping](#3-role-mapping) | Who owns what across both lifecycles |
 | [4. Artifact handoffs](#4-artifact-handoffs) | What crosses from PDLC into SDLC and back |
 | [5. Metrics — two lenses](#5-metrics--two-lenses) | Outcome metrics (PDLC) vs output metrics (SDLC) |
-| [6. Decision framework](#6-decision-framework--when-to-emphasize-what) | Situational guidance: greenfield, increment, sunset, startup vs enterprise |
+| [6. Decision framework](#6-decision-framework--when-to-emphasize-what) | Meeting questions, situational guidance, greenfield vs sunset |
 | [7. Worked example](#7-worked-example) | End-to-end scenario through every phase |
 | [8. Anti-patterns](#8-anti-patterns) | Common failures when the bridge is missing |
 | [9. External references](#9-external-references) | Curated links with executive summaries |
@@ -55,6 +64,40 @@ SDLC is **nested inside** PDLC. A team can execute SDLC flawlessly — shipping 
 | **Artifacts** | Specs, code, tests, release notes | Research synthesis, experiments, vision, metrics dashboards |
 | **End state** | Deployed to production | Product retired or repositioned |
 
+### Plain-language comparison
+
+Same idea as the table above, phrased for **meetings and onboarding** (not a second lifecycle):
+
+| Aspect | PDLC | SDLC |
+|--------|------|------|
+| **Main question** | What should we build, for whom, and why? | How do we build, test, release, and maintain it? |
+| **Scope** | End-to-end product lifecycle | Software engineering lifecycle |
+| **Focus** | Customer value, market fit, business outcomes | Technical implementation, quality, reliability |
+| **Typical owners** | Product, UX, business, marketing, leadership | Engineering, QA, DevOps, security |
+| **Starts with** | Problem or opportunity discovery | Approved requirements or backlog items (fed by PDLC) |
+| **Ends with** | Product growth, iteration, retirement | Deployment, operation, maintenance (within each release cycle) |
+| **Success metrics** | Adoption, retention, revenue, satisfaction | Defects, lead time, uptime, performance |
+
+### Generic phase labels (industry language → Forge)
+
+Teams use different labels for phases. **Forge’s canonical names** remain P1–P6 and SDLC A–F ([`PDLC.md`](PDLC.md), [`SDLC.md`](../sdlc/SDLC.md)). Use this map when you hear generic wording:
+
+| Often-heard PDLC-style phases | Maps to Forge PDLC |
+|------------------------------|-------------------|
+| Discover / define opportunity | **P1** Discover Problem (and early **P2**) |
+| Validate demand or solution | **P2** Validate Solution |
+| Prioritize, plan, commit | **P3** Plan & Commit |
+| Launch, measure, grow | **P4** Launch · **P5** Grow |
+| Mature / retire | **P6** Mature / Sunset |
+
+| Often-heard SDLC-style phases | Maps to SDLC ([`SDLC.md`](../sdlc/SDLC.md)) |
+|------------------------------|------------------------------------------|
+| Requirements / backlog | **A** Discover / **B** Specify |
+| Architecture / design | **C** Design |
+| Development | **D** Build |
+| Testing / QA | **E** Verify |
+| Deployment; operations & maintenance | **F** Release; then ongoing ops as **P5** feedback into **A**, not a “seventh SDLC phase” |
+
 ### When one exists without the other
 
 | Scenario | What happens |
@@ -74,6 +117,21 @@ key: swimlane
 alt: Diagram
 ```
 
+### Plain-text loop (outer PDLC, inner SDLC)
+
+Same nesting as the diagram above, in a **copy-paste friendly** form. **SDLC** is the inner loop that runs inside product delivery; **customer feedback** closes the outer loop into the next discovery and prioritization cycle.
+
+```text
+PDLC (outer):  Discover ... Validate ... Prioritize ... Launch ... Measure ... Improve ...
+                                    |
+                                    v
+SDLC (inner):            Plan -> Design -> Build -> Test -> Deploy -> Operate
+                                    ^                                  |
+                                    +----------------------------------+
+```
+
+Forge naming: the inner row aligns with **SDLC phases A–F** ([`SDLC.md`](../sdlc/SDLC.md)); “Operate” and post-release learning are **P5 Grow** (and eventually **P6**), feeding **A Discover** with new Ore/backlog items—not a separate SDLC “phase 7.”
+
 ### Phase-by-phase alignment
 
 | PDLC Phase | Maps to SDLC | Relationship |
@@ -90,6 +148,47 @@ alt: Diagram
 | **P4 Launch** | **F Release** (partial overlap) | SDLC Release = artifact is deployable. PDLC Launch = artifact reaches market with GTM activation. Release is necessary but not sufficient for launch. |
 | **P5 Grow** | **A Discover** (continuous loop) | Growth insights feed back into SDLC as iteration backlog items. In Dual-Track teams, P1–P2 for the **next** initiative run concurrently with current SDLC delivery. |
 | **P6 Mature / Sunset** | — | **Downstream** of SDLC. Strategic lifecycle decisions — not delivery concerns. May trigger final SDLC cycles for migration tooling or deprecation. |
+
+### Convergence practices (one product)
+
+Healthy teams align **strategy**, **delivery**, and **learning** continuously—not as a one-time handoff:
+
+| Practice | What it means | Detail in this doc |
+|----------|----------------|-------------------|
+| **One shared product vision** | Target users, problem, business goal, success metrics in one place | [§4 Artifact handoffs](#4-artifact-handoffs), P3 outputs → Phase A |
+| **Translate goals into engineering work** | Vision → roadmap → epics → stories → tasks → code/tests/release | [§4](#4-artifact-handoffs), [§7](#7-worked-example) |
+| **Discovery and delivery in parallel** | Discovery stays slightly ahead of development (Dual-Track) | [§2](#2-phase-alignment) overlap notes · [`approaches/dual-track-agile.md`](approaches/dual-track-agile.md) |
+| **Shared stage gates** | Same decision points for product and engineering | [Shared stage gates](#shared-stage-gates--plain-names-and-forge-g1g5) below · [`PDLC.md`](PDLC.md) §4 |
+| **Measure outcomes and output** | PDLC outcome metrics + SDLC delivery metrics | [§5](#5-metrics--two-lenses) |
+
+### Shared stage gates — plain names and Forge G1–G5
+
+Organizations often describe gates in **plain language**. Map them to Forge **G1–G5** in [`PDLC.md`](PDLC.md) §4 and to SDLC exits:
+
+| Plain-language gate | Typical question | Forge gate | SDLC / PDLC anchor |
+|----------------------|------------------|------------|----------------------|
+| **Idea** | Is this worth solving? | **G1** (P1 → P2) | Before committing to solution work |
+| **Validation** | Do users need it? Does the concept hold? | **G2** (P2 → P3) | After experiments; may include feasibility spikes |
+| **Feasibility** | Can we build and operate it safely and reasonably? | **G2–G3** | Feasibility in P2; **G3** = fund and enter SDLC |
+| **Release / launch readiness** | Does it meet quality, security, and go-live bars? | **G4** (SDLC → P4) | Phase E–F exit + P4 Launch readiness |
+| **Outcome** | Did we move the metrics we committed to? | **G5** (P5 and beyond) | **P5 Grow** reviews; informs next P1–P3 |
+
+For the **Stage-Gate** methodology and commercial NPD wording, see [`approaches/stage-gate.md`](approaches/stage-gate.md).
+
+### One continuous model (eight steps)
+
+This is **PDLC with SDLC embedded in the middle**—one mental model for end-to-end flow. Steps **4–6** are the **SDLC A–F** slice (requirements through release); the rest is PDLC before and after.
+
+| Step | Activity | Forge mapping |
+|------|----------|----------------|
+| 1 | Product discovery | **P1** |
+| 2 | Opportunity validation | **P2** |
+| 3 | Prioritization and roadmap | **P3** |
+| 4 | Requirement and solution design | **A–C** |
+| 5 | Development and testing | **D–E** |
+| 6 | Deployment and launch | **F** + **P4** |
+| 7 | Measurement and learning | **P5** |
+| 8 | Iteration or retirement | **P5** → **P1** loop, or **P6** |
 
 ### Where they overlap
 
@@ -211,6 +310,16 @@ A common failure is measuring only one lens:
 
 Not every situation needs equal investment across all phases. Use this guide to calibrate effort.
 
+### Meeting questions (simple rule)
+
+| If the question is… | Emphasize | Notes |
+|---------------------|-----------|--------|
+| **“Should we build this?”** | **PDLC** (especially P1–P3) | Problem/solution fit, evidence, commitment |
+| **“How do we build and run this?”** | **SDLC** (A–F) | Specs, design, quality, release, operations |
+| **“Did it create value?”** | **Both** | PDLC outcome metrics + SDLC health; **P5** learning |
+
+This complements the situational tables below—it is a **lens for the conversation**, not a replacement for gates or DoD.
+
 ### By product maturity
 
 | Situation | PDLC emphasis | SDLC emphasis | Reasoning |
@@ -241,7 +350,7 @@ alt: Diagram
 
 ## 7. Worked example
 
-**Scenario:** A B2B SaaS company's analytics show that user onboarding completion dropped from 72% to 51% over two quarters. The product team investigates.
+**Scenario:** A B2B SaaS company's analytics show that user onboarding completion dropped from 72% to 51% over two quarters. The product team investigates. The same **discover → validate → commit → deliver → measure** pattern applies to other SaaS products (for example, collaboration tools improving task ownership and deadlines).
 
 ### P1 — Discover problem
 
