@@ -6,6 +6,8 @@ This describes a **generic** delivery flow and **which documentation** to update
 
 **PDLC (product lifecycle):** This SDLC covers **how to build the product right** — from discovery and prioritization through specification, implementation, verification, and release. The **Product Development Life Cycle** ([`blueprints/pdlc/`](../pdlc/README.md)) covers **building the right product** — problem discovery, solution validation, planning and commitment, go-to-market, growth, and sunset. The named SDLC phases above sit **inside** the PDLC as the Build & Release engine. See [`PDLC-SDLC-BRIDGE.md`](../pdlc/PDLC-SDLC-BRIDGE.md) for phase alignment, artifact handoffs, role mapping, and a worked example.
 
+**Forge (delivery methodology):** when using Forge on this SDLC foundation — connection to phases, tracking spine, and ceremony intents — see [`methodologies/forge/foundation-connection.md`](methodologies/forge/foundation-connection.md) and [`methodologies/forge/process-and-flows.md`](methodologies/forge/process-and-flows.md).
+
 **Methodology depth (Scrum, Kanban, XP, phased, Lean, Spiral, V-Model, DevOps, SAFe, FDD, Crystal, DSDM, Shape Up, DA, BDD, RAD, Agile, agentic SDLC):** see [`methodologies/README.md`](methodologies/README.md) — full guides with external links and adoption notes.
 
 **Ceremonies (foundation vs forks):** methodology-neutral **intent types** (why recurring collaboration exists) and per-methodology mappings — [`methodologies/ceremonies/README.md`](methodologies/ceremonies/README.md).

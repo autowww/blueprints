@@ -4,7 +4,7 @@ There is **no single universal PDLC phase standard** — Stage-Gate describes a 
 
 **Forge’s PDLC in one line:** Discover → Validate → Plan & Commit → [**embedded SDLC:**](https://forgesdlc.com/sdlc-overview.html) Discover / Prioritize → Specify → Design → Build → Verify → Release → Launch → Grow → Mature / Retire — so **P4 Launch** stays standard product language and SDLC remains the Build & Release engine inside the product lifecycle.
 
-This describes a **generic** product lifecycle — from validating that a problem is worth solving, through delivery (via [`SDLC.md`](../sdlc/SDLC.md): **Discover / Prioritize → … → Release**; **A–F** shorthand in bridges), to post-launch growth and eventual sunset. It defines **which product artifacts** to produce at each stage and **who** is accountable.
+This describes a **generic** product lifecycle — from validating that a problem is worth solving, through delivery (via [`SDLC.md`](../sdlc/SDLC.md): **Discover / Prioritize → … → Release**; **A–F** shorthand in bridges), to post-launch growth and eventual sunset. It defines **which product artifacts** to produce at each stage and **who** is accountable. **Canonical Forge PDLC** operational phases are **P1–P6** below; the [benchmark map](#benchmark-map-seven-phase-reference) is an **orientation** comparison to common seven-stage industry language, not an alternate Forge phase model.
 
 **How PDLC relates to SDLC:** SDLC answers "are we building the product right?" — phases, DoD, CI/CD, ceremonies. PDLC answers "are we building the right product?" — problem validation, planning and commitment, go-to-market, outcome measurement. SDLC sits **inside** PDLC as the Build & Release engine. See [`PDLC-SDLC-BRIDGE.md`](PDLC-SDLC-BRIDGE.md) for the full mapping, diagrams, and worked example ([published on forgesdlc.com](https://forgesdlc.com/pdlc-sdlc-bridge.html)).
 
@@ -13,6 +13,28 @@ This describes a **generic** product lifecycle — from validating that a proble
 **Approaches depth (Dual-Track, Stage-Gate, Lean Startup, Design Thinking, …):** see [`approaches/README.md`](approaches/README.md) — full guides with external links and adoption notes.
 
 **Path examples** below use a common `docs/product/` layout; adjust names if your tree differs.
+
+---
+
+## Benchmark map (seven-phase reference)
+
+Many organizations describe new product development with a **seven-stage** pattern (labels vary by source). Forge does **not** adopt that pattern as its **operational** phase set — **P1–P6** plus nested **SDLC A–F** remain canonical ([§2](#2-phases--product-obligations)). This table is a **comparison aid** for readers who use seven-phase language elsewhere. There is still **no single universal PDLC standard**; the column on the left is a **benchmark** shape, not a normative claim.
+
+**Benchmark phases (for comparison):** Discovery · Scoping / Screening · Business Case / Planning · Design / Prototype · Development · Test and Validate · Launch and Learn.
+
+| Benchmark phase | Forge mapping | Notes |
+|-----------------|---------------|--------|
+| Discovery | **P1** Discover problem (primary) | Problem and audience evidence — distinct from SDLC Phase A ([`SDLC.md`](../sdlc/SDLC.md)) “Discover / Prioritize,” which is delivery ordering after commitment. |
+| Scoping / Screening | **P1** → **P2** (see gates **G1**, **G2** in [§4](#4-stage-gates-decision-points)) | Opportunity and solution screening; evidence for go/kill before major engineering investment. |
+| Business Case / Planning | **P3** Plan & commit | Funding, metrics, roadmap, GTM — handoff into SDLC **A** Discover / Prioritize. |
+| Design / Prototype | **P2** Validate solution (product concepts, prototypes, experiments) **and** **SDLC B–C** (Specify, **Design**) | **Two meanings of “design”:** product/solution validation (*before* committed build) vs engineering design (*during* delivery). |
+| Development | **SDLC D** Build | Implementation. |
+| Test and Validate | **SDLC E** Verify (and release readiness in **F**) | “Validate” here = quality and acceptance against spec and P3 outcomes — **not** the same as **P2** solution validation (desirability/feasibility before build). |
+| Launch and Learn | **P4** Launch **+** **P5** Grow | The benchmark merges market go-live and post-launch learning; Forge **splits** them so **P4** stays distinct from **Release** (SDLC **F**) and **P5** captures ongoing measurement and iteration. |
+
+**Terminology cautions:** **Release** (SDLC **F**) = shippable increment and org-approved ship; **Launch** (**P4**) = market availability and GTM activation — release is often necessary but not sufficient for launch. **Discover** in **P1** addresses *what problem* to pursue; **SDLC A** addresses *what to build next* from committed intent.
+
+See [`PDLC-SDLC-BRIDGE.md`](PDLC-SDLC-BRIDGE.md) §1 for the core distinction and §2 for nesting.
 
 ---
 

@@ -15,6 +15,8 @@ Business Driver (PDLC P1–P3)
 
 This maps to the existing WBS hierarchy: Milestone → Epic → Story → Task. Forge terms layer on top without replacing the ID scheme.
 
+**Terminology:** **Product Spark** (coarse product planning slice) is not the same as a **Forge Spark** (smallest delivery task on the WBS). **Discipline exploration spikes** are time-boxed learning, not delivery Sparks — see [`../NAMING-REFERENCE.md`](../NAMING-REFERENCE.md) and [`../versona/DISCIPLINE-SPIKE.md`](../versona/DISCIPLINE-SPIKE.md).
+
 ## Documents
 
 | File | Purpose |

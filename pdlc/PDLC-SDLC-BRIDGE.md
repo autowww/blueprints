@@ -11,6 +11,10 @@ Both are necessary. Neither is sufficient alone. This bridge explains how they r
 
 **Canonical sources:** [`PDLC.md`](PDLC.md) (this package) · [`SDLC.md`](../sdlc/SDLC.md) (sibling package).
 
+**Forge methodology bridge (same facts, Forge naming):** [`../sdlc/methodologies/forge/FORGE-SDLC-PDLC-BRIDGE.md`](../sdlc/methodologies/forge/FORGE-SDLC-PDLC-BRIDGE.md) — Ore/Spark/Charge and Forge meetings mapped to PDLC ↔ SDLC.
+
+**Seven-phase benchmark map:** [`PDLC.md`](PDLC.md#benchmark-map-seven-phase-reference) compares Forge **P1–P6** and nested **SDLC A–F** to a common **seven-stage** industry *reference* pattern (not Forge’s operational phase set).
+
 ### Simple mental model
 
 For a **software product**, treat PDLC and SDLC as **complementary**, not competing. In most organizations, **SDLC sits inside PDLC** as the delivery engine.
@@ -26,6 +30,7 @@ Real-world usage and learning connect both: PDLC sets direction; SDLC produces w
 
 | Section | Contents |
 |---------|----------|
+| [Benchmark map](PDLC.md#benchmark-map-seven-phase-reference) (same package) | Seven-phase *reference* pattern ↔ Forge P1–P6 + SDLC; terminology cautions |
 | [1. The core distinction](#1-the-core-distinction) | Side-by-side comparison, plain-language table, generic phase labels, failure modes |
 | [2. Phase alignment](#2-phase-alignment) | Plain-text loop diagram, PDLC P1–P6 ↔ SDLC A–F, convergence practices, shared gates, eight-step integrated view |
 | [3. Role mapping](#3-role-mapping) | Who owns what across both lifecycles |
