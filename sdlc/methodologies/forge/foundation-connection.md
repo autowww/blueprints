@@ -2,6 +2,8 @@
 
 This blueprint treats **Forge as a delivery methodology** that plugs into a **shared foundation**: **tracking** (spine + artifacts) and **ceremony intents** (C1–C6). Forge does **not** replace the foundation; it defines **how** the team refines, scrutinizes, executes, and releases work.
 
+The **ceremony** names below refer to the same **meetings** listed in [`ceremonies-prescriptive.md`](ceremonies-prescriptive.md); **meeting** is the preferred public label when the distinction matters—see [Meetings vs ceremonies vs Versona sessions](NAMING-REFERENCE.md#meetings-vs-ceremonies-vs-versona-sessions).
+
 ## 1. SDLC phases A–F (how Forge maps)
 
 | Phase | Forge expression | Notes |
@@ -32,9 +34,9 @@ Forge teams **still** maintain the blueprint tracking spine:
 
 **Prescriptive rule:** Every Spark that ships should be **linkable** to its parent Ingot and the original Ore. The Ember Log captures decision context that links and commits alone cannot convey.
 
-## 3. Ceremony intents (C1–C6) ↔ Forge ceremonies
+## 3. Ceremony intents (C1–C6) ↔ Forge meetings
 
-| Intent | Primary Forge ceremony | Secondary |
+| Intent | Primary Forge meeting | Secondary |
 |--------|------------------------|-----------|
 | **C1 — Align & decide** | Refinement (Ore → Ingot), Versona session | Stakeholder sessions, hat-switching declarations |
 | **C2 — Plan the slice** | Planning (Ingot → Sparks), Charge selection | Iteration scope negotiation |

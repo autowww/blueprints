@@ -10,7 +10,7 @@
 | **Roles** | [`roles.md`](roles.md) | Owner/Implementer, hat-switching protocol, Versonas as virtual personas (not org roles), scaling tiers |
 | **Ceremonies (prescriptive)** | [`ceremonies-prescriptive.md`](ceremonies-prescriptive.md) | Each ceremony: inputs, outputs, agenda, participants, timebox |
 | **Process & flows** | [`process-and-flows.md`](process-and-flows.md) | State model, work unit hierarchy, iteration lifecycle, KS diagram templates |
-| **Naming reference** | [`NAMING-REFERENCE.md`](NAMING-REFERENCE.md) | Forge terms, meanings, and source file paths |
+| **Naming reference** | [`NAMING-REFERENCE.md`](NAMING-REFERENCE.md) | Forge terms, meanings, meetings vs ceremonies vs Versona sessions, seven-phase benchmark vs P1–P6, source file paths |
 | **Product → delivery IPE** | [`PRODUCT-DELIVERY-FORGE-IPE.md`](PRODUCT-DELIVERY-FORGE-IPE.md) | PDLC/SDLC phases: industry + Forge + Inputs–Process–Outputs + example Sparks |
 | **Bridge** | [`FORGE-SDLC-PDLC-BRIDGE.md`](FORGE-SDLC-PDLC-BRIDGE.md) | How Forge connects to PDLC P1–P6 and SDLC A–F |
 | **Versonas** | [`versona/README.md`](versona/README.md) | Discipline virtual personas: contract, templates, bridge-awareness — **layout:** generic at `versona/` root; other templates under `versona/catalog/` |

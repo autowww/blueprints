@@ -1,5 +1,7 @@
 # Forge — ceremonies & events (prescriptive)
 
+**Meetings and ceremony intents:** The events below are **Forge meetings**—scheduled, accountable team collaboration. They align with this blueprint’s **ceremony intent** types **C1–C6** ([Ceremony foundation](../ceremonies/ceremony-foundation.md)). In public-facing copy, **meeting** is the preferred label; **ceremony** names the same events when mapping to foundation intents. **Versona sessions** (discipline work under `forge-logs/versona/`) are separate and are not a substitute for these team meetings—see [Meetings vs ceremonies vs Versona sessions](NAMING-REFERENCE.md#meetings-vs-ceremonies-vs-versona-sessions). **Why** (rationale, problem) and **For what** (beneficiary, outcome, decision) are distinct when designing agendas—see [Why vs For what](NAMING-REFERENCE.md#why-vs-for-what) in the naming reference.
+
 Each Forge ceremony below lists **inputs**, **outputs**, **participants**, **timebox**, **agenda**, and **Forge-specific mechanics**. Forge keeps standard ceremony names and adds precision inside them.
 
 Default iteration length: **1 week** (configurable to 2 weeks for exploratory work).
@@ -81,6 +83,8 @@ Default iteration length: **1 week** (configurable to 2 weeks for exploratory wo
 ---
 
 ## 3. Daily sync (Charge confirmation)
+
+**Also called:** Daily sync **meeting** (same event).
 
 **Intent:** **C3** — execute and unblock; confirm today's Charge.
 
@@ -169,6 +173,17 @@ Default iteration length: **1 week** (configurable to 2 weeks for exploratory wo
 4. Generate insights: patterns, systemic issues, process friction (15 min).
 5. Commit to 1–3 experiments with owners and due dates (10 min).
 6. Feed learnings back as new Ore where applicable (5 min).
+
+### From retro to directives
+
+Retros must be **documented** enough that tooling or Versonas can turn outcomes into updates to project **directives**—Markdown files that govern how the team works (e.g. project `sdlc/` rules, `.cursor/rules/`, team norms, ADR-style process decisions). Treat directive updates as meeting this **minimum bar**:
+
+- **Evidence** — link to retro notes, metrics, or Ember Log entries that justify the change.
+- **Owner** — named human accountable for the change (may align with the retro experiment owner).
+- **Approval** — explicit sign-off per team governance (e.g. tech lead + product for SDLC rule changes).
+- **Review / expiry** — date or trigger for revisiting the directive; avoid stale rules with no owner.
+
+Experiments from the retro (agenda step 5) may **graduate** into directive updates; smaller adjustments may merge directly into norms. This blueprint does not prescribe automation—only traceability and human ownership.
 
 ---
 

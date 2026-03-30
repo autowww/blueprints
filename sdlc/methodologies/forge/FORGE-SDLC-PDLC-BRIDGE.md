@@ -45,6 +45,8 @@ For the **full** PDLC ↔ SDLC lifecycle bridge (plain-language comparisons, nes
 
 ### Forge → SDLC phases A–F
 
+In reader-facing ForgeSDLC copy, **meeting** is the preferred label for these events; the **Forge meetings** and mechanics in the middle column are the same events detailed in [`ceremonies-prescriptive.md`](ceremonies-prescriptive.md). See [`NAMING-REFERENCE.md`](NAMING-REFERENCE.md).
+
 | SDLC Phase | Forge ceremony/mechanics | Forge artifacts |
 |------------|--------------------------|-----------------|
 | **A Discover** | Ore intake; `discover:` Sparks | Ore items, stakeholder notes |
