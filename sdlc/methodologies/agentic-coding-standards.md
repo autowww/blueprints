@@ -94,6 +94,12 @@ Use this mapping when **Forge SDLC** is the team’s methodology ([`forge/README
 
 ---
 
+## Local visibility (forge-lenses)
+
+The **forge-lenses** workspace dashboard (`python3 -m lenses`, default `http://127.0.0.1:8080`) shows **Standards and agentic hygiene** on the **Overview** and each **Project** page: a heuristic **0–100** score, per-check table, and **Suggestions** from repository signals (CI, CONTRIBUTING/docs, `sdlc/` or `blueprints/`, `.cursor` rules or skills, Forge-related paths, lockfiles, optional commit-message sampling). The same structure is returned on each workspace child as **`standards_compliance`** in **`GET /api/workspace-state`**. This is **not** a compliance audit — see the [forge-lenses dashboard reference](https://github.com/autowww/forge-lenses/blob/main/lenses/website/dashboard-pages.md) and [`standards_compliance.py`](https://github.com/autowww/forge-lenses/blob/main/lenses/standards_compliance.py) for check ids and registry overrides.
+
+---
+
 ## Related blueprint guides
 
 - [`agentic-sdlc.md`](agentic-sdlc.md) — agentic principles, ceremonies, risks.  
