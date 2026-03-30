@@ -79,7 +79,7 @@ The table below is a **mainstream seven-stage** discovery-to-launch shape (simil
 | **4. Design / prototype** | Do we know what to build with enough confidence? | Late **P2** + handoff into **SDLC A–C** |
 | **5. Development** | Can we build it to the agreed bar? | **SDLC D** (and supporting **C**) |
 | **6. Test and validate** | Does it work in reality (users, ops, market)? | **SDLC E–F** + **P4** (beta / readiness) |
-| **7. Launch and learn** | Can we win with it, operate it, and learn? | **P4** Launch + **P5** Grow ( **G4**, **G5** ) |
+| **7. Launch and learn** | Can we win with it, operate it, and learn? | **P4** Launch + **P5** Grow (**G4**, **G5**) |
 
 **Merging or splitting phases** is normal. For example, some teams merge design into development; others treat post-launch learning as its own emphasis inside **P5**. What matters is that each phase still has a **clear purpose**, **explicit deliverables**, and **exit criteria** — not the label count.
 
