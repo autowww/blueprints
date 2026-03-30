@@ -6,7 +6,7 @@ SDLC phases A–F sit **inside** the PDLC as the Build & Release engine; PDLC wr
 
 | Document | Purpose |
 |----------|---------|
-| [**PDLC.md**](PDLC.md) | Phases P1–P6, artifacts, exit criteria, roles |
+| [**PDLC.md**](PDLC.md) | Phases P1–P6, artifacts, exit criteria, roles — includes [benchmark map](PDLC.md#benchmark-map-seven-phase-reference) vs a common seven-phase *reference* pattern |
 | [**PDLC-SDLC-BRIDGE.md**](PDLC-SDLC-BRIDGE.md) | How PDLC and SDLC relate — diagrams, role mapping, artifact handoffs, worked example |
 | [**approaches/**](approaches/README.md) | Deeper guides: Dual-Track Agile, Stage-Gate, Design Thinking, Lean Startup, PLM, Opportunity Solution Trees |
 | [**templates/**](templates/README.md) | Copy-paste starters: vision, experiment log, stage-gate review, metrics, GTM, sunset plan |

@@ -32,6 +32,10 @@ Seed files for a **mutable** `forge/` workspace and `ember-logs/` at repo root. 
 | [**forge/ember-log-entry.template.md**](forge/ember-log-entry.template.md) | Ember Log daily file seed. |
 | [**forge/journal-entry.template.md**](forge/journal-entry.template.md) | Day journal seed. |
 | [**forge/assay-gate.template.md**](forge/assay-gate.template.md) | Assay Gate evidence checklist. |
+| [**forge/retro-record.template.md**](forge/retro-record.template.md) | Retro Record — themes, experiments, evidence pointers, triage toward directives ([`../methodologies/forge/ceremonies-prescriptive.md`](../methodologies/forge/ceremonies-prescriptive.md) § “From retro to directives”). |
+| [**forge/directive-change-proposal.template.md**](forge/directive-change-proposal.template.md) | Directive Change Proposal (DCP) — bridge before merging `sdlc/` or technical directive updates. |
+| [**forge/project-sdlc-directive.template.md**](forge/project-sdlc-directive.template.md) | Project SDLC directive seed (methodology / process). |
+| [**forge/technical-directive.template.md**](forge/technical-directive.template.md) | Technical directive seed (implementation standards); pair with ADR when architecture forks. |
 | [**forge/versona-session.template.md**](forge/versona-session.template.md) | Versona session folder seed (`SESSION.md` + manifest fields) — see [`../methodologies/forge/versona/VERSONA-FRAMEWORK.md`](../methodologies/forge/versona/VERSONA-FRAMEWORK.md) §7. |
 | [**forge/discipline-spike-open.template.md**](forge/discipline-spike-open.template.md) | Exploration spike open checklist (hypothesis, anchors, no-roadmap branch) — [`../methodologies/forge/versona/DISCIPLINE-SPIKE.md`](../methodologies/forge/versona/DISCIPLINE-SPIKE.md). |
 | [**forge/discipline-spike-close.template.md**](forge/discipline-spike-close.template.md) | Exploration spike close record (`outputs/SPIKE-CLOSE.md`), Ember Log + git prompts. |

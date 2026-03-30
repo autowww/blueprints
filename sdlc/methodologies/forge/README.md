@@ -9,8 +9,11 @@
 | **Foundation & fit** | [`foundation-connection.md`](foundation-connection.md) | SDLC A–F mapping, tracking spine, ceremony intents C1–C6, role archetypes |
 | **Roles** | [`roles.md`](roles.md) | Owner/Implementer, hat-switching protocol, Versonas as virtual personas (not org roles), scaling tiers |
 | **Ceremonies (prescriptive)** | [`ceremonies-prescriptive.md`](ceremonies-prescriptive.md) | Each ceremony: inputs, outputs, agenda, participants, timebox |
+| **Meeting model** | [`meetings-model.md`](meetings-model.md) | Delivery modes (human-only / hybrid / Versona-assisted), meeting matrix, refinement vs planning, per-meeting fields, accountability, drift |
+| **Artifacts & decisions** | [`ARTIFACT-AND-DECISION-MODEL.md`](ARTIFACT-AND-DECISION-MODEL.md) | Minimum artifact set, artifact matrix vs meetings/PDLC/SDLC, canonical names, Ember Log / ADR / directive boundaries, lightweight Markdown schemas |
 | **Process & flows** | [`process-and-flows.md`](process-and-flows.md) | State model, work unit hierarchy, iteration lifecycle, KS diagram templates |
 | **Naming reference** | [`NAMING-REFERENCE.md`](NAMING-REFERENCE.md) | Forge terms, meanings, meetings vs ceremonies vs Versona sessions, seven-phase benchmark vs P1–P6, source file paths |
+| **Concept map** | [`CONCEPT-MAP.md`](CONCEPT-MAP.md) | Canonical concept matrix (lifecycles, owners, artifacts, meetings) and term-collision register |
 | **Product → delivery IPE** | [`PRODUCT-DELIVERY-FORGE-IPE.md`](PRODUCT-DELIVERY-FORGE-IPE.md) | PDLC/SDLC phases: industry + Forge + Inputs–Process–Outputs + example Sparks |
 | **Bridge** | [`FORGE-SDLC-PDLC-BRIDGE.md`](FORGE-SDLC-PDLC-BRIDGE.md) | How Forge connects to PDLC P1–P6 and SDLC A–F |
 | **Versonas** | [`versona/README.md`](versona/README.md) | Discipline virtual personas: contract, templates, bridge-awareness — **layout:** generic at `versona/` root; other templates under `versona/catalog/` |

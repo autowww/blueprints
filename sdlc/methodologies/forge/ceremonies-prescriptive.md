@@ -2,6 +2,8 @@
 
 **Meetings and ceremony intents:** The events below are **Forge meetings**—scheduled, accountable team collaboration. They align with this blueprint’s **ceremony intent** types **C1–C6** ([Ceremony foundation](../ceremonies/ceremony-foundation.md)). In public-facing copy, **meeting** is the preferred label; **ceremony** names the same events when mapping to foundation intents. **Versona sessions** (discipline work under `forge-logs/versona/`) are separate and are not a substitute for these team meetings—see [Meetings vs ceremonies vs Versona sessions](NAMING-REFERENCE.md#meetings-vs-ceremonies-vs-versona-sessions). **Why** (rationale, problem) and **For what** (beneficiary, outcome, decision) are distinct when designing agendas—see [Why vs For what](NAMING-REFERENCE.md#why-vs-for-what) in the naming reference.
 
+**Meeting model (delivery modes, accountability, per-meeting detail):** [`meetings-model.md`](meetings-model.md).
+
 Each Forge ceremony below lists **inputs**, **outputs**, **participants**, **timebox**, **agenda**, and **Forge-specific mechanics**. Forge keeps standard ceremony names and adds precision inside them.
 
 Default iteration length: **1 week** (configurable to 2 weeks for exploratory work).
@@ -176,14 +178,75 @@ Default iteration length: **1 week** (configurable to 2 weeks for exploratory wo
 
 ### From retro to directives
 
-Retros must be **documented** enough that tooling or Versonas can turn outcomes into updates to project **directives**—Markdown files that govern how the team works (e.g. project `sdlc/` rules, `.cursor/rules/`, team norms, ADR-style process decisions). Treat directive updates as meeting this **minimum bar**:
+Retros must be **documented** enough that tooling or Versonas can turn outcomes into updates to project **directives**—Markdown files that govern how the team works (e.g. project `sdlc/` rules, `.cursor/rules/`, team norms, ADR-style process decisions). The **meeting** stays human-first; the **loop** below adds structure so discussion does not end as vague chat.
+
+**Minimum bar for any directive change** (same as before):
 
 - **Evidence** — link to retro notes, metrics, or Ember Log entries that justify the change.
 - **Owner** — named human accountable for the change (may align with the retro experiment owner).
 - **Approval** — explicit sign-off per team governance (e.g. tech lead + product for SDLC rule changes).
 - **Review / expiry** — date or trigger for revisiting the directive; avoid stale rules with no owner.
 
-Experiments from the retro (agenda step 5) may **graduate** into directive updates; smaller adjustments may merge directly into norms. This blueprint does not prescribe automation—only traceability and human ownership.
+#### Recommended retro-to-directive loop
+
+1. **Retro** — Run § [Retro (learning → new Ore)](#6-retro-learning--new-ore) as usual; capture raw notes in the team’s usual place.
+2. **Retro Record** — Consolidate themes, evidence pointers, and committed experiments using [`retro-record.template.md`](../../templates/forge/retro-record.template.md). **Why** and **For what** are required at retro and theme level.
+3. **Triage** — Tag each signal: experiment only | working agreement | project SDLC directive | technical directive | ADR | Ember Log only. **Default:** experiment or Ember Log unless the team explicitly escalates.
+4. **Directive Change Proposal (DCP)** — For items that may change governed Markdown, draft [`directive-change-proposal.template.md`](../../templates/forge/directive-change-proposal.template.md) **before** merge (scope, evidence, approval path, review/expiry, rollback).
+5. **Human approval** — Approvers act per **Routing retro outputs** below; Versonas do not approve.
+6. **Apply** — Merge updated directive files ([`project-sdlc-directive.template.md`](../../templates/forge/project-sdlc-directive.template.md), [`technical-directive.template.md`](../../templates/forge/technical-directive.template.md)); add or link an **ADR** when architecture is at stake; link **Ember Log** when operational memory needs a pointer.
+
+Experiments from the retro (agenda step 5) may **graduate** into directive updates; smaller adjustments may merge directly into norms with a short Retro Record bullet instead of a full DCP. **Bias:** not every retro note becomes permanent methodology—prefer time-boxed experiments first.
+
+#### Artifact chain
+
+| Stage | Artifact | Role |
+|-------|-----------|------|
+| During retro | Raw notes + experiment commitments | Human accountability for what was agreed live |
+| Post-retro | **Retro Record** | Narrative + evidence links + triage; feeds DCP or Ember Log |
+| Before changing governed text | **Directive Change Proposal (DCP)** | Evidence, scope, owner, approval, review/expiry, rollback |
+| Merged | **Directive `.md`** (SDLC or technical) | Stable team rules until reviewed |
+| Optional | **ADR** | Significant **architecture** choice ([`SOFTWARE-ARCHITECTURE.md`](../../../disciplines/engineering/software-architecture/SOFTWARE-ARCHITECTURE.md)) |
+| Optional | **Ember Log** | Operational decisions or pointers to DCP/ADR |
+
+Traceability matters more than the label “Retro Record”—link experiments to PRs or directive paths ([`CONCEPT-MAP.md`](CONCEPT-MAP.md)).
+
+#### Routing retro outputs
+
+| Output | Route | Notes |
+|--------|--------|------|
+| Collaboration norms, charter-level commitment | **Working agreement** — merge into directives or link explicitly | Needs explicit human sign-off per team policy |
+| Try 1–3 iterations with a measure | **Temporary experiment** | Default; may **graduate** with evidence |
+| Methodology, ceremonies, gates, `sdlc/` rules | **Project SDLC directive** | Process, not architecture |
+| Implementation standards, repo conventions | **Technical directive** | Pair with **ADR** if the underlying choice is architectural |
+| Significant design fork, long-lived tech coherence | **ADR** | Directives hold **how we work**; ADRs hold **architecture** |
+| One-off operational call | **Ember Log** | Not every signal needs a new rule |
+
+#### Versona role (assist only)
+
+| Activity | Allowed | Not allowed |
+|----------|---------|-------------|
+| Pre-process notes | Normalize bullets; suggest evidence links | Approve experiments or directives |
+| Cluster themes | Propose groupings; flag gaps | Final theme names without facilitator |
+| Evidence extraction | Map claims to metrics, Ember Log lines, session paths | Invent metrics |
+| Drafting | DCP drafts; directive diffs aligned to existing tone | Merge without human approval |
+| Impact sketch | Scenarios (“if we adopt X…”) | Override tech lead or team risk judgment |
+
+#### Human review and approval path
+
+- **Facilitator** completes Retro Record and triage tags.
+- **Experiment owners** own cards until graduation or closure.
+- **DCP author** requests review from **approvers by type:** working agreement / norms (per charter); project SDLC directive (e.g. product + engineering); technical directive (tech lead; widen if cross-team); **ADR** (per engineering governance).
+- **Merge** only after **explicit** approval recorded on the DCP or PR.
+
+#### Expiry, revisit, rollback, exceptions
+
+- **Experiments** end on due date; Retro Record or next retro records graduated / discarded / extended.
+- **Directives** carry **next review** date or **trigger**; standing retro item may review expiring rules.
+- **Rollback** — DCP or PR references prior commit/section; revert is a normal change with **Why** in the message.
+- **Exceptions** — Documented in the directive (who may grant) or recorded in **Ember Log** for one-offs; silent drift is discouraged.
+
+This blueprint does not prescribe automation—only traceability and human ownership.
 
 ---
 

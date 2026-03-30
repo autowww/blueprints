@@ -5,7 +5,8 @@ Quick map of **terms**, **plain meaning**, and **where each is defined** in this
 | Term | Meaning (short) | Where stored / documented |
 |------|------------------|---------------------------|
 | **Product Spark** | Potentially shippable **product** slice: PoC, MVP, or phased increment — **not** the same as a Forge **Spark** (task). **Aliases** (same meaning, contextual): **release slice**, **product increment**. | [`planning/PLANNING-FLOW.md`](planning/PLANNING-FLOW.md) · [`process-and-flows.md`](process-and-flows.md) · [`product-manager/forge-product-manager.mdc.template`](product-manager/forge-product-manager.mdc.template) (§ Forge vocabulary) |
-| **Meeting** | Scheduled, accountable **team** collaboration (daily sync, refinement, planning, review, retro, Assay Gate). Preferred **public** label for Forge events in prescriptive docs. | [`ceremonies-prescriptive.md`](ceremonies-prescriptive.md) · [`foundation-connection.md`](foundation-connection.md) |
+| **Meeting** | Scheduled, accountable **team** collaboration (daily sync, refinement, planning, review, retro, Assay Gate). Preferred **public** label for Forge events in prescriptive docs. | [`ceremonies-prescriptive.md`](ceremonies-prescriptive.md) · [`meetings-model.md`](meetings-model.md) · [`foundation-connection.md`](foundation-connection.md) |
+| **Meeting delivery mode** | How a meeting is run: **human-only**, **hybrid**, or **Versona-only** (prepare, simulate, synthesize, draft—**not** a substitute for human sign-off on binding decisions). | [`meetings-model.md`](meetings-model.md) |
 | **Ceremony** | Blueprint **foundation** term: recurring collaboration mapped to **intent types C1–C6** in [`SDLC.md`](../../SDLC.md). Names the **same** events as **meetings** when describing foundation fit. | [`../ceremonies/ceremony-foundation.md`](../ceremonies/ceremony-foundation.md) · [`ceremonies-prescriptive.md`](ceremonies-prescriptive.md) |
 | **Why** (vs **For what**) | **Why** = rationale, motivation, problem framing. **For what** = beneficiary, outcome, target decision, or practical purpose. Keep both distinct in meeting design—do not merge into one vague field. | [`ceremonies-prescriptive.md`](ceremonies-prescriptive.md) (preamble) |
 | **Forge iteration** | Delivery cycle (often 1–2 weeks) **inside** a Product Spark; scope and evidence assessed at the boundary. | [`planning/PLANNING-FLOW.md`](planning/PLANNING-FLOW.md) · [`process-and-flows.md`](process-and-flows.md) |
@@ -40,7 +41,7 @@ These are **not** three competing “object types.” **Meetings** are what goes
 
 ## Seven-phase benchmark vs Forge PDLC (P1–P6)
 
-External literature often uses a **seven-phase** product-development **benchmark** (e.g. discovery → scoping → business case → design/prototype → development → test/validate → launch/learn). Forge **does not** claim a universal seven-phase standard; it publishes **P1–P6** in [`PDLC.md`](../../../pdlc/PDLC.md), with **SDLC** (Discover / Prioritize → … → Release) as the **Build & release engine** nested after P3—see the **SDLC — Build & release** subsection there. Use this table when **comparing** to seven-phase models; avoid implying Forge has exactly seven **public** PDLC phases.
+External literature often uses a **seven-phase** product-development **benchmark** (e.g. discovery → scoping → business case → design/prototype → development → test/validate → launch/learn). Forge **does not** claim a universal seven-phase standard; it publishes **P1–P6** in [`PDLC.md`](../../../pdlc/PDLC.md), with **SDLC** (Discover / Prioritize → … → Release) as the **Build & release engine** nested after P3—see the **SDLC — Build & release** subsection there. The **full** benchmark table and terminology cautions (Release vs Launch, two “discovers,” two “validates”) live in [`PDLC.md` § Benchmark map](../../../pdlc/PDLC.md#benchmark-map-seven-phase-reference). Use the short table below when **comparing** to seven-phase models; avoid implying Forge has exactly seven **public** PDLC phases.
 
 | Benchmark (7-phase style) | Nearest Forge anchor |
 |---------------------------|----------------------|
@@ -56,6 +57,7 @@ External literature often uses a **seven-phase** product-development **benchmark
 
 ## Related
 
+- Concept matrix, per-concept detailed notes, and term-collision register (expanded): [`CONCEPT-MAP.md`](CONCEPT-MAP.md)
 - Lifecycle bridge (Forge ↔ PDLC ↔ SDLC): [`FORGE-SDLC-PDLC-BRIDGE.md`](FORGE-SDLC-PDLC-BRIDGE.md)
 - PMI-style phase map (problem → delivery): [`PRODUCT-DELIVERY-FORGE-IPE.md`](PRODUCT-DELIVERY-FORGE-IPE.md)
 - Forge package index: [`README.md`](README.md)

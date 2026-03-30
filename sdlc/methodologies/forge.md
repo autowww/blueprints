@@ -123,6 +123,7 @@ Forge must never add more ceremony than it removes waste. Key tenets:
 | Foundation & fit | [`forge/foundation-connection.md`](forge/foundation-connection.md) |
 | Roles | [`forge/roles.md`](forge/roles.md) |
 | Ceremonies | [`forge/ceremonies-prescriptive.md`](forge/ceremonies-prescriptive.md) |
+| Meeting model | [`forge/meetings-model.md`](forge/meetings-model.md) |
 | Process & flows | [`forge/process-and-flows.md`](forge/process-and-flows.md) |
 | Bridge (PDLC ↔ SDLC) | [`forge/FORGE-SDLC-PDLC-BRIDGE.md`](forge/FORGE-SDLC-PDLC-BRIDGE.md) |
 | Versonas (discipline agents) | [`forge/versona/README.md`](forge/versona/README.md) |
