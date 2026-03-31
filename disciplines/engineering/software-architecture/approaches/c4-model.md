@@ -85,7 +85,7 @@ Exact colors vary by tool; consistency within a diagram set matters more than a 
 |------|-----------|------------|
 | **Structurizr** | Model-as-code, DSL, workspace views, aligns with C4 author’s practice | Learning curve for DSL; hosting choices |
 | **PlantUML + C4-PlantUML** | Text-based diagrams, version control friendly | Requires PlantUML toolchain; layout tuning |
-| **Mermaid (C4)** | Native in many Markdown viewers | Feature parity and layout vs Structurizr varies by version |
+| **Diagram-as-code (C4)** | Native in many Markdown viewers | Feature parity and layout vs Structurizr varies by version |
 | **draw.io / diagrams.net** | C4 shape libraries, WYSIWYG | Drift from code unless disciplined export/process |
 
 ---

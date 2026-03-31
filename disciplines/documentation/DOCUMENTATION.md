@@ -295,7 +295,7 @@ Controlled language standard for technical documentation, originally developed f
 | **Static site generators** | MkDocs (Material), Docusaurus, Hugo, Sphinx, Jekyll, Astro, VitePress |
 | **Documentation platforms** | ReadTheDocs, GitBook, Notion, Confluence, BookStack |
 | **API documentation** | Swagger UI, Redoc, Stoplight, ReadMe, Bump.sh |
-| **Diagramming** | Mermaid, PlantUML, draw.io/diagrams.net, Excalidraw, D2 |
+| **Diagramming** | Diagram-as-code in Markdown (fenced blocks), PlantUML, draw.io/diagrams.net, Excalidraw, D2 |
 | **DITA tooling** | DITA-OT, Oxygen XML, Adobe FrameMaker, Paligo |
 
 ### 6.2 Content and media production
@@ -361,7 +361,7 @@ Controlled language standard for technical documentation, originally developed f
 | arc42 | https://arc42.org/ | Architecture documentation template |
 | OpenAPI | https://www.openapis.org/ | API description standard |
 | AsyncAPI | https://www.asyncapi.com/ | Event-driven API documentation standard |
-| Mermaid | https://mermaid.js.org/ | Diagramming in Markdown |
+| Diagram-as-code syntax | https://mermaid.js.org/ | Common Markdown diagram grammar (widely supported in viewers) |
 | Vale | https://vale.sh/ | Prose linting tool for technical writing |
 | MkDocs Material | https://squidfundly.github.io/mkdocs-material/ | Popular documentation site generator theme |
 

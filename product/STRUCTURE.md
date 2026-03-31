@@ -89,7 +89,7 @@ Paths are **examples** — rename if your org uses `functional/` or `prd/` inste
 
 ## 5. Conventions
 
-- **Markdown** for prose; diagrams as **SVG** or Mermaid in-repo when useful.  
+- **Markdown** for prose; diagrams as **SVG** or diagram-as-code in-repo when useful.  
 - **Filenames:** Lowercase-with-hyphens for files; folders as above unless your org standard differs.  
 - **Links:** Prefer **relative** paths from `docs/`.  
 - **Secrets:** Never commit credentials — document *where* to configure integrations only.

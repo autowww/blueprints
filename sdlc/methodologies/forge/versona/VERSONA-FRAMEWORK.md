@@ -125,7 +125,7 @@ Each process document should include:
 4. **Steps** — ordered **activities**, each with owner type: `Human` | `Versona:kind` | `Tasklet` | `Recipe`.
 5. **Outputs** — artifacts and decisions produced.
 6. **Downstream consumers** — next process, Versona, or Ember Log expectation.
-7. **Diagram** — mermaid `sequenceDiagram` or `flowchart` showing handoffs.
+7. **Diagram** — diagram-as-code (`sequenceDiagram` or `flowchart`) showing handoffs.
 
 Use the template [`../../../templates/forge/versona-process.template.md`](../../../templates/forge/versona-process.template.md) in the consuming repo or when adding examples under project `sdlc/`.
 
@@ -254,7 +254,7 @@ Optional helper: [`../scripts/forge-versona-session.sh`](../scripts/forge-verson
 
 1. Choose kind **`discipline`** and follow [`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md).
 2. Document **input interface** (what artifacts and IDs it needs) in the template or a short companion note.
-3. If the Versona participates in a **process**, add or link a process doc (§5) with mermaid handoffs.
+3. If the Versona participates in a **process**, add or link a process doc (§5) with diagram-as-code handoffs.
 4. For **execution** steps, link to recipes under `agents/recipes/` per [`VERSONA-EXECUTION-TASKLETS.md`](../../../../agents/docs/VERSONA-EXECUTION-TASKLETS.md).
 5. Calibrate severity labels (§4) against sample work items; test §5-shaped outputs for consistency.
 6. Recommend **session** use for multi-step engagements (§7).

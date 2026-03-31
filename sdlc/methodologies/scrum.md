@@ -108,7 +108,7 @@ See project [`TRACKING-CHALLENGES.md`](../../../sdlc/TRACKING-CHALLENGES.md) for
 
 ## Prescriptive deep dive (teams)
 
-For **roles**, **foundation fit** (phases A–F, tracking spine, C1–C6), **ceremony inputs/outputs/agendas**, and **Mermaid process maps**, use the package **[`scrum/README.md`](scrum/README.md)**:
+For **roles**, **foundation fit** (phases A–F, tracking spine, C1–C6), **ceremony inputs/outputs/agendas**, and **diagram-as-code process maps**, use the package **[`scrum/README.md`](scrum/README.md)**:
 
 | Chapter | File |
 |---------|------|

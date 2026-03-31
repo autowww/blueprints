@@ -58,7 +58,7 @@ Deeper levels are possible but often better served by linking to **code structur
 |-----------|-----------|--------|---------------|----------------|
 | **Scope** | Full architecture doc template | Diagram levels + notation | Five viewpoints + scenarios | Architecture description standard (meta) |
 | **Formality** | Structured sections; content flexible | Light rules for diagrams | Classic academic/industry framing | Conceptual framework; AD is conformant instance |
-| **Tooling** | AsciiDoc/Markdown/Confluence + any diagram tool | Structurizr, PlantUML, Mermaid | Any UML/modeling tool | Depends on chosen notation |
+| **Tooling** | AsciiDoc/Markdown/Confluence + any diagram tool | Structurizr, PlantUML, diagram-as-code in Markdown | Any UML/modeling tool | Depends on chosen notation |
 | **Learning curve** | Moderate (template to fill) | Low for basics | Moderate | Steep if reading the standard itself |
 
 **Combining:** Many teams use **C4 diagrams inside arc42** §3 and §5, and **ADRs** in §9.

@@ -68,7 +68,7 @@
 
 <!-- Plot competitors on two axes that matter to your ICP.
      Examples: ease-of-use vs depth, price vs specialization, self-serve vs enterprise.
-     Include a visual (ASCII, Mermaid, or image reference). -->
+     Include a visual (ASCII, diagram-as-code, or image reference). -->
 
 ```
           High [Axis Y]
