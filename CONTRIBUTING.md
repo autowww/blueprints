@@ -13,12 +13,36 @@ Thanks for helping improve these blueprints.
 
 2. **Markdown is the source of truth**:
    - Edit `.md` files directly. HTML is generated automatically by CI when changes are pushed to `main`.
-   - The website [blueprints.forgesdlc.com](https://blueprints.forgesdlc.com) is rebuilt from `generator/build-handbook.py`.
+   - The website [blueprints.forgesdlc.com](https://blueprints.forgesdlc.com) is rebuilt from **`generator/build-handbook.py`** in the **[blueprints-website](https://github.com/autowww/blueprints-website)** repo (this repo is the Markdown source; run the generator from the consumer checkout).
    - The [GitHub Wiki](https://github.com/autowww/blueprints/wiki) is synced via `wiki-source/sync-wiki.sh`.
    - See [`docs/DESIGN-PRINCIPLES.md`](docs/DESIGN-PRINCIPLES.md) for documentation standards including the 101/201/301 tiering model.
    - Add frontmatter metadata (`tier`, `surfaces`, `cross_refs`) to new `.md` files.
 
 3. **Prefer small, focused changes** (one logical fix or improvement per PR) so reviewers can reason about impact.
+
+## Git branching & commits (Forge Team tier)
+
+This repository uses the **Forge SDLC Team** tier (5–12 people): short-lived branches, integration via **pull request** into `main`, review before merge, and CI when configured. Canonical detail: [`sdlc/methodologies/forge/setup/BRANCHING-STRATEGY.md`](sdlc/methodologies/forge/setup/BRANCHING-STRATEGY.md) · [Handbook copy](https://blueprints.forgesdlc.com/sdlc--methodologies-forge-setup-branching-strategy.html).
+
+### Branching
+
+- **Default branch:** `main`.
+- **Work branches:** `feature/<short-topic>` or `fix/<short-topic>` from `main`; keep them short-lived.
+- **Merge:** through **pull requests** to `main` (no direct pushes to `main` once branch protection is enabled).
+
+### Commit scopes (Conventional Commits–lite)
+
+Use `type(scope): summary` where it helps history search. Common **scopes** in this repo: `sdlc`, `disciplines`, `agents`, `pdlc`, `product`, `docs`, `wiki`, `templates`, `wiki-source`. Use **`chore(scope):`** for mechanical or generated-only edits. Do not treat **embedded submodules** as the place to land upstream work—edit the standalone repository and bump the submodule pointer here in a separate commit.
+
+### GitHub branch protection (maintainers)
+
+For the `main` branch, configure **Rulesets** or **classic branch protection** to match org policy. Typical settings:
+
+1. Require a pull request before merging; require at least **one** approval (adjust if your org differs).
+2. Require **status checks** to pass when `.github/workflows/` defines jobs that run on `pull_request` (match exact job IDs in the workflow files).
+3. Block force-push and deletion on `main`.
+
+This repo may rely on **organization-level** CI; align required checks with whatever runs on PRs for `autowww/blueprints`.
 
 ## How to contribute
 

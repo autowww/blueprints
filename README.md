@@ -71,9 +71,18 @@ The static handbook at [blueprints.forgesdlc.com](https://blueprints.forgesdlc.c
 - [forge-lenses](https://blueprints.forgesdlc.com/lenses/index.html) — workspace dashboard (`docs/` + `lenses/website/` merged for navigation)
 - [Kitchensink and forge-autodoc](https://blueprints.forgesdlc.com/ks/index.html) — shared design system and Markdown→HTML handbook builder shipped inside **forgesdlc-kitchensink**
 
-## Maintainer roadmap & adoption
+## Get started (handbook)
 
-Framework **positioning**, **roadmap**, and **adopter quickstart** live under [`docs/`](docs/INDEX.md): [Roadmap](docs/ROADMAP.md) · [Adoption](docs/ADOPTION.md) · [Positioning & first MVP](docs/product/discovery/framework-positioning-and-mvp.md). Work breakdown for the current Product Spark is in [`docs/requirements/WBS.md`](docs/requirements/WBS.md).
+Use the static site at [blueprints.forgesdlc.com](https://blueprints.forgesdlc.com/) — same content as this repo’s Markdown, built by the **blueprints-website** project.
+
+| Goal | Start here |
+|------|------------|
+| **First hour in a repo** | [Quickstarts](sdlc/quickstarts/README.md) — submodule, `sdlc/` workspace, Forge, Cursor |
+| **Which adopter path fits you?** | [Adopting Blueprints](docs/ADOPTION.md) — ICP paths A / B / C |
+| **What ships next** | [Roadmap](docs/ROADMAP.md) — maintainers |
+| **Positioning & MVP** | [Framework positioning & first MVP](docs/product/discovery/framework-positioning-and-mvp.md) |
+| **Work breakdown** | [WBS](docs/requirements/WBS.md) |
+| **Docs index** | [Framework docs index](docs/INDEX.md) |
 
 ## Adopt in your repo
 

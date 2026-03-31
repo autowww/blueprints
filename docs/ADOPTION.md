@@ -1,5 +1,7 @@
 # Adopting Blueprints
 
+**Hands-on first hour (commands and checks):** use [Quickstarts — First hour](../sdlc/quickstarts/first-hour.md). This page is for **which adopter story** you match — not step-by-step setup.
+
 Blueprints is a **reusable documentation framework** (SDLC, PDLC, disciplines, Forge/Versona patterns). This page is the **shortest path** from interest to a working layout in *your* repository.
 
 ## Before you start

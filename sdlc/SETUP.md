@@ -2,6 +2,8 @@
 
 Use this checklist when the **blueprints** package is available as **`blueprints/` at the repository root** (typically a git submodule). Copy this file to your project root as `SETUP.md` if you want a local checklist, or follow it from the submodule path.
 
+For a **guided first hour** with verification after each step, start with [Quickstarts — First hour](quickstarts/first-hour.md). This page remains the **full ordered checklist** (including optional paths).
+
 | Field | Value |
 |-------|--------|
 | **Profile version** | 1.0 |
@@ -21,7 +23,7 @@ Canonical layout and conventions: [`DOCUMENTATION-STRUCTURE.md`](DOCUMENTATION-S
 2. **Documentation tree (as needed)** — Create `docs/` per [`DOCUMENTATION-STRUCTURE.md`](DOCUMENTATION-STRUCTURE.md).
 3. **Project `sdlc/` workspace** — From repo root:  
    `./blueprints/sdlc/scripts/init-sdlc-workspace.sh "Project Name"`  
-   See [`SDLc-WORKSPACE.md`](SDLc-WORKSPACE.md), [`scripts/README.md`](scripts/README.md).
+   Context and layout: [`SDLc-WORKSPACE.md`](SDLc-WORKSPACE.md).
 4. **Forge workspace** — `./blueprints/sdlc/methodologies/forge/setup/forge-init.sh`  
    Creates `forge/`, `ember-logs/`, seeds `forge/forge.config.yaml`.
 5. **Configure Forge in YAML** — Edit `forge/forge.config.yaml`; questionnaire: [`methodologies/forge/setup/QUESTIONNAIRE.md`](methodologies/forge/setup/QUESTIONNAIRE.md).
@@ -30,7 +32,7 @@ Canonical layout and conventions: [`DOCUMENTATION-STRUCTURE.md`](DOCUMENTATION-S
 8. **Cursor — tasklets + Sampling (optional)** — `bash blueprints/sdlc/methodologies/forge/tasklets/install-tasklets.sh`
 9. **Optional Skills** — Copy from [`templates/forge/cursor-skills/`](templates/forge/cursor-skills/) into `.cursor/skills/`.
 10. **Validate alignment** — `bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh check` (Python 3 + PyYAML; [`versona_cursor_rules.py`](methodologies/forge/setup/versona_cursor_rules.py) `check` — same map as YAML-driven install).
-11. **Operational start** — Forge scripts: [`methodologies/forge/scripts/README.md`](methodologies/forge/scripts/README.md); workspace overview: [`templates/forge/README.template.md`](templates/forge/README.template.md).
+11. **Operational start** — [Forge scripts overview](methodologies/forge/scripts/README.md); [Forge workspace template](templates/forge/README.template.md) for a filled-in consumer layout.
 12. **Optional product-led path** — [`methodologies/forge/product-manager/README.md`](methodologies/forge/product-manager/README.md), [`methodologies/forge/product-manager/product-bootstrap-flow.md`](methodologies/forge/product-manager/product-bootstrap-flow.md).
 
 ## Cursor: Project Setup Versona

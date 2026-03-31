@@ -6,6 +6,7 @@ This folder is a **reusable, product-agnostic** package: **process** (phases, De
 
 | Deliverable | Purpose |
 |-------------|---------|
+| [**quickstarts/**](quickstarts/README.md) | **First hour** in a consuming repo — guided steps and verification (see also [Adopting Blueprints](../docs/ADOPTION.md) for ICP paths). |
 | [**POLICY.md**](POLICY.md) | Immutability rules for this blueprint. |
 | [**SDLC.md**](SDLC.md) | Delivery phases (**Discover / Prioritize → … → Release**); **A–F** shorthand in bridges; documentation obligations, Definition of Done, change control. |
 | [**DOCUMENTATION-STRUCTURE.md**](DOCUMENTATION-STRUCTURE.md) | Suggested `docs/` layout, document types, conventions, evolution notes. |
