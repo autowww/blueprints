@@ -62,6 +62,14 @@ bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh check
 
 For preset options and YAML-only installs, use the handbook page for [Cursor rules — quickstart](../methodologies/forge/setup/CURSOR-RULES-QUICKSTART.md).
 
+## 5. Optional: Forge Studio (local workspace UI)
+
+**Forge Studio** is the product name for **Lenses Studio** — the React UI at `/studio/` on the **forge-lenses** server. It is a **separate** public repository ([**autowww/forge-lenses**](https://github.com/autowww/forge-lenses)); it does not ship inside `blueprints/`. The same project’s **handbook pages** (reference + tutorials) are published read-only at [blueprints.forgesdlc.com/lenses](https://blueprints.forgesdlc.com/lenses/index.html); the runnable app stays on your machine.
+
+**Next:** Follow [**Forge Studio quickstart**](forge-studio.md) — clone or submodule, Python venv, run the server, open `/studio/` (and optionally the Electron shell).
+
+**Verify:** With the server running on the default port, [http://127.0.0.1:8080/studio/](http://127.0.0.1:8080/studio/) loads after you build the Studio bundle if needed (see that quickstart). `GET /api/workspace-state` returns JSON for a quick check.
+
 ## Go deeper
 
 - **Full ordered checklist** (submodule through optional product flows): [Project setup profile](../SETUP.md).

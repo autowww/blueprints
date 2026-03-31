@@ -78,6 +78,7 @@ Use the static site at [blueprints.forgesdlc.com](https://blueprints.forgesdlc.c
 | Goal | Start here |
 |------|------------|
 | **First hour in a repo** | [Quickstarts](sdlc/quickstarts/README.md) — submodule, `sdlc/` workspace, Forge, Cursor |
+| **Forge Studio** (local Lenses Studio UI) | [Forge Studio quickstart](sdlc/quickstarts/forge-studio.md) — **forge-lenses** repo; handbook docs at [blueprints.forgesdlc.com/lenses](https://blueprints.forgesdlc.com/lenses/index.html) |
 | **Which adopter path fits you?** | [Adopting Blueprints](docs/ADOPTION.md) — ICP paths A / B / C |
 | **What ships next** | [Roadmap](docs/ROADMAP.md) — maintainers |
 | **Positioning & MVP** | [Framework positioning & first MVP](docs/product/discovery/framework-positioning-and-mvp.md) |
@@ -87,6 +88,10 @@ Use the static site at [blueprints.forgesdlc.com](https://blueprints.forgesdlc.c
 ## Adopt in your repo
 
 Copy or add as a **git submodule** under `blueprints/`, then bootstrap project-specific folders (e.g. `sdlc/`, `docs/product/`) using the scripts and templates linked from each package README.
+
+## Blog (framework)
+
+Short narrative articles that version with this repo live under [**blog/**](blog/README.md). They are mirrored into [blueprints-website](https://github.com/autowww/blueprints-website) and published at **https://blueprints.forgesdlc.com/blog/**.
 
 ## Community
 
