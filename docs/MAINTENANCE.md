@@ -12,6 +12,8 @@ Blueprint `.md` files in **this** repository are the single source of truth. The
 
 There is **no** `generator/` directory in the **blueprints** repo on its own — the handbook build always runs from **blueprints-website** (or CI there) against a checkout of this Markdown.
 
+**forge-lenses handbook:** The **blueprints-website** build also emits **`website/lenses/`** (hub, **Reference** handbook, tutorial) from the **`forge-lenses`** submodule — merged `docs/**/*.md` and `lenses/website/*.md`. That content is **not** in this repo; edit upstream in [autowww/forge-lenses](https://github.com/autowww/forge-lenses), then bump the submodule in blueprints-website and rebuild.
+
 ## Build workflow
 
 ### blueprints.forgesdlc.com

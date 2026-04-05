@@ -11,5 +11,6 @@ Classify each surface so Quickstarts does not duplicate adoption, roadmap, or de
 | [sdlc/README.md](../sdlc/README.md) | **Refactor** | Deliverables row points at Quickstarts + ADOPTION. |
 | [sdlc/methodologies/forge/setup/CURSOR-RULES-QUICKSTART.md](../sdlc/methodologies/forge/setup/CURSOR-RULES-QUICKSTART.md) | **Keep as reference** | Presets and flags; first hour embeds one sync + links here. |
 | [SDLc-WORKSPACE.md](../sdlc/SDLc-WORKSPACE.md), [sdlc/scripts/README.md](../sdlc/scripts/README.md) | **Keep as reference** | Quickstarts cite outcomes and commands, not “read scripts README” as the only instruction. |
+| [sdlc/quickstarts/forge-studio.md](../sdlc/quickstarts/forge-studio.md) | **Quickstart + deep links** | Forge Studio setup; Blueprints Wizard subsection points at static **lenses** handbook + GitHub source — not duplicated in ADOPTION. |
 
 **Demote** means: shorten, merge, or replace with a single handbook link — do not duplicate numbered steps.

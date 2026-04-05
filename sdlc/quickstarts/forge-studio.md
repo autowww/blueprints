@@ -61,11 +61,19 @@ If the Studio bundle is missing or stale, build it from **`lenses-enterprise/`**
 
 For day-to-day UI work, the upstream repo documents **`npm run watch`** while the server runs.
 
-## 5. Optional: Electron (dev-oriented)
+## 5. Blueprints Wizard (experimental)
+
+**Blueprints Wizard** is an optional guided flow inside Forge Studio. It helps draft methodology-aligned packs (foundation brief, clarifications, scope, artifacts, recheck, launch pack export). It does **not** edit the **`blueprints/`** git submodule.
+
+- **Routes:** session hub at **`/studio/blueprints/wizard`**, editor at **`/studio/blueprints/wizard/session/<id>`** (on the same origin as `/studio/`, default port **8080**).
+- **Feature flags:** server **`LENSES_EXPERIMENTAL_BLUEPRINTS_WIZARD`**, Studio build **`VITE_EXPERIMENTAL_BLUEPRINTS_WIZARD`** — see [forge-lenses README — Blueprints Wizard](https://github.com/autowww/forge-lenses/blob/main/README.md).
+- **Handbook (static):** [Blueprints Wizard — usage](https://blueprints.forgesdlc.com/lenses/handbook/blueprints-wizard-usage.html) on the handbook site; full TOC (Studio shell + wizard pages) at [forge-lenses reference handbook](https://blueprints.forgesdlc.com/lenses/handbook/index.html). Source Markdown: [`forge-lenses/docs/blueprints/`](https://github.com/autowww/forge-lenses/tree/main/docs/blueprints).
+
+## 6. Optional: Electron (dev-oriented)
 
 From **`desktop/`**: `npm install`, then `LENSES_STUDIO_UI=1 npm start` so the window opens `/studio/`. Full notes (workspace picker, sandbox, Ubuntu launchers): [forge-lenses README — Desktop app](https://github.com/autowww/forge-lenses/blob/main/README.md#desktop-app-electron-phase-1-dev-only).
 
-## 6. Workspace root (multi-repo)
+## 7. Workspace root (multi-repo)
 
 To scan sibling repositories, set **`LENSES_WORKSPACE_ROOT`** to the parent directory that contains your clones, or use **`lenses-desktop.json`** / the folder picker as documented upstream.
 
@@ -77,4 +85,4 @@ Use **annotated tags** and submodule pointers (or `git checkout <tag>` in a stan
 
 - **First hour with Blueprints** (submodule, `sdlc/`, Forge, Cursor): [First hour in your repo](first-hour.md)
 - **ICP adoption paths:** [Adopting Blueprints](../../docs/ADOPTION.md)
-- **Upstream** clone/setup: [github.com/autowww/forge-lenses](https://github.com/autowww/forge-lenses)
+- **forge-lenses** clone/setup and API details: [github.com/autowww/forge-lenses](https://github.com/autowww/forge-lenses)

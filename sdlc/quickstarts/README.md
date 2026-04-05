@@ -7,7 +7,7 @@ This section answers **“What do I do in the first hour?”** It does **not** r
 | Quickstart | Outcome |
 |------------|---------|
 | [**First hour in your repo**](first-hour.md) | `blueprints/` present, project `sdlc/` workspace created, Forge and Cursor alignment started — with verification at each step |
-| [**Forge Studio**](forge-studio.md) | Optional **forge-lenses** clone or submodule, local server, **`/studio/`** UI (and optional Electron) — companion to Blueprints, not inside `blueprints/` |
+| [**Forge Studio**](forge-studio.md) | Optional **forge-lenses** clone or submodule, local server, **`/studio/`** UI (and optional Electron), optional **Blueprints Wizard** — companion to Blueprints, not inside `blueprints/` |
 
 ## What gets easier next
 
