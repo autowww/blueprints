@@ -1,8 +1,15 @@
+---
+nav_title: Project setup profile
+nav_group: onboarding
+---
+
 # Project setup profile (consuming repository)
 
-Use this checklist when the **blueprints** package is available as **`blueprints/` at the repository root** (typically a git submodule). Copy this file to your project root as `SETUP.md` if you want a local checklist, or follow it from the submodule path.
+## What it is
 
-For a **guided first hour** with verification after each step, start with [Quickstarts — First hour](quickstarts/first-hour.md). This page remains the **full ordered checklist** (including optional paths).
+The **full ordered checklist** for a product repository that hosts **`blueprints/` at the repository root** (typically a git submodule): submodule through optional Forge and product-led flows, with the same assumptions as the [first-hour quickstart](quickstarts/first-hour.md), but in one place.
+
+You may copy this file to your project root as `SETUP.md` if you want a local checklist.
 
 | Field | Value |
 |-------|--------|
@@ -10,17 +17,23 @@ For a **guided first hour** with verification after each step, start with [Quick
 | **Last reviewed** | 2025-03-24 |
 | **Blueprints submodule** | Record `git rev-parse HEAD` inside `blueprints/` after `git submodule update` |
 
-Canonical layout and conventions: [`DOCUMENTATION-STRUCTURE.md`](DOCUMENTATION-STRUCTURE.md).
+**Layout reference:** full consuming-repo doc tree (optional detail) — [`DOCUMENTATION-STRUCTURE.md` on GitHub](https://github.com/autowww/blueprints/blob/main/sdlc/DOCUMENTATION-STRUCTURE.md).
 
-## Path assumptions
+## When to use it
+
+Use this page when you are **standardizing setup end-to-end** after you already know you will use Blueprints at the repo root.
+
+**Before you start:** if you have not chosen an adoption story yet, skim [**Adopting Blueprints**](adopting-blueprints.md). For a faster guided pass with verification after each step, use [Quickstarts — First hour](quickstarts/first-hour.md) first, then return here for anything you skipped.
+
+## Prerequisites
 
 - **`blueprints/`** must sit at the **repository root** next to `forge/`, `sdlc/`, `docs/`, etc. Scripts such as [`methodologies/forge/setup/forge-init.sh`](methodologies/forge/setup/forge-init.sh) and [`methodologies/forge/tasklets/install-tasklets.sh`](methodologies/forge/tasklets/install-tasklets.sh) use paths like `blueprints/sdlc/...` from the current working directory (repo root).
 - If your org cannot use that layout, you need **wrapper scripts** or forks that adjust paths — the stock blueprints tooling does **not** support a configurable `BLUEPRINTS_ROOT`.
 
-## Recommended order
+## Steps
 
 1. **Submodule** — Ensure `blueprints/` is present; `git submodule update --init` so `blueprints/sdlc` exists.
-2. **Documentation tree (as needed)** — Create `docs/` per [`DOCUMENTATION-STRUCTURE.md`](DOCUMENTATION-STRUCTURE.md).
+2. **Documentation tree (as needed)** — Create `docs/` per the [layout template on GitHub](https://github.com/autowww/blueprints/blob/main/sdlc/DOCUMENTATION-STRUCTURE.md).
 3. **Project `sdlc/` workspace** — From repo root:  
    `./blueprints/sdlc/scripts/init-sdlc-workspace.sh "Project Name"`  
    Context and layout: [`SDLc-WORKSPACE.md`](SDLc-WORKSPACE.md).
@@ -35,12 +48,19 @@ Canonical layout and conventions: [`DOCUMENTATION-STRUCTURE.md`](DOCUMENTATION-S
 11. **Operational start** — [Forge scripts overview](methodologies/forge/scripts/README.md); [Forge workspace template](templates/forge/README.template.md) for a filled-in consumer layout.
 12. **Optional product-led path** — [`methodologies/forge/product-manager/README.md`](methodologies/forge/product-manager/README.md), [`methodologies/forge/product-manager/product-bootstrap-flow.md`](methodologies/forge/product-manager/product-bootstrap-flow.md).
 
-## Cursor: Project Setup Versona
+### Cursor: Project Setup Versona
 
 - **Template:** [`methodologies/forge/versona/catalog/workflow/versona-project-setup.mdc.template`](methodologies/forge/versona/catalog/workflow/versona-project-setup.mdc.template) → `.cursor/rules/versona-project-setup.mdc`
 - **Trigger:** **`setup`** or `@versona-project-setup` — checklist and gap analysis (pair with **`@forge-setup`** from [`methodologies/forge/setup/forge-setup.mdc.template`](methodologies/forge/setup/forge-setup.mdc.template) for the questionnaire).
 
-## See also
+## How to verify success
+
+- After step 1: `test -f blueprints/sdlc/README.md` from repo root.
+- After steps 3–4: project `sdlc/README.md` and `forge/forge.config.yaml` exist as in [first hour](quickstarts/first-hour.md).
+- After steps 6–10: `sync-forge-cursor-rules.sh check` passes when you use the recommended preset; CI still green if you gate on it.
+- After step 12 (if used): product bootstrap artifacts exist per the linked methodology docs.
+
+## What to do next
 
 - [`methodologies/forge/setup/README.md`](methodologies/forge/setup/README.md) — adoption entry point  
 - [`methodologies/forge/versona/README.md`](methodologies/forge/versona/README.md) — Versona catalog
