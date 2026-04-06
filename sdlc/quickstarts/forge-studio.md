@@ -67,7 +67,7 @@ For day-to-day UI work, the upstream repo documents **`npm run watch`** while th
 
 - **Routes:** session hub at **`/studio/blueprints/wizard`**, editor at **`/studio/blueprints/wizard/session/<id>`** (on the same origin as `/studio/`, default port **8080**).
 - **Feature flags:** server **`LENSES_EXPERIMENTAL_BLUEPRINTS_WIZARD`**, Studio build **`VITE_EXPERIMENTAL_BLUEPRINTS_WIZARD`** — see [forge-lenses README — Blueprints Wizard](https://github.com/autowww/forge-lenses/blob/main/README.md).
-- **Handbook (static):** [Blueprints Wizard — usage](https://blueprints.forgesdlc.com/lenses/handbook/blueprints-wizard-usage.html) on the handbook site; full TOC (Studio shell + wizard pages) at [forge-lenses reference handbook](https://blueprints.forgesdlc.com/lenses/handbook/index.html). Source Markdown: [`forge-lenses/docs/blueprints/`](https://github.com/autowww/forge-lenses/tree/main/docs/blueprints).
+- **Handbook (static, user-facing):** [Blueprints Wizard — guides](https://blueprints.forgesdlc.com/lenses/handbook/wizard-index.html) on the handbook site; [forge-lenses user guide](https://blueprints.forgesdlc.com/lenses/handbook/home.html) covers Lenses and Forge Studio. Operator / maintainer details (feature flags, telemetry) remain in the forge-lenses repo: [`docs/blueprints/wizard-usage.md`](https://github.com/autowww/forge-lenses/blob/main/docs/blueprints/wizard-usage.md).
 
 ## 6. Optional: Electron (dev-oriented)
 
