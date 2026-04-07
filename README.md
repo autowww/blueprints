@@ -1,64 +1,58 @@
 # Blueprints
 
-**Blueprints** is a reusable **SDLC / PDLC / discipline** framework you embed in a product repository: frozen baseline text under `blueprints/`, plus **your** project workspace (`sdlc/`, `docs/`, `forge/`, …). This page is the **handbook home** — written for **teams adopting and using** the framework, not for touring the upstream repo layout.
+**Blueprints** is a reusable framework for **software-project documentation and process**: packaged Markdown you embed in your product repository so teams share the same lifecycle vocabulary, ceremonies, and discipline depth—without starting from a blank wiki. You consume it as a **baseline** (typically a git submodule) and layer **your** project workspace and tooling on top.
 
-## When to use this handbook
+## Start here
 
-Use this page when you need **what Blueprints is**, **who it is for**, and **where to go next** in the published handbook — not a map of every upstream folder or maintainer workflow.
+| I want to… | Open |
+|------------|------|
+| **Understand what to adopt and choose a path** | [**Adopting Blueprints**](sdlc/adopting-blueprints.md) |
+| **Follow guided quickstarts** (first hour, hubs) | [**Quickstarts**](sdlc/quickstarts/README.md) |
+| **Run the full ordered checklist** | [**Project setup profile**](sdlc/SETUP.md) |
+| **Use Forge Studio next to your repo** | [**Forge Studio quickstart**](sdlc/quickstarts/forge-studio.md) |
+| **Fix layout, submodule, or Forge issues** | [**Troubleshooting / FAQ**](sdlc/troubleshooting-faq.md) |
 
-## What it is
+## Choose an adoption path
 
-- Prescriptive **lifecycle** and **discipline** packages (Markdown) you consume as a **submodule** (or copy).
-- Optional **Forge** (artifacts, logs, Versonas) and **Cursor** alignment on top of the same baseline.
-- A **published handbook** at [blueprints.forgesdlc.com](https://blueprints.forgesdlc.com/) — the same Markdown as this repository, formatted for reading in the browser.
+Blueprints is not one-size-fits-all. [**Adopting Blueprints**](sdlc/adopting-blueprints.md) describes intent-driven paths (solo, team, organization) so you take the depth you need without boiling the ocean.
 
-## Who it is for
+## First hour in your repo
 
-| You are… | Start with |
-|-----------|-------------|
-| Choosing how much process to take on | [**Adopting Blueprints**](sdlc/adopting-blueprints.md) — ICP-style paths A / B / C |
-| Ready to run commands in a repo | [**First hour**](sdlc/quickstarts/first-hour.md) — submodule, `sdlc/` workspace, Forge init, Cursor rules |
-| Standardizing setup end-to-end | [**Project setup profile**](sdlc/SETUP.md) — full ordered checklist with verification |
+When you are ready to run commands, use [**Quickstarts — First hour**](sdlc/quickstarts/first-hour.md): submodule, workspace layout, Forge initialization, and editor alignment—about sixty minutes with checks after each step.
 
-## Get started
+## Full setup profile
 
-1. [**Adopting Blueprints**](sdlc/adopting-blueprints.md) — what to optimize for (solo, team, org).
-2. [**First hour**](sdlc/quickstarts/first-hour.md) — concrete steps and checks (~60 minutes).
-3. [**Set up in your repo**](sdlc/SETUP.md) — submodule through optional product-led paths.
+When you want **end-to-end standardization** in a single checklist, use the [**Project setup profile**](sdlc/SETUP.md). It assumes the same layout as the first-hour flow, with every optional layer spelled out in order.
 
-**Also useful:** [Quickstarts hub](sdlc/quickstarts/README.md) · [Updating the submodule](sdlc/updating-blueprints-submodule.md) · [Troubleshooting / FAQ](sdlc/troubleshooting-faq.md)
+## Forge Studio companion
 
-## Use the framework in practice
+**Forge Studio** (in the separate **forge-lenses** app) sits beside your clones: workspace visibility, plan surfaces, and the **Blueprints Wizard** for guided sessions. Start with the [**Forge Studio quickstart**](sdlc/quickstarts/forge-studio.md). Companion guides for running Lenses and Studio locally live at **[blueprints.forgesdlc.com/lenses/](https://blueprints.forgesdlc.com/lenses/)**.
 
-| Topic | Handbook entry |
-|--------|------------------|
-| **SDLC** (phases, DoD, methodologies) | [SDLC blueprint](sdlc/README.md) |
-| **PDLC** (discovery → sunset around delivery) | [PDLC blueprint](pdlc/README.md) |
-| **Disciplines** (engineering, product, data, security, …) | [Disciplines hub](disciplines/README.md) |
-| **Forge + Cursor** (workflows, rules, tasklets) | [Forge methodology](sdlc/methodologies/forge.md) and [setup](sdlc/methodologies/forge/setup/README.md) |
-| **Team rollout** | [Team rollout patterns](sdlc/team-rollout.md) |
-| **Advanced customization (301)** | [Advanced customization](sdlc/advanced-customization.md) — safe extension points in *your* repo |
+## What you get in your repo
 
-## Frozen vs editable
+- A **frozen baseline** you update deliberately (submodule pointer and package policy)—so everyone reads the same core text.
+- **Your** project-specific interpretations, directives, and docs at the **repository root** next to that baseline—where your team’s work actually lives.
+- Optional alignment with **Forge** (artifacts, logs, Versonas) and **editor** rules—without changing how you ship code.
 
-- **`blueprints/**`** (this submodule) is the **frozen baseline** — change only via the [package policy](sdlc/POLICY.md) process.
-- **`sdlc/`**, **`docs/`**, **`forge/`** at your **repository root** are **yours** — interpretations, directives, project docs.
+## Companion guides and tools
 
-## Companion sites
+- **Open the handbook** — this site is the reader-friendly view of the same Markdown: **[blueprints.forgesdlc.com](https://blueprints.forgesdlc.com/)**.
+- **Lenses & Forge Studio** — local companion app and guides: **[Lenses hub](https://blueprints.forgesdlc.com/lenses/index.html)**.
+- **Shared design system** (themes, diagrams) — **[Design system](https://blueprints.forgesdlc.com/ks/index.html)**.
+- **Short articles** — **[Blog](https://blueprints.forgesdlc.com/blog/)**.
 
-| Site | Role |
-|------|------|
-| [forge-lenses on the handbook](https://blueprints.forgesdlc.com/lenses/index.html) | Workspace dashboard, Forge Studio companion (separate repo) |
-| [Design system](https://blueprints.forgesdlc.com/ks/index.html) | Shared Forge theme and diagram primitives |
-| [Blog](https://blueprints.forgesdlc.com/blog/) | Short framework articles |
+## Help and troubleshooting
 
-**Full repo layout** (folder-by-folder map) lives with the source on [GitHub](https://github.com/autowww/blueprints) — use it when you are browsing the submodule tree, not as a first-day adoption read.
+Use the **[Troubleshooting / FAQ](sdlc/troubleshooting-faq.md)** for submodule layout, Forge paths, and common setup mistakes.
 
-## Maintainers
+---
 
-Roadmap, WBS, design principles, and generator notes live under [`docs/`](https://github.com/autowww/blueprints/tree/main/docs) on GitHub — not part of the adoption-first handbook story.
+## Explore more in the handbook
 
-## Blog and community
+When you need a specific lifecycle or discipline package, browse from the **SDLC** and **PDLC** hubs inside the handbook, or open the **Automation** area for agents and tasklets. Those pages are written for ongoing use—not as a first-day directory map.
 
-- [**Blog**](blog/README.md) — articles mirrored to [blueprints.forgesdlc.com/blog/](https://blueprints.forgesdlc.com/blog/)
-- [Contributing](CONTRIBUTING.md) · [Code of conduct](CODE_OF_CONDUCT.md) · [Security](SECURITY.md) · [License](LICENSE)
+## Maintainer and contributor resources
+
+Deeper reference (roadmap, design principles, repository layout notes, and change policy) lives **only on GitHub** in the [`docs/`](https://github.com/autowww/blueprints/tree/main/docs) tree of the upstream repository. It is not part of the adoption-first reading path on this site.
+
+**Blog and community (GitHub):** [Contributing](https://github.com/autowww/blueprints/blob/main/CONTRIBUTING.md) · [Code of conduct](https://github.com/autowww/blueprints/blob/main/CODE_OF_CONDUCT.md) · [Security](https://github.com/autowww/blueprints/blob/main/SECURITY.md) · [License](https://github.com/autowww/blueprints/blob/main/LICENSE)
