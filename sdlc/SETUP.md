@@ -33,6 +33,13 @@ You may copy this file to your project root as `SETUP.md` if you want a local ch
 
 **Depth profiles:** **Minimum** = Bootstrap + Forge through a working `forge.config.yaml`. **Recommended** = through step 10 (`sync-forge-cursor-rules.sh check` clean). **Full** = all rows including optional product-led flows.
 
+### Setup phases (visual)
+
+```blueprint-diagram
+key: checklist
+alt: Project setup profile — Bootstrap, then Forge and Cursor, then optional product-led steps
+```
+
 ## When to use it
 
 Use this page when you are **standardizing setup end-to-end** after you already know you will use Blueprints at the repo root.

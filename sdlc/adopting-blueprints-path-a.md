@@ -33,6 +33,15 @@ When the [decision guide](adopting-blueprints.md#decision-guide) points you to p
 | 2 | Add a **project** `sdlc/` folder (interpretations, principles) — do **not** edit the copy under `blueprints/sdlc/`; see [Policy](POLICY.md). | `sdlc/README.md` exists after [init script](quickstarts/first-hour.md). |
 | 3 | Add `docs/product/` when you need capabilities/journeys (seed from [product templates](../product/templates/README.md)). | Optional; structure matches your product docs needs. |
 
+## Example scenario (path A)
+
+| | |
+|--|--|
+| **Starting situation** | Solo maintainer on a small service repo; no shared ceremony yet; Blueprints not in the tree. |
+| **Action taken** | Add `blueprints/` as a submodule, run [First hour](quickstarts/first-hour.md), keep interpretations in project `sdlc/` only. |
+| **Expected result** | `blueprints/sdlc/README.md` present; project `sdlc/README.md` describes *your* product; no edits under `blueprints/sdlc/` for product text. |
+| **What to check** | `git status` shows submodule pointer or new `sdlc/` files; policy in [POLICY.md](POLICY.md) matches how you treat the frozen baseline. |
+
 ## How to verify success
 
 Same checks as the **Verify** column above. Then run [First hour](quickstarts/first-hour.md) or [Project setup profile](SETUP.md) for the full checklist.

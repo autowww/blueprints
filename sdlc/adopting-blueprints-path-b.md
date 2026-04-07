@@ -33,6 +33,15 @@ When the [decision guide](adopting-blueprints.md#decision-guide) points you to p
 | 2 | Point the team at the [SDLC blueprint](README.md) and the methodology slice you follow (e.g. Scrum, Kanban, Forge) under `blueprints/sdlc/methodologies/`. | Team can name your default methodology entry file. |
 | 3 | Optionally wire **Forge** artifacts (`forge/`, `ember-logs/`) using templates under `blueprints/sdlc/templates/forge/` in a **consumer** repo. | `forge/forge.config.yaml` exists after [Forge init](methodologies/forge/setup/README.md). |
 
+## Example scenario (path B)
+
+| | |
+|--|--|
+| **Starting situation** | Three backend repos need the same phase names and ceremony language; one repo already completed path A. |
+| **Action taken** | EM anchors methodology reading on `blueprints/sdlc/methodologies/` + Forge setup; standups reference the same SDLC README links. |
+| **Expected result** | Engineers can point to the same methodology entry and use `sdlc/` for team-specific interpretation without forking `blueprints/`. |
+| **What to check** | Spot-check two repos: submodule pointers sane; [Team rollout](team-rollout.md) plan if alignment is still uneven. |
+
 ## How to verify success
 
 Team can name your methodology entry point and (if using Forge) has a valid `forge/forge.config.yaml`. Use [Team rollout patterns](team-rollout.md) when more than one repo must align.

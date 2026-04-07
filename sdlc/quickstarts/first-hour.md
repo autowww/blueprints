@@ -19,6 +19,13 @@ Use this guide after you intend to use Blueprints at the **repository root** (ne
 
 **Not covered here:** choosing an ICP adopter path (solo vs team vs org) — see [**Adopting Blueprints**](../adopting-blueprints.md). Maintainer plans and milestones — on GitHub: [Roadmap](https://github.com/autowww/blueprints/blob/main/docs/ROADMAP.md).
 
+### First-hour sequence (visual)
+
+```blueprint-diagram
+key: linear
+alt: First hour — submodule in place, then project sdlc, Forge, Cursor rules, optional Forge Studio
+```
+
 ## Prerequisites
 
 - **Git** and **bash** available.
@@ -80,6 +87,15 @@ bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh check
 **Forge Studio** is the product name for **Lenses Studio** — the React UI at `/studio/` on the **forge-lenses** server. It is a **separate** public repository ([**autowww/forge-lenses**](https://github.com/autowww/forge-lenses)); it does not ship inside `blueprints/`. The same project’s **user guides** (Lenses, Forge Studio, Blueprints Wizard) are published read-only at [blueprints.forgesdlc.com/lenses](https://blueprints.forgesdlc.com/lenses/index.html); the runnable app stays on your machine.
 
 **Next:** Follow [**Forge Studio quickstart**](forge-studio.md) — clone or submodule, Python venv, run the server, open `/studio/`.
+
+## Example repo (generic)
+
+| | |
+|--|--|
+| **Starting situation** | New monorepo root `acme-api/`; no `blueprints/` yet; you want Forge + Cursor aligned in one sitting. |
+| **Action taken** | Submodule add `blueprints/`, run `init-sdlc-workspace.sh`, `forge-init.sh`, `sync-forge-cursor-rules.sh sync --preset recommended`. |
+| **Expected result** | `blueprints/sdlc/README.md`, `sdlc/README.md`, `forge/forge.config.yaml`, and `.cursor/rules` (or synced rules path) exist from the stock scripts. |
+| **What to check** | From repo root: `test -f blueprints/sdlc/README.md && test -f sdlc/README.md && test -f forge/forge.config.yaml`; optional Studio only after this passes. |
 
 ## How to verify success
 

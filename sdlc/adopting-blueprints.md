@@ -36,6 +36,15 @@ Answer in order; the first row that matches your situation is usually the right 
 | You must align several contributors or repos on vocabulary and ceremonies | [**Path B**](adopting-blueprints-path-b.md) after **A**’s basics |
 | You maintain a platform corpus and many products must pin the same upstream | [**Path C**](adopting-blueprints-path-c.md) (often with governance for submodule bumps) |
 
+### Path choice (visual)
+
+The decision guide above maps three situations to paths A, B, and C. Use it before deep-reading methodology folders.
+
+```blueprint-diagram
+key: decision
+alt: Adoption path choice — match your situation to path A, B, or C from the table above
+```
+
 ## What changes vs what stays frozen
 
 | Area | What you add or own in *your* repo | What stays upstream (do not fork casually) |

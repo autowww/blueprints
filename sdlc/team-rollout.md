@@ -31,6 +31,15 @@ Use this page when more than one repo or squad needs the same vocabulary (phases
 | **Platform / org** | Enablement or architecture | [Platform / org rollout](team-rollout-org-platform.md) |
 | **Governance** | Phased rollout, office hours, risks | [Governance cadence](team-rollout-governance.md) |
 
+### Rollout scale (visual)
+
+Formality and coordination increase as you move from one team to many repos and platform governance — pick the row that matches your scope, then read that child page.
+
+```blueprint-diagram
+key: timeline
+alt: Team rollout — increasing scale from single team to multi-team, platform, and governance cadence
+```
+
 ## How to verify success
 
 - Teams can explain where **baseline** text lives (`blueprints/`) vs **their** interpretations (`sdlc/`, `docs/`).

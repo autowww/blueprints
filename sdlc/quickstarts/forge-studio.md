@@ -22,6 +22,13 @@ Companion tutorials on the handbook site: **[Lenses, Forge Studio, and the Bluep
 | **Handbook only** | Learning methodology text, onboarding, or quickstarts in the browser | Published guides at [blueprints.forgesdlc.com](https://blueprints.forgesdlc.com/) — no local server |
 | **Forge Studio (local)** | You want workspace visibility, Studio flows, and optional Wizard sessions on your machine | **forge-lenses** server — `/studio/` UI at `http://127.0.0.1:8080/studio/` |
 
+### From clone to Studio (visual)
+
+```blueprint-diagram
+key: linear
+alt: Forge Studio quickstart — clone forge-lenses, venv and dependencies, run server, open /studio/
+```
+
 ## When to use it
 
 Use this quickstart after [**First hour in your repo**](first-hour.md) (or equivalent) when you want the **forge-lenses** app with **Forge Studio** — not when you only need Blueprints Markdown in your product repo without running Lenses.
@@ -81,6 +88,24 @@ The **Blueprints Wizard** is an optional guided flow **inside** Forge Studio. It
 
 - **Where to open it:** start from **`/studio/`**, then use the Wizard entry points described in the handbook — the hub lives at **`/studio/blueprints/wizard`** (sessions use URLs under that path).
 - **Public guides:** [Wizard overview](https://blueprints.forgesdlc.com/lenses/guides/08-wizard-overview.html) · [Wizard 101](https://blueprints.forgesdlc.com/lenses/guides/09-wizard-101.html)
+
+## Example first session (generic)
+
+| | |
+|--|--|
+| **Starting situation** | Server shows the dashboard at `/`; you want to confirm Studio loads and see one workspace. |
+| **Action taken** | Open `/studio/`, pick the workspace root you configured, navigate to an overview or project card you expect. |
+| **Expected result** | Studio shell loads without console errors; project list matches folders under your workspace root ([Workspace setup](https://blueprints.forgesdlc.com/lenses/guides/03-workspace-setup.html)). |
+| **What to check** | If the list is empty, re-check root path and permissions in [Workspace setup — scan and host](https://blueprints.forgesdlc.com/lenses/guides/03-workspace-setup_03-scan-host.html). |
+
+## Example recurring use (generic)
+
+| | |
+|--|--|
+| **Starting situation** | Lenses already runs daily; you need a quick scan of plan or knowledge across repos. |
+| **Action taken** | Use **Classic** `/` for fast health and links; open **Studio** `/studio/` when you need flows that only exist in the newer UI. |
+| **Expected result** | Same server — you choose Classic vs Studio by job, not by reinstalling. |
+| **What to check** | Port and host match [Install and run](https://blueprints.forgesdlc.com/lenses/guides/02-install-and-run.html); bookmark both `/` and `/studio/`. |
 
 ## How to verify success
 

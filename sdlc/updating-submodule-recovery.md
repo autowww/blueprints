@@ -35,6 +35,15 @@ When CI fails, the submodule is dirty, or you need to communicate a bad bump to 
 | 1 | CI failed after bump | `git revert` the submodule pointer commit or `git checkout` previous SHA in `blueprints/` | CI green again |
 | 2 | Merge conflicts in `blueprints/` | Do not resolve by editing frozen files casually; reset submodule, re-apply upstream, or ask maintainers | Clean `git status` in submodule |
 
+## Example scenario (bump rolled back)
+
+| | |
+|--|--|
+| **Starting situation** | Submodule pointer moved to a new SHA; CI fails on `check` because a template path moved upstream. |
+| **Action taken** | `git revert` the pointer commit on your default branch (or checkout previous SHA inside `blueprints/` and commit the rollback). |
+| **Expected result** | CI matches last green build; team can pull and get a known-good `blueprints/` revision. |
+| **What to check** | Announce the rollback; open a ticket to adopt the breaking upstream change with a fix forward plan. |
+
 ## What to do next
 
 - [Policy](POLICY.md) — when you may change files under `blueprints/` vs project space

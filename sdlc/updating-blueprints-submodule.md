@@ -32,6 +32,13 @@ Use this guide on a schedule, after upstream fixes, or when you need a feature t
 
 **Quick flow:** routine → validate → if anything fails, recovery and [Troubleshooting](troubleshooting-faq.md).
 
+### Update lifecycle (visual)
+
+```blueprint-diagram
+key: linear
+alt: Submodule update lifecycle — routine bump, validate and test, then recovery only if something fails
+```
+
 ## What to do next
 
 - [Policy](POLICY.md) — when you may change files under `blueprints/` vs project space.

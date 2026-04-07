@@ -30,6 +30,15 @@ Rolling out Blueprints when **one squad** needs shared vocabulary — lightest f
 | **Anchor repo** | Pick one service or library repo as the reference; document its layout in your internal wiki. Others copy the same submodule pin and scripts. |
 | **Read order** | [SDLC blueprint](README.md) for lifecycle language; avoid assigning the whole blueprint tree as homework. |
 
+## Example scenario (single team)
+
+| | |
+|--|--|
+| **Starting situation** | One squad owns a single API; path B adoption is chosen; other teams are out of scope for now. |
+| **Action taken** | Tech lead documents the anchor repo layout; others clone the same submodule pin and run [SETUP](SETUP.md) verify steps. |
+| **Expected result** | Two repos match the same baseline without custom forks of `blueprints/sdlc/`. |
+| **What to check** | Onboarding doc links to [SDLC blueprint](README.md) sections by role, not the whole tree. |
+
 ## How to verify success
 
 One anchor repo is documented; teammates can repeat [SETUP](SETUP.md) verify steps without one-off forks.
