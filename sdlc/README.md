@@ -6,7 +6,7 @@ This folder is a **reusable, product-agnostic** package: **process** (phases, De
 
 | Deliverable | Purpose |
 |-------------|---------|
-| [**quickstarts/**](quickstarts/README.md) | **First hour** in a consuming repo — guided steps and verification (see also [Adopting Blueprints](../docs/ADOPTION.md) for ICP paths). |
+| [**quickstarts/**](quickstarts/README.md) | **First hour** in a consuming repo — guided steps and verification (see also [Adopting Blueprints](https://github.com/autowww/blueprints/blob/main/docs/ADOPTION.md) for ICP paths). |
 | [**POLICY.md**](POLICY.md) | Immutability rules for this blueprint. |
 | [**SDLC.md**](SDLC.md) | Delivery phases (**Discover / Prioritize → … → Release**); **A–F** shorthand in bridges; documentation obligations, Definition of Done, change control. |
 | [**DOCUMENTATION-STRUCTURE.md**](DOCUMENTATION-STRUCTURE.md) | Suggested `docs/` layout, document types, conventions, evolution notes. |
@@ -36,7 +36,7 @@ This folder is a **reusable, product-agnostic** package: **process** (phases, De
 
 ## GitHub Wiki (Markdown mirror)
 
-The **[autowww/blueprints Wiki](https://github.com/autowww/blueprints/wiki)** mirrors most blueprint `*.md` (including [`methodologies/ceremonies/`](methodologies/ceremonies/README.md)) for browser reading. **Canonical** text stays in this repo; refresh the wiki from a clone of **`autowww/blueprints`** with [`../wiki-source/sync-wiki.sh`](../wiki-source/sync-wiki.sh) — see [`../wiki-source/README.md`](../wiki-source/README.md).
+The **[autowww/blueprints Wiki](https://github.com/autowww/blueprints/wiki)** mirrors most blueprint `*.md` (including [`methodologies/ceremonies/`](methodologies/ceremonies/README.md)) for browser reading. **Canonical** text stays in this repo; to refresh the wiki, follow the [wiki-source README on GitHub](https://github.com/autowww/blueprints/blob/main/wiki-source/README.md).
 
 ---
 
