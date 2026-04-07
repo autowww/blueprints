@@ -1,6 +1,10 @@
 ---
 nav_title: First hour in your repository
 nav_group: onboarding
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: overview
 ---
 
 # First hour in your repository
@@ -73,7 +77,7 @@ bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh check
 
 **Forge Studio** is the product name for **Lenses Studio** — the React UI at `/studio/` on the **forge-lenses** server. It is a **separate** public repository ([**autowww/forge-lenses**](https://github.com/autowww/forge-lenses)); it does not ship inside `blueprints/`. The same project’s **user guides** (Lenses, Forge Studio, Blueprints Wizard) are published read-only at [blueprints.forgesdlc.com/lenses](https://blueprints.forgesdlc.com/lenses/index.html); the runnable app stays on your machine.
 
-**Next:** Follow [**Forge Studio quickstart**](forge-studio.md) — clone or submodule, Python venv, run the server, open `/studio/` (and optionally the Electron shell).
+**Next:** Follow [**Forge Studio quickstart**](forge-studio.md) — clone or submodule, Python venv, run the server, open `/studio/`.
 
 ## How to verify success
 
@@ -83,7 +87,7 @@ bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh check
 | 2. Project `sdlc/` | `sdlc/README.md` exists and describes **your** project — not edits under `blueprints/sdlc/` (frozen baseline). |
 | 3. Forge | `forge/forge.config.yaml` exists and `ember-logs/` (or paths created by the script) are present. |
 | 4. Cursor rules | The sync script completes without error; optional: `… check` passes. |
-| 5. Optional Forge Studio | With the server running on the default port, [http://127.0.0.1:8080/studio/](http://127.0.0.1:8080/studio/) loads after you build the Studio bundle if needed (see that quickstart). `GET /api/workspace-state` returns JSON for a quick check. |
+| 5. Optional Forge Studio | With the server running on the default port, [http://127.0.0.1:8080/studio/](http://127.0.0.1:8080/studio/) should load (see the Forge Studio quickstart if it does not). `GET /api/workspace-state` returns JSON for a quick check. |
 
 ## What to do next
 
