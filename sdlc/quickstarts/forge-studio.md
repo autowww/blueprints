@@ -1,24 +1,28 @@
+---
+nav_title: Forge Studio quickstart
+nav_group: onboarding
+---
+
 # Forge Studio quickstart
 
 ## What it is
 
-A short path (~**15–30 minutes** after Git and Python 3 are available) to a local **[forge-lenses](https://github.com/autowww/forge-lenses)** checkout, the Python server running, and **Forge Studio** (Lenses Studio) at **`/studio/`** in the browser.
+**Forge Studio** is the browser UI for **forge-lenses** at **`/studio/`** on your local server: workspace visibility, Forge plan surfaces, and (when available) the **Blueprints Wizard** for guided sessions. The same Python process also serves the classic dashboard at `/`.
 
-**Guides:** [Lenses, Studio, and Wizard](https://blueprints.forgesdlc.com/lenses/index.html) on the handbook site — next to this Blueprints content.
-
-**Contributors and operators:** advanced setup and troubleshooting for the **forge-lenses** repo are documented [on GitHub](https://github.com/autowww/forge-lenses/blob/main/README.md) and in [Studio quickstart — maintainer notes](https://github.com/autowww/blueprints/blob/main/docs/studio-quickstart-maintainer.md).
+Companion tutorials on the handbook site: **[Lenses, Forge Studio, and the Blueprints Wizard](https://blueprints.forgesdlc.com/lenses/index.html)**.
 
 ## When to use it
 
-Use this quickstart after [first hour](first-hour.md) (or equivalent) when you want the **local workspace UI** and **Forge Studio** — not when you only need Markdown in `blueprints/` without Lenses.
+Use this quickstart after [**First hour in your repo**](first-hour.md) (or equivalent) when you want the **forge-lenses** app with **Forge Studio** — not when you only need Blueprints Markdown in your product repo without running Lenses.
 
 ## Prerequisites
 
-- **Git**, **Python 3**, **pip** (venv recommended).
+- **Git**
+- **Python 3** and **pip** (use a **venv** for the steps below)
 
 ## Steps
 
-### 1. Get the repository
+### 1. Get forge-lenses
 
 **Standalone clone** (typical — sibling to your product repos):
 
@@ -27,7 +31,7 @@ git clone https://github.com/autowww/forge-lenses.git
 cd forge-lenses
 ```
 
-**Git submodule** (from a parent folder that contains your workspace):
+**Git submodule** (from a parent workspace that should contain the repo):
 
 ```bash
 git submodule add https://github.com/autowww/forge-lenses.git forge-lenses
@@ -35,9 +39,9 @@ git submodule update --init --recursive
 cd forge-lenses
 ```
 
-Then run `./scripts/setup.sh` for nested submodules (blueprints, kitchensink) as described in the [forge-lenses README](https://github.com/autowww/forge-lenses/blob/main/README.md).
+If the repository’s [README](https://github.com/autowww/forge-lenses/blob/main/README.md) describes a setup script or submodules for your layout, follow that next.
 
-### 2. Install Python dependencies
+### 2. Create a venv and install dependencies
 
 ```bash
 python3 -m venv .venv
@@ -46,31 +50,37 @@ python3 -m venv .venv
 
 ### 3. Run the server
 
+From the **forge-lenses** repo root:
+
 ```bash
 ./scripts/run-lenses.sh
 ```
 
-Or: `.venv/bin/python3 -m lenses` from the repo root with the same venv activated.
+Or activate the venv and run **`.venv/bin/python3 -m lenses`** (same as the script).
 
 ### 4. Open Forge Studio
 
-Open **[http://127.0.0.1:8080/studio/](http://127.0.0.1:8080/studio/)** (default port **8080**).
+In your browser, open **[http://127.0.0.1:8080/studio/](http://127.0.0.1:8080/studio/)** (default port **8080**).
 
-If the page does not load, you may need a one-time front-end build from the **forge-lenses** repository; see [maintainer notes](https://github.com/autowww/blueprints/blob/main/docs/studio-quickstart-maintainer.md).
+If the page does not load, use the **Troubleshooting** section of the [forge-lenses README](https://github.com/autowww/forge-lenses/blob/main/README.md) on GitHub.
 
-### 5. Blueprints Wizard (optional)
+### 5. Optional: open the Blueprints Wizard
 
-**Blueprints Wizard** is an optional guided flow inside Forge Studio. It helps draft methodology-aligned packs; it does **not** edit the **`blueprints/`** git submodule.
+The **Blueprints Wizard** is an optional guided flow **inside** Forge Studio. It helps you work through methodology-aligned sessions; it does **not** change your **`blueprints/`** git submodule automatically.
 
-- **Guides:** [Wizard overview](https://blueprints.forgesdlc.com/lenses/guides/08-wizard-overview.html) · [Lenses overview](https://blueprints.forgesdlc.com/lenses/guides/01-lenses-overview.html)
+- **Where to open it:** start from **`/studio/`**, then use the Wizard entry points described in the handbook — the hub lives at **`/studio/blueprints/wizard`** (sessions use URLs under that path).
+- **Public guides:** [Wizard overview](https://blueprints.forgesdlc.com/lenses/guides/08-wizard-overview.html) · [Wizard 101](https://blueprints.forgesdlc.com/lenses/guides/09-wizard-101.html)
 
 ## How to verify success
 
-- [http://127.0.0.1:8080/](http://127.0.0.1:8080/) loads (classic UI). JSON: [http://127.0.0.1:8080/api/workspace-state](http://127.0.0.1:8080/api/workspace-state).
-- [http://127.0.0.1:8080/studio/](http://127.0.0.1:8080/studio/) loads after any required bundle build (see maintainer notes if needed).
+- **[http://127.0.0.1:8080/](http://127.0.0.1:8080/)** loads (classic Lenses UI).
+- **[http://127.0.0.1:8080/api/workspace-state](http://127.0.0.1:8080/api/workspace-state)** returns JSON when the server is healthy.
+- **[http://127.0.0.1:8080/studio/](http://127.0.0.1:8080/studio/)** loads.
 
 ## What to do next
 
-- **First hour with Blueprints** (submodule, `sdlc/`, Forge, Cursor): [First hour in your repo](first-hour.md)
-- **ICP adoption paths:** [**Adopting Blueprints**](../adopting-blueprints.md)
-- **forge-lenses** upstream: [github.com/autowww/forge-lenses](https://github.com/autowww/forge-lenses)
+- **Blueprints first hour** (submodule, `sdlc/`, Forge, Cursor): [First hour in your repo](first-hour.md)
+- **Adoption paths:** [Adopting Blueprints](../adopting-blueprints.md)
+- **Full checklist:** [Project setup profile](../SETUP.md)
+- **Help:** [Troubleshooting / FAQ](../troubleshooting-faq.md)
+- **Lenses & Wizard tutorials:** [Lenses hub](https://blueprints.forgesdlc.com/lenses/index.html)
