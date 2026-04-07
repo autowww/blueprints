@@ -68,4 +68,4 @@ You have picked a path and can execute the **Verify** column for that path’s t
 
 ## Maintainer and GitHub-only detail
 
-Roadmap, wiki sync mechanics, and generator maintenance notes stay in the upstream repo under `docs/` on **GitHub** — for example [`docs/ADOPTION.md`](../docs/ADOPTION.md) (companion to this page) and [`docs/ROADMAP.md`](../docs/ROADMAP.md). Use those when you need **release** or **framework product** context, not for day-one adoption.
+Roadmap, wiki sync mechanics, and generator maintenance notes stay in the upstream repo under `docs/` on **GitHub** — for example [ADOPTION.md](https://github.com/autowww/blueprints/blob/main/docs/ADOPTION.md) (companion to this page) and [ROADMAP.md](https://github.com/autowww/blueprints/blob/main/docs/ROADMAP.md). Use those when you need **release** or **framework product** context, not for day-one adoption.

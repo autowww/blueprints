@@ -1,98 +1,64 @@
 # Blueprints
 
-Reusable **documentation and process packages** for software projects — organized into **lifecycles** (when work happens), **disciplines** (cross-cutting professional competencies grouped into families), and **support** packages (tooling and infrastructure).
+**Blueprints** is a reusable **SDLC / PDLC / discipline** framework you embed in a product repository: frozen baseline text under `blueprints/`, plus **your** project workspace (`sdlc/`, `docs/`, `forge/`, …). This page is the **handbook home** — written for **teams adopting and using** the framework, not for touring the upstream repo layout.
 
-### Lifecycles
+## When to use this handbook
 
-| Package | Purpose |
-|---------|---------|
-| [**sdlc/**](sdlc/README.md) | Software delivery lifecycle: phases A–F, Definition of Done, methodologies, ceremonies, HTML handbook |
-| [**pdlc/**](pdlc/README.md) | Product development lifecycle: discovery, validation, strategy, launch, growth, sunset — wraps around SDLC |
+Use this page when you need **what Blueprints is**, **who it is for**, and **where to go next** in the published handbook — not a map of every upstream folder or maintainer workflow.
 
-### Disciplines
+## What it is
 
-Cross-cutting professional competencies organized into **four families** and **two cross-cutting standalone disciplines**. Hub: [`disciplines/README.md`](disciplines/README.md). Each discipline has a **bridge document** mapping its practices to SDLC and PDLC — see [`BRIDGES.md`](BRIDGES.md).
+- Prescriptive **lifecycle** and **discipline** packages (Markdown) you consume as a **submodule** (or copy).
+- Optional **Forge** (artifacts, logs, Versonas) and **Cursor** alignment on top of the same baseline.
+- A **published handbook** at [blueprints.forgesdlc.com](https://blueprints.forgesdlc.com/) — the same Markdown as this repository, formatted for reading in the browser.
 
-#### Engineering — how we build software
+## Who it is for
 
-| Package | Purpose |
-|---------|---------|
-| [**disciplines/engineering/software-engineering/**](disciplines/engineering/software-engineering/README.md) | Software engineering: paradigms, algorithms, design patterns, SOLID, clean code, concurrency, networking |
-| [**disciplines/engineering/software-architecture/**](disciplines/engineering/software-architecture/README.md) | Software architecture: quality attributes, viewpoints, ADRs, patterns — structures systems |
-| [**disciplines/engineering/devops/**](disciplines/engineering/devops/README.md) | DevOps: CALMS, DORA metrics, SRE, CI/CD, observability — bridges dev and ops |
-| [**disciplines/engineering/testing/**](disciplines/engineering/testing/README.md) | Testing & QA: ISTQB-aligned approaches, test automation landscape — verifies correctness |
-| [**disciplines/engineering/frontend/**](disciplines/engineering/frontend/README.md) | Frontend / web engineering: component architecture, rendering, performance, design systems — web UIs |
-| [**disciplines/engineering/mobile/**](disciplines/engineering/mobile/README.md) | Mobile engineering: native/cross-platform, offline-first, app store lifecycle — mobile experiences |
-| [**disciplines/engineering/embedded-iot/**](disciplines/engineering/embedded-iot/README.md) | Embedded / IoT: real-time systems, firmware, protocols, OTA, safety-critical — constrained devices |
+| You are… | Start with |
+|-----------|-------------|
+| Choosing how much process to take on | [**Adopting Blueprints**](sdlc/adopting-blueprints.md) — ICP-style paths A / B / C |
+| Ready to run commands in a repo | [**First hour**](sdlc/quickstarts/first-hour.md) — submodule, `sdlc/` workspace, Forge init, Cursor rules |
+| Standardizing setup end-to-end | [**Project setup profile**](sdlc/SETUP.md) — full ordered checklist with verification |
 
-#### Data — how we handle information at scale
+## Get started
 
-| Package | Purpose |
-|---------|---------|
-| [**disciplines/data/bigdata/**](disciplines/data/bigdata/README.md) | Big data & data engineering: data governance, pipeline patterns, DataOps — data at scale |
-| [**disciplines/data/data-science/**](disciplines/data/data-science/README.md) | Data science & ML: CRISP-DM, MLOps, model evaluation, responsible AI — models from data |
+1. [**Adopting Blueprints**](sdlc/adopting-blueprints.md) — what to optimize for (solo, team, org).
+2. [**First hour**](sdlc/quickstarts/first-hour.md) — concrete steps and checks (~60 minutes).
+3. [**Set up in your repo**](sdlc/SETUP.md) — submodule through optional product-led paths.
 
-#### Product — how we understand users, design experiences, and grow
+**Also useful:** [Quickstarts hub](sdlc/quickstarts/README.md) · [Updating the submodule](sdlc/updating-blueprints-submodule.md) · [Troubleshooting / FAQ](sdlc/troubleshooting-faq.md)
 
-| Package | Purpose |
-|---------|---------|
-| [**disciplines/product/ba/**](disciplines/product/ba/README.md) | Business analysis: BABOK knowledge areas, techniques, perspectives — spans PDLC and SDLC |
-| [**disciplines/product/ux-design/**](disciplines/product/ux-design/README.md) | UX / UI Design: design thinking, interaction design, visual design, accessibility — makes products usable |
-| [**disciplines/product/marketing/**](disciplines/product/marketing/README.md) | Marketing: digital channels, growth engineering, positioning, analytics, GTM — acquires and retains users |
-| [**disciplines/product/customer-success/**](disciplines/product/customer-success/README.md) | Customer success: onboarding, health scoring, support, feedback loops, churn prevention — keeps users succeeding |
+## Use the framework in practice
 
-#### Governance — how we manage and improve delivery
+| Topic | Handbook entry |
+|--------|------------------|
+| **SDLC** (phases, DoD, methodologies) | [SDLC blueprint](sdlc/README.md) |
+| **PDLC** (discovery → sunset around delivery) | [PDLC blueprint](pdlc/README.md) |
+| **Disciplines** (engineering, product, data, security, …) | [Disciplines hub](disciplines/README.md) |
+| **Forge + Cursor** (workflows, rules, tasklets) | [Forge methodology](sdlc/methodologies/forge.md) and [setup](sdlc/methodologies/forge/setup/README.md) |
+| **Team rollout** | [Team rollout patterns](sdlc/team-rollout.md) |
+| **Advanced customization (301)** | [Advanced customization](sdlc/advanced-customization.md) — safe extension points in *your* repo |
 
-| Package | Purpose |
-|---------|---------|
-| [**disciplines/governance/pm/**](disciplines/governance/pm/README.md) | Project management: process groups, governance, knowledge areas, metrics — governs delivery |
+## Frozen vs editable
 
-#### Cross-cutting
+- **`blueprints/**`** (this submodule) is the **frozen baseline** — change only via the [package policy](sdlc/POLICY.md) process.
+- **`sdlc/`**, **`docs/`**, **`forge/`** at your **repository root** are **yours** — interpretations, directives, project docs.
 
-| Package | Purpose |
-|---------|---------|
-| [**disciplines/security/**](disciplines/security/README.md) | Security: threat modeling, OWASP, auth patterns, incident response — protects products |
-| [**disciplines/compliance/**](disciplines/compliance/README.md) | Compliance: GDPR, HIPAA, PCI-DSS, WCAG, SOC 2, AI Act, ISO 27001 — meets regulatory obligations |
+## Companion sites
 
-### Support
+| Site | Role |
+|------|------|
+| [forge-lenses on the handbook](https://blueprints.forgesdlc.com/lenses/index.html) | Workspace dashboard, Forge Studio companion (separate repo) |
+| [Design system](https://blueprints.forgesdlc.com/ks/index.html) | Shared Forge theme and diagram primitives |
+| [Blog](https://blueprints.forgesdlc.com/blog/) | Short framework articles |
 
-| Package | Purpose |
-|---------|---------|
-| [**product/**](product/README.md) | Product-functional documentation blueprint (capabilities, journeys, specs) |
-| [**agents/**](agents/README.md) | Optional Docker/recipe templates for repeatable automation |
-| [**wiki-source/**](wiki-source/README.md) | Scripts to sync a [GitHub Wiki](https://github.com/autowww/blueprints/wiki) mirror of the Markdown |
+**Full repo layout** (folder-by-folder map) lives with the source on [GitHub](https://github.com/autowww/blueprints) — use it when you are browsing the submodule tree, not as a first-day adoption read.
 
-**Canonical source** is this repository on `main`. The wiki is a convenience mirror—refresh it with [`wiki-source/sync-wiki.sh`](wiki-source/sync-wiki.sh) when you have push access to the wiki remote.
+## Maintainers
 
-## Published handbook site (Forge)
+Roadmap, WBS, design principles, and generator notes live under [`docs/`](https://github.com/autowww/blueprints/tree/main/docs) on GitHub — not part of the adoption-first handbook story.
 
-The static handbook at [blueprints.forgesdlc.com](https://blueprints.forgesdlc.com/) is generated from this repo’s Markdown (see the **blueprints-website** consumer). The same site also publishes companion docs from adjacent repositories:
+## Blog and community
 
-- [forge-lenses](https://blueprints.forgesdlc.com/lenses/index.html) — workspace dashboard (`docs/` + `lenses/website/` merged for navigation)
-- [Kitchensink and forge-autodoc](https://blueprints.forgesdlc.com/ks/index.html) — shared design system and Markdown→HTML handbook builder shipped inside **forgesdlc-kitchensink**
-
-## Get started (handbook)
-
-Use the static site at [blueprints.forgesdlc.com](https://blueprints.forgesdlc.com/) — same content as this repo’s Markdown, built by the **blueprints-website** project.
-
-| Goal | Start here |
-|------|------------|
-| **First hour in a repo** | [Quickstarts](sdlc/quickstarts/README.md) — submodule, `sdlc/` workspace, Forge, Cursor |
-| **Forge Studio** (local Lenses Studio UI) | [Forge Studio quickstart](sdlc/quickstarts/forge-studio.md) — **forge-lenses** repo; handbook docs at [blueprints.forgesdlc.com/lenses](https://blueprints.forgesdlc.com/lenses/index.html) |
-| **Which adopter path fits you?** | [Adopting Blueprints](docs/ADOPTION.md) — ICP paths A / B / C |
-| **What ships next** | [Roadmap](docs/ROADMAP.md) — maintainers |
-| **Positioning & MVP** | [Framework positioning & first MVP](docs/product/discovery/framework-positioning-and-mvp.md) |
-| **Work breakdown** | [WBS](docs/requirements/WBS.md) |
-| **Docs index** | [Framework docs index](docs/INDEX.md) |
-
-## Adopt in your repo
-
-Copy or add as a **git submodule** under `blueprints/`, then bootstrap project-specific folders (e.g. `sdlc/`, `docs/product/`) using the scripts and templates linked from each package README.
-
-## Blog (framework)
-
-Short narrative articles that version with this repo live under [**blog/**](blog/README.md). They are mirrored into [blueprints-website](https://github.com/autowww/blueprints-website) and published at **https://blueprints.forgesdlc.com/blog/**.
-
-## Community
-
+- [**Blog**](blog/README.md) — articles mirrored to [blueprints.forgesdlc.com/blog/](https://blueprints.forgesdlc.com/blog/)
 - [Contributing](CONTRIBUTING.md) · [Code of conduct](CODE_OF_CONDUCT.md) · [Security](SECURITY.md) · [License](LICENSE)
