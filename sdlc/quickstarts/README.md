@@ -9,6 +9,8 @@ learning_level: overview
 
 # Quickstarts
 
+This page is the entry to **quickstarts**: short guided paths with verification. Read the first paragraph under **What it is**, then use **Selection matrix** to pick a path.
+
 ## What it is
 
 The fastest path from “Blueprints is in my repo” to **verified** progress — commands and checks, not a methodology tour.
@@ -22,6 +24,30 @@ Use this hub when you are ready to run scripts at the **repository root** next t
 - **Git** and **bash**
 - **Python 3** (Forge init and Cursor rule sync)
 - A checkout where **`blueprints/`** can live at the repo root (see [SETUP.md](../SETUP.md))
+
+## Selection matrix
+
+| Quickstart | Time (typical) | Outcome | Prerequisite |
+|------------|----------------|---------|----------------|
+| [**First hour**](first-hour.md) | ~60 min | Submodule, project **`sdlc/`**, **Forge**, **Cursor** rules — verify after each step | Repo root layout decided |
+| [**Forge Studio**](forge-studio.md) | ~30–45 min after tooling | Local **forge-lenses** server and **`/studio/`** UI | Git + Python venv; optional after first hour |
+| [**Project setup profile**](../SETUP.md) | Multi-session | Full ordered checklist including optional product-led steps | Same root layout; use after first hour or instead of ad hoc steps |
+
+### Who starts where
+
+| You are… | Start with |
+|----------|------------|
+| Choosing how much to adopt (role / org size) | [**Adopting Blueprints**](../adopting-blueprints.md) |
+| Ready to run commands today | [**First hour**](first-hour.md) |
+| Standardizing setup for a team or template repo | [**Project setup profile**](../SETUP.md) |
+| Wanting Lenses / Studio / Wizard on your machine | [**Forge Studio**](forge-studio.md) after your product repo baseline works |
+
+### Quickstart flow (visual)
+
+```blueprint-diagram
+key: board
+alt: Adopting Blueprints or first hour first; full setup profile when standardizing; Forge Studio optional for local Studio and Wizard
+```
 
 ## Steps
 

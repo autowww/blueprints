@@ -80,7 +80,7 @@ Or activate the venv and run **`.venv/bin/python3 -m lenses`** (same as the scri
 
 In your browser, open **[http://127.0.0.1:8080/studio/](http://127.0.0.1:8080/studio/)** (default port **8080**).
 
-If the page does not load, use the **Troubleshooting** section of the [forge-lenses README](https://github.com/autowww/forge-lenses/blob/main/README.md) on GitHub.
+If the page does not load, start with the handbook **[Troubleshooting](https://blueprints.forgesdlc.com/lenses/guides/12-troubleshooting.html)** (symptoms and user-facing fixes first). If you maintain the server or need repository-specific notes, see the **Troubleshooting** section of the [forge-lenses README](https://github.com/autowww/forge-lenses/blob/main/README.md) on GitHub as a secondary source.
 
 ### 5. Optional: open the Blueprints Wizard
 
@@ -112,7 +112,7 @@ The **Blueprints Wizard** is an optional guided flow **inside** Forge Studio. It
 | Check | Expect |
 |-------|--------|
 | Classic UI | **[http://127.0.0.1:8080/](http://127.0.0.1:8080/)** loads |
-| API health | **[http://127.0.0.1:8080/api/workspace-state](http://127.0.0.1:8080/api/workspace-state)** returns JSON when the server is healthy |
+| API health | Optional deeper check (if your team uses it): workspace health URL in browser when the handbook [Troubleshooting](https://blueprints.forgesdlc.com/lenses/guides/12-troubleshooting.html) suggests it |
 | Forge Studio | **[http://127.0.0.1:8080/studio/](http://127.0.0.1:8080/studio/)** loads |
 
 **Just Studio vs Studio + Wizard later:** this quickstart covers the server and `/studio/`. Wizard URLs live under `/studio/blueprints/wizard` when you are ready — see the [Lenses handbook Wizard guides](https://blueprints.forgesdlc.com/lenses/index.html).

@@ -13,6 +13,8 @@ learning_level: reference
 
 The **full ordered checklist** for a product repository that hosts **`blueprints/` at the repository root** (typically a git submodule): submodule through optional Forge and product-led flows, with the same assumptions as the [first-hour quickstart](quickstarts/first-hour.md), but in one place.
 
+**Handbook-first:** every command and relative path below assumes your shell’s **current working directory is the consuming repository root** — the folder that will list `blueprints/`, `sdlc/`, `forge/`, and (after Bootstrap) your project docs. That matches the [first-hour quickstart](quickstarts/first-hour.md) and keeps one canonical story for where scripts run.
+
 You may copy this file to your project root as `SETUP.md` if you want a local checklist.
 
 | Field | Value |
@@ -21,7 +23,7 @@ You may copy this file to your project root as `SETUP.md` if you want a local ch
 | **Last reviewed** | 2025-03-24 |
 | **Blueprints submodule** | Record `git rev-parse HEAD` inside `blueprints/` after `git submodule update` |
 
-**Layout reference:** full consuming-repo doc tree (optional detail) — [`DOCUMENTATION-STRUCTURE.md` on GitHub](https://github.com/autowww/blueprints/blob/main/sdlc/DOCUMENTATION-STRUCTURE.md).
+**Layout reference:** full consuming-repo doc tree (optional detail) — [Documentation structure](DOCUMENTATION-STRUCTURE.md) in this handbook.
 
 ### Setup phases (map of the numbered steps)
 

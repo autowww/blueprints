@@ -13,6 +13,8 @@ learning_level: overview
 
 A single sitting (~**60 minutes**) to get **`blueprints/`**, a project **`sdlc/`** workspace, a minimal **Forge** layout, and **Cursor** rules aligned with the recommended preset. Each numbered step below ends with something you can verify before moving on.
 
+**Handbook-first:** run every command from your **repository root** (the directory that will contain `blueprints/` and `sdlc/`). The table below is a quick map; the numbered sections that follow are the same steps with full context.
+
 ## When to use it
 
 Use this guide after you intend to use Blueprints at the **repository root** (next to `sdlc/`, `docs/`, `forge/`). For *which adoption story* matches you first, see [**Adopting Blueprints**](../adopting-blueprints.md).
@@ -39,6 +41,16 @@ alt: First hour — submodule in place, then project sdlc, Forge, Cursor rules, 
 Decide that **`blueprints/` will live at the repository root** next to `sdlc/`, `docs/`, and (after this guide) `forge/`. The stock scripts assume that layout.
 
 **Why this layout:** scripts such as `init-sdlc-workspace.sh` and `forge-init.sh` resolve paths from the **repository root**. Nesting `blueprints/` elsewhere would require custom wrappers not covered here.
+
+### What each step does (one line each)
+
+| # | You run (from repo root) | What it does |
+|---|--------------------------|--------------|
+| 1 | `git submodule update --init --recursive` | Ensures the `blueprints/` tree (including `blueprints/sdlc/`) is present |
+| 2 | `./blueprints/sdlc/scripts/init-sdlc-workspace.sh "…"` | Creates **your** project `sdlc/` workspace next to the baseline |
+| 3 | `./blueprints/sdlc/methodologies/forge/setup/forge-init.sh` | Scaffolds **Forge** (`forge/`, logs paths, starter config) |
+| 4 | `bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh sync --preset recommended` | Installs recommended **Cursor** rules from Blueprints |
+| 5 | (See [Forge Studio quickstart](forge-studio.md)) | Optional local **Studio** — separate from this repo |
 
 ### 1. Get the blueprint on disk
 
@@ -105,7 +117,14 @@ bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh check
 | 2. Project `sdlc/` | `sdlc/README.md` exists and describes **your** project — not edits under `blueprints/sdlc/` (frozen baseline). |
 | 3. Forge | `forge/forge.config.yaml` exists and `ember-logs/` (or paths created by the script) are present. |
 | 4. Cursor rules | The sync script completes without error; optional: `… check` passes. |
-| 5. Optional Forge Studio | With the server running on the default port, [http://127.0.0.1:8080/studio/](http://127.0.0.1:8080/studio/) should load (see the Forge Studio quickstart if it does not). `GET /api/workspace-state` returns JSON for a quick check. |
+| 5. Optional Forge Studio | With the server running on the default port, [http://127.0.0.1:8080/studio/](http://127.0.0.1:8080/studio/) should load (see the Forge Studio quickstart and [Lenses troubleshooting](https://blueprints.forgesdlc.com/lenses/guides/12-troubleshooting.html) if it does not). |
+
+### If you are comfortable checking locally (optional)
+
+| Check | When it helps |
+|-------|----------------|
+| Server terminal output | Surfaces import, port, or scan errors if Studio or Classic misbehaves |
+| Open the workspace-state URL your runbook names | Confirms the server is healthy when the UI is unclear — only if whoever runs Lenses agrees |
 
 ## Common mistakes
 
@@ -128,4 +147,4 @@ bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh check
 
 - **Full ordered checklist** (submodule through optional product flows): [Project setup profile](../SETUP.md).
 - **ICP paths** (which adoption story matches you): [**Adopting Blueprints**](../adopting-blueprints.md).
-- **Documentation layout** in the consuming repo — full template reference on GitHub: [`sdlc/DOCUMENTATION-STRUCTURE.md`](https://github.com/autowww/blueprints/blob/main/sdlc/DOCUMENTATION-STRUCTURE.md).
+- **Documentation layout** in the consuming repo — [Documentation structure](../DOCUMENTATION-STRUCTURE.md) in this handbook.
