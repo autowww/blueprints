@@ -1,6 +1,10 @@
 ---
 nav_title: Forge Studio quickstart
 nav_group: onboarding
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: overview
 ---
 
 # Forge Studio quickstart
@@ -10,6 +14,13 @@ nav_group: onboarding
 **Forge Studio** is the browser UI for **forge-lenses** at **`/studio/`** on your local server: workspace visibility, Forge plan surfaces, and (when available) the **Blueprints Wizard** for guided sessions. The same Python process also serves the classic dashboard at `/`.
 
 Companion tutorials on the handbook site: **[Lenses, Forge Studio, and the Blueprints Wizard](https://blueprints.forgesdlc.com/lenses/index.html)**.
+
+## Handbook-only reading vs running Forge Studio
+
+| Mode | Best when | You get |
+|------|-----------|---------|
+| **Handbook only** | Learning methodology text, onboarding, or quickstarts in the browser | Published guides at [blueprints.forgesdlc.com](https://blueprints.forgesdlc.com/) — no local server |
+| **Forge Studio (local)** | You want workspace visibility, Studio flows, and optional Wizard sessions on your machine | **forge-lenses** server — `/studio/` UI at `http://127.0.0.1:8080/studio/` |
 
 ## When to use it
 
@@ -73,9 +84,13 @@ The **Blueprints Wizard** is an optional guided flow **inside** Forge Studio. It
 
 ## How to verify success
 
-- **[http://127.0.0.1:8080/](http://127.0.0.1:8080/)** loads (classic Lenses UI).
-- **[http://127.0.0.1:8080/api/workspace-state](http://127.0.0.1:8080/api/workspace-state)** returns JSON when the server is healthy.
-- **[http://127.0.0.1:8080/studio/](http://127.0.0.1:8080/studio/)** loads.
+| Check | Expect |
+|-------|--------|
+| Classic UI | **[http://127.0.0.1:8080/](http://127.0.0.1:8080/)** loads |
+| API health | **[http://127.0.0.1:8080/api/workspace-state](http://127.0.0.1:8080/api/workspace-state)** returns JSON when the server is healthy |
+| Forge Studio | **[http://127.0.0.1:8080/studio/](http://127.0.0.1:8080/studio/)** loads |
+
+**Just Studio vs Studio + Wizard later:** this quickstart covers the server and `/studio/`. Wizard URLs live under `/studio/blueprints/wizard` when you are ready — see the [Lenses handbook Wizard guides](https://blueprints.forgesdlc.com/lenses/index.html).
 
 ## What to do next
 

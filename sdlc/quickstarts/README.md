@@ -1,6 +1,10 @@
 ---
 nav_title: Quickstarts
 nav_group: onboarding
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: overview
 ---
 
 # Quickstarts
@@ -27,6 +31,15 @@ Pick one quickstart and follow it end-to-end:
 |------------|---------|
 | [**First hour in your repo**](first-hour.md) | `blueprints/` present, project **`sdlc/`** workspace, minimal **Forge** layout, **Cursor** rules — verification after each step |
 | [**Forge Studio**](forge-studio.md) | Optional **forge-lenses** clone or submodule, local server, **`/studio/`** UI — companion product, not inside `blueprints/` |
+
+### How this hub fits nearby guides
+
+| If you need… | Use |
+|---------------|-----|
+| **Which adoption story fits your role** (solo / team / org) | [**Adopting Blueprints**](../adopting-blueprints.md) first |
+| **Verified commands only, ~1 hour** | **First hour** above |
+| **Full checklist** (submodule through optional product flows) | [**Project setup profile**](../SETUP.md) |
+| **Something failed** | [**Troubleshooting / FAQ**](../troubleshooting-faq.md) |
 
 ## How to verify success
 

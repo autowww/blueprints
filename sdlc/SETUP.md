@@ -1,6 +1,10 @@
 ---
 nav_title: Project setup profile
 nav_group: onboarding
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
 ---
 
 # Project setup profile (consuming repository)
@@ -18,6 +22,17 @@ You may copy this file to your project root as `SETUP.md` if you want a local ch
 | **Blueprints submodule** | Record `git rev-parse HEAD` inside `blueprints/` after `git submodule update` |
 
 **Layout reference:** full consuming-repo doc tree (optional detail) — [`DOCUMENTATION-STRUCTURE.md` on GitHub](https://github.com/autowww/blueprints/blob/main/sdlc/DOCUMENTATION-STRUCTURE.md).
+
+### Setup phases (map of the numbered steps)
+
+| Phase | Steps (see below) | Required? | Outcome |
+|-------|-------------------|-----------|---------|
+| **Bootstrap** | 1–3 | Required | `blueprints/` on disk, `docs/` as needed, project **`sdlc/`** workspace |
+| **Forge** | 4–5 | Required for Forge adoption | `forge/forge.config.yaml` and related paths |
+| **Cursor + automation** | 6–11 | Required if you use Cursor rules / tasklets | Rules aligned; optional tasklets and Skills installed |
+| **Product-led (optional)** | 12 | Optional | Product bootstrap artifacts per methodology |
+
+**Depth profiles:** **Minimum** = phases Bootstrap + Forge through a working `forge.config.yaml`. **Recommended** = through step 10 (`sync-forge-cursor-rules.sh check` clean). **Full** = all rows including optional product-led flows.
 
 ## When to use it
 

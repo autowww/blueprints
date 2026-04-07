@@ -31,6 +31,8 @@ Use this guide after you intend to use Blueprints at the **repository root** (ne
 
 Decide that **`blueprints/` will live at the repository root** next to `sdlc/`, `docs/`, and (after this guide) `forge/`. The stock scripts assume that layout.
 
+**Why this layout:** scripts such as `init-sdlc-workspace.sh` and `forge-init.sh` resolve paths from the **repository root**. Nesting `blueprints/` elsewhere would require custom wrappers not covered here.
+
 ### 1. Get the blueprint on disk
 
 If you have not already, add Blueprints as a **git submodule** at `blueprints/` (or ensure a copy of the tree exists there). Initialize submodules so `blueprints/sdlc/` is present:
@@ -88,6 +90,23 @@ bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh check
 | 3. Forge | `forge/forge.config.yaml` exists and `ember-logs/` (or paths created by the script) are present. |
 | 4. Cursor rules | The sync script completes without error; optional: `… check` passes. |
 | 5. Optional Forge Studio | With the server running on the default port, [http://127.0.0.1:8080/studio/](http://127.0.0.1:8080/studio/) should load (see the Forge Studio quickstart if it does not). `GET /api/workspace-state` returns JSON for a quick check. |
+
+## Common mistakes
+
+| Mistake | What to do |
+|---------|------------|
+| Running scripts from a subfolder of the repo | `cd` to the **repository root** (the directory that will list `blueprints/`, `sdlc/`, …) and re-run |
+| Editing files under `blueprints/` for product-specific wording | Move that text to project **`sdlc/`** or **`docs/`**; see [Policy](../POLICY.md) |
+| Skipping `git submodule update` after clone | Run `git submodule update --init --recursive` so `blueprints/sdlc/` exists |
+| Expecting Forge Studio inside `blueprints/` | Forge Studio is the **forge-lenses** app — see [Forge Studio quickstart](forge-studio.md) |
+
+### Worked example (generic)
+
+| Stage | Situation | Action | What to check |
+|-------|-----------|--------|----------------|
+| Start | Fresh clone; `blueprints/` empty | `git submodule update --init --recursive` | `test -f blueprints/sdlc/README.md` |
+| Middle | Forge init done | Open `forge/forge.config.yaml`; fill questionnaire when ready | YAML parses; paths exist |
+| Done | Team wants Cursor help | `sync-forge-cursor-rules.sh sync --preset recommended` | `… check` passes if you gate on it |
 
 ## What to do next
 

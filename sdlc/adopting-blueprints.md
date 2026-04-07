@@ -1,6 +1,10 @@
 ---
 nav_title: Adopting Blueprints
 nav_group: onboarding
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: overview
 ---
 
 # Adopting Blueprints
@@ -21,6 +25,32 @@ Use this page **before** you deep-read methodology folders or maintainer docs. A
 
 1. Add Blueprints to your repo (typically as a **git submodule** at `blueprints/`; or copy the tree if you do not use submodules). The [handbook home](../README.md) summarizes layout expectations.
 2. Decide which **ICP path** below matches you — the same upstream tree supports different jobs.
+
+## Decision guide
+
+Answer in order; the first row that matches your situation is usually the right starting path.
+
+| Question | If yes → |
+|----------|----------|
+| You mainly need a solid text baseline and minimal ceremony | Start with **path A** |
+| You must align several contributors or repos on vocabulary and ceremonies | **Path B** after **A**’s basics |
+| You maintain a platform corpus and many products must pin the same upstream | **Path C** (often with governance for submodule bumps) |
+
+## What changes vs what stays frozen
+
+| Area | What you add or own in *your* repo | What stays upstream (do not fork casually) |
+|------|-------------------------------------|--------------------------------------------|
+| Interpretations, principles, “how we run it” | Project **`sdlc/`**, **`docs/`**, optional **`forge/`** | **`blueprints/sdlc/`** baseline text — see [Policy](POLICY.md) |
+| Tooling and editor alignment | Cursor rules, optional Forge tasklets — see [SETUP](SETUP.md) | Templates in **`blueprints/`** you **copy** or sync; not edited in place for product specifics |
+| Submodule pointer | Your commit moves **`blueprints/`** to a new SHA | Upstream **`autowww/blueprints`** remains the canonical framework |
+
+## Risks and trade-offs (chooser)
+
+| Path | Main trade-off | Mitigation |
+|------|----------------|------------|
+| **A** | Too little shared process if the team grows | Move to **B** when you need shared ceremony language |
+| **B** | Heavier alignment cost | Anchor one repo; use [Team rollout](team-rollout.md) patterns |
+| **C** | Submodule drift across products | Published “golden” SHA + cadence; see [Updating the submodule](updating-blueprints-submodule.md) |
 
 ## Steps
 

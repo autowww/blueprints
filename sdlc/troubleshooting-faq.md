@@ -1,5 +1,10 @@
 ---
 nav_title: Troubleshooting and FAQ
+nav_group: onboarding
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: troubleshooting
 ---
 
 # Troubleshooting and FAQ
@@ -15,6 +20,20 @@ Use this page when something failed during [first hour](quickstarts/first-hour.m
 ## Prerequisites
 
 No extra prerequisites — jump to the subsection below that matches your symptom.
+
+## Symptom index
+
+| Symptom | Jump to |
+|---------|---------|
+| Missing `blueprints/sdlc/...` after clone | [Submodule and layout](#submodule-and-layout) |
+| “No such file” when running a script | [Submodule and layout](#submodule-and-layout) — working directory |
+| Accidental edits under `blueprints/` | [Submodule and layout](#submodule-and-layout) |
+| `forge-init` or Cursor sync errors | [Forge and Cursor](#forge-and-cursor) |
+| Looking for roadmap / maintainer docs | [Handbook vs GitHub](#handbook-vs-github) |
+
+**Fast triage:** confirm you are at the **repository root**, then `git submodule update --init --recursive`, then re-run the failing command.
+
+**Evidence to gather before asking for help:** exact command, working directory, output of `git status` (root and `blueprints/`), and whether the repo just bumped the `blueprints` submodule.
 
 ## Steps
 
