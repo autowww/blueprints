@@ -25,14 +25,13 @@ You may copy this file to your project root as `SETUP.md` if you want a local ch
 
 ### Setup phases (map of the numbered steps)
 
-| Phase | Steps (see below) | Required? | Outcome |
-|-------|-------------------|-----------|---------|
-| **Bootstrap** | 1–3 | Required | `blueprints/` on disk, `docs/` as needed, project **`sdlc/`** workspace |
-| **Forge** | 4–5 | Required for Forge adoption | `forge/forge.config.yaml` and related paths |
-| **Cursor + automation** | 6–11 | Required if you use Cursor rules / tasklets | Rules aligned; optional tasklets and Skills installed |
-| **Product-led (optional)** | 12 | Optional | Product bootstrap artifacts per methodology |
+| Phase | Steps | Page |
+|-------|-------|------|
+| **Bootstrap** | 1–3 | [Setup profile — Bootstrap](setup-profile-bootstrap.md) |
+| **Forge + Cursor + automation** | 4–11 | [Setup profile — Forge and Cursor](setup-profile-forge-cursor.md) |
+| **Product-led (optional)** | 12 | [Setup profile — Optional product-led](setup-profile-optional-product.md) |
 
-**Depth profiles:** **Minimum** = phases Bootstrap + Forge through a working `forge.config.yaml`. **Recommended** = through step 10 (`sync-forge-cursor-rules.sh check` clean). **Full** = all rows including optional product-led flows.
+**Depth profiles:** **Minimum** = Bootstrap + Forge through a working `forge.config.yaml`. **Recommended** = through step 10 (`sync-forge-cursor-rules.sh check` clean). **Full** = all rows including optional product-led flows.
 
 ## When to use it
 
@@ -45,35 +44,19 @@ Use this page when you are **standardizing setup end-to-end** after you already 
 - **`blueprints/`** must sit at the **repository root** next to `forge/`, `sdlc/`, `docs/`, etc. Scripts such as [`methodologies/forge/setup/forge-init.sh`](methodologies/forge/setup/forge-init.sh) and [`methodologies/forge/tasklets/install-tasklets.sh`](methodologies/forge/tasklets/install-tasklets.sh) use paths like `blueprints/sdlc/...` from the current working directory (repo root).
 - If your org cannot use that layout, you need **wrapper scripts** or forks that adjust paths — the stock blueprints tooling does **not** support a configurable `BLUEPRINTS_ROOT`.
 
-## Steps
+## Steps (by phase)
 
-1. **Submodule** — Ensure `blueprints/` is present; `git submodule update --init` so `blueprints/sdlc` exists.
-2. **Documentation tree (as needed)** — Create `docs/` per the [layout template on GitHub](https://github.com/autowww/blueprints/blob/main/sdlc/DOCUMENTATION-STRUCTURE.md).
-3. **Project `sdlc/` workspace** — From repo root:  
-   `./blueprints/sdlc/scripts/init-sdlc-workspace.sh "Project Name"`  
-   Context and layout: [`SDLc-WORKSPACE.md`](SDLc-WORKSPACE.md).
-4. **Forge workspace** — `./blueprints/sdlc/methodologies/forge/setup/forge-init.sh`  
-   Creates `forge/`, `ember-logs/`, seeds `forge/forge.config.yaml`.
-5. **Configure Forge in YAML** — Edit `forge/forge.config.yaml`; questionnaire: [`methodologies/forge/setup/QUESTIONNAIRE.md`](methodologies/forge/setup/QUESTIONNAIRE.md).
-6. **Cursor — install rules** — From repo root: `bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh sync --preset recommended` (see [`methodologies/forge/setup/CURSOR-RULES-QUICKSTART.md`](methodologies/forge/setup/CURSOR-RULES-QUICKSTART.md)). YAML-only / CI: `… sync` with no `--preset`. Or copy manually — [`methodologies/forge/setup/CURSOR-RULES-ALIGNMENT.md`](methodologies/forge/setup/CURSOR-RULES-ALIGNMENT.md).
-7. **Cursor — optional extras** — `--preset full` or individual `--with-*` flags add more rules; see alignment doc **Reference: granular flags**. After `git submodule update` on `blueprints/`, run `sync-forge-cursor-rules.sh diff --preset recommended` (or `status`) before `sync … --force`.
-8. **Cursor — tasklets + Sampling (optional)** — `bash blueprints/sdlc/methodologies/forge/tasklets/install-tasklets.sh`
-9. **Optional Skills** — Copy from [`templates/forge/cursor-skills/`](templates/forge/cursor-skills/) into `.cursor/skills/`.
-10. **Validate alignment** — `bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh check` (Python 3 + PyYAML; [`versona_cursor_rules.py`](methodologies/forge/setup/versona_cursor_rules.py) `check` — same map as YAML-driven install).
-11. **Operational start** — [Forge scripts overview](methodologies/forge/scripts/README.md); [Forge workspace template](templates/forge/README.template.md) for a filled-in consumer layout.
-12. **Optional product-led path** — [`methodologies/forge/product-manager/README.md`](methodologies/forge/product-manager/README.md), [`methodologies/forge/product-manager/product-bootstrap-flow.md`](methodologies/forge/product-manager/product-bootstrap-flow.md).
+Follow the three pages in order (or jump to the phase you skipped after [first hour](quickstarts/first-hour.md)):
 
-### Cursor: Project Setup Versona
-
-- **Template:** [`methodologies/forge/versona/catalog/workflow/versona-project-setup.mdc.template`](methodologies/forge/versona/catalog/workflow/versona-project-setup.mdc.template) → `.cursor/rules/versona-project-setup.mdc`
-- **Trigger:** **`setup`** or `@versona-project-setup` — checklist and gap analysis (pair with **`@forge-setup`** from [`methodologies/forge/setup/forge-setup.mdc.template`](methodologies/forge/setup/forge-setup.mdc.template) for the questionnaire).
+1. [Bootstrap — steps 1–3](setup-profile-bootstrap.md)
+2. [Forge and Cursor — steps 4–11](setup-profile-forge-cursor.md)
+3. [Optional product-led — step 12](setup-profile-optional-product.md)
 
 ## How to verify success
 
-- After step 1: `test -f blueprints/sdlc/README.md` from repo root.
-- After steps 3–4: project `sdlc/README.md` and `forge/forge.config.yaml` exist as in [first hour](quickstarts/first-hour.md).
-- After steps 6–10: `sync-forge-cursor-rules.sh check` passes when you use the recommended preset; CI still green if you gate on it.
-- After step 12 (if used): product bootstrap artifacts exist per the linked methodology docs.
+- After Bootstrap: `test -f blueprints/sdlc/README.md` from repo root; project `sdlc/README.md` exists.
+- After Forge and Cursor: `sync-forge-cursor-rules.sh check` passes when you use the recommended preset (if applicable).
+- After optional product-led: artifacts per the linked methodology docs.
 
 ## What to do next
 
