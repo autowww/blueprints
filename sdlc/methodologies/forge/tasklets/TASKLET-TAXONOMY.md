@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Tasklet taxonomy
 
 **Tasklets** are small, **single-operation** units (typically Cursor `.mdc` rules). A **Versona** supplies **discipline overlay**: phase intensity, scope boundaries, severity, and merge into [`VERSONA-CONTRACT.md`](../versona/VERSONA-CONTRACT.md) output.

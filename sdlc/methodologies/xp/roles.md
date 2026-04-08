@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # XP — roles (prescriptive)
 
 XP names differ from Scrum but often map to modern **Product Owner + team + coach**.

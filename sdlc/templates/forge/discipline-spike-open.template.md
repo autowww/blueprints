@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Discipline exploration spike — open checklist
 
 Copy into `forge-logs/versona/<actor>/<session-id>/` (e.g. merge into `SESSION.md` **Summary** and **Activities**, or save as `inputs/spike-open.md`). Normative guide: [`../../methodologies/forge/versona/DISCIPLINE-SPIKE.md`](../../methodologies/forge/versona/DISCIPLINE-SPIKE.md).

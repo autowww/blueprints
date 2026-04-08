@@ -1,5 +1,5 @@
 ---
-nav_title: "Team rollout: Multi-team"
+nav_title: How to align Blueprints across multiple engineering teams
 nav_group: onboarding
 public_publish: true
 audience: public
@@ -7,7 +7,7 @@ handbook_area: blueprints
 learning_level: reference
 ---
 
-# Team rollout — Multi-team
+# How to align Blueprints across multiple engineering teams
 
 ## What it is
 

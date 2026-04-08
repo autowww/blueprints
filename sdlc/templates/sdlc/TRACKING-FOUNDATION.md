@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Tracking foundation (single spine)
 
 <!-- Copy to repo `sdlc/`: handbook link uses `../blueprints/sdlc/docs/…` from that location. -->
@@ -64,7 +71,7 @@ Nothing in this pipeline is Scrum- or Kanban-specific until **configuration** (w
 ## What the foundation includes
 
 - **Identity rules** — How email becomes `contributor_id`; where aliases live; how service accounts are labeled.
-- **Work-unit conventions** — Documented patterns for referencing issues/REQs in commits (single source of truth in-repo).
+- **Work-unit conventions** — Documented patterns for referencing issues/REQs in commits (single source of truth in-repo). Repos using **Forge SDLC** can adopt the same ids in subjects/bodies/trailers per [`../../methodologies/forge/setup/BRANCHING-STRATEGY.md`](../../methodologies/forge/setup/BRANCHING-STRATEGY.md) (without duplicating the tracking schema here).
 - **Event log** — Ordered events with enough fields to recompute aggregates (commit hash, timestamps, message, optional trailers such as `Co-authored-by:`).
 - **Generic aggregates** — Definitions that do not assume a methodology: e.g. commits per contributor per day, touches per work unit, first/last activity timestamps — **slices** are parameterized by date range and scope.
 - **Optional extension points** — Additional `event_kind` values and joins to external systems, without forking contributor/work-unit definitions.

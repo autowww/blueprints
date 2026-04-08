@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Lean ceremonies → ceremony foundation
 
 **Purpose:** Map **Lean Software Development** practices and improvement rituals to methodology-neutral **intent types** in [`ceremony-foundation.md`](ceremony-foundation.md).

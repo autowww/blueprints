@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Forge — roles (prescriptive)
 
 Forge keeps standard role names and uses the blueprint's **Owner / Implementer** model. It adds a **hat-switching protocol** for teams where one person holds multiple perspectives and **Versonas** as **discipline-focused virtual personas** (not org roles).

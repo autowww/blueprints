@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # V-Model — deep-dive package (blueprint)
 
 **Purpose:** Prescriptive detail for teams using **verification-and-validation-paired** development alongside this blueprint: **foundation fit**, **roles**, **ceremonies** (design reviews, test gates), and **process maps** with traceability.

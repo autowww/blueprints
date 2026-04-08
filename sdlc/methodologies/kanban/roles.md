@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Kanban — roles (prescriptive)
 
 Kanban does not mandate Scrum’s three roles. This page defines **common accountabilities** so teams can run ceremonies and link to [archetypes](../roles-archetypes.md).

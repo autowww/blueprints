@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Ceremony intents — SDD I/O (C1–C6)
 
 **Purpose:** Full **Spec-driven development (SDD)** specifications for each **foundation ceremony intent** from [`ceremony-foundation.md`](../ceremonies/ceremony-foundation.md). Use for **calibration** with your rituals or as **copy-paste** starters (see [`../../templates/sdd/CEREMONY-INTENT.template.md`](../../templates/sdd/CEREMONY-INTENT.template.md)).

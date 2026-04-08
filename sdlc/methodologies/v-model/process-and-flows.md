@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # V-Model — major processes & flow maps
 
 ## 1. V-Model structure (classic)

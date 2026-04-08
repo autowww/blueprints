@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # <Title> — Technical directive
 
 **Copy** into project `docs/` or `sdlc/` per team layout. Governs **implementation standards** — stack, libraries, patterns, repo conventions. If the change is a **significant design fork**, add an **ADR** and keep this file focused on **day-to-day enforcement**; link the ADR rather than duplicating architecture narrative.

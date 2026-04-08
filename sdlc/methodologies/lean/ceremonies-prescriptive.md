@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Lean Software Development — ceremonies & rhythm (prescriptive)
 
 Lean does not prescribe a fixed ceremony calendar. Instead, it provides **improvement practices** that teams schedule based on need. Below: common Lean practices mapped to ceremony intents.

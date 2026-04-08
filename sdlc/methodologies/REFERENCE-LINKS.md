@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # External reference URLs (methodology guides)
 
 Curated list of **https** targets cited in [`blueprints/sdlc/methodologies/`](README.md) and mirrored in [`docs/methodologies-*.html`](../docs/methodologies.html) and in generated **Process & flows** pages (`methodologies-*-process.html`). When you change a URL in Markdown, update the matching handbook page’s “Authoritative sources” / “Authoritative sources & further reading” section (and re-run `build_methodology_chapters.py` for generated HTML).

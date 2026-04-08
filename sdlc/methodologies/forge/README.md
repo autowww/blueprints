@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Forge — deep-dive package (blueprint)
 
 **Purpose:** Prescriptive **operating detail** for teams running Forge alongside this blueprint: **roles**, **foundation fit** (tracking + ceremonies C1–C6 + archetypes), **ceremonies** with inputs/outputs/participants, **process maps**, **Versonas** (discipline-focused virtual personas; §5 structured output when teams use that shape), **daily operations**, **product planning**, and **project setup**.

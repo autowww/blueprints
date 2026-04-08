@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Daily operations
 
 Templates and Cursor rule for the daily Forge workflow: Charge management, Ember Log maintenance, and day journaling.

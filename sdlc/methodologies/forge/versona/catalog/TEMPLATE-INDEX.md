@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Versona template index (source paths)
 
 **Purpose:** Authoritative **audit table** for every `versona-*.mdc.template` source path, kind, domain, and link-depth checks. Prefer this file over duplicating paths elsewhere; the Versona hub explains how docs fit together (see **Documentation map** in [`../README.md`](../README.md)).

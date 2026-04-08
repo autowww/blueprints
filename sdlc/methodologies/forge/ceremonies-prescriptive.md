@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Forge — ceremonies & events (prescriptive)
 
 **Meetings and ceremony intents:** The events below are **Forge meetings**—scheduled, accountable team collaboration. They align with this blueprint’s **ceremony intent** types **C1–C6** ([Ceremony foundation](../ceremonies/ceremony-foundation.md)). In public-facing copy, **meeting** is the preferred label; **ceremony** names the same events when mapping to foundation intents. **Versona sessions** (discipline work under `forge-logs/versona/`) are separate and are not a substitute for these team meetings—see [Meetings vs ceremonies vs Versona sessions](NAMING-REFERENCE.md#meetings-vs-ceremonies-vs-versona-sessions). **Why** (rationale, problem) and **For what** (beneficiary, outcome, decision) are distinct when designing agendas—see [Why vs For what](NAMING-REFERENCE.md#why-vs-for-what) in the naming reference.

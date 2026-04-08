@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Kanban — deep-dive package (blueprint)
 
 **Purpose:** Prescriptive operating detail for **flow-based** delivery using Kanban with this blueprint’s **tracking spine** and **ceremony intents (C1–C6)**.

@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Kanban — major processes & flow maps
 
 ## 1. Pull through the value stream

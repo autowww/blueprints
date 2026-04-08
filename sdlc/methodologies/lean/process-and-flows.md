@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Lean Software Development — major processes & flow maps
 
 ## 1. Value-stream overview (idea to production)

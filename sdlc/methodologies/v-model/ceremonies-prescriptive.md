@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # V-Model — ceremonies (prescriptive)
 
 The V-Model's ceremonies center on **design reviews** (left-side gates) and **test reviews** (right-side gates). Each V-level has corresponding ceremonies.

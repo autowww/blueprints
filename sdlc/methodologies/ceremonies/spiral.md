@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Spiral ceremonies → ceremony foundation
 
 **Purpose:** Map **Spiral Model** quadrant events and anchor-point milestones to methodology-neutral **intent types** in [`ceremony-foundation.md`](ceremony-foundation.md).

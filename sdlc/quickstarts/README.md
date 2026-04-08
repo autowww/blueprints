@@ -1,5 +1,5 @@
 ---
-nav_title: Quickstarts
+nav_title: Blueprints quickstarts for repo setup and adoption
 nav_group: onboarding
 public_publish: true
 audience: public
@@ -7,13 +7,21 @@ handbook_area: blueprints
 learning_level: overview
 ---
 
-# Quickstarts
+# Blueprints quickstarts for repo setup and adoption
 
 This page is the entry to **quickstarts**: short guided paths with verification. Read the first paragraph under **What it is**, then use **Selection matrix** to pick a path.
 
 ## What it is
 
 The fastest path from “Blueprints is in my repo” to **verified** progress — commands and checks, not a methodology tour.
+
+### Terms (quick read)
+
+| Term | Plain language |
+|------|----------------|
+| **Blueprints** | **Software delivery documentation framework** at repo root (`blueprints/`). |
+| **Forge Studio** | **Local engineering workspace dashboard** (Lenses) — optional companion to this handbook. |
+| **Wizard** | **Guided planning workflow** inside Studio. |
 
 ## When to use it
 

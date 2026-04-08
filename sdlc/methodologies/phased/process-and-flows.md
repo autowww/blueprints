@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Phased delivery — major processes & flow maps
 
 ## 1. Classic stage sequence (simplified)

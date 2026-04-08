@@ -1,14 +1,18 @@
 ---
 sdd_id: SDD-PROCESS-REPLACE-ME
 kind: process_slot
-version: "1.0"
+version: '1.0'
 status: draft
 maps_to:
-  ceremony_intents: []       # optional cross-ref C1–C6
+  ceremony_intents: []
   methodology_events: []
-  sdlc_phases: []            # e.g. [D, E]
-title: "REPLACE — process slot / gate name"
-gate_or_continuous: gate    # gate | continuous | on_demand
+  sdlc_phases: []
+title: REPLACE — process slot / gate name
+gate_or_continuous: gate
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
 ---
 
 # SDD: REPLACE — process slot

@@ -7,6 +7,11 @@
 
 This `docs/` folder lives **inside** `blueprints/sdlc/` and is part of the reusable blueprint package (update it when the Markdown sources change).
 
+## Workspace policy (synced)
+
+- **[WORKSPACE-LOCALIZATION-SCOPE.md](WORKSPACE-LOCALIZATION-SCOPE.md)** — supported locales and i18n policy for Forge workspace products; canonical copy at workspace `docs/`; run `sync-workspace-localization-scope.sh` after edits.
+- **[L10N-ARCHITECTURE.md](L10N-ARCHITECTURE.md)** — manifest schema, handbook/site generator flags (`build-handbook.py`, `build-site.py`), delta translation workflow, and Kitchen Sink chrome bundles.
+
 ## CSS framework note
 
 - **[Bootstrap 5 vs Tailwind — comparison](COMPARISON-BS5-TAILWIND.md)** — table + when to pick which (the handbook is implemented with **Bootstrap 5**).

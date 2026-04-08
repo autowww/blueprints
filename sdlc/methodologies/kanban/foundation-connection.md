@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Kanban — connection to the SDLC foundation
 
 Kanban optimizes **flow** through a **visualized value stream** with **explicit policies** and **WIP limits**. This blueprint still requires **traceability** (intent → spec → plan → PR → release) and **ceremony intents** as a vocabulary for *why* you meet.

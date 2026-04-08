@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Discipline exploration spike — lifecycle and anchors
 
 This document defines **discipline exploration spikes** in Forge: time-boxed learning work that any discipline may run before committing to delivery scope. It complements [`VERSONA-FRAMEWORK.md`](VERSONA-FRAMEWORK.md) (session kinds, manifest fields) and [`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md) (§5 report shape when a spike closes with a Versona pass).

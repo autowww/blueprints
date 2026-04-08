@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Planning flow — vision to daily Sparks
 
 This document describes the complete pipeline from a product vision through business drivers, Product Sparks, Forge iterations, and down to daily Charge execution.

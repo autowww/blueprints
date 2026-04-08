@@ -1,5 +1,5 @@
 ---
-nav_title: "Team rollout: Platform / org"
+nav_title: Platform playbook for Blueprints across many repos
 nav_group: onboarding
 public_publish: true
 audience: public
@@ -7,7 +7,7 @@ handbook_area: blueprints
 learning_level: reference
 ---
 
-# Team rollout — Platform / organization
+# Platform playbook for Blueprints across many repos
 
 ## What it is
 

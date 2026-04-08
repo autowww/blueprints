@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Forge — artifact and decision model
 
 **Purpose:** Define how **artifacts** (inputs/outputs) and **decisions** attach to Forge’s **locked canon**—lifecycle model ([`FORGE-SDLC-PDLC-BRIDGE.md`](FORGE-SDLC-PDLC-BRIDGE.md), [`../../../pdlc/PDLC.md`](../../../pdlc/PDLC.md), [`../../SDLC.md`](../../SDLC.md)), **meeting model** ([`meetings-model.md`](meetings-model.md), [`ceremonies-prescriptive.md`](ceremonies-prescriptive.md)), and **concept map** ([`CONCEPT-MAP.md`](CONCEPT-MAP.md))—without adding bureaucracy.

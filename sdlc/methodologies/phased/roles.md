@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Phased delivery — roles (prescriptive)
 
 ## 1. Sponsor / senior responsible owner (SRO)

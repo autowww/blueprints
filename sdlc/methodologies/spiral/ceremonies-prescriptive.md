@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Spiral Model — ceremonies (prescriptive)
 
 The Spiral Model organizes work around **quadrant transitions** and **anchor-point milestones**. Below: key ceremonies mapped to the four-quadrant cycle.

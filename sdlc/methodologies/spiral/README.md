@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Spiral Model — deep-dive package (blueprint)
 
 **Purpose:** Prescriptive detail for teams using **risk-driven spiral** development alongside this blueprint: **foundation fit**, **roles**, **ceremonies** (risk reviews, anchor-point milestones), and **process maps**.

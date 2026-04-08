@@ -1,19 +1,17 @@
 ---
-session_id: "<session-id>"
-started_at: "YYYY-MM-DDTHH:MM:SSZ"
+session_id: <session-id>
+started_at: YYYY-MM-DDTHH:MM:SSZ
 work_item_refs: []
 work_item_kind: spark
-# ore | ingot | spark | spike_discipline | spike_general | other
 process_id: null
 versona_kind: discipline
 discipline: null
 parent_session: null
 ember_log_ref: null
-# e.g. ember-logs/YYYY-MM-DD.md — set after logging a decision
-# Optional — exploration spikes only (see VERSONA-FRAMEWORK.md §7.4, DISCIPLINE-SPIKE.md):
-# spike_timebox: null
-# spike_hypothesis: null
-# anchor_notes: null
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
 ---
 
 # Versona session — <session-id>

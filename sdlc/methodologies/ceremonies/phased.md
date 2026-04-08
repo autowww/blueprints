@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Phased delivery ceremonies → ceremony foundation
 
 **Purpose:** Map **phase gates**, reviews, and formal assurance to methodology-neutral **intent types** in [`ceremony-foundation.md`](ceremony-foundation.md).

@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Forge ↔ SDLC ↔ PDLC bridge
 
 **Purpose:** Map how **Forge SDLC** connects to both the software delivery lifecycle (SDLC phases A–F) and the product development lifecycle (PDLC phases P1–P6). This bridge closes the gap between product discovery and daily execution.

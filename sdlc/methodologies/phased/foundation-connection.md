@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Phased delivery — connection to the SDLC foundation
 
 Phased delivery organizes work into **sequential or overlapping stages** with **gates** (approvals, artifacts). The blueprint’s **A–F** phases still apply as a **lifecycle vocabulary**; phased methods add **baselines**, **change control**, and **formal sign-off**.

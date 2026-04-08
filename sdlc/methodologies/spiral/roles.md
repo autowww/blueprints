@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Spiral Model — roles (prescriptive)
 
 The Spiral Model defines roles around **risk management** and **stakeholder commitment**. Teams are typically more structured than in lightweight Agile but share accountability for risk-informed decisions.

@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Phased delivery — ceremonies (prescriptive)
 
 Below: typical **stage-gate** ceremonies. Adjust names to your PMO standard (PRINCE2, PMBOK, internal SDLC).

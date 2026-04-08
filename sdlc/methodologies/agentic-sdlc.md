@@ -2,7 +2,11 @@
 slug: agentic-sdlc
 tier: 201
 lens: methodology
-nav_section: "Agentic Engineering"
+nav_section: Agentic Engineering
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
 ---
 
 # Agentic SDLC (cross-cutting)

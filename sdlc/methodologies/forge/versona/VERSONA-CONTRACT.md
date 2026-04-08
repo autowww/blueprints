@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Versona contract
 
 Every **`kind: discipline`** Versona Cursor rule template follows this standard structure for **identity**, **bridge-awareness**, and—when the team uses the **standard structured report**—output per **§5**. A discipline Versona is a **virtual persona** for one professional lens. Activities include advice, drafting, handoffs, and—when useful—a **§5-shaped discipline review**; no single activity defines “Versona.” For **kinds** (routing, family aggregators, meta, workflow), **interfaces**, **processes**, **sessions**, and **logging** alignment, see [`VERSONA-FRAMEWORK.md`](VERSONA-FRAMEWORK.md). For the **kind/domain tree** and template index, see [`catalog/ANCESTRY.md`](catalog/ANCESTRY.md). **Source files:** templates live under [`versona/catalog/`](catalog/) (and optional [`versona-generic.mdc.template`](versona-generic.mdc.template) at the `versona/` root); exact paths are in [`catalog/TEMPLATE-INDEX.md`](catalog/TEMPLATE-INDEX.md).

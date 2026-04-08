@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Directive Change Proposal — DCP-<YYYYMMDD>-<nn>
 
 Bridge between **Retro Record** and an updated directive `.md`. Use before merging governance text. **Canon:** [`../../methodologies/forge/ceremonies-prescriptive.md`](../../methodologies/forge/ceremonies-prescriptive.md) § “From retro to directives”.

@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Lean Software Development — connection to the SDLC foundation
 
 Lean is a **principle-based** thinking model, not a prescriptive framework. It layers on top of whatever delivery cadence a team uses (iterations, flow, gates) by asking: **does each activity add value, and how can we reduce waste end-to-end?**

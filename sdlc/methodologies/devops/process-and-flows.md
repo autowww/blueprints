@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # DevOps — major processes & flow maps
 
 ## 1. CI/CD pipeline (conceptual)

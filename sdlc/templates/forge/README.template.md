@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Forge workspace
 
 Project-specific Forge SDLC workspace. This directory contains mutable Forge artifacts — Charge files, Ember Logs, journals, release plans, and configuration.

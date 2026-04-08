@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Extreme Programming (XP) → ceremony foundation
 
 **Purpose:** Map **XP practices** that behave like **recurring collaboration** to methodology-neutral **intent types** in [`ceremony-foundation.md`](ceremony-foundation.md).

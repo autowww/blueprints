@@ -2,6 +2,10 @@
 date: YYYY-MM-DD
 iteration: F{n}
 hat: (primary hat for the day)
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
 ---
 
 # Charge — YYYY-MM-DD

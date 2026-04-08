@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Versona framework — kinds, interfaces, processes, sessions
 
 This document defines **generic** concepts for Forge **Versonas**: taxonomy by kind, input/output interfaces, repeatable **process** documentation, **inter-Versona** interaction patterns, **session** storage in the consuming repo, and alignment with **Ember Log** and **day journal**. It complements the Cursor rule shape in [`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md); it does not replace per-discipline templates.

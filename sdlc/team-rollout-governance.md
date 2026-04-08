@@ -1,5 +1,5 @@
 ---
-nav_title: "Team rollout: Governance cadence"
+nav_title: Governance cadence for Blueprints rollout and submodule bumps
 nav_group: onboarding
 public_publish: true
 audience: public
@@ -7,7 +7,7 @@ handbook_area: blueprints
 learning_level: reference
 ---
 
-# Team rollout — Governance cadence
+# Governance cadence for Blueprints rollout and submodule bumps
 
 ## What it is
 

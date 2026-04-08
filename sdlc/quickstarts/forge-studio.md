@@ -13,6 +13,14 @@ learning_level: overview
 
 **Forge Studio** is the browser UI for **forge-lenses** at **`/studio/`** on your local server: workspace visibility, Forge plan surfaces, and (when available) the **Blueprints Wizard** for guided sessions. The same Python process also serves the classic dashboard at `/`.
 
+### Terms (quick read)
+
+| Term | Plain language |
+|------|----------------|
+| **Forge Studio** | **Local workspace UI** for delivery visibility — multi-repo overview, plans, Studio flows. |
+| **Lenses** | The **local server + Classic dashboard** that hosts Studio and Wizard on your machine. |
+| **Wizard** | **Guided project planning / assessment workflow** inside Studio. |
+
 Companion tutorials on the handbook site: **[Lenses, Forge Studio, and the Blueprints Wizard](https://blueprints.forgesdlc.com/lenses/index.html)**.
 
 ## Handbook-only reading vs running Forge Studio
@@ -57,7 +65,7 @@ git submodule update --init --recursive
 cd forge-lenses
 ```
 
-If the repository’s [README](https://github.com/autowww/forge-lenses/blob/main/README.md) describes a setup script or submodules for your layout, follow that next.
+Unusual clone layouts (extra submodules, custom scripts): use the handbook [Troubleshooting](https://blueprints.forgesdlc.com/lenses/guides/12-troubleshooting.html) first; only open the **forge-lenses** repository docs if whoever maintains your server tells you to.
 
 ### 2. Create a venv and install dependencies
 
@@ -80,7 +88,7 @@ Or activate the venv and run **`.venv/bin/python3 -m lenses`** (same as the scri
 
 In your browser, open **[http://127.0.0.1:8080/studio/](http://127.0.0.1:8080/studio/)** (default port **8080**).
 
-If the page does not load, start with the handbook **[Troubleshooting](https://blueprints.forgesdlc.com/lenses/guides/12-troubleshooting.html)** (symptoms and user-facing fixes first). If you maintain the server or need repository-specific notes, see the **Troubleshooting** section of the [forge-lenses README](https://github.com/autowww/forge-lenses/blob/main/README.md) on GitHub as a secondary source.
+If the page does not load, use the handbook **[Troubleshooting](https://blueprints.forgesdlc.com/lenses/guides/12-troubleshooting.html)** end to end. Maintainer-only details stay in the **forge-lenses** project repository — not required for the default quickstart path.
 
 ### 5. Optional: open the Blueprints Wizard
 
@@ -112,7 +120,6 @@ The **Blueprints Wizard** is an optional guided flow **inside** Forge Studio. It
 | Check | Expect |
 |-------|--------|
 | Classic UI | **[http://127.0.0.1:8080/](http://127.0.0.1:8080/)** loads |
-| API health | Optional deeper check (if your team uses it): workspace health URL in browser when the handbook [Troubleshooting](https://blueprints.forgesdlc.com/lenses/guides/12-troubleshooting.html) suggests it |
 | Forge Studio | **[http://127.0.0.1:8080/studio/](http://127.0.0.1:8080/studio/)** loads |
 
 **Just Studio vs Studio + Wizard later:** this quickstart covers the server and `/studio/`. Wizard URLs live under `/studio/blueprints/wizard` when you are ready — see the [Lenses handbook Wizard guides](https://blueprints.forgesdlc.com/lenses/index.html).

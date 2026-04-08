@@ -21,7 +21,7 @@ It is a **sanity check** that [`templates/sdlc/`](templates/sdlc) matches the in
 | Topic | Living `sdlc/README.md` | Generated `sdlc.new/README.md` |
 |--------|-------------------------|----------------------------------|
 | **Project label** | Footer reflects the **living** repo (named project); table rows assume **full** doc tree (`blueprints/product`, product handbook, etc.). | Footer says **project-only**; several rows are marked **(if adopted)** so greenfield repos can delete unused links. |
-| **Engineering intro** | Mentions [`docs/INDEX.md#engineering-tracking`](../../docs/INDEX.md#engineering-tracking) and [`SDLc-WORKSPACE.md`](SDLc-WORKSPACE.md). | Same ideas; wording tuned for repos that may not have `docs/INDEX.md` yet. |
+| **Engineering intro** | Mentions [`docs/INDEX.md#engineering-tracking`](https://github.com/autowww/blueprints/blob/main/docs/INDEX.md#engineering-tracking) and [`SDLc-WORKSPACE.md`](SDLc-WORKSPACE.md). | Same ideas; wording tuned for repos that may not have `docs/INDEX.md` yet. |
 
 Titles align (e.g. `# SDLC — MyProduct` when that string was passed to `init-sdlc-workspace.sh`). None of this affects the **TRACKING-*** files.
 

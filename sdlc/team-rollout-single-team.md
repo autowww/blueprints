@@ -1,5 +1,5 @@
 ---
-nav_title: "Team rollout: Single team"
+nav_title: How to roll out Blueprints in one engineering team
 nav_group: onboarding
 public_publish: true
 audience: public
@@ -7,7 +7,7 @@ handbook_area: blueprints
 learning_level: reference
 ---
 
-# Team rollout — Single team
+# How to roll out Blueprints in one engineering team
 
 ## What it is
 

@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Forge tasklets — small Cursor operations
 
 **Tasklets** are **single-operation** Cursor rules (`.mdc`) with a **fixed output shape**. A **meta-Versona** (for example **Sampling Versona**) can invoke them **in sequence** and merge results into a report shaped like a **§5** pass or other agreed structure (see [`VERSONA-CONTRACT.md`](../versona/VERSONA-CONTRACT.md)).

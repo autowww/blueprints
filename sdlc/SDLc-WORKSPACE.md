@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Initializing the project `sdlc/` workspace
 
 This blueprint ships **canonical copies** of the engineering-tracking Markdown files and a **`README` template** under [`templates/sdlc/`](templates/sdlc). Use them to create a **mutable** `sdlc/` folder at the **repository root** (next to `blueprints/sdlc/`), without copying project-specific prose from another repo by hand.
@@ -51,4 +58,4 @@ When tracking content in the **living** `sdlc/` folder is improved, consider **b
 
 ## Compare with an existing `sdlc/`
 
-After generating a scratch folder (e.g. `sdlc.new/`), see [`SDLc-WORKSPACE-COMPARISON.md`](SDLc-WORKSPACE-COMPARISON.md) for what should match and what differs in `README.md` only.
+After generating a scratch folder (e.g. `sdlc.new/`), see [SDLc-WORKSPACE-COMPARISON.md on GitHub](https://github.com/autowww/blueprints/blob/main/sdlc/SDLc-WORKSPACE-COMPARISON.md) for what should match and what differs in `README.md` only.

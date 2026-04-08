@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Versona ancestry — kinds, domains, templates
 
 Normative layering for Forge Versonas: **generic baseline** (Layer 0), **kind** (routing, discipline, …), **domain** (for discipline templates only), then **concrete** `.mdc` templates. Cursor rules do not inherit automatically—each installed rule duplicates the baseline for self-containment; see [`_includes/GENERIC-VERSONA-BASELINE.md`](../_includes/GENERIC-VERSONA-BASELINE.md).

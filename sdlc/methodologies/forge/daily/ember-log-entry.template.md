@@ -2,6 +2,10 @@
 date: YYYY-MM-DD
 spark_refs: []
 decision_type: (trade-off / assumption / risk-acceptance / scope-change / bank / technical)
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
 ---
 
 ## Decision: {one-line summary}

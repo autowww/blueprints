@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Methodologies (lenses on the tracking foundation)
 
 <!-- Copy to repo `sdlc/`: links use `../blueprints/sdlc/…` from that location. -->

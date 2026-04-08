@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # <Title> — Project SDLC directive
 
 **Copy** into project `sdlc/` (or equivalent) and customize. Governs **methodology application** — ceremonies, gates, Ore/Ingot/Spark usage, team process. **Not** for significant **architecture** forks (use an **ADR** + optional technical directive pointer per [`../../../disciplines/engineering/software-architecture/SOFTWARE-ARCHITECTURE.md`](../../../disciplines/engineering/software-architecture/SOFTWARE-ARCHITECTURE.md)).

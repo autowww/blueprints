@@ -2,7 +2,11 @@
 product_spark: F{n}
 type: (poc / mvp / phase)
 status: (planning / active / released / banked)
-target_date:
+target_date: null
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
 ---
 
 # Release plan — {Product Spark name}

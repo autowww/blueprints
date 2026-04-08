@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Versona migrations
 
 When **blueprints** changes Versona **session** layouts, **manifest** fields, or **§5 report** shapes, consuming repos may need to adjust existing `forge-logs/versona/**` trees or local conventions.

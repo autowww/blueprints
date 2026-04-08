@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Kanban ceremonies → ceremony foundation
 
 **Purpose:** Map **Kanban** feedback loops and common rituals to methodology-neutral **intent types** in [`ceremony-foundation.md`](ceremony-foundation.md).

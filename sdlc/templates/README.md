@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Templates
 
 Copy into `docs/` (or your doc root) and customize. **Not** part of the process itself—shortcuts for new projects.

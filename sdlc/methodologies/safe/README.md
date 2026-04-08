@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # SAFe — deep-dive package (blueprint)
 
 **Purpose:** Prescriptive **operating detail** for teams running SAFe alongside this blueprint: **roles**, **foundation fit** (tracking + ceremonies C1–C6 + archetypes), **events** with inputs/outputs/participants, and **process maps**.

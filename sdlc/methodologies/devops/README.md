@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # DevOps — deep-dive package (blueprint)
 
 **Purpose:** Prescriptive detail for teams adopting **DevOps** culture and practices alongside this blueprint: **foundation fit**, **roles**, **ceremonies** (deployment reviews, incident response, SLO reviews), and **pipeline flow maps**.

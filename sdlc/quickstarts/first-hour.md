@@ -15,11 +15,20 @@ A single sitting (~**60 minutes**) to get **`blueprints/`**, a project **`sdlc/`
 
 **Handbook-first:** run every command from your **repository root** (the directory that will contain `blueprints/` and `sdlc/`). The table below is a quick map; the numbered sections that follow are the same steps with full context.
 
+### Terms (quick read)
+
+| Term | Plain language |
+|------|----------------|
+| **Blueprints** | **Software delivery documentation framework** you add at repo root (often as `blueprints/`). |
+| **Project `sdlc/`** | **Your** project’s SDLC workspace — not edits inside the frozen `blueprints/sdlc/` baseline. |
+| **Forge** | Minimal **forge/** layout and config created by the init step — methodology alignment. |
+| **Forge Studio** | Optional **local workspace UI** (Lenses) — [Forge Studio quickstart](forge-studio.md). |
+
 ## When to use it
 
 Use this guide after you intend to use Blueprints at the **repository root** (next to `sdlc/`, `docs/`, `forge/`). For *which adoption story* matches you first, see [**Adopting Blueprints**](../adopting-blueprints.md).
 
-**Not covered here:** choosing an ICP adopter path (solo vs team vs org) — see [**Adopting Blueprints**](../adopting-blueprints.md). Maintainer plans and milestones — on GitHub: [Roadmap](https://github.com/autowww/blueprints/blob/main/docs/ROADMAP.md).
+**Not covered here:** choosing an ICP adopter path (solo vs team vs org) — see [**Adopting Blueprints**](../adopting-blueprints.md).
 
 ### First-hour sequence (visual)
 
@@ -54,6 +63,8 @@ Decide that **`blueprints/` will live at the repository root** next to `sdlc/`, 
 
 ### 1. Get the blueprint on disk
 
+**What you’re doing:** ensuring the **Blueprints** tree exists at `blueprints/` so later scripts can run.
+
 If you have not already, add Blueprints as a **git submodule** at `blueprints/` (or ensure a copy of the tree exists there). Initialize submodules so `blueprints/sdlc/` is present:
 
 ```bash
@@ -62,6 +73,8 @@ git submodule update --init --recursive
 
 ### 2. Create the project `sdlc/` workspace
 
+**What you’re doing:** creating **your** project’s `sdlc/` tree from a Blueprints template (not editing the upstream baseline).
+
 From the **repository root**, run (replace the quoted name with your project label):
 
 ```bash
@@ -69,6 +82,8 @@ From the **repository root**, run (replace the quoted name with your project lab
 ```
 
 ### 3. Initialize Forge
+
+**What you’re doing:** scaffolding **Forge** (`forge/`, starter config, log paths) so you can align methodology and optional editor rules.
 
 Still from the repo root:
 
@@ -79,6 +94,8 @@ Still from the repo root:
 Edit `forge/forge.config.yaml` later when you are ready; the [full setup checklist](../SETUP.md) lists questionnaire and alignment steps.
 
 ### 4. Install Cursor rules (recommended preset)
+
+**What you’re doing:** copying **recommended Cursor rules** from Blueprints into `.cursor/rules` (or your team’s synced path).
 
 From the repo root:
 
@@ -148,3 +165,4 @@ bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh check
 - **Full ordered checklist** (submodule through optional product flows): [Project setup profile](../SETUP.md).
 - **ICP paths** (which adoption story matches you): [**Adopting Blueprints**](../adopting-blueprints.md).
 - **Documentation layout** in the consuming repo — [Documentation structure](../DOCUMENTATION-STRUCTURE.md) in this handbook.
+- **Framework roadmap / upstream release context:** see [**Adopting Blueprints**](../adopting-blueprints.md) → *Maintainer and GitHub-only detail* (skip until you need it).

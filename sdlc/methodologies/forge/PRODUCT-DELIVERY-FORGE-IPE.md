@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Product creation → delivery — industry, Forge, and PMI-style map
 
 **Purpose:** Map **problem statement through product delivery** using **industry language**, **Forge** work units, and a compact **Inputs → Process → Outputs** (IPE) view per lifecycle phase. Deep definitions live in linked canon; this file is a **navigation spine**.

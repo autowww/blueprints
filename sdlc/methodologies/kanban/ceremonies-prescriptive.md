@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Kanban — ceremonies (prescriptive)
 
 Kanban **policies** and **cadences** replace fixed Scrum timeboxes. Below: **inputs**, **outputs**, **participants**, **cadence**, **agenda** for the ceremonies most teams need.

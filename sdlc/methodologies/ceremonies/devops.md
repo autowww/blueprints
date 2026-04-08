@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # DevOps ceremonies → ceremony foundation
 
 **Purpose:** Map **DevOps** operational practices and feedback loops to methodology-neutral **intent types** in [`ceremony-foundation.md`](ceremony-foundation.md).

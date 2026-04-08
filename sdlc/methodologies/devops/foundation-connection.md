@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # DevOps — connection to the SDLC foundation
 
 DevOps treats the **entire** delivery pipeline — from code commit to production operation — as a **single system** to be optimized. The blueprint's **A–F** phases still apply; DevOps adds **automation**, **monitoring**, and **operational feedback** as first-class concerns.

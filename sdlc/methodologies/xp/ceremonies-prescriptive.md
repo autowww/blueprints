@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # XP — ceremonies & rhythm (prescriptive)
 
 XP is often run in **iterations** (1–3 weeks). Below: common events; combine with engineering practices (TDD, CI, pair programming).

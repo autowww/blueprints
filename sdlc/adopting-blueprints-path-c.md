@@ -40,11 +40,11 @@ When the [decision guide](adopting-blueprints.md#decision-guide) points you to p
 | **Starting situation** | Platform team owns `autowww/blueprints` consumption across fifteen services; security wants a single approved SHA quarterly. |
 | **Action taken** | Publish a “golden” submodule bump schedule; teams follow [Updating the submodule](updating-blueprints-submodule.md); exceptions go through documented policy. |
 | **Expected result** | Product repos move `blueprints/` in lockstep or on an approved lag; no silent one-off forks of upstream text. |
-| **What to check** | CI or release notes show bump commits; [Team rollout — platform](team-rollout-org-platform.md) matches how you coordinate. |
+| **What to check** | CI or release notes show bump commits; [Platform playbook for Blueprints](team-rollout-org-platform.md) matches how you coordinate. |
 
 ## How to verify success
 
-Playbook exists; golden SHA or cadence is published; [Team rollout — platform](team-rollout-org-platform.md) patterns apply when coordinating many repos.
+Playbook exists; golden SHA or cadence is published; [Platform playbook for Blueprints](team-rollout-org-platform.md) patterns apply when coordinating many repos.
 
 ## What to do next
 

@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Roadmap — {project name}
 
 **Optional** high-level view: milestones, epics, rough **% complete**.  
@@ -14,6 +21,12 @@
 | Epic ID | Title | Status | % complete | Notes |
 |---------|-------|--------|--------------|-------|
 | | | | | |
+
+Optional — **baseline vs current plan** (ISO dates `YYYY-MM-DD`; leave cells empty if unused). Forge Lenses can chart **Initial** vs **Target** ranges when these columns are present.
+
+| Epic ID | Title | Status | % complete | Initial start | Initial end | Target start | Target end | Notes |
+|---------|-------|--------|--------------|---------------|-------------|--------------|------------|-------|
+| | | | | | | | | |
 
 ### How % complete is defined (optional)
 

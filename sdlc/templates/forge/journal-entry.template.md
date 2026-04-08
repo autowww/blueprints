@@ -1,6 +1,10 @@
 ---
 date: YYYY-MM-DD
 iteration: F1
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
 ---
 
 # Journal — YYYY-MM-DD

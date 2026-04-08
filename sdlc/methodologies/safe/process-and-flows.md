@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # SAFe — process and flows
 
 **Purpose:** Visual and narrative description of SAFe process flows at **team**, **program (ART)**, and **portfolio** levels. KS diagram templates for key lifecycle patterns.

@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Forge — connection to the SDLC foundation
 
 This blueprint treats **Forge as a delivery methodology** that plugs into a **shared foundation**: **tracking** (spine + artifacts) and **ceremony intents** (C1–C6). Forge does **not** replace the foundation; it defines **how** the team refines, scrutinizes, executes, and releases work.

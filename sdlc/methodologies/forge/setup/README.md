@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Setup & adoption
 
 A guided flow for consuming repos to adopt Forge SDLC. Includes a questionnaire to determine team configuration, a scaffold script to create directories and files, and a Cursor rule for conversational setup.
@@ -17,6 +24,7 @@ A guided flow for consuming repos to adopt Forge SDLC. Includes a questionnaire 
 | File | Purpose |
 |------|---------|
 | [`QUESTIONNAIRE.md`](QUESTIONNAIRE.md) | Questions to determine Forge configuration |
+| [`BRANCHING-STRATEGY.md`](BRANCHING-STRATEGY.md) | Git branching by Forge scale + commit message/body rules (agents & search) |
 | [`forge-init.sh`](forge-init.sh) | Scaffold script — creates workspace directories and seed files |
 | [`forge.config.template.yaml`](forge.config.template.yaml) | Configuration template |
 | [`forge-setup.mdc.template`](forge-setup.mdc.template) | Cursor rule for guided setup (questionnaire) |

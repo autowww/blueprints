@@ -2,7 +2,11 @@
 slug: methodology-overview
 tier: 101
 lens: methodology
-nav_section: "Discover ForgeSDLC"
+nav_section: Discover ForgeSDLC
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
 ---
 
 # Forge SDLC
@@ -78,6 +82,14 @@ A Forge iteration typically contains Sparks across multiple phases.
 
 ---
 
+## Core principles and execution detail
+
+Forge is anchored by **four core principles** for AI-native delivery (*shape before speed*, *flow over ceremony*, *AI-first human-gated*, *make gains compound*). Narrative on the product site: [Four core principles](https://forgesdlc.com/blog/four-core-principles.html).
+
+[Forge principles (full list)](https://forgesdlc.com/forge-principles-deep-dive.html) adds **execution principles** and **lean tenets**—how those ideas show up in practice. The summary below matches that page.
+
+---
+
 ## Principles (summary)
 
 1. **Refine before you commit.** Ore must become Ingot before execution.
@@ -114,6 +126,8 @@ Forge must never add more ceremony than it removes waste. Key tenets:
 | **Team** | 5–12 | Full ceremony set. Designated Versona disciplines. Ember Log maintained collaboratively. Assay Gate may include stakeholder sign-off. |
 | **Multi-team** | 12+ | Shared Ore pipeline. Cross-team Assay Gates. Versonas may include dedicated challenge roles. Forge iterations align across teams. |
 
+**Git:** Branching and commit conventions scale with this table — see [`forge/setup/BRANCHING-STRATEGY.md`](forge/setup/BRANCHING-STRATEGY.md).
+
 ---
 
 ## Prescriptive deep dive
@@ -131,6 +145,7 @@ Forge must never add more ceremony than it removes waste. Key tenets:
 | Daily operations | [`forge/daily/README.md`](forge/daily/README.md) |
 | Product planning | [`forge/planning/README.md`](forge/planning/README.md) |
 | Setup & adoption | [`forge/setup/README.md`](forge/setup/README.md) |
+| Git branching & commits | [`forge/setup/BRANCHING-STRATEGY.md`](forge/setup/BRANCHING-STRATEGY.md) |
 
 ---
 

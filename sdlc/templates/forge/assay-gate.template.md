@@ -2,6 +2,10 @@
 product_spark: F{n}
 date: YYYY-MM-DD
 result: (pass / fail)
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
 ---
 
 # Assay Gate — {Product Spark name}

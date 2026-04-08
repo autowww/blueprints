@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Versonas — discipline-focused virtual personas
 
 **Versonas** are AI **virtual personas**—**discipline specialists** for **one professional domain** each (Engineering, Data, Product, …). They are **not** human job titles or org **roles**—see [`../roles.md`](../roles.md). **Terminology** (Versona vs user persona, meetings vs sessions): [`../CONCEPT-MAP.md`](../CONCEPT-MAP.md), [`../NAMING-REFERENCE.md`](../NAMING-REFERENCE.md). In a session a Versona may **advise**, **draft**, **route handoffs**, or produce the **standard structured report** in [`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md) §5 when the team wants that shape—always within its **bridge** scope. No single activity defines a Versona; identity is the **discipline lens**.

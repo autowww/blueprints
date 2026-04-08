@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Process slots — SDD I/O (cross-methodology)
 
 **Purpose:** **Spec-driven development** view of **named process slices** that appear under many methodologies (Scrum, Kanban, XP, phased). Each slot is **not** a calendar title—it is a **reusable I/O contract** you can attach to your own ceremonies or gates.

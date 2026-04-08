@@ -2,8 +2,12 @@
 product_spark: F{n}
 type: mvp
 status: planning
-core_value:
-target_date:
+core_value: null
+target_date: null
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
 ---
 
 # MVP plan — {name}

@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Process: <process-id>
 
 <!-- Abstract process template — replace angle-bracket placeholders. Link from SESSION.md process_id when used. -->

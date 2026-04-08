@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Forge — major processes & flow maps
 
 Diagrams below use **` ```blueprint-diagram `** fences on the published handbook; GitHub shows the source as a fenced block.

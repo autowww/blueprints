@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Test plan — [scope]
 
 **Scope:** [milestone, epic, release, or story group]  

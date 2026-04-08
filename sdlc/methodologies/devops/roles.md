@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # DevOps — roles (prescriptive)
 
 DevOps emphasizes **shared accountability** between development and operations. Roles are defined by **capability**, not by organizational walls.

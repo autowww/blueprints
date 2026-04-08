@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Scrum ceremonies → ceremony foundation
 
 **Purpose:** Map **Scrum events** (Scrum Guide) to methodology-neutral **intent types** in [`ceremony-foundation.md`](ceremony-foundation.md).

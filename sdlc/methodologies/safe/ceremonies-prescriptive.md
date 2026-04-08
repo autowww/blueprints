@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # SAFe — ceremonies (prescriptive)
 
 **Purpose:** Prescriptive detail for each SAFe event: **inputs**, **outputs**, **participants**, **timebox**, and **agenda sketch**. Covers both **team-level** and **program-level** events.

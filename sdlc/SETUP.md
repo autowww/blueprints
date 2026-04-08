@@ -1,5 +1,5 @@
 ---
-nav_title: Project setup profile
+nav_title: Project setup checklist for Blueprints in a consuming repository
 nav_group: onboarding
 public_publish: true
 audience: public
@@ -7,13 +7,23 @@ handbook_area: blueprints
 learning_level: reference
 ---
 
-# Project setup profile (consuming repository)
+# Project setup checklist for Blueprints in a consuming repository
 
 ## What it is
 
 The **full ordered checklist** for a product repository that hosts **`blueprints/` at the repository root** (typically a git submodule): submodule through optional Forge and product-led flows, with the same assumptions as the [first-hour quickstart](quickstarts/first-hour.md), but in one place.
 
 **Handbook-first:** every command and relative path below assumes your shell’s **current working directory is the consuming repository root** — the folder that will list `blueprints/`, `sdlc/`, `forge/`, and (after Bootstrap) your project docs. That matches the [first-hour quickstart](quickstarts/first-hour.md) and keeps one canonical story for where scripts run.
+
+### Terms (quick read)
+
+| Term | Plain language |
+|------|----------------|
+| **Blueprints** | **Software delivery documentation framework** in your repo (often a `blueprints/` submodule). |
+| **Project setup checklist** | This profile — ordered steps from submodule through Forge, Cursor, and optional product flows. |
+| **Forge Studio** | **Local engineering workspace dashboard** (Lenses) for visibility across repos — optional; see [Forge Studio quickstart](quickstarts/forge-studio.md). |
+| **Wizard** | **Guided project planning workflow** inside Studio — optional. |
+| **Versona** | **Discipline lens** for structured reviews in Forge — see [Versona catalog](methodologies/forge/versona/README.md). |
 
 You may copy this file to your project root as `SETUP.md` if you want a local checklist.
 
@@ -50,7 +60,7 @@ Use this page when you are **standardizing setup end-to-end** after you already 
 
 ## Prerequisites
 
-- **`blueprints/`** must sit at the **repository root** next to `forge/`, `sdlc/`, `docs/`, etc. Scripts such as [`methodologies/forge/setup/forge-init.sh`](methodologies/forge/setup/forge-init.sh) and [`methodologies/forge/tasklets/install-tasklets.sh`](methodologies/forge/tasklets/install-tasklets.sh) use paths like `blueprints/sdlc/...` from the current working directory (repo root).
+- **`blueprints/`** must sit at the **repository root** next to `forge/`, `sdlc/`, `docs/`, etc. Stock **Forge init** and **tasklet install** scripts live under the Blueprints tree and assume you run them from the repo root (paths start with `blueprints/`). Details: [Setup profile — Forge and Cursor](setup-profile-forge-cursor.md).
 - If your org cannot use that layout, you need **wrapper scripts** or forks that adjust paths — the stock blueprints tooling does **not** support a configurable `BLUEPRINTS_ROOT`.
 
 ## Steps (by phase)

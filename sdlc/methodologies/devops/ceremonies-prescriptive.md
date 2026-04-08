@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # DevOps — ceremonies & rhythm (prescriptive)
 
 DevOps ceremonies complement development-focused events (planning, review, retro) with **operational** ceremonies. Below: common DevOps-specific practices.

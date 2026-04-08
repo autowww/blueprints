@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Spiral Model — connection to the SDLC foundation
 
 The Spiral Model treats each development cycle as a **risk-driven** pass through planning, risk analysis, engineering, and evaluation. The blueprint's **A–F** phases still apply; the Spiral adds **explicit risk gates** and **iterative deepening** across multiple passes.

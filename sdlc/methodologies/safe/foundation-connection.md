@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # SAFe — connection to the SDLC foundation
 
 This blueprint treats **SAFe as a scaled delivery framework** that plugs into a **shared foundation**: **tracking** (spine + artifacts) and **ceremony intents** (C1–C6). SAFe does **not** replace the foundation; it adds **multi-team coordination**, **shared cadence**, and **portfolio governance** on top.

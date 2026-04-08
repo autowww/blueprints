@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Versona catalog
 
 **Purpose:** Entry point for **`versona/catalog/`** — all `versona-*.mdc.template` files except [`versona-generic.mdc.template`](../versona-generic.mdc.template) at the `versona/` root.

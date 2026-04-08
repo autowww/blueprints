@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Engineering family — Versona ancestry
 
 This folder holds **discipline** Versona templates for the **Engineering** domain and the **family aggregator**. It normatively describes how those templates relate: **Software Engineering (`versona-se`)** is the **conceptual ancestor** for craft and CS fundamentals; **specialists** extend that story with domain-specific bridges.

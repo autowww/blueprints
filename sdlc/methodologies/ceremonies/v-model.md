@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # V-Model ceremonies → ceremony foundation
 
 **Purpose:** Map **V-Model** design reviews and test gates to methodology-neutral **intent types** in [`ceremony-foundation.md`](ceremony-foundation.md).

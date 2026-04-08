@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Forge — meeting model (operational)
 
 **Purpose:** Preserve the **minimal memorable set** of Forge **meetings**, how they are **delivered** (human-only, hybrid, Versona-assisted), and what **accountability** requires—without inventing a parallel taxonomy. **Meeting** is the primary public term. This document extends [`ceremonies-prescriptive.md`](ceremonies-prescriptive.md) (inputs, outputs, agendas) with **delivery modes**, **decision ownership**, and **anti-patterns**.

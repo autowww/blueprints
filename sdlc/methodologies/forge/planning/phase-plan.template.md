@@ -1,9 +1,13 @@
 ---
 product_spark: F{n}
 type: phase
-phase_number:
+phase_number: null
 status: planning
-target_date:
+target_date: null
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
 ---
 
 # Phase plan — {phase name}

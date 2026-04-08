@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # V-Model — roles (prescriptive)
 
 The V-Model defines roles around **verification levels** and **traceability**. Teams are typically structured by engineering discipline with clear handoff points between development and test.

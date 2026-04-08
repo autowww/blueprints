@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Extreme Programming (XP) — deep-dive package (blueprint)
 
 **Purpose:** Prescriptive detail for XP **practices** and **events** mapped to the blueprint **foundation**.

@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # DSDM (Dynamic Systems Development Method)
 
 ## What it is

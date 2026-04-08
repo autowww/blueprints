@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Lean Software Development — roles (prescriptive)
 
 Lean does not mandate specific named roles the way Scrum does. Instead, it defines **principles** about how people should work together. The roles below reflect common patterns in teams that apply Lean thinking.

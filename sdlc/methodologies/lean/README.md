@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Lean Software Development — deep-dive package (blueprint)
 
 **Purpose:** Prescriptive detail for teams applying **Lean principles** alongside this blueprint: **foundation fit**, **roles**, **ceremonies** (Kaizen, value-stream reviews), and **process maps**.

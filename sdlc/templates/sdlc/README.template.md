@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # SDLC — {{PROJECT_NAME}}
 
 **Copy note:** Links below assume this file lives at **`sdlc/README.md`** (repo root). They are wrong if you open the template from `blueprints/sdlc/templates/sdlc/` — run `init-sdlc-workspace.sh` or adjust paths mentally.

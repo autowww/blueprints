@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # ForgeSDLC — concept map and term-collision register
 
 **Purpose:** Single-page **canonical concept matrix** (how core terms relate to lifecycles, owners, artifacts, and meetings) and a **term-collision register** for known ambiguities. Detailed term → path mapping remains in [`NAMING-REFERENCE.md`](NAMING-REFERENCE.md).

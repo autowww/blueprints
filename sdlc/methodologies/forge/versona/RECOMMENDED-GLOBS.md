@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Recommended Cursor `globs` for Product Versonas
 
 Forge Versona templates ship with **empty `globs:`** so each repo opts in. For **product-led** work, consider attaching rules when product or PDLC docs are in context.

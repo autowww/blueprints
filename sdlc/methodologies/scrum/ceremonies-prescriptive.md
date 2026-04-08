@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Scrum — ceremonies & events (prescriptive)
 
 Each **official Scrum event** below lists **inputs**, **outputs**, **participants**, **timebox** (typical), **agenda**, and **meetings** (what to schedule). Unofficial but common: **backlog refinement** — included because teams need it to make Planning workable.

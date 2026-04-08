@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # XP — connection to the SDLC foundation
 
 XP emphasizes **technical excellence** (TDD, refactoring, CI, simple design) and **tight business feedback** (customer, small releases). The blueprint **tracking spine** and **C1–C6** still apply.

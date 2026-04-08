@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Product Manager — Forge orchestrating agent
 
 The **Product Manager agent** is a Cursor rule that orchestrates product-level planning within Forge SDLC. It complements the existing Forge workflow agents (`forge-setup`, `forge-planning`, `forge-daily`) by adding a **product strategy layer** — guiding the user from business drivers through product bootstrap, roadmap decomposition, and Product Spark planning.

@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Cursor rules — quickstart (Forge + Versonas)
 
 **Full reference:** [`CURSOR-RULES-ALIGNMENT.md`](CURSOR-RULES-ALIGNMENT.md) · **Implementation:** [`versona_cursor_rules.py`](versona_cursor_rules.py)

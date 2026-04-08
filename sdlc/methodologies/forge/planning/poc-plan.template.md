@@ -2,8 +2,12 @@
 product_spark: F{n}
 type: poc
 status: planning
-hypothesis:
-target_date:
+hypothesis: null
+target_date: null
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
 ---
 
 # PoC plan — {name}

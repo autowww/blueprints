@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Spec-driven development — SDD I/O package
 
 **Purpose:** Normative **Spec-Driven Development (SDD)** material for **ceremony intents (C1–C6)** and **process slots (P1–P6)** — inputs, outputs, preconditions, examples — plus pointers to **copy-paste templates** for agents, engineers, and product.

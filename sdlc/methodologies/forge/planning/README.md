@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Product planning
 
 Templates that connect upstream product planning (PoC / MVP / Phased) to the Forge Ore pipeline. Uses the existing PDLC-SDLC bridge and discipline bridges to show how business drivers flow down to daily Sparks.

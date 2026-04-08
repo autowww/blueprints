@@ -1,14 +1,18 @@
 ---
 sdd_id: SDD-CEREMONY-REPLACE-ME
 kind: ceremony_intent
-version: "1.0"
+version: '1.0'
 status: draft
 maps_to:
-  ceremony_intents: []       # e.g. [C1, C2]
-  methodology_events: []     # e.g. ["Sprint Planning"]
-  sdlc_phases: []            # e.g. [A, B]
-title: "REPLACE — ceremony name"
-owner_archetype: "REPLACE"
+  ceremony_intents: []
+  methodology_events: []
+  sdlc_phases: []
+title: REPLACE — ceremony name
+owner_archetype: REPLACE
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
 ---
 
 # SDD: REPLACE — ceremony name

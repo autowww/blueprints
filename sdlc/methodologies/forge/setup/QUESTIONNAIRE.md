@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Forge setup questionnaire
 
 Answer these questions to configure Forge for your project. The setup wizard (Cursor rule or manual) uses these answers to determine scaling tier, active Versonas, ceremony weight, and directory structure.

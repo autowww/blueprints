@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Ceremonies — blueprint package
 
 **Purpose:** Split **methodology-neutral ceremony *intent*** (foundation) from **methodology-specific names and rules** (forks)—same pattern as [**Roles & archetypes**](../roles-archetypes.md) (archetypes = foundation; Scrum/Kanban/… = tweaks).

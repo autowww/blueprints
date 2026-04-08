@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # SDD I/O schema — ceremonies & process slots
 
 **Purpose:** Define a **repeatable, machine- and human-friendly** shape for specifying **inputs, outputs, preconditions, and artifacts** for any **ceremony intent (C1–C6)** or **named process slot** (planning, gate, refinement, …). Use this so **agents**, **engineers**, and **product** share one contract.

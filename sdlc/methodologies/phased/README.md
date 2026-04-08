@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Phased delivery — deep-dive package (blueprint)
 
 **Purpose:** Prescriptive detail for **stage-gated** or **waterfall-leaning** delivery aligned with the blueprint **tracking spine** and **ceremony intents**.

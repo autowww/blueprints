@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # SAFe ceremonies → ceremony foundation
 
 **Purpose:** Map **SAFe events** (team-level and program-level) to methodology-neutral **intent types** in [`ceremony-foundation.md`](ceremony-foundation.md).

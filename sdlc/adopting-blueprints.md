@@ -13,9 +13,21 @@ learning_level: overview
 
 Choosing **which adoption story** matches you (ICP-style paths A / B / C) — not the command-by-command [first hour](quickstarts/first-hour.md).
 
+ForgeSDLC treats delivery as **human-governed, agent-assisted** work: Blueprints gives you the **traceable documentation baseline**; Forge and Versonas add **governed** review and execution patterns. This page is about **which adoption slice** to start with, not every command.
+
 Blueprints is a **reusable documentation framework**: SDLC, PDLC, disciplines, and Forge / Versona patterns you consume as a **Blueprints tree** in your repository (often a submodule named `blueprints/`). Your **project** work lives in **`sdlc/`**, **`docs/`**, **`forge/`** at the repository root — not in edits to the frozen baseline inside the Blueprints tree (see [Policy](POLICY.md)).
 
 **Hands-on first hour:** [Quickstarts — First hour](quickstarts/first-hour.md).
+
+### Terms (quick read)
+
+| Term | Plain language |
+|------|----------------|
+| **Blueprints** | **Software delivery documentation framework** — SDLC/PDLC text, ceremonies, and templates you submodule into a repo. |
+| **Forge** | Methodology tooling in your repo (config, logs, optional tasklets) that aligns editors and automation with that framework. |
+| **Forge Studio** | **Local workspace UI** for delivery visibility — part of **Lenses**; runs on your machine, not inside `blueprints/`. |
+| **Wizard** | **Guided planning / assessment workflow** in Studio — structured sessions and exports; does not auto-change your submodule. |
+| **Versona** | **Discipline-specific perspective** (reviewer lens) used in Forge-aligned sessions — e.g. architecture, testing, security voice. |
 
 ## When to use it
 

@@ -2,6 +2,10 @@
 date: YYYY-MM-DD
 iteration: F1
 hat: Product
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
 ---
 
 # Charge — Product Bootstrap (F1)

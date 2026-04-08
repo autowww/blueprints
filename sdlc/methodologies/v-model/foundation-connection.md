@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # V-Model — connection to the SDLC foundation
 
 The V-Model pairs each development level with a corresponding test level, creating **bidirectional traceability** between what is specified and how it is verified. The blueprint's **A–F** phases still apply; the V-Model adds **formal verification structure** and **test-level pairing**.

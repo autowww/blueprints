@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Forge `forge.config.yaml` ↔ `.cursor/rules/` alignment
 
 **Quickstart (one screen):** [`CURSOR-RULES-QUICKSTART.md`](CURSOR-RULES-QUICKSTART.md)

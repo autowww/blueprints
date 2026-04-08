@@ -2,7 +2,11 @@
 slug: methodology-safe
 tier: 201
 lens: methodology
-nav_section: "Methodology Comparisons"
+nav_section: Methodology Comparisons
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
 ---
 
 # SAFe (Scaled Agile Framework)

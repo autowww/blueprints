@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Retro Record — <team> — <iteration id> — <YYYY-MM-DD>
 
 Copy to the project’s retro log location (e.g. `docs/retro/`, wiki, or ticket). **Canonical loop:** [`../../methodologies/forge/ceremonies-prescriptive.md`](../../methodologies/forge/ceremonies-prescriptive.md) § “From retro to directives”.

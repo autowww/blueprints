@@ -2,7 +2,11 @@
 slug: agentic-coding-standards
 tier: 201
 lens: methodology
-nav_section: "Agentic Engineering"
+nav_section: Agentic Engineering
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
 ---
 
 # Agentic coding standards (cross-cutting)
@@ -76,7 +80,7 @@ Forge teams additionally align sessions and logs with [`forge/versona/VERSONA-FR
 3. **Structured discipline pass** — optional **§5-shaped** reviews via Engineering-family **Versonas** (e.g. Software Engineering, Security, Testing) — see [`forge/versona/catalog/discipline/engineering/versona-se.mdc.template`](forge/versona/catalog/discipline/engineering/versona-se.mdc.template) and [`forge/versona/VERSONA-CONTRACT.md`](forge/versona/VERSONA-CONTRACT.md).  
 4. **Human decision** — merge, request changes, or escalate; record material trade-offs in **Ember Log** or ADRs when Forge or your process requires it.
 
-**IDE:** teams may install the blueprint **Cursor skill** [`templates/forge/cursor-skills/run-engineering-ai-code-review/`](../templates/forge/cursor-skills/run-engineering-ai-code-review/SKILL.md). **CI / container:** optional template recipe [`agents/templates/recipe/llm-diff-review/`](../../agents/templates/recipe/llm-diff-review/README.md) (copy to `agents/recipes/` per [`agents/ORCHESTRATION.md`](../../agents/ORCHESTRATION.md)).
+**IDE:** teams may install the blueprint **Cursor skill** from [run-engineering-ai-code-review/SKILL.md on GitHub](https://github.com/autowww/blueprints/blob/main/sdlc/templates/forge/cursor-skills/run-engineering-ai-code-review/SKILL.md). **CI / container:** optional template recipe [`agents/templates/recipe/llm-diff-review/`](../../agents/templates/recipe/llm-diff-review/README.md) (copy to `agents/recipes/` per [`agents/ORCHESTRATION.md`](../../agents/ORCHESTRATION.md)).
 
 ---
 

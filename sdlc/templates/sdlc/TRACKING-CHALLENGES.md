@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Tracking challenges (separate from the foundation)
 
 **Purpose:** document what is *hard*, misleading, or politically sensitive about engineering tracking — without bloating [`TRACKING-FOUNDATION.md`](TRACKING-FOUNDATION.md). The foundation stays small; this file holds the nuance.

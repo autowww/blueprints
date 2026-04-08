@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Product bootstrap flow — from zero to first Charge
 
 This document describes the step-by-step process for bootstrapping a new product through dialog using the Forge Product Manager agent. Each step produces a concrete artifact seeded from blueprint templates.

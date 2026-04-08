@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Scrum — roles (prescriptive)
 
 Normative terms: [**Scrum Guide**](https://scrumguides.org/scrum-guide.html). This page adds **blueprint** expectations: archetypes, event participation, and RACI-style clarity.

@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Forge & planning — naming reference
 
 Quick map of **terms**, **plain meaning**, and **where each is defined** in this blueprint (`blueprints/` repo). Paths are repo-relative from the **blueprints** root.

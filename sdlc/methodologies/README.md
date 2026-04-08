@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Methodology guides (blueprint)
 
 **Purpose:** Deeper, **product-agnostic** guides than the short tables in [`SDLC.md`](../SDLC.md) or project [`TRACKING-METHODOLOGIES.md`](../../../sdlc/TRACKING-METHODOLOGIES.md) (in a consuming repo's `sdlc/`). Each file explains the methodology on its own terms, links to **authoritative external** material, and states how it **fits** an **agentic** workflow (humans + automation + optional coding agents) and the **engineering-tracking foundation** (contributor → events → work units).

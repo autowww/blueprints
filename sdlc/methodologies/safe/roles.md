@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # SAFe — roles
 
 **Purpose:** Define SAFe role accountabilities at **team** and **program** levels, map them to blueprint [archetypes](../roles-archetypes.md), and clarify participation in SAFe events.

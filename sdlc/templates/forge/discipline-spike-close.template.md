@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Discipline exploration spike — close record
 
 Save as `outputs/SPIKE-CLOSE.md` under the session folder. Normative guide: [`../../methodologies/forge/versona/DISCIPLINE-SPIKE.md`](../../methodologies/forge/versona/DISCIPLINE-SPIKE.md).
