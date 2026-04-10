@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Agents blueprint (automation)
 
 This folder is a **reusable, product-agnostic** package for **engineering automation**: **foundational Docker images**, **Compose patterns**, and **templates** for isolated, repeatable jobs (shell scripts, browser runners, optional LLM tool loops). It is the **execution layer** for work that fits the repo’s **agentic** and **CI** policies — not the place for SDLC process prose (see **`blueprints/sdlc/`**, including [**`methodologies/agentic-sdlc.md`**](../sdlc/methodologies/agentic-sdlc.md)) or product functional specs (see **`blueprints/product/`**).
@@ -27,7 +34,7 @@ This folder is a **reusable, product-agnostic** package for **engineering automa
 3. New recipes: follow [**`ORCHESTRATION.md`**](ORCHESTRATION.md); scaffold with **`./blueprints/agents/scripts/new-agent-recipe.sh <name> [--purpose "..."]`**.  
 4. From **`docs/INDEX.md`** (or root `README.md`) and **`blueprints/sdlc/README.md`**, link to **`blueprints/agents/README.md`**.  
 5. **Handbook (browser):** generated under **`blueprints/website/`** (e.g. `agents--index.html`) by **`generator/build-handbook.py`**; canonical Markdown: [`STRUCTURE.md`](STRUCTURE.md), [`DOCUMENTATION-STRUCTURE.md`](../sdlc/DOCUMENTATION-STRUCTURE.md).  
-6. **Build** the base image: `docker compose -f blueprints/agents/docker/compose.yaml build` (from repo root).
+6. **Build** images: `docker compose -f blueprints/agents/docker/compose.yaml build` (from repo root) for **`agent-base`**; add **`agent-playwright`** when running browser/Electron jobs in Linux containers ([`docker/README.md`](docker/README.md)).
 
 ---
 

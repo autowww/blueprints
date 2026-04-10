@@ -1,0 +1,33 @@
+import path from "path";
+import { test, expect } from "@playwright/test";
+import { _electron as electron } from "@playwright/test";
+
+/**
+ * Electron starter: set appDir to the folder that contains package.json with "main"
+ * and Electron scripts (often the same directory as this e2e/ folder's parent).
+ *
+ * Launch often needs --no-sandbox on Linux CI. Pass env your app requires
+ * (e.g. workspace root, feature flags).
+ */
+const appDir = path.join(__dirname, "..");
+
+test.describe("example electron", () => {
+  test("opens a window", async () => {
+    const electronApp = await electron.launch({
+      cwd: appDir,
+      args: [".", "--no-sandbox"],
+      env: {
+        ...process.env,
+        // Example: force workspace for non-interactive runs
+        // LENSES_WORKSPACE_ROOT: process.env.LENSES_WORKSPACE_ROOT ?? appDir,
+      },
+    });
+    try {
+      const window = await electronApp.firstWindow({ timeout: 120_000 });
+      await window.waitForLoadState("domcontentloaded");
+      await expect(window).toBeTruthy();
+    } finally {
+      await electronApp.close();
+    }
+  });
+});

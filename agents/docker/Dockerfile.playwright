@@ -1,0 +1,22 @@
+# Playwright-capable automation image — Chromium OS dependencies for browser / Electron CI.
+# Does not include your app; mount the repo at /work and run npm/playwright from there.
+# Build: docker compose -f blueprints/agents/docker/compose.yaml build agent-playwright
+#
+# Pin PW_VERSION to match @playwright/test in the consuming package when debugging version skew.
+
+FROM node:20-bookworm-slim
+
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends \
+    ca-certificates \
+    curl \
+    git \
+    jq \
+  && rm -rf /var/lib/apt/lists/*
+
+ARG PW_VERSION=1.50.0
+RUN npx --yes playwright@${PW_VERSION} install-deps chromium
+
+WORKDIR /work
+
+ENV NODE_ENV=development

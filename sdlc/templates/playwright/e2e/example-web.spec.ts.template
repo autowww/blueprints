@@ -1,0 +1,13 @@
+import { test, expect } from "@playwright/test";
+
+/**
+ * Web E2E starter: set baseURL in playwright.config.ts, then use relative paths.
+ * Remove this file if the project is Electron-only.
+ */
+test.describe("example web", () => {
+  test("homepage responds", async ({ page }) => {
+    // await page.goto("/");
+    // await expect(page).toHaveTitle(/./);
+    test.skip(true, "Set baseURL in playwright.config.ts and implement navigation.");
+  });
+});

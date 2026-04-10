@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Testing & quality assurance
 
 Reusable, **project-agnostic** blueprint for **testing** — the discipline of verifying that software behaves correctly, meets requirements, and is fit for purpose. Grounded in the [ISTQB](https://www.istqb.org/) body of knowledge, adapted for teams already using [`blueprints/sdlc/`](../../../sdlc/README.md) and [`blueprints/pdlc/`](../../../pdlc/README.md).
@@ -8,6 +15,7 @@ Testing answers **"is the software correct, reliable, and fit for purpose?"** �
 |----------|---------|
 | [**APPROACHES.md**](APPROACHES.md) | ISTQB-aligned vocabulary (test levels, test types, test design techniques); modern test pyramid; strategies (shift-left, TDD, BDD, contract testing, visual testing, AI-augmented testing); SDLC phase mapping; ISTQB certification landscape |
 | [**AUTOMATION-LANDSCAPE.md**](AUTOMATION-LANDSCAPE.md) | Test automation framework taxonomy (web/E2E, mobile, API/contract, BDD runners, AI-augmented); per-framework profiles; selection decision matrix; cloud infrastructure and device farms |
+| [**PLAYWRIGHT-INFRASTRUCTURE.md**](PLAYWRIGHT-INFRASTRUCTURE.md) | Playwright templates, bootstrap scripts, workspace runner, and optional agents recipe — submodule path `blueprints/sdlc/templates/playwright/` |
 | [**TESTING-SDLC-PDLC-BRIDGE.md**](TESTING-SDLC-PDLC-BRIDGE.md) | How testing maps across SDLC phases A–F and PDLC phases P1–P6 — role mapping, artifact flow, calibration, anti-patterns |
 
 ## Relationship to other packages

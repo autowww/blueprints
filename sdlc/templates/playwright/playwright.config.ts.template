@@ -1,0 +1,28 @@
+import { defineConfig, devices } from "@playwright/test";
+
+/**
+ * Copy to repository root as playwright.config.ts and adjust:
+ * - testDir, baseURL (web)
+ * - timeouts for slow Electron / backend startup
+ */
+export default defineConfig({
+  testDir: "e2e",
+  fullyParallel: true,
+  forbidOnly: !!process.env.CI,
+  retries: process.env.CI ? 2 : 0,
+  workers: process.env.CI ? 1 : undefined,
+  reporter: process.env.CI ? [["html", { open: "never" }], ["list"]] : "list",
+  use: {
+    trace: "on-first-retry",
+    screenshot: "only-on-failure",
+  },
+  projects: [
+    {
+      name: "chromium",
+      use: { ...devices["Desktop Chrome"] },
+    },
+  ],
+  /* Web apps: set baseURL and use page.goto("/path")
+  use: { baseURL: "http://127.0.0.1:3000" },
+  */
+});

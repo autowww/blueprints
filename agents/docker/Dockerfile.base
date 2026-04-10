@@ -13,7 +13,7 @@ RUN apt-get update \
 
 WORKDIR /work
 
-# Optional: Chromium system deps for Playwright (uncomment after adding playwright to a recipe)
-# RUN npx --yes playwright@1.49.1 install-deps chromium
+# For Playwright (browser/Electron deps), use docker/Dockerfile.playwright and service agent-playwright
+# in compose.yaml instead of bloating this default image.
 
 ENV NODE_ENV=production

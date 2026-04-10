@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Test automation frameworks — making sense of the landscape
 
 **Purpose:** Provide a clear mental model for anyone selecting test automation tools. This document explains what each framework *is*, where it fits in the test pyramid, and how to choose between alternatives. It is the **tooling companion** to [`APPROACHES.md`](APPROACHES.md) (which covers testing *strategies* independent of tools).
@@ -79,10 +86,13 @@ Every test automation framework fits into one of four tiers, aligned with the la
 
 | Framework | Platforms | Notes |
 |-----------|----------|-------|
+| **Playwright (Electron)** | Linux, macOS, Windows (Chromium-based Electron shells) | Prefer for **Electron** apps: launch the real binary, drive renderer windows, screenshots and traces via `@playwright/test`. Blueprint templates and scripts: [`PLAYWRIGHT-INFRASTRUCTURE.md`](PLAYWRIGHT-INFRASTRUCTURE.md). |
 | **WinAppDriver** | Windows (UWP, WPF, WinForms, Win32) | Microsoft's open-source Appium-compatible driver. |
 | **Telerik Test Studio** | Windows desktop + web | Commercial; codeless + coded modes. |
 | **Ranorex** | Windows desktop + web + mobile | Commercial; enterprise focus; cross-platform. |
 | **TestComplete** | Windows desktop + web + mobile | SmartBear; enterprise; supports many app technologies. |
+
+**Electron note:** Treat **Playwright + Electron** as the default E2E path for desktop products built as a Chromium shell (same engine family as Tier 3 web Playwright). Use **WinAppDriver** / **Appium** when the UI is truly native outside embedded web.
 
 Desktop testing frameworks are niche — include in your test plan only when your product has desktop components.
 

@@ -9,3 +9,11 @@ services:
     image: agents-blueprint-base:local
     # Example run (override in agents/compose.override.yaml):
     # docker compose run --rm -v "$PWD:/work:ro" -v "$PWD/agents/workspaces:/workspaces" agent-base bash agents/recipes/example/run.sh
+
+  agent-playwright:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.playwright
+    image: agents-blueprint-playwright:local
+    # Example: docker compose run --rm -v "$PWD:/work" -e PLAYWRIGHT_PACKAGE_DIR=desktop agent-playwright \
+    #   bash -lc 'agents/recipes/playwright-e2e/run.sh'

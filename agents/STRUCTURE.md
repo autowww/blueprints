@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Agents blueprint — structure & layers
 
 This document is the **canonical Markdown** for the **agents & automation** blueprint (containerized recipes and workspace layout). **Browser handbook** pages are generated from blueprint Markdown by **`blueprints/generator/build-handbook.py`** into **`blueprints/website/`** (for example `agents--index.html`); CI keeps them current — edit this file and related Markdown, not the HTML.
@@ -33,6 +40,8 @@ This blueprint does **not** mandate a particular LLM vendor or multi-agent frame
 
 **Optional AI-assisted diff review:** a **frozen template** lives at [`templates/recipe/llm-diff-review/`](templates/recipe/llm-diff-review/README.md) — copy into `agents/recipes/` and call an OpenAI-compatible HTTP API with **`curl` + `jq`** (no extra runtime in the default base image). Align prompts and governance with [`blueprints/sdlc/methodologies/agentic-coding-standards.md`](../sdlc/methodologies/agentic-coding-standards.md).
 
+**Optional Playwright E2E:** [`templates/recipe/playwright-e2e/`](templates/recipe/playwright-e2e/README.md) with image [`docker/Dockerfile.playwright`](docker/Dockerfile.playwright); SDLC templates and docs in [`blueprints/sdlc/templates/playwright/`](../sdlc/templates/playwright/) and [`blueprints/disciplines/engineering/testing/PLAYWRIGHT-INFRASTRUCTURE.md`](../disciplines/engineering/testing/PLAYWRIGHT-INFRASTRUCTURE.md).
+
 ---
 
 ## 3. Directory layout (frozen vs mutable)
@@ -46,12 +55,14 @@ blueprints/agents/
   STRUCTURE.md
   docker/
     Dockerfile.base
+    Dockerfile.playwright
     compose.yaml
     .dockerignore
     README.md
   templates/
     recipe/
       llm-diff-review/   # optional template: diff → LLM Markdown (see README)
+      playwright-e2e/    # optional template: npm + Playwright in Docker (see README)
     project-agents/
   scripts/
     README.md
@@ -166,7 +177,7 @@ Creates **`agents/recipes/<name>/README.md`** and **`run.sh`** from [`templates/
 
 ## 10. Handbook alignment
 
-When you change this file or [`README.md`](README.md), run **`python3 generator/build-handbook.py agents`** from **`blueprints/`** (or rely on CI) so **`website/agents--*.html`** stays current. See [`docs/MAINTENANCE.md`](docs/MAINTENANCE.md) and [`../docs/MAINTENANCE.md`](../docs/MAINTENANCE.md).
+When you change this file or [`README.md`](README.md), run **`python3 generator/build-handbook.py agents`** from **`blueprints/`** (or rely on CI) so **`website/agents--*.html`** stays current. See [`docs/MAINTENANCE.md`](docs/MAINTENANCE.md) and [Maintaining the documentation (repo-wide)](https://github.com/autowww/blueprints/blob/main/docs/MAINTENANCE.md).
 
 ---
 
