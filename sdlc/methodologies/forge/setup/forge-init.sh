@@ -43,7 +43,10 @@ create_dir "forge"
 create_dir "forge/journal"
 create_dir "forge/releases"
 create_dir "forge/charge-archive"
+create_dir "forge/evidence"
 create_dir "ember-logs"
+create_dir "forge-logs"
+create_dir "forge-logs/versona-track"
 
 TEMPLATE_DIR="${SCRIPT_DIR}"
 DAILY_DIR="${SCRIPT_DIR}/../daily"
@@ -54,7 +57,7 @@ copy_template "${TEMPLATE_DIR}/forge.config.template.yaml" "forge/forge.config.y
 
 echo ""
 echo "Creating .gitkeep files for empty directories..."
-for dir in forge/journal forge/releases forge/charge-archive ember-logs; do
+for dir in forge/journal forge/releases forge/charge-archive forge/evidence ember-logs forge-logs forge-logs/versona-track; do
   if [[ ! "$(ls -A "$dir" 2>/dev/null)" ]]; then
     touch "${dir}/.gitkeep"
   fi
@@ -73,7 +76,12 @@ echo "  YAML-only (no preset): bash blueprints/sdlc/methodologies/forge/setup/sy
 echo "  Compare / status: bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh diff --preset recommended"
 echo "    bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh status --preset recommended"
 echo "  Manual copy still allowed — see CURSOR-RULES-QUICKSTART.md and CURSOR-RULES-ALIGNMENT.md"
-echo "  Example tasklets + Sampling Versona: bash blueprints/sdlc/methodologies/forge/tasklets/install-tasklets.sh"
+echo "  Optional adoption manifest (Skills/tasklets/recipes pointers): add --write-adoption-manifest to sync (see CURSOR-RULES-ALIGNMENT.md)"
+echo "  Tasklets (cognition .mdc): bash blueprints/sdlc/methodologies/forge/tasklets/install-tasklets.sh"
+echo "  (Recommended preset already installs versona-sampling.mdc; tasklets add forge-tasklet-*.mdc.)"
+echo "  Optional — semver + CHANGELOG post-commit hook (manifest .forge/version-release.json):"
+echo "    bash blueprints/sdlc/methodologies/forge/setup/install-version-release-hook.sh"
+echo "    Policy: blueprints/sdlc/methodologies/forge/setup/VERSIONING-AND-RELEASES.md"
 
 echo ""
 echo "=== Forge workspace initialized ==="
@@ -82,8 +90,12 @@ echo "Next steps:"
 echo "  1. Edit forge/forge.config.yaml to match your team"
 echo "  2. bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh sync --preset recommended"
 echo "  3. bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh check"
+echo "  3b. (Optional) bash blueprints/sdlc/methodologies/forge/setup/install-version-release-hook.sh"
 echo "  4. Run your first Refinement: turn Ore into Ingots"
 echo "  5. Run your first Planning: decompose Ingots into Sparks"
 echo "  6. Start your first Charge: ./blueprints/sdlc/methodologies/forge/scripts/forge-charge.sh new"
 echo ""
 echo "See: blueprints/sdlc/methodologies/forge/setup/QUESTIONNAIRE.md"
+echo "Artifact layout (specs, ADRs, sessions, evidence): blueprints/sdlc/methodologies/forge/versona/ARTIFACT-CONTRACTS.md"
+echo "Process-first migration + verification: blueprints/sdlc/methodologies/forge/setup/VERSONA-PROCESS-MODEL-MIGRATION.md"
+echo "  … and blueprints/sdlc/methodologies/forge/setup/VERSONA-VERIFICATION.md"

@@ -22,7 +22,11 @@ All Versona rules inherit these expectations. **Kind-specific** instructions (di
 
 **Structured output:** **Discipline** Versonas are **virtual personas** for one professional lens. Activities include advice, drafting, handoffs, and—when the team uses it—the normative **§5** report shape in `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5. See `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §1–2. Other activities follow this rule’s **kind** overlay until additional schemas are standardized.
 
+**Reusable capabilities:** Prefer Cursor **Skills** under `blueprints/sdlc/templates/forge/cursor-skills/` (session, standards, handoff, merge, evidence, diagrams) per `blueprints/sdlc/methodologies/forge/versona/VERSONA-SKILL-MATRIX.md` instead of duplicating long procedural prose in this rule.
+
 **Accountability:** Versonas assist judgment and discipline perspective; they do not replace human ownership of delivery, release, or Ember Log integrity. See `blueprints/sdlc/methodologies/forge/roles.md` and `blueprints/sdlc/methodologies/agentic-sdlc.md`.
+
+**Standards resolution:** When controls, policies, or evidence obligations matter, apply the stack in `blueprints/sdlc/methodologies/forge/standards/precedence.md` (L1 external/legal/customer **down to** L6 generic heuristics). Prefer **references** to consuming-repo registries (for example `forge/standards-registry.yaml`), **Cursor Team Rules**, and **Skills** over pasting large catalogs. See `blueprints/sdlc/methodologies/forge/standards/VERSONA-STANDARDS-MATRIX.md` for this rule’s **standards profile**. For **§5** structured output, include **Standards traceability** per `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5.1 when material (omit the section or mark **N/A** when not in scope).
 
 ### Kind overlay (workflow)
 
@@ -36,8 +40,28 @@ After this baseline, this rule is **not** a discipline gate—produce the setup 
 - **Discipline:** Project bootstrap / repo layout with Forge + blueprints
 - **Family:** Cross-cutting (methodology onboarding — not a substitute for discipline Versonas)
 - **Core question:** What is present or missing for a correct consuming-repo layout, and what exact commands should run next?
-- **Knowledge base:** `blueprints/sdlc/DOCUMENTATION-STRUCTURE.md`, `blueprints/sdlc/methodologies/forge/setup/README.md`, `blueprints/sdlc/SDLc-WORKSPACE.md`, `blueprints/sdlc/methodologies/forge/setup/CURSOR-RULES-ALIGNMENT.md`
+- **Knowledge base:** `blueprints/sdlc/DOCUMENTATION-STRUCTURE.md`, `blueprints/sdlc/methodologies/forge/setup/README.md`, `blueprints/sdlc/SDLc-WORKSPACE.md`, `blueprints/sdlc/methodologies/forge/setup/CURSOR-RULES-ALIGNMENT.md`, `blueprints/sdlc/methodologies/forge/setup/VERSIONING-AND-RELEASES.md`
 - **Bridge:** `blueprints/sdlc/methodologies/forge/process-and-flows.md` (when Forge state applies) — **intensity:** N/A (setup is not a discipline gate)
+
+## Role boundary
+
+- **Workflow** — repo layout, submodule, Cursor rules, optional Skills/tasklets — **not** discipline §5, **not** SDLC phase orchestration (**`versona-forge-sdlc`**).
+
+## Artifact I/O
+
+| Field | Canonical paths (repo-relative) |
+|-------|----------------------------------|
+| **Required inputs** | Repository root layout (inferred paths) |
+| **Optional inputs** | `forge/forge.config.yaml`, `.cursor/rules/` |
+| **Produced outputs** | Setup report (this template’s markdown shape); optional PR/commit checklist |
+| **Canonical storage** | Ephemeral or `forge-logs/versona/.../outputs/setup-report.md` if team logs methodology sessions |
+| **Downstream consumers** | Human runs printed commands; **`versona-cursor-rules-sync`**, **`@forge-setup`**, **`versona-forge-sdlc`** after adoption |
+
+## Standards, trace, Skills
+
+- **Standards:** Org **Cursor Team Rules** / registry may affect which Versonas to install — flag **L2** gaps; no §5.1 block required unless policy material.
+- **Trace:** Ember Log when setup **commits** governance (e.g. waiving a control) — rare.
+- **Skills:** `start-versona-session` (optional); copy Skills from `cursor-skills/` per [`VERSONA-SKILL-MATRIX.md`](../../VERSONA-SKILL-MATRIX.md).
 
 ## Invocation
 
@@ -74,11 +98,13 @@ Infer state from the filesystem (OK = path exists and looks used; Missing = abse
 | 8 | Tasklets + Sampling (optional) | `bash blueprints/sdlc/methodologies/forge/tasklets/install-tasklets.sh` |
 | 9 | Optional Skills | Copy from `blueprints/sdlc/templates/forge/cursor-skills/` into `.cursor/skills/` |
 | 10 | Align config ↔ rules | `bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh check` (needs PyYAML) |
+| 11 | Optional semver + `CHANGELOG` automation | `bash blueprints/sdlc/methodologies/forge/setup/install-version-release-hook.sh` + `.forge/version-release.json` from `blueprints/sdlc/methodologies/forge/setup/templates/version-release.manifest.example.json` — policy `VERSIONING-AND-RELEASES.md` |
 
 ### 3. Handoff
 
 - If **`forge/forge.config.yaml`** is still the seed-only default or **discipline flags** were never chosen: recommend **`@forge-setup`** for interactive configuration.
 - If the user is **greenfield product**: point to `blueprints/sdlc/methodologies/forge/product-manager/product-bootstrap-flow.md` and optional `forge-product-manager.mdc.template`.
+- For ongoing **Forge SDLC phase orchestration** (A–F plans, merge owners, trace): `blueprints/sdlc/methodologies/forge/orchestration/README.md` and **`versona-forge-sdlc`** (install via `sync --preset recommended` or `--with-forge-sdlc`).
 - If the user is running a **discipline exploration spike** that needs stable **roadmap/WBS anchors** but those files are missing: point to `blueprints/sdlc/methodologies/forge/versona/DISCIPLINE-SPIKE.md` §5 and product bootstrap **Steps 6–7** (or `first-charge.template.md` roadmap/WBS Sparks).
 
 ### 4. Scope boundaries

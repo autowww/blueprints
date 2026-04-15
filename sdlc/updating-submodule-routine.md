@@ -44,6 +44,16 @@ If you use nested submodules inside `blueprints/`:
 git submodule update --init --recursive
 ```
 
+## Optional: refresh local Forge installers
+
+Blueprint updates do **not** rewrite `.git/hooks/` in your clone. If you use the **version / release-notes** post-commit hook, reinstall it after meaningful Blueprints pulls so you pick up script fixes:
+
+```bash
+bash blueprints/sdlc/methodologies/forge/setup/install-version-release-hook.sh
+```
+
+See [Versioning and release notes](methodologies/forge/setup/VERSIONING-AND-RELEASES.md).
+
 ## What to do next
 
 - [Validate and test](updating-submodule-validate.md)

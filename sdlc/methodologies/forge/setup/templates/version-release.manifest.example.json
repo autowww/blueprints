@@ -1,0 +1,15 @@
+{
+  "$schema_comment": "Copy to repo root as .forge/version-release.json (no $schema in production file required).",
+  "changelog": "CHANGELOG.md",
+  "watch_path_prefixes": [
+    "src/",
+    "lib/"
+  ],
+  "default_section": "Changed",
+  "version_files": [
+    {
+      "path": "package.json",
+      "kind": "npm"
+    }
+  ]
+}
