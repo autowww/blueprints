@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Post-commit helper: stamp Keep a Changelog [Unreleased] from the latest commit,
-or finalize [Unreleased] into [x.y.z] when a configured semver file bumps.
+Post-commit helper: stamp Keep a Changelog [Unreleased], optionally auto-bump
+PATCH in package.json, and finalize [Unreleased] when MAJOR or MINOR increases.
 
 Invoked from .git/hooks/post-commit with repo root = cwd (git sets this).
 """
@@ -90,11 +90,72 @@ def _semver_tuple(v: str) -> tuple[int, int, int] | None:
         return None
 
 
-def _semver_gt(a: str, b: str) -> bool:
-    ta, tb = _semver_tuple(a), _semver_tuple(b)
-    if ta is None or tb is None:
-        return a != b and a > b
-    return ta > tb
+def _version_change_kind(old_v: str | None, new_v: str | None) -> str | None:
+    """major_minor | patch_only | None (same or not comparable)."""
+    if not old_v or not new_v:
+        return None
+    to, tn = _semver_tuple(old_v), _semver_tuple(new_v)
+    if to is None or tn is None:
+        return None
+    if tn < to:
+        return None
+    if tn[0] > to[0] or tn[1] > to[1]:
+        return "major_minor"
+    if tn[2] > to[2]:
+        return "patch_only"
+    return None
+
+
+def _bump_patch_version(v: str) -> str | None:
+    """Return X.Y.(Z+1) for plain numeric semver; None if prerelease or non-semver."""
+    s = v.strip()
+    if s.lower().startswith("v"):
+        s = s[1:]
+    if "-" in s or "+" in s:
+        return None
+    t = _semver_tuple(v)
+    if t is None:
+        return None
+    return f"{t[0]}.{t[1]}.{t[2] + 1}"
+
+
+def _npm_version_line_changed_in_diff(repo: Path, rel: str) -> bool:
+    """True if HEAD commit touched the package.json version field vs HEAD~1."""
+    r = subprocess.run(
+        ["git", "diff", "HEAD~1", "HEAD", "--", rel],
+        cwd=repo,
+        capture_output=True,
+        text=True,
+    )
+    if r.returncode != 0:
+        return False
+    diff = r.stdout or ""
+    if not diff.strip():
+        return False
+    for line in diff.splitlines():
+        if not line.startswith(("+", "-")) or line.startswith(("+++", "---")):
+            continue
+        if '"version"' in line or "'version'" in line:
+            return True
+    return False
+
+
+def _write_npm_version(repo: Path, rel: str, new_ver: str) -> None:
+    p = repo / rel
+    raw = p.read_text(encoding="utf-8")
+
+    def repl(m: re.Match[str]) -> str:
+        return f"{m.group(1)}{new_ver}{m.group(3)}"
+
+    new_raw, n = re.subn(
+        r'("version"\s*:\s*")([^"\n]+)(")',
+        repl,
+        raw,
+        count=1,
+    )
+    if n != 1:
+        raise ValueError(f"Could not replace single version field in {rel}")
+    p.write_text(new_raw, encoding="utf-8")
 
 
 def _read_npm_version(repo: Path, rel: str) -> str | None:
@@ -132,29 +193,29 @@ def _npm_version_from_blob(blob: str | None) -> str | None:
     return v if isinstance(v, str) else None
 
 
-def _detect_bumped_version(repo: Path, version_files: list[dict[str, Any]]) -> tuple[str, str] | None:
-    """Return (path, new_version) if HEAD bumped semver vs HEAD~1."""
+def _first_npm_version_file(version_files: list[dict[str, Any]]) -> str | None:
+    for spec in version_files:
+        rel = spec.get("path")
+        kind = spec.get("kind")
+        if isinstance(rel, str) and rel and kind == "npm":
+            return rel
+    return None
+
+
+def _head_vs_parent_npm_versions(
+    repo: Path, rel: str
+) -> tuple[str | None, str | None]:
+    """(old_version, new_version) from HEAD~1 and HEAD trees."""
     p = subprocess.run(
         ["git", "rev-parse", "--verify", "HEAD~1"],
         cwd=repo,
         capture_output=True,
     )
     if p.returncode != 0:
-        return None
-
-    for spec in version_files:
-        rel = spec.get("path")
-        kind = spec.get("kind")
-        if not isinstance(rel, str) or not rel:
-            continue
-        if kind != "npm":
-            continue
-        new_v = _read_npm_version(repo, rel)
-        old_blob = _read_file_at_rev(repo, "HEAD~1", rel)
-        old_v = _npm_version_from_blob(old_blob)
-        if new_v and old_v and _semver_gt(new_v, old_v):
-            return rel, new_v
-    return None
+        return None, None
+    new_v = _read_npm_version(repo, rel)
+    old_v = _npm_version_from_blob(_read_file_at_rev(repo, "HEAD~1", rel))
+    return old_v, new_v
 
 
 def _section_from_subject(subject: str, default: str) -> str:
@@ -273,29 +334,68 @@ def post_commit(repo: Path) -> int:
         return 0
 
     text = ch_path.read_text(encoding="utf-8")
-    new_text: str | None = None
+    orig_ch = text
+    new_text = text
 
-    bump = _detect_bumped_version(repo, version_files)
-    if bump:
-        _rel, new_ver = bump
-        if not re.search(rf"^## \[{re.escape(new_ver)}\]", text, re.M):
-            date_str = datetime.now(timezone.utc).date().isoformat()
-            new_text = _finalize_unreleased(text, new_ver, date_str)
-    if new_text is None and prefixes and _paths_match(changed, prefixes):
+    auto_patch = manifest.get("auto_patch")
+    if auto_patch is None:
+        auto_patch = True
+    if not isinstance(auto_patch, bool):
+        auto_patch = True
+
+    rel_npm = _first_npm_version_file(version_files)
+    old_v, new_v = (None, None)
+    if rel_npm:
+        old_v, new_v = _head_vs_parent_npm_versions(repo, rel_npm)
+
+    # Stamp first so the current commit subject rolls into the same release
+    # when a human raises MAJOR/MINOR (finalize runs next).
+    if prefixes and _paths_match(changed, prefixes):
         subject = _commit_subject(repo)
         sec = _section_from_subject(subject, default_section)
-        new_text = _stamp_unreleased(text, subject, sec)
+        stamped = _stamp_unreleased(new_text, subject, sec)
+        if stamped is not None:
+            new_text = stamped
 
-    if not new_text or new_text == text:
+    # Finalize [Unreleased] only when humans raise MAJOR or MINOR vs parent.
+    if rel_npm and old_v and new_v:
+        kind = _version_change_kind(old_v, new_v)
+        if kind == "major_minor" and not re.search(
+            rf"^## \[{re.escape(new_v)}\]", new_text, re.M
+        ):
+            date_str = datetime.now(timezone.utc).date().isoformat()
+            fin = _finalize_unreleased(new_text, new_v, date_str)
+            if fin is not None:
+                new_text = fin
+
+    patch_bumped = False
+    if (
+        auto_patch
+        and rel_npm
+        and (repo / rel_npm).is_file()
+        and prefixes
+        and _paths_match(changed, prefixes)
+        and old_v is not None
+        and not _npm_version_line_changed_in_diff(repo, rel_npm)
+    ):
+        cur = _read_npm_version(repo, rel_npm)
+        nxt = _bump_patch_version(cur) if cur else None
+        if nxt and cur != nxt:
+            _write_npm_version(repo, rel_npm, nxt)
+            patch_bumped = True
+
+    ch_changed = new_text != orig_ch
+    if not ch_changed and not patch_bumped:
         return 0
 
-    ch_path.write_text(new_text, encoding="utf-8")
+    if ch_changed:
+        ch_path.write_text(new_text, encoding="utf-8")
+
     _write_skip(repo)
-    subprocess.run(
-        ["git", "add", changelog_rel],
-        cwd=repo,
-        check=True,
-    )
+    to_add = [changelog_rel] if ch_changed else []
+    if patch_bumped:
+        to_add.append(rel_npm)
+    subprocess.run(["git", "add", *to_add], cwd=repo, check=True)
     subprocess.run(
         ["git", "commit", "--amend", "--no-edit", "--no-verify"],
         cwd=repo,

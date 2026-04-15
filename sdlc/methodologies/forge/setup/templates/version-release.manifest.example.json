@@ -1,5 +1,6 @@
 {
   "$schema_comment": "Copy to repo root as .forge/version-release.json (no $schema in production file required).",
+  "auto_patch": true,
   "changelog": "CHANGELOG.md",
   "watch_path_prefixes": [
     "src/",
