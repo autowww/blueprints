@@ -1,0 +1,37 @@
+---
+description: Forge tasklet — concatenate numbered sections from pasted tasklet/Versona outputs (mechanical merge).
+globs: 
+alwaysApply: false
+---
+
+# Tasklet: merge outputs
+
+## Operation
+
+Merge **two or more** pasted **Tasklet output** or **§5 concern tables** into one Markdown doc: preserve sources, **renumber** concerns, **dedupe** identical lines.
+
+## Output (use exactly this shape)
+
+```markdown
+## Tasklet output: merged
+
+**Sources:** …
+
+### Concerns (merged)
+
+| # | Source | Concern | Severity |
+|---|--------|---------|----------|
+| 1 | … | … | … |
+
+### Duplicates dropped
+- …
+
+### Notes for human merge
+- …
+```
+
+## Rules
+
+- If severities **conflict** for the same concern, take the **higher** severity and note in **Notes**.
+- Max **25** concern rows; overflow → summarize remainder in **Notes**.
+- **Normative** recommendation (Proceed/Rework/…) is **not** set here — use Skill **merge-parallel-versona-results** or the parent Versona.

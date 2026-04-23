@@ -22,7 +22,11 @@ All Versona rules inherit these expectations. **Kind-specific** instructions (di
 
 **Structured output:** **Discipline** Versonas are **virtual personas** for one professional lens. Activities include advice, drafting, handoffs, and—when the team uses it—the normative **§5** report shape in `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5. See `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §1–2. Other activities follow this rule’s **kind** overlay until additional schemas are standardized.
 
+**Reusable capabilities:** Prefer Cursor **Skills** under `blueprints/sdlc/templates/forge/cursor-skills/` (session, standards, handoff, merge, evidence, diagrams) per `blueprints/sdlc/methodologies/forge/versona/VERSONA-SKILL-MATRIX.md` instead of duplicating long procedural prose in this rule.
+
 **Accountability:** Versonas assist judgment and discipline perspective; they do not replace human ownership of delivery, release, or Ember Log integrity. See `blueprints/sdlc/methodologies/forge/roles.md` and `blueprints/sdlc/methodologies/agentic-sdlc.md`.
+
+**Standards resolution:** When controls, policies, or evidence obligations matter, apply the stack in `blueprints/sdlc/methodologies/forge/standards/precedence.md` (L1 external/legal/customer **down to** L6 generic heuristics). Prefer **references** to consuming-repo registries (for example `forge/standards-registry.yaml`), **Cursor Team Rules**, and **Skills** over pasting large catalogs. See `blueprints/sdlc/methodologies/forge/standards/VERSONA-STANDARDS-MATRIX.md` for this rule’s **standards profile**. For **§5** structured output, include **Standards traceability** per `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5.1 when material (omit the section or mark **N/A** when not in scope).
 
 ### Kind overlay (family_aggregator)
 
@@ -36,6 +40,27 @@ After this baseline, run each **relevant** child discipline per [`VERSONA-CONTRA
 When invoked, run §5-shaped passes from **all relevant** engineering disciplines against the current work item (see protocol for skipping non-applicable lenses). Present a consolidated report.
 
 - For **pure craft / code-quality** passes with **no** multi-surface scope, **`versona-se`** alone may suffice—see [`../README.md`](../README.md) §2.
+
+## Orchestration role (normative)
+
+- **Parallel merge coordinator** for **Engineering** domain: runs **multiple** child §5-shaped passes, then **one** consolidated report. Does **not** replace **`versona-all`** (cross-family router) or **`versona-forge-sdlc`** (phase plan).
+
+## Artifact I/O
+
+| Field | Canonical paths (repo-relative) |
+|-------|----------------------------------|
+| **Required inputs** | Work item + implementation context (diff, Spark, paths under `src/` / `docs/architecture/**`) |
+| **Optional inputs** | Recipe logs under `agents/workspaces/**` |
+| **Produced outputs** | Consolidated markdown; per-child sections; optional `outputs/handoff.json` listing each child output path |
+| **Canonical storage** | `forge-logs/versona/<actor>/<session-id>/outputs/` ([`ARTIFACT-CONTRACTS.md`](../../../../ARTIFACT-CONTRACTS.md)) |
+| **Downstream consumers** | **`versona-forge-sdlc`** merge owner; other families; human release owner |
+
+## Standards, trace, merge, evidence
+
+- **Standards:** Merge child **`### Standards traceability`** blocks per [`VERSONA-CONTRACT.md`](../../../../VERSONA-CONTRACT.md) family note; use Skill **`resolve-versona-standards`** if consolidating conflicts.
+- **Trace:** Ember Log when consolidated outcome changes scope/risk; **`record-versona-event`** / **`close-versona-session`** when using session folders.
+- **Merge:** Skill **`merge-parallel-versona-results`**; tasklet **`forge-tasklet-merge-outputs`** for mechanical paste-merge only. When **Security** or **Compliance** child passes exist, **Overall recommendation** must reflect **critical** findings — **no silent downgrade** vs L1–L2.
+- **Evidence:** **`assemble-versona-evidence-pack`** when verify/Assay outputs must be tied together.
 
 ## Disciplines included
 
@@ -51,8 +76,9 @@ When invoked, run §5-shaped passes from **all relevant** engineering discipline
 
 1. Identify which engineering disciplines are **relevant** to the work item (skip disciplines that clearly do not apply — e.g., skip Mobile for a backend-only Spark).
 2. For each relevant discipline, produce output following [`VERSONA-CONTRACT.md`](../../../../VERSONA-CONTRACT.md) output format.
-3. Consolidate into a single report with a summary table of all concerns across disciplines.
-4. Recommend the highest-severity action across all discipline passes.
+3. Consolidate into a single report with a summary table of all concerns across disciplines — **one** **`### Overall recommendation`** (Proceed / Proceed with conditions / Rework / Bank).
+4. Merge **`### Standards traceability`** from children when present; dedupe **evidence requests**.
+5. Optional: write **`outputs/handoff.json`** (schema [`../../../../../schemas/handoff-payload.schema.json`](../../../../../schemas/handoff-payload.schema.json)) for non-Engineering follow-on.
 
 ## Consolidated output format
 
@@ -69,7 +95,16 @@ When invoked, run §5-shaped passes from **all relevant** engineering discipline
 |------------|----------|------------------|----------------|
 
 ### Detail per discipline
-(individual discipline sections)
+(individual discipline sections — each keeps **§5** concern table + optional **Standards traceability**)
+
+### Standards traceability (merged)
+
+- Summarize or union child `standards_*` fields; flag unresolved L1–L2 conflicts for human.
+
+### Handoff
+
+- **Per-child output paths** (for merge audit)
+- **Optional** `outputs/handoff.json`
 
 ### Overall recommendation
 {Proceed / Proceed with conditions / Rework / Bank}

@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://blueprints.forgesdlc.com/schema/forge/handoff-payload.json",
+  "title": "Versona handoff payload",
+  "description": "Machine-readable handoff aligned with VERSONA-FRAMEWORK §3.3; typically outputs/handoff.json.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["summary", "artifact_paths", "created_at"],
+  "properties": {
+    "from_session_id": {
+      "type": "string",
+      "description": "Source session_id."
+    },
+    "to_session_id": {
+      "type": "string",
+      "description": "Target session_id when already created."
+    },
+    "summary": {
+      "type": "string",
+      "description": "What was concluded or reviewed."
+    },
+    "open_concerns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "id": { "type": "string" },
+          "concern": { "type": "string" },
+          "severity": {
+            "type": "string",
+            "enum": ["critical", "significant", "minor"]
+          }
+        }
+      }
+    },
+    "artifact_paths": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Repo-relative paths under outputs/ or agents/workspaces/ the consumer must read."
+    },
+    "recommended_next_actor": {
+      "type": "string",
+      "description": "Versona kind, discipline name, or human gate label."
+    },
+    "top_level_recommendation": {
+      "type": "string",
+      "enum": ["Proceed", "Proceed with conditions", "Rework", "Bank"],
+      "description": "When the handoff carries a §5-style verdict."
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "work_item_refs": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

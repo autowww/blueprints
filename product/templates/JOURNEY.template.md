@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Journey — &lt;name&gt;
 
 **Optional ID:** JRN-001  

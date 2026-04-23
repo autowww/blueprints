@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Project management (PM)
 
 This describes **generic** project management — the discipline of initiating, planning, executing, monitoring, and closing work to achieve specific objectives within constraints of scope, time, cost, quality, resources, and risk.

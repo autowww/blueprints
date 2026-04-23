@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Programming paradigms — index
 
 **Paradigm literacy** helps teams choose structure before frameworks: whether work is naturally **object-shaped**, **function-shaped**, or **stream-shaped**. Paradigms combine in production; the goal is deliberate composition, not purity contests.

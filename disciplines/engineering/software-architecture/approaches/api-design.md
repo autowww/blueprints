@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # API design and integration (blueprint)
 
 API design is a cross-cutting architecture concern — every multi-component system communicates through APIs, and the quality of those APIs determines system evolvability, developer experience, and integration cost.

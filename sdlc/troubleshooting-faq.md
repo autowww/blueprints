@@ -15,7 +15,7 @@ Short answers for **consuming** Blueprints in a repo — not upstream maintainer
 
 ## When to use it
 
-Use this page when something failed during [first hour](quickstarts/first-hour.md), [SETUP](SETUP.md), or a [submodule update](updating-blueprints-submodule.md).
+Use this page when something failed during [first hour](quickstarts/first-hour.md), [Project setup checklist](SETUP.md), or a [submodule update](updating-blueprints-submodule.md).
 
 ## Prerequisites
 
@@ -55,7 +55,7 @@ Most scripts expect the **repository root** (the folder that contains `blueprint
 
 **I edited files under `blueprints/` by mistake**
 
-Stop; see [Policy](POLICY.md). Prefer changes in project `sdlc/`, `docs/`, or `forge/`. Revert local edits to the submodule or reset to the committed SHA, then apply your intent in the project workspace.
+Stop; see [Blueprint policy](POLICY.md). Prefer changes in project `sdlc/`, `docs/`, or `forge/`. Revert local edits to the submodule or reset to the committed SHA, then apply your intent in the project workspace.
 
 ### Forge and Cursor
 

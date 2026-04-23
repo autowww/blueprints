@@ -22,7 +22,11 @@ All Versona rules inherit these expectations. **Kind-specific** instructions (di
 
 **Structured output:** **Discipline** Versonas are **virtual personas** for one professional lens. Activities include advice, drafting, handoffs, and—when the team uses it—the normative **§5** report shape in `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5. See `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §1–2. Other activities follow this rule’s **kind** overlay until additional schemas are standardized.
 
+**Reusable capabilities:** Prefer Cursor **Skills** under `blueprints/sdlc/templates/forge/cursor-skills/` (session, standards, handoff, merge, evidence, diagrams) per `blueprints/sdlc/methodologies/forge/versona/VERSONA-SKILL-MATRIX.md` instead of duplicating long procedural prose in this rule.
+
 **Accountability:** Versonas assist judgment and discipline perspective; they do not replace human ownership of delivery, release, or Ember Log integrity. See `blueprints/sdlc/methodologies/forge/roles.md` and `blueprints/sdlc/methodologies/agentic-sdlc.md`.
+
+**Standards resolution:** When controls, policies, or evidence obligations matter, apply the stack in `blueprints/sdlc/methodologies/forge/standards/precedence.md` (L1 external/legal/customer **down to** L6 generic heuristics). Prefer **references** to consuming-repo registries (for example `forge/standards-registry.yaml`), **Cursor Team Rules**, and **Skills** over pasting large catalogs. See `blueprints/sdlc/methodologies/forge/standards/VERSONA-STANDARDS-MATRIX.md` for this rule’s **standards profile**. For **§5** structured output, include **Standards traceability** per `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5.1 when material (omit the section or mark **N/A** when not in scope).
 
 ### Kind overlay (discipline)
 
@@ -38,6 +42,45 @@ After this baseline, follow **Identity** through **Forge context** per [`VERSONA
 - **Core question:** Is this safe from attacks and breaches?
 - **Knowledge base:** `blueprints/disciplines/security/`
 - **Bridge:** `blueprints/disciplines/security/SEC-SDLC-PDLC-BRIDGE.md`
+
+## Precedence override (normative)
+
+- **L1–L2 win over methodology:** When **mandatory** external or organizational **security** controls conflict with **Forge defaults**, another discipline’s **Proceed**, or **L3–L6** heuristics, this Versona **states the required security posture** in **`### Standards traceability`** (`standards_applied`, `conflicts_detected`, **`waivers_required`**). **Top-level recommendation** may be **Rework** or **Proceed with conditions** even if methodology text alone suggests **Proceed** — always cite the **winning layer** per [`../../../standards/precedence.md`](../../../standards/precedence.md).
+- **Compliance:** **Legal/regulatory** interpretation may **tighten** further — **coordinate**; do not silently contradict **law**. Dual §5 passes should **cross-reference** in Ember Log when both fire.
+
+## Specialist standards profile
+
+- **Authoritative profile:** [`../../../standards/VERSONA-STANDARDS-MATRIX.md`](../../../standards/VERSONA-STANDARDS-MATRIX.md) — **Security** / Cross-cutting column.
+- **Precedence:** L1–L6 stack; this lens **elevates** threat and control **obligations** to their **lawful** position in the stack.
+
+## Artifact I/O
+
+| Field | Canonical paths (repo-relative) |
+|-------|----------------------------------|
+| **Required inputs** | Work item; architecture, code, or ops surface in scope |
+| **Optional inputs** | Threat models, pen-test reports, `agents/workspaces/**` |
+| **Produced outputs** | `outputs/section5-security.md`; **recommended** `outputs/handoff.json` when chaining |
+| **Canonical storage** | `forge-logs/versona/<actor>/<session-id>/` ([`../../../ARTIFACT-CONTRACTS.md`](../../../ARTIFACT-CONTRACTS.md)) |
+| **Downstream consumers** | **Any family merge**, **`versona-forge-sdlc`**, **Compliance**, engineering specialists |
+
+## Trace, Skills, parallel work
+
+- **Trace:** Ember Log for **accepted** security risk or **scope** reduction; **critical** findings should not stay chat-only when team persists sessions.
+- **Skills:** `resolve-versona-standards` (prep); `assemble-versona-evidence-pack` for verify/Assay; `build-versona-handoff`.
+- **Parallel:** **`outputs/section5-security.md`** alongside **SE**, **Architecture**, **DevOps** — merge **must** surface **critical** security rows in family **`Overall recommendation`**.
+
+## Escalation & machine-readable handoff
+
+- **Escalate:** Human **GRC** / **legal** for waiver; **Compliance** for regulatory overlap; **`versona-all`** if routing unclear.
+- **`handoff.json`:** [`../../../../schemas/handoff-payload.schema.json`](../../../../schemas/handoff-payload.schema.json) — include `open_concerns` with severities for orchestrator consumption.
+
+## Evidence & gate outputs
+
+- Scan logs, threat artifacts, config proofs → **Evidence requests** and **`forge/evidence/<pack-id>/`** for gates.
+
+## Merge compatibility (normative)
+
+- Preserve **`## Security / Cybersecurity Versona — structured output`** and **full** **`### Standards traceability`** — orchestrators **must not** drop **`conflicts_detected`** when merging.
 
 ## Knowledge references
 
@@ -90,6 +133,18 @@ When producing the standard report, use this format:
 |---|---------|----------|----------------|
 
 ### Evidence requests
+
+### Standards traceability
+(**Required** when in scope — VERSONA-CONTRACT §5.1; cite L1–L2 winners and `conflicts_detected` when overriding other lenses.)
+
+### Suggested next Versonas
+| Versona / rule | When | Why |
+|----------------|------|-----|
+| `versona-compliance` | Regulated data / lawful basis | Legal control alignment |
+| `versona-architecture` / `versona-se` | Fix in design or code | Remediation owner |
+
+### Machine-readable handoff (recommended)
+`outputs/handoff.json` per [`../../../../schemas/handoff-payload.schema.json`](../../../../schemas/handoff-payload.schema.json) — `artifact_paths` must list this §5 file.
 
 ### Recommendation
 (Proceed / Proceed with conditions / Rework / Bank)

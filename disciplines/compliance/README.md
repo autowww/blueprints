@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Compliance
 
 Reusable, **project-agnostic** blueprint for **Compliance** — the discipline of ensuring digital products meet **regulatory and legal obligations** (privacy, accessibility, sector rules, algorithmic accountability, certifications) through scoping, control design, evidence, and continuous assurance.

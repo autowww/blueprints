@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Embedded / IoT engineering body of knowledge
 
 This document maps the core concerns of **embedded / IoT engineering** — real-time systems, firmware, constrained resources, communication protocols, edge computing, OTA updates, and safety-critical practices — to the blueprint ecosystem.

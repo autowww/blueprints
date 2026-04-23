@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Data science approaches (blueprint)
 
 **Purpose:** Deeper, **project-agnostic** guides for data science methodologies and process frameworks. Each approach describes its structure, phases, and mapping to the lifecycle.

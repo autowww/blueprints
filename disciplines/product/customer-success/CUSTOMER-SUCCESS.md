@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Customer Success — body of knowledge
 
 This document describes **Customer Success** as a discipline: helping customers achieve outcomes with the product, sustaining engagement, and reducing preventable churn — through onboarding, health intelligence, support and self-service, feedback systems, retention plays, expansion, and structured success planning.

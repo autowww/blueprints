@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Mobile platforms (blueprint)
 
 **Purpose:** Platform-specific guidance for mobile development. Each platform guide covers setup, architecture conventions, tooling, and ecosystem-specific best practices.

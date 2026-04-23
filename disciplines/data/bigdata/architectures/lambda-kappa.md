@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Lambda, Kappa & unified data architectures
 
 **Purpose:** Project-agnostic guide to **batch–stream hybrid** and **unified streaming** architectures: how they evolved, how they differ, and how to choose among them — including **lakehouse** as a common unified-storage pattern.

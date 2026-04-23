@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Big data & data engineering body of knowledge
 
 This document maps the core concerns of **data engineering** — data architecture, pipelines, governance, quality, and lifecycle management — to the blueprint ecosystem.

@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # DevOps tooling (blueprint)
 
 **Purpose:** Taxonomy and selection guidance for DevOps tooling categories. Each category describes the problem space, common tools, selection criteria, and trade-offs.

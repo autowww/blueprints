@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # DevOps practices (blueprint)
 
 **Purpose:** Deep, **project-agnostic** guides for core DevOps practices. Each practice describes its principles, implementation patterns, maturity progression, and lifecycle mapping.

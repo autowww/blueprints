@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # PCI-DSS: Payment Card Industry Data Security Standard
 
 **Purpose:** Project-agnostic summary of **PCI DSS** for organizations that store, process, or transmit **cardholder data**. **Not legal advice** or a substitute for the official standard, SAQ selection, or QSA engagement.

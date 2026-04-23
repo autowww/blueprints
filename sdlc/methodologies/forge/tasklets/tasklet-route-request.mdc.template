@@ -1,0 +1,39 @@
+---
+description: Forge tasklet — classify a Versona request and suggest @versona-* rules (routing table output only).
+globs: 
+alwaysApply: false
+---
+
+# Tasklet: route request
+
+## Operation
+
+Given **user goal**, **work item** (Ore/Ingot/Spark or pasted scope), and **phase** (A–F or Spark prefix), output a **routing table** — which Versona(s) to invoke and why. No full §5 pass.
+
+## Output (use exactly this shape)
+
+```markdown
+## Tasklet output: route request
+
+**Goal:** …
+**Work item:** …
+**Phase:** …
+
+| Priority | Invoke | Why (one line) |
+|----------|--------|----------------|
+| 1 | @versona-… | … |
+| 2 | @versona-… | … |
+
+**Defer / out of scope:** …
+```
+
+## Rules
+
+- Prefer **`@versona-all`** or **family** aggregators when **multiple** lenses are plausible; prefer **one** discipline when obvious.
+- Max **4** suggested rules; **do not** run other tasklets here — hand off to the user or meta-Versona.
+- Deep routing policy lives in **Skill** layer and [`versona-all`](../versona/catalog/routing/versona-all.mdc.template); keep this tasklet **mechanical**.
+
+## See also
+
+- Skill: `resolve-versona-standards` when policy surface matters before routing.
+- [`VERSONA-SKILL-MATRIX.md`](../versona/VERSONA-SKILL-MATRIX.md)

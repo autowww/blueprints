@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # PDLC templates
 
 Copy-paste starters for product lifecycle artifacts. Copy into your project's `docs/product/` (or equivalent) and fill in.

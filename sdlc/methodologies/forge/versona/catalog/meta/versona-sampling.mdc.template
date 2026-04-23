@@ -22,7 +22,11 @@ All Versona rules inherit these expectations. **Kind-specific** instructions (di
 
 **Structured output:** **Discipline** Versonas are **virtual personas** for one professional lens. Activities include advice, drafting, handoffs, and—when the team uses it—the normative **§5** report shape in `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5. See `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §1–2. Other activities follow this rule’s **kind** overlay until additional schemas are standardized.
 
+**Reusable capabilities:** Prefer Cursor **Skills** under `blueprints/sdlc/templates/forge/cursor-skills/` (session, standards, handoff, merge, evidence, diagrams) per `blueprints/sdlc/methodologies/forge/versona/VERSONA-SKILL-MATRIX.md` instead of duplicating long procedural prose in this rule.
+
 **Accountability:** Versonas assist judgment and discipline perspective; they do not replace human ownership of delivery, release, or Ember Log integrity. See `blueprints/sdlc/methodologies/forge/roles.md` and `blueprints/sdlc/methodologies/agentic-sdlc.md`.
+
+**Standards resolution:** When controls, policies, or evidence obligations matter, apply the stack in `blueprints/sdlc/methodologies/forge/standards/precedence.md` (L1 external/legal/customer **down to** L6 generic heuristics). Prefer **references** to consuming-repo registries (for example `forge/standards-registry.yaml`), **Cursor Team Rules**, and **Skills** over pasting large catalogs. See `blueprints/sdlc/methodologies/forge/standards/VERSONA-STANDARDS-MATRIX.md` for this rule’s **standards profile**. For **§5** structured output, include **Standards traceability** per `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5.1 when material (omit the section or mark **N/A** when not in scope).
 
 ### Kind overlay (meta)
 
@@ -38,6 +42,26 @@ After this baseline, use the **shortened** output shape in this file; apply base
 - **Core question:** What assumptions, unknowns, and top signals should we see before spending a full Versona pass?
 - **Knowledge base:** `blueprints/sdlc/methodologies/forge/tasklets/README.md`
 - **Bridge:** `blueprints/sdlc/methodologies/forge/process-and-flows.md` (Versona flow) — use **light** intensity only
+
+## Role boundary
+
+- **Meta / demo** — shallow triage only; **not** a gate, **not** a substitute for discipline §5 or **`versona-forge-sdlc`** planning.
+
+## Artifact I/O
+
+| Field | Canonical paths (repo-relative) |
+|-------|----------------------------------|
+| **Required inputs** | Pasted text, file paths, or work item summary |
+| **Optional inputs** | `docs/**` context |
+| **Produced outputs** | Short report (chat or `outputs/sampling-report.md` under session if used) |
+| **Canonical storage** | Ephemeral OK; if persisted → `forge-logs/versona/<actor>/<session-id>/` ([`ARTIFACT-CONTRACTS.md`](../../ARTIFACT-CONTRACTS.md)) |
+| **Downstream consumers** | Human chooses **`versona-all`** or a discipline rule |
+
+## Standards, trace, Skills
+
+- **Standards:** **`### Standards traceability`** only if policy clearly surfaced — else **N/A — demo skim**; full resolution → specialists + **`resolve-versona-standards`**.
+- **Trace:** Ember Log **only** if the user resolves a flagged decision; optional `record-versona-event`.
+- **Skills / tasklets:** Bundled **extract-assumptions**, **list-unknowns**, **quick-triage**; optional **`forge-tasklet-merge-outputs`**, **`merge-parallel-versona-results`** if merging with other pasted passes.
 
 ## Knowledge references
 
@@ -102,6 +126,10 @@ After this baseline, use the **shortened** output shape in this file; apply base
 
 ### Evidence requests
 - …
+
+### Standards traceability
+
+- **N/A — demo skim** unless a control surface clearly applies (then one-line pointer to the right specialist).
 
 ### Recommendation
 (Proceed / Proceed with conditions / Rework / Bank) — **demo scope:** default to **Proceed with conditions** if any **significant** row exists unless the text is empty/trivial

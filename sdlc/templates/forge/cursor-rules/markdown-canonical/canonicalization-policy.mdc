@@ -1,0 +1,32 @@
+---
+description: Before creating a work-item artifact, search canonical markdown for same/similar items; choose exactly one canonicalization action A–G and record it in a ledger.
+globs: docs/**/*,forge/**/*,imports/**/*
+alwaysApply: true
+---
+
+# Canonicalization policy
+
+## Before creating or splitting artifacts
+
+1. **Search** canonical Markdown: `docs/requirements/WBS.md`, `docs/requirements/INDEX.md`, `docs/requirements/TRACEABILITY.md`, milestone/story/task files, `docs/defects/`, `docs/ROADMAP.md`, `forge/charge.md`, `imports/cursor-history/IMPORT-LEDGER.md`.
+2. If overlap exists, choose **exactly one** action:
+
+| ID | Action |
+|----|--------|
+| **A** | Keep existing; deprecate or reject incoming |
+| **B** | Update existing with incoming evidence |
+| **C** | Merge incoming into existing; deprecate incoming |
+| **D** | Keep both; cross-link |
+| **E** | Split into multiple canonical items |
+| **F** | Replace old canonical with new; deprecate old |
+| **G** | Deprecate both; create one consolidated item |
+
+3. **Record** the decision in the most relevant **Markdown** ledger: `docs/requirements/TRACEABILITY.md`, `imports/cursor-history/IMPORT-LEDGER.md`, or defect-local notes — include **action letter**, **target ids**, and **one-line rationale**.
+
+## Initial similarity state (state in ledger when helpful)
+
+Exact duplicate · near duplicate · broader/narrower overlap · related but distinct · conflicting · obsolete · ambiguous.
+
+**Never** bury canonicalization only in chat; it must be **durable** in repo `.md`.
+
+**Blueprint reference:** [`blueprints/sdlc/methodologies/markdown-canonical-workspace-policy.md`](../../../../methodologies/markdown-canonical-workspace-policy.md)

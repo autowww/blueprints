@@ -30,7 +30,7 @@ After every submodule pointer change, before you merge or tag.
 | Submodule points at intended commit | `git -C blueprints rev-parse HEAD` matches upstream tag or branch tip you expect. |
 | Frozen tree present | `test -f blueprints/sdlc/README.md` |
 | Consumer scripts still run | From repo root: `bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh check` (after [Cursor rules install](methodologies/forge/setup/CURSOR-RULES-QUICKSTART.md)) if you use Forge alignment. |
-| CI | Your pipeline still passes; submodule bump can surface new templates — re-run [SETUP](SETUP.md) validation steps if unsure. |
+| CI | Your pipeline still passes; submodule bump can surface new templates — re-run [Project setup checklist](SETUP.md) validation steps if unsure. |
 
 **What could break:** new templates under `blueprints/` can require re-running Cursor rule sync or copying updated templates — not automatic. Treat a bump like a small dependency upgrade.
 

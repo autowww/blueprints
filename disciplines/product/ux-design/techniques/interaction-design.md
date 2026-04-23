@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Interaction design patterns and principles
 
 **Purpose:** Project-agnostic guidance for designing **how** users accomplish goals — predictable behavior, clear feedback, and patterns that scale across platforms and design systems.

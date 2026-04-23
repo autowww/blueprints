@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # PDLC ↔ SDLC bridge
 
 ## Purpose
@@ -13,7 +20,7 @@ Both are necessary. Neither is sufficient alone. This bridge explains how they r
 
 **Forge methodology bridge (same facts, Forge naming):** [`../sdlc/methodologies/forge/FORGE-SDLC-PDLC-BRIDGE.md`](../sdlc/methodologies/forge/FORGE-SDLC-PDLC-BRIDGE.md) — Ore/Spark/Charge and Forge meetings mapped to PDLC ↔ SDLC.
 
-**Seven-phase benchmark map:** [`PDLC.md`](PDLC.md#benchmark-map-seven-phase-reference) compares Forge **P1–P6** and nested **SDLC A–F** to a common **seven-stage** industry *reference* pattern (not Forge’s operational phase set).
+**Seven-phase benchmark map:** [`PDLC.md`](PDLC.md#benchmark-map-seven-phase-reference) compares Forge **P1–P6** and nested **SDLC** phases (reader-facing names in [`SDLC.md`](../sdlc/SDLC.md); **A–F** as shorthand in the map and tables) to a common **seven-stage** industry *reference* pattern (not Forge’s operational phase set).
 
 ### Simple mental model
 
@@ -30,7 +37,7 @@ Real-world usage and learning connect both: PDLC sets direction; SDLC produces w
 
 | Section | Contents |
 |---------|----------|
-| [Benchmark map](PDLC.md#benchmark-map-seven-phase-reference) (same package) | Seven-phase *reference* pattern ↔ Forge P1–P6 + SDLC; terminology cautions |
+| [Benchmark map](PDLC.md#benchmark-map-seven-phase-reference) (same package) | Seven-phase *reference* pattern ↔ Forge P1–P6 + SDLC (reader-facing names vs **A–F** shorthand per [`SDLC.md`](../sdlc/SDLC.md)); terminology cautions |
 | [1. The core distinction](#1-the-core-distinction) | Side-by-side comparison, plain-language table, generic phase labels, failure modes |
 | [2. Phase alignment](#2-phase-alignment) | Plain-text loop diagram, PDLC P1–P6 ↔ SDLC A–F, convergence practices, shared gates, eight-step integrated view |
 | [3. Role mapping](#3-role-mapping) | Who owns what across both lifecycles |
@@ -85,7 +92,7 @@ Same idea as the table above, phrased for **meetings and onboarding** (not a sec
 
 ### Generic phase labels (industry language → Forge)
 
-Teams use different labels for phases. **Forge’s canonical names** remain P1–P6 and SDLC A–F ([`PDLC.md`](PDLC.md), [`SDLC.md`](../sdlc/SDLC.md)). Use this map when you hear generic wording:
+Teams use different labels for phases. **PDLC** operational phases remain **P1–P6** ([`PDLC.md`](PDLC.md)). **SDLC** **reader-facing** names are **Discover / Prioritize → Specify → Design → Build → Verify → Release**; **A–F** are optional **shorthand** for bridges, methodology cross-maps, and the tables below ([`SDLC.md`](../sdlc/SDLC.md)) — not the primary vocabulary on the SDLC page. Use this map when you hear generic wording:
 
 | Often-heard PDLC-style phases | Maps to Forge PDLC |
 |------------------------------|-------------------|

@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Blueprint policy — do not change casually
 
 This directory **`blueprints/disciplines/product/ba/`** is the **frozen** BA package: business analysis knowledge areas, techniques, and templates meant to be **reused and compared** across projects.

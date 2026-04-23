@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Feature engineering & feature stores
 
 **Purpose:** Project-agnostic reference for turning **raw data** into **model inputs** — encodings, scaling, temporal and text features, selection, and **feature store** architecture for train/serve consistency.

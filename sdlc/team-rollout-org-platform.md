@@ -11,7 +11,7 @@ learning_level: reference
 
 ## What it is
 
-Enablement- or architecture-led rollout: **playbook** for new repos, **governance** for [Policy](POLICY.md) exceptions, and leadership messaging when needed.
+Enablement- or architecture-led rollout: **playbook** for new repos, **governance** for [Blueprint policy](POLICY.md) exceptions, and leadership messaging when needed.
 
 **Parent page:** [Team rollout patterns](team-rollout.md).
 
@@ -27,7 +27,7 @@ Many products must pin the same upstream and leadership needs visibility.
 
 | Aspect | Guidance |
 |--------|----------|
-| **Playbook** | How new repos get `blueprints/`, `sdlc/`, Forge, and Cursor alignment — link to [SETUP](SETUP.md). |
+| **Playbook** | How new repos get `blueprints/`, `sdlc/`, Forge, and Cursor alignment — link to [Project setup checklist](SETUP.md). |
 | **Governance** | Who approves exceptions to frozen baseline rules; how long they stay open. |
 | **Leadership** | Category and MVP narrative for executives — use [Adopting Blueprints — Path C](adopting-blueprints-path-c.md) (step 3) when you need a stakeholder-facing line into that material. |
 
@@ -58,7 +58,7 @@ Many products must pin the same upstream and leadership needs visibility.
 | | |
 |--|--|
 | **Starting situation** | A new division spins up ten greenfield services over a year. |
-| **Action taken** | Platform publishes the consumer playbook once; each service follows [SETUP](SETUP.md) and the same bump cadence. |
+| **Action taken** | Platform publishes the consumer playbook once; each service follows [Project setup checklist](SETUP.md) and the same bump cadence. |
 | **Expected result** | Services share vocabulary; leadership sees one story, not ten variants. |
 | **What to check** | Architecture review references the same [Team rollout patterns](team-rollout.md) vocabulary. |
 

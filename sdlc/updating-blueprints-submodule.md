@@ -41,5 +41,5 @@ alt: Submodule update lifecycle — routine bump, validate and test, then recove
 
 ## What to do next
 
-- [Policy](POLICY.md) — when you may change files under `blueprints/` vs project space.
+- [Blueprint policy](POLICY.md) — when you may change files under `blueprints/` vs project space.
 - [Troubleshooting / FAQ](troubleshooting-faq.md) — common submodule and path issues.

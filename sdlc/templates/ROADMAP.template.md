@@ -8,7 +8,7 @@ learning_level: reference
 # Roadmap — {project name}
 
 **Optional** high-level view: milestones, epics, rough **% complete**.  
-**Authoritative** story/backlog status usually lives in a **work breakdown** (e.g. `docs/requirements/WBS.csv`) or your tracker—keep this file in sync or replace it with a link in `docs/PROJECT.md`.
+**Authoritative** story/backlog status usually lives in a **work breakdown** (`docs/requirements/WBS.md`) or your tracker—keep this file in sync or replace it with a link in `docs/PROJECT.md`.
 
 ## Milestones
 

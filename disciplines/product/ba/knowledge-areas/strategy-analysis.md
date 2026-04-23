@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Strategy Analysis
 
 Defines the **business need**, understands the **current state**, envisions the **future state**, and recommends a **change strategy** and **solution scope**. This is the knowledge area most closely aligned with PDLC phases P1–P3.

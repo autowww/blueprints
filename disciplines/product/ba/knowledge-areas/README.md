@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # BA knowledge areas (blueprint)
 
 **Purpose:** Deep, **project-agnostic** guides for each BABOK knowledge area. Each file explains the knowledge area on its own terms, lists its tasks and techniques, and maps to PDLC phases P1–P6 and SDLC phases A–F.

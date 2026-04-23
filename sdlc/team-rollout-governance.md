@@ -25,13 +25,13 @@ Whenever more than a one-off email is needed to keep adoption healthy.
 |------|------------|
 | Tech lead / chapter | Brings recurring questions from teams |
 | Platform owner | Owns golden SHA and bump comms |
-| Enablement | Runs office hours and links to [SETUP](SETUP.md) verify steps |
+| Enablement | Runs office hours and links to [Project setup checklist](SETUP.md) verify steps |
 
 ## Phased rollout
 
 | Phase | Focus | Success signal |
 |-------|---------|----------------|
-| **Pilot** | One anchor repo + one squad | [SETUP](SETUP.md) verify steps pass without one-off forks |
+| **Pilot** | One anchor repo + one squad | [Project setup checklist](SETUP.md) verify steps pass without one-off forks |
 | **Expand** | Additional repos copy pin + scripts | Teams can state where baseline vs project text lives |
 | **Standardize** | Golden SHA + office hours | New services reach parity without custom `blueprints/` edits |
 
@@ -48,7 +48,7 @@ expand: true
 
 ## Office hours
 
-Short weekly slot for `forge-init`, Cursor rule sync, and “frozen vs project `sdlc/`” questions ([POLICY.md](POLICY.md)).
+Short weekly slot for `forge-init`, Cursor rule sync, and “frozen vs project `sdlc/`” questions ([Blueprint policy](POLICY.md)).
 
 ## Risks and mitigations
 

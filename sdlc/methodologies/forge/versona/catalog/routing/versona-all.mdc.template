@@ -22,7 +22,11 @@ All Versona rules inherit these expectations. **Kind-specific** instructions (di
 
 **Structured output:** **Discipline** Versonas are **virtual personas** for one professional lens. Activities include advice, drafting, handoffs, and—when the team uses it—the normative **§5** report shape in `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5. See `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §1–2. Other activities follow this rule’s **kind** overlay until additional schemas are standardized.
 
+**Reusable capabilities:** Prefer Cursor **Skills** under `blueprints/sdlc/templates/forge/cursor-skills/` (session, standards, handoff, merge, evidence, diagrams) per `blueprints/sdlc/methodologies/forge/versona/VERSONA-SKILL-MATRIX.md` instead of duplicating long procedural prose in this rule.
+
 **Accountability:** Versonas assist judgment and discipline perspective; they do not replace human ownership of delivery, release, or Ember Log integrity. See `blueprints/sdlc/methodologies/forge/roles.md` and `blueprints/sdlc/methodologies/agentic-sdlc.md`.
+
+**Standards resolution:** When controls, policies, or evidence obligations matter, apply the stack in `blueprints/sdlc/methodologies/forge/standards/precedence.md` (L1 external/legal/customer **down to** L6 generic heuristics). Prefer **references** to consuming-repo registries (for example `forge/standards-registry.yaml`), **Cursor Team Rules**, and **Skills** over pasting large catalogs. See `blueprints/sdlc/methodologies/forge/standards/VERSONA-STANDARDS-MATRIX.md` for this rule’s **standards profile**. For **§5** structured output, include **Standards traceability** per `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5.1 when material (omit the section or mark **N/A** when not in scope).
 
 ### Kind overlay (routing)
 
@@ -32,6 +36,27 @@ After this baseline, output **only** the routing recommendation format defined i
 <!-- Ancestry: L0_generic + L1_routing -->
 
 When invoked, analyze the current work item and context to recommend which discipline Versonas should be consulted. This rule does **not** run all 17 Versonas — it identifies the 2–4 most relevant ones.
+
+## Boundaries (normative)
+
+- **Router only:** Recommends **which** `@versona-*` rules to invoke — does **not** own discipline **§5** judgment, **merge** of parallel specialists (**`versona-family-*`**), or **A–F** phase plans (**`versona-forge-sdlc`**).
+- **PM vs Product Management:** **Governance → PM** in the index below = **Project Management** (delivery, constraints, RAID, gates). **Product → Product Management** = **product strategy** (roadmap fit, OKRs, market). Do **not** conflate the two.
+
+## Artifact I/O
+
+| Field | Canonical paths (repo-relative) |
+|-------|----------------------------------|
+| **Required inputs** | User goal; work item (Ore/Ingot/Spark) + phase/hat if known |
+| **Optional inputs** | `docs/requirements/**`, `docs/product/**`, `forge/charge.md` |
+| **Produced outputs** | Routing table (chat or `outputs/routing-table.md`); optional `outputs/routing-decision.json` |
+| **Canonical storage** | Ephemeral OK; if persisted → `forge-logs/versona/<actor>/<session-id>/` ([`ARTIFACT-CONTRACTS.md`](../../ARTIFACT-CONTRACTS.md)) |
+| **Downstream consumers** | Listed discipline rules; **`versona-forge-sdlc`** for full phase orchestration |
+
+## Standards, trace, Skills
+
+- **Standards:** Surface only whether L1–L2 likely apply; delegate full **`### Standards traceability`** to invoked specialists + Skill **`resolve-versona-standards`**.
+- **Trace:** Ember Log if routing **commits** scope or accepts material risk.
+- **Skills / tasklets:** `forge-tasklet-route-request`; optional `start-versona-session` / `record-versona-event` when persisting.
 
 ## Routing logic
 
@@ -87,6 +112,11 @@ Determine what work item and discipline lens need attention:
 ### Not recommended now
 
 {Disciplines that are not relevant at this stage}
+
+### Next orchestration (optional)
+
+- If the team needs **ordered A–F steps**, merge owners, and trace checklist → **`versona-forge-sdlc`**
+- If **one domain** should run **parallel** lenses then merge → **`versona-family-<domain>`**
 ```
 
 ## Discipline index
@@ -95,8 +125,8 @@ Determine what work item and discipline lens need attention:
 |--------|-------------|
 | **Engineering** | SE, Architecture, DevOps, Testing, Frontend, Mobile, Embedded/IoT |
 | **Data** | Big Data, Data Science |
-| **Product** | Product Management, BA, UX, Marketing, Customer Success |
-| **Governance** | PM |
+| **Product** | Product Management (strategy), BA, UX, Marketing, Customer Success |
+| **Governance** | PM = **Project Management** (delivery / process — not product strategy) |
 | **Cross-cutting** | Security, Compliance |
 
 ## References
@@ -104,3 +134,4 @@ Determine what work item and discipline lens need attention:
 - Versona catalog: `blueprints/sdlc/methodologies/forge/versona/README.md`
 - Contract: `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md`
 - Ancestry (kinds / domains): `blueprints/sdlc/methodologies/forge/versona/catalog/ANCESTRY.md`
+- **Phase-aware methodology orchestration** (execution order, merge owners, trace): `versona-forge-sdlc` + `blueprints/sdlc/methodologies/forge/orchestration/FORGE-SDLC-ORCHESTRATION.md` (this rule recommends **who**; that rule plans **how** to run A–F passes)

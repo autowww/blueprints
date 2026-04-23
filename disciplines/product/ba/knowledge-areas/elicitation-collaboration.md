@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Elicitation & Collaboration
 
 The knowledge area responsible for **gathering information** from stakeholders and sources, **confirming** that information is understood correctly, and **maintaining ongoing collaboration** throughout the initiative. Elicitation is not a one-time activity — it recurs whenever new understanding is needed.

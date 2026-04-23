@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://blueprints.forgesdlc.com/schema/forge/workflow-phases-bundle.json",
+  "title": "Forge SDLC workflow phases bundle",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["schema_version", "phases"],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "title": { "type": "string" },
+    "precedence_note": { "type": "string" },
+    "phases": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/phase" }
+    }
+  },
+  "$defs": {
+    "phase": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["id", "letter", "name"],
+      "properties": {
+        "id": { "type": "string" },
+        "letter": { "type": "string", "pattern": "^[A-F]$" },
+        "name": { "type": "string" },
+        "forge_expression": { "type": "string" },
+        "triggers": { "type": "array", "items": { "type": "string" } },
+        "entry_conditions": { "type": "array", "items": { "type": "string" } },
+        "standards_checks": { "type": "array", "items": { "type": "string" } },
+        "parallel_criteria": { "type": "array", "items": { "type": "string" } },
+        "sequential_criteria": { "type": "array", "items": { "type": "string" } },
+        "merge_rules": { "type": "string" },
+        "escalation_rules": { "type": "array", "items": { "type": "string" } },
+        "trace_outputs": { "type": "array", "items": { "type": "string" } },
+        "suggested_routing_hint": { "type": "string" }
+      }
+    }
+  }
+}

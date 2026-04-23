@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # SEO & Content Marketing
 
 **Overview:** SEO and content marketing earn **organic acquisition** by making the product and its problem space **discoverable in search** and **worth reading or using** before a paywall or signup. Together they compound: technical SEO ensures pages can rank; content supplies the queries and links that sustain visibility.

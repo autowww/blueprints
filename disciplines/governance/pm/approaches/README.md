@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # PM approach guides (blueprint)
 
 **Purpose:** Deeper, **product-agnostic** guides for project management approaches than the short summaries in [`PM.md`](../PM.md). Each file explains the approach on its own terms, links to **authoritative external** material, and states how it **maps** to PM process groups and (where applicable) SDLC phases A–F and PDLC phases P1–P6.

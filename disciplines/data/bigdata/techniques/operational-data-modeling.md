@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Operational data modeling (blueprint)
 
 Operational data modeling covers the design of data structures for **transactional, application-serving databases** — the storage that powers day-to-day product features. This complements the analytical/scale focus of the broader [Big Data discipline](../BIGDATA.md) with practical guidance for relational and NoSQL databases used in operational systems.

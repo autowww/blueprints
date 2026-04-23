@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Paid Advertising & Social Media Marketing
 
 **Overview:** **Paid advertising** buys reach and intent capture on platforms where your ICP already spends attention. **Social media marketing** blends organic presence, community, and paid boosts so creative, targeting, and landing experience stay aligned. For digital products, both must connect to **measurement, attribution, and product onboarding** — not vanity reach alone.

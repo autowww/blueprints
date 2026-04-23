@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Mobile Engineering
 
 Reusable, **project-agnostic** blueprint for **Mobile Engineering** — the discipline of building performant, reliable mobile experiences across platforms and devices.

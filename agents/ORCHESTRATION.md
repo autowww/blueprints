@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Orchestration — new agent / recipe
 
 **Canonical instructions** for creating automation under **`agents/recipes/<name>/`** in the consuming repository. Cursor rules, docs, and assistants should **point here** instead of duplicating prose.

@@ -43,7 +43,7 @@ A chapter or org has several products that should share vocabulary and submodule
 | Phase | Focus | Success signal |
 |-------|-------|----------------|
 | **Align** | Agree golden SHA + owner | One channel (doc or chat) announces bumps |
-| **Pilot** | Two or three repos on the new pin | Same [SETUP](SETUP.md) verify story |
+| **Pilot** | Two or three repos on the new pin | Same [Project setup checklist](SETUP.md) verify story |
 | **Expand** | Remaining repos | Drift visible in CI or release notes |
 
 ## Risks and mitigations

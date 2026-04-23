@@ -5,9 +5,9 @@ handbook_area: blueprints
 learning_level: reference
 ---
 
-# Software development lifecycle (SDLC)
+# Software development lifecycle
 
-This describes a **generic** delivery flow and **which documentation** to update at each step. It pairs with [`DOCUMENTATION-STRUCTURE.md`](DOCUMENTATION-STRUCTURE.md) (where files live, including the optional **milestone → epic → story → task** hierarchy in §2.1) and your project’s **own** requirements or backlog convention (where you keep epics, stories, and IDs).
+**SDLC** (software development lifecycle) here means the **generic** delivery flow this page describes and **which documentation** to update at each step. It pairs with [`DOCUMENTATION-STRUCTURE.md`](DOCUMENTATION-STRUCTURE.md) (where files live, including the optional **milestone → epic → story → task** hierarchy in §2.1) and your project’s **own** requirements or backlog convention (where you keep epics, stories, and IDs).
 
 **Delivery phases (reader-facing):** **Discover / Prioritize → Specify → Design → Build → Verify → Release.** These names match ordinary software-delivery language. **Letters A–F** are optional **internal shorthand** (still used in methodology bridges, examples, and cross-maps)—they are not the primary vocabulary on this page.
 
@@ -65,8 +65,8 @@ Recurring collaboration (**ceremonies**) should **cover** the six **intent types
 
 | Artifact | Action |
 |----------|--------|
-| **Planning source of truth** | One place for prioritized work (WBS/CSV, backlog, board, or optional high-level `docs/ROADMAP.md` from [`templates/ROADMAP.template.md`](templates/ROADMAP.template.md)). Record **where** it lives in `docs/PROJECT.md` or root `README.md`. |
-| Work breakdown (WBS) | e.g. `docs/requirements/WBS.csv` — new epics/stories or statuses such as `draft` / `backlog`. |
+| **Planning source of truth** | One place for prioritized work (WBS in `docs/requirements/WBS.md`, backlog, board, or optional high-level `docs/ROADMAP.md` from [`templates/ROADMAP.template.md`](templates/ROADMAP.template.md)). Record **where** it lives in `docs/PROJECT.md` or root `README.md`. |
+| Work breakdown (WBS) | `docs/requirements/WBS.md` — new epics/stories or statuses such as `draft` / `backlog`. |
 | Spec files under your milestone tree | **Optional** until you commit to build. |
 
 **Exit:** A backlog item is **ready to specify** when it has a clear outcome and a home in the WBS (or equivalent).

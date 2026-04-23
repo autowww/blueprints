@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Customer Success
 
 Reusable, **project-agnostic** blueprint for **Customer Success (CS)** — the discipline of helping users and customers realize value from a product after adoption, sustaining engagement, and reducing preventable churn through proactive orchestration, support excellence, and feedback-driven improvement.

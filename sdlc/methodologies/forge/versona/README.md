@@ -15,9 +15,9 @@ Repo-wide documentation habits (single source of truth, link don’t duplicate) 
 
 | Mode | Start here | Role |
 |------|------------|------|
-| **Explanation** | [`VERSONA-FRAMEWORK.md`](VERSONA-FRAMEWORK.md), [`DISCIPLINE-SPIKE.md`](DISCIPLINE-SPIKE.md), [How Versonas work](#how-versonas-work) (below) | Kinds, sessions, exploration spikes, handoffs |
-| **How-to** | [`../../../SETUP.md`](../../../SETUP.md), [`../setup/CURSOR-RULES-QUICKSTART.md`](../setup/CURSOR-RULES-QUICKSTART.md), [`../setup/CURSOR-RULES-ALIGNMENT.md`](../setup/CURSOR-RULES-ALIGNMENT.md), [`../tasklets/install-tasklets.sh`](../tasklets/install-tasklets.sh) | Install rules, align `forge.config.yaml`, tasklets + Sampling |
-| **Reference** | [`catalog/TEMPLATE-INDEX.md`](catalog/TEMPLATE-INDEX.md), [`catalog/ANCESTRY.md`](catalog/ANCESTRY.md), [`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md), [`RECOMMENDED-GLOBS.md`](RECOMMENDED-GLOBS.md) | Authoritative paths, kind/domain tables, rule shape, globs |
+| **Explanation** | [`VERSONA-FRAMEWORK.md`](VERSONA-FRAMEWORK.md), [`../standards/README.md`](../standards/README.md), [`../VERSONA-OPERATING-MODEL.md`](../VERSONA-OPERATING-MODEL.md), [`DISCIPLINE-SPIKE.md`](DISCIPLINE-SPIKE.md), [How Versonas work](#how-versonas-work) (below) | Kinds, sessions, standards precedence & profiles, optional machine artifacts, exploration spikes, handoffs |
+| **How-to** | [Project setup checklist](../../../SETUP.md), [`../setup/CURSOR-RULES-QUICKSTART.md`](../setup/CURSOR-RULES-QUICKSTART.md), [`../setup/CURSOR-RULES-ALIGNMENT.md`](../setup/CURSOR-RULES-ALIGNMENT.md), [`../setup/VERSONA-PROCESS-MODEL-MIGRATION.md`](../setup/VERSONA-PROCESS-MODEL-MIGRATION.md), [`../setup/VERSONA-VERIFICATION.md`](../setup/VERSONA-VERIFICATION.md), [`../orchestration/README.md`](../orchestration/README.md) (`versona-forge-sdlc`), [`../tasklets/install-tasklets.sh`](../tasklets/install-tasklets.sh), [`../../templates/forge/cursor-skills/`](../../templates/forge/cursor-skills/) (copy Skills) | Install rules, align `forge.config.yaml`, migration + verification, methodology orchestration, tasklets + Sampling, **shared Skills** |
+| **Reference** | [`catalog/TEMPLATE-INDEX.md`](catalog/TEMPLATE-INDEX.md), [`catalog/ANCESTRY.md`](catalog/ANCESTRY.md), [`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md), [`ARTIFACT-CONTRACTS.md`](ARTIFACT-CONTRACTS.md), [`VERSONA-SKILL-MATRIX.md`](VERSONA-SKILL-MATRIX.md) §0 (**router vs orchestrator vs PM vs Product Management**), [`../orchestration/README.md`](../orchestration/README.md), [`../standards/VERSONA-STANDARDS-MATRIX.md`](../standards/VERSONA-STANDARDS-MATRIX.md), [`../schemas/README.md`](../schemas/README.md), [`RECOMMENDED-GLOBS.md`](RECOMMENDED-GLOBS.md) | Authoritative paths, kind/domain tables, rule shape, **artifact storage**, **Skills / tasklets / recipes map**, **orchestration boundaries**, standards matrix, JSON schemas, globs |
 
 **Single source of truth for paths:** [`catalog/TEMPLATE-INDEX.md`](catalog/TEMPLATE-INDEX.md) — other pages summarize and link there.
 
@@ -56,7 +56,7 @@ versona/
 
 ## Framework (kinds, sessions, processes)
 
-Normative concepts—**Versona kinds**, input/output **interfaces**, repeatable **process** docs, **inter-Versona** handoffs, **session** layout under `forge-logs/versona/`, and alignment with Ember Log and day journal—are in **[`VERSONA-FRAMEWORK.md`](VERSONA-FRAMEWORK.md)**. Cursor rule structure for discipline templates remains in [`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md).
+Normative concepts—**Versona kinds**, input/output **interfaces**, repeatable **process** docs, **inter-Versona** handoffs, **session** layout under `forge-logs/versona/`, and alignment with Ember Log and day journal—are in **[`VERSONA-FRAMEWORK.md`](VERSONA-FRAMEWORK.md)**. **Enriched** cross-repo tree, optional **JSON** artifacts, **graph** lines, and **diagram IR** are in **[`../VERSONA-OPERATING-MODEL.md`](../VERSONA-OPERATING-MODEL.md)** (extends §7–8; does not replace them). Cursor rule structure for discipline templates remains in [`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md).
 
 ## Ancestry and shared baseline
 

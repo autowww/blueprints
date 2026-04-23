@@ -2,7 +2,11 @@
 slug: discipline-security
 tier: 201
 lens: discipline
-nav_section: "Disciplines"
+nav_section: Disciplines
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
 ---
 
 # Security body of knowledge

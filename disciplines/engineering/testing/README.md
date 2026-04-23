@@ -18,6 +18,8 @@ Testing answers **"is the software correct, reliable, and fit for purpose?"** �
 | [**PLAYWRIGHT-INFRASTRUCTURE.md**](PLAYWRIGHT-INFRASTRUCTURE.md) | Playwright templates, bootstrap scripts, workspace runner, and optional agents recipe — submodule path `blueprints/sdlc/templates/playwright/` |
 | [**TESTING-SDLC-PDLC-BRIDGE.md**](TESTING-SDLC-PDLC-BRIDGE.md) | How testing maps across SDLC phases A–F and PDLC phases P1–P6 — role mapping, artifact flow, calibration, anti-patterns |
 
+**Forge defect workflow (markdown repos):** [`sdlc/templates/forge/forge-defect-triage-rca-test-impact.prompt.md`](../../../sdlc/templates/forge/forge-defect-triage-rca-test-impact.prompt.md) — triage, **RCA**, ISTQB-oriented **confirmation/regression** design, `docs/defects/**`, **TRACEABILITY**; pair with **`versona-testing`**.
+
 ## Relationship to other packages
 
 | Package | How Testing relates |

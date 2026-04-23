@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # C4 model for software architecture
 
 The **C4 model** (Context, Containers, Components, Code) is a lean notation for describing software architecture at four levels of abstraction. It was created by Simon Brown to make diagrams **easy to produce, read, and maintain** without drowning stakeholders in UML detail. Each level “zooms in” from the system in its environment down to optional class-level detail.

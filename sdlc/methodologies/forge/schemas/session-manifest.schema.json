@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://blueprints.forgesdlc.com/schema/forge/session-manifest.json",
+  "title": "Versona session manifest",
+  "description": "Machine-readable session metadata; extends VERSONA-FRAMEWORK §7.4. Mirrors SESSION.md frontmatter when both exist.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["session_id", "started_at"],
+  "properties": {
+    "session_id": {
+      "type": "string",
+      "description": "Same as folder name or stable UUID; unique within the repo convention."
+    },
+    "started_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ended_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Optional session close time."
+    },
+    "work_item_refs": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "work_item_kind": {
+      "type": "string",
+      "enum": ["ore", "ingot", "spark", "spike_discipline", "spike_general", "other"]
+    },
+    "process_id": {
+      "type": ["string", "null"],
+      "description": "Named process template if any."
+    },
+    "versona_kind": {
+      "type": "string",
+      "description": "discipline | routing | family_aggregator | meta | workflow (per VERSONA-FRAMEWORK §2)."
+    },
+    "discipline": {
+      "type": ["string", "null"],
+      "description": "Display name when versona_kind is discipline."
+    },
+    "parent_session": {
+      "type": ["string", "null"],
+      "description": "Relative path to parent session folder for chains."
+    },
+    "ember_log_ref": {
+      "type": ["string", "null"],
+      "description": "Path to ember-logs/YYYY-MM-DD.md and optional anchor."
+    },
+    "versona_session_schema_version": {
+      "type": "string",
+      "description": "Integer or semver for manifest shape versioning."
+    },
+    "actor": {
+      "type": "string",
+      "description": "Opaque actor label (folder under versona/); optional duplicate of path convention."
+    },
+    "request_ledger_ids": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "ledger_entry_id values linking this session to intake rows."
+    },
+    "routing_decision_path": {
+      "type": "string",
+      "description": "Repo-relative path to outputs/routing-decision.json when persisted."
+    },
+    "spike_timebox": { "type": "string" },
+    "spike_hypothesis": { "type": "string" },
+    "anchor_notes": { "type": "string" }
+  }
+}

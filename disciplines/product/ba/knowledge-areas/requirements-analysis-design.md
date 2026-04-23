@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Requirements Analysis & Design Definition
 
 Transforms elicited information into **structured requirements** and **design definitions** that the delivery team can implement. This knowledge area is where BA work produces its most tangible outputs — the specifications, models, and design options that drive SDLC phases B and C.

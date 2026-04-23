@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://blueprints.forgesdlc.com/schema/forge/request-ledger-entry.json",
+  "title": "Versona request ledger entry",
+  "description": "One JSON object appended as a line to forge-logs/versona-track/request-ledger.jsonl. Correlates intake with sessions; does not replace Ore/Ingot/Spark IDs.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["ledger_entry_id", "recorded_at", "work_item_refs", "status"],
+  "properties": {
+    "ledger_entry_id": {
+      "type": "string",
+      "description": "Opaque correlation ID (e.g. UUID). Not a Forge work-item ID."
+    },
+    "recorded_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "UTC ISO-8601 when the intake was recorded."
+    },
+    "work_item_refs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Handles the team already uses: Ore, Ingot, Spark, WBS, or external ALM keys."
+    },
+    "work_item_kind": {
+      "type": "string",
+      "enum": ["ore", "ingot", "spark", "spike_discipline", "spike_general", "other"],
+      "description": "Optional hint aligned with VERSONA-FRAMEWORK session manifest."
+    },
+    "intent_summary": {
+      "type": "string",
+      "description": "Short human-readable reason for the request."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["open", "routed", "in_session", "closed", "superseded"],
+      "description": "Operational intake status, not Forge ore/ingot/spark state."
+    },
+    "primary_session_path": {
+      "type": "string",
+      "description": "Repo-relative path to forge-logs/versona/<actor>/<session-id>/ when known."
+    },
+    "session_ids": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "session_id values from manifests for all sessions spawned from this request."
+    },
+    "source": {
+      "type": "string",
+      "enum": ["human", "agent", "ci", "external"],
+      "description": "Who or what created the ledger line."
+    },
+    "source_ref": {
+      "type": "string",
+      "description": "Optional URL, ticket key, or run ID from the source system."
+    },
+    "compliance_marking": {
+      "type": "string",
+      "description": "Optional org-controlled label when external compliance applies."
+    }
+  }
+}

@@ -3,22 +3,23 @@ public_publish: true
 audience: public
 handbook_area: blueprints
 learning_level: overview
+nav_title: Software delivery
 ---
 
-# SDLC blueprint
+# Software delivery
 
-This folder is a **reusable, product-agnostic** package: **process** (phases, Definition of Done) and **documentation conventions**. Copy or submodule it into any repository.
+This folder is the **Blueprints** package for **software delivery**: **process** (phases, Definition of Done) and **documentation conventions**. It is **reusable and product-agnostic** — copy or submodule it into any repository.
 
-**Governance:** read [`POLICY.md`](POLICY.md) — **do not change** this directory unless explicitly updating the baseline. Project work lives in **`sdlc/`** (or equivalent) and **`docs/`**.
+**Governance:** read [Blueprint policy](POLICY.md) — **do not change** this directory unless explicitly updating the baseline. Project work lives in **`sdlc/`** (or equivalent) and **`docs/`**.
 
 | Deliverable | Purpose |
 |-------------|---------|
 | [**quickstarts/**](quickstarts/README.md) | **First hour** in a consuming repo — guided steps and verification (see also [Adopting Blueprints](https://github.com/autowww/blueprints/blob/main/docs/ADOPTION.md) for ICP paths). |
-| **Onboarding journey** | [**Adopting Blueprints**](adopting-blueprints.md) → [Quickstarts hub](quickstarts/README.md) → [SETUP](SETUP.md) when you need the full profile — same story as the handbook site “Adopt” path. |
-| [**POLICY.md**](POLICY.md) | Immutability rules for this blueprint. |
+| **Onboarding journey** | [**Adopting Blueprints**](adopting-blueprints.md) → [Quickstarts hub](quickstarts/README.md) → [Project setup checklist](SETUP.md) when you need the full profile — same story as the handbook site “Adopt” path. |
+| [Blueprint policy](POLICY.md) | Immutability rules for this blueprint. |
 | [**SDLC.md**](SDLC.md) | Delivery phases (**Discover / Prioritize → … → Release**); **A–F** shorthand in bridges; documentation obligations, Definition of Done, change control. |
 | [**DOCUMENTATION-STRUCTURE.md**](DOCUMENTATION-STRUCTURE.md) | Suggested `docs/` layout, document types, conventions, evolution notes. |
-| [**SETUP.md**](SETUP.md) | **Consuming-repo checklist** — submodule, Forge, Cursor rules, alignment (for projects using `blueprints/` at repo root). |
+| [Project setup checklist](SETUP.md) | **Consuming-repo checklist** — submodule, Forge, Cursor rules, alignment (for projects using `blueprints/` at repo root). |
 | [**docs/**](docs/README.md) | **Human handbook** ([`index.html`](docs/index.html) + chapter pages, incl. optional [`methodologies.html`](docs/methodologies.html)) — HTML + diagrams; keep in sync per [`docs/MAINTENANCE.md`](docs/MAINTENANCE.md) when Markdown sources change. |
 | [**templates/**](templates/README.md) | Optional copy-paste starters: `docs/` (`ROADMAP`, `TEST-PLAN`) and **`sdlc/`** workspace (`README` + `TRACKING-*`) — not required to run the SDLC. |
 | [**Agents blueprint (optional)**](../agents/README.md) | Frozen **`blueprints/agents/`** — Docker base image, Compose, recipe templates for repeatable automation (alongside IDE/LLM workflows); mutable **`agents/`** at repo root. **Handbook:** [`docs/agents.html`](docs/agents.html); canonical: [`blueprints/agents/STRUCTURE.md`](../agents/STRUCTURE.md). |

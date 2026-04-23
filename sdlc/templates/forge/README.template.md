@@ -65,7 +65,17 @@ Copy optional **Skills** from `blueprints/sdlc/templates/forge/cursor-skills/` i
 
 | Skill folder | Use |
 |--------------|-----|
+| `resolve-versona-standards/` | L1–L6 precedence + §5.1 traceability prep |
+| `start-versona-session/` | `forge-logs/versona/...` tree + SESSION.md |
+| `record-versona-event/` | Ember Log vs SESSION vs ledger routing |
+| `build-versona-handoff/` | `outputs/handoff.json` + summary |
+| `merge-parallel-versona-results/` | One merged §5 from multiple lenses |
+| `assemble-versona-evidence-pack/` | `forge/evidence/<pack-id>/` layout |
+| `export-versona-kitchensink-diagram/` | blueprint-diagram / SVG pipeline |
+| `close-versona-session/` | Session close checklist |
 | `run-product-versona-session/` | Product-family Versona pass (roadmap / assumptions) |
 | `run-engineering-ai-code-review/` | Engineering-family **AI code review** (diff/PR, §5 Versona output) |
+
+Per-Versona mapping: `blueprints/sdlc/methodologies/forge/versona/VERSONA-SKILL-MATRIX.md`.
 
 Install and align Cursor rules: `bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh sync --preset recommended` — see `blueprints/sdlc/methodologies/forge/setup/CURSOR-RULES-QUICKSTART.md`.

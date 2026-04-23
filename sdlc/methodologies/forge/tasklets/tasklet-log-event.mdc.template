@@ -1,0 +1,35 @@
+---
+description: Forge tasklet — classify one event into Ember Log vs SESSION vs ledger (routing only).
+globs: 
+alwaysApply: false
+---
+
+# Tasklet: log event
+
+## Operation
+
+Given a **short description** of something that happened in a session, say **where** it should be recorded and give a **one-line** suggested entry.
+
+## Output (use exactly this shape)
+
+```markdown
+## Tasklet output: log event
+
+**Event:** …
+
+| Sink | Path | Suggested line |
+|------|------|----------------|
+| Ember Log / SESSION / versona-track | … | … |
+
+**Rationale:** …
+```
+
+## Rules
+
+- **Decisions / risk / scope** → prefer **Ember Log** path `ember-logs/YYYY-MM-DD.md`.
+- **Artifact listing** → **SESSION.md** or `outputs/`.
+- Do **not** write the real file unless the user asked — this tasklet only **classifies**.
+
+## See also
+
+- Skill: **record-versona-event**

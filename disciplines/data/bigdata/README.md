@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Big data & data engineering
 
 Reusable, **project-agnostic** blueprint for **big data and data engineering** — the discipline of designing, building, and maintaining the systems and infrastructure for collecting, storing, processing, and governing data at scale.

@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Native iOS and Android development (blueprint)
 
 **Purpose:** High-level comparison of **native** mobile stacks — languages, UI frameworks, architecture norms, security, lifecycle, distribution, and profiling. Use for staffing, platform strategy, and onboarding; project setup lives in repo docs.

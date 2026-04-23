@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Object-Oriented Programming (OOP)
 
 Object-oriented programming organizes programs as **collaborating objects** that encapsulate state and expose behavior through messages (method calls). It remains the default shape of many application frameworks and enterprise codebases because it maps cleanly onto stable domain nouns and plugin boundaries.

@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Embedded / IoT Engineering
 
 Reusable, **project-agnostic** blueprint for **Embedded / IoT Engineering** — the discipline of building reliable, safe software for resource-constrained and hardware-adjacent environments.

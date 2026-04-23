@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Security incident response
 
 **Purpose:** A **project-agnostic** blueprint for preparing, detecting, containing, and learning from **security incidents** with clear roles, communications, and evidence handling.

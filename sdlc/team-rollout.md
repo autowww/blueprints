@@ -20,7 +20,7 @@ Use this page when more than one repo or squad needs the same vocabulary (phases
 ## Prerequisites
 
 - [Adopting Blueprints](adopting-blueprints.md) path **B** or **C** is a rough match.
-- At least one repo has `blueprints/`, project `sdlc/`, and optionally `forge/` in place ([SETUP](SETUP.md)).
+- At least one repo has `blueprints/`, project `sdlc/`, and optionally `forge/` in place ([Project setup checklist](SETUP.md)).
 
 ## Rollout by scale (chooser)
 
@@ -43,7 +43,7 @@ alt: Team rollout — increasing scale from single team to multi-team, platform,
 ## How to verify success
 
 - Teams can explain where **baseline** text lives (`blueprints/`) vs **their** interpretations (`sdlc/`, `docs/`).
-- New repos reach the same **verify** steps as [SETUP.md](SETUP.md) without one-off forks of upstream.
+- New repos reach the same **verify** steps as [Project setup checklist](SETUP.md) without one-off forks of upstream.
 
 ## What to do next
 

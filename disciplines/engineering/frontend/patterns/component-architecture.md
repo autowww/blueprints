@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Component architecture patterns
 
 **Purpose:** Project-agnostic guidance on treating the **component** as the fundamental unit of UI composition: taxonomy, composition APIs, state ownership, design-system integration, testing, and framework comparisons.

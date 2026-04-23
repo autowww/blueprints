@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Functional Programming (FP)
 
 Functional programming treats computation as **evaluation of expressions** built from **pure functions** and **immutable data**, with **explicit** effect boundaries. It excels when correctness under concurrency and local reasoning matter more than modeling rich object lifecycles.

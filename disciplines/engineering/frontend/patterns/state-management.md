@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # State management patterns
 
 **Purpose:** Project-agnostic map of **where state lives**, how to choose local vs shared vs server state, and how common libraries and patterns fit together.

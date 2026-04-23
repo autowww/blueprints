@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # PM approaches — reference links
 
 Curated external URLs for the PM approach guides in this directory. Each entry includes an **executive summary** explaining why the link is included and what it contributes to understanding the approach in the context of this blueprint.

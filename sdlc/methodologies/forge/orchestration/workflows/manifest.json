@@ -1,0 +1,7 @@
+{
+  "manifest_version": "1",
+  "description": "Forge methodology orchestration machine-readable bundle",
+  "primary": "phases.json",
+  "schema": "../schema/workflow-phases-bundle.schema.json",
+  "normative_prose": "../FORGE-SDLC-ORCHESTRATION.md"
+}

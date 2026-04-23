@@ -22,7 +22,11 @@ All Versona rules inherit these expectations. **Kind-specific** instructions (di
 
 **Structured output:** **Discipline** Versonas are **virtual personas** for one professional lens. Activities include advice, drafting, handoffs, and—when the team uses it—the normative **§5** report shape in `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5. See `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §1–2. Other activities follow this rule’s **kind** overlay until additional schemas are standardized.
 
+**Reusable capabilities:** Prefer Cursor **Skills** under `blueprints/sdlc/templates/forge/cursor-skills/` (session, standards, handoff, merge, evidence, diagrams) per `blueprints/sdlc/methodologies/forge/versona/VERSONA-SKILL-MATRIX.md` instead of duplicating long procedural prose in this rule.
+
 **Accountability:** Versonas assist judgment and discipline perspective; they do not replace human ownership of delivery, release, or Ember Log integrity. See `blueprints/sdlc/methodologies/forge/roles.md` and `blueprints/sdlc/methodologies/agentic-sdlc.md`.
+
+**Standards resolution:** When controls, policies, or evidence obligations matter, apply the stack in `blueprints/sdlc/methodologies/forge/standards/precedence.md` (L1 external/legal/customer **down to** L6 generic heuristics). Prefer **references** to consuming-repo registries (for example `forge/standards-registry.yaml`), **Cursor Team Rules**, and **Skills** over pasting large catalogs. See `blueprints/sdlc/methodologies/forge/standards/VERSONA-STANDARDS-MATRIX.md` for this rule’s **standards profile**. For **§5** structured output, include **Standards traceability** per `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5.1 when material (omit the section or mark **N/A** when not in scope).
 
 ### Kind overlay (workflow)
 
@@ -39,6 +43,26 @@ After this baseline, this rule is **not** a discipline gate—produce the **road
 - **Knowledge base:** `blueprints/sdlc/methodologies/forge/product-manager/product-bootstrap-flow.md`, `blueprints/sdlc/methodologies/forge/product-manager/forge-product-manager.mdc.template`, `blueprints/sdlc/methodologies/forge/versona/catalog/discipline/product/versona-product-management.mdc.template`
 - **Bridge:** `blueprints/disciplines/product/product-management/PRODMGMT-SDLC-PDLC-BRIDGE.md` — **intensity:** N/A (playbook, not a single-discipline §5 review)
 
+## Role boundary
+
+- **Product-planning playbook** — roadmap **readiness** and **which** Versonas to run next — **not** **Project Management** baselines (**`versona-pm`**) or full **A–F** orchestration (**`versona-forge-sdlc`**). **Product strategy §5** = **`versona-product-management`**, not **`versona-pm`**.
+
+## Artifact I/O
+
+| Field | Canonical paths (repo-relative) |
+|-------|----------------------------------|
+| **Required inputs** | Roadmap artifact (`docs/ROADMAP.md` or equivalent); strategy pointers |
+| **Optional inputs** | `docs/product/**`, OKR docs |
+| **Produced outputs** | Playbook checklist (below); links to child **`versona-product-management`** §5 outputs |
+| **Canonical storage** | `forge-logs/versona/.../outputs/` + Ember Log for roadmap decisions ([`ARTIFACT-CONTRACTS.md`](../../ARTIFACT-CONTRACTS.md)) |
+| **Downstream consumers** | **`versona-product-management`**, then BA/UX/Architecture as suggested; **`versona-pm`** only when **delivery** baselines are in scope |
+
+## Standards, trace, Skills
+
+- **Standards:** If roadmap touches regulated commitments, prepend **Compliance/Security** in follow-on list; **`resolve-versona-standards`** on consolidating pass.
+- **Trace:** Ember Log for **scope/theme** decisions; optional `handoff.json` to next session.
+- **Skills:** `start-versona-session`, `record-versona-event`, `build-versona-handoff`, `merge-parallel-versona-results` if multiple §5 files merge.
+
 ## Invocation
 
 - **Also:** `@versona-roadmap-gate`, or natural phrases like “roadmap gate,” “review the roadmap before WBS.”
@@ -48,6 +72,7 @@ After this baseline, this rule is **not** a discipline gate—produce the **road
 
 - [`VERSONA-CONTRACT.md`](../../../VERSONA-CONTRACT.md) §5 — structured report shape + optional **Suggested next Versonas**
 - [`versona-all.mdc.template`](../routing/versona-all.mdc.template) — routing when discipline is unclear
+- [`versona-forge-sdlc.mdc.template`](versona-forge-sdlc.mdc.template) — full **Forge SDLC** methodology orchestration when the scope is broader than roadmap-only
 - [`versona-product-management.mdc.template`](../discipline/product/versona-product-management.mdc.template) — Product Management Versona + handoffs
 
 ## Protocol
@@ -72,7 +97,7 @@ Run **`versona-product-management`** on the roadmap (or the active theme). Expec
 
 ### 5. Follow-on Versonas
 
-Invoke the suggested rules (e.g. BA, Architecture, UX, governance PM) on the same or derived work items as appropriate.
+Invoke the suggested rules (e.g. BA, Architecture, UX) on the same or derived work items as appropriate. Use **`versona-pm`** only when **delivery** constraints, dependencies, or gate **readiness** need a §5 pass — **not** for roadmap **strategy** (that stays **`versona-product-management`**).
 
 ### 6. Ember Log / decisions
 

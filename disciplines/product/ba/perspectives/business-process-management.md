@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Business Process Management perspective
 
 How business analysis adapts when the initiative centers on **process improvement**, **workflow automation**, or **operational efficiency**. BPM initiatives require BA to model, analyze, and optimize processes — often before (or instead of) specifying software features.

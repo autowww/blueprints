@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # arc42 architecture documentation template
 
 **arc42** is a **pragmatic, open template** for documenting software and system architectures in 12 sections. It balances **structure** (so readers find information) with **freedom** (any notation: C4, UML, prose). It is widely used in German-speaking industry and increasingly in docs-as-code pipelines worldwide.

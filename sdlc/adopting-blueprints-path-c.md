@@ -21,7 +21,7 @@ When the [decision guide](adopting-blueprints.md#decision-guide) points you to p
 
 ## Prerequisites
 
-- Documented upstream and bump process; teams comfortable with [Policy](POLICY.md) and submodule workflows.
+- Documented upstream and bump process; teams comfortable with [Blueprint policy](POLICY.md) and submodule workflows.
 
 ## Steps
 
@@ -30,7 +30,7 @@ When the [decision guide](adopting-blueprints.md#decision-guide) points you to p
 | Step | Action | Verify |
 |------|--------|--------|
 | 1 | Treat the [upstream Blueprints repository](https://github.com/autowww/blueprints) as **upstream**; fork only if you must diverge on policy. | Documented upstream URL and bump process. |
-| 2 | Maintain a **consumer** playbook: submodule bump cadence, [policy](POLICY.md) exceptions if any. | [Updating the submodule](updating-blueprints-submodule.md) is part of ops. |
+| 2 | Maintain a **consumer** playbook: submodule bump cadence, [Blueprint policy](POLICY.md) exceptions if any. | [Updating the submodule](updating-blueprints-submodule.md) is part of ops. |
 | 3 | For category positioning when briefing leadership, see [framework positioning and MVP](https://github.com/autowww/blueprints/blob/main/docs/product/discovery/framework-positioning-and-mvp.md). | Stakeholders have a one-pager link when needed. |
 
 ## Example scenario (path C)

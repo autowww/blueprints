@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Templates — product functional docs
 
 Copy these into **`docs/product/`** in your repository and rename (drop `.template` or keep—your convention).

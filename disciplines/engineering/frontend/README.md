@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Frontend / Web Engineering
 
 Reusable, **project-agnostic** blueprint for **Frontend Engineering** — the discipline of building fast, accessible, maintainable user interfaces for the web platform.

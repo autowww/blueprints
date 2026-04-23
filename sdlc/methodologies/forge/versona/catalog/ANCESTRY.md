@@ -9,7 +9,7 @@ learning_level: reference
 
 Normative layering for Forge Versonas: **generic baseline** (Layer 0), **kind** (routing, discipline, …), **domain** (for discipline templates only), then **concrete** `.mdc` templates. Cursor rules do not inherit automatically—each installed rule duplicates the baseline for self-containment; see [`_includes/GENERIC-VERSONA-BASELINE.md`](../_includes/GENERIC-VERSONA-BASELINE.md).
 
-**Related:** [`../VERSONA-FRAMEWORK.md`](../VERSONA-FRAMEWORK.md) (kinds, sessions, processes) · [`../VERSONA-CONTRACT.md`](../VERSONA-CONTRACT.md) (discipline rule shape) · [`../README.md`](../README.md) (template catalog) · [`TEMPLATE-INDEX.md`](TEMPLATE-INDEX.md) (source path audit)
+**Related:** [`../VERSONA-FRAMEWORK.md`](../VERSONA-FRAMEWORK.md) (kinds, sessions, processes) · [`../VERSONA-CONTRACT.md`](../VERSONA-CONTRACT.md) (discipline rule shape, §5.1 standards traceability) · [`../../standards/VERSONA-STANDARDS-MATRIX.md`](../../standards/VERSONA-STANDARDS-MATRIX.md) (per-Versona standards profile) · [`../README.md`](../README.md) (template catalog) · [`TEMPLATE-INDEX.md`](TEMPLATE-INDEX.md) (source path audit)
 
 ---
 
@@ -62,6 +62,7 @@ alt: Diagram
 | Template | Core question (short) | Output variant |
 |----------|------------------------|----------------|
 | [`versona-pm.mdc.template`](discipline/governance/versona-pm.mdc.template) | Constraints and delivery | Contract §5 |
+| [`versona-estimation.mdc.template`](discipline/governance/versona-estimation.mdc.template) | Sizing method — Fibonacci, t-shirt, tokens, roll-up, defect multipliers | Contract §5 |
 
 ### Domain: Cross-cutting
 
@@ -105,6 +106,7 @@ alt: Diagram
 |----------|--------|----------------|
 | [`versona-project-setup.mdc.template`](workflow/versona-project-setup.mdc.template) | — | Setup / audit report |
 | [`versona-roadmap-gate.mdc.template`](workflow/versona-roadmap-gate.mdc.template) | — | Roadmap gate playbook |
+| [`versona-forge-sdlc.mdc.template`](workflow/versona-forge-sdlc.mdc.template) | — | **Forge SDLC methodology orchestration** plan (A–F; merge/trace) — see [`../../orchestration/README.md`](../../orchestration/README.md) |
 | [`versona-cursor-rules-sync.mdc.template`](workflow/versona-cursor-rules-sync.mdc.template) | — | Cursor rules install/diff playbook |
 
 ---
@@ -136,6 +138,7 @@ alt: Diagram
 | versona-marketing.mdc.template | discipline | Product | — | Contract §5 |
 | versona-cs.mdc.template | discipline | Product | — | Contract §5 |
 | versona-pm.mdc.template | discipline | Governance | — | Contract §5 |
+| versona-estimation.mdc.template | discipline | Governance | — | Contract §5 |
 | versona-security.mdc.template | discipline | Cross-cutting | — | Contract §5 |
 | versona-compliance.mdc.template | discipline | Cross-cutting | — | Contract §5 |
 | versona-family-engineering.mdc.template | family_aggregator | Engineering | self | Consolidated |
@@ -146,6 +149,7 @@ alt: Diagram
 | versona-sampling.mdc.template | meta | — | — | Shortened |
 | versona-project-setup.mdc.template | workflow | — | — | Setup report |
 | versona-roadmap-gate.mdc.template | workflow | — | — | Roadmap gate playbook |
+| versona-forge-sdlc.mdc.template | workflow | — | — | Forge SDLC orchestration plan |
 | versona-cursor-rules-sync.mdc.template | workflow | — | — | Cursor rules sync playbook |
 | versona-generic.mdc.template | baseline_only | — | — | Layer 0 only |
 
@@ -153,4 +157,4 @@ alt: Diagram
 
 ## Stable headings
 
-For generators: **Conceptual tree**, **Kind: discipline**, **Kind: family_aggregator**, **Kind: routing**, **Kind: meta**, **Kind: workflow**, **Optional: generic baseline-only rule**, **Master table**.
+For generators: **Conceptual tree**, **Kind: discipline**, **Kind: family_aggregator**, **Kind: routing**, **Kind: meta**, **Kind: workflow** (includes **`versona-forge-sdlc`** methodology orchestrator), **Optional: generic baseline-only rule**, **Master table**.

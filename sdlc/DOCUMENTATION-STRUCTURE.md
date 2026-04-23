@@ -110,7 +110,8 @@ repository root/
     requirements/               # What to build & why (spec-driven); name may vary by org
       INDEX.md
       STRUCTURE-PROPOSAL.md
-      WBS.csv / WBS.md
+      WBS.md
+      ESTIMATES.md                # Optional: Fibonacci / t-shirt / token rollup ledger (markdown-canonical); rules in forge/estimation/ESTIMATION-RULES.md — see templates/requirements/ESTIMATES.template.md
       traceability/
       risks/
       milestones/
@@ -119,6 +120,14 @@ repository root/
     adr/
     development/              # Build, CI/CD, quality gates — see CI-CD.md when adopted
     testing/                    # Optional: test plans, scope-level strategy (see SDLC §7)
+      TRACEABILITY.md           # Optional: tests ↔ requirements — omit if all trace rows live in requirements/TRACEABILITY.md
+    defects/                    # Optional: defect triage, RCA, test impact (markdown-canonical) — see templates/forge/forge-defect-triage-rca-test-impact.prompt.md
+      INDEX.md
+      DEF-NNNN/
+        defect.md
+        rca.md
+        test-impact.md
+        evidence/               # Optional: screenshots, exports (policy in AGENTS.md)
     release/
     security/
     operations/
@@ -164,7 +173,7 @@ Counters restart **per parent** (each epic’s stories start at `S1`, etc.). **R
 
 | Layer | Planning / status | Spec prose |
 |-------|-------------------|------------|
-| Milestone | `docs/ROADMAP.md` (optional roll-up), `WBS.csv` rows for `M{n}` | `milestones/M{n}/milestone.md` (goals, scope boundaries) |
+| Milestone | `docs/ROADMAP.md` (optional roll-up), `WBS.md` tables for `M{n}` | `milestones/M{n}/milestone.md` (goals, scope boundaries) |
 | Epic | WBS; optional % complete in roadmap | `…/epics/M{n}E{n}/epic.md` |
 | Story | WBS; board / backlog | `…/stories/M{n}E{n}S{n}/story.md` |
 | Task | Tracker or WBS extension | `…/tasks/M{n}E{n}S{n}T{n}-task.md` (optional) |
@@ -178,7 +187,7 @@ Many teams mirror IDs under `docs/requirements/milestones/`:
 ```text
 docs/requirements/
   INDEX.md                    # Human TOC: milestones → epics → stories
-  WBS.csv
+  WBS.md
   milestones/
     M1/
       milestone.md
@@ -233,6 +242,7 @@ docs/requirements/
 | **Development** | `docs/development/` | Build scripts, **CI/CD**, **quality gates**, tasks, style—when root README is too large. |
 | **Agents & automation (optional)** | **`blueprints/agents/`** (frozen) + **`agents/`** (mutable) | Container images, Compose, and **recipes** for repeatable automation (incl. browser/E2E); complements IDE/LLM workflows under review policy. Handbook HTML: generated to `blueprints/website/` (see `generator/build-handbook.py`); canonical Markdown: [`blueprints/agents/STRUCTURE.md`](../agents/STRUCTURE.md). |
 | **Testing / test plans** | `docs/testing/` (optional); or story spec + [`templates/TEST-PLAN.template.md`](templates/TEST-PLAN.template.md) | Scope-level test strategy; per-milestone or release plan when useful. |
+| **Defects / RCA / test impact** | `docs/defects/**` (optional); prompt [`templates/forge/forge-defect-triage-rca-test-impact.prompt.md`](templates/forge/forge-defect-triage-rca-test-impact.prompt.md) | Confirmed bugs, root-cause analysis, ISTQB-oriented regression design; link ids in `docs/requirements/TRACEABILITY.md`. |
 | **Release & compliance** | `docs/release/` | Distribution, privacy disclosures, signing *process* (not keys). |
 
 ---
@@ -256,6 +266,7 @@ Full detail: [`SDLC.md`](SDLC.md). **PDLC context:** [`blueprints/pdlc/PDLC-SDLC
 ## 5. Conventions
 
 - **Markdown** for prose; **CSV** for matrices when you want diffs and spreadsheet round-trip.
+- **Markdown-canonical profile (optional):** Some teams treat **only Markdown** as the **canonical** system of record (tables/lists instead of CSV matrices; normalized imports as `.md`). Declare that choice in `docs/PROJECT.md` and follow [`methodologies/markdown-canonical-workspace-policy.md`](methodologies/markdown-canonical-workspace-policy.md). This does **not** remove the **`blueprints/`** submodule’s role as **framework-only** — project history stays in **`docs/`**, **`forge/`**, **`forge-logs/`**, etc.
 - **Filenames:** Lowercase-with-hyphens for general guides; requirement filenames follow your **STRUCTURE-PROPOSAL** (or equivalent).
 - **Links:** Prefer **relative** paths from `docs/` so links work in Git hosting and editors.
 - **Secrets:** Never commit credentials, private keys, or signing passwords—document *where* to configure them only.
@@ -265,7 +276,7 @@ Full detail: [`SDLC.md`](SDLC.md). **PDLC context:** [`blueprints/pdlc/PDLC-SDLC
 ## 6. Evolution
 
 - **Small team / single deliverable:** `blueprints/sdlc/` + `sdlc/` + slim `docs/requirements/` + root `README` may be enough; add `blueprints/product/` + `docs/product/` when you want a structured functional spec.  
-- **Multiple products or long horizons:** Add milestone namespaces (`M1`, `M2`), stricter WBS, more ADRs; keep **`blueprints/sdlc/`** unchanged per [`POLICY.md`](POLICY.md).  
+- **Multiple products or long horizons:** Add milestone namespaces (`M1`, `M2`), stricter WBS, more ADRs; keep **`blueprints/sdlc/`** unchanged per [Blueprint policy](POLICY.md).  
 - **Monorepo:** One `blueprints/` folder (with `sdlc/` inside it, etc.) at repo root; per-package `docs/` or `requirements/` as needed.  
 - **Containerized automation:** Add **`blueprints/agents/`** once; keep **`agents/`** recipes scoped per package or document mount paths in `docs/development/`.
 

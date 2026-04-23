@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Product management — body of knowledge
 
 ## Document map
@@ -5,7 +12,7 @@
 | Section | Contents |
 |---------|----------|
 | [1. Vision and strategy](#1-vision-and-strategy) | Problem space, opportunity identification, strategic positioning, vision articulation |
-| [2. Roadmap management](#2-roadmap-management) | Planning horizons, outcome vs feature roadmaps, alignment cadence |
+| [2. Roadmap management](#2-roadmap-management) | Planning horizons, outcome vs feature roadmaps, alignment cadence, optional baseline vs target dates |
 | [3. Prioritization frameworks](#3-prioritization-frameworks) | RICE, ICE, weighted scoring, opportunity cost, value vs effort |
 | [4. Market analysis](#4-market-analysis) | TAM/SAM/SOM, segmentation, market dynamics, regulatory landscape |
 | [5. Competitive intelligence](#5-competitive-intelligence) | Positioning maps, feature parity, differentiation, moats, battlecards |
@@ -67,6 +74,10 @@ Product management begins with the **problem space** — understanding customer 
 - **Input sources:** Customer feedback, analytics (P5), sales/CS signals, competitive moves, technology shifts, regulatory changes.
 - **Stakeholder alignment:** Share roadmap updates proactively; explain **why** items moved, not just **what** changed.
 - **Anti-pattern — the feature graveyard:** Items that remain on the roadmap for 3+ quarters without progress should be explicitly killed or re-scoped. Stale items erode roadmap credibility.
+
+### Baseline vs target dates (optional)
+
+When stakeholders need **commitment signals** or you want to see **schedule drift**, keep two ranges per epic or theme: an **initial** (baseline) start/end and a **target** (current plan) start/end. Update targets when scope or sequencing shifts; retain or archive the baseline so reviews can compare “what we thought then” to “what we plan now.” This complements horizon-only roadmaps (`NOW` / `NEXT` / `LATER`) and ordinal milestone windows (`M1.1`–`M1.2`). The [`ROADMAP.template.md`](../../sdlc/templates/ROADMAP.template.md) optional epic table includes columns for these ISO dates; tooling (e.g. Forge Lenses) can visualize both ranges side by side when populated.
 
 ### Roadmap and Forge integration
 

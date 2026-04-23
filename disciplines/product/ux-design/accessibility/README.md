@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Accessibility (blueprint)
 
 **Purpose:** Deep, **project-agnostic** guidance for building accessible digital products. Covers standards, implementation patterns, testing approaches, and organizational practices.

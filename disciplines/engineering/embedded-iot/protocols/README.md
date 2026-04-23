@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # IoT communication protocols (blueprint)
 
 **Purpose:** Protocol selection guidance and implementation considerations for IoT device communication. Each protocol entry covers its architecture, message format, QoS, security, power profile, and best-fit scenarios.

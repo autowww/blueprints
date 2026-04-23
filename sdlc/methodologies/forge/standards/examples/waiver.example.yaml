@@ -1,0 +1,17 @@
+# Fictional example — consuming repo: forge/waivers/W-2026-0042.yaml
+# Validate against: blueprints/sdlc/methodologies/forge/standards/schemas/waiver-record.schema.json
+
+waiver_id: "W-2026-0042"
+control_id: "ORG-SEC-014"
+status: "approved"
+work_item_refs: ["M2E4S1T8"]
+rationale: >
+  Break-glass admin for 72h during IdP outage; incident commander approved.
+  Compensating controls: IP allow-list, session recording, post-incident review.
+compensating_controls:
+  - "IP allow-list to bastion only"
+  - "Session logs retained 90 days"
+expires_at: "2026-04-14"
+approved_by_role: "CISO delegate"
+approval_ref: "GRC-44821"
+ember_log_ref: "ember-logs/2026-04-11.md#break-glass"

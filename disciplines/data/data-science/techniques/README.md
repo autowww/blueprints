@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # ML techniques (blueprint)
 
 **Purpose:** Catalog of **machine learning techniques** — algorithm families and deep-dive guides on **features** and **evaluation**. Each category describes the approach, common algorithms, trade-offs, and use cases.

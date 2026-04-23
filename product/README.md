@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Product functional documentation blueprint
 
 This folder is a **reusable, product-agnostic** package: **what the product does** for users and stakeholders (capabilities, journeys, behavioral rules)—not delivery process (see **`blueprints/sdlc/`**) and not granular backlog specs (see consuming repo’s **`docs/requirements/`** when present).

@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Data processing engines & platforms
 
 **Purpose:** Project-agnostic guide to selecting and reasoning about **batch**, **stream**, and **interactive** processing engines — Spark, Flink, Kafka ecosystem, Beam, and common cloud managed services.

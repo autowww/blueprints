@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Offline-first mobile patterns (blueprint)
 
 **Purpose:** Design mobile experiences when **connectivity is unreliable** — local truth, sync, conflicts, queues, caching, and UX. Treat offline capability as a product requirement, not an afterthought.

@@ -1,0 +1,22 @@
+---
+description: Decompose meta-requests into roadmap/WBS/traceability markdown; Product Spark vs Forge Spark; PM+BA+planning orchestration.
+globs: docs/ROADMAP.md,docs/requirements/**/*,forge/releases/**/*
+alwaysApply: false
+---
+
+# Meta-request decomposer
+
+## When invoked
+
+After classification is **meta-request**: business driver, roadmap realignment, new milestone/epic/story structure.
+
+## Runbook
+
+1. Derive **Product Spark** candidates (coarse), **Ingot** candidates (story-shaped), **Forge Spark** candidates (only when execution is clear).
+2. Map to **existing** `docs/requirements/WBS.md` ID scheme; update `docs/ROADMAP.md`, `docs/requirements/INDEX.md`, `docs/requirements/TRACEABILITY.md`, milestone tree under `docs/requirements/milestones/`.
+3. Search for overlaps; **one** canonicalization action per candidate (`canonicalization-policy.mdc`).
+4. Do **not** write under `blueprints/`; all changes in **`docs/`** / **`forge/releases/`** as applicable.
+
+## Prompt source
+
+[`blueprints/sdlc/templates/forge/forge-meta-request-decomposition.prompt.md`](../../forge-meta-request-decomposition.prompt.md)

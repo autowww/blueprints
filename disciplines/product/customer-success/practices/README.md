@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Customer Success — practice guides (index)
 
 These **project-agnostic** guides support **proactive customer management**: instrumenting journeys, scoring risk before renewal crises, and running retention and win-back with clear metrics. They extend the conceptual body of knowledge in [**CUSTOMER-SUCCESS.md**](../CUSTOMER-SUCCESS.md) (principles, lifecycle, PDLC/SDLC). Use them for topic depth; keep implementation specifics in project docs (footer).

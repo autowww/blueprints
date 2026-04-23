@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Compliance frameworks (redirect)
 
 > **This content has moved.** Compliance is now a standalone cross-cutting discipline.

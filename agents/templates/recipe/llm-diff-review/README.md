@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Template recipe: `llm-diff-review`
 
 **Purpose:** Optional **repeatable** job that sends a **unified diff** to an **OpenAI-compatible** chat-completions HTTP API and writes a **Markdown review** to a file or stdout. Use for **CI artifacts** or **local** pre-review when an IDE assistant is not available.
@@ -43,4 +50,4 @@ Plain **Markdown** suitable to attach as a CI artifact or paste into a PR. Revie
 ## See also
 
 - [`ORCHESTRATION.md`](../../ORCHESTRATION.md) — recipe conventions.  
-- Forge **Cursor** flow: [`blueprints/sdlc/templates/forge/cursor-skills/run-engineering-ai-code-review/SKILL.md`](../../../../sdlc/templates/forge/cursor-skills/run-engineering-ai-code-review/SKILL.md).
+- Forge **Cursor** flow: [SKILL.md on GitHub](https://github.com/autowww/blueprints/blob/main/sdlc/templates/forge/cursor-skills/run-engineering-ai-code-review/SKILL.md).

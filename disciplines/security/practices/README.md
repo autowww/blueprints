@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Security practices (blueprint)
 
 **Purpose:** Deep, **project-agnostic** guides for core security practices. Each practice describes its principles, methodology, tooling, and integration with the development lifecycle.

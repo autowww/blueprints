@@ -15,7 +15,7 @@ Choosing **which adoption story** matches you (ICP-style paths A / B / C) — no
 
 ForgeSDLC treats delivery as **human-governed, agent-assisted** work: Blueprints gives you the **traceable documentation baseline**; Forge and Versonas add **governed** review and execution patterns. This page is about **which adoption slice** to start with, not every command.
 
-Blueprints is a **reusable documentation framework**: SDLC, PDLC, disciplines, and Forge / Versona patterns you consume as a **Blueprints tree** in your repository (often a submodule named `blueprints/`). Your **project** work lives in **`sdlc/`**, **`docs/`**, **`forge/`** at the repository root — not in edits to the frozen baseline inside the Blueprints tree (see [Policy](POLICY.md)).
+Blueprints is a **reusable documentation framework**: SDLC, PDLC, disciplines, and Forge / Versona patterns you consume as a **Blueprints tree** in your repository (often a submodule named `blueprints/`). Your **project** work lives in **`sdlc/`**, **`docs/`**, **`forge/`** at the repository root — not in edits to the frozen baseline inside the Blueprints tree (see [Blueprint policy](POLICY.md)).
 
 **Hands-on first hour:** [Quickstarts — First hour](quickstarts/first-hour.md).
 
@@ -31,7 +31,7 @@ Blueprints is a **reusable documentation framework**: SDLC, PDLC, disciplines, a
 
 ## When to use it
 
-Use this page **before** you deep-read methodology folders or maintainer docs. Pick a **path** below, then run the [first hour](quickstarts/first-hour.md) or the full [setup checklist](SETUP.md).
+Use this page **before** you deep-read methodology folders or maintainer docs. Pick a **path** below, then run the [first hour](quickstarts/first-hour.md) or the full [Project setup checklist](SETUP.md).
 
 ## Prerequisites
 
@@ -61,8 +61,8 @@ alt: Adoption path choice — match your situation to path A, B, or C from the t
 
 | Area | What you add or own in *your* repo | What stays upstream (do not fork casually) |
 |------|-------------------------------------|--------------------------------------------|
-| Interpretations, principles, “how we run it” | Project **`sdlc/`**, **`docs/`**, optional **`forge/`** | **`blueprints/sdlc/`** baseline text — see [Policy](POLICY.md) |
-| Tooling and editor alignment | Cursor rules, optional Forge tasklets — see [SETUP](SETUP.md) | Templates in **`blueprints/`** you **copy** or sync; not edited in place for product specifics |
+| Interpretations, principles, “how we run it” | Project **`sdlc/`**, **`docs/`**, optional **`forge/`** | **`blueprints/sdlc/`** baseline text — see [Blueprint policy](POLICY.md) |
+| Tooling and editor alignment | Cursor rules, optional Forge tasklets — see [Project setup checklist](SETUP.md) | Templates in **`blueprints/`** you **copy** or sync; not edited in place for product specifics |
 | Submodule pointer | Your commit moves **`blueprints/`** to a new SHA | Upstream **`autowww/blueprints`** remains the canonical framework |
 
 ## Risks and trade-offs (chooser)

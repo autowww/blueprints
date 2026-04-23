@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Gang of Four (GoF) design patterns
 
 The *Gang of Four* catalog ([Gamma et al.](https://en.wikipedia.org/wiki/Design_Patterns)) documents **23 object-oriented patterns** grouped by **intent**:

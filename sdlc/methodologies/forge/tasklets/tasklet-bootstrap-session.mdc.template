@@ -1,0 +1,42 @@
+---
+description: Forge tasklet — emit session folder checklist and SESSION.md frontmatter stub (no shell execution).
+globs: 
+alwaysApply: false
+---
+
+# Tasklet: bootstrap session
+
+## Operation
+
+Produce a **copy-paste-ready** session bootstrap: paths, frontmatter keys, and folder list for `forge-logs/versona/<actor>/<session-id>/`.
+
+## Output (use exactly this shape)
+
+```markdown
+## Tasklet output: bootstrap session
+
+**Suggested session_id:** …
+**Actor:** …
+**Root:** forge-logs/versona/<actor>/<session-id>/
+
+### Folders
+- inputs/
+- outputs/
+- diagrams/ (optional)
+
+### SESSION.md frontmatter (YAML stub)
+\`\`\`yaml
+session_id: …
+started_at: …
+work_item_refs: []
+work_item_kind: spark
+\`\`\`
+
+### Next step
+Run Skill **start-versona-session** or `forge-versona-session.sh` from repo root if available.
+```
+
+## Rules
+
+- **Do not** invent secrets or real actor PII; use placeholders.
+- Align with [`VERSONA-FRAMEWORK.md`](../versona/VERSONA-FRAMEWORK.md) §7 and [`ARTIFACT-CONTRACTS.md`](../versona/ARTIFACT-CONTRACTS.md) §3.2.

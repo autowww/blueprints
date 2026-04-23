@@ -74,7 +74,7 @@ Follow the three pages in order (or jump to the phase you skipped after [first h
 ## How to verify success
 
 - After Bootstrap: `test -f blueprints/sdlc/README.md` from repo root; project `sdlc/README.md` exists.
-- After Forge and Cursor: `sync-forge-cursor-rules.sh check` passes when you use the recommended preset (if applicable).
+- After Forge and Cursor: `sync-forge-cursor-rules.sh check` passes when you use the recommended preset (if applicable); `status --preset recommended` shows no drift. Process-first verification walkthrough: [`methodologies/forge/setup/VERSONA-VERIFICATION.md`](methodologies/forge/setup/VERSONA-VERIFICATION.md). Migration from older installs: [`methodologies/forge/setup/VERSONA-PROCESS-MODEL-MIGRATION.md`](methodologies/forge/setup/VERSONA-PROCESS-MODEL-MIGRATION.md).
 - After optional product-led: artifacts per the linked methodology docs.
 
 ## What to do next

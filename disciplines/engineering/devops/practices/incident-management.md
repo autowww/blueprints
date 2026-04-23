@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Incident management & response (blueprint)
 
 **Incident management** is the disciplined process for detecting, responding to, and learning from production-impacting events. Organizational readiness — clear severity, roles, communication, and follow-through — matters as much as tooling. This guide complements observability and SLO practices in [`sre-observability.md`](sre-observability.md) and the cultural framing in [`DEVOPS.md`](../DEVOPS.md).

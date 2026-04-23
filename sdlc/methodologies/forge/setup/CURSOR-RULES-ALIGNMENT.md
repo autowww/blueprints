@@ -43,12 +43,20 @@ Thin wrappers still work: [`install-versona-cursor-rules.sh`](install-versona-cu
 | Preset | Effect |
 |--------|--------|
 | *(omit)* / `--preset minimal` | Copy **only** `versona-*.mdc` implied by `forge.config.yaml` (same as pre-preset behavior) |
-| `--preset recommended` | Minimal + standard Forge five (`forge-daily`, `forge-planning`, `forge-versona`, `forge-setup`, `forge-product-manager`) + `versona-all`, `versona-project-setup`, `versona-roadmap-gate`, `versona-cursor-rules-sync` |
+| `--preset recommended` | Minimal + standard Forge five (`forge-daily`, `forge-planning`, `forge-versona`, `forge-setup`, `forge-product-manager`) + `versona-all`, `versona-project-setup`, `versona-roadmap-gate`, **`versona-forge-sdlc`** (methodology orchestrator), `versona-cursor-rules-sync`, **`versona-sampling`** (meta-Versona aligned with tasklets; idempotent with `install-tasklets.sh`) |
 | `--preset full` | Recommended + family aggregators (`versona-family-*`) + `versona-generic` |
 
 **Additive:** `--with-*` flags on `sync` / `diff` / `status` **add** on top of the chosen preset.
 
 After **`git submodule update`** on `blueprints/`, re-run `sync` (use **`--force`** only after reviewing local globs/edits and `diff` / `status`).
+
+### Repo-level agent instructions (`AGENTS.md`) and enriched Versona layout
+
+**Cursor rules** (installed `.mdc` files) carry **Versona identity** and invocation behavior. **AGENTS.md** at the repository root (if present) is a sensible place for **repo-wide** defaults that rules should not duplicate: e.g. whether `forge-logs/versona-track/` is enabled, gitignore policy for transcripts, and **compliance** overrides that supersede methodology. **Skills** hold short repeatable workflows; **subagents** run narrow tasks with a fixed output shape. **Recipes** under `agents/recipes/` own execution-plane steps. See [`../VERSONA-OPERATING-MODEL.md`](../VERSONA-OPERATING-MODEL.md) §3.
+
+### Team Rules, registries, and standards precedence
+
+**Cursor Team Rules** (org/enterprise) are the preferred surface for **L1–L2** controls that must **always** apply: link to policy portals or GRC IDs instead of pasting full standard text. Pair with a consuming-repo **`forge/standards-registry.yaml`** (JSON Schema: [`../standards/schemas/standards-registry.schema.json`](../standards/schemas/standards-registry.schema.json)) so Versonas can cite **`control_id`** values in **§5.1** traceability. Precedence order (external → org → repo → Forge → discipline → heuristics): [`../standards/precedence.md`](../standards/precedence.md). Per-Versona **standards profiles**: [`../standards/VERSONA-STANDARDS-MATRIX.md`](../standards/VERSONA-STANDARDS-MATRIX.md).
 
 ### `status` and `diff`
 
@@ -71,6 +79,12 @@ Requires **Python 3** and **PyYAML** (`pip install pyyaml`). If PyYAML is missin
 
 After each successful **`sync`** (non–dry-run `install`), the tool writes **`.forge/cursor-rules-manifest.json`** at the **repository root** unless you pass **`--no-write-manifest`**. It records a UTC **`generated_at`**, optional **`blueprints_commit`** (`git rev-parse HEAD` in the resolved `blueprints/` root when it is a git work tree), the **`preset`** used (if any), and for each file in the install job list: **`name`**, **`label`**, **`source_sha256`**, **`installed_sha256`**. Compare `source` vs `installed` to spot drift; compare `blueprints_commit` across machines to confirm submodule alignment.
 
+#### Manifest split: Cursor rules vs adoption hints (process-first)
+
+**Do not** overload **`cursor-rules-manifest.json`** with Skills, tasklets, or recipe paths. That file is a **per-rule SHA ledger** for `.cursor/rules/*.mdc` (and standard Forge rules) only—stable for CI and drift checks.
+
+**Companion file (opt-in):** pass **`--write-adoption-manifest`** on **`sync`** to also write **`.forge/versona-adoption-manifest.json`**. It holds **`schema_version`**, **`generated_at`**, **`blueprints_commit`**, **`preset_used`**, a pointer to **`cursor-rules-manifest`**, and **static paths** for copying **Skills** (`sdlc/templates/forge/cursor-skills/`), running **`tasklets/install-tasklets.sh`**, and **recipes** (`agents/ORCHESTRATION.md`). It is **not** a second SHA manifest and is safe to omit in minimal pipelines. See [`VERSONA-VERIFICATION.md`](VERSONA-VERIFICATION.md) for an end-to-end check that uses **`status` / `diff` / `check`** plus optional adoption steps.
+
 ## Reference: granular flags (`sync` / install)
 
 Use these with **`sync-forge-cursor-rules.sh sync`** (or `install-versona-cursor-rules.sh`, which delegates to `sync`).
@@ -82,12 +96,14 @@ Use these with **`sync-forge-cursor-rules.sh sync`** (or `install-versona-cursor
 | `--force` | Overwrite existing files |
 | `--dry-run` | Print source → dest |
 | `--no-write-manifest` | Skip writing `.forge/cursor-rules-manifest.json` |
+| `--write-adoption-manifest` | Also write `.forge/versona-adoption-manifest.json` (Skills / tasklets / recipes pointers only; see [Manifest split](#manifest-split-cursor-rules-vs-adoption-hints-process-first)) |
 | `--with-project-setup` | Also `versona-project-setup.mdc` |
 | `--with-roadmap-gate` | Also `versona-roadmap-gate.mdc` |
+| `--with-forge-sdlc` | Also `versona-forge-sdlc.mdc` (Forge SDLC A–F orchestration; included in **recommended** / **full**) |
 | `--with-all-routing` | Also `versona-all.mdc` |
 | `--with-cursor-rules-sync` | Also `versona-cursor-rules-sync.mdc` |
 | `--with-family-product` / `--with-family-engineering` / `--with-family-data` | Family aggregators |
-| `--with-sampling` | Also `versona-sampling.mdc` (often redundant with `tasklets/install-tasklets.sh`) |
+| `--with-sampling` | Also `versona-sampling.mdc` (**included in `recommended` / `full`**; still useful if you use `minimal` + tasklets only) |
 | `--with-generic` | Also `versona-generic.mdc` |
 | `--with-standard-forge-rules` | Also `forge-daily`, `forge-planning`, `forge-versona`, `forge-setup`, `forge-product-manager` from `sdlc/templates/forge/cursor-rules/` |
 
@@ -141,7 +157,7 @@ Usually copied from `blueprints/sdlc/templates/forge/cursor-rules/` (included in
 
 ## Tasklets (optional)
 
-Run `blueprints/sdlc/methodologies/forge/tasklets/install-tasklets.sh` for example **tasklets** + **Sampling Versona** — not controlled by `forge.config.yaml` today.
+Run `blueprints/sdlc/methodologies/forge/tasklets/install-tasklets.sh` for **cognition tasklets** (`forge-tasklet-*.mdc`) — not controlled by `forge.config.yaml` today. **`versona-sampling.mdc`** is installed by **`--preset recommended`** (and **`full`**); the tasklet installer remains the way to add the **tasklet** rules themselves.
 
 ## Optional Versonas (not driven by `forge.config.yaml`)
 
@@ -149,7 +165,8 @@ These templates are **not** mapped from `versona.*` YAML flags today. Use **`--p
 
 | Template (source) | Installed rule (example) | Purpose |
 |----------|--------------------------|---------|
-| `catalog/meta/versona-sampling.mdc.template` | `versona-sampling.mdc` | Demo meta-Versona + tasklets (often installed via `install-tasklets.sh`) |
+| `catalog/meta/versona-sampling.mdc.template` | `versona-sampling.mdc` | Meta-Versona for tasklet-style flows; **`recommended` / `full`** preset, or `install-tasklets.sh` + `minimal` if you prefer YAML-only Versonas first |
 | `catalog/workflow/versona-project-setup.mdc.template` | `versona-project-setup.mdc` | Repo bootstrap checklist and gap analysis; trigger **`setup`** or `@versona-project-setup` |
 | `catalog/workflow/versona-roadmap-gate.mdc.template` | `versona-roadmap-gate.mdc` | Roadmap quality gate playbook |
+| `catalog/workflow/versona-forge-sdlc.mdc.template` | `versona-forge-sdlc.mdc` | **Forge SDLC methodology orchestrator** (A–F phase plans, merge owners, trace); see [`../orchestration/README.md`](../orchestration/README.md) |
 | `catalog/workflow/versona-cursor-rules-sync.mdc.template` | `versona-cursor-rules-sync.mdc` | Chat playbook: commands to install/diff Cursor Versona rules |

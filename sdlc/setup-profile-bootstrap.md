@@ -19,7 +19,7 @@ As the first block of the full checklist after [First hour](quickstarts/first-ho
 
 ## Prerequisites
 
-- **`blueprints/`** at the **repository root** (see [SETUP — Prerequisites](SETUP.md#prerequisites)).
+- **`blueprints/`** at the **repository root** (see [Prerequisites (project setup checklist)](SETUP.md#prerequisites)).
 
 ## Steps
 

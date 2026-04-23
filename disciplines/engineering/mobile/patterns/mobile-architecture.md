@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Mobile application architecture (blueprint)
 
 **Purpose:** Project-agnostic patterns for structuring mobile codebases — separation of concerns, data flow, navigation, dependency injection, modularization, and testing. Use this when choosing or evolving an architecture before codifying decisions in ADRs.

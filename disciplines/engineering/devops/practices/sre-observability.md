@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # SRE and observability (blueprint)
 
 Site Reliability Engineering (SRE) and observability are complementary practices that ensure production systems are reliable, understandable, and continuously improving. SRE provides the **operational framework** (SLOs, error budgets, toil reduction); observability provides the **technical capability** to understand system behavior.

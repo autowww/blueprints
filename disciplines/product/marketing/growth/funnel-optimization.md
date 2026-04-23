@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Growth Engineering & Funnel Optimization
 
 **Overview:** Growth engineering treats the funnel as a **system** — stages, conversion rates, guardrails, and feedback loops — improved through **prioritized experiments** rather than one-off campaigns. The goal is repeatable learning: each change should be falsifiable, measured against pre-registered metrics, and safe for users and the brand.

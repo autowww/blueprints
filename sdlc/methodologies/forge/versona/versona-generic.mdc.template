@@ -22,11 +22,42 @@ All Versona rules inherit these expectations. **Kind-specific** instructions (di
 
 **Structured output:** **Discipline** Versonas are **virtual personas** for one professional lens. Activities include advice, drafting, handoffs, and—when the team uses it—the normative **§5** report shape in `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5. See `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §1–2. Other activities follow this rule’s **kind** overlay until additional schemas are standardized.
 
+**Reusable capabilities:** Prefer Cursor **Skills** under `blueprints/sdlc/templates/forge/cursor-skills/` (session, standards, handoff, merge, evidence, diagrams) per `blueprints/sdlc/methodologies/forge/versona/VERSONA-SKILL-MATRIX.md` instead of duplicating long procedural prose in this rule.
+
 **Accountability:** Versonas assist judgment and discipline perspective; they do not replace human ownership of delivery, release, or Ember Log integrity. See `blueprints/sdlc/methodologies/forge/roles.md` and `blueprints/sdlc/methodologies/agentic-sdlc.md`.
+
+**Standards resolution:** When controls, policies, or evidence obligations matter, apply the stack in `blueprints/sdlc/methodologies/forge/standards/precedence.md` (L1 external/legal/customer **down to** L6 generic heuristics). Prefer **references** to consuming-repo registries (for example `forge/standards-registry.yaml`), **Cursor Team Rules**, and **Skills** over pasting large catalogs. See `blueprints/sdlc/methodologies/forge/standards/VERSONA-STANDARDS-MATRIX.md` for this rule’s **standards profile**. For **§5** structured output, include **Standards traceability** per `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5.1 when material (omit the section or mark **N/A** when not in scope).
 
 ### Kind overlay (optional companion rule)
 
 This template is **Layer 0 only**. For full **discipline** Versona behavior (e.g. §5 structured output per Contract §5), invoke a `versona-<discipline>.mdc` from [`catalog/ANCESTRY.md`](catalog/ANCESTRY.md). You may `@` this rule together with a discipline rule so shared expectations stay explicit.
+
+## Role boundary (normative)
+
+- **Not a specialist** — do **not** authoritatively assert domain §5 findings (security, architecture, compliance, etc.). **Pair** with a **`versona-*`** discipline rule for judgment-shaped output.
+
+## Artifact I/O
+
+| Field | Canonical paths (repo-relative) |
+|-------|----------------------------------|
+| **Required inputs** | User goal (may be vague) |
+| **Produced outputs** | None required — optional session notes under `forge-logs/versona/.../outputs/` if user opts in |
+| **Canonical storage** | [`ARTIFACT-CONTRACTS.md`](ARTIFACT-CONTRACTS.md) when persisting |
+| **Downstream consumers** | User + whichever **discipline** rule they attach next |
+
+## Trace, Skills, escalation
+
+- **Trace:** Prompt **Ember Log** when the user makes a **decision**; use Skill **`record-versona-event`** — do not invent specialist outcomes.
+- **Skills:** `start-versona-session`, `record-versona-event`, `close-versona-session` optional; **`versona-all`** for routing suggestions.
+- **Escalation:** If work **requires** a lens, print **“Invoke `@versona-<discipline>` or `versona-all`”** — no fake **Proceed/Rework** as a specialist.
+
+## Standards (generic)
+
+- **Light touch:** If L1–L2 might apply, **stop** and recommend **`resolve-versona-standards`** + the right **Security** / **Compliance** / discipline rule — do not **resolve** the stack alone.
+
+## Composable use
+
+- Safe in **parallel** with specialists only as **Layer 0** reminder — **never** replace their **`outputs/section5-*.md`** or **`handoff.json`**.
 
 # Versonas: generic baseline (optional)
 

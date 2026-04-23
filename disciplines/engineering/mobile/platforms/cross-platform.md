@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Cross-platform mobile development (blueprint)
 
 **Purpose:** Compare **single-codebase** approaches — React Native, Flutter, Kotlin Multiplatform (KMP), hybrid shells, and PWAs — for sharing logic and UI across iOS and Android (and sometimes web/desktop).

@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Design patterns — index
 
 **Pattern thinking** means naming recurring **forces** (change, scale, integration) and matching proven structures — without using the catalog as a mandatory checklist. Prefer simple modules until **duplication proves the force**.

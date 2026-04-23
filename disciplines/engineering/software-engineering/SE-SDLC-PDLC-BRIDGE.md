@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Software engineering ↔ SDLC ↔ PDLC bridge
 
 ## Purpose

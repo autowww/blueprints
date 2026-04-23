@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Model evaluation, selection & validation
 
 **Purpose:** Project-agnostic reference for **measuring**, **comparing**, and **validating** models beyond a single accuracy number — metrics, splits, tuning, fairness, explainability, and production experimentation.

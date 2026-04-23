@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # MLOps: Machine Learning Operations
 
 **Purpose:** Project-agnostic reference for **MLOps** — applying DevOps-style practices to machine learning systems so models are **reproducible, deployable, observable, and maintainable**.

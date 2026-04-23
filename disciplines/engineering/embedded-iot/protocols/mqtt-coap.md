@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # MQTT & CoAP: Application-Layer IoT Protocols
 
 **Purpose:** Compare the two dominant **application-layer** protocols for IoT — **MQTT** (pub/sub over TCP) and **CoAP** (REST-like over UDP) — so teams can choose transports, QoS, and security patterns that match device constraints and traffic shape.

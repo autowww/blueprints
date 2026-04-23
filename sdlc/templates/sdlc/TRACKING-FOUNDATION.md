@@ -111,7 +111,7 @@ The **foundation** is generic: a **work unit** is any issue, REQ, or ticket id y
 |----------------|-----------------|
 | ID scheme | `docs/requirements/STRUCTURE-PROPOSAL.md` (or your naming doc) |
 | Specs & milestones | `docs/requirements/INDEX.md`, `docs/requirements/milestones/` |
-| WBS rollup | `docs/requirements/WBS.md` / `WBS.csv` when used |
+| WBS rollup | `docs/requirements/WBS.md` |
 | Roadmap | `docs/ROADMAP.md` when used |
 
 **Tracking** docs describe *how* to attribute commits to work units; **requirements** docs define *what* is planned and how ids are named. Link commits to ids with message conventions your team adopts.

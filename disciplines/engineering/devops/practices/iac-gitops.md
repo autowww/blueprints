@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Infrastructure as Code & GitOps (blueprint)
 
 **Infrastructure as Code (IaC)** treats infrastructure definition as software: versioned, reviewed, and applied by automation. **GitOps** extends that idea by using Git as the authoritative desired state and reconciling live systems to that state. Together they reduce drift, improve auditability, and align delivery with [`ci-cd.md`](ci-cd.md) pipelines.

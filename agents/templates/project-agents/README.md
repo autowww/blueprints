@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Mutable `agents/` workspace (seed)
 
 Copy the contents of this folder to **`agents/`** at repository root (sibling to `blueprints/agents/`).

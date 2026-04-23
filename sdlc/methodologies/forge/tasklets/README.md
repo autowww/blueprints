@@ -27,6 +27,8 @@ key: swimlane
 alt: Diagram
 ```
 
+**Note:** **`versona-sampling.mdc`** ships with **`sync-forge-cursor-rules.sh sync --preset recommended`** (process-first default). This installer adds the **`forge-tasklet-*.mdc`** cognition rules; both layers can coexist.
+
 ## Install (project root)
 
 From a repository that already contains the `blueprints/` submodule (run at **repository root**):
@@ -56,7 +58,15 @@ bash blueprints/sdlc/methodologies/forge/tasklets/install-tasklets.sh /path/to/r
 | `.cursor/rules/forge-tasklet-extract-assumptions.mdc` | Pull explicit/implicit assumptions from text or context |
 | `.cursor/rules/forge-tasklet-list-unknowns.mdc` | List unknowns, missing evidence, unresolved decisions |
 | `.cursor/rules/forge-tasklet-quick-triage.mdc` | Short severity triage table (max five signals) |
+| `.cursor/rules/forge-tasklet-route-request.mdc` | Suggest `@versona-*` routing table for a goal + work item |
+| `.cursor/rules/forge-tasklet-bootstrap-session.mdc` | Session folder + SESSION.md frontmatter stub |
+| `.cursor/rules/forge-tasklet-check-standards.mdc` | L1–L6 applicability checklist (not legal advice) |
+| `.cursor/rules/forge-tasklet-log-event.mdc` | Classify event → Ember Log vs SESSION vs versona-track |
+| `.cursor/rules/forge-tasklet-merge-outputs.mdc` | Mechanical merge of pasted tasklet / §5 fragments |
+| `.cursor/rules/forge-tasklet-summarize-evidence.mdc` | Evidence path coverage map for verify/release |
 | `.cursor/rules/versona-sampling.mdc` | Demo **meta-Versona** that runs the three tasklets and merges output |
+
+**Skill matrix (which Versona uses which tasklet):** [`../versona/VERSONA-SKILL-MATRIX.md`](../versona/VERSONA-SKILL-MATRIX.md).
 
 After install, tune **`globs:`** in each `.mdc` for your repo (defaults are empty = manual / @-rule invocation).
 
@@ -66,7 +76,7 @@ See **[`versona-sampling.mdc.template`](../versona/catalog/meta/versona-sampling
 
 ## Relationship to execution-plane work
 
-Tasklets in this folder are **cognition-plane** (in-IDE LLM only). **Docker / browser / API** steps belong in [`blueprints/agents/`](../../../../agents/README.md) recipes; a Versona can reference those as **execution tasklets** with a manifest — see [`agents/docs/VERSONA-EXECUTION-TASKLETS.md`](../../../../agents/docs/VERSONA-EXECUTION-TASKLETS.md).
+Tasklets in this folder are **cognition-plane** (in-IDE LLM only). **Docker / browser / API** steps belong in [`blueprints/agents/`](../../../../agents/README.md) recipes; a Versona can reference those as **execution tasklets** with a manifest — see [`agents/docs/VERSONA-EXECUTION-TASKLETS.md`](../../../../agents/docs/VERSONA-EXECUTION-TASKLETS.md). **Tooling split** (Rules, AGENTS.md, Skills, subagents, recipes): [`../VERSONA-OPERATING-MODEL.md`](../VERSONA-OPERATING-MODEL.md) §3. **Shared Skills** (session, standards, handoff, merge, evidence, diagrams): [`../../../templates/forge/cursor-skills/`](../../../templates/forge/cursor-skills/) and [`../versona/VERSONA-SKILL-MATRIX.md`](../versona/VERSONA-SKILL-MATRIX.md).
 
 ## See also
 

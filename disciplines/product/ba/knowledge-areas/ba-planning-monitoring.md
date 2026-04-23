@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # BA Planning & Monitoring
 
 The governance knowledge area — defines **how** business analysis work is planned, organized, and monitored for a given initiative. It sets the foundation for all other knowledge areas.

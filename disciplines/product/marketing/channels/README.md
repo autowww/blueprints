@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Marketing channels — index
 
 **Multi-channel marketing** spreads acquisition, consideration, and retention work across complementary surfaces so no single algorithm change or budget cut defines the business. Blueprint guides here are **discipline-level**: how SEO, content, paid media, and social fit the funnel — not campaign copy or channel-specific runbooks for one product.

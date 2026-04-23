@@ -1,0 +1,23 @@
+---
+description: Direct execution — mint/update Forge Sparks, WBS task files, TRACEABILITY, and Charge (forge/charge.md); sequencing and Charge recommendation.
+globs: docs/requirements/**/*,forge/charge.md,forge/charge-archive/**/*,forge/journal/**/*
+alwaysApply: false
+---
+
+# Spark planner (Forge execution)
+
+## When invoked
+
+After classification is **direct execution**: implementation, fix, refactor, docs change with clear acceptance.
+
+## Runbook
+
+1. Split or merge **Forge Sparks** (WBS tasks, e.g. `M1E1S1T1`); link parent **Ingot** / story id.
+2. Update `docs/requirements/WBS.md`, task files under `docs/requirements/milestones/**/tasks/` (or team `sparks/`), `docs/requirements/TRACEABILITY.md`.
+3. **Charge:** stock path is **`forge/charge.md`**. Use `forge/current/CHARGE.md` **only** if `docs/PROJECT.md` defines that alias (scripts default to `forge/charge.md`).
+4. **Iteration context:** prefer `docs/ROADMAP.md` / WBS; use `forge/current/ITERATION.md` only if the repo documents it.
+5. Search for duplicate Sparks; canonicalize; recommend **next Charge** lines.
+
+## Prompt source
+
+[`blueprints/sdlc/templates/forge/forge-direct-execution-sparks-charge.prompt.md`](../../forge-direct-execution-sparks-charge.prompt.md)

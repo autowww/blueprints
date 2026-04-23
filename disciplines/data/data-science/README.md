@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Data science & machine learning
 
 Reusable, **project-agnostic** blueprint for **data science and machine learning** — the discipline of extracting knowledge from data and building predictive or generative models that create value.

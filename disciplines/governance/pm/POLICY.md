@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Blueprint policy — do not change casually
 
 This directory **`blueprints/disciplines/governance/pm/`** is the **frozen** PM package: project management conventions meant to be **reused and compared** across projects.

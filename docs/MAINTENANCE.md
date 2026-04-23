@@ -12,6 +12,8 @@ Blueprint `.md` files in **this** repository are the single source of truth. The
 
 There is **no** `generator/` directory in the **blueprints** repo on its own — the handbook build always runs from **blueprints-website** (or CI there) against a checkout of this Markdown.
 
+**Consumers (repos that embed `blueprints/`):** baseline edit rules and **`blueprints/`** vs project **`sdlc/`** are summarized for readers in [`sdlc/POLICY.md`](../sdlc/POLICY.md).
+
 **forge-lenses handbook:** The **blueprints-website** build also emits **`website/lenses/`** (hub, **Reference** handbook, tutorial) from the **`forge-lenses`** submodule — merged `docs/**/*.md` and `lenses/website/*.md`. That content is **not** in this repo; edit upstream in [autowww/forge-lenses](https://github.com/autowww/forge-lenses), then bump the submodule in blueprints-website and rebuild.
 
 ## Build workflow
@@ -62,6 +64,11 @@ blueprints-website/
 ## Content model
 
 See [`DESIGN-PRINCIPLES.md`](DESIGN-PRINCIPLES.md) for:
-- Frontmatter metadata schema (`tier`, `surfaces`, `cross_refs`)
-- 101/201/301 tiering guidelines
-- Cross-referencing policy between surfaces
+
+- **Public handbook governance** — blueprints.forgesdlc.com is a **curated** handbook, not a mirror of every `.md` file; `public_publish`, audience, tier, `nav_title`, `product_area`
+- **Manifest** — [`handbook-publish-manifest.yaml`](https://github.com/autowww/blueprints-website/blob/main/generator/handbook-publish-manifest.yaml) in **blueprints-website** (`include_globs` / `exclude_globs` relative to the `blueprints/` submodule)
+- 101/201/301 tiering and cross-surface linking
+
+Migration phases: [`PUBLIC-HANDBOOK-MIGRATION.md`](PUBLIC-HANDBOOK-MIGRATION.md).
+
+Optional CI: `python3 generator/validate_handbook_public_metadata.py` from **blueprints-website** (validates required frontmatter when `public_publish: true`).

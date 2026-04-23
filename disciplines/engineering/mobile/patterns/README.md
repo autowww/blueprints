@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Mobile patterns (blueprint)
 
 **Purpose:** Deep, **project-agnostic** guides for mobile-specific patterns. Each pattern describes its intent, platform considerations, implementation approaches, and testing.

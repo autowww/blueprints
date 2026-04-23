@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://blueprints.forgesdlc.com/schema/forge/graph-analytics-record.json",
+  "title": "Versona graph analytics record",
+  "description": "One JSON object per line in forge-logs/versona-track/graph-analytics.jsonl — either an event node or a directed edge for analytics tooling.",
+  "oneOf": [
+    { "$ref": "#/$defs/graphEvent" },
+    { "$ref": "#/$defs/graphEdge" }
+  ],
+  "$defs": {
+    "graphEvent": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["record_kind", "event_type", "occurred_at"],
+      "properties": {
+        "record_kind": { "const": "event" },
+        "event_id": {
+          "type": "string",
+          "description": "Opaque id for deduplication."
+        },
+        "event_type": {
+          "type": "string",
+          "enum": [
+            "session_started",
+            "session_ended",
+            "routing_recorded",
+            "handoff_emitted",
+            "artifact_manifest_published",
+            "ledger_intake",
+            "ember_log_linked",
+            "other"
+          ]
+        },
+        "occurred_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "session_id": { "type": "string" },
+        "ledger_entry_id": { "type": "string" },
+        "work_item_refs": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "payload_ref": {
+          "type": "string",
+          "description": "Repo-relative path to JSON/Markdown detail."
+        }
+      }
+    },
+    "graphEdge": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["record_kind", "edge_type", "from_ref", "to_ref", "occurred_at"],
+      "properties": {
+        "record_kind": { "const": "edge" },
+        "edge_id": {
+          "type": "string",
+          "description": "Opaque id for the edge."
+        },
+        "edge_type": {
+          "type": "string",
+          "enum": [
+            "session_parent",
+            "handoff",
+            "same_request",
+            "evidence_for_work_item",
+            "routing_to_session",
+            "other"
+          ]
+        },
+        "from_ref": {
+          "type": "string",
+          "description": "Stable string ref: session_id, ledger_entry_id, work_item_ref, or URI."
+        },
+        "to_ref": {
+          "type": "string",
+          "description": "Stable string ref for the target node."
+        },
+        "occurred_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "weight": {
+          "type": "number",
+          "description": "Optional numeric hint for graph algorithms."
+        }
+      }
+    }
+  }
+}

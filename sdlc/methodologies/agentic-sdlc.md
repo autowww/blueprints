@@ -73,6 +73,8 @@ Repos may adopt an optional **tracking foundation** under `sdlc/` (see [`templat
 
 ## Related blueprint guides
 
+- [Markdown-canonical workspace policy](markdown-canonical-workspace-policy.md) — **optional** repo profile: Markdown-only canonical artifacts, import normalization, canonicalization ledger rules, Forge vocabulary; use as **`AGENTS.md`** / prompt preamble when adopted.  
+- [Cursor history import prompt](../templates/forge/forge-cursor-history-import.prompt.md) — reconstruct **Cursor** history from `imports/cursor-history/raw/` into **`normalized/`**, **`IMPORT-LEDGER.md`**, and canonical **`docs/`** Markdown (idempotent).  
 - [Agentic coding standards](agentic-coding-standards.md) — **prescriptive** coding, review, verification, and security expectations for AI-assisted implementation (any methodology; Forge overlay included).  
 - [Spec-driven development](spec-driven-development.md) — **durable specs in the repo** (acceptance criteria, IDs) before large agent-driven edits; complements this guide. Handbook: [`../docs/spec-driven.html`](../docs/spec-driven.html).  
 - [Roles & archetypes](roles-archetypes.md) — human **accountability** vs **Contributor** identity when agents commit.  

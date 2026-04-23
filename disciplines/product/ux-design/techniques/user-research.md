@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # User research methods and practices
 
 **Purpose:** Project-agnostic guidance for understanding users through systematic inquiry — choosing methods, planning ethically, synthesizing findings, and turning evidence into design decisions.

@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Product functional documentation — structure
 
 This document defines **where product-functional prose can live**, **what kinds of documents to maintain**, and **how they relate to delivery specs**. Add files **as you go**; empty areas are intentional.

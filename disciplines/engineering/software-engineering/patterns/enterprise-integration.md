@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Enterprise Integration Patterns (EIP)
 
 *Enterprise Integration Patterns* (Hohpe & Woolf) names **recurring solutions for messaging-based integration**: how producers and consumers communicate through **channels**, how messages are **routed** and **transformed**, and how endpoints **adapt** protocols and reliability models. The ideas apply to queues, brokers, and log-based streaming alike.

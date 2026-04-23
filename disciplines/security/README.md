@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Security / Cybersecurity
 
 Reusable, **project-agnostic** blueprint for **Security** — the discipline of protecting digital products from unauthorized access, data breaches, and attacks through threat modeling, secure design, security testing, and compliance.

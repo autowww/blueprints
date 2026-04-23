@@ -1,13 +1,14 @@
 ---
-nav_title: Blueprints quickstarts for repo setup and adoption
+nav_title: Fast setup and adoption paths
 nav_group: onboarding
 public_publish: true
 audience: public
 handbook_area: blueprints
 learning_level: overview
+description: Short guided paths with verification—from Blueprints in your repo to Forge, Cursor alignment, and optional Studio.
 ---
 
-# Blueprints quickstarts for repo setup and adoption
+# Fast setup and adoption paths
 
 This page is the entry to **quickstarts**: short guided paths with verification. Read the first paragraph under **What it is**, then use **Selection matrix** to pick a path.
 
@@ -31,7 +32,7 @@ Use this hub when you are ready to run scripts at the **repository root** next t
 
 - **Git** and **bash**
 - **Python 3** (Forge init and Cursor rule sync)
-- A checkout where **`blueprints/`** can live at the repo root (see [SETUP.md](../SETUP.md))
+- A checkout where **`blueprints/`** can live at the repo root (see [Project setup checklist](../SETUP.md))
 
 ## Selection matrix
 
@@ -85,4 +86,4 @@ You completed the chosen quickstart’s **Verify** / **How to verify success** s
 - [**Project setup profile**](../SETUP.md) — full ordered checklist beyond the first hour
 - [**Troubleshooting / FAQ**](../troubleshooting-faq.md) — submodule, paths, Forge/Cursor
 
-**Deeper reference (not step 1):** [SDLC blueprint](../README.md), [PDLC](../../pdlc/README.md), [disciplines hub](../../disciplines/README.md) — use after your baseline layout works.
+**Deeper reference (not step 1):** [Software delivery overview](../README.md), [PDLC](../../pdlc/README.md), [disciplines hub](../../disciplines/README.md) — use after your baseline layout works.

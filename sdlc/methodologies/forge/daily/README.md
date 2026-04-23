@@ -19,6 +19,10 @@ The **daily sync** ceremony (**C3** — sync progress) confirms the Charge and s
 | **Ember Log** | Decision memory — why, not what | Updated at decision points throughout the day | `ember-logs/YYYY-MM-DD.md` |
 | **Day journal** | Activity record — what hat was worn, what was done, what was learned | End of day | `forge/journal/YYYY-MM-DD.md` |
 
+Full **artifact** layout (specs, ADRs, evidence packs, Versona sessions): [`../versona/ARTIFACT-CONTRACTS.md`](../versona/ARTIFACT-CONTRACTS.md).
+
+Optional **enriched** Versona tracking (request ledger, JSON manifests, graph append-only logs) **extends** this trio; it does not replace Ember Log or the journal. See [`../VERSONA-OPERATING-MODEL.md`](../VERSONA-OPERATING-MODEL.md).
+
 ## Templates
 
 | Template | Purpose |
@@ -26,6 +30,10 @@ The **daily sync** ceremony (**C3** — sync progress) confirms the Charge and s
 | [`charge.template.md`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/daily/charge.template.md) | Daily Charge file structure |
 | [`ember-log-entry.template.md`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/daily/ember-log-entry.template.md) | Single Ember Log entry structure |
 | [`day-journal.template.md`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/daily/day-journal.template.md) | Day journal entry structure |
+
+## Request classification (intake)
+
+Before opening a **Versona** session or editing **Charge**, teams can run a single **classifier + router** prompt: [`../../templates/forge/forge-request-classifier-intake.prompt.md`](../../templates/forge/forge-request-classifier-intake.prompt.md) — classifies work as Ore / Product Spark / Ingot / Forge Spark / defect / spike; proposes Markdown file updates, IDs, Versona order, and a **canonicalization** action (markdown-canonical profile). For **meta-requests**, follow with [`../../templates/forge/forge-meta-request-decomposition.prompt.md`](../../templates/forge/forge-meta-request-decomposition.prompt.md) to refresh **ROADMAP**, **WBS**, and **TRACEABILITY**. For **direct execution**, follow with [`../../templates/forge/forge-direct-execution-sparks-charge.prompt.md`](../../templates/forge/forge-direct-execution-sparks-charge.prompt.md) to align **Forge Sparks** and **`forge/charge.md`**.
 
 ## Cursor rule
 

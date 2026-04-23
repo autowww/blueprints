@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # UX Design techniques (blueprint)
 
 **Purpose:** Deep, **project-agnostic** guides for core UX research and design techniques — purpose, when to use, execution, and interpreting results.

@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Domain-Driven Design (DDD)
 
 **Domain-Driven Design** is an approach to building software for **complex domains** by centering design on a deep model of the business, explicit **bounded contexts**, and a shared **ubiquitous language** between domain experts and developers. Eric Evans articulated the foundation; Vaughn Vernon and others extended tactical and strategic patterns for modern distributed systems.

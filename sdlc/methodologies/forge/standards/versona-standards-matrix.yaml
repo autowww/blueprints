@@ -1,0 +1,155 @@
+# Machine-readable: per-Versona standards profiles (Forge blueprint).
+# Human summary: VERSONA-STANDARDS-MATRIX.md
+# Layer numbers: 1=highest precedence (see precedence.md)
+
+matrix_version: "1"
+precedence_reference: "precedence.md"
+
+standards_profiles:
+  discipline_cross_cutting_assurance:
+    summary: "Surface L1/L2 control conflicts with design habits; tie evidence to registry IDs."
+    layers_emphasis: [1, 2, 5]
+  discipline_governance:
+    summary: "Delivery constraints, scope, risk; escalate L1 interpretation to Compliance / legal owners."
+    layers_emphasis: [2, 4, 5]
+  discipline_product:
+    summary: "Value, roadmap, stakeholders; L1 when marketing/privacy/contractual claims appear."
+    layers_emphasis: [1, 3, 4, 5]
+  discipline_engineering:
+    summary: "Implementation quality; L3 ADRs and L2 org baselines often override L5/L6 patterns."
+    layers_emphasis: [3, 4, 5, 6]
+  discipline_data:
+    summary: "Pipelines and models; L1/L2 dominate for PII, residency, AI governance."
+    layers_emphasis: [1, 2, 3, 5]
+  routing:
+    summary: "Route to lenses; flag when cross-cutting or governance reviews likely needed."
+    layers_emphasis: [3, 4, 5]
+  family_aggregator:
+    summary: "Merge child §5 passes; unify standards_applied and conflicts_detected across disciplines."
+    layers_emphasis: [4, 5]
+  meta_tasklet:
+    summary: "Short cognitive passes; inherit session context and Team Rules."
+    layers_emphasis: [4, 6]
+  workflow_bootstrap:
+    summary: "Check for registry, Team Rules, AGENTS.md alignment during setup."
+    layers_emphasis: [3, 4]
+  methodology_orchestrator:
+    summary: "Phase-aware SDLC plans; surface L1–L2 gates in execution graph; trace via orchestration doc + §5.1 on merge passes."
+    layers_emphasis: [1, 2, 3, 4]
+  baseline_only:
+    summary: "No standalone §5; pair with a discipline rule for full traceability."
+    layers_emphasis: [4, 6]
+
+versonas:
+  - id: versona-security
+    kind: discipline
+    domain: Cross-cutting
+    profile: discipline_cross_cutting_assurance
+  - id: versona-compliance
+    kind: discipline
+    domain: Cross-cutting
+    profile: discipline_cross_cutting_assurance
+  - id: versona-pm
+    kind: discipline
+    domain: Governance
+    profile: discipline_governance
+  - id: versona-estimation
+    kind: discipline
+    domain: Governance
+    profile: discipline_governance
+  - id: versona-product-management
+    kind: discipline
+    domain: Product
+    profile: discipline_product
+  - id: versona-ba
+    kind: discipline
+    domain: Product
+    profile: discipline_product
+  - id: versona-ux
+    kind: discipline
+    domain: Product
+    profile: discipline_product
+  - id: versona-marketing
+    kind: discipline
+    domain: Product
+    profile: discipline_product
+  - id: versona-cs
+    kind: discipline
+    domain: Product
+    profile: discipline_product
+  - id: versona-se
+    kind: discipline
+    domain: Engineering
+    profile: discipline_engineering
+  - id: versona-architecture
+    kind: discipline
+    domain: Engineering
+    profile: discipline_engineering
+  - id: versona-devops
+    kind: discipline
+    domain: Engineering
+    profile: discipline_engineering
+  - id: versona-testing
+    kind: discipline
+    domain: Engineering
+    profile: discipline_engineering
+  - id: versona-frontend
+    kind: discipline
+    domain: Engineering
+    profile: discipline_engineering
+  - id: versona-mobile
+    kind: discipline
+    domain: Engineering
+    profile: discipline_engineering
+  - id: versona-iot
+    kind: discipline
+    domain: Engineering
+    profile: discipline_engineering
+  - id: versona-bigdata
+    kind: discipline
+    domain: Data
+    profile: discipline_data
+  - id: versona-datascience
+    kind: discipline
+    domain: Data
+    profile: discipline_data
+  - id: versona-family-engineering
+    kind: family_aggregator
+    domain: Engineering
+    profile: family_aggregator
+  - id: versona-family-data
+    kind: family_aggregator
+    domain: Data
+    profile: family_aggregator
+  - id: versona-family-product
+    kind: family_aggregator
+    domain: Product
+    profile: family_aggregator
+  - id: versona-all
+    kind: routing
+    domain: —
+    profile: routing
+  - id: versona-sampling
+    kind: meta
+    domain: —
+    profile: meta_tasklet
+  - id: versona-project-setup
+    kind: workflow
+    domain: —
+    profile: workflow_bootstrap
+  - id: versona-roadmap-gate
+    kind: workflow
+    domain: —
+    profile: workflow_bootstrap
+  - id: versona-forge-sdlc
+    kind: workflow
+    domain: —
+    profile: methodology_orchestrator
+  - id: versona-cursor-rules-sync
+    kind: workflow
+    domain: —
+    profile: workflow_bootstrap
+  - id: versona-generic
+    kind: baseline_only
+    domain: —
+    profile: baseline_only

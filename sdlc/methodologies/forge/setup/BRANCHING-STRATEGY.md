@@ -21,6 +21,25 @@ Prescriptive defaults for repos adopting **Forge SDLC**. Branching scales with [
 
 ---
 
+## Forge-native branch lanes (optional)
+
+Repos may adopt a **named lane** model on top of protected `main`, documented in the [branching charge pack](charge-plans/branching/README.md) (Product Spark `PS-BRANCH-01` and Charges 01–08). Typical lanes:
+
+| Lane | Role |
+|------|------|
+| **`main`** | Default trunk; **next releasable**; usually **protected** |
+| **`product/*`** | Optional **parent** when work spans multiple iterations or repos, or a protected **pre-main** integration lane is needed |
+| **`iter/*`** | Default **working and integration** branch per **Forge iteration** for that Product Spark effort |
+| **`spark/*`** | **Conditional** dedicated branches for risky or parallel **build:** / **verify:** work |
+| **`spike/*`** | **Exploration only** (discipline spikes); not delivery Sparks |
+| **`release/*`** | Optional **stabilization** window when the setup profile demands it |
+| **`hotfix/*`** | Production corrections; promotion and back-merge path documented per repo |
+| **Charge (`forge/charge.md`)** | Daily **view** of selected Sparks — **never** a `charge/*` Git branch |
+
+The **scaling table** below uses **`feature/*`** and related names as **GitHub Flow** shorthand for short-lived topic branches. Teams using the lane model often land topic work as **`spark/*`** or on **`iter/*`** instead. Pick **one** convention per repository and record it in `forge/branching.yml` or `docs/process/branching-profile.md` (or equivalent).
+
+---
+
 ## Branching by scaling tier
 
 Match `team.scale` in [`forge.config.template.yaml`](forge.config.template.yaml) to your team (see [Scaling model](../../forge.md#scaling-model)).
@@ -89,6 +108,7 @@ Branching policy applies **per repository**. **Submodule pointer** updates are n
 ## Related
 
 - [Forge overview](../../forge.md) — scaling model, Ore → Spark vocabulary
+- [Branching charge pack](charge-plans/branching/README.md) — daily Charges (F1–F3) to implement this policy with **Charge** as Markdown only (no `charge/*` branches)
 - [Setup & adoption](README.md) — questionnaire, scaffold, Cursor rules
 - [Software engineering — Git](../../../../disciplines/engineering/software-engineering/SOFTWARE-ENGINEERING.md#8-version-control-git)
 - [Tracking foundation](../../../templates/sdlc/TRACKING-FOUNDATION.md) — work-unit spine

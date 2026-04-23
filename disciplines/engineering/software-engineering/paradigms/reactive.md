@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Reactive Programming
 
 Reactive programming models programs as **flows of events over time**: producers emit values, operators transform and combine streams, and subscribers observe outcomes. It pairs naturally with UIs, sockets, and message brokers where **asynchrony, cancellation, and backpressure** are first-class concerns.

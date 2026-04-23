@@ -1,0 +1,20 @@
+---
+description: Estimation — Fibonacci, t-shirt, token bands, roll-up, defect multipliers; ESTIMATES.md and forge/estimation/ESTIMATION-RULES.md; pair with versona-estimation when installed.
+globs: docs/requirements/ESTIMATES.md,docs/requirements/WBS.md,forge/estimation/**/*,docs/defects/**/*
+alwaysApply: false
+---
+
+# Estimation (markdown ledger)
+
+## Runbook
+
+1. **Rules:** `forge/estimation/ESTIMATION-RULES.md` (seed from [`blueprints/sdlc/templates/forge/estimation/ESTIMATION-RULES.template.md`](../../estimation/ESTIMATION-RULES.template.md)).
+2. **Ledger:** `docs/requirements/ESTIMATES.md` (seed from [`blueprints/sdlc/templates/requirements/ESTIMATES.template.md`](../../../requirements/ESTIMATES.template.md)).
+3. Per-item front matter when useful: `est_fib`, `est_tshirt`, `est_tokens`, `actual_tokens`, `uncertainty`, `coordination_factor`, `risk_multiplier`.
+4. **Roll-up:** Forge Spark → Ingot → Product Spark/milestone per rules file.
+5. **Defects:** apply ambiguity / blast-radius / RCA uncertainty per `ESTIMATION-RULES.md`.
+6. **PM** owns commitments; **Estimation** method questions → blueprint **`versona-estimation`** template if installed.
+
+## Bootstrap prompt
+
+[`blueprints/sdlc/templates/forge/forge-estimation-bootstrap.prompt.md`](../../forge-estimation-bootstrap.prompt.md)

@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Continuous Integration & Continuous Delivery / Deployment (blueprint)
 
 **CI/CD** automates the path from code change to production-ready software. Treating the pipeline as a product reduces risk, shortens feedback loops, and makes delivery measurable. This guide is **project-agnostic**; it describes patterns, gates, and metrics teams use regardless of vendor.

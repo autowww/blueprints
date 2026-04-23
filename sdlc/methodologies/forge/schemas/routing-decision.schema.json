@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://blueprints.forgesdlc.com/schema/forge/routing-decision.json",
+  "title": "Versona routing decision",
+  "description": "Structured output from a routing Versona or tool recommending discipline passes.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["decided_at", "work_item_refs", "recommendations"],
+  "properties": {
+    "decided_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "work_item_refs": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "router_rule_or_versona": {
+      "type": "string",
+      "description": "Installed rule name or Versona label (e.g. versona-all)."
+    },
+    "input_context_paths": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Repo-relative paths consulted (session inputs, specs)."
+    },
+    "recommendations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["priority"],
+        "properties": {
+          "versona_kind": {
+            "type": "string",
+            "description": "Usually discipline; may be meta or family_aggregator."
+          },
+          "discipline": {
+            "type": "string",
+            "description": "When kind is discipline, which lens."
+          },
+          "installed_rule_guess": {
+            "type": "string",
+            "description": "Optional filename hint e.g. versona-se.mdc."
+          },
+          "priority": {
+            "type": "string",
+            "enum": ["recommended", "optional", "not_recommended"]
+          },
+          "rationale": { "type": "string" }
+        }
+      }
+    },
+    "session_id": {
+      "type": "string",
+      "description": "Session in which this routing was produced, if applicable."
+    }
+  }
+}

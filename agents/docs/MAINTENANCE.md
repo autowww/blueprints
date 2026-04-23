@@ -10,7 +10,7 @@ Do **not** hand-edit HTML under `website/`; change Markdown in **`blueprints/age
 
 ## Relationship to `blueprints/docs/MAINTENANCE.md`
 
-Cross-area handbook build steps, `website/` layout, and CI deployment are documented in **[`../../docs/MAINTENANCE.md`](../../docs/MAINTENANCE.md)**.
+Cross-area handbook build steps, `website/` layout, and CI deployment are documented in **[Maintaining the documentation (repo-wide)](https://github.com/autowww/blueprints/blob/main/docs/MAINTENANCE.md)**.
 
 ---
 

@@ -1,0 +1,28 @@
+---
+description: Classify incoming requests as Ore, Product Spark, Ingot, Forge Spark, defect, discipline spike, or non-actionable; route to meta vs direct execution; use Forge vocabulary.
+globs: docs/**/*,forge/**/*,.cursor/**/*
+alwaysApply: false
+---
+
+# Request classifier (Forge)
+
+## When invoked
+
+Use for **new** user requests, tickets, or pasted intake text before editing repo artifacts.
+
+## Runbook
+
+1. Classify as one or more: **Ore** · **Product Spark** · **Ingot** · **Forge Spark** · **defect** · **discipline-exploration spike** · **non-actionable**.
+2. **Never** treat **Product Spark** (release/roadmap slice) and **Forge Spark** (executable task) as synonyms.
+3. Decide **meta-request** (needs decomposition) vs **direct execution** (one or more Forge Sparks).
+4. Identify **repos in scope** and **Versonas** (suggested order).
+5. Search canonical `.md` for duplicates; apply **canonicalization** (`canonicalization-policy.mdc`).
+6. Record outcomes in `docs/requirements/TRACEABILITY.md` and/or `imports/cursor-history/IMPORT-LEDGER.md` when promoting work.
+
+## Prompt source (copy/run)
+
+[`blueprints/sdlc/templates/forge/forge-request-classifier-intake.prompt.md`](../../forge-request-classifier-intake.prompt.md)
+
+## Terminology
+
+[`blueprints/sdlc/methodologies/forge/NAMING-REFERENCE.md`](../../../../methodologies/forge/NAMING-REFERENCE.md)

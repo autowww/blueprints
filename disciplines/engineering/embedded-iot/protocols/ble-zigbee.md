@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # BLE, Zigbee & Short-Range Wireless Protocols
 
 **Purpose:** Map **short-range** wireless options — **BLE**, **Zigbee**, **Thread**, **Matter**, and peers — to product constraints (range, power, mesh, IP, coexistence).

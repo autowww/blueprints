@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Data architectures (blueprint)
 
 **Purpose:** Catalog of **data architecture patterns** — structural approaches to organizing data storage, processing, and access at scale. Each pattern describes its structure, trade-offs, and fitness criteria.

@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Frontend optimization strategies
 
 **Purpose:** Systematic, **project-agnostic** catalog of loading, rendering, asset, cache, and network optimizations—with workflow, tooling, and anti-patterns.

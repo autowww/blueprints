@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://blueprints.forgesdlc.com/schema/forge/standards-registry.json",
+  "title": "Forge standards registry (consuming repo)",
+  "description": "Lives in the consuming repository (e.g. forge/standards-registry.yaml). Lists adopted controls by ID; does not embed full standards bodies.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["registry_version", "controls"],
+  "properties": {
+    "registry_version": { "type": "string" },
+    "owner": { "type": "string", "description": "Team or role accountable for updates." },
+    "precedence_doc": {
+      "type": "string",
+      "description": "Pointer to methodology doc, e.g. blueprints path to standards/precedence.md"
+    },
+    "team_rules_ref": {
+      "type": "string",
+      "description": "Where Cursor Team Rules or policy portal lives (URL or path)."
+    },
+    "controls": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/control" }
+    }
+  },
+  "$defs": {
+    "control": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["control_id", "layer", "title"],
+      "properties": {
+        "control_id": {
+          "type": "string",
+          "description": "Stable ID within this repo (e.g. ORG-SEC-014, CUST-ACME-3)."
+        },
+        "layer": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 6,
+          "description": "Precedence layer per standards/precedence.md (1=highest)."
+        },
+        "title": { "type": "string" },
+        "summary": { "type": "string" },
+        "authority_ref": {
+          "type": "string",
+          "description": "URL, ticket, or document key in GRC — not the full clause text."
+        },
+        "applies_when": {
+          "type": "string",
+          "description": "Scope trigger (product line, data class, env)."
+        },
+        "evidence_obligations": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "What to produce or link for Assay Gate / audit."
+        },
+        "versona_hints": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Suggested Versona basenames (e.g. versona-security) for reviews."
+        }
+      }
+    }
+  }
+}

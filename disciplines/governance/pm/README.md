@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Project management (PM)
 
 Reusable, **product-agnostic** blueprint for project management — the discipline of governing delivery: schedule, budget, resources, risk, and stakeholders. It answers **"are we delivering on time, on budget, within scope, with acceptable risk?"** while [`blueprints/sdlc/`](../../../sdlc/README.md) answers **"are we building the product right?"** and [`blueprints/pdlc/`](../../../pdlc/README.md) answers **"are we building the right product?"**

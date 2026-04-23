@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Software engineering body of knowledge
 
 This document maps the core concerns of **software engineering** — the craft foundations that precede specialized engineering disciplines — to the blueprint ecosystem.
@@ -220,7 +227,7 @@ This document maps the core concerns of **software engineering** — the craft f
 | Practice | Guidance |
 |----------|----------|
 | **Merging vs rebasing** | Merge preserves history graph; rebase linearizes feature work — agree team defaults for shared branches |
-| **Commit conventions** | Imperative subject; scope optional; link issues; separate mechanical refactors from behavior change |
+| **Commit conventions** | Imperative subject; scope optional; link issues; separate mechanical refactors from behavior change — **Forge SDLC** teams: branching + commit body/trailers for agent/search-friendly history in [`sdlc/methodologies/forge/setup/BRANCHING-STRATEGY.md`](../../../sdlc/methodologies/forge/setup/BRANCHING-STRATEGY.md) |
 | **Small commits** | Bisect-friendly history; easier cherry-pick and revert |
 
 ---

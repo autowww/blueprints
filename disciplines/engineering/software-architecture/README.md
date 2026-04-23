@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Software architecture
 
 Reusable, **project-agnostic** blueprint for **software architecture** — the discipline of making and documenting the fundamental structural decisions about a software system. It addresses quality attributes, architectural styles, component boundaries, and the trade-offs that shape a system's long-term viability.

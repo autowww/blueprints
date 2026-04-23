@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Compliance body of knowledge
 
 This document maps the core concerns of **Compliance** for digital products — regulatory and legal obligations spanning privacy, accessibility, sector-specific data, AI governance, minors’ protection, certification, and third-party assurance — to the blueprint ecosystem.

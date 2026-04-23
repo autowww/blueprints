@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # PDLC approach guides (blueprint)
 
 **Purpose:** Deeper, **product-agnostic** guides for product development approaches than the short summaries in [`PDLC.md`](../PDLC.md). Each file explains the approach on its own terms, links to **authoritative external** material, and states how it **maps** to PDLC phases P1–P6 and (where applicable) SDLC phases A–F.

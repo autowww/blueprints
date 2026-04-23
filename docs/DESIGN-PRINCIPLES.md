@@ -1,210 +1,209 @@
 # Documentation design principles
 
-Standards for all Markdown source files and generated documentation across the blueprint framework.
+Standards for Markdown sources and generated documentation across the blueprint framework.
 
 ## 0. Multi-surface documentation architecture
 
-Blueprint `.md` files are the **single source of truth**. They feed three documentation surfaces, each with a distinct lens:
+Blueprint `.md` files are the **single source of truth** in this repository. They may feed several surfaces; each surface has a distinct lens:
 
 | Surface | Lens | Audience | Repo |
 |---------|------|----------|------|
-| **GitHub Wiki** | Pure engineering quick reference | Developers using blueprints day-to-day | `blueprints` |
-| **blueprints.forgesdlc.com** | Engineering framework — how to use blueprints as an agentic development bootstrap | Engineers, architects, team leads | `blueprints` |
-| **forgesdlc.com** | Forge SDLC methodology product — business value, adoption | CTOs, managers, methodology coaches | `forgesdlc` |
+| **GitHub / clone** | Full corpus; engineering reference | Contributors, readers browsing the repo | `blueprints` |
+| **blueprints.forgesdlc.com** | **Curated product handbook** — user-oriented technical content only | Engineers, architects, team leads adopting the framework | Built from `blueprints` via **blueprints-website** |
+| **GitHub Wiki** (optional) | Pure engineering quick reference | Developers using blueprints day-to-day | `blueprints` |
+| **forgesdlc.com** | Forge SDLC methodology product | CTOs, managers, methodology coaches | `forgesdlc` |
 
-No full-page copies between surfaces — only **cross-references** with short executive or engineering summaries around a link.
+**Important:** **blueprints.forgesdlc.com is not a mirror** of every Markdown file in the repository. It publishes only what is **explicitly allowed** by publication metadata (see §2). Maintainer, internal, and build-oriented docs remain in the repo and on GitHub; they are **excluded** from the public handbook unless explicitly opted in and appropriate for end readers.
 
-### Content metadata (frontmatter)
+No full-page copies between surfaces — only **cross-references** with short summaries around a link.
 
-Every `.md` file should declare its tier and surface targeting:
+## 1. Public handbook vs repository mirror
+
+| Where | What it contains |
+|-------|------------------|
+| **Repository (GitHub)** | Full framework text: methodology, templates, policies, maintainer notes, ADRs, architecture notes, and work-in-progress — **complete** |
+| **blueprints.forgesdlc.com** | **Subset**: technical, **user-oriented** pages — setup, adoption, correct usage, workflows, examples, recipes, upgrades, troubleshooting — **only if** `public_publish` is true (see §2) |
+| **Maintainer / internal** | May stay in-repo under `docs/`, package READMEs, or area trees; must be marked **maintainer** or **internal** in metadata and **excluded** from the public build (`public_publish: false` or omitted from manifest allowlists) |
+
+The old rule “every Markdown file gets an HTML page on the public site” is **obsolete**. The correct statements are:
+
+- Every tracked framework `.md` remains **authoritative source** for the repo and for workflows that consume raw Markdown.
+- Only **opt-in** pages appear on **blueprints.forgesdlc.com** (manifest + per-file `public_publish: true`).
+
+## 2. Publication metadata (frontmatter + manifest)
+
+Public publishing is **explicit opt-in**, not default-all.
+
+### 2.1 Per-file YAML frontmatter
+
+When present, frontmatter is **authoritative** for that file’s publication flags. The **canonical field list**, CI rules, and manifest flags are documented in **blueprints-website** at [`generator/PUBLIC-HANDBOOK-METADATA.md`](https://github.com/autowww/blueprints-website/blob/main/generator/PUBLIC-HANDBOOK-METADATA.md) (handbook repo, not this corpus).
+
+Summary for authors:
 
 ```yaml
 ---
-tier: 201
-surfaces:
-  - blueprints.forgesdlc.com
-  - forgesdlc.com
-  - wiki
-cross_refs:
-  forgesdlc.com: "See [adoption guide](https://forgesdlc.com/adopt) for business context"
-  blueprints.forgesdlc.com: "Framework setup: [Getting Started](https://blueprints.forgesdlc.com/getting-started)"
+audience: public              # public | operator | maintainer | internal
+public_publish: true          # must be true for public handbook emission when manifest requires explicit opt-in
+handbook_area: blueprints      # blueprints | lenses | studio | wizard
+learning_level: reference      # overview | 101 | 201 | 301 | troubleshooting | reference
+nav_group: SDLC                # optional; logical IA bucket (human label, not a path)
+nav_title: Adopt Forge in your repo   # optional; human outcome-oriented title for nav and page title
+tier: 201                      # optional; depth hint (101 / 201 / 301)
+product_area: blueprints       # optional; Lenses/Studio/Wizard still use this for legacy tooling
 ---
 ```
 
-| Field | Required | Values | Purpose |
-|-------|----------|--------|---------|
-| `tier` | Yes | `101`, `201`, `301` | Content depth level |
-| `surfaces` | No | List of `blueprints.forgesdlc.com`, `forgesdlc.com`, `wiki` | Which surfaces include this file. Defaults to all. |
-| `cross_refs` | No | Map of surface → markdown link text | Cross-reference callouts rendered by the generator |
+| Field | Purpose |
+|-------|---------|
+| `audience` | Who the page is **for**. `maintainer` / `internal` never emit to the public handbook. |
+| `public_publish` | **`true`** only if the page may appear on blueprints.forgesdlc.com (plus manifest allowlist). |
+| `handbook_area` | Product surface for handbook policy (`blueprints` vs **lenses** / **studio** / **wizard**). |
+| `learning_level` | Depth / intent (`overview` … `reference`). |
+| `nav_group` | Grouping for navigation design (not a file path). |
+| `nav_title` | Optional override for sidebar and `<title>`; must be **human outcome-oriented**, not a filename or path. |
 
-### 101 / 201 / 301 tiering
+### 2.2 Manifest (strict allowlist)
 
-Each surface organizes content by depth:
+The **blueprints-website** repo contains [`generator/handbook-publish-manifest.yaml`](https://github.com/autowww/blueprints-website/blob/main/generator/handbook-publish-manifest.yaml): paths relative to the `blueprints/` submodule.
+
+When **`strict_public_allowlist`** is **true**, a file publishes only if it matches **`public_allowlist_globs`** (or legacy **`include_globs`** if the allowlist is empty) and does **not** match **`exclude_globs`**, and frontmatter does not set `public_publish: false`. When **`require_explicit_public_publish`** is **true**, each published page must also set **`public_publish: true`**. Maintainer-only or repo-shaped pages belong in **`exclude_globs`** (or in GitHub-only trees such as `docs/`).
+
+The **forge-lenses** subsection still lists explicit filenames under `docs/handbook-public/`, each with **`public_publish: true`** in frontmatter.
+
+## 3. Audience, tier, and publication matrix
+
+- **Tier** (101 / 201 / 301) describes **depth**.
+- **Audience** describes **who** may rely on the page.
+- **public_publish** describes **whether** the page may appear on the public handbook.
+
+Together they replace “tier alone decides everything.” Example: a **301** page for **maintainers** belongs in the repo but typically has `public_publish: false` on the public site.
+
+## 4. Forbidden on the public handbook
+
+The following **must not** appear as **public** content on blueprints.forgesdlc.com (use `public_publish: false` or keep out of manifest allowlists):
+
+- ADRs and product-internal architecture decisions
+- Package layouts, file maps, module maps, source-path inventories
+- Implementation plans, roadmap/WBS for maintainers
+- Docs-generator internals, raw “how this repo is built” pipelines
+- Raw Markdown file inventories as **page content**
+- Content whose primary purpose is describing repository structure for contributors
+
+**Exception:** Discipline methodology may teach concepts such as “ADR practice” or “architecture views” as **user-facing** methodology when framed for adopters, not as internal product ADRs or repo maps.
+
+## 5. Stricter rules: Lenses, Forge Studio, Blueprints Wizard
+
+For `product_area` **lenses**, **studio**, or **wizard**, public pages are **stricter**. Public docs may include only:
+
+- Purpose and scope
+- Prerequisites
+- Getting started
+- 101 / 201 / 301 tutorials (aligned with tier)
+- Task recipes
+- Troubleshooting
+- **Minimal** operator settings needed to use the feature safely
+
+Anything else (internals, API route dumps, trust-model ADRs, package architecture) stays **maintainer** / **internal** and **off** the public handbook.
+
+## 6. Human outcome-oriented navigation and titles
+
+- **Navigation labels** and **page titles** must describe **outcomes** (“Adopt the SDLC blueprint”), not **implementation** (`sdlc/README.md`, `POLICY.md`).
+- Do not use raw paths, filenames, or `.md` names as **visible** link or nav text.
+- URLs may still use technical slugs until a renaming phase; **labels** must stay human.
+
+The handbook builder may use `nav_title` from frontmatter for sidebar entries and HTML titles.
+
+## 7. 101 / 201 / 301 tiering
 
 | Tier | Name | Characteristics |
 |------|------|----------------|
-| **101** | Introduction | Self-contained, no prerequisites. "What is this? When do I use it?" |
-| **201** | Practical | References 101 concepts without re-explaining. How-to guides, integration patterns. |
-| **301** | Advanced | Assumes 201 knowledge. Deep analysis, extension points, policy rationale. |
+| **101** | Introduction | Self-contained. “What is this? When do I use it?” |
+| **201** | Practical | How-to guides, integration patterns; references 101 without re-explaining. |
+| **301** | Advanced | Extension points, deeper analysis; assumes 201. |
 
 Guidelines:
-- Every new `.md` file must declare its tier in frontmatter
-- 101 content must be understandable without reading anything else
-- 201 content can link to 101 for background
-- 301 content can assume 201 knowledge and link freely
-- Each surface's navigation makes the tier progression discoverable
 
-### Cross-referencing policy
+- Prefer declaring `tier` in frontmatter for new and heavily edited pages.
+- 101 content must stand alone; 301 may assume prior tiers.
+
+## 8. Cross-referencing policy
 
 | From → To | Policy |
 |-----------|--------|
-| GitHub Wiki → forgesdlc.com | Mention sparingly — "blueprints can be used with any methodology; when paired with ForgeSDLC there is additional value" |
-| blueprints.forgesdlc.com → forgesdlc.com | Link freely for methodology context |
-| blueprints.forgesdlc.com → GitHub Wiki | Link freely for reference detail |
-| forgesdlc.com → blueprints.forgesdlc.com | Link when technical depth is needed |
-| forgesdlc.com → GitHub Wiki | Minimal |
+| GitHub Wiki → forgesdlc.com | Mention sparingly when pairing blueprints with ForgeSDLC |
+| Public handbook → forgesdlc.com | Link freely for methodology context |
+| Public handbook → GitHub | Link for canonical source and deeper reference |
+| forgesdlc.com → public handbook | Link when technical depth is needed |
 
-## 1. Every Markdown file gets an HTML page
+## 9. Human-friendly presentation
 
-Every `.md` source file under `blueprints/` **must** have a corresponding HTML page generated by `generator/build-handbook.py`. This includes body-of-knowledge documents, bridge documents, approach/technique guides, policy files, and templates.
-
-## 2. Human-friendly presentation
-
-Raw Markdown is the source of truth, but the HTML handbook must present content in a way that is **immediately useful to a human reader**:
+Raw Markdown is the source of truth; generated HTML must be **useful on first read**:
 
 | Element | When to use |
 |---------|-------------|
-| **Tables** | Comparisons, role matrices, RACI charts, artifact inventories |
-| **Blueprint diagram fences (`blueprint-diagram`)** | Process flows, lifecycle mappings, relationship graphs, architecture layers (static SVG templates + optional expand modal on the handbook) |
-| **Code examples** | CLI commands, configuration snippets, API shapes |
-| **Callout boxes** | Key takeaways, warnings, cross-references to other areas |
-| **Numbered steps** | Procedures, adoption guides, ceremony agendas |
+| **Tables** | Comparisons, role matrices, RACI charts |
+| **Blueprint diagram fences (`blueprint-diagram`)** | Process flows, lifecycle mappings (static SVG templates on the handbook) |
+| **Code examples** | CLI, configuration snippets |
+| **Numbered steps** | Procedures, adoption guides |
 
-When authoring Markdown, prefer visual structures over long prose paragraphs. A table or diagram communicates faster than a wall of text.
+Summary tables should link to detail pages where applicable.
 
-**Summary tables must link to detail pages.** When a page introduces concepts (glossary terms, chapters, sub-areas), every table row must include a "Detail" or "More" column with links to the pages that explain the concept in depth. A reader should never hit a dead end at a summary table.
+## 10. Diagram-first authoring
 
-## 3. Diagram-first authoring
+Use **` ```blueprint-diagram `** / **` ```blueprint-diagram-expand `** fenced blocks. Maintainer-only details for templates and catalogs belong in **toolchain** docs, not in frozen framework text.
 
-Use **` ```blueprint-diagram `** / **` ```blueprint-diagram-expand `** fenced blocks in `.md` source. The handbook and forgesdlc.com site generators resolve `key:` to shared SVG diagram templates and an optional expand/legend experience on published pages; GitHub shows the fence as a code block.
+## 11. CSS framework and fonts
 
-~~~markdown
-```blueprint-diagram
-key: swimlane
-alt: Diagram
-```
-~~~
+Handbook HTML uses Bootstrap 5.3 (CDN), Proxima Nova Black / Open Sans / Courier New — see the **blueprints-website** generator and Kitchensink theme.
 
-Every body-of-knowledge document and bridge document should include at least one diagram showing the key flow or relationship.
+## 12. Page layout pattern
 
-**Template SVG figures** used in handbook grids should use a **consistent vertical artboard**—typically about **280px height** in `viewBox`, with content letterboxed or padded so wide flows do not collapse into a thin strip next to taller chart thumbs. Match **title line** styling (cyan accent `#06B6D4`, 12px bold) and **card-like corners** (`rx` ~8 on primary boxes) to the Data Charts templates. Maintainer-facing details for adding templates, catalog keys, and modal metadata live in the documentation toolchain repository used by site generators—not in this framework text.
+Sidebar + main content + ToC + prev/next + canonical source banner — implemented by **forge-autodoc** and **blueprints-website**.
 
-## 4. CSS framework and fonts
+## 13. Portal navigation
 
-All handbook pages use a consistent visual stack:
+Injected via `generator/inject-portal-nav.js` in the consumer repo; portal labels are **human** (see §6).
 
-- **CSS**: Bootstrap 5.3 (CDN) — no Tailwind CSS
-- **Display / headings**: Proxima Nova Black (900 weight), Montserrat Black fallback — class `.font-display`
-- **Body text**: Open Sans — via `--bs-body-font-family`
-- **Code / monospace**: Courier New — via `--font-mono`
+## 14. Markdown is the source of truth
 
-Font imports:
+- Edit Markdown first; regenerate HTML with **`generator/build-handbook.py`** in **blueprints-website**.
+- Do not edit generated HTML directly.
+- Canonical source links point at GitHub `.md` where appropriate.
 
-```html
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@900&display=swap" rel="stylesheet" />
-<link href="https://fonts.cdnfonts.com/css/proxima-nova-2" rel="stylesheet" />
-```
+## 15. Template rendering
 
-## 5. Page layout pattern
+Files ending in `.template.md` render with a **Template** banner when published.
 
-Every handbook page follows the Bootstrap 5 sidebar + main content pattern established by the SDLC handbook:
+## 16. Human-readable link text
 
-- **Dark sidebar** (`bg-dark`) with chapter/section navigation, visible on `lg+` breakpoints
-- **Offcanvas mobile nav** for small screens
-- **Main content area** (`bg-body-tertiary`) with max-width constraint
-- **Sticky "On this page" ToC** on the right side for long pages
-- **Breadcrumbs** showing the path from handbook root
-- **Previous / Next** navigation at the bottom
-- **"Source of truth" banner** linking back to the canonical `.md` file
-- **Footer** with last-updated date and framework credit
-
-## 6. Portal navigation
-
-Every HTML handbook page must include the shared top navigation bar via:
-
-```html
-<script src="<relative-path>/docs/assets/portal-nav.js" data-root="<relative-path>"></script>
-```
-
-The `data-root` attribute is the relative path from the current page to the blueprints root directory. Use `generator/inject-portal-nav.py` to automate injection.
-
-## 7. Markdown is the source of truth
-
-- Edit Markdown first, then regenerate HTML with `generator/build-handbook.py`
-- Never edit generated HTML directly — changes will be overwritten on next build
-- Hand-maintained HTML pages (e.g. existing SDLC handbook) are protected by the builder's skip list
-- Each generated page includes a "Canonical source" banner linking to its `.md` file
-
-## 8. Template rendering
-
-Files ending in `.template.md` are rendered as HTML pages with a prominent banner:
-
-> **Template** — Copy this file into your project and fill in the sections. Do not edit the blueprint original.
-
-Template pages show the template structure with placeholder text, helping users understand what to fill in.
-
-## 9. Human-readable link text
-
-Links in Markdown source **must** use descriptive, human-readable text — never raw file paths or URIs as visible names.
+Links **must** use descriptive text — never raw paths or URLs as the visible name.
 
 | Bad | Good |
 |-----|------|
-| `` [`blueprints/sdlc/`](../sdlc/README.md) `` | `[SDLC handbook](../sdlc/README.md)` |
-| `` [`DEVOPS.md`](https://blueprints.forgesdlc.com/disciplines-engineering-devops.html) `` | `[DevOps body of knowledge](https://blueprints.forgesdlc.com/disciplines-engineering-devops.html)` |
-| `` [`practices/README.md`](practices/README.md) `` | `[Practices overview](practices/README.md)` |
+| `` [`blueprints/sdlc/`](../sdlc/README.md) `` | `[SDLC handbook](...)` with descriptive text |
+| Link text showing `.md` filename | Use the document’s purpose as link text |
 
-The reader should understand where a link goes without seeing the URL. The builder automatically rewrites `.md` hrefs to their corresponding HTML handbook pages, and replaces path-like link text with the target page's title — but well-authored source should not rely on this fallback.
+## 17. Link targets and builder behavior
 
-When the builder detects link text that looks like a file path (contains `/`, ends with `.md`, or starts with `blueprints`), it substitutes the target document's H1 heading. Prefer writing the intended display name in the source to keep Markdown readable on GitHub as well.
+Cross-references use relative `.md` paths in source; **blueprints-website** rewrites them to flat HTML slugs for publishable targets. Unpublished targets should not be linked from public pages (or should link to GitHub instead).
 
-## 10. Link targets: Markdown source files
-
-Cross-references between blueprint areas link to the `.md` source files. The generator automatically rewrites these to the corresponding HTML page in the website output:
-
-| Example |
-|---------|
-| `[SDLC overview](../sdlc/README.md)` |
-| `[DevOps body of knowledge](../disciplines/engineering/devops/README.md)` |
-
-The builder resolves `.md` hrefs to their corresponding website slugs during generation.
-
-## 11. Consistent naming
-
-HTML files follow a flat naming convention derived from the source path:
-
-| Source path | HTML output |
-|-------------|-------------|
-| `README.md` | `index.html` |
-| `DEVOPS.md` | `devops.html` |
-| `practices/ci-cd.md` | `practices-ci-cd.html` |
-| `practices/README.md` | `practices.html` |
-| `templates/WBS.template.md` | `templates-wbs-template.html` |
-
-## 12. Build workflow
-
-The builder automatically:
-- **Rewrites `.md` links** to corresponding `docs/*.html` handbook pages (adjusting relative paths for the `docs/` subdirectory)
-- **Humanizes path-like link text** — replaces raw file paths with the target document's H1 title
+## 18. Build workflow (blueprints-website)
 
 ```bash
-# Generate HTML for a single area
-python3 generator/build-handbook.py disciplines/engineering/devops
-
-# Generate HTML for all areas
 python3 generator/build-handbook.py --all
-
-# Inject portal navigation into new pages
 python3 generator/inject-portal-nav.py
 ```
 
-After generation, the output lands in `website/` ready for deployment. Commit the `.md` source changes; the generated HTML in `website/` is rebuilt by CI.
+Publication decisions are implemented by **`handbook-publish-manifest.yaml`**, **`handbook_metadata.py`**, and **`build-handbook.py`**. See [`MAINTENANCE.md`](MAINTENANCE.md) and [`PUBLIC-HANDBOOK-MIGRATION.md`](PUBLIC-HANDBOOK-MIGRATION.md).
+
+## Rationale (summary)
+
+| Rule | Why |
+|------|-----|
+| Curated public handbook | Users need a **product** experience, not a dump of every internal note. |
+| Stricter Lenses / Studio / Wizard | Shipping surfaces change quickly; avoid leaking internals and reduce support debt. |
+| Exclude ADRs, maps, build internals | Keeps public docs **durable** and **safe** to share. |
+| Maintainer docs in-repo, off public | Contributors need truth next to code; readers need clarity. |
+| Human nav titles | Wayfinding beats implementation detail. |
+| Explicit `public_publish` | Prevents accidental publication when adding files. |
+| Tier + audience | Makes policy **machine-checkable** and reviewable. |

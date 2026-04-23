@@ -15,7 +15,7 @@ learning_level: reference
 
 | What | Where |
 |------|--------|
-| **Frozen SDLC baseline** (do not change unless policy says so) | [`blueprints/sdlc/README`](../blueprints/sdlc/README.md) · [`POLICY.md`](../blueprints/sdlc/POLICY.md) |
+| **Frozen SDLC baseline** (do not change unless policy says so) | [`blueprints/sdlc/README`](../blueprints/sdlc/README.md) · [Blueprint policy](../blueprints/sdlc/POLICY.md) |
 | **Frozen product-functional IA** (if adopted) | [`blueprints/product/README`](../blueprints/product/README.md) · [`STRUCTURE.md`](../blueprints/product/STRUCTURE.md) |
 | **Human handbook (SDLC, HTML)** | [`docs/index.html`](../blueprints/sdlc/docs/index.html) · [`MAINTENANCE.md`](../blueprints/sdlc/docs/MAINTENANCE.md) |
 | **Human handbook (product functional, HTML)** (if adopted) | [`docs/index.html`](../blueprints/product/docs/index.html) |

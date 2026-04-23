@@ -26,7 +26,7 @@ Or use **`--all`**. Filenames use the `pdlc--` prefix (flat `website/` directory
 
 1. Edit the Markdown sources above.  
 2. Run **`generator/build-handbook.py`** (or rely on CI) so **`website/pdlc--*.html`** stays accurate.  
-3. Global handbook architecture and CI are described in [`../../docs/MAINTENANCE.md`](../../docs/MAINTENANCE.md).
+3. Global handbook architecture and CI are described in [Maintaining the documentation (repo-wide)](https://github.com/autowww/blueprints/blob/main/docs/MAINTENANCE.md).
 
 ---
 

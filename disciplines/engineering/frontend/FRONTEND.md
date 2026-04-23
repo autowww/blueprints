@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Frontend / web engineering body of knowledge
 
 This document maps the core concerns of **frontend / web engineering** — component architecture, rendering, performance, state management, design system implementation, and build tooling — to the blueprint ecosystem.

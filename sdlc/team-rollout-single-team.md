@@ -21,20 +21,20 @@ Rolling out Blueprints when **one squad** needs shared vocabulary — lightest f
 
 ## Prerequisites
 
-- At least one repo has `blueprints/`, project `sdlc/`, and optionally `forge/` ([SETUP](SETUP.md)).
+- At least one repo has `blueprints/`, project `sdlc/`, and optionally `forge/` ([Project setup checklist](SETUP.md)).
 
 ## Focus
 
 | Aspect | Guidance |
 |--------|----------|
 | **Anchor repo** | Pick one service or library repo as the reference; document its layout in your internal wiki. Others copy the same submodule pin and scripts. |
-| **Read order** | [SDLC blueprint](README.md) for lifecycle language; avoid assigning the whole blueprint tree as homework. |
+| **Read order** | [Software delivery overview](README.md) for lifecycle language; avoid assigning the whole blueprint tree as homework. |
 
 ## Ownership (typical)
 
 | Role | Owns |
 |------|------|
-| Tech lead | Anchor repo layout and first [SETUP](SETUP.md) verify pass for that repo |
+| Tech lead | Anchor repo layout and first [Project setup checklist](SETUP.md) verify pass for that repo |
 | Maintainer | Submodule pointer when the approved upstream commit moves |
 | Product / EM | Which methodology slice the team standardizes on first (not “everything at once”) |
 
@@ -44,13 +44,13 @@ Rolling out Blueprints when **one squad** needs shared vocabulary — lightest f
 |------|-------|----------------|
 | 0 | Choose anchor repo; document its layout internally | New teammates can name **baseline** (`blueprints/`) vs **project** (`sdlc/`, `docs/`) |
 | 1–2 | Each developer runs the same verify steps | No one-off edits inside `blueprints/` for product wording |
-| 3–4 | One shared read order (e.g. [SDLC blueprint](README.md) sections by role) | Onboarding links to **sections**, not the whole tree |
+| 3–4 | One shared read order (e.g. [Software delivery overview](README.md) sections by role) | Onboarding links to **sections**, not the whole tree |
 
 ### Week-zero checklist (visual)
 
 ```blueprint-diagram
 key: checklist
-alt: Anchor repo, document layout, verify SETUP, standardize one read slice
+alt: Anchor repo, document layout, run setup checklist verification steps, standardize one read slice
 ```
 
 ## Risks and mitigations
@@ -64,7 +64,7 @@ alt: Anchor repo, document layout, verify SETUP, standardize one read slice
 
 | Anti-pattern | Better |
 |--------------|--------|
-| Forking upstream `blueprints/` for one team’s wording | Use project **`sdlc/`** and [Policy](POLICY.md) |
+| Forking upstream `blueprints/` for one team’s wording | Use project **`sdlc/`** and [Blueprint policy](POLICY.md) |
 | “Everyone read everything” | Publish a short **read order** and revisit in retro |
 
 ## Example scenario (single team)
@@ -72,9 +72,9 @@ alt: Anchor repo, document layout, verify SETUP, standardize one read slice
 | | |
 |--|--|
 | **Starting situation** | One squad owns a single API; path B adoption is chosen; other teams are out of scope for now. |
-| **Action taken** | Tech lead documents the anchor repo layout; others clone the same submodule pin and run [SETUP](SETUP.md) verify steps. |
+| **Action taken** | Tech lead documents the anchor repo layout; others clone the same submodule pin and run [Project setup checklist](SETUP.md) verify steps. |
 | **Expected result** | Two repos match the same baseline without custom forks of `blueprints/sdlc/`. |
-| **What to check** | Onboarding doc links to [SDLC blueprint](README.md) sections by role, not the whole tree. |
+| **What to check** | Onboarding doc links to [Software delivery overview](README.md) sections by role, not the whole tree. |
 
 ## Example scenario (shared library first)
 
@@ -87,7 +87,7 @@ alt: Anchor repo, document layout, verify SETUP, standardize one read slice
 
 ## How to verify success
 
-One anchor repo is documented; teammates can repeat [SETUP](SETUP.md) verify steps without one-off forks.
+One anchor repo is documented; teammates can repeat [Project setup checklist](SETUP.md) verify steps without one-off forks.
 
 ## What to do next
 

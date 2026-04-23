@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Core Web Vitals and performance metrics
 
 **Purpose:** Project-agnostic reference for **Core Web Vitals** (CWV), related lab metrics, optimization levers, measurement tooling, and framework hooks—framed as product quality, not optional tuning.

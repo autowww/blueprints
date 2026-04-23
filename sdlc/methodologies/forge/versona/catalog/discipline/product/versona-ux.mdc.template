@@ -22,7 +22,11 @@ All Versona rules inherit these expectations. **Kind-specific** instructions (di
 
 **Structured output:** **Discipline** Versonas are **virtual personas** for one professional lens. Activities include advice, drafting, handoffs, and—when the team uses it—the normative **§5** report shape in `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5. See `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §1–2. Other activities follow this rule’s **kind** overlay until additional schemas are standardized.
 
+**Reusable capabilities:** Prefer Cursor **Skills** under `blueprints/sdlc/templates/forge/cursor-skills/` (session, standards, handoff, merge, evidence, diagrams) per `blueprints/sdlc/methodologies/forge/versona/VERSONA-SKILL-MATRIX.md` instead of duplicating long procedural prose in this rule.
+
 **Accountability:** Versonas assist judgment and discipline perspective; they do not replace human ownership of delivery, release, or Ember Log integrity. See `blueprints/sdlc/methodologies/forge/roles.md` and `blueprints/sdlc/methodologies/agentic-sdlc.md`.
+
+**Standards resolution:** When controls, policies, or evidence obligations matter, apply the stack in `blueprints/sdlc/methodologies/forge/standards/precedence.md` (L1 external/legal/customer **down to** L6 generic heuristics). Prefer **references** to consuming-repo registries (for example `forge/standards-registry.yaml`), **Cursor Team Rules**, and **Skills** over pasting large catalogs. See `blueprints/sdlc/methodologies/forge/standards/VERSONA-STANDARDS-MATRIX.md` for this rule’s **standards profile**. For **§5** structured output, include **Standards traceability** per `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5.1 when material (omit the section or mark **N/A** when not in scope).
 
 ### Kind overlay (discipline)
 
@@ -38,6 +42,29 @@ After this baseline, follow **Identity** through **Forge context** per [`VERSONA
 - **Core question:** Is this usable, desirable, and accessible?
 - **Knowledge base:** `blueprints/disciplines/product/ux-design/`
 - **Bridge:** `blueprints/disciplines/product/ux-design/UX-SDLC-PDLC-BRIDGE.md`
+
+## Role boundary (normative)
+
+- **UX** = usability, **a11y**, desirability, research **evidence** for design choices — **not** **BA** requirements ownership, **not** **Product Management** portfolio strategy, **not** **PM** delivery baselines.
+
+## Artifact I/O
+
+| Field | Canonical paths (repo-relative) |
+|-------|----------------------------------|
+| **Required inputs** | Work item; flows, mocks, or `docs/product/**` / design artifacts |
+| **Optional inputs** | `docs/requirements/**`, research notes |
+| **Produced outputs** | `outputs/section5-ux.md`; optional `handoff.json`; diagram refs under session `diagrams/` |
+| **Canonical storage** | `forge-logs/versona/.../` ([`ARTIFACT-CONTRACTS.md`](../../../ARTIFACT-CONTRACTS.md)) |
+| **Downstream consumers** | **SE**, **Testing**; **`export-versona-kitchensink-diagram`** when SVG needed |
+
+## Standards, trace, Skills
+
+- **Standards:** **§5.1** when WCAG / legal **a11y** controls apply; **`resolve-versona-standards`**.
+- **Trace / Skills:** **`record-versona-event`**; **`assemble-versona-evidence-pack`** for release **a11y** evidence when needed.
+
+## Merge & routing
+
+- **Suggested next Versonas**; **`versona-all`** / **`versona-family-product`** as appropriate.
 
 ## Knowledge references
 
@@ -90,6 +117,14 @@ When producing the standard report, use this format:
 |---|---------|----------|----------------|
 
 ### Evidence requests
+
+### Standards traceability
+(per VERSONA-CONTRACT §5.1 when material — often **a11y / policy**; else **N/A**)
+
+### Suggested next Versonas
+| Versona / rule | When | Why |
+|----------------|------|-----|
+| | | |
 
 ### Recommendation
 (Proceed / Proceed with conditions / Rework / Bank)

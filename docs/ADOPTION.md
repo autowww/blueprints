@@ -1,5 +1,7 @@
 # Adopting Blueprints
 
+**Published handbook:** the same adoption story (ICP paths, prerequisites, next steps) is maintained for the static site as [**`sdlc/adopting-blueprints.md`**](../sdlc/adopting-blueprints.md) → [blueprints.forgesdlc.com](https://blueprints.forgesdlc.com/).
+
 **Hands-on first hour (commands and checks):** use [Quickstarts — First hour](../sdlc/quickstarts/first-hour.md). This page is for **which adopter story** you match — not step-by-step setup.
 
 Blueprints is a **reusable documentation framework** (SDLC, PDLC, disciplines, Forge/Versona patterns). This page is the **shortest path** from interest to a working layout in *your* repository.

@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # WAI-ARIA patterns and widget guide
 
 **Purpose:** Project-agnostic guidance for using **WAI-ARIA** to make custom widgets and dynamic content understandable to assistive technologies — with emphasis on **native HTML first**, keyboard parity, and testing.

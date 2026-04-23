@@ -57,7 +57,7 @@ Requires **Python 3** and **PyYAML** (`pip install pyyaml`).
 | Preset | What you get |
 |--------|----------------|
 | *(none)* / `minimal` | YAML-driven Versonas only |
-| `recommended` | minimal + standard Forge rules + `versona-all`, `versona-project-setup`, `versona-roadmap-gate`, `versona-cursor-rules-sync` |
+| `recommended` | minimal + standard Forge rules + `versona-all`, `versona-project-setup`, `versona-roadmap-gate`, `versona-forge-sdlc`, `versona-cursor-rules-sync`, `versona-sampling` |
 | `full` | recommended + three family aggregators + `versona-generic` |
 
 Extra `--with-*` flags **add** on top of a preset. See **Reference: granular flags** in [`CURSOR-RULES-ALIGNMENT.md`](CURSOR-RULES-ALIGNMENT.md).
@@ -65,3 +65,7 @@ Extra `--with-*` flags **add** on top of a preset. See **Reference: granular fla
 ## Manifest after sync
 
 Each successful **`sync`** (install) writes **`.forge/cursor-rules-manifest.json`** at the repository root (unless `--no-write-manifest`): UTC timestamp, **`blueprints_commit`** when `blueprints/` is a git checkout, active **`preset`**, and per-rule **`source_sha256`** / **`installed_sha256`** for the install job list. Use it to see whether installed files still match templates after local edits or a submodule bump.
+
+**Optional:** `… sync --preset recommended --write-adoption-manifest` also writes **`.forge/versona-adoption-manifest.json`** — pointers for Skills, tasklets, and recipes (not a SHA ledger). See [`CURSOR-RULES-ALIGNMENT.md`](CURSOR-RULES-ALIGNMENT.md) § Manifest split.
+
+**Migration / verification:** [`VERSONA-PROCESS-MODEL-MIGRATION.md`](VERSONA-PROCESS-MODEL-MIGRATION.md) · [`VERSONA-VERIFICATION.md`](VERSONA-VERIFICATION.md)

@@ -14,18 +14,18 @@ Where **safe** customization lives in a **consumer** repository — without trea
 
 ## When to use it
 
-Use this page when you have baseline adoption working ([SETUP.md](SETUP.md)) and need project-specific process, tooling, or docs beyond the frozen submodule.
+Use this page when you have baseline adoption working ([Project setup checklist](SETUP.md)) and need project-specific process, tooling, or docs beyond the frozen submodule.
 
 ## Prerequisites
 
 - [First hour](quickstarts/first-hour.md) or equivalent layout in place.
-- Familiarity with [Policy](POLICY.md) (frozen baseline vs project space).
+- Familiarity with [Blueprint policy](POLICY.md) (frozen baseline vs project space).
 
 ## Steps
 
 ### Principles
 
-1. **`blueprints/`** — Frozen baseline; changes only per [Policy](POLICY.md) (upstream bumps, deliberate exceptions).
+1. **`blueprints/`** — Frozen baseline; changes only per [Blueprint policy](POLICY.md) (upstream bumps, deliberate exceptions).
 2. **Project `sdlc/`** — Your interpretations, principles, and links into the baseline — created by [`init-sdlc-workspace.sh`](scripts/init-sdlc-workspace.sh) and owned by the product repo.
 3. **`docs/`** — Requirements, roadmaps, product docs; structure can follow your org. For a full **consuming-repo** doc tree template, see [`sdlc/DOCUMENTATION-STRUCTURE.md` on GitHub](https://github.com/autowww/blueprints/blob/main/sdlc/DOCUMENTATION-STRUCTURE.md) (maintainer-oriented layout reference).
 4. **`forge/`** — Forge config, logs paths, Versona usage — seeded by [forge-init](methodologies/forge/setup/forge-init.sh) and edited for your project.

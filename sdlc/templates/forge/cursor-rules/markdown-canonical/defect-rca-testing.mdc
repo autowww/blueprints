@@ -1,0 +1,19 @@
+---
+description: Defect triage, RCA, ISTQB-oriented test impact; docs/defects/** and TRACEABILITY updates.
+globs: docs/defects/**/*,docs/requirements/**/*,docs/testing/**/*
+alwaysApply: false
+---
+
+# Defect, RCA, and test impact
+
+## Runbook
+
+1. **Registry:** `docs/defects/INDEX.md`; per defect `docs/defects/DEF-NNNN/defect.md`, `rca.md`, `test-impact.md`, optional `evidence/`.
+2. Link in `docs/requirements/TRACEABILITY.md`; use `docs/testing/TRACEABILITY.md` **only** if `docs/PROJECT.md` splits test links from requirements trace (else single file).
+3. **ISTQB** vocabulary for confirmation/regression: equivalence partitioning, BVA, decision tables, state transition, exploratory, checklist-based — see [`blueprints/disciplines/engineering/testing/APPROACHES.md`](../../../../../disciplines/engineering/testing/APPROACHES.md).
+4. **Canonicalize** against existing defects; one **A–G** action; update `ESTIMATES.md` defect row and estimation multipliers.
+5. Pair with **`versona-testing`** for formal §5 sessions under `forge-logs/versona/` when needed.
+
+## Prompt source
+
+[`blueprints/sdlc/templates/forge/forge-defect-triage-rca-test-impact.prompt.md`](../../forge-defect-triage-rca-test-impact.prompt.md)

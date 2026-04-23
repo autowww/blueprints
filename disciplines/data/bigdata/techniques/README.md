@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Data engineering techniques (blueprint)
 
 **Purpose:** Deep, **project-agnostic** guides for data engineering techniques. Each guide covers principles, implementation patterns, trade-offs, and tooling so teams can reuse patterns without copying project-specific schemas or pipelines.

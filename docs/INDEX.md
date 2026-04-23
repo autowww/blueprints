@@ -8,8 +8,10 @@ Mutable **maintainer and product** documentation for this repo. (Frozen methodol
 | [`ROADMAP.md`](ROADMAP.md) | NOW / NEXT / LATER + milestones |
 | [`ADOPTION.md`](ADOPTION.md) | Adopter paths (ICP A / B / C) |
 | [`MAINTENANCE.md`](MAINTENANCE.md) | Handbook, wiki, generator |
-| [`DESIGN-PRINCIPLES.md`](DESIGN-PRINCIPLES.md) | Design constraints |
+| [`DESIGN-PRINCIPLES.md`](DESIGN-PRINCIPLES.md) | Public handbook governance, metadata, tiering |
+| [`PUBLIC-HANDBOOK-MIGRATION.md`](PUBLIC-HANDBOOK-MIGRATION.md) | Phased migration matrix (curated site) |
 | [`product/discovery/framework-positioning-and-mvp.md`](product/discovery/framework-positioning-and-mvp.md) | Market positioning + first MVP rationale |
 | [`product/plans/mvp-adoption-spine.md`](product/plans/mvp-adoption-spine.md) | Product Spark F1 — MVP plan |
 | [`requirements/WBS.md`](requirements/WBS.md) | Work breakdown for M1 |
 | [`CONTENT-MATRIX.md`](CONTENT-MATRIX.md) | Keep / refactor / demote map for handbook pages (maintainers) |
+| [`process/README.md`](process/README.md) | Process maintainer notes (branching audit; pointers to consumer `docs/process/` artifacts) |

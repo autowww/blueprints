@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Marketing body of knowledge
 
 This document maps the core concerns of **Marketing** for **digital products** — strategy, channels, growth systems, positioning, analytics, GTM, content, and monetization — to the blueprint ecosystem.

@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # CRISP-DM: Cross-Industry Standard Process for Data Mining
 
 **Purpose:** Project-agnostic reference for CRISP-DM — the most widely adopted methodology for data mining and applied machine learning. Use it to structure discovery, modeling, and handoff without tying the blueprint to a specific tool stack.

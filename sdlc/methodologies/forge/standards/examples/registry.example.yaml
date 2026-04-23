@@ -1,0 +1,50 @@
+# Fictional example — consuming repo: forge/standards-registry.yaml
+# Validate against: blueprints/sdlc/methodologies/forge/standards/schemas/standards-registry.schema.json
+
+registry_version: "2026-04-11"
+owner: "Security & GRC liaison"
+precedence_doc: "blueprints/sdlc/methodologies/forge/standards/precedence.md"
+team_rules_ref: "https://internal.example/policies/engineering-baseline"
+
+controls:
+  - control_id: "CUST-ACME-DPA-7"
+    layer: 1
+    title: "No production PII in non-prod environments"
+    summary: "Contractual DPA schedule 7 — synthetic or masked data only outside prod."
+    authority_ref: "ACME-DPA-2025-Sched7"
+    applies_when: "Customer ACME workloads or data classes marked PII"
+    evidence_obligations:
+      - "Data-class tag on Ingot/Spark"
+      - "CI check or manual attestation for env separation"
+    versona_hints: ["versona-compliance", "versona-security", "versona-devops"]
+
+  - control_id: "ORG-SEC-014"
+    layer: 2
+    title: "Org SSO and MFA for admin surfaces"
+    summary: "Corporate IdP required; no long-lived shared admin passwords."
+    authority_ref: "CORP-IAM-STD-2024"
+    applies_when: "Any system handling customer data or production access"
+    evidence_obligations:
+      - "Link to IdP config or architecture note"
+      - "Assay Gate checklist item for auth"
+    versona_hints: ["versona-security", "versona-devops"]
+
+  - control_id: "REPO-ARCH-ADR-12"
+    layer: 3
+    title: "Service uses internal API gateway pattern"
+    summary: "Repo ADR-012 — edge traffic through approved gateway only."
+    authority_ref: "docs/architecture/adr/012-api-gateway.md"
+    applies_when: "New public HTTP APIs in this monorepo"
+    evidence_obligations:
+      - "ADR link in Ingot or Spark"
+    versona_hints: ["versona-architecture", "versona-security"]
+
+  - control_id: "FORGE-ASSAY-DEFAULT"
+    layer: 4
+    title: "Assay Gate evidence before release"
+    summary: "Forge methodology — ship only with agreed evidence for work type."
+    authority_ref: "blueprints/sdlc/methodologies/forge/"
+    applies_when: "All release-tagged Sparks"
+    evidence_obligations:
+      - "Assay Gate record per team template"
+    versona_hints: ["versona-testing", "versona-pm"]

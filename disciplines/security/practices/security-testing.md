@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Security testing — strategy and implementation
 
 **Purpose:** A **project-agnostic** blueprint for layering automated and manual security testing so vulnerabilities are found **before** attackers exploit them.

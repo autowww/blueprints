@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Business Intelligence perspective
 
 How business analysis adapts when the initiative centers on **data**, **analytics**, **reporting**, or **data-driven decision making**. BI initiatives require BA to address data requirements alongside — and often instead of — traditional functional requirements.

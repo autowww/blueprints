@@ -24,7 +24,7 @@ Or use **`--all`** to regenerate every area. Output is a **flat** `website/` dir
 
 1. Edit **`STRUCTURE.md`**, **`README.md`**, or **`POLICY.md`** as needed.  
 2. Run the generator (or wait for CI) so **`website/product--*.html`** matches.  
-3. For repo-wide build and deployment details, see [`../../docs/MAINTENANCE.md`](../../docs/MAINTENANCE.md).
+3. For repo-wide build and deployment details, see [Maintaining the documentation (repo-wide)](https://github.com/autowww/blueprints/blob/main/docs/MAINTENANCE.md).
 
 ---
 

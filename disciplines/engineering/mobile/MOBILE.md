@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Mobile engineering body of knowledge
 
 This document maps the core concerns of **mobile engineering** — platform strategy, architecture, app lifecycle, offline-first patterns, performance, and app store management — to the blueprint ecosystem.

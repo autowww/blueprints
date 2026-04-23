@@ -22,7 +22,11 @@ All Versona rules inherit these expectations. **Kind-specific** instructions (di
 
 **Structured output:** **Discipline** Versonas are **virtual personas** for one professional lens. Activities include advice, drafting, handoffs, and—when the team uses it—the normative **§5** report shape in `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5. See `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md` §1–2. Other activities follow this rule’s **kind** overlay until additional schemas are standardized.
 
+**Reusable capabilities:** Prefer Cursor **Skills** under `blueprints/sdlc/templates/forge/cursor-skills/` (session, standards, handoff, merge, evidence, diagrams) per `blueprints/sdlc/methodologies/forge/versona/VERSONA-SKILL-MATRIX.md` instead of duplicating long procedural prose in this rule.
+
 **Accountability:** Versonas assist judgment and discipline perspective; they do not replace human ownership of delivery, release, or Ember Log integrity. See `blueprints/sdlc/methodologies/forge/roles.md` and `blueprints/sdlc/methodologies/agentic-sdlc.md`.
+
+**Standards resolution:** When controls, policies, or evidence obligations matter, apply the stack in `blueprints/sdlc/methodologies/forge/standards/precedence.md` (L1 external/legal/customer **down to** L6 generic heuristics). Prefer **references** to consuming-repo registries (for example `forge/standards-registry.yaml`), **Cursor Team Rules**, and **Skills** over pasting large catalogs. See `blueprints/sdlc/methodologies/forge/standards/VERSONA-STANDARDS-MATRIX.md` for this rule’s **standards profile**. For **§5** structured output, include **Standards traceability** per `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md` §5.1 when material (omit the section or mark **N/A** when not in scope).
 
 ### Kind overlay (discipline)
 
@@ -38,6 +42,28 @@ After this baseline, follow **Identity** through **Forge context** per [`VERSONA
 - **Core question:** Can we acquire, engage, and retain users?
 - **Knowledge base:** `blueprints/disciplines/product/marketing/`
 - **Bridge:** `blueprints/disciplines/product/marketing/MKT-SDLC-PDLC-BRIDGE.md`
+
+## Role boundary (normative)
+
+- **Marketing** = GTM **execution**, positioning **vs reality**, growth **instrumentation** — **not** **Product Management** core strategy (delegate there for **why** priorities), **not** **PM** delivery baselines.
+
+## Artifact I/O
+
+| Field | Canonical paths (repo-relative) |
+|-------|----------------------------------|
+| **Required inputs** | Work item; launch/GTM context (`docs/product/**`, campaign artifacts) |
+| **Produced outputs** | `outputs/section5-marketing.md`; optional `handoff.json` |
+| **Canonical storage** | `forge-logs/versona/.../` ([`ARTIFACT-CONTRACTS.md`](../../../ARTIFACT-CONTRACTS.md)) |
+| **Downstream consumers** | **CS**, **Product Management**; evidence packs for **claims** |
+
+## Standards, trace, Skills
+
+- **Standards:** **§5.1** when **claims** touch legal/compliance; **`resolve-versona-standards`**.
+- **Trace / evidence:** **`assemble-versona-evidence-pack`** when launch **claims** must be evidenced.
+
+## Merge & routing
+
+- **Suggested next Versonas**; **`versona-family-product`** for merged product+GTM pass.
 
 ## Knowledge references
 
@@ -87,6 +113,14 @@ When producing the standard report, use this format:
 |---|---------|----------|----------------|
 
 ### Evidence requests
+
+### Standards traceability
+(per VERSONA-CONTRACT §5.1 when material; else **N/A**)
+
+### Suggested next Versonas
+| Versona / rule | When | Why |
+|----------------|------|-----|
+| | | |
 
 ### Recommendation
 (Proceed / Proceed with conditions / Rework / Bank)

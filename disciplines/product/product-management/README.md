@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Product management
 
 Reusable, **project-agnostic** blueprint for **product management** — the discipline of identifying the right problems, defining product strategy, and guiding the product through its lifecycle to deliver measurable outcomes. Synthesizes practices from Marty Cagan's *Inspired / Empowered*, Teresa Torres' *Continuous Discovery Habits*, Melissa Perri's *Escaping the Build Trap*, and the Silicon Valley Product Group (SVPG) body of knowledge.

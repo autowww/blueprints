@@ -38,6 +38,9 @@ Forge teams **still** maintain the blueprint tracking spine:
 | **Reviews** | Versona sessions + peer review + Assay Gate evidence |
 | **Release** | Assay Gate pass; ship decision based on evidence |
 | **Exploration spike (discipline)** | Versona session + `outputs/SPIKE-CLOSE.md` under `forge-logs/versona/`; may link to Ore/WBS when stable — see [`versona/DISCIPLINE-SPIKE.md`](versona/DISCIPLINE-SPIKE.md) |
+| **Versona intake / analytics (optional)** | Cross-session **ledger** and **graph** append-only files under `forge-logs/versona-track/`; schemas in [`schemas/README.md`](schemas/README.md) — see [`VERSONA-OPERATING-MODEL.md`](VERSONA-OPERATING-MODEL.md) |
+
+Forge **work items** stay **Ore / Ingot / Spark** (and existing WBS keys). The operating model adds **correlation** IDs only; it does not define a parallel work-item namespace.
 
 **Prescriptive rule:** Every Spark that ships should be **linkable** to its parent Ingot and the original Ore. The Ember Log captures decision context that links and commits alone cannot convey.
 
@@ -96,3 +99,4 @@ Detail: [roles-archetypes.md](../roles-archetypes.md), [Forge roles chapter](rol
 - [`../ceremonies/forge.md`](../ceremonies/forge.md) — fork table C1–C6
 - [`../../SDLC.md`](../../SDLC.md) — phases and ceremony-intent overview
 - [`versona/README.md`](versona/README.md) — discipline Versonas (virtual personas)
+- [`orchestration/README.md`](orchestration/README.md) — **methodology orchestration** (roles, A–F contracts, merge/trace; Cursor rule `versona-forge-sdlc`)

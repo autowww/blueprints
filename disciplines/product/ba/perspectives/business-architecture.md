@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Business Architecture perspective
 
 How business analysis adapts when the initiative is **enterprise-scale** — spanning multiple products, business units, or organizational capabilities. Business Architecture provides the strategic lens that connects individual product/project BA work to the broader organizational context.

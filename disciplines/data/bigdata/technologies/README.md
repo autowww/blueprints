@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Data technologies (blueprint)
 
 **Purpose:** Taxonomy and selection guidance for data engineering technologies. Each category describes the problem space, common tools, and selection criteria.

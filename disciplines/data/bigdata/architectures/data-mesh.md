@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Data mesh: domain-oriented decentralized architecture
 
 **Purpose:** Project-agnostic guide to **data mesh** — treating analytical data as **domain-owned products** on a **self-serve platform** under **federated governance**.

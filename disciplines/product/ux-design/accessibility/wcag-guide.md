@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # WCAG 2.2 comprehensive guide
 
 **Purpose:** Project-agnostic orientation to **Web Content Accessibility Guidelines (WCAG) 2.2** — the global standard for perceivable, operable, understandable, and robust web content — plus testing approaches and documentation expectations.

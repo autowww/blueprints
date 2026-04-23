@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Safety-critical standards (blueprint)
 
 **Purpose:** Guidance on safety-critical engineering standards and their impact on software development practices. Each standard entry covers scope, safety integrity levels, required activities, and engineering constraints.

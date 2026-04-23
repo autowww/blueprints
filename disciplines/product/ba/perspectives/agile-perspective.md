@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Agile perspective
 
 How business analysis adapts when the delivery team uses an **iterative, incremental** methodology — Scrum, Kanban, XP, SAFe, or Dual-Track Agile.

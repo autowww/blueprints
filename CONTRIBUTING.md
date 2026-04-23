@@ -15,8 +15,8 @@ Thanks for helping improve these blueprints.
    - Edit `.md` files directly. HTML is generated automatically by CI when changes are pushed to `main`.
    - The website [blueprints.forgesdlc.com](https://blueprints.forgesdlc.com) is rebuilt from **`generator/build-handbook.py`** in the **[blueprints-website](https://github.com/autowww/blueprints-website)** repo (this repo is the Markdown source; run the generator from the consumer checkout).
    - The [GitHub Wiki](https://github.com/autowww/blueprints/wiki) is synced via `wiki-source/sync-wiki.sh`.
-   - See [`docs/DESIGN-PRINCIPLES.md`](docs/DESIGN-PRINCIPLES.md) for documentation standards including the 101/201/301 tiering model.
-   - Add frontmatter metadata (`tier`, `surfaces`, `cross_refs`) to new `.md` files.
+   - See [Documentation design principles](https://github.com/autowww/blueprints/blob/main/docs/DESIGN-PRINCIPLES.md) for **public handbook** rules: `public_publish`, `audience`, `tier`, `nav_group`, `product_area`, optional `nav_title`.
+   - If your change targets **blueprints.forgesdlc.com**, set **`public_publish: true`** only when the page is user-oriented and allowed by §4–§5 of DESIGN-PRINCIPLES; otherwise use `public_publish: false` or rely on manifest exclusions in **blueprints-website**.
 
 3. **Prefer small, focused changes** (one logical fix or improvement per PR) so reviewers can reason about impact.
 
@@ -29,6 +29,10 @@ This repository uses the **Forge SDLC Team** tier (5–12 people): short-lived b
 - **Default branch:** `main`.
 - **Work branches:** `feature/<short-topic>` or `fix/<short-topic>` from `main`; keep them short-lived.
 - **Merge:** through **pull requests** to `main` (no direct pushes to `main` once branch protection is enabled).
+
+#### Forge-native lanes (optional)
+
+The [branching charge pack](sdlc/methodologies/forge/setup/charge-plans/branching/README.md) describes optional `product/*`, `iter/*`, `spark/*`, and related lanes for product repos using **Branch Steward** and daily **Charge**. **This repository** uses the Team-tier names above (`feature/*`, `fix/*`) unless maintainers explicitly adopt the lane pack for framework work.
 
 ### Commit scopes (Conventional Commits–lite)
 

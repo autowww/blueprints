@@ -30,7 +30,7 @@ When the [decision guide](adopting-blueprints.md#decision-guide) points you to p
 | Step | Action | Verify |
 |------|--------|--------|
 | 1 | Complete path **A**. | Same checks as [path A](adopting-blueprints-path-a.md). |
-| 2 | Point the team at the [SDLC blueprint](README.md) and the methodology slice you follow (e.g. Scrum, Kanban, Forge) under `blueprints/sdlc/methodologies/`. | Team can name your default methodology entry file. |
+| 2 | Point the team at the [Software delivery overview](README.md) and the methodology slice you follow (e.g. Scrum, Kanban, Forge) under `blueprints/sdlc/methodologies/`. | Team can name your default methodology entry file. |
 | 3 | Optionally wire **Forge** artifacts (`forge/`, `ember-logs/`) using templates under `blueprints/sdlc/templates/forge/` in a **consumer** repo. | `forge/forge.config.yaml` exists after [Forge init](methodologies/forge/setup/README.md). |
 
 ## Example scenario (path B)

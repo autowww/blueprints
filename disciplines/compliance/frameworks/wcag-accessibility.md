@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # WCAG, ADA & Accessibility Compliance
 
 **Purpose:** Project-agnostic guide to **digital accessibility** — WCAG conformance, common legal hooks (US, EU, Canada, Australia), engineering mappings, testing, VPAT, and procurement. **Not legal advice**; ADA circuit splits and national laws evolve — verify with counsel.

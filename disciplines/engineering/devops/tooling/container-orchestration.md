@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Container orchestration & platform engineering (blueprint)
 
 **Containers** package applications with dependencies. **Orchestration** schedules, networks, and heals those workloads at scale. **Platform engineering** builds internal abstractions (golden paths, self-service) so product teams ship faster without owning every low-level knob. This guide sits beside [`../practices/ci-cd.md`](../practices/ci-cd.md) and [`../practices/iac-gitops.md`](../practices/iac-gitops.md) for deploy and cluster operations.

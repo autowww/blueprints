@@ -1,0 +1,41 @@
+---
+description: Forge tasklet — checklist: which standards layers apply and what is missing from registry (no legal advice).
+globs: 
+alwaysApply: false
+---
+
+# Tasklet: check standards
+
+## Operation
+
+Given **topic** (e.g. auth, PII, PCI) and **repo hints** (`forge/standards-registry.yaml` present or not), list **which L1–L6 layers** should be consulted and **what is unknown**.
+
+## Output (use exactly this shape)
+
+```markdown
+## Tasklet output: check standards
+
+**Topic:** …
+
+| Layer | Relevant? | Notes |
+|-------|-----------|-------|
+| L1 External / legal / customer | yes/no | … |
+| L2 … | … | … |
+| … | … | … |
+
+**Registry file:** found / missing / unknown
+
+**Gaps:** …
+
+**Next:** Skill **resolve-versona-standards** for full merge; human for legal interpretation.
+```
+
+## Rules
+
+- **Not legal advice** — flag **human / counsel** for L1 uncertainty.
+- Max **10** rows in the table; merge layers that are clearly N/A.
+
+## References
+
+- [`precedence.md`](../standards/precedence.md)
+- [`VERSONA-STANDARDS-MATRIX.md`](../standards/VERSONA-STANDARDS-MATRIX.md)

@@ -34,6 +34,11 @@ This maps to the existing WBS hierarchy: Milestone → Epic → Story → Task. 
 | [`mvp-plan.template.md`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/planning/mvp-plan.template.md) | MVP planning template |
 | [`phase-plan.template.md`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/planning/phase-plan.template.md) | Phase planning template |
 | [`forge-planning.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/planning/forge-planning.mdc.template) | Cursor rule for guided planning |
+| [`forge-meta-request-decomposition.prompt.md`](https://github.com/autowww/blueprints/blob/main/sdlc/templates/forge/forge-meta-request-decomposition.prompt.md) | AI intake prompt: meta-request → `ROADMAP` / WBS / `TRACEABILITY` / milestone tree (Markdown-only) |
+| [`forge-direct-execution-sparks-charge.prompt.md`](https://github.com/autowww/blueprints/blob/main/sdlc/templates/forge/forge-direct-execution-sparks-charge.prompt.md) | AI prompt: direct execution → Forge Sparks, task files, **`forge/charge.md`**, Charge recommendation |
+| [`forge/estimation/ESTIMATION-RULES.template.md`](https://github.com/autowww/blueprints/blob/main/sdlc/templates/forge/estimation/ESTIMATION-RULES.template.md) | Copy to `forge/estimation/ESTIMATION-RULES.md` — Fibonacci, t-shirt, tokens, defect multipliers |
+| [`requirements/ESTIMATES.template.md`](https://github.com/autowww/blueprints/blob/main/sdlc/templates/requirements/ESTIMATES.template.md) | Copy to `docs/requirements/ESTIMATES.md` |
+| [`forge-estimation-bootstrap.prompt.md`](https://github.com/autowww/blueprints/blob/main/sdlc/templates/forge/forge-estimation-bootstrap.prompt.md) | AI prompt: bootstrap estimation + install **`versona-estimation`** |
 
 ## Product Spark
 
@@ -54,6 +59,8 @@ For **product-level** planning (vision, strategy, roadmap, business case, market
 - A [first charge template](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/product-manager/first-charge.template.md) with pre-defined product bootstrap Sparks.
 
 The Product Manager agent is **upstream** of `forge-planning` — it creates the strategic inputs (vision, roadmap, business case) that `forge-planning` then decomposes into Forge work units.
+
+**Methodology orchestration (delivery lens):** For **phase-aware** Forge SDLC passes (A–F) — who to invoke, parallel vs sequential discipline runs, **merge** ownership, and **trace** outputs — see [`../orchestration/README.md`](../orchestration/README.md) and the Cursor workflow rule **`versona-forge-sdlc`** (not a substitute for **`forge-product-manager`** product authoring).
 
 ## PDLC connection
 

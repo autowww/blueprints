@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # BA perspectives (blueprint)
 
 **Purpose:** Context-specific guides for how business analysis practices adapt to different organizational and initiative contexts. Each perspective describes how the six knowledge areas shift in emphasis, which techniques dominate, and how the BA role changes.

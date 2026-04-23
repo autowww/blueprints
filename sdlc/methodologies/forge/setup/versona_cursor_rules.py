@@ -47,6 +47,7 @@ OPTIONAL_VERSONA_TEMPLATE_REL: dict[str, str] = {
     "versona-all.mdc": "catalog/routing/versona-all.mdc.template",
     "versona-project-setup.mdc": "catalog/workflow/versona-project-setup.mdc.template",
     "versona-roadmap-gate.mdc": "catalog/workflow/versona-roadmap-gate.mdc.template",
+    "versona-forge-sdlc.mdc": "catalog/workflow/versona-forge-sdlc.mdc.template",
     "versona-cursor-rules-sync.mdc": "catalog/workflow/versona-cursor-rules-sync.mdc.template",
     "versona-sampling.mdc": "catalog/meta/versona-sampling.mdc.template",
     "versona-generic.mdc": "versona-generic.mdc.template",
@@ -164,7 +165,9 @@ def merge_install_options(args: argparse.Namespace) -> tuple[list[str], bool]:
             "versona-all.mdc",
             "versona-project-setup.mdc",
             "versona-roadmap-gate.mdc",
+            "versona-forge-sdlc.mdc",
             "versona-cursor-rules-sync.mdc",
+            "versona-sampling.mdc",
         ]
         wf = True
     elif preset == "full":
@@ -172,7 +175,9 @@ def merge_install_options(args: argparse.Namespace) -> tuple[list[str], bool]:
             "versona-all.mdc",
             "versona-project-setup.mdc",
             "versona-roadmap-gate.mdc",
+            "versona-forge-sdlc.mdc",
             "versona-cursor-rules-sync.mdc",
+            "versona-sampling.mdc",
             "versona-family-engineering.mdc",
             "versona-family-data.mdc",
             "versona-family-product.mdc",
@@ -191,6 +196,8 @@ def merge_install_options(args: argparse.Namespace) -> tuple[list[str], bool]:
         add("versona-project-setup.mdc")
     if args.with_roadmap_gate:
         add("versona-roadmap-gate.mdc")
+    if getattr(args, "with_forge_sdlc", False):
+        add("versona-forge-sdlc.mdc")
     if args.with_all_routing:
         add("versona-all.mdc")
     if args.with_family_product:
@@ -234,6 +241,43 @@ def _blueprints_git_sha(bp_root: Path) -> str | None:
     except (OSError, subprocess.TimeoutExpired):
         pass
     return None
+
+
+def write_adoption_manifest(repo_root: Path, *, preset: str | None) -> Path:
+    """
+    Sibling to cursor-rules-manifest: process-first adoption hints (Skills, tasklets, recipes).
+    Does not duplicate per-file SHAs — see CURSOR-RULES-ALIGNMENT.md § Manifest split.
+    """
+    bp_root, _ = discover_blueprints_and_versona(repo_root)
+    doc: dict[str, Any] = {
+        "schema_version": 1,
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "blueprints_commit": _blueprints_git_sha(bp_root),
+        "preset_used": preset,
+        "cursor_rules_manifest": ".forge/cursor-rules-manifest.json",
+        "companion_installs": {
+            "skills": {
+                "blueprint_path": "blueprints/sdlc/templates/forge/cursor-skills/",
+                "install_copy_into": ".cursor/skills/<skill-name>/",
+                "matrix": "blueprints/sdlc/methodologies/forge/versona/VERSONA-SKILL-MATRIX.md",
+            },
+            "tasklets": {
+                "installer": "blueprints/sdlc/methodologies/forge/tasklets/install-tasklets.sh",
+                "note": "Copies forge-tasklet-*.mdc. versona-sampling.mdc overlaps preset recommended/full — install is idempotent.",
+            },
+            "recipes": {
+                "orchestration_doc": "blueprints/agents/ORCHESTRATION.md",
+                "consumer_path": "agents/recipes/<recipe>/",
+            },
+        },
+        "verification_doc": "blueprints/sdlc/methodologies/forge/setup/VERSONA-VERIFICATION.md",
+        "migration_doc": "blueprints/sdlc/methodologies/forge/setup/VERSONA-PROCESS-MODEL-MIGRATION.md",
+    }
+    forge_dir = repo_root / ".forge"
+    forge_dir.mkdir(parents=True, exist_ok=True)
+    out = forge_dir / "versona-adoption-manifest.json"
+    out.write_text(json.dumps(doc, indent=2) + "\n", encoding="utf-8")
+    return out
 
 
 def write_cursor_rules_manifest(
@@ -412,6 +456,9 @@ def cmd_install(args: argparse.Namespace) -> int:
             preset=getattr(args, "preset", None),
         )
         print(f"Wrote {mpath.relative_to(root)} (template vs installed SHA256; blueprints git HEAD when available).")
+    if getattr(args, "write_adoption_manifest", False):
+        apath = write_adoption_manifest(root, preset=getattr(args, "preset", None))
+        print(f"Wrote {apath.relative_to(root)} (companion adoption hints — not a second SHA manifest).")
     return 0
 
 
@@ -542,6 +589,11 @@ def _add_preset_and_optional_rule_flags(p: argparse.ArgumentParser) -> None:
     )
     p.add_argument("--with-project-setup", action="store_true")
     p.add_argument("--with-roadmap-gate", action="store_true")
+    p.add_argument(
+        "--with-forge-sdlc",
+        action="store_true",
+        help="Optional versona-forge-sdlc.mdc methodology orchestrator (also in recommended/full presets)",
+    )
     p.add_argument("--with-all-routing", action="store_true")
     p.add_argument("--with-family-product", action="store_true")
     p.add_argument("--with-family-engineering", action="store_true")
@@ -576,6 +628,11 @@ def main() -> int:
         "--no-write-manifest",
         action="store_true",
         help="Do not write .forge/cursor-rules-manifest.json after install",
+    )
+    p_inst.add_argument(
+        "--write-adoption-manifest",
+        action="store_true",
+        help="Also write .forge/versona-adoption-manifest.json (Skills/tasklets/recipes hints; see CURSOR-RULES-ALIGNMENT.md)",
     )
     _add_preset_and_optional_rule_flags(p_inst)
     p_inst.set_defaults(func=cmd_install)

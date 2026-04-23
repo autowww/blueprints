@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://blueprints.forgesdlc.com/schema/forge/artifact-manifest.json",
+  "title": "Versona artifact manifest",
+  "description": "Index of evidence, reports, diagram exports, and recipe outputs tied to a session or run.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["generated_at", "artifacts"],
+  "properties": {
+    "manifest_id": {
+      "type": "string",
+      "description": "Optional opaque id for this manifest instance."
+    },
+    "session_id": {
+      "type": "string",
+      "description": "Forge Versona session when manifest lives under that session."
+    },
+    "recipe_name": {
+      "type": "string",
+      "description": "agents/recipes/<name>/ when manifest describes a recipe run."
+    },
+    "recipe_run_id": {
+      "type": "string",
+      "description": "CI build id, timestamp slug, or other run correlation."
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["path", "artifact_kind"],
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "Repo-relative path."
+          },
+          "artifact_kind": {
+            "type": "string",
+            "enum": [
+              "evidence",
+              "report",
+              "transcript",
+              "diagram_ir",
+              "diagram_rendered",
+              "recipe_log",
+              "other"
+            ]
+          },
+          "mime_type": { "type": "string" },
+          "sha256": { "type": "string" },
+          "diagram_adapter": {
+            "type": "string",
+            "description": "e.g. blueprint_diagram, svg_asset, diagram_json_ir, external_uri — not a specific vendor grammar."
+          },
+          "caption": { "type": "string" }
+        }
+      }
+    }
+  }
+}

@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # HIPAA: Health Insurance Portability and Accountability Act
 
 **Purpose:** Project-agnostic overview of **US HIPAA** (and related **HITECH**) obligations for **PHI** in covered healthcare flows. **Not legal advice**; confirm coverage (covered entity vs business associate) with counsel.

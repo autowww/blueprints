@@ -30,7 +30,7 @@ When the [decision guide](adopting-blueprints.md#decision-guide) points you to p
 | Step | Action | Verify |
 |------|--------|--------|
 | 1 | Submodule (or copy) Blueprints into `blueprints/`. | `test -f blueprints/sdlc/README.md` |
-| 2 | Add a **project** `sdlc/` folder (interpretations, principles) — do **not** edit the copy under `blueprints/sdlc/`; see [Policy](POLICY.md). | `sdlc/README.md` exists after [init script](quickstarts/first-hour.md). |
+| 2 | Add a **project** `sdlc/` folder (interpretations, principles) — do **not** edit the copy under `blueprints/sdlc/`; see [Blueprint policy](POLICY.md). | `sdlc/README.md` exists after [init script](quickstarts/first-hour.md). |
 | 3 | Add `docs/product/` when you need capabilities/journeys (seed from [product templates](../product/templates/README.md)). | Optional; structure matches your product docs needs. |
 
 ## Example scenario (path A)
@@ -40,7 +40,7 @@ When the [decision guide](adopting-blueprints.md#decision-guide) points you to p
 | **Starting situation** | Solo maintainer on a small service repo; no shared ceremony yet; Blueprints not in the tree. |
 | **Action taken** | Add `blueprints/` as a submodule, run [First hour](quickstarts/first-hour.md), keep interpretations in project `sdlc/` only. |
 | **Expected result** | `blueprints/sdlc/README.md` present; project `sdlc/README.md` describes *your* product; no edits under `blueprints/sdlc/` for product text. |
-| **What to check** | `git status` shows submodule pointer or new `sdlc/` files; policy in [POLICY.md](POLICY.md) matches how you treat the frozen baseline. |
+| **What to check** | `git status` shows submodule pointer or new `sdlc/` files; your treatment of the frozen baseline matches [Blueprint policy](POLICY.md). |
 
 ## How to verify success
 

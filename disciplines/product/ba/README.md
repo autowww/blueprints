@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Business analysis (BA)
 
 Reusable, **project-agnostic** blueprint for **business analysis** — the discipline of understanding organizational needs, defining solutions, and managing requirements across their lifecycle. Grounded in the [BABOK Guide v3](https://www.iiba.org/babok-guide/) (IIBA), adapted for teams already using [`blueprints/sdlc/`](../../../sdlc/README.md) and [`blueprints/pdlc/`](../../../pdlc/README.md).

@@ -45,4 +45,5 @@ learning_level: reference
 
 - Day journal row: `forge/journal/YYYY-MM-DD.md`
 - Framework: `blueprints/sdlc/methodologies/forge/versona/VERSONA-FRAMEWORK.md`
+- Operating model (optional JSON artifacts, `versona-track/`): `blueprints/sdlc/methodologies/forge/VERSONA-OPERATING-MODEL.md`
 - Exploration spikes: `blueprints/sdlc/methodologies/forge/versona/DISCIPLINE-SPIKE.md` · open/close templates in `blueprints/sdlc/templates/forge/discipline-spike-*.template.md`

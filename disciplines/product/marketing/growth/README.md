@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Growth engineering — index
 
 **Growth engineering** is the practice of improving acquisition, activation, retention, revenue, and referral through **systematic experimentation**, **sound instrumentation**, and **honest metrics** — not one-off hacks. It overlaps with marketing operations and product analytics but emphasizes **closed-loop tests** with pre-registered success criteria and **guardrails** (support load, refunds, trust). Blueprint material here is **framework-level**; operational runbooks, experiment tickets, and dashboards belong in `docs/product/marketing/` or platform docs.

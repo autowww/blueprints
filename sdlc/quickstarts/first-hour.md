@@ -148,7 +148,7 @@ bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh check
 | Mistake | What to do |
 |---------|------------|
 | Running scripts from a subfolder of the repo | `cd` to the **repository root** (the directory that will list `blueprints/`, `sdlc/`, …) and re-run |
-| Editing files under `blueprints/` for product-specific wording | Move that text to project **`sdlc/`** or **`docs/`**; see [Policy](../POLICY.md) |
+| Editing files under `blueprints/` for product-specific wording | Move that text to project **`sdlc/`** or **`docs/`**; see [Blueprint policy](../POLICY.md) |
 | Skipping `git submodule update` after clone | Run `git submodule update --init --recursive` so `blueprints/sdlc/` exists |
 | Expecting Forge Studio inside `blueprints/` | Forge Studio is the **forge-lenses** app — see [Forge Studio quickstart](forge-studio.md) |
 

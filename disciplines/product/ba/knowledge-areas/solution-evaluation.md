@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Solution Evaluation
 
 Assesses whether the delivered solution **actually delivers the expected value** to stakeholders and the organization. This knowledge area closes the feedback loop — it connects delivery outcomes back to the business needs that justified the initiative.

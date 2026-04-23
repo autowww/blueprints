@@ -26,6 +26,8 @@ Project-specific JSON or env file passed to the recipe (not frozen in blueprints
 }
 ```
 
+After the run, register concrete paths in a session **`artifact-manifest.json`** when the team adopts optional schemas — see [`../../sdlc/methodologies/forge/schemas/artifact-manifest.schema.json`](../../sdlc/methodologies/forge/schemas/artifact-manifest.schema.json) and [`../../sdlc/methodologies/forge/VERSONA-OPERATING-MODEL.md`](../../sdlc/methodologies/forge/VERSONA-OPERATING-MODEL.md) §2.
+
 ## Security
 
 - **No secrets** in blueprint Markdown. Use CI secrets and **gitignored** `.env` patterns per [`POLICY.md`](../POLICY.md).
@@ -35,3 +37,5 @@ Project-specific JSON or env file passed to the recipe (not frozen in blueprints
 
 - [`STRUCTURE.md`](../STRUCTURE.md) — L5 recipes, L6 optional runner
 - [`sdlc/methodologies/forge/tasklets/TASKLET-TAXONOMY.md`](../../sdlc/methodologies/forge/tasklets/TASKLET-TAXONOMY.md) — execution plane row
+- [`sdlc/methodologies/forge/versona/VERSONA-SKILL-MATRIX.md`](../../sdlc/methodologies/forge/versona/VERSONA-SKILL-MATRIX.md) — which Versona uses which Skill vs recipe
+- Blueprint **stub templates** (copy to `agents/recipes/`): [`../templates/recipe/versona-evidence-pack-assemble/`](../templates/recipe/versona-evidence-pack-assemble/README.md), [`../templates/recipe/versona-kitchensink-diagram-export/`](../templates/recipe/versona-kitchensink-diagram-export/README.md)

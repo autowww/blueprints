@@ -47,6 +47,7 @@ Use Cursor **`globs:`** so rules attach when relevant paths are open (e.g. `docs
 
 ## See also
 
-- [`README.md`](README.md) — install and bundled examples
+- [`README.md`](README.md) — install and bundled examples (includes **route**, **bootstrap-session**, **check-standards**, **log-event**, **merge-outputs**, **summarize-evidence**)
 - [`../versona/README.md`](../versona/README.md) — Versona catalog + Sampling
+- [`../versona/VERSONA-SKILL-MATRIX.md`](../versona/VERSONA-SKILL-MATRIX.md) — tasklet ↔ Versona mapping
 - [`agents/ORCHESTRATION.md`](../../../../agents/ORCHESTRATION.md) — container recipes

@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Requirements Life Cycle Management
 
 Ensures requirements are **traced** to business objectives, **maintained** as understanding evolves, **prioritized** for delivery, and formally **approved** by stakeholders. This knowledge area governs the requirements themselves — not what they say (that is Requirements Analysis & Design Definition), but how they are managed over time.

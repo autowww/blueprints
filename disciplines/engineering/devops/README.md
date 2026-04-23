@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # DevOps
 
 Reusable, **project-agnostic** blueprint for **DevOps** — the discipline of bridging development and operations to enable continuous, reliable delivery through culture, automation, measurement, and sharing.

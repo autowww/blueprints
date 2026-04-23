@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Data science & machine learning body of knowledge
 
 This document maps the core concerns of **data science** — the ML lifecycle, statistical foundations, model evaluation, MLOps, and responsible AI — to the blueprint ecosystem.

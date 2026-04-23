@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Frontend performance (blueprint)
 
 **Purpose:** Deep, **project-agnostic** guidance for web performance optimization. Covers measurement, analysis, and optimization strategies tied to Core Web Vitals and user experience.

@@ -1,0 +1,18 @@
+---
+description: Cursor history import — raw under imports/cursor-history/raw/; normalized .md, SCHEMA-NOTES, IMPORT-LEDGER; idempotent promotion to docs/.
+globs: imports/cursor-history/**/*,docs/requirements/**/*,docs/ROADMAP.md
+alwaysApply: false
+---
+
+# Historical import (Cursor)
+
+## Runbook
+
+1. Raw SQLite/exports stay in `imports/cursor-history/raw/`; **normalized** records in `imports/cursor-history/normalized/*.md`.
+2. Maintain `imports/cursor-history/SCHEMA-NOTES.md` (schema inference) and **`imports/cursor-history/IMPORT-LEDGER.md`** (deterministic rows: source id → normalized path → canonical ids → status → canonicalization **A–G**).
+3. **Idempotent:** reuse `source_record_id`; do not duplicate promoted artifacts on re-run.
+4. Promote to `docs/requirements/**`, `docs/ROADMAP.md`, `TRACEABILITY.md` only after classification; **never** under `blueprints/`.
+
+## Prompt source
+
+[`blueprints/sdlc/templates/forge/forge-cursor-history-import.prompt.md`](../../forge-cursor-history-import.prompt.md)

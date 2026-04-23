@@ -1,0 +1,34 @@
+---
+description: Versona routing — when to invoke discipline rules vs Forge prompts; sessions under forge-logs/versona/; sync from blueprints.
+globs: forge-logs/**/*,.cursor/rules/**/*,forge/forge.config.yaml
+alwaysApply: false
+---
+
+# Versona routing (Forge)
+
+## Principles
+
+- **Versonas** are discipline lenses (`versona-*.mdc`); **not** a substitute for team meetings. Sessions live under `forge-logs/versona/<actor>/<session-id>/`.
+- Use **`versona-all`** (or packaged **`forge-versona`**) for **routing** when unsure which discipline to attach.
+- **Product Spark ≠ Forge Spark** — routing and planning rules must keep release slices separate from executable tasks.
+
+## When to route
+
+| Situation | Suggested lens / rule |
+|-----------|------------------------|
+| Intake / classification | `request-classifier` + prompts; then discipline as needed |
+| Meta scope / roadmap | `meta-request-decomposer`; **Product Management** family; **PM** for commitments |
+| Daily execution | `spark-planner`, **`forge-daily`** (if installed), `forge/charge.md` |
+| Quality / test §5 | **`versona-testing`** |
+| Estimation method | **`versona-estimation`** (if installed) |
+| Defects | `defect-rca-testing` + **Testing** / **SE** |
+| Standards / compliance | **`resolve-versona-standards`** Skill; **Security** / **Compliance** when triggered |
+
+## Install / sync
+
+- Copy discipline templates from [`blueprints/sdlc/methodologies/forge/versona/catalog/`](../../../../methodologies/forge/versona/catalog/) or run [`blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh`](../../../../methodologies/forge/setup/sync-forge-cursor-rules.sh) per [`CURSOR-RULES-QUICKSTART.md`](../../../../methodologies/forge/setup/CURSOR-RULES-QUICKSTART.md).
+- Align **`forge/forge.config.yaml`** with installed rules.
+
+## Artifact storage
+
+[`blueprints/sdlc/methodologies/forge/versona/ARTIFACT-CONTRACTS.md`](../../../../methodologies/forge/versona/ARTIFACT-CONTRACTS.md)

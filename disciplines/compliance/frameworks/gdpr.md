@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # GDPR: General Data Protection Regulation
 
 **Purpose:** Project-agnostic summary of the EU **General Data Protection Regulation** (Regulation (EU) 2016/679) — the most influential modern privacy law for personal data processing. **Not legal advice**; confirm applicability and interpretation with qualified counsel.

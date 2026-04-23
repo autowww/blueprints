@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Product development lifecycle (PDLC)
 
 There is **no single universal PDLC phase standard** — Stage-Gate describes a gated new-product-development model; vendors publish different stage counts and labels (for example, seven-stage or six-stage product-development lifecycles). The common pattern is still recognizable: problem discovery, solution validation, business case and planning, development and delivery, launch and commercialization, then post-launch growth or retirement. Forge does **not** claim a new global standard; it adopts one **explicit, mainstream-shaped** variant and states it clearly here.

@@ -46,6 +46,6 @@ When CI fails, the submodule is dirty, or you need to communicate a bad bump to 
 
 ## What to do next
 
-- [Policy](POLICY.md) — when you may change files under `blueprints/` vs project space
+- [Blueprint policy](POLICY.md) — when you may change files under `blueprints/` vs project space
 - [Troubleshooting / FAQ](troubleshooting-faq.md)
 - [Validate and test](updating-submodule-validate.md)

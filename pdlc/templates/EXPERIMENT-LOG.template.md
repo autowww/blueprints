@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Experiment log — [Initiative / Opportunity Name]
 
 <!--

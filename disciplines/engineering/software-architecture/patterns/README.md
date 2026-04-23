@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Architectural patterns (blueprint)
 
 **Purpose:** Catalog of **architectural patterns** — recurring structural solutions to system design problems. Each pattern describes structure, quality trade-offs, fitness criteria, and migration paths.

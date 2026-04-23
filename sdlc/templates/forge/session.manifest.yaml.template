@@ -1,5 +1,7 @@
 # Optional machine-readable twin of SESSION.md frontmatter.
 # Copy to session.manifest.yaml inside the session folder and keep in sync with SESSION.md, or delete if you use only SESSION.md.
+# Optional JSON mirror: session.manifest.json — JSON Schema blueprints/sdlc/methodologies/forge/schemas/session-manifest.schema.json
+# Enriched layout (ledger, handoff.json, diagrams/): blueprints/sdlc/methodologies/forge/VERSONA-OPERATING-MODEL.md
 
 # Optional: bump when you adopt a new session/manifest contract (see methodologies/forge/versona/MIGRATIONS.md).
 # versona_session_schema_version: 1

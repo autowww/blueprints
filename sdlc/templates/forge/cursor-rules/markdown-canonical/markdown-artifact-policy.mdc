@@ -1,0 +1,36 @@
+---
+description: Markdown-only canonical artifacts — no CSV/spreadsheet SoT; front matter, tables, linked files; never write project history under blueprints/.
+alwaysApply: true
+---
+
+# Markdown artifact policy (canonical)
+
+## Non-negotiables
+
+- **Canonical project artifacts** are **Markdown (`.md`)** only. Do **not** create **CSV**, spreadsheet-backed ledgers, or JSON/**JSONL** as the **system of record** for requirements, traceability, risks, estimates, defects, or import ledgers unless `AGENTS.md` explicitly allows optional tooling adjuncts.
+- Use **YAML front matter**, **Markdown tables**, **checklists**, and **linked** detail files under `docs/`, `forge/`, `imports/cursor-history/`, `docs/defects/` as documented in `docs/PROJECT.md`.
+- **`blueprints/`** is a **read-only submodule** (framework). **Never** store **project-specific** history, defects, estimates, or imports there.
+
+## Canonical locations (adjust only if `docs/PROJECT.md` defines aliases)
+
+| Topic | Typical path |
+|-------|----------------|
+| Roadmap | `docs/ROADMAP.md` |
+| Requirements index | `docs/requirements/INDEX.md` |
+| WBS | `docs/requirements/WBS.md` |
+| Estimates ledger | `docs/requirements/ESTIMATES.md` |
+| Traceability | `docs/requirements/TRACEABILITY.md` |
+| Test trace (optional) | `docs/testing/TRACEABILITY.md` — omit if all rows live in `docs/requirements/TRACEABILITY.md` |
+| Defects | `docs/defects/INDEX.md`, `docs/defects/DEF-NNNN/*.md` |
+| Charge (stock Forge) | **`forge/charge.md`** |
+| Iteration notes (optional) | `forge/current/ITERATION.md` **only if** documented in `docs/PROJECT.md`; otherwise use `docs/ROADMAP.md` / WBS |
+| Charge alias | `forge/current/CHARGE.md` **only if** documented; prefer **`forge/charge.md`** for `forge-charge.sh` |
+| Estimation rules | `forge/estimation/ESTIMATION-RULES.md` |
+| Cursor import | `imports/cursor-history/SCHEMA-NOTES.md`, `IMPORT-LEDGER.md`, `normalized/*.md` |
+
+## Behavior
+
+- **Prefer updating** existing canonical `.md` files over creating parallel or duplicate files.
+- Raw imports may live under `imports/cursor-history/raw/` in original format; **normalized** outputs must be `.md`.
+
+**Blueprint reference:** [`blueprints/sdlc/methodologies/markdown-canonical-workspace-policy.md`](../../../../methodologies/markdown-canonical-workspace-policy.md)

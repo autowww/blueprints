@@ -3,22 +3,28 @@ public_publish: true
 audience: public
 handbook_area: blueprints
 learning_level: reference
+nav_title: Blueprint policy
 ---
 
-# Blueprint policy — do not change casually
+# Blueprint policy
 
-This directory **`blueprints/sdlc/`** is the **frozen** SDLC package: process and documentation conventions meant to be **reused and compared** across projects.
+**Do not change the blueprint baseline casually.** The tree under **`blueprints/`** (including **`blueprints/sdlc/`**) is a **shared baseline**: generic process and documentation conventions you **reuse** across projects. It is not your day-to-day project scratch space.
 
 ## Rules
 
-1. **Do not edit** files here as part of normal product work (features, docs under `docs/`, WBS updates, etc.).  
-2. **Change only when explicitly requested** — e.g. adopting a new blueprint version, fixing an upstream template bug, or a deliberate policy decision to revise the baseline.  
-3. **Day-to-day project work** belongs in **`sdlc/`** (this repo’s SDLC workspace) and **`docs/`** (requirements, roadmap, profile, etc.).  
-4. If you change **`SDLC.md`**, **`DOCUMENTATION-STRUCTURE.md`**, **`methodologies/*.md`**, or related blueprint files, ensure **publishable** Markdown is refreshed on **blueprints.forgesdlc.com** per [`docs/DESIGN-PRINCIPLES.md`](../docs/DESIGN-PRINCIPLES.md) and [`docs/MAINTENANCE.md`](../docs/MAINTENANCE.md) — update the **human handbook** in **`blueprints/sdlc/docs/`** (chapter `*.html`, SVGs as needed) when applicable, per **`blueprints/sdlc/docs/MAINTENANCE.md`**. When **`blueprints/agents/`** in the same repository changes, align **`blueprints/sdlc/docs/agents.html`** with **`blueprints/agents/STRUCTURE.md`**.
+1. **Do not edit** files under **`blueprints/`** for normal product work — features, product requirements, roadmap notes, WBS updates, or team-specific wording.
+2. **Put project work** in **`sdlc/`** (this repository’s project SDLC workspace) and **`docs/`** (requirements, roadmap, profiles, and other product documentation) unless your runbook says otherwise.
+3. **Change the baseline** only when you deliberately move to a **new upstream version** (for example by **bumping the git submodule** to a new commit), fix something **with upstream**, or follow an explicit maintainer decision — not as a shortcut during a story or ticket.
 
 ## Relationship to `sdlc/`
 
-- **`blueprints/sdlc/`** — canonical, generic text (immutable by convention).  
-- **`sdlc/`** — where this project **links, interprets, and extends** the SDLC without touching the blueprint.
+| Location | Role |
+|----------|------|
+| **`blueprints/sdlc/`** | Canonical, generic text — **frozen by convention** for consumers of this repo. |
+| **`sdlc/`** (repo root) | Where **this project** links, interprets, and extends the lifecycle **without** editing the submodule’s files in place. |
 
-Copying this repo: you may copy **`blueprints/sdlc/`** wholesale to another repository; use **`sdlc/`** (or equivalent) only in repos that track project-specific SDLC notes.
+**Copying this layout:** You may copy **`blueprints/`** (or **`blueprints/sdlc/`**) wholesale into another repository. Use a project-level **`sdlc/`** (or equivalent) there for **repository-specific** SDLC notes.
+
+## Updating the baseline pointer
+
+To adopt a newer Blueprints release or move the submodule safely, use the handbook runbook **[Updating the Blueprints submodule](updating-blueprints-submodule.md)**. If something went wrong after a bump, **[Troubleshooting and FAQ](troubleshooting-faq.md)** is the right next step.

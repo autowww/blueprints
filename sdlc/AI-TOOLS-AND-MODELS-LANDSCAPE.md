@@ -5,9 +5,9 @@ handbook_area: blueprints
 learning_level: reference
 ---
 
-# AI tools and models landscape (SDLC)
+# AI tools and models landscape
 
-This page is the **hub** for how **AI-assisted tooling** fits the Forge SDLC: coding agents, review bots, test generators, and model-backed workflows. It exists so cross-references from discipline docs (e.g. BA, testing automation) resolve to a single handbook page.
+This page is the **hub** for how **AI-assisted tooling** fits **software delivery** and the Forge methodology layer (the same lifecycle space often shortened **SDLC** in internal docs): coding agents, review bots, test generators, and model-backed workflows. It exists so cross-references from discipline docs (e.g. BA, testing automation) resolve to a single handbook page.
 
 ## Scope
 

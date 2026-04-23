@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Marketing
 
 Reusable, **project-agnostic** blueprint for **Marketing** — the discipline of acquiring, engaging, and retaining users for digital products through positioning, channels, growth systems, and measurable go-to-market execution.

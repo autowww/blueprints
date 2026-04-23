@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # BA templates
 
 Copy-paste starters for business analysis artifacts. Copy into your project's `docs/product/`, `docs/requirements/`, or equivalent folder and fill in.

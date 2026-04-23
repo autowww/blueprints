@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Threat modeling — methodologies and practice
 
 **Purpose:** A **project-agnostic** blueprint for systematically identifying, analyzing, and mitigating security threats before they are exploited.

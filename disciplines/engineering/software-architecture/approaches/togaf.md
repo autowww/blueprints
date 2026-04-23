@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # TOGAF and the Architecture Development Method (ADM)
 
 **TOGAF** (The Open Group Architecture Framework) is an **enterprise architecture** framework. Its best-known part is the **Architecture Development Method (ADM)** — a cyclic, phase-based process for developing and governing architectures across business, information systems, and technology domains. It targets **portfolio-scale** change, not a single team’s sprint backlog.

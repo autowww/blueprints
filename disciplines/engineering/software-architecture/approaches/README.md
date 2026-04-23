@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Architecture approaches (blueprint)
 
 **Purpose:** Deeper, **project-agnostic** guides for architecture documentation and reasoning approaches. Each approach describes its structure, when to use it, and how it maps to the lifecycle.

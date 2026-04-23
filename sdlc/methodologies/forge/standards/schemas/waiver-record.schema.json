@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://blueprints.forgesdlc.com/schema/forge/waiver-record.json",
+  "title": "Standards waiver / exception record",
+  "description": "Documents a time-bounded or approved deviation from a control; stored in consuming repo (e.g. forge/waivers/).",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["waiver_id", "control_id", "status", "rationale", "approved_by_role"],
+  "properties": {
+    "waiver_id": { "type": "string" },
+    "control_id": {
+      "type": "string",
+      "description": "References standards-registry control_id."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["proposed", "approved", "expired", "revoked"]
+    },
+    "work_item_refs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Ore/Ingot/Spark or external keys in scope."
+    },
+    "rationale": { "type": "string" },
+    "compensating_controls": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date",
+      "description": "Optional; null for permanent policy exception."
+    },
+    "approved_by_role": { "type": "string" },
+    "approval_ref": {
+      "type": "string",
+      "description": "Ticket, email archive, or GRC workflow ID."
+    },
+    "ember_log_ref": {
+      "type": "string",
+      "description": "Link to decision in ember-logs/."
+    }
+  }
+}

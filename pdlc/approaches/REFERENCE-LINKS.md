@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # External reference URLs (PDLC approach guides)
 
 Curated list of **https** targets cited in [`blueprints/pdlc/approaches/`](README.md) and in [`PDLC-SDLC-BRIDGE.md`](../PDLC-SDLC-BRIDGE.md). When you change a URL in Markdown, update the matching approach guide's "Authoritative sources" section.

@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Compliance frameworks (index)
 
 **Purpose:** Index of **framework-specific** guides for digital product compliance — privacy, accessibility, sector regulation, AI, and assurance schemes. Each guide summarizes scope, control themes, engineering implications, evidence, and common pitfalls in a **project-agnostic** way.

@@ -1,0 +1,38 @@
+---
+description: Forge tasklet — bullet summary of evidence paths and gaps for a work item (no file copies).
+globs: 
+alwaysApply: false
+---
+
+# Tasklet: summarize evidence
+
+## Operation
+
+Given **paths** (or globs) the user lists for a **verify/release** claim, produce a **short** evidence map: what each path proves and **what is missing**.
+
+## Output (use exactly this shape)
+
+```markdown
+## Tasklet output: summarize evidence
+
+**Work item:** …
+
+### Covered
+- **Path:** … → **Proves:** …
+
+### Gaps
+- …
+
+### Suggested pack layout
+- `forge/evidence/<pack-id>/INDEX.md` rows: …
+```
+
+## Rules
+
+- Do **not** claim **compliance** — describe **coverage** only.
+- Max **12** bullets across **Covered** + **Gaps**.
+- Heavy assembly → Skill **assemble-versona-evidence-pack** + optional recipe.
+
+## References
+
+- [`ARTIFACT-CONTRACTS.md`](../versona/ARTIFACT-CONTRACTS.md) §3.7

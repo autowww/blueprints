@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # BA techniques catalog
 
 Master catalog of business analysis techniques from the [BABOK Guide v3](https://www.iiba.org/babok-guide/), mapped to knowledge areas and lifecycle phases. Use this as a **selection guide** — pick techniques that fit your initiative's context, formality level, and team capability.

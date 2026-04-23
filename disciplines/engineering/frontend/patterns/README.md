@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Frontend patterns (blueprint)
 
 **Purpose:** Deep, **project-agnostic** guides for frontend component, state management, and data-fetching patterns. Each pattern describes its intent, implementation, trade-offs, and testing strategy.

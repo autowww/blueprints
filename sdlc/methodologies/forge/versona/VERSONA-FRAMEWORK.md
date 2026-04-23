@@ -9,7 +9,7 @@ learning_level: reference
 
 This document defines **generic** concepts for Forge **Versonas**: taxonomy by kind, input/output interfaces, repeatable **process** documentation, **inter-Versona** interaction patterns, **session** storage in the consuming repo, and alignment with **Ember Log** and **day journal**. It complements the Cursor rule shape in [`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md); it does not replace per-discipline templates.
 
-**Related:** [`README.md`](README.md) (hub — **Source layout** for paths on disk) · [`DISCIPLINE-SPIKE.md`](DISCIPLINE-SPIKE.md) (exploration spike lifecycle, anchors, open/close) · [`catalog/TEMPLATE-INDEX.md`](catalog/TEMPLATE-INDEX.md) (authoritative path per template) · [`catalog/ANCESTRY.md`](catalog/ANCESTRY.md) (kinds, domains) · [`../tasklets/TASKLET-TAXONOMY.md`](../tasklets/TASKLET-TAXONOMY.md) · [`../../../../agents/docs/VERSONA-EXECUTION-TASKLETS.md`](../../../../agents/docs/VERSONA-EXECUTION-TASKLETS.md) · [`../../../../agents/ORCHESTRATION.md`](../../../../agents/ORCHESTRATION.md)
+**Related:** [`README.md`](README.md) (hub — **Source layout** for paths on disk) · [`ARTIFACT-CONTRACTS.md`](ARTIFACT-CONTRACTS.md) (canonical **artifact** paths, formats, ownership) · [`VERSONA-SKILL-MATRIX.md`](VERSONA-SKILL-MATRIX.md) (Skills, tasklets, recipe stubs per template) · [`../standards/README.md`](../standards/README.md) (precedence, per-Versona standards profiles, registry schemas) · [`../VERSONA-OPERATING-MODEL.md`](../VERSONA-OPERATING-MODEL.md) (session tree detail, optional JSON artifacts, tooling split, diagrams) · [`../schemas/README.md`](../schemas/README.md) · [`DISCIPLINE-SPIKE.md`](DISCIPLINE-SPIKE.md) (exploration spike lifecycle, anchors, open/close) · [`catalog/TEMPLATE-INDEX.md`](catalog/TEMPLATE-INDEX.md) (authoritative path per template) · [`catalog/ANCESTRY.md`](catalog/ANCESTRY.md) (kinds, domains) · [`../tasklets/TASKLET-TAXONOMY.md`](../tasklets/TASKLET-TAXONOMY.md) · [`../../../../agents/docs/VERSONA-EXECUTION-TASKLETS.md`](../../../../agents/docs/VERSONA-EXECUTION-TASKLETS.md) · [`../../../../agents/ORCHESTRATION.md`](../../../../agents/ORCHESTRATION.md)
 
 ---
 
@@ -30,6 +30,7 @@ alt: Diagram
 | **Session** | One user-visible “call”: a folder (or linked set of files) holding context, artifacts, and pointers to logs. A session may contain **multiple** activities. |
 | **Challenge pass** (informal) | A **session** (or **activity**) where the team uses the **§5 structured discipline review** shape from [`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md) §5 to pressure-test a work item—**one** possible session type, not the definition of “Versona.” |
 | **Human reviewer / SME** | People participating in reviews or peer challenge; **not** a Versona (Versona = virtual persona). |
+| **Standards stack** | **L1–L6** precedence for which controls win when they conflict; Versonas **trace** decisions via Contract §5.1 fields. Normative: [`../standards/precedence.md`](../standards/precedence.md); profiles: [`../standards/VERSONA-STANDARDS-MATRIX.md`](../standards/VERSONA-STANDARDS-MATRIX.md). |
 
 ---
 
@@ -60,7 +61,7 @@ Document what the Versona (or process) needs before meaningful work:
 - **Prior session** — path to another session folder when chaining calls.
 - **Human declarations** — current hat, phase, risk appetite (when relevant).
 
-Optional **machine-readable** hints (for future tooling): a short YAML or bullet schema in the session manifest or process doc—**not** enforced by blueprints v1.
+Optional **machine-readable** hints: YAML or JSON beside the session (see [`../schemas/session-manifest.schema.json`](../schemas/session-manifest.schema.json))—**not** enforced by blueprints unless the team turns on validation; see [`../VERSONA-OPERATING-MODEL.md`](../VERSONA-OPERATING-MODEL.md). **Canonical read/write** for specs, ADRs, evidence, diagrams: [`ARTIFACT-CONTRACTS.md`](ARTIFACT-CONTRACTS.md).
 
 Example (illustrative only):
 
@@ -91,7 +92,11 @@ An activity is **bounded work** with a clear stop condition:
 - **Artifacts produced** — paths under `outputs/` (or recipe workspace) the consumer must read.
 - **Recommended next actor** — which Versona kind or human gate (optional but reduces dropped context).
 
+Optional **machine-readable** handoff: `outputs/handoff.json` per [`../schemas/handoff-payload.schema.json`](../schemas/handoff-payload.schema.json) when teams adopt the operating model in [`../VERSONA-OPERATING-MODEL.md`](../VERSONA-OPERATING-MODEL.md).
+
 Other kinds use their **output variant** from the table in §2.
+
+When **§5** output is used and policy or controls are in scope, include **Standards traceability** (`standards_considered`, `standards_applied`, `conflicts_detected`, `waivers_required`, `evidence_obligations`) per [`VERSONA-CONTRACT.md`](VERSONA-CONTRACT.md) §5.1.
 
 ---
 
@@ -132,7 +137,7 @@ Each process document should include:
 4. **Steps** — ordered **activities**, each with owner type: `Human` | `Versona:kind` | `Tasklet` | `Recipe`.
 5. **Outputs** — artifacts and decisions produced.
 6. **Downstream consumers** — next process, Versona, or Ember Log expectation.
-7. **Diagram** — diagram-as-code (`sequenceDiagram` or `flowchart`) showing handoffs.
+7. **Diagram** — diagram-as-code **IR** (structured source) with a **kitchen-sink or site adapter** for publication (e.g. `blueprint-diagram` fences on handbook pages, SVG export) — see [`../VERSONA-OPERATING-MODEL.md`](../VERSONA-OPERATING-MODEL.md) §5; avoid locking the methodology to a single vendor grammar.
 
 Use the template [`../../../templates/forge/versona-process.template.md`](../../../templates/forge/versona-process.template.md) in the consuming repo or when adding examples under project `sdlc/`.
 
@@ -149,6 +154,7 @@ Use the template [`../../../templates/forge/versona-process.template.md`](../../
 | **Parallel merge** | **Family_aggregator** or manual invocations; consolidate concerns in one report (family template or custom merge). |
 | **Meta + tasklets** | **Meta** Versona runs neutral **tasklets** ([`TASKLET-TAXONOMY.md`](../tasklets/TASKLET-TAXONOMY.md)); discipline overlay supplies severity and boundaries. |
 | **Recipe then interpret** | **Recipe** writes under `agents/workspaces/<recipe>/` ([`ORCHESTRATION.md`](../../../../agents/ORCHESTRATION.md)); cognition Versona reads copies or linked paths—optionally copied into the session `inputs/` folder for a stable audit trail. |
+| **Methodology orchestrator** | **`versona-forge-sdlc`** (workflow) builds **phase-aware** A–F execution plans (parallel vs sequential, **merge owner**, trace); **does not** replace discipline §5 or [`versona-all`](catalog/routing/versona-all.mdc.template) routing tables — see [`../orchestration/FORGE-SDLC-ORCHESTRATION.md`](../orchestration/FORGE-SDLC-ORCHESTRATION.md). |
 
 ```blueprint-diagram
 key: sequence
@@ -170,10 +176,17 @@ forge-logs/
       <session-id>/
         SESSION.md           # manifest + human-readable index
         session.manifest.yaml # optional duplicate machine-readable manifest
+        session.manifest.json # optional JSON mirror (schema: ../schemas/session-manifest.schema.json)
         inputs/              # snapshots, pasted specs, links
-        outputs/             # §5 reports, session exports
+        outputs/             # §5 reports, session exports; optional handoff.json, routing-decision.json, artifact-manifest.json
+        diagrams/            # optional diagram IR + rendered exports (see VERSONA-OPERATING-MODEL §5)
         transcript.md        # optional LLM or tool transcript
+  versona-track/             # optional cross-session machine files (request-ledger.jsonl, graph-analytics.jsonl)
 ```
+
+**Enriched layout** (ledger, JSON manifests, diagram exports, graph append-only logs) is specified in [`../VERSONA-OPERATING-MODEL.md`](../VERSONA-OPERATING-MODEL.md) §1; it **extends** this tree without replacing `SESSION.md`, Ember Log, or day journal.
+
+**Cross-repo canonical tree** (including `docs/`, `forge/evidence/`, handoffs, and diagram source vs export): [`ARTIFACT-CONTRACTS.md`](ARTIFACT-CONTRACTS.md) §1.
 
 **Alias:** Some teams prefer `forge/versona-sessions/<actor>/<session-id>/` to keep all of `forge/` self-contained. If you use the alias, **link** to the same SESSION fields and journal conventions below.
 
@@ -270,4 +283,4 @@ Optional helper: [`../scripts/forge-versona-session.sh`](../scripts/forge-verson
 
 ## 10. Stable headings (for future site generators)
 
-Major headings in this file are stable anchors: **Conceptual model**, **Versona kinds**, **Interface model**, **Severity and recommendation rubric**, **Process library**, **Inter-Versona interaction patterns**, **Session storage**, **Logging and time alignment**, **Creating a new discipline Versona**.
+Major headings in this file are stable anchors: **Conceptual model**, **Versona kinds**, **Interface model**, **Severity and recommendation rubric**, **Process library**, **Inter-Versona interaction patterns**, **Session storage**, **Logging and time alignment**, **Creating a new discipline Versona**. **Enriched** machine artifacts and cross-session paths are specified in [`../VERSONA-OPERATING-MODEL.md`](../VERSONA-OPERATING-MODEL.md) (extension of **Session storage** and **Logging**).

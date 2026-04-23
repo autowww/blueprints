@@ -11,7 +11,7 @@ learning_level: reference
 
 **Layout contract:** `versona-generic.mdc.template` at the `versona/` root; all other templates under `versona/catalog/` (see [Source layout in README](../README.md#source-layout-templates-on-disk)).
 
-**Related:** [`ANCESTRY.md`](ANCESTRY.md) (kinds, domains) · [`../README.md`](../README.md) · [`../../setup/CURSOR-RULES-ALIGNMENT.md`](../../setup/CURSOR-RULES-ALIGNMENT.md)
+**Related:** [`ANCESTRY.md`](ANCESTRY.md) (kinds, domains) · [`../../standards/VERSONA-STANDARDS-MATRIX.md`](../../standards/VERSONA-STANDARDS-MATRIX.md) (standards profile per template) · [`../README.md`](../README.md) · [`../../setup/CURSOR-RULES-ALIGNMENT.md`](../../setup/CURSOR-RULES-ALIGNMENT.md)
 
 | Basename | Source path (under `versona/`) | Kind | Domain | Checks |
 |----------|-------------------------------|------|--------|--------|
@@ -30,6 +30,7 @@ learning_level: reference
 | `versona-marketing.mdc.template` | `catalog/discipline/product/versona-marketing.mdc.template` | discipline | Product | same |
 | `versona-cs.mdc.template` | `catalog/discipline/product/versona-cs.mdc.template` | discipline | Product | same |
 | `versona-pm.mdc.template` | `catalog/discipline/governance/versona-pm.mdc.template` | discipline | Governance | same |
+| `versona-estimation.mdc.template` | `catalog/discipline/governance/versona-estimation.mdc.template` | discipline | Governance | same |
 | `versona-security.mdc.template` | `catalog/discipline/cross-cutting/versona-security.mdc.template` | discipline | Cross-cutting | same |
 | `versona-compliance.mdc.template` | `catalog/discipline/cross-cutting/versona-compliance.mdc.template` | discipline | Cross-cutting | same |
 | `versona-family-engineering.mdc.template` | `catalog/discipline/engineering/family/versona-family-engineering.mdc.template` | family_aggregator | Engineering | `../../../../VERSONA-CONTRACT`; `../../../../../../../../disciplines/` README links |
@@ -39,6 +40,7 @@ learning_level: reference
 | `versona-sampling.mdc.template` | `catalog/meta/versona-sampling.mdc.template` | meta | — | `../../VERSONA-CONTRACT`; `../../../tasklets/` |
 | `versona-project-setup.mdc.template` | `catalog/workflow/versona-project-setup.mdc.template` | workflow | — | `../../../VERSONA-CONTRACT`; `../../../setup/` |
 | `versona-roadmap-gate.mdc.template` | `catalog/workflow/versona-roadmap-gate.mdc.template` | workflow | — | `../../../VERSONA-CONTRACT`; `../discipline/product/` |
+| `versona-forge-sdlc.mdc.template` | `catalog/workflow/versona-forge-sdlc.mdc.template` | workflow | — | `../../../VERSONA-CONTRACT`; `../../../orchestration/` |
 | `versona-cursor-rules-sync.mdc.template` | `catalog/workflow/versona-cursor-rules-sync.mdc.template` | workflow | — | `../../../VERSONA-CONTRACT`; `../../../setup/` |
 | `versona-generic.mdc.template` | `versona-generic.mdc.template` (root) | baseline_only | — | `catalog/ANCESTRY`; `VERSONA-*` (siblings) |
 

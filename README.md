@@ -1,4 +1,12 @@
-# Blueprints
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: overview
+description: Reusable software-delivery docs for your repo—adoption paths, quickstarts, setup checklists, and the engineering handbook.
+---
+
+# Blueprints — adoption, setup, and the engineering handbook
 
 **Blueprints** is a reusable framework for **software-project documentation and process**: packaged Markdown you embed in your product repository so teams share the same lifecycle vocabulary, ceremonies, and discipline depth—without starting from a blank wiki. You consume it as a **baseline** (typically a git submodule) and layer **your** project workspace and tooling on top.
 

@@ -1,3 +1,10 @@
+---
+public_publish: true
+audience: public
+handbook_area: blueprints
+learning_level: reference
+---
+
 # Product development lifecycle (PDLC)
 
 Reusable, **product-agnostic** blueprint for the full **product** lifecycle — from problem discovery through growth and sunset. It answers **"are we building the right product?"** while [`blueprints/sdlc/`](../sdlc/README.md) answers **"are we building the product right?"**
