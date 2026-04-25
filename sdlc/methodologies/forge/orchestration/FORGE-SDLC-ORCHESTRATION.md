@@ -64,7 +64,7 @@ alt: Orchestration routes through routing optional discipline family merge
 ## 4. Phase-aware workflow contracts (A–F)
 
 ```blueprint-diagram
-key: flow
+key: linear
 alt: Phases A through F with optional parallel discipline passes merging to trace outputs
 ```
 
