@@ -34,7 +34,7 @@ When you want **end-to-end standardization** in a single checklist, use the [**P
 
 ## Forge Studio companion
 
-**Forge Studio** (in the separate **forge-lenses** app) sits beside your clones: workspace visibility, plan surfaces, and the **Blueprints Wizard** for guided sessions. Start with the [**Forge Studio quickstart**](sdlc/quickstarts/forge-studio.md). Companion guides for running Lenses and Studio locally live at **[blueprints.forgesdlc.com/lenses/](https://blueprints.forgesdlc.com/lenses/)**.
+**Forge Studio** (in the separate **forge-lenses** app) sits beside your clones: workspace visibility, plan surfaces, and the **Blueprints Wizard** for guided sessions. Start with the [**Forge Studio quickstart**](sdlc/quickstarts/forge-studio.md). **Product guides** for running Lenses and Studio locally: **[lenses.forgesdlc.com](https://lenses.forgesdlc.com/)** — with the **[Blueprints Lenses hub](https://blueprints.forgesdlc.com/lenses/)** as the methodology-oriented companion.
 
 ## What you get in your repo
 
@@ -45,7 +45,7 @@ When you want **end-to-end standardization** in a single checklist, use the [**P
 ## Companion guides and tools
 
 - **Open the handbook** — this site is the reader-friendly view of the same Markdown: **[blueprints.forgesdlc.com](https://blueprints.forgesdlc.com/)**.
-- **Lenses & Forge Studio** — local companion app and guides: **[Lenses hub](https://blueprints.forgesdlc.com/lenses/index.html)**.
+- **Lenses & Forge Studio** — local companion app; **product docs** at **[lenses.forgesdlc.com](https://lenses.forgesdlc.com/)** and **[Blueprints Lenses hub](https://blueprints.forgesdlc.com/lenses/index.html)** for methodology quickstarts.
 - **Shared design system** (themes, diagrams) — **[Design system](https://blueprints.forgesdlc.com/ks/index.html)**.
 - **Short articles** — **[Blog](https://blueprints.forgesdlc.com/blog/)**.
 

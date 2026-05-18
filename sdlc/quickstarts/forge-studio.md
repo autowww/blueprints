@@ -21,7 +21,8 @@ learning_level: overview
 | **Lenses** | The **local server + Classic dashboard** that hosts Studio and Wizard on your machine. |
 | **Wizard** | **Guided project planning / assessment workflow** inside Studio. |
 
-Companion tutorials on the handbook site: **[Lenses, Forge Studio, and the Blueprints Wizard](https://blueprints.forgesdlc.com/lenses/index.html)**.
+**Product docs (install, Studio, Wizard, troubleshooting):** **[lenses.forgesdlc.com](https://lenses.forgesdlc.com/)**.  
+**Methodology companion hub (quickstarts from Blueprints):** **[Lenses on the handbook](https://blueprints.forgesdlc.com/lenses/index.html)**.
 
 ## Handbook-only reading vs running Forge Studio
 
