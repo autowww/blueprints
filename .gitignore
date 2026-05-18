@@ -3,3 +3,7 @@
 
 # local forge session logs (not source)
 forge-logs/
+
+# Firebase CLI debug spill (never commit)
+docs/firebase-debug.log
+firebase-debug.log
