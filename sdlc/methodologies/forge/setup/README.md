@@ -31,6 +31,7 @@ A guided flow for consuming repos to adopt Forge SDLC. Includes a questionnaire 
 |------|---------|
 | [`QUESTIONNAIRE.md`](QUESTIONNAIRE.md) | Questions to determine Forge configuration |
 | [`BRANCHING-STRATEGY.md`](BRANCHING-STRATEGY.md) | Git branching by Forge scale + commit message/body rules (agents & search) |
+| [`branching.template.yaml`](branching.template.yaml) | Template for `forge/branching.yml` (branch model, lanes, promotion, agent guardrails) |
 | [`charge-plans/branching/README.md`](charge-plans/branching/README.md) | **Branching charge pack** — Forge-native Charges (F1–F3), Branch Steward, Cursor preamble; copy to `forge/charge-plans/branching/` in consumers |
 | [`forge-init.sh`](forge-init.sh) | Scaffold script — creates workspace directories and seed files |
 | [`forge.config.template.yaml`](forge.config.template.yaml) | Configuration template |
@@ -59,3 +60,11 @@ From the consuming repository root:
 ```
 
 This creates the minimal Forge workspace. Then configure using the questionnaire or the Cursor rule.
+
+Interactive refresh for existing repos:
+
+```bash
+./blueprints/sdlc/methodologies/forge/setup/forge-init.sh --interactive --reinit
+```
+
+`--interactive` prompts for team scale and branch model defaults; `--reinit` allows refreshing `forge/forge.config.yaml` and `forge/branching.yml` from templates with confirmation.

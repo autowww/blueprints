@@ -38,6 +38,22 @@ Repos may adopt a **named lane** model on top of protected `main`, documented in
 
 The **scaling table** below uses **`feature/*`** and related names as **GitHub Flow** shorthand for short-lived topic branches. Teams using the lane model often land topic work as **`spark/*`** or on **`iter/*`** instead. Pick **one** convention per repository and record it in `forge/branching.yml` or `docs/process/branching-profile.md` (or equivalent).
 
+### Repository branch policy artifact
+
+Use **`forge/branching.yml`** as the machine-readable policy for Branch Steward and Studio tooling. Seed it from [`branching.template.yaml`](branching.template.yaml) (or via `forge-init.sh`) and keep it repo-specific.
+
+Suggested minimum fields:
+
+- `trunk` — integration branch (usually `main`)
+- `model` — `team_tier` or `forge_lanes`
+- `team.scale`, `team.topology`, `team.cicd_maturity`
+- `lanes.enabled` + lane prefixes (`product/*`, `iter/*`, `spark/*`, `spike/*`, `release/*`, `hotfix/*`) when using lane mode
+- `topic_branches.feature_prefix` / `fix_prefix` for Team-tier mode
+- `promotion.*` (`default_target`, PR/review/check expectations)
+- `agent_behavior.*` guardrails (`never_charge_branches`, explicit commit/push/PR policy)
+
+If a repo has not adopted `forge/branching.yml`, fall back to `docs/process/branching-profile.md`, then repo Git workflow docs, then Team-tier defaults.
+
 ---
 
 ## Branching by scaling tier

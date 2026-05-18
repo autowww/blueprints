@@ -63,6 +63,13 @@ STANDARD_FORGE_CURSOR_RULES_REL: dict[str, str] = {
     "forge-versona.mdc": "sdlc/templates/forge/cursor-rules/forge-versona.mdc",
     "forge-setup.mdc": "sdlc/templates/forge/cursor-rules/forge-setup.mdc",
     "forge-product-manager.mdc": "sdlc/templates/forge/cursor-rules/forge-product-manager.mdc",
+    "branch-steward.mdc": "sdlc/templates/forge/cursor-rules/branch-steward.mdc",
+}
+
+# Optional coding/style Cursor rules. These are intentionally not included in
+# preset bundles yet, so existing `--preset recommended` checks remain stable.
+CODING_STYLE_CURSOR_RULES_REL: dict[str, str] = {
+    "code-footprint.mdc": "sdlc/templates/forge/cursor-rules/code-footprint.mdc",
 }
 
 ENG_MAP = {
@@ -151,9 +158,9 @@ def expected_versona_filenames(data: dict) -> list[str]:
     return uniq
 
 
-def merge_install_options(args: argparse.Namespace) -> tuple[list[str], bool]:
+def merge_install_options(args: argparse.Namespace) -> tuple[list[str], bool, bool]:
     """
-    Preset bundles optional Versona files + whether to copy standard Forge .mdc rules.
+    Preset bundles optional Versona files + whether to copy optional rule groups.
     --with-* flags add on top (additive). No --preset (or minimal) = YAML-driven Versonas only.
     """
     preset = getattr(args, "preset", None)
@@ -188,6 +195,8 @@ def merge_install_options(args: argparse.Namespace) -> tuple[list[str], bool]:
         print(f"Error: unknown preset {preset!r}", file=sys.stderr)
         sys.exit(2)
 
+    coding_style = bool(getattr(args, "with_code_footprint_rules", False))
+
     def add(name: str) -> None:
         if name not in optional:
             optional.append(name)
@@ -216,7 +225,7 @@ def merge_install_options(args: argparse.Namespace) -> tuple[list[str], bool]:
     if args.with_standard_forge_rules:
         wf = True
 
-    return optional, wf
+    return optional, wf, coding_style
 
 
 def _sha256_file(path: Path) -> str:
@@ -362,6 +371,7 @@ def collect_install_jobs(
     *,
     optional_names: Iterable[str],
     with_standard_forge: bool,
+    with_coding_style: bool,
 ) -> list[tuple[Path, Path, str]]:
     """
     Returns list of (src, dest, label) where dest is under .cursor/rules/name.
@@ -405,6 +415,14 @@ def collect_install_jobs(
                 continue
             jobs.append((src, rules_dir / fname, "forge_standard"))
 
+    if with_coding_style:
+        for fname, rel in CODING_STYLE_CURSOR_RULES_REL.items():
+            src = bp_root / rel
+            if not src.is_file():
+                print(f"Warning: missing {src}", file=sys.stderr)
+                continue
+            jobs.append((src, rules_dir / fname, "forge_coding_style"))
+
     return jobs
 
 
@@ -416,13 +434,14 @@ def cmd_install(args: argparse.Namespace) -> int:
         return 1
 
     data = load_cfg(cfg)
-    optional, wf = merge_install_options(args)
+    optional, wf, coding_style = merge_install_options(args)
 
     jobs = collect_install_jobs(
         root,
         data,
         optional_names=optional,
         with_standard_forge=wf,
+        with_coding_style=coding_style,
     )
 
     rules_dir = root / ".cursor" / "rules"
@@ -469,13 +488,14 @@ def cmd_diff(args: argparse.Namespace) -> int:
         print(f"Error: missing {cfg}", file=sys.stderr)
         return 1
     data = load_cfg(cfg)
-    optional, wf = merge_install_options(args)
+    optional, wf, coding_style = merge_install_options(args)
 
     jobs = collect_install_jobs(
         root,
         data,
         optional_names=optional,
         with_standard_forge=wf,
+        with_coding_style=coding_style,
     )
     rules_dir = root / ".cursor" / "rules"
 
@@ -524,12 +544,13 @@ def cmd_status(args: argparse.Namespace) -> int:
         print(f"Error: missing {cfg}", file=sys.stderr)
         return 1
     data = load_cfg(cfg)
-    optional, wf = merge_install_options(args)
+    optional, wf, coding_style = merge_install_options(args)
     jobs = collect_install_jobs(
         root,
         data,
         optional_names=optional,
         with_standard_forge=wf,
+        with_coding_style=coding_style,
     )
     rules_dir = root / ".cursor" / "rules"
 
@@ -564,10 +585,14 @@ def cmd_status(args: argparse.Namespace) -> int:
     print()
     n_bad = len(missing) + len(drift) + len(no_template)
     setup_rel = "blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh"
+    extra_flags: list[str] = []
+    if coding_style:
+        extra_flags.append("--with-code-footprint-rules")
+    extra = (" " + " ".join(extra_flags)) if extra_flags else ""
     if preset in (None, "minimal"):
-        suggest = f"bash {setup_rel} sync --force"
+        suggest = f"bash {setup_rel} sync{extra} --force"
     else:
-        suggest = f"bash {setup_rel} sync --preset {preset} --force"
+        suggest = f"bash {setup_rel} sync --preset {preset}{extra} --force"
 
     if n_bad:
         print(
@@ -609,6 +634,11 @@ def _add_preset_and_optional_rule_flags(p: argparse.ArgumentParser) -> None:
         "--with-standard-forge-rules",
         action="store_true",
         help="Also copy forge-daily, forge-planning, forge-versona, forge-setup, forge-product-manager",
+    )
+    p.add_argument(
+        "--with-code-footprint-rules",
+        action="store_true",
+        help="Also copy optional coding/style rules such as code-footprint.mdc",
     )
 
 

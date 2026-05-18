@@ -43,12 +43,32 @@ Thin wrappers still work: [`install-versona-cursor-rules.sh`](install-versona-cu
 | Preset | Effect |
 |--------|--------|
 | *(omit)* / `--preset minimal` | Copy **only** `versona-*.mdc` implied by `forge.config.yaml` (same as pre-preset behavior) |
-| `--preset recommended` | Minimal + standard Forge five (`forge-daily`, `forge-planning`, `forge-versona`, `forge-setup`, `forge-product-manager`) + `versona-all`, `versona-project-setup`, `versona-roadmap-gate`, **`versona-forge-sdlc`** (methodology orchestrator), `versona-cursor-rules-sync`, **`versona-sampling`** (meta-Versona aligned with tasklets; idempotent with `install-tasklets.sh`) |
+| `--preset recommended` | Minimal + standard Forge rules (`forge-daily`, `forge-planning`, `forge-versona`, `forge-setup`, `forge-product-manager`, `branch-steward`) + `versona-all`, `versona-project-setup`, `versona-roadmap-gate`, **`versona-forge-sdlc`** (methodology orchestrator), `versona-cursor-rules-sync`, **`versona-sampling`** (meta-Versona aligned with tasklets; idempotent with `install-tasklets.sh`) |
 | `--preset full` | Recommended + family aggregators (`versona-family-*`) + `versona-generic` |
 
 **Additive:** `--with-*` flags on `sync` / `diff` / `status` **add** on top of the chosen preset.
 
 After **`git submodule update`** on `blueprints/`, re-run `sync` (use **`--force`** only after reviewing local globs/edits and `diff` / `status`).
+
+### Optional coding/style rules and footprint scan
+
+Coding-footprint guidance lives in [`../../agentic-coding-standards.md`](../../agentic-coding-standards.md) and is exposed to Cursor through an opt-in rule:
+
+```bash
+bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh status --preset recommended --with-code-footprint-rules
+bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh diff --preset recommended --with-code-footprint-rules
+bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh sync --preset recommended --with-code-footprint-rules
+```
+
+The installed rule is labelled **`forge_coding_style`** in `.forge/cursor-rules-manifest.json`. It is not part of `recommended` yet, so repos that already gate on `status --preset recommended` remain stable.
+
+Run the readonly scanner after a Blueprints bump, or before adding more behavior to an already-large file:
+
+```bash
+python3 blueprints/sdlc/methodologies/forge/setup/code_footprint_scan.py .
+```
+
+The scanner excludes generated website/tutorial/CDN output and reports candidate source/control files by LoC, bytes, approximate tokens, language, and suggested split reason. Treat findings as planning input; do not rewrite large files automatically.
 
 ### Repo-level agent instructions (`AGENTS.md`) and enriched Versona layout
 
@@ -106,6 +126,7 @@ Use these with **`sync-forge-cursor-rules.sh sync`** (or `install-versona-cursor
 | `--with-sampling` | Also `versona-sampling.mdc` (**included in `recommended` / `full`**; still useful if you use `minimal` + tasklets only) |
 | `--with-generic` | Also `versona-generic.mdc` |
 | `--with-standard-forge-rules` | Also `forge-daily`, `forge-planning`, `forge-versona`, `forge-setup`, `forge-product-manager` from `sdlc/templates/forge/cursor-rules/` |
+| `--with-code-footprint-rules` | Also `code-footprint.mdc` from `sdlc/templates/forge/cursor-rules/`; advisory coding/style footprint rule, opt-in |
 
 ## Family → template sources
 
@@ -154,6 +175,15 @@ Usually copied from `blueprints/sdlc/templates/forge/cursor-rules/` (included in
 | `forge-versona.mdc` | Master routing |
 | `forge-setup.mdc` | First-time setup (optional after onboarding) |
 | `forge-product-manager.mdc` | Product orchestration (optional; product-led teams) |
+| `branch-steward.mdc` | Branch/lane choice guardrails from `forge/branching.yml` + Charge intent |
+
+## Optional coding/style Cursor rules
+
+These rules are copied from `blueprints/sdlc/templates/forge/cursor-rules/` only when requested:
+
+| File | Purpose |
+|------|---------|
+| `code-footprint.mdc` | Review large source/control files, exclude generated web outputs, and plan semantic splits with folder `README.md` / `INDEX.md` files. |
 
 ## Tasklets (optional)
 

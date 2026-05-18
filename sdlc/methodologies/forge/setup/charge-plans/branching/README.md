@@ -17,6 +17,8 @@ This pack turns branching adoption into **Forge-native daily Charges**: copy one
 
 **Policy baseline:** [Git branching and commit conventions (Forge)](../../BRANCHING-STRATEGY.md).
 
+**Policy artifact:** keep a machine-readable repo policy in `forge/branching.yml` (seed from [`../../branching.template.yaml`](../../branching.template.yaml) or `forge-init.sh`).
+
 ---
 
 ## Product Spark (parent context)
@@ -133,9 +135,11 @@ Use these unless the project already decided otherwise:
 
 1. Keep this folder at **`forge/charge-plans/branching/`** in the consuming repo (copy from blueprints or submodule path).
 2. Copy **one** charge file body into **`forge/charge.md`** as the day’s Spark list, or work the charge as a checklist alongside Charge.
-3. Paste [`CURSOR-PREAMBLE.md`](CURSOR-PREAMBLE.md) into the first Cursor message for the session.
-4. Work active Sparks in order; update statuses and **Ember Log** / journal as your team defines.
-5. When a Spark is **blocked**, use **Banking** (see [Charge template](../../../daily/charge.template.md)) instead of inventing a new branch **type**.
+3. Ensure `forge/branching.yml` is updated for this repo (team tier or lane model, promotion rules, and agent guardrails).
+4. Install Cursor rules (recommended preset includes `branch-steward.mdc`): `bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh sync --preset recommended`.
+5. Paste [`CURSOR-PREAMBLE.md`](CURSOR-PREAMBLE.md) into the first Cursor message for the session.
+6. Work active Sparks in order; update statuses and **Ember Log** / journal as your team defines.
+7. When a Spark is **blocked**, use **Banking** (see [Charge template](../../../daily/charge.template.md)) instead of inventing a new branch **type**.
 
 ---
 
