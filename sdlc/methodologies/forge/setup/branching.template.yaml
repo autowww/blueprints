@@ -60,6 +60,10 @@ agent_behavior:
   commits_require_user_request: true
   pushes_require_user_request: true
   prs_require_user_request: true
+  # Forge Campaign orchestrator (campaign_orchestrator workcell) — see forge-platform docs/forge-campaign.md
+  fleet_campaigns_allowed: false
+  fleet_campaigns_may_push: false
+  fleet_campaigns_may_open_pr: false
 
 # Backward-compatible fields consumed by docs-health policy resolver.
 docs_health_branch_style: feature_prefixed

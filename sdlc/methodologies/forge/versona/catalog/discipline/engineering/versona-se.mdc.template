@@ -108,6 +108,7 @@ This template is the **foundational Engineering discipline Versona** for **imple
 - Code quality, readability, and naming consistency
 - Paradigm and idiom fit for the stack
 - SOLID and related structural principles at module/class level
+- File footprint and analyzability per [`agentic-coding-standards.md`](../../../../../agentic-coding-standards.md) — large source files should prompt a split plan when review quality suffers, excluding generated website/tutorial/CDN outputs
 - Appropriate use of design patterns; avoidance of pattern abuse
 - Algorithmic complexity and data-structure choices for stated constraints
 - **AI-assisted changes:** alignment with [`agentic-coding-standards.md`](../../../../../agentic-coding-standards.md) — scoped diffs, PR granularity, attribution/audit expectations, verification before merge, and when to add Security / Testing lenses

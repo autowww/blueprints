@@ -15,6 +15,8 @@ This pack turns branching adoption into **Forge-native daily Charges**: copy one
 
 **Non-negotiable:** **do not create `charge/*` Git branches.** [Charge](../../../daily/README.md) is the daily selection layer. It may point at `product/*`, `iter/*`, `spark/*`, `spike/*`, `release/*`, or `hotfix/*`, but it is **never** itself a branch name.
 
+**Forge Campaign** (Forge Platform) is also **not** a Git branch — use `feature/*` (or lane prefixes) per repo and a `forge/campaigns/*.yaml` manifest; see [BRANCHING-STRATEGY.md § Forge Campaign automation](../../BRANCHING-STRATEGY.md#forge-campaign-automation).
+
 **Policy baseline:** [Git branching and commit conventions (Forge)](../../BRANCHING-STRATEGY.md).
 
 **Policy artifact:** keep a machine-readable repo policy in `forge/branching.yml` (seed from [`../../branching.template.yaml`](../../branching.template.yaml) or `forge-init.sh`).

@@ -106,6 +106,7 @@ After this baseline, follow **Identity** through **Forge context** per [`VERSONA
 - Component and bounded-context boundaries; coupling and cohesion
 - Documented trade-offs and ADR quality (decision, context, consequences)
 - Fitness of architectural patterns to problem and constraints
+- Folder/module hierarchy when large-script splits cross boundaries; new folders should have a short `README.md` or `INDEX.md` that explains purpose, entrypoints, and ownership
 - Tech debt that compromises the intended structure
 
 ### Scope boundaries

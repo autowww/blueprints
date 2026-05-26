@@ -68,7 +68,7 @@ Run the readonly scanner after a Blueprints bump, or before adding more behavior
 python3 blueprints/sdlc/methodologies/forge/setup/code_footprint_scan.py .
 ```
 
-The scanner excludes generated website/tutorial/CDN output and reports candidate source/control files by LoC, bytes, approximate tokens, language, and suggested split reason. Treat findings as planning input; do not rewrite large files automatically.
+The scanner uses profile **`tight`** by default (reports **`risky`** and **`poor`** bands — files above the default analyzability target). Bands: **comfortable** → **tight** (default target, ~≤700 LoC / ~6k tokens) → **risky** → **poor**. Tokens matter more than LoC for LLM context. Propagate the Cursor rule: `bash blueprints/sdlc/methodologies/forge/setup/propagate-code-footprint-rules.sh [workspace_root]`.
 
 ### Repo-level agent instructions (`AGENTS.md`) and enriched Versona layout
 

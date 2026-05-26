@@ -71,6 +71,8 @@ After this baseline, this rule is **not** a discipline gate—produce the **Curs
 1. Assume **repository root** = workspace root; `blueprints/sdlc` and `forge/forge.config.yaml` exist (or say what is missing).
 2. Recommend **check** first, then **diff** (if rules exist), then **install**.
 3. Remind: **`--force`** overwrites local edits to globs or text — review **`diff`** output first.
+4. After a `blueprints/` submodule bump, include the optional coding/style rule check when the user mentions coding rules, file size, LoC, small-LLM review, or large-script splitting.
+5. Treat `code_footprint_scan.py` output as planning input only; do not rewrite large files unless the user accepts a split plan.
 
 ## Output format
 
@@ -102,6 +104,11 @@ After this baseline, this rule is **not** a discipline gate—produce the **Curs
 7. After submodule update — overwrite only if diff/status reviewed:
    bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh sync --preset recommended --force
 
+8. Optional coding footprint rule after a Blueprints bump:
+   bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh status --preset recommended --with-code-footprint-rules
+   bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh diff --preset recommended --with-code-footprint-rules
+   python3 blueprints/sdlc/methodologies/forge/setup/code_footprint_scan.py .
+
 ### Dry-run
 
    bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh sync --preset recommended --dry-run
@@ -109,6 +116,8 @@ After this baseline, this rule is **not** a discipline gate—produce the **Curs
 ### Notes
 
 - Python 3 + PyYAML required for install/check/diff/status (see CURSOR-RULES-QUICKSTART.md, CURSOR-RULES-ALIGNMENT.md).
+- `--with-code-footprint-rules` installs an advisory opt-in rule and labels it `forge_coding_style` in `.forge/cursor-rules-manifest.json`.
+- `code_footprint_scan.py` excludes generated website/tutorial/CDN output; review candidates before planning semantic splits with folder `README.md` / `INDEX.md` files.
 - Tasklets + Sampling: `bash blueprints/sdlc/methodologies/forge/tasklets/install-tasklets.sh`
 - Session folder migrations when blueprint formats change: `blueprints/sdlc/methodologies/forge/versona/MIGRATIONS.md`
 

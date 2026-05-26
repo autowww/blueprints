@@ -48,6 +48,37 @@ Forge teams additionally align sessions and logs with [`forge/versona/VERSONA-FR
 
 ---
 
+## Code analyzability and file footprint
+
+Large files are not a defect by themselves, but source files should usually fit in one focused human or LLM review pass. **Tokens matter most** for LLM context; **LoC** and **bytes** are fast proxies. Treat the table below as **advisory**, not hard gates.
+
+**Default workspace target: `tight`** — sized for local review on a **~4 GB GPU** class setup (e.g. Qwen Coder 7B with limited context after model weights). Repos may override via `AGENTS.md`, `.cursor/rules/code-footprint.mdc`, or `FORGE_CODE_FOOTPRINT_PROFILE`.
+
+| Band | Typical signal (any one bound) | One-pass LLM review (4 GB class) | Review stance |
+|------|-------------------------------|----------------------------------|---------------|
+| **comfortable** | ≤ ~400 LoC, ≤ ~24 KB, ≤ ~3k rough tokens | Easy | Default for small helpers; ordinary review. |
+| **tight** | ≤ ~700 LoC, ≤ ~48 KB, ≤ ~6k rough tokens | **Target max for new/edited source** | Fits one pass with a short prompt; prefer to stay here. |
+| **risky** | ≤ ~1,500 LoC, ≤ ~96 KB, ≤ ~12k rough tokens | Chunk or section review | Prefer a split plan before adding behavior. |
+| **poor** | Above risky bounds | Unreliable whole-file | Split, exception record, or staged decomposition required. |
+
+Rough tokens ≈ `file_bytes / 4` (code is often denser than prose). Measure the real model context when possible.
+
+**Scanner profiles** (`code_footprint_scan.py --profile`):
+
+| Profile | Reports files in band |
+|---------|------------------------|
+| `tight` (**default**) | `risky`, `poor` (exceeds tight target) |
+| `comfortable` | `tight`, `risky`, `poor` |
+| `strict` | `tight` and above (flags anything past comfortable) |
+
+**Exclude generated or vendor output** from footprint analysis: generated `website/`, `showcase/`, `dist/`, `build/`, minified CDN/vendor assets, generated tutorial HTML/CSS/JS, lockfiles, snapshots, vendored dependencies, and other files where source-of-truth edits happen elsewhere.
+
+**Allowed exceptions** include parsers, schema catalogs, generated checked-in sources, legacy files being migrated, framework entrypoints with clear local structure, and cohesive files where splitting would increase coupling or hide invariants. Record the reason near the work item, PR, ADR, `AGENTS.md`, or repo-local standards registry when the exception affects ongoing maintenance.
+
+When splitting a large script, prefer a meaningful folder hierarchy over a flat pile of helpers. Typical partitions are: CLI entrypoint, configuration loading, domain services, IO/adapters, rendering/reporting, tests, fixtures, and shared types. Add a short `README.md` or `INDEX.md` in any new folder to explain what belongs there, the entrypoints, and how the files relate.
+
+---
+
 ## Attribution and identity
 
 1. **PR transparency** — state **AI-assisted** work when applicable (tool name optional unless policy requires it); summarize what the human verified.  

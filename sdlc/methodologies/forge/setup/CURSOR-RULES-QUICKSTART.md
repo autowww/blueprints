@@ -46,6 +46,14 @@ bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh diff -
 python3 blueprints/sdlc/methodologies/forge/setup/code_footprint_scan.py .
 ```
 
+Default scan profile is **`tight`** (reports **`risky`** and **`poor`** — files above the tight target). Use `--profile comfortable` to also list files in the **tight** band. Bands: `comfortable` → `tight` (default target) → `risky` → `poor`; see **Code analyzability and file footprint** in `agentic-coding-standards.md`.
+
+Propagate this rule to sibling repos (from `blueprints/`):
+
+```bash
+bash sdlc/methodologies/forge/setup/propagate-code-footprint-rules.sh /path/to/workspace
+```
+
 Review `diff` / `status` before using `--force`. The footprint scanner is readonly; it excludes generated website/tutorial/CDN output and reports split candidates for normal repo planning.
 
 ## YAML-only install (CI / backward compatible)

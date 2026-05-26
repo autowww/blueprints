@@ -121,6 +121,25 @@ Branching policy applies **per repository**. **Submodule pointer** updates are n
 
 ---
 
+## Forge Campaign automation
+
+A **[Forge Campaign](https://platform.forgesdlc.com/docs/forge-campaign.html)** (Forge Platform) is a multi-repo automation effort under one **ForgeRun** (`frun_*`), not a Git branch type and not a marketing campaign.
+
+| Rule | Detail |
+|------|--------|
+| Branch names | Use `feature/<campaign-slug>-<repo-abbrev>` (Team tier) or aligned `iter/*` / `spark/*` when `forge_lanes` is enabled — **never** `campaign/*` or `charge/*` |
+| Manifest | `forge/campaigns/<campaign-id>.yaml` or `.forge/runs/<frun_id>/campaign.yaml` is the cross-repo source of truth |
+| Commits | One commit per repository; submodule bumps only as `chore(kitchensink): …` (or `chore(blueprints): …`) |
+| PR stack | Upstream repos first (e.g. kitchensink), then consumers with submodule pointer updates |
+| Trailers | Optional `Forge-Campaign: <campaign-id>` in commit bodies for traceability |
+| Agent automation | Off by default in [`branching.template.yaml`](branching.template.yaml) — enable per repo via `agent_behavior.fleet_campaigns_allowed`, `fleet_campaigns_may_push`, `fleet_campaigns_may_open_pr` |
+
+**Forge Agents** (`campaign_orchestrator`, `fleet_ux_worker`, …) are bounded **AgentRuns** under the same ForgeRun. See [Forge Agent](https://platform.forgesdlc.com/docs/forge-agent.html) on the platform handbook.
+
+Integrate/PR automation policy is still evolving; treat auto-merge to `main` on product/handbook sites as **human-gated** unless Assay evidence says otherwise.
+
+---
+
 ## Related
 
 - [Forge overview](../../forge.md) — scaling model, Ore → Spark vocabulary
