@@ -56,6 +56,8 @@ bash sdlc/methodologies/forge/setup/propagate-code-footprint-rules.sh /path/to/w
 
 Review `diff` / `status` before using `--force`. The footprint scanner is readonly; it excludes generated website/tutorial/CDN output and reports split candidates for normal repo planning.
 
+**Automated PDCA campaigns** (worktree + Cursor CLI `agent` + PR): see [`code-compliance/README.md`](code-compliance/README.md) and run `workbench/code-compliance/run-code-compliance-pdca.sh` from the multi-repo hub.
+
 ## YAML-only install (CI / backward compatible)
 
 Omitting `--preset` keeps the old behavior: only `versona-*.mdc` files implied by `forge.config.yaml` (no standard Forge five, no optional workflow bundle).

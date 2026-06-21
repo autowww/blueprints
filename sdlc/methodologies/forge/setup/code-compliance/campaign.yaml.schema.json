@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Code compliance campaign snapshot",
+  "type": "object",
+  "properties": {
+    "campaign_id": { "type": "string" },
+    "repo_slug": { "type": "string" },
+    "source_repo": { "type": "string" },
+    "worktree_path": { "type": "string" },
+    "base_branch": { "type": "string" },
+    "work_branch": { "type": "string" },
+    "profile": { "enum": ["comfortable", "strict", "tight"] },
+    "max_iterations": { "type": "integer", "minimum": 1 },
+    "max_files": { "type": "integer", "minimum": 1 },
+    "max_stall_iterations": { "type": "integer", "minimum": 1 },
+    "scan_exclude": { "type": "string" },
+    "dry_run": { "type": "boolean" },
+    "pr_on_max_effort": { "type": "boolean" }
+  },
+  "required": ["campaign_id", "repo_slug", "source_repo", "worktree_path", "base_branch", "work_branch"]
+}
