@@ -1,0 +1,52 @@
+---
+description: Detailed implementation-plan standards — phased breakdown, tests, dual wiki updates, prompt-chains, remediation loops, drift prevention, plus t-shirt sizing and model tiering. Applies whenever a plan is produced (Plan Mode or any command).
+alwaysApply: true
+---
+
+# Planning standards
+
+When producing an **implementation plan** (in Plan Mode, via a command, or when the user asks for a plan) — **do not write code yet**. Bias toward incremental improvement loops that raise the quality of the final result.
+
+Structure the plan as:
+
+1. **Goal & success criteria** — measurable definition of done.
+2. **Clarifying questions** — surface anything ambiguous before planning; list assumptions explicitly as an open-questions ledger.
+3. **Affected surface** — files/modules/contracts touched, with blast radius. Respect read-only submodule copies (edit upstream repos).
+4. **Phased work breakdown** — small, independently verifiable increments; one commit per increment so each phase is a clean revert point.
+5. **Test strategy** — name the layer per change (unit / integration / e2e / regression) plus a "what would prove this is wrong" negative check. No phase is done without an executable verification step.
+6. **Wiki/docs updates (dual)** — update both (a) in-repo/code-adjacent docs and (b) the corresponding handbook source; keep generated output consistent.
+7. **Prompt-chains / sub-agents** — mark which phases to delegate to focused sub-agents (explore, review, test-runner) and which Versona(s) to consult.
+8. **Remediation loops (PDCA)** — per phase: define acceptance evidence *before* implementing → implement → run check → diff against acceptance → remediate → re-run until green.
+9. **Drift prevention** — a final consistency gate reconciling **code ↔ tests ↔ docs**; re-read acceptance criteria and confirm docs/tests describe what was actually built.
+10. **Risks & rollback** — failure modes and how to revert.
+
+Keep plans concrete and reviewable. Prefer numbered steps, tables, and prose over diagrams (no Mermaid in this workspace).
+
+## T-shirt sizing rubric
+
+`forge-triage.mdc` emits the one-line size; this table is the reference it draws on. Sizes are heuristic self-estimates from signals, not measured tokens (Cursor has no pre-execution meter — calibrate against the context ring afterward).
+
+| Size | Signals | ~Token order | Triage depth | Model / orchestration response |
+|---|---|---|---|---|
+| **XS** | 1 file, direct answer, no search | <5k | none | current model, no subagents |
+| **S** | 2-4 files, simple edit, narrow grep | 5-25k | 1-line header | Auto; Explore only if needed |
+| **M** | multi-file feature, 1 repo, moderate reasoning | 25-100k | header + approach | Auto/mid main; Explore for search, Bash for runs |
+| **L** | cross-cutting, iterative loops, or multi-repo | 100-400k | invest: strategy step | high-tier orchestrator + cheap subagents (grep/scripts/mechanical); plan before executing |
+| **XL** | migration, many files, long multi-tier loops | >400k | invest + split | full tiered plan, checkpoints, split across sessions to avoid summarization loss |
+
+## Model tiering
+
+Reserve high-tier models for reasoning; push token-heavy, low-judgment work to cheaper models.
+
+| Tier | Work | Model |
+|---|---|---|
+| Orchestrator (main) | planning, architecture, synthesis | high-tier or Auto |
+| Search / read | codebase Q&A, "where is X" | built-in **Explore** (auto, faster model) |
+| Scripts / shell | tests, builds, git | built-in **Bash** (auto) |
+| Mechanical edits | rename, boilerplate, apply-a-pattern | cheap `grunt`-style subagent (`.cursor/agents/grunt.md`, `composer-2.5`) |
+
+Cost math: subagents each carry their own context window — N parallel subagents ≈ N x tokens. Savings come from a *cheap model* doing the bulk-token work in a *sequential* tier (grep/mechanical → report back → high-tier reasons), not from fan-out. On legacy request-based plans, subagent `model:` is ignored (runs on Composer); token-based plans honor it.
+
+Prefer Auto/Composer for everyday turns (larger included allowance; Teams exempt from the Cursor Token Rate) and reserve Max Mode for tasks that genuinely need the larger context.
+
+**Fast-variant policy:** when the agent selects a model for a subagent or delegated Task, use the **standard** variant of a tier, not a speed-tier `*-fast` variant (e.g. `composer-2.5`, never `composer-2.5-fast`), unless the user explicitly asks for speed. Flag it if a `-fast` model would otherwise be chosen. This governs agent-chosen models only; it cannot change the user's main-chat model picker or Auto.

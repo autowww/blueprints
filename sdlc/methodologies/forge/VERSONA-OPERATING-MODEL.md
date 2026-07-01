@@ -80,6 +80,8 @@ Use **one** convention per repo. Defaults below align with [`versona/VERSONA-FRA
 
 **Catalog:** which Versona invokes which Skill, tasklet, and recipe stub — [`versona/VERSONA-SKILL-MATRIX.md`](versona/VERSONA-SKILL-MATRIX.md).
 
+**Cost-aware planning:** for how Rules shape plan detail while controlling token cost (t-shirt triage, model tiering, cheap subagents), see [`COST-AWARE-PLANNING-AND-MODEL-TIERING.md`](COST-AWARE-PLANNING-AND-MODEL-TIERING.md).
+
 ---
 
 ## 4. Process alignment

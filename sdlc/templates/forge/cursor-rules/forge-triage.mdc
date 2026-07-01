@@ -1,0 +1,28 @@
+---
+description: Cost-aware request triage — emit a one-line t-shirt size estimate and gate expensive orchestration on request size. Full rubric lives in forge-planning-standards.mdc.
+alwaysApply: true
+---
+
+# Request triage (cost-aware)
+
+Before working a non-trivial request, emit **one** compact triage line, then proceed:
+
+```
+Triage: <XS|S|M|L|XL> (~<rough token order>) · <1-3 word rationale>
+```
+
+Sizing is a heuristic self-estimate from visible signals (files touched, search breadth, generation volume, loop count) — not a measured number. Anchors: XS <5k, S 5-25k, M 25-100k, L 100-400k, XL >400k.
+
+Size the **underlying work** the request implies, not just the current turn. A "just plan it" request for a large feature is still **L/XL** — size the implementation the plan covers, then note the current turn is plan-only.
+
+## Gate
+
+- **XS / S** — execute directly. Do **not** spawn a strategy subagent; triage stays inline.
+- **M** — one-sentence approach inline, then execute.
+- **L / XL** — invest a strategy step **only if** `est(strategy) ≲ 10% of est(execution)`: a cheap planning pass that returns which subagents/models per phase and what to delegate. Then follow the full plan.
+
+Never let triage/strategy cost exceed the work it plans. Delegate token-heavy search/shell/mechanical work to cheaper models (built-in Explore/Bash, or a cheap `grunt`-style subagent) and reserve high-tier models for reasoning.
+
+**No fast-variant models by default.** When *you* pick a model for a subagent or delegated Task, use the **standard** variant of a tier (e.g. `composer-2.5`) — do **not** choose a speed-tier `*-fast` variant (e.g. `composer-2.5-fast`) unless the user explicitly asks for speed. If a `-fast` model would otherwise be the natural pick, flag it and use the standard variant instead. This is agent-chosen-model guidance; it cannot override the user's main-chat model picker or Auto.
+
+Full t-shirt rubric, per-size model tiering, and plan structure: see `forge-planning-standards.mdc`. Token bands for source files: see `code-footprint.mdc`.

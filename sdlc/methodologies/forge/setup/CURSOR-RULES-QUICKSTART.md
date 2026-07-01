@@ -58,6 +58,20 @@ Review `diff` / `status` before using `--force`. The footprint scanner is readon
 
 **Automated PDCA campaigns** (worktree + Cursor CLI `agent` + PR): see [`code-compliance/README.md`](code-compliance/README.md) and run `workbench/code-compliance/run-code-compliance-pdca.sh` from the multi-repo hub.
 
+## Opt-in: cost-aware planning + triage rules
+
+Two rules make planning detailed and cost-aware without re-typing instructions each time. They are **opt-in** (not in any preset) so existing `--preset recommended` checks stay stable:
+
+- **`forge-triage.mdc`** (lean, always-apply) — emits a one-line t-shirt size (`XS`-`XL`) per request and gates expensive orchestration on size.
+- **`forge-planning-standards.mdc`** — full plan structure (phases, tests, dual wiki, PDCA remediation loops, drift gate) plus the t-shirt rubric and model-tiering table.
+
+```bash
+bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh status --preset recommended --with-cost-tiering-rules
+bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh sync --preset recommended --with-cost-tiering-rules
+```
+
+Companion **`grunt`** subagent (cheap `composer-2.5` tier) and **`plan-detailed`** / **`triage`** commands are copied **manually** (like Skills) from `sdlc/templates/forge/cursor-agents/` and `sdlc/templates/forge/cursor-commands/` into `.cursor/agents/` and `.cursor/commands/`. Rationale and the full pattern: [`COST-AWARE-PLANNING-AND-MODEL-TIERING.md`](../COST-AWARE-PLANNING-AND-MODEL-TIERING.md).
+
 ## YAML-only install (CI / backward compatible)
 
 Omitting `--preset` keeps the old behavior: only `versona-*.mdc` files implied by `forge.config.yaml` (no standard Forge five, no optional workflow bundle).

@@ -19,6 +19,7 @@ if [[ $# -lt 1 ]] || [[ "${1:-}" == -* ]]; then
   echo "  check  — forge.config.yaml expected Versona files exist" >&2
   echo "Example: bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh sync --preset recommended" >&2
   echo "Optional coding footprint rule: add --with-code-footprint-rules to sync/diff/status" >&2
+  echo "Optional cost-aware planning rules: add --with-cost-tiering-rules to sync/diff/status" >&2
   echo "Optional: … sync --preset recommended --write-adoption-manifest  (see CURSOR-RULES-ALIGNMENT.md)" >&2
   exit 1
 fi

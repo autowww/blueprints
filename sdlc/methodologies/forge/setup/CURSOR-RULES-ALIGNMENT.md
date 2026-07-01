@@ -127,6 +127,7 @@ Use these with **`sync-forge-cursor-rules.sh sync`** (or `install-versona-cursor
 | `--with-generic` | Also `versona-generic.mdc` |
 | `--with-standard-forge-rules` | Also `forge-daily`, `forge-planning`, `forge-versona`, `forge-setup`, `forge-product-manager` from `sdlc/templates/forge/cursor-rules/` |
 | `--with-code-footprint-rules` | Also `code-footprint.mdc` from `sdlc/templates/forge/cursor-rules/`; advisory coding/style footprint rule, opt-in |
+| `--with-cost-tiering-rules` | Also `forge-triage.mdc` + `forge-planning-standards.mdc` from `sdlc/templates/forge/cursor-rules/`; cost-aware planning + t-shirt triage + model tiering, opt-in |
 
 ## Family → template sources
 
@@ -184,6 +185,23 @@ These rules are copied from `blueprints/sdlc/templates/forge/cursor-rules/` only
 | File | Purpose |
 |------|---------|
 | `code-footprint.mdc` | Review large source/control files, exclude generated web outputs, and plan semantic splits with folder `README.md` / `INDEX.md` files. |
+
+## Optional cost-aware planning rules (`--with-cost-tiering-rules`)
+
+Copied from `blueprints/sdlc/templates/forge/cursor-rules/` only when requested. Rationale, gate, cost math, and the effectiveness test: [`../COST-AWARE-PLANNING-AND-MODEL-TIERING.md`](../COST-AWARE-PLANNING-AND-MODEL-TIERING.md).
+
+| File | Purpose |
+|------|---------|
+| `forge-triage.mdc` | Lean always-apply: one-line t-shirt size (`XS`-`XL`) per request + gate on expensive orchestration; no `-fast` model variants by default. |
+| `forge-planning-standards.mdc` | Detailed plan structure (phases, tests, dual wiki, PDCA loops, drift gate) + t-shirt rubric + model-tiering table. |
+
+Companion artifacts are copied **manually** (like Skills), not by the sync script:
+
+| Artifact | Template source | Install into |
+|------|---------|------|
+| `grunt` cheap subagent (`composer-2.5`) | `sdlc/templates/forge/cursor-agents/grunt.md` | `.cursor/agents/grunt.md` |
+| `/plan-detailed`, `/triage` commands | `sdlc/templates/forge/cursor-commands/*.md` | `.cursor/commands/*.md` |
+| Effectiveness test pack | `sdlc/templates/forge/cursor-rules/tests/triage-planning-effectiveness/` | run in place (rules-on vs rules-off + PDCA) |
 
 ## Tasklets (optional)
 

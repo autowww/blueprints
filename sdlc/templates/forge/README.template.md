@@ -61,6 +61,7 @@ Active Forge rules in `.cursor/rules/`:
 | `versona-sampling.mdc` | Demo meta-Versona (optional; same installer) |
 | `versona-project-setup.mdc` | Project bootstrap checklist (`setup` / `@versona-project-setup`; copy from `blueprints/sdlc/methodologies/forge/versona/catalog/workflow/versona-project-setup.mdc.template`) |
 | `code-footprint.mdc` | Optional coding/style rule for large-file review and semantic split planning (`--with-code-footprint-rules`) |
+| `forge-triage.mdc` / `forge-planning-standards.mdc` | Optional cost-aware planning: t-shirt request sizing + detailed plan structure + model tiering (`--with-cost-tiering-rules`). Companion `grunt` subagent and `plan-detailed` / `triage` commands are copied manually. See `blueprints/sdlc/methodologies/forge/COST-AWARE-PLANNING-AND-MODEL-TIERING.md`. |
 
 Copy optional **Skills** from `blueprints/sdlc/templates/forge/cursor-skills/` into `.cursor/skills/`, for example:
 
@@ -79,4 +80,4 @@ Copy optional **Skills** from `blueprints/sdlc/templates/forge/cursor-skills/` i
 
 Per-Versona mapping: `blueprints/sdlc/methodologies/forge/versona/VERSONA-SKILL-MATRIX.md`.
 
-Install and align Cursor rules: `bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh sync --preset recommended` — see `blueprints/sdlc/methodologies/forge/setup/CURSOR-RULES-QUICKSTART.md`. Add `--with-code-footprint-rules` when the repo adopts the optional large-file analyzability rule.
+Install and align Cursor rules: `bash blueprints/sdlc/methodologies/forge/setup/sync-forge-cursor-rules.sh sync --preset recommended` — see `blueprints/sdlc/methodologies/forge/setup/CURSOR-RULES-QUICKSTART.md`. Add `--with-code-footprint-rules` when the repo adopts the optional large-file analyzability rule, and `--with-cost-tiering-rules` for the cost-aware planning + triage + model-tiering rules.

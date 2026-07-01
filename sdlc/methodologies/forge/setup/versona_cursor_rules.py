@@ -72,6 +72,15 @@ CODING_STYLE_CURSOR_RULES_REL: dict[str, str] = {
     "code-footprint.mdc": "sdlc/templates/forge/cursor-rules/code-footprint.mdc",
 }
 
+# Optional cost-aware planning + triage rules. Opt-in (not in any preset) so
+# existing `--preset recommended` checks remain stable. Companion `grunt`
+# subagent and plan-detailed/triage commands are copied manually (like Skills)
+# from sdlc/templates/forge/cursor-agents/ and cursor-commands/.
+COST_TIERING_CURSOR_RULES_REL: dict[str, str] = {
+    "forge-triage.mdc": "sdlc/templates/forge/cursor-rules/forge-triage.mdc",
+    "forge-planning-standards.mdc": "sdlc/templates/forge/cursor-rules/forge-planning-standards.mdc",
+}
+
 ENG_MAP = {
     "software_engineering": "versona-se.mdc",
     "software_architecture": "versona-architecture.mdc",
@@ -158,10 +167,11 @@ def expected_versona_filenames(data: dict) -> list[str]:
     return uniq
 
 
-def merge_install_options(args: argparse.Namespace) -> tuple[list[str], bool, bool]:
+def merge_install_options(args: argparse.Namespace) -> tuple[list[str], bool, bool, bool]:
     """
     Preset bundles optional Versona files + whether to copy optional rule groups.
     --with-* flags add on top (additive). No --preset (or minimal) = YAML-driven Versonas only.
+    Returns (optional_versona_names, with_standard_forge, with_coding_style, with_cost_tiering).
     """
     preset = getattr(args, "preset", None)
     if preset in (None, "minimal"):
@@ -196,6 +206,7 @@ def merge_install_options(args: argparse.Namespace) -> tuple[list[str], bool, bo
         sys.exit(2)
 
     coding_style = bool(getattr(args, "with_code_footprint_rules", False))
+    cost_tiering = bool(getattr(args, "with_cost_tiering_rules", False))
 
     def add(name: str) -> None:
         if name not in optional:
@@ -225,7 +236,7 @@ def merge_install_options(args: argparse.Namespace) -> tuple[list[str], bool, bo
     if args.with_standard_forge_rules:
         wf = True
 
-    return optional, wf, coding_style
+    return optional, wf, coding_style, cost_tiering
 
 
 def _sha256_file(path: Path) -> str:
@@ -372,6 +383,7 @@ def collect_install_jobs(
     optional_names: Iterable[str],
     with_standard_forge: bool,
     with_coding_style: bool,
+    with_cost_tiering: bool = False,
 ) -> list[tuple[Path, Path, str]]:
     """
     Returns list of (src, dest, label) where dest is under .cursor/rules/name.
@@ -423,6 +435,14 @@ def collect_install_jobs(
                 continue
             jobs.append((src, rules_dir / fname, "forge_coding_style"))
 
+    if with_cost_tiering:
+        for fname, rel in COST_TIERING_CURSOR_RULES_REL.items():
+            src = bp_root / rel
+            if not src.is_file():
+                print(f"Warning: missing {src}", file=sys.stderr)
+                continue
+            jobs.append((src, rules_dir / fname, "forge_cost_tiering"))
+
     return jobs
 
 
@@ -434,7 +454,7 @@ def cmd_install(args: argparse.Namespace) -> int:
         return 1
 
     data = load_cfg(cfg)
-    optional, wf, coding_style = merge_install_options(args)
+    optional, wf, coding_style, cost_tiering = merge_install_options(args)
 
     jobs = collect_install_jobs(
         root,
@@ -442,6 +462,7 @@ def cmd_install(args: argparse.Namespace) -> int:
         optional_names=optional,
         with_standard_forge=wf,
         with_coding_style=coding_style,
+        with_cost_tiering=cost_tiering,
     )
 
     rules_dir = root / ".cursor" / "rules"
@@ -488,7 +509,7 @@ def cmd_diff(args: argparse.Namespace) -> int:
         print(f"Error: missing {cfg}", file=sys.stderr)
         return 1
     data = load_cfg(cfg)
-    optional, wf, coding_style = merge_install_options(args)
+    optional, wf, coding_style, cost_tiering = merge_install_options(args)
 
     jobs = collect_install_jobs(
         root,
@@ -496,6 +517,7 @@ def cmd_diff(args: argparse.Namespace) -> int:
         optional_names=optional,
         with_standard_forge=wf,
         with_coding_style=coding_style,
+        with_cost_tiering=cost_tiering,
     )
     rules_dir = root / ".cursor" / "rules"
 
@@ -544,13 +566,14 @@ def cmd_status(args: argparse.Namespace) -> int:
         print(f"Error: missing {cfg}", file=sys.stderr)
         return 1
     data = load_cfg(cfg)
-    optional, wf, coding_style = merge_install_options(args)
+    optional, wf, coding_style, cost_tiering = merge_install_options(args)
     jobs = collect_install_jobs(
         root,
         data,
         optional_names=optional,
         with_standard_forge=wf,
         with_coding_style=coding_style,
+        with_cost_tiering=cost_tiering,
     )
     rules_dir = root / ".cursor" / "rules"
 
@@ -588,6 +611,8 @@ def cmd_status(args: argparse.Namespace) -> int:
     extra_flags: list[str] = []
     if coding_style:
         extra_flags.append("--with-code-footprint-rules")
+    if cost_tiering:
+        extra_flags.append("--with-cost-tiering-rules")
     extra = (" " + " ".join(extra_flags)) if extra_flags else ""
     if preset in (None, "minimal"):
         suggest = f"bash {setup_rel} sync{extra} --force"
@@ -639,6 +664,11 @@ def _add_preset_and_optional_rule_flags(p: argparse.ArgumentParser) -> None:
         "--with-code-footprint-rules",
         action="store_true",
         help="Also copy optional coding/style rules such as code-footprint.mdc",
+    )
+    p.add_argument(
+        "--with-cost-tiering-rules",
+        action="store_true",
+        help="Also copy cost-aware planning rules (forge-triage.mdc, forge-planning-standards.mdc)",
     )
 
 
