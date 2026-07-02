@@ -140,5 +140,7 @@ The **forge-lenses** workspace dashboard (`python3 -m lenses`, default `http://1
 - [`agentic-sdlc.md`](agentic-sdlc.md) — agentic principles, ceremonies, risks.  
 - [`spec-driven-development.md`](spec-driven-development.md) — durable specs for agentic workflows.  
 - [`forge.md`](forge.md) — Forge methodology hub.  
+- [`forge/RESPECTING-RESOURCES.md`](forge/RESPECTING-RESOURCES.md) — review bottleneck ↔ resource respect; bounded execution posture.  
+- [`forge/AUTONOMY-LEVELS.md`](forge/AUTONOMY-LEVELS.md) — autonomy ladder and human gates per level.  
 - [`roles-archetypes.md`](roles-archetypes.md) — accountability and Contributor identity.  
 - [`blueprints/agents/STRUCTURE.md`](../../agents/STRUCTURE.md) — containerized recipes and optional LLM steps.

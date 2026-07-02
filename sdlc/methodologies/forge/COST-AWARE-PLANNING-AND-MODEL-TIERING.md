@@ -94,3 +94,4 @@ Latest run of the isolated harness (rules-on vs rules-off), scored by a separate
 
 - **Product planning** (Business Driver → Product Spark → iterations) stays in [`planning/PLANNING-FLOW.md`](planning/PLANNING-FLOW.md) and `forge-planning.mdc`. This page is about **how any implementation plan is produced and sized**, not the product-planning hierarchy.
 - **File token bands** for source analyzability are separate: `code-footprint.mdc` and [`../agentic-coding-standards.md`](../agentic-coding-standards.md).
+- **Autonomous / bounded execution** (unattended loops, autonomy ladder, local-first routing): [`RESPECTING-RESOURCES.md`](RESPECTING-RESOURCES.md) and [`AUTONOMY-LEVELS.md`](AUTONOMY-LEVELS.md). For the autonomous counterpart to this interactive triage, see the [bounded execution examples](BOUNDED-EXECUTION-EXAMPLES.md) — real L1/L2 runs showing what each level spends.

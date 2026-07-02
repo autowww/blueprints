@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 756 232" width="756" height="232" role="img" aria-labelledby="title desc">
+  <title id="title">Respecting resources: scarce versus abundant, and the routing order</title>
+  <desc id="desc">Tokens, human review, and premium model budget are scarce and protected. Wall-clock time and deterministic checks are abundant and spent first. The router chooses the cheapest tier that clears the quality bar: deterministic, then local model, then decompose, and only then escalate to cloud or human.</desc>
+  <rect width="100%" height="100%" fill="none"/>
+  <text x="378" y="18" text-anchor="middle" font-family="system-ui, Segoe UI, sans-serif" font-weight="700" font-size="12" fill="#06B6D4">Respecting resources  spend the abundant to protect the scarce</text>
+  <g font-family="system-ui, sans-serif">
+    <!-- Scarce -->
+    <rect x="12" y="30" width="360" height="70" rx="5" fill="#3f1d1d" stroke="#b91c1c" stroke-width="1"/>
+    <text x="24" y="48" fill="#fca5a5" font-weight="700" font-size="10">Scarce  protect</text>
+    <text x="24" y="66" fill="#fee2e2" font-size="8.5">" Cloud / IDE tokens</text>
+    <text x="24" y="80" fill="#fee2e2" font-size="8.5">" Human review and attention</text>
+    <text x="24" y="94" fill="#fee2e2" font-size="8.5">" Premium model budget (ROI-gated)</text>
+
+    <!-- Abundant -->
+    <rect x="384" y="30" width="360" height="70" rx="5" fill="#14342b" stroke="#059669" stroke-width="1"/>
+    <text x="396" y="48" fill="#6ee7b7" font-weight="700" font-size="10">Abundant  spend first</text>
+    <text x="396" y="66" fill="#d1fae5" font-size="8.5">" Wall-clock time (iterate, repair, decompose)</text>
+    <text x="396" y="80" fill="#d1fae5" font-size="8.5">" Deterministic checks (scripts, CI, freeze gates)</text>
+    <text x="396" y="94" fill="#d1fae5" font-size="8.5">" Local ~4GB model calls (XS/S edits)</text>
+  </g>
+
+  <!-- Routing order -->
+  <text x="378" y="126" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="700" font-size="10" fill="#cbd5e1">Cheapest tier that clears the bar</text>
+  <g font-family="system-ui, sans-serif">
+    <rect x="16" y="150" width="120" height="46" rx="4" fill="#1e3a5f"/>
+    <text x="76" y="171" text-anchor="middle" fill="#fff" font-weight="700" font-size="10">classify</text>
+    <text x="76" y="185" text-anchor="middle" fill="#cbd5e1" font-size="8">domain·size·value</text>
+
+    <rect x="170" y="150" width="120" height="46" rx="4" fill="#285e61"/>
+    <text x="230" y="171" text-anchor="middle" fill="#fff" font-weight="700" font-size="10">deterministic</text>
+    <text x="230" y="185" text-anchor="middle" fill="#d1fae5" font-size="8">cost = 0</text>
+
+    <rect x="324" y="150" width="120" height="46" rx="4" fill="#553c9a"/>
+    <text x="384" y="171" text-anchor="middle" fill="#fff" font-weight="700" font-size="10">local model</text>
+    <text x="384" y="185" text-anchor="middle" fill="#e9d5ff" font-size="8">meets bar?</text>
+
+    <rect x="478" y="150" width="120" height="46" rx="4" fill="#1e3a5f"/>
+    <text x="538" y="171" text-anchor="middle" fill="#fff" font-weight="700" font-size="10">decompose</text>
+    <text x="538" y="185" text-anchor="middle" fill="#cbd5e1" font-size="8">spend time</text>
+
+    <rect x="632" y="150" width="112" height="46" rx="4" fill="#744210"/>
+    <text x="688" y="171" text-anchor="middle" fill="#fff" font-weight="700" font-size="10">escalate</text>
+    <text x="688" y="185" text-anchor="middle" fill="#fde68a" font-size="8">cloud / human</text>
+  </g>
+  <g stroke="#0e7490" stroke-width="1.5" fill="none">
+    <path d="M 136 173 L 170 173"/>
+    <path d="M 290 173 L 324 173"/>
+    <path d="M 444 173 L 478 173"/>
+    <path d="M 598 173 L 632 173"/>
+  </g>
+  <g fill="#708090">
+    <polygon points="170,173 164,169 164,177"/>
+    <polygon points="324,173 318,169 318,177"/>
+    <polygon points="478,173 472,169 472,177"/>
+    <polygon points="632,173 626,169 626,177"/>
+  </g>
+  <g font-family="system-ui, sans-serif" font-size="7" fill="#94a3b8">
+    <text x="153" y="167" text-anchor="middle">rule?</text>
+    <text x="307" y="167" text-anchor="middle">no rule</text>
+    <text x="461" y="167" text-anchor="middle">below bar</text>
+    <text x="615" y="167" text-anchor="middle">must_have</text>
+  </g>
+
+  <text x="378" y="222" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8.5" fill="#708090">When local quality is marginal the default is decompose (spend free time), not escalate (spend scarce tokens). Architecture and security always escalate.</text>
+</svg>

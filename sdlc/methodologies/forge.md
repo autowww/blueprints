@@ -153,6 +153,9 @@ Forge must never add more ceremony than it removes waste. Key tenets:
 
 - [Agentic SDLC](agentic-sdlc.md) — cross-cutting agent layer (Forge extends this with Versonas)
 - [Agentic coding standards](agentic-coding-standards.md) — AI-assisted coding and review standards; Forge mapping (Charge, Ember Log, Versonas, Assay)
+- [Respecting resources](forge/RESPECTING-RESOURCES.md) — token economics, decompose-before-escalate, bounded loops
+- [Autonomy levels](forge/AUTONOMY-LEVELS.md) — L0–L8 ladder, Assay enforcement, Forge Dark Factory PoC
+- [Bounded execution examples](forge/BOUNDED-EXECUTION-EXAMPLES.md) — real L1/L2 runs with loop, routing, PDCA, and dual-wiki diagrams
 - [Spec-driven development](spec-driven-development.md) — durable specs complement Forge's Ingot refinement
 - [Scrum](scrum.md) · [Kanban](kanban.md) · [XP](xp.md) — Forge ceremonies map to the same C1–C6 foundation
 - [Ceremonies — Forge fork](ceremonies/forge.md) — C1–C6 mapped to Forge events
