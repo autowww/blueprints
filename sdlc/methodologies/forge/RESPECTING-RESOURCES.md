@@ -38,6 +38,18 @@ Teams that ignore resource economics get fast-looking automation with **review b
 5. **Architecture and security always escalate** — Required quality is set high for these task classes regardless of local model cards.
 6. **Track escalation rate** — A rising rate signals weak scaffolds or mis-sized autonomy; improve capability cards and gates over time.
 
+### Escalation rate (operator)
+
+Measure **loop escalation to a human** separately from **worker-ladder stepping** (e.g. local → Cursor inside the same run). A healthy program tracks:
+
+| Signal | What to record | Healthy posture |
+|--------|----------------|-----------------|
+| `escalated: true` on runs | Human turn required before pass | Falls as scaffolds improve; spikes on new task classes |
+| Worker-ladder steps | Backend changes without human | Expected on L2–L3 local-first; not counted as human escalation |
+| Mis-sized level claims | L2/L3 pass without assay proof | Should trend to zero — see [bounded execution examples](BOUNDED-EXECUTION-EXAMPLES.md) |
+
+Review escalation rate when sizing campaigns: if most L2 items escalate to humans, decompose further or lower the declared level. Operator hub: [Platform autonomy levels](https://platform.forgesdlc.com/docs-autonomy-levels-index.html).
+
 ## Resource types in practice
 
 | Type | Where it shows up | Forge alignment |
@@ -62,7 +74,9 @@ Autonomy is not binary. Forge defines a **testable L0–L8 ladder**: each level 
 
 At a glance: **L0** is suggestions only; **L1** is a single function or small contract-bound change; **L2** is a multi-file change-set without rearchitecture; **L3** is an end-to-end use-case slice inside one existing app. Higher levels add scope and gates.
 
-Full table, enforcement, and PoC notes: **[Autonomy levels](AUTONOMY-LEVELS.md)**.
+Two finer axes track real progress: **maturity grades a–d** (Defined → Demonstrated → Repeatable → Operational, promoted on escalation-rate evidence) and **sub-levels L1.1–L4.3** with distinct assay checks. Escalation rate is the promotion currency between grades — the metric this page defines feeds grade transitions directly.
+
+Full table, grades, sub-levels, enforcement, and PoC notes: **[Autonomy levels](AUTONOMY-LEVELS.md)**. Per-project scoring: **[Autonomy maturity framework](AUTONOMY-MATURITY-FRAMEWORK.md)**.
 
 ## Reference implementation: Forge Dark Factory (PoC)
 

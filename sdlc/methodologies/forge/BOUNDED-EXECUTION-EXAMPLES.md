@@ -29,6 +29,7 @@ Two ideas make the examples readable:
 | Field | Meaning |
 |-------|---------|
 | **Autonomy level** | The declared ladder target for the run |
+| **Sub-level (retro-tag)** | The [sub-level](AUTONOMY-LEVELS.md#sub-levels-l1l4-band) and [grade](AUTONOMY-LEVELS.md#maturity-grades-ad) assigned retrospectively — these runs predate the sub-level scheme, so tags reflect the closest evidence match |
 | **Resources spent** | Tokens, local compute, and human attention actually consumed |
 | **Human gate** | Where a person still decides |
 | **Evidence** | Path pattern to the machine record and generated human report |
@@ -48,6 +49,7 @@ The cheapest possible run: a deterministic `fake` worker fixes a failing `multip
 | **Draft worker** | `fake` (fixture `sandbox/fixtures/multiply_fix.json`) |
 | **Change** | 1 file — `calculator.py` |
 | **Autonomy level** | **L1** — one function to a fixed signature |
+| **Sub-level (retro-tag)** | **L1.1b** — provided failing test unchanged, turned green |
 | **Resources spent** | 0 tokens, ~1 second wall-clock, no human turn |
 | **Human gate** | Approve branch/merge (outside the PoC loop) |
 | **Result** | `final_status: pass`, `escalated: false`, assay OK |
@@ -81,6 +83,7 @@ Same L1 shape, but on a real docs fixture and with a live model. The router pick
 | **Draft worker** | Granite stalled (`success 0.0`) → **Cursor** `composer-2.5` won (`reliability 1.0`) |
 | **Change** | 1 file — `README.md` |
 | **Autonomy level** | **L1** |
+| **Sub-level (retro-tag)** | **L1.2b** — run carried its own verification alongside the fix (closest match; predates the scheme) |
 | **Resources spent** | Local attempt + one Cursor draft; no human turn during the loop |
 | **Human gate** | Approve branch/merge; **promotion refused** (live repo absent) |
 | **Result** | `final_status: pass`, `escalated: false` |
@@ -114,6 +117,7 @@ L2 raises the unit of delivery to a **multi-file change-set** with no rearchitec
 | **Plan** | **2 patch units (L2)** |
 | **Changes** | 2 files — `README.md`, `docs/guide/nested.md` |
 | **Autonomy level** | **L2** — change-set, contracts and architecture fixed |
+| **Sub-level (retro-tag)** | **L2.2b** — cross-file defect fix; note the pre-existing-failing-test evidence now required for new L2.2 claims was not recorded at the time |
 | **Human gate** | Accept acceptance criteria **+** merge |
 | **Result** | `final_status: pass`, both units `pass` |
 
@@ -207,15 +211,60 @@ Escalation is a feature, not a failure. The router is deterministic about *when*
 
 ---
 
+## Example 7 — L3 use-case slice across logic, docs, and UI
+
+L3 raises the unit of delivery to an **end-to-end user-visible flow** inside one existing app. The plan produces **three patch units** across distinct layers, and Assay requires cross-layer and E2E evidence.
+
+| Aspect | Value |
+|--------|-------|
+| **Campaign item** | `L3-ui-smoke` / `L3-scan-flow` (`campaigns/lenses-production-l3-ci.yaml`) |
+| **Goal** | Playwright E2E scan flow shows Scan finished banner after use-case fix |
+| **Classification** | domain `complicated` · size `M` · value `high` · task_class `docs` |
+| **Plan** | **3 patch units (L3)** — layers: `logic`, `docs`, `ui` |
+| **Changes** | 3 files — `app/scanner.py`, `README.md`, `ui/index.html` |
+| **Autonomy level** | **L3** — use-case slice, architecture fixed |
+| **Sub-level (retro-tag)** | **L3.1b** — sandbox app slice with registered E2E verification |
+| **E2E** | `scripts/verify-docs-health-l3.py` |
+| **Human gate** | Intent + acceptance in; review out |
+| **Result** | `final_status: pass`, `escalated: false` |
+
+Phase trace:
+
+```text
+plan - ok             3 patch units (L3)
+draft-unit-0 - ok     deterministic; app/scanner.py (logic)
+draft-unit-1 - ok     deterministic; README.md (docs)
+draft-unit-2 - ok     deterministic; ui/index.html (ui)
+assay - ok            all core evidence present
+```
+
+Like Examples 1–3, the human `report.md` is **generated** from machine records under `runs/.../machine/` — see [Example 5 — dual-wiki trace](#example-5--auditability-without-drift-dual-wiki-trace). Do not hand-edit the narrative; regenerate from machine JSON if the story drifts.
+
+### L2 vs L3 at a glance
+
+| | **L2 (Example 3)** | **L3 (Example 7)** |
+|--|--------------------|--------------------|
+| Unit of delivery | Multi-file change-set | End-to-end use-case slice |
+| Layers | Same kind of change (docs) | logic + docs + ui |
+| File types | Any ≥2 distinct files | `.py` **and** non-`.py` required |
+| E2E | Optional `verification_argv` | E2E / Playwright recorded in `tests_run` |
+| Human gate | Accept AC + merge | Intent in; review out |
+
+**Teaching point:** L3 Assay verifies **≥2 distinct layers**, **both** `.py` and non-`.py` files in the proof union, and **E2E pass** in `tests_run` — a multi-file docs-only patch cannot masquerade as a use-case slice.
+
+*Evidence:* `runs/campaigns/lenses-production-l3-ci/L3-ui-smoke/run-*/{machine,human}/`
+
+---
+
 ## What these examples do not show
 
-- **L3 use-case slices** — campaign definitions exist, but no green end-to-end L3 run is published here yet; treat L3 as foundation, not a demonstrated example.
 - **Unsupervised push/deploy** — every example stops at a human-gated branch/merge or a guarded promotion; nothing ships without a person.
 - **L4+ autonomy** — feature, subsystem, product, and multi-platform levels remain vision requiring ADRs, go/no-go, and strategic checkpoints.
 
 ## Related
 
 - [Autonomy levels](AUTONOMY-LEVELS.md) — L0–L8 ladder, Assay enforcement, 4GB honesty
+- [Forge Platform autonomy levels](https://platform.forgesdlc.com/docs-autonomy-levels-index.html) — per-level reference architecture and readiness matrix
 - [Respecting resources](RESPECTING-RESOURCES.md) — scarce vs abundant, decompose-before-escalate
 - [Cost-aware planning and model tiering](COST-AWARE-PLANNING-AND-MODEL-TIERING.md) — the interactive Cursor counterpart
 - [Agentic SDLC](../agentic-sdlc.md) — humans own intent; agents amplify execution
