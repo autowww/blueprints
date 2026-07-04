@@ -3,6 +3,14 @@ public_publish: true
 audience: public
 handbook_area: blueprints
 learning_level: reference
+content_id: forge.docs.blueprints.forge.autonomy-levels
+canonical_owner: blueprints
+primary_persona: engineering_leader
+reader_stage: adopt
+maturity: defined
+evidence_level: canonical_doc
+refresh_policy: on_claim_change
+last_reviewed: '2026-07-03'
 ---
 
 # Autonomy levels
@@ -46,9 +54,9 @@ Full readiness matrix, Wizard ↔ execution mapping, and per-level architecture 
 | L7 Multi-cloud / multi-platform solution (max − 1) | A whole engineered solution spanning clouds/platforms | Business framing | Strategic checkpoints |
 | L8 (max) Autonomous problem solving | Frames a business/humanity problem and composes L7 solutions as puzzle pieces | Nothing but the goal | Mission definition only |
 
-![Autonomy ladder L0 to L8 with L0 to L3 emphasized as defined and exercised and L4 to L8 muted as future vision](../../docs/assets/methodology-autonomy-ladder-l0-l3.svg)
+![Autonomy ladder L0 to L8 with maturity grades a-d and L1-L4 sub-level bands](../../docs/assets/methodology-autonomy-ladder-l1-l4-grades.svg)
 
-*L0–L3 are defined and exercised today (L1–L3 are demonstrated in the [worked examples](BOUNDED-EXECUTION-EXAMPLES.md)); L4–L8 remain vision requiring ADRs, go/no-go, and strategic checkpoints. Higher levels add gates and never remove lower-level ones. The diagram shows the flat ladder; the grade and sub-level axes below are not yet drawn.*
+*L0–L3 are defined and exercised today (L1.1b, L1.2b, L2.2b, L3.1b demonstrated in the [worked examples](BOUNDED-EXECUTION-EXAMPLES.md)); L4–L8 remain vision requiring ADRs, go/no-go, and strategic checkpoints. Higher levels add gates and never remove lower-level ones. The previous flat ladder diagram ([methodology-autonomy-ladder-l0-l3.svg](../../docs/assets/methodology-autonomy-ladder-l0-l3.svg)) is retained for reference.*
 
 ## Maturity grades (a–d)
 
@@ -153,6 +161,10 @@ Do not treat Dark Factory as compliance-ready or as permission for unsupervised 
 - **No “fully autonomous” delivery** — Even L8 assumes mission definition by humans; intermediate levels add explicit gates.
 - **Escalation is expected** — Especially for architecture, security, and ambiguous work; a low escalation rate is a goal, not a guarantee on day one.
 
+## How it fits the Forge ecosystem
+
+This page belongs to its owning repo's canonical documentation and links outward to the related Forge surfaces (methodology in Blueprints, product docs in each product handbook, adoption narrative on forgesdlc.com). Follow the related links to stay on the governed path.
+
 ## Related
 
 - [Autonomy maturity framework](AUTONOMY-MATURITY-FRAMEWORK.md) — per-project observed level, grade, 0–100 score, and recommendations
@@ -163,3 +175,19 @@ Do not treat Dark Factory as compliance-ready or as permission for unsupervised 
 - [Agentic SDLC](../agentic-sdlc.md) — humans own intent; agents amplify execution
 - [Agentic coding standards](../agentic-coding-standards.md) — review capacity and smaller PRs
 - [Assay Gate ceremony](ceremonies-prescriptive.md#5-assay-gate-release-readiness)
+
+## Executive capsule
+
+Autonomy is not binary. Levels are theoretically unbounded; this ladder gives a **meaningful, testable progression** for governed agent execution. Each level is defined by its **unit of autonomous delivery**, **what stays fixed**, and **where humans gate**. Maturity: **defined**.
+
+## Who this is for
+
+Engineering leaders at the **adopt** stage. Skim the executive capsule first; agents should respect the page frontmatter contract.
+
+## Trust boundary
+
+Forge keeps humans in charge of promotion, approval, and release decisions; automation proposes and executes only within approved boundaries described here.
+
+## How to use this page
+
+Read top-to-bottom at your depth: capsule for the decision, mechanism for design, links below for the next step in your journey.

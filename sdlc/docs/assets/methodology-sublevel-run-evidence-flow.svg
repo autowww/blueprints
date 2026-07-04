@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 756 200" width="756" height="200" role="img" aria-labelledby="title desc">
+  <title id="title">Sub-level run evidence flow: campaign item through driver, assay gate, and dual-wiki trace</title>
+  <desc id="desc">A bounded autonomous run starts as a campaign item with a declared sub-level claim. The Dark Factory driver executes the bounded loop. The assay gate enforces sub-level-specific evidence. Machine records under machine/ are the source of truth; human/report.md is derived; a freeze gate blocks drift between M and H.</desc>
+  <rect width="100%" height="100%" fill="none"/>
+  <text x="378" y="18" text-anchor="middle" font-family="system-ui, Segoe UI, sans-serif" font-weight="700" font-size="12" fill="#06B6D4">Sub-level run anatomy  campaign item to dual-wiki trace</text>
+  <g font-family="system-ui, sans-serif">
+    <rect x="16" y="52" width="148" height="80" rx="5" fill="#1e3a5f" stroke="#06B6D4" stroke-width="1"/>
+    <text x="90" y="74" text-anchor="middle" fill="#fff" font-weight="700" font-size="9">Campaign item</text>
+    <text x="90" y="92" text-anchor="middle" fill="#cbd5e1" font-size="7.5">goal, target repo, sub-level</text>
+    <text x="90" y="108" text-anchor="middle" fill="#06B6D4" font-size="7" font-weight="700">e.g. L2.2 in forge-lenses</text>
+    <text x="90" y="122" text-anchor="middle" fill="#94a3b8" font-size="7">campaigns/*.yaml</text>
+    <rect x="188" y="52" width="124" height="80" rx="5" fill="#1e3a5f" stroke="#06B6D4" stroke-width="1"/>
+    <text x="250" y="80" text-anchor="middle" fill="#fff" font-weight="700" font-size="9">Driver</text>
+    <text x="250" y="98" text-anchor="middle" fill="#cbd5e1" font-size="7.5">classify ’ route ’ draft</text>
+    <text x="250" y="114" text-anchor="middle" fill="#cbd5e1" font-size="7.5">’ apply ’ verify ’ proof</text>
+    <rect x="336" y="52" width="132" height="80" rx="5" fill="#744210" stroke="#f59e0b" stroke-width="1"/>
+    <text x="402" y="80" text-anchor="middle" fill="#fff" font-weight="700" font-size="9">Assay gate</text>
+    <text x="402" y="98" text-anchor="middle" fill="#fde68a" font-size="7.5">core evidence +</text>
+    <text x="402" y="112" text-anchor="middle" fill="#fde68a" font-size="7.5">_check_sublevel rule</text>
+    <text x="402" y="126" text-anchor="middle" fill="#94a3b8" font-size="7">machine/assay.json</text>
+    <rect x="492" y="40" width="248" height="104" rx="5" fill="#285e61" stroke="#059669" stroke-width="1"/>
+    <text x="616" y="62" text-anchor="middle" fill="#fff" font-weight="700" font-size="9">Dual-wiki trace (M + H)</text>
+    <text x="616" y="80" text-anchor="middle" fill="#6ee7b7" font-size="8" font-weight="700">M = source of truth</text>
+    <text x="508" y="98" fill="#d1fae5" font-size="7.5">machine/run.json, phases.json, proof.json</text>
+    <text x="508" y="114" fill="#d1fae5" font-size="7.5">human/report.md  generated from M</text>
+    <text x="508" y="132" fill="#fca5a5" font-size="7.5">freeze gate: H must equal re-derive(M)</text>
+  </g>
+  <g stroke="#0e7490" stroke-width="1.5" fill="none">
+    <path d="M 164 92 L 188 92"/>
+    <path d="M 312 92 L 336 92"/>
+    <path d="M 468 92 L 492 92"/>
+  </g>
+  <g fill="#708090">
+    <polygon points="188,92 182,88 182,96"/>
+    <polygon points="336,92 330,88 330,96"/>
+    <polygon points="492,92 486,88 486,96"/>
+  </g>
+  <text x="378" y="178" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8.5" fill="#708090">A run that fails the sub-level check may still pass at the plain level grain  sub-level claims are strictly additive.</text>
+</svg>

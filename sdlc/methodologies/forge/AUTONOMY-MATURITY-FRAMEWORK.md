@@ -36,6 +36,8 @@ Each component is normalized 0–1 from deterministic checks:
 
 Supporting signals may raise component confidence but never substitute for run evidence: a Docs Health score, standards-compliance checks, and branch-protection hints inform **gate_definition** only.
 
+![Autonomy maturity score composition: 40% gate definition, 30% demonstrated evidence, 20% repeatability, 10% operational metrics](../../docs/assets/methodology-maturity-score-composition.svg)
+
 ## Recommendations
 
 Every failed or partial check emits one **recommendation string** — concrete, ordered by score impact, phrased as the next action:

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 240" width="680" height="240" role="img" aria-labelledby="title desc">
+  <title id="title">Autonomy maturity score composition: 40% gate definition, 30% demonstrated evidence, 20% repeatability, 10% operational metrics</title>
+  <desc id="desc">Per-project autonomy maturity score from 0 to 100 is a weighted sum of four normalized components: gate definition 40 percent, demonstrated evidence 30 percent, repeatability 20 percent, and operational metrics 10 percent.</desc>
+  <rect width="100%" height="100%" fill="none"/>
+  <text x="340" y="18" text-anchor="middle" font-family="system-ui, Segoe UI, sans-serif" font-weight="700" font-size="12" fill="#06B6D4">Autonomy maturity score composition (0100)</text>
+  <g font-family="system-ui, sans-serif">
+    <rect x="60" y="52" width="560" height="40" rx="4" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <rect x="60" y="52" width="224" height="40" rx="4" fill="#1e3a5f" stroke="#06B6D4" stroke-width="1"/>
+    <rect x="284" y="52" width="168" height="40" fill="#0e7490" stroke="#06B6D4" stroke-width="1"/>
+    <rect x="452" y="52" width="112" height="40" fill="#285e61" stroke="#059669" stroke-width="1"/>
+    <rect x="564" y="52" width="56" height="40" fill="#744210" stroke="#f59e0b" stroke-width="1"/>
+    <text x="172" y="76" text-anchor="middle" fill="#fff" font-weight="700" font-size="10">40%</text>
+    <text x="368" y="76" text-anchor="middle" fill="#fff" font-weight="700" font-size="10">30%</text>
+    <text x="508" y="76" text-anchor="middle" fill="#fff" font-weight="700" font-size="10">20%</text>
+    <text x="592" y="76" text-anchor="middle" fill="#fff" font-weight="700" font-size="10">10%</text>
+    <text x="172" y="112" text-anchor="middle" fill="#06B6D4" font-weight="700" font-size="8.5">Gate definition</text>
+    <text x="368" y="112" text-anchor="middle" fill="#06B6D4" font-weight="700" font-size="8.5">Demonstrated evidence</text>
+    <text x="508" y="112" text-anchor="middle" fill="#06B6D4" font-weight="700" font-size="8.5">Repeatability</text>
+    <text x="592" y="112" text-anchor="middle" fill="#f59e0b" font-weight="700" font-size="8.5">Operational</text>
+    <text x="172" y="130" text-anchor="middle" fill="#94a3b8" font-size="7.5">forge.config.yaml assay keys</text>
+    <text x="172" y="144" text-anchor="middle" fill="#64748b" font-size="7">CI, tests, Cursor rules synced</text>
+    <text x="368" y="130" text-anchor="middle" fill="#94a3b8" font-size="7.5">green run + assay pass</text>
+    <text x="368" y="144" text-anchor="middle" fill="#64748b" font-size="7">declared sub-level in trace</text>
+    <text x="508" y="130" text-anchor="middle" fill="#94a3b8" font-size="7.5">e5 green runs, escalation &lt; 40%</text>
+    <text x="508" y="144" text-anchor="middle" fill="#64748b" font-size="7">campaign history depth</text>
+    <text x="592" y="130" text-anchor="middle" fill="#94a3b8" font-size="7.5">30-day escalation trend</text>
+    <text x="592" y="144" text-anchor="middle" fill="#64748b" font-size="7">+ review sampling</text>
+  </g>
+  <text x="340" y="200" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8.5" fill="#708090">score = 40·gate + 30·demonstrated + 20·repeatability + 10·operational (each normalized 01)</text>
+</svg>

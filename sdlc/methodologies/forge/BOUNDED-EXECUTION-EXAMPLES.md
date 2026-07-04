@@ -19,6 +19,12 @@ Each example is one pass (or one campaign item) through the same sequential, hum
 
 *The loop spends the abundant (time, deterministic checks, local calls) before the scarce (tokens, review). Verify failures trigger bounded repair; ambiguity or budget exhaustion escalates to a human — who still approves the branch or merge.*
 
+Sub-level claims add distinct assay evidence on top of the level's core gates:
+
+![Sub-level run evidence flow: campaign item through driver, assay gate, and dual-wiki trace](../../docs/assets/methodology-sublevel-run-evidence-flow.svg)
+
+*The driver produces machine records; the assay gate enforces `_check_sublevel` rules; Wiki M is canonical and Wiki H is derived with a freeze gate.*
+
 Two ideas make the examples readable:
 
 - **Routing tier** is the engine the router *selected* (deterministic, local, escalate).
@@ -253,6 +259,59 @@ Like Examples 1–3, the human `report.md` is **generated** from machine records
 **Teaching point:** L3 Assay verifies **≥2 distinct layers**, **both** `.py` and non-`.py` files in the proof union, and **E2E pass** in `tests_run` — a multi-file docs-only patch cannot masquerade as a use-case slice.
 
 *Evidence:* `runs/campaigns/lenses-production-l3-ci/L3-ui-smoke/run-*/{machine,human}/`
+
+---
+
+## Example 8 — L2.1 mechanical multi-file (hypothetical, worked-through)
+
+**Hypothetical case** — no matching campaign run exists today; this narrative shows what an L2.1 pass would look like and how `_check_sublevel` would enforce it.
+
+A codemod-style rename across two Python modules: the plan applies the same-shaped hunk (one added line, one removed line per file) to `utils/helpers.py` and `utils/compat.py` without touching any test files.
+
+| Aspect | Value |
+|--------|-------|
+| **Campaign item** | `lenses-rename-alias` (hypothetical; not in `campaigns/`) |
+| **Goal** | rename internal alias `legacy_id` → `record_id` in two helper modules |
+| **Classification** | domain `complicated` · size `S` · task_class `refactor` |
+| **Plan** | **2 patch units (L2.1)** — same hunk shape per file |
+| **Changes** | 2 files — `utils/helpers.py`, `utils/compat.py` (no test files) |
+| **Autonomy level** | **L2** — mechanical change-set |
+| **Sub-level** | **L2.1** — mechanical multi-file |
+| **Hunk shapes** | `(1, 1)` on both files — identical added/removed signature |
+| **Human gate** | Accept AC + merge |
+| **Assay pass rationale** | `_check_sublevel` for L2.1: `hunk_shapes` has ≥2 entries with identical tuple; no `_is_test_file` in `changed_files` |
+| **Assay fail example** | If `tests/test_helpers.py` were in the diff → `L2.1 evidence: behavior-test delta present` |
+
+**Teaching point:** L2.1 is for mechanical, same-shaped edits across files — not defect fixes (L2.2) and not behavior changes with new tests (L2.3). A rename that accidentally edits a test file fails the L2.1 sub-level check even if L2 core evidence (≥2 files) passes.
+
+*Evidence pattern (if run):* `runs/campaigns/<campaign>/<item>/run-*/{machine,human}/` with `machine/assay.json` recording `sublevel: L2.1` and `hunk_shapes`.
+
+---
+
+## Example 9 — L3.2 production-repo slice (hypothetical, worked-through)
+
+**Hypothetical case** — no matching campaign run exists today; this narrative extends Example 7's L3.1 sandbox slice to a production repo on a branch.
+
+The same three-layer slice (logic + docs + UI) runs against `forge-lenses` on a feature branch instead of the sandbox app. All L3.1 evidence holds, but `target_repo` is outside the sandbox allowlist.
+
+| Aspect | Value |
+|--------|-------|
+| **Campaign item** | `lenses-scan-flow-production` (hypothetical; not in `campaigns/`) |
+| **Goal** | E2E scan flow green in production repo on branch `feat/scan-banner` |
+| **Classification** | domain `complicated` · size `M` · value `high` |
+| **Plan** | **3 patch units (L3.2)** — layers: `logic`, `docs`, `ui` |
+| **Changes** | 3 files — `lenses/scanner.py`, `README.md`, `ui/index.html` |
+| **Target repo** | `forge-lenses` (not in sandbox allowlist) |
+| **Autonomy level** | **L3** — use-case slice |
+| **Sub-level** | **L3.2** — production-repo slice |
+| **E2E** | `scripts/verify-docs-health-l3.py` (registered runner) |
+| **Human gate** | Intent + acceptance in; review out |
+| **Assay pass rationale** | L3 core: ≥2 layers, `.py` + non-`.py`, E2E in allowlist. L3.2: `target_repo` declared and `_is_sandbox(target_repo)` is false |
+| **Assay fail example** | Same slice against `sandbox/app` → `L3.2 evidence: target repo is in the sandbox allowlist` |
+
+**Teaching point:** L3.2 inherits all L3.1 checks and adds the production-repo boundary. A sandbox slice cannot claim L3.2 even with identical file patterns — the assay reads `target_repo` against the sandbox allowlist.
+
+*Evidence pattern (if run):* `runs/campaigns/<campaign>/<item>/run-*/{machine,human}/` with `machine/run.json` declaring `target_repo: forge-lenses` and `sublevel: L3.2`.
 
 ---
 
