@@ -3,7 +3,7 @@
   <title id="title">Autonomy maturity score composition: 40% gate definition, 30% demonstrated evidence, 20% repeatability, 10% operational metrics</title>
   <desc id="desc">Per-project autonomy maturity score from 0 to 100 is a weighted sum of four normalized components: gate definition 40 percent, demonstrated evidence 30 percent, repeatability 20 percent, and operational metrics 10 percent.</desc>
   <rect width="100%" height="100%" fill="none"/>
-  <text x="340" y="18" text-anchor="middle" font-family="system-ui, Segoe UI, sans-serif" font-weight="700" font-size="12" fill="#06B6D4">Autonomy maturity score composition (0100)</text>
+  <text x="340" y="18" text-anchor="middle" font-family="system-ui, Segoe UI, sans-serif" font-weight="700" font-size="12" fill="#06B6D4">Autonomy maturity score composition (0â€“100)</text>
   <g font-family="system-ui, sans-serif">
     <rect x="60" y="52" width="560" height="40" rx="4" fill="#1e293b" stroke="#475569" stroke-width="1"/>
     <rect x="60" y="52" width="224" height="40" rx="4" fill="#1e3a5f" stroke="#06B6D4" stroke-width="1"/>
@@ -27,5 +27,5 @@
     <text x="592" y="130" text-anchor="middle" fill="#94a3b8" font-size="7.5">30-day escalation trend</text>
     <text x="592" y="144" text-anchor="middle" fill="#64748b" font-size="7">+ review sampling</text>
   </g>
-  <text x="340" y="200" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8.5" fill="#708090">score = 40·gate + 30·demonstrated + 20·repeatability + 10·operational (each normalized 01)</text>
+  <text x="340" y="200" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8.5" fill="#708090">score = 40Â·gate + 30Â·demonstrated + 20Â·repeatability + 10Â·operational (each normalized 0â€“1)</text>
 </svg>

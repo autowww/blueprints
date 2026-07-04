@@ -3,7 +3,7 @@
   <title id="title">Forge autonomy ladder L0 to L8 with maturity grades a-d and L1-L4 sub-level bands</title>
   <desc id="desc">A rising staircase of autonomy levels L0 through L8. L0 through L3 are defined and exercised today with sub-level bands L1.1 through L3.4. L4 through L8 are vision requiring extra gates. Maturity grades a Defined, b Demonstrated, c Repeatable, d Operational apply to every level. L1.1b, L1.2b, L2.2b, and L3.1b are demonstrated today.</desc>
   <rect width="100%" height="100%" fill="none"/>
-  <text x="450" y="18" text-anchor="middle" font-family="system-ui, Segoe UI, sans-serif" font-weight="700" font-size="12" fill="#06B6D4">Autonomy ladder  levels, sub-levels (L1.1L4.3), and maturity grades (ad)</text>
+  <text x="450" y="18" text-anchor="middle" font-family="system-ui, Segoe UI, sans-serif" font-weight="700" font-size="12" fill="#06B6D4">Autonomy ladder — levels, sub-levels (L1.1–L4.3), and maturity grades (a–d)</text>
   <g font-family="system-ui, sans-serif">
     <!-- L0 -->
     <rect x="8" y="200" width="56" height="24" rx="3" fill="#1e3a5f" stroke="#06B6D4" stroke-width="1"/>
@@ -67,17 +67,17 @@
     <text x="548" y="98" text-anchor="middle" fill="#64748b" font-size="6.5">Autonomous</text>
     <!-- Grade axis -->
     <rect x="620" y="48" width="260" height="200" rx="4" fill="#1e293b" stroke="#475569" stroke-width="1"/>
-    <text x="750" y="66" text-anchor="middle" fill="#06B6D4" font-weight="700" font-size="10">Maturity grades (ad)</text>
-    <text x="636" y="92" fill="#94a3b8" font-size="8.5">a  Defined (policy row documented)</text>
-    <text x="636" y="114" fill="#f59e0b" font-size="8.5" font-weight="700">b  Demonstrated (one green assay run)</text>
-    <text x="636" y="136" fill="#94a3b8" font-size="8.5">c  Repeatable (e5 green runs, escalation &lt; 40%)</text>
-    <text x="636" y="158" fill="#94a3b8" font-size="8.5">d  Operational (30-day trend + review sampling)</text>
+    <text x="750" y="66" text-anchor="middle" fill="#06B6D4" font-weight="700" font-size="10">Maturity grades (a–d)</text>
+    <text x="636" y="92" fill="#94a3b8" font-size="8.5">a — Defined (policy row documented)</text>
+    <text x="636" y="114" fill="#f59e0b" font-size="8.5" font-weight="700">b — Demonstrated (one green assay run)</text>
+    <text x="636" y="136" fill="#94a3b8" font-size="8.5">c — Repeatable (e5 green runs, escalation &lt; 40%)</text>
+    <text x="636" y="158" fill="#94a3b8" font-size="8.5">d — Operational (30-day trend + review sampling)</text>
     <text x="636" y="186" fill="#64748b" font-size="7.5">Notation: L2.2c in forge-lenses</text>
     <text x="636" y="200" fill="#64748b" font-size="7.5">= cross-file defect, repeatable, scoped</text>
     <text x="636" y="228" fill="#f59e0b" font-size="7.5" font-weight="700">Demonstrated today: L1.1b, L1.2b, L2.2b, L3.1b</text>
   </g>
   <line x1="260" y1="36" x2="260" y2="230" stroke="#f59e0b" stroke-width="1" stroke-dasharray="4 3"/>
-  <text x="134" y="52" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#06B6D4">defined and exercised (L0L3)</text>
-  <text x="434" y="40" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#f59e0b">vision  extra gates (L4L8)</text>
-  <text x="450" y="328" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8.5" fill="#708090">Higher levels add gates and never remove lower-level gates. Sub-level assays enforce distinct evidence within the L1L4 band.</text>
+  <text x="134" y="52" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#06B6D4">defined and exercised (L0–L3)</text>
+  <text x="434" y="40" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#f59e0b">vision — extra gates (L4–L8)</text>
+  <text x="450" y="328" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8.5" fill="#708090">Higher levels add gates and never remove lower-level gates. Sub-level assays enforce distinct evidence within the L1–L4 band.</text>
 </svg>
