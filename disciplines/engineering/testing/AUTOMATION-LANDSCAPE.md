@@ -26,24 +26,27 @@ learning_level: reference
 
 Every test automation framework fits into one of four tiers, aligned with the layers of the modern test pyramid in [`APPROACHES.md`](APPROACHES.md) §3.
 
-```
-┌──────────────────────────────────────────────────────────────┐
-│  4. AI-augmented testing                                      │
-│     Tools that use AI to generate, maintain, or execute tests │
-│     Playwright Agents · Mabl · testRigor · Katalon · Applitools│
-├──────────────────────────────────────────────────────────────┤
-│  3. E2E / UI frameworks                                       │
-│     Automate browser or mobile UI for system-level testing    │
-│     Playwright · Cypress · Selenium · Espresso · Appium       │
-├──────────────────────────────────────────────────────────────┤
-│  2. API / contract frameworks                                 │
-│     Validate inter-service communication and API behavior     │
-│     Pact · REST Assured · Postman/Newman · Karate · Supertest │
-├──────────────────────────────────────────────────────────────┤
-│  1. Unit / component frameworks                               │
-│     Test isolated functions, classes, and components           │
-│     JUnit · pytest · Jest · XCTest · go test · Vitest         │
-└──────────────────────────────────────────────────────────────┘
+```blueprint-diagram
+src: testing-automation-four-tier.svg
+alt: Four-tier test automation framework taxonomy aligned with the modern test pyramid
+fallback_ascii: |
+  ┌──────────────────────────────────────────────────────────────┐
+  │  4. AI-augmented testing                                      │
+  │     Tools that use AI to generate, maintain, or execute tests │
+  │     Playwright Agents · Mabl · testRigor · Katalon · Applitools│
+  ├──────────────────────────────────────────────────────────────┤
+  │  3. E2E / UI frameworks                                       │
+  │     Automate browser or mobile UI for system-level testing    │
+  │     Playwright · Cypress · Selenium · Espresso · Appium       │
+  ├──────────────────────────────────────────────────────────────┤
+  │  2. API / contract frameworks                                 │
+  │     Validate inter-service communication and API behavior     │
+  │     Pact · REST Assured · Postman/Newman · Karate · Supertest │
+  ├──────────────────────────────────────────────────────────────┤
+  │  1. Unit / component frameworks                               │
+  │     Test isolated functions, classes, and components           │
+  │     JUnit · pytest · Jest · XCTest · go test · Vitest         │
+  └──────────────────────────────────────────────────────────────┘
 ```
 
 | Tier | What it tests | Key characteristic |

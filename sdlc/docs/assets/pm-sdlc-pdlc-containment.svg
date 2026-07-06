@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img" aria-labelledby="title desc">
+  <title id="title">PDLC, PM, and SDLC nesting model</title>
+  <desc id="desc">Product development lifecycle wraps project management, which wraps the software development lifecycle.</desc>
+  <text x="320" y="22" text-anchor="middle" font-family="system-ui, Segoe UI, sans-serif" font-weight="700" font-size="13" fill="#06B6D4">Nesting: PDLC ’ PM ’ SDLC</text>
+  <g font-family="system-ui, sans-serif" font-size="10">
+    <rect x="20" y="36" width="600" height="300" rx="8" fill="#1e293b" stroke="#F59E0B" stroke-width="2"/>
+    <text x="36" y="56" fill="#F59E0B" font-weight="700" font-size="11">PDLC</text>
+    <text x="36" y="70" fill="#94a3b8">P1 Discover ’ P6 Mature/Sunset</text>
+    <rect x="48" y="84" width="544" height="200" rx="6" fill="#1e3a5f" stroke="#06B6D4"/>
+    <text x="64" y="104" fill="#06B6D4" font-weight="700" font-size="11">PM</text>
+    <text x="64" y="118" fill="#cbd5e1">Initiate ’ Plan ’ Execute ’ Monitor ’ Close</text>
+    <rect x="76" y="132" width="488" height="136" rx="6" fill="#0f172a" stroke="#64748b"/>
+    <text x="92" y="152" fill="#e2e8f0" font-weight="700" font-size="11">SDLC</text>
+    <text x="92" y="168" fill="#94a3b8">A Discover ’ B Specify ’ C Design ’</text>
+    <text x="92" y="182" fill="#94a3b8">D Build ’ E Verify ’ F Release</text>
+  </g>
+</svg>

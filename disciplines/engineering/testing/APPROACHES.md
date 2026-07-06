@@ -59,7 +59,10 @@ Test types describe **what quality characteristic** is being tested, independent
 
 The classic test pyramid (unit → integration → E2E) has evolved to reflect modern architectures and tooling. The modern version adds static analysis at the base and contract/API tests as a distinct layer.
 
-```
+```blueprint-diagram
+src: testing-test-pyramid.svg
+alt: Modern test pyramid from static analysis through unit, API contract, and E2E layers
+fallback_ascii: |
                     ╱╲
                    ╱  ╲
                   ╱ E2E╲          Few — slow, expensive, high confidence

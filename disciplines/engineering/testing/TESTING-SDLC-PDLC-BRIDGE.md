@@ -176,7 +176,10 @@ alt: Diagram
 
 ### The test pyramid as calibration tool
 
-```
+```blueprint-diagram
+src: testing-test-pyramid.svg
+alt: Modern test pyramid for risk-based test investment
+fallback_ascii: |
                     ╱╲
                    ╱  ╲
                   ╱ E2E╲          Few — slow, expensive, high confidence

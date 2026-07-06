@@ -77,7 +77,10 @@ learning_level: reference
      Examples: ease-of-use vs depth, price vs specialization, self-serve vs enterprise.
      Include a visual (ASCII, diagram-as-code, or image reference). -->
 
-```
+```blueprint-diagram
+key: quadrant
+alt: Competitive positioning quadrant sketch
+fallback_ascii: |
           High [Axis Y]
                │
                │    Competitor B

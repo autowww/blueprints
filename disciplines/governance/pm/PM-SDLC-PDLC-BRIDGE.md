@@ -78,21 +78,24 @@ alt: Diagram
 
 The default relationship is **nesting**: PDLC wraps PM wraps SDLC.
 
-```
-┌─────────────────────────────────────────────────────────┐
-│  PDLC: Product Development Life Cycle                   │
-│  P1 Discover → P2 Validate → P3 Plan & Commit             │
-│  ┌───────────────────────────────────────────────────┐  │
-│  │  PM: Project Management                           │  │
-│  │  Initiate → Plan → Execute → Monitor → Close      │  │
-│  │  ┌─────────────────────────────────────────────┐  │  │
-│  │  │  SDLC: Software Development Life Cycle      │  │  │
-│  │  │  A Discover → B Specify → C Design →        │  │  │
-│  │  │  D Build → E Verify → F Release             │  │  │
-│  │  └─────────────────────────────────────────────┘  │  │
-│  └───────────────────────────────────────────────────┘  │
-│  P4 Launch → P5 Grow → P6 Mature/Sunset                 │
-└─────────────────────────────────────────────────────────┘
+```blueprint-diagram
+src: pm-sdlc-pdlc-containment.svg
+alt: Nesting model — PDLC wraps PM wraps SDLC
+fallback_ascii: |
+  ┌─────────────────────────────────────────────────────────┐
+  │  PDLC: Product Development Life Cycle                   │
+  │  P1 Discover → P2 Validate → P3 Plan & Commit             │
+  │  ┌───────────────────────────────────────────────────┐  │
+  │  │  PM: Project Management                           │  │
+  │  │  Initiate → Plan → Execute → Monitor → Close      │  │
+  │  │  ┌─────────────────────────────────────────────┐  │  │
+  │  │  │  SDLC: Software Development Life Cycle      │  │  │
+  │  │  │  A Discover → B Specify → C Design →        │  │  │
+  │  │  │  D Build → E Verify → F Release             │  │  │
+  │  │  └─────────────────────────────────────────────┘  │  │
+  │  └───────────────────────────────────────────────────┘  │
+  │  P4 Launch → P5 Grow → P6 Mature/Sunset                 │
+  └─────────────────────────────────────────────────────────┘
 ```
 
 ### When layers collapse

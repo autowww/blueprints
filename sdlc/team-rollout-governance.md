@@ -37,10 +37,11 @@ Whenever more than a one-off email is needed to keep adoption healthy.
 
 ### Rollout wave (sketch)
 
-```blueprint-diagram-ascii
+```blueprint-diagram
 key: roadmap
 alt: Pilot one anchor, expand with office hours, then standardize on golden SHA
 expand: true
+fallback_ascii: |
   Week 0–2        Week 3–6         Steady state
  [ Pilot ]  -->  [ Expand ]  -->  [ Standardize ]
    one repo      more repos       golden SHA + rituals
