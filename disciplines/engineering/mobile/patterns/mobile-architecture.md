@@ -37,7 +37,32 @@ Mobile apps benefit from architectures that isolate **UI** from **domain rules**
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: MVVM data flow
+title: MVVM View–ViewModel flow
+summary: How the View observes ViewModel state and commands while a review lane keeps UI logic testable and bounded.
+node: MVVM data flow
+detail: Entry framing View, ViewModel, and Model roles from the comparison table.
+more: View observes ViewModel; ViewModel exposes state and commands while domain rules stay outside the UI layer.
+node: Lane A
+detail: Primary path from user intent through ViewModel to updated UI state.
+more: View forwards events to ViewModel; ViewModel fetches or transforms data via Model abstractions without platform UI types.
+node: handoff
+detail: State and commands cross the View–ViewModel boundary through observable contracts.
+more: Data binding, publishers, or reactive streams keep the View declarative while ViewModel owns presentation logic.
+node: shared outcome
+detail: Rendered UI reflects current state with predictable, unit-testable updates.
+node: Lane B
+detail: Parallel lane inspecting whether presentation logic stays in ViewModel.
+node: inspect / adapt
+detail: Detect massive controllers, god ViewModels, or leaked networking in UI.
+more: Anti-patterns on this page—massive View Controller, god ViewModel—signal when boundaries need tightening before merge.
+node: feedback
+detail: Refined contracts and slimmer ViewModels feed back into the architecture.
+fallback_ascii: |
+  MVVM data flow
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
 ```
 
 ---
@@ -48,7 +73,32 @@ Dependencies point **inward**: outer layers depend on inner abstractions, never 
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Clean Architecture: layers and dependency rule
+title: Clean Architecture dependency rule
+summary: How presentation and data layers depend inward on domain use cases without reversing the dependency direction.
+node: Clean Architecture: layers and dependency rule
+detail: Entry framing Presentation, Domain, and Data layers from the comparison table.
+more: Dependencies point inward: outer layers depend on inner abstractions, never the reverse.
+node: Lane A
+detail: Primary path from UI through use cases to repositories and entities.
+more: Presentation calls domain use cases; use cases orchestrate repositories while entities hold core business rules.
+node: handoff
+detail: Layer boundaries exchange data through interfaces, not concrete platform types.
+more: DTO mapping and repository facades keep transport and persistence details outside domain logic.
+node: shared outcome
+detail: Testable domain isolated from UI lifecycles and data-source specifics.
+node: Lane B
+detail: Parallel lane verifying dependency direction as features grow.
+node: inspect / adapt
+detail: Detect platform coupling, skipped use cases, or repositories leaking into UI.
+more: Anti-patterns—tight platform coupling in domain, no separation of concerns—surface when inner layers import outer ones.
+node: feedback
+detail: Adjusted module boundaries and ports feed back into layer design.
+fallback_ascii: |
+  Clean Architecture: layers and dependency rule
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
 ```
 
 ---
@@ -89,7 +139,30 @@ Prefer **constructor injection** at feature boundaries; use containers for app-w
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Modularization strategies
+title: Mobile modularization lifecycle
+summary: How teams choose feature, layer, or dynamic modules and align public APIs before scaling delivery.
+node: Modularization strategies
+detail: Entry to feature slices, layer libraries, and on-demand delivery options above.
+more: Feature modules isolate vertical slices; layer modules enforce domain, data, and ui boundaries; dynamic modules defer optional APK content.
+node: Start
+detail: Assess team scale, APK size, and boundary enforcement needs before splitting.
+more: Feature modules suit scaling teams and flags; layer modules enforce Clean boundaries; Play Feature Delivery addresses large optional features.
+node: Core steps (see walkthrough below)
+detail: Define module public APIs, dependency direction, and build graph wiring.
+more: Vertical slices expose narrow interfaces; layer libraries prevent UI from reaching data sources directly across module edges.
+node: Outcome
+detail: Reviewable modules that scale teams without unbounded coupling across features.
+fallback_ascii: |
+  Modularization strategies
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ---

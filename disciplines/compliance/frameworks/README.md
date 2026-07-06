@@ -23,7 +23,37 @@ Compliance frameworks are **guardrails for digital products**: they turn statute
 
 ```blueprint-diagram
 key: decision
-alt: Diagram
+alt: Why these frameworks matter
+title: Framework applicability gate
+summary: How teams decide whether a compliance regime applies before opening a framework guide.
+node: Why these frameworks matter
+detail: Frames compliance as obligation-driven guardrails, not only threat models.
+more: Statutes and industry rules become testable expectations for what to build, log, contract for, and prove.
+node: Current state
+detail: Captures product context—users, data types, markets, and sector.
+more: Inventory geographic footprint, personal data flows, cardholder environments, PHI handling, and accessibility commitments before gating.
+node: Checkpoint / gate
+detail: Tests whether a named regime clearly applies to this product.
+more: Match obligation patterns against current-state evidence using this index and COMPLIANCE.md cross-references.
+node: refine or escalate
+detail: Loops when applicability is unclear or supporting evidence is incomplete.
+more: Narrow scope with counsel, refresh DPIAs or assessments, or document why a regime is out of scope.
+node: Continue flow
+detail: Proceeds with the matched framework guide and typical engineering responses.
+more: Open the linked guide for control themes, evidence expectations, and common pitfalls in a project-agnostic way.
+fallback_ascii: |
+  Why these frameworks matter
+
+  Current state
+      |
+      v
+  Checkpoint / gate
+      |
+      +-- no ──► refine or escalate
+      |
+     yes
+      v
+  Continue flow
 ```
 
 ---

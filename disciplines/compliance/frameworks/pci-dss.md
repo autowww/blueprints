@@ -51,7 +51,31 @@ learning_level: reference
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: The 12 PCI-DSS requirements (v4.0 grouping)
+title: PCI DSS v4 requirement groups
+summary: How the twelve grouped requirements move from CDE scoping to sustained, assessable compliance.
+node: The 12 PCI-DSS requirements (v4.0 grouping)
+detail: The v4 grouping clusters network, data, access, and governance controls.
+more: Requirements 1 through 12 span firewalls and hardening through organizational policies; the table above lists each group and key technical notes.
+node: Start
+detail: Begin by defining CDE scope and the cardholder data you handle.
+more: Scope includes PAN, connected systems, and people or technology that store, process, or transmit cardholder data.
+node: Core steps (see walkthrough below)
+detail: Implement, assess, and maintain controls mapped to your SAQ or ROC path.
+more: Covers encryption, segmentation, logging, ASV scans, penetration tests, and policies referenced in sections below.
+node: Outcome
+detail: Continuous compliance with evidence suitable for acquirer or QSA review.
+more: Compliance is not a one-time checkbox; change control, scanning, and monitoring continue year-round.
+fallback_ascii: |
+  The 12 PCI-DSS requirements (v4.0 grouping)
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ---
@@ -144,7 +168,37 @@ alt: Diagram
 
 ```blueprint-diagram
 key: decision
-alt: Diagram
+alt: Common scope reduction strategies
+title: PCI scope reduction decision
+summary: How teams assess current exposure, gate changes, and proceed or escalate when scope cannot shrink.
+node: Common scope reduction strategies
+detail: Entry to patterns that shrink CDE footprint before control implementation.
+more: Listed strategies include outsourcing capture, avoiding PAN storage, tokenization, and aggressive segmentation.
+node: Current state
+detail: Map where PAN flows, what you store, and which systems touch the CDE.
+more: Flat networks and PAN in logs or support tools are common anti-patterns that expand scope.
+node: Checkpoint / gate
+detail: Verify the reduction pattern removes PAN from your environment or isolates the CDE.
+more: Confirm integrations, webhooks, and hosted fields so your servers never see or retain PAN.
+node: refine or escalate
+detail: Rework the pattern or engage security and acquirer guidance when the gate fails.
+more: Partial outsourcing or residual connected systems may require a broader SAQ such as A-EP or D.
+node: Continue flow
+detail: Proceed with segmented architecture and ongoing assessment obligations.
+more: Reduced scope still requires quarterly ASV scans, logging, and SAQ or QSA evidence as applicable.
+fallback_ascii: |
+  Common scope reduction strategies
+
+  Current state
+      |
+      v
+  Checkpoint / gate
+      |
+      +-- no ──► refine or escalate
+      |
+     yes
+      v
+  Continue flow
 ```
 
 ---

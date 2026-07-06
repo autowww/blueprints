@@ -65,7 +65,35 @@ Each discipline has a **bridge document** (`*-SDLC-PDLC-BRIDGE.md`) that maps it
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Relationship to lifecycles
+title: Discipline–lifecycle relationship
+summary: Disciplines supply cross-cutting expertise at lifecycle handoffs and feedback loops, not as a separate sequence.
+node: Relationship to lifecycles
+detail: Frames how competency domains align with phased delivery work.
+more: Lifecycles answer when work happens; disciplines answer how each competency is practiced across those phases.
+node: Lane A
+detail: A delivery-oriented thread through phased lifecycle work.
+more: Represents the path where discipline practices attach at explicit transitions rather than replacing SDLC or PDLC structure.
+node: handoff
+detail: A governed transfer of work or responsibility between phases.
+more: Bridge documents map what each discipline contributes when work crosses SDLC A–F or PDLC P1–P6 boundaries.
+node: shared outcome
+detail: The cross-phase result both lifecycles pursue together.
+more: Discipline expertise supports the same product and delivery goals without forcing disciplines into a fixed order.
+node: Lane B
+detail: A parallel thread focused on inspection and adaptation.
+more: Complements handoff-oriented delivery by emphasizing reviewable evidence and course correction as phases progress.
+node: inspect / adapt
+detail: Review outcomes against intent and adjust plans or scope.
+more: Teams draw on discipline knowledge when validating fit, quality, or risk before committing to the next phase.
+node: feedback
+detail: Returns learning to earlier lifecycle decisions.
+more: Because disciplines are not sequential, their input can refine discovery, delivery, or governance without restarting the lifecycle.
+fallback_ascii: |
+  Relationship to lifecycles
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
 ```
 
 ## Adopt in your repo

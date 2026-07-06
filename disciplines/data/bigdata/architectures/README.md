@@ -17,7 +17,36 @@ learning_level: reference
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Process flow
+title: Architecture pattern selection flow
+summary: How teams move from data-strategy constraints to a documented reference architecture choice from this catalog.
+node: Process flow
+detail: Frames the path from constraints to a reviewable architecture decision.
+more: Patterns here are reference models; concrete systems often blend ideas such as lakehouse storage with mesh-style ownership.
+node: Start
+detail: Clarify latency, volume, team structure, and analytics use cases.
+more: Selection depends on these factors plus operational maturity before comparing rows in the table below.
+node: Core steps (see walkthrough below)
+detail: Review each pattern's core idea, trade-offs, and linked deep guides.
+more: Use linked guides for comparison matrices, decision flowcharts, technology mapping, and anti-patterns beyond one-line summaries.
+node: Outcome
+detail: A bounded architecture choice captured for the project.
+more: Record project-specific decisions in docs/adr/ and pipeline documentation in docs/development/, not in this catalog.
+node: Note: operating model
+detail: Some patterns govern ownership and federation, not storage technology alone.
+more: Data mesh is primarily an operating model that can sit on lakehouse or warehouse technology; it is not a strict successor to either.
+fallback_ascii: |
+  Process flow
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: operating model
 ```
 
 Mesh is not a strict successor to lakehouse — it is primarily an **operating model** that can sit on top of lakehouse or warehouse technology.

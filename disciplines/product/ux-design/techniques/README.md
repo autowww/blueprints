@@ -19,7 +19,28 @@ learning_level: reference
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Design phases and techniques
+title: UX technique walkthrough
+summary: How teams select technique guides, execute evidence-based methods, and produce reviewable outcomes that reduce design uncertainty.
+node: Start
+detail: Frame the UX uncertainty your team needs to address.
+more: Match generative vs evaluative and attitudinal vs behavioral methods to the question before choosing a guide from this index.
+node: Core steps (see walkthrough below)
+detail: Work through the linked deep guides for your chosen technique.
+more: Discovery and evaluation live in user-research.md; behavior and patterns in interaction-design.md, with wider framing in UX-DESIGN.md.
+node: Outcome
+detail: Capture synthesis and criteria that would change your mind.
+more: Pair findings with project artifacts in docs/design/research/ so decisions stay traceable across SDLC and PDLC work.
+fallback_ascii: |
+  Design phases and techniques
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ---

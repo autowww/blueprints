@@ -15,7 +15,39 @@ learning_level: reference
 
 ```blueprint-diagram
 key: decision
-alt: Diagram
+alt: Process flow
+title: Pattern adoption gate
+summary: How teams assess current architecture against a checkpoint before adopting or refining a pattern choice.
+node: Current state
+detail: Captures today's deployment shape, coupling, and operational maturity.
+more: Names the pattern in use or under consideration so trade-offs compare against a concrete baseline, not platform labels alone.
+node: Checkpoint / gate
+detail: Tests the candidate pattern against quality attributes and team readiness.
+more: Quality-attribute trade-offs live in SOFTWARE-ARCHITECTURE.md; exceptions and the final choice belong in ADRs.
+node: refine or escalate
+detail: Returns to refinement or raises the decision when the gate does not clear.
+more: Failed gates often signal immature ops, mismatched scaling axes, or hidden coupling—the pattern table helps compare alternatives.
+node: Continue flow
+detail: Proceeds with the chosen pattern once the gate clears.
+more: Record the architecture choice and bounded exceptions in docs/adr/ so future changes stay traceable.
+node: Note: Monolith
+detail: Illustrates monolith as a common starting point in migration paths.
+more: Many systems begin monolithic; paths to modular monolith or microservices are documented on this page.
+fallback_ascii: |
+  Process flow
+
+  Current state
+      |
+      v
+  Checkpoint / gate
+      |
+      +-- no ──► refine or escalate
+      |
+     yes
+      v
+  Continue flow
+
+  Note: Monolith
 ```
 
 Each pattern's quality-attribute trade-offs are analyzed in [SOFTWARE-ARCHITECTURE.md §1](../SOFTWARE-ARCHITECTURE.md#1-quality-attributes). Record your architecture choice and exceptions as [ADRs](../SOFTWARE-ARCHITECTURE.md#3-architecture-decision-records-adrs).

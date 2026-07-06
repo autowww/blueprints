@@ -17,7 +17,30 @@ learning_level: reference
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Paradigm relationships (mental model)
+title: Paradigm relationships mental model
+summary: How teams choose object-, function-, or stream-shaped structure before frameworks, then compose paradigms deliberately in production.
+node: Start
+detail: Begin with whether the problem is object-, function-, or stream-shaped.
+more: Paradigm literacy precedes framework choice; the index below maps strengths to problem domains.
+node: Core steps (see walkthrough below)
+detail: Read the OOP, Functional, and Reactive guides linked below.
+more: Each guide covers encapsulation, purity, or async composition; arrows suggest teaching lineage, not hard dependencies between paradigms.
+node: Outcome
+detail: Apply deliberate multi-paradigm layering rather than pursuing purity.
+more: Production systems often combine FP cores, OO boundaries, and reactive IO at integration edges.
+fallback_ascii: |
+  Paradigm relationships (mental model)
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: FP cores
 ```
 
 Teams often layer **FP cores**, **OO boundaries**, and **reactive IO**; arrows suggest common teaching lineage, not hard dependencies.

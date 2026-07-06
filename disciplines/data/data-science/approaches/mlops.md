@@ -19,7 +19,31 @@ MLOps bridges **data science** (experimentation, uncertainty) and **software eng
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Overview
+title: MLOps lifecycle overview
+summary: How MLOps bridges experimentation with reproducible, deployable, observable model operations.
+node: Overview
+detail: Frames MLOps as the discipline connecting data science and production engineering.
+more: MLOps formalizes pipelines, ownership, and automation so models survive beyond initial training.
+node: Start
+detail: Begin from a trained model or experiment that needs a production path.
+more: A model is not done until it can be versioned, served under SLAs, monitored, and updated.
+node: Core steps (see walkthrough below)
+detail: Apply pipelines for training, registry, serving, monitoring, and governed updates.
+more: Later sections cover maturity levels, feature stores, experiment tracking, serving, CI/CD, and testing.
+node: Outcome
+detail: Achieve reproducible, deployable, observable, maintainable ML systems.
+more: Formalized ownership and automation replace ad hoc notebook handoffs and manual production copies.
+fallback_ascii: |
+  Overview
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ---
@@ -87,14 +111,64 @@ alt: Diagram
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Model serving patterns
+title: Online model serving flow
+summary: How a real-time inference request passes through serving infrastructure to a scored response.
+node: Model serving patterns
+detail: Selects online inference for low-latency, request-response scoring.
+more: Online serving uses REST or gRPC APIs behind load balancers for user-facing and real-time decisions.
+node: Start
+detail: An inference request arrives with features available at prediction time.
+more: Features must match training-time definitions to avoid train-serve skew and leakage.
+node: Core steps (see walkthrough below)
+detail: Route the request through serving, feature lookup, and model execution.
+more: Serving platforms include TorchServe, TensorFlow Serving, Ray Serve, and cloud-managed endpoints.
+node: Outcome
+detail: Return a scored prediction within serving latency expectations.
+more: Online inference suits applications and decisions that cannot wait for batch scoring windows.
+fallback_ascii: |
+  Model serving patterns
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: Batch scoring (conceptual):
 ```
 
 **Batch scoring (conceptual):**
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Model serving patterns
+title: Batch model scoring flow
+summary: How scheduled or triggered jobs score large volumes for downstream analytics and ETL.
+node: Model serving patterns
+detail: Selects batch inference for high-volume, schedule-driven scoring.
+more: Batch scoring fits reporting, nightly scores, and pipelines that consume model outputs downstream.
+node: Start
+detail: A batch job or schedule trigger initiates scoring over a dataset.
+more: Large volumes are processed on a schedule or when upstream data lands.
+node: Core steps (see walkthrough below)
+detail: Run batch inference across records with consistent offline feature definitions.
+more: Batch paths tolerate higher latency while maintaining point-in-time alignment with training features.
+node: Outcome
+detail: Deliver scored outputs for reports, analytics, or downstream ETL.
+more: Batch inference does not require millisecond response times behind a live request API.
+fallback_ascii: |
+  Model serving patterns
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ---
@@ -103,7 +177,31 @@ alt: Diagram
 
 ```blueprint-diagram
 key: sequence
-alt: Diagram
+alt: CI/CD for ML (sequence)
+title: ML CI/CD promotion sequence
+summary: How a trigger moves ML artifacts through governed automation to a production handoff.
+node: CI/CD for ML (sequence)
+detail: Frames continuous integration and delivery practices for ML systems.
+more: Maturity level 2 adds tests on data and code with gated promotions and environments as code.
+node: Actor / trigger
+detail: A code push, data change, or schedule starts the ML pipeline.
+more: Triggers include commits, scheduled retrains, or policy-driven responses at higher maturity levels.
+node: System step
+detail: CI runs unit tests, data checks, and pipeline validation before promotion.
+more: Data tests catch schema drift and bad batches; model tests enforce accuracy floors and fairness constraints.
+node: Outcome / handoff
+detail: Approved artifacts promote to staging or production with review gates.
+more: Gated CD deploys to staging and production with approvals, extending DevOps change management to models.
+fallback_ascii: |
+  CI/CD for ML (sequence)
+
+  Actor / trigger
+      |
+      v
+  System step
+      |
+      v
+  Outcome / handoff
 ```
 
 ---

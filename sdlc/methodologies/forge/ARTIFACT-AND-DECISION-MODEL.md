@@ -3,6 +3,14 @@ public_publish: true
 audience: public
 handbook_area: blueprints
 learning_level: reference
+content_id: forge.docs.blueprints.forge.artifact-and-decision-model
+canonical_owner: blueprints
+primary_persona: architect
+reader_stage: adopt
+maturity: defined
+evidence_level: canonical_doc
+refresh_policy: on_claim_change
+last_reviewed: '2026-07-03'
 ---
 
 # Forge — artifact and decision model
@@ -233,3 +241,23 @@ Start from [`../../templates/forge/assay-gate.template.md`](../../templates/forg
 | Daily artifacts | [`daily/README.md`](daily/README.md) |
 | Product Spark / planning | [`planning/README.md`](planning/README.md) |
 | PDLC / SDLC bridge | [`FORGE-SDLC-PDLC-BRIDGE.md`](FORGE-SDLC-PDLC-BRIDGE.md) |
+
+## Executive capsule
+
+**Purpose:** Define how **artifacts** (inputs/outputs) and **decisions** attach to Forge’s **locked canon**—lifecycle model ([`FORGE-SDLC-PDLC-BRIDGE.md`](FORGE-SDLC-PDLC-BRIDGE.md), [`../../../pdlc/PDLC.md`](../../../pdlc/PDLC.md), [`../../SDLC.md`](../../SDLC.md)), **meeting model** ([`meetings-model.md`](meetings-mo Maturity: **defined**.
+
+## Who this is for
+
+Architects at the **adopt** stage. Skim the executive capsule first; agents should respect the page frontmatter contract.
+
+## Trust boundary
+
+Forge keeps humans in charge of promotion, approval, and release decisions; automation proposes and executes only within approved boundaries described here.
+
+## How to use this page
+
+Read top-to-bottom at your depth: capsule for the decision, mechanism for design, links below for the next step in your journey.
+
+## How it fits the Forge ecosystem
+
+This page belongs to its owning repo's canonical documentation and links outward to the related Forge surfaces (methodology in Blueprints, product docs in each product handbook, adoption narrative on forgesdlc.com). Follow the related links to stay on the governed path.

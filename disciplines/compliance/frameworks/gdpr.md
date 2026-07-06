@@ -50,7 +50,37 @@ The GDPR governs **processing of personal data** relating to individuals in the 
 
 ```blueprint-diagram
 key: decision
-alt: Diagram
+alt: Lawful bases (Art. 6)
+title: Lawful basis selection gate
+summary: How teams validate an Art. 6 basis and documentation before personal data processing proceeds.
+node: Lawful bases (Art. 6)
+detail: The proposed processing is framed against GDPR Article 6 grounds.
+more: Each distinct purpose needs its own basis; consent, contract, and legitimate interests carry different evidence and withdrawal rules on this page.
+node: Current state
+detail: Capture purpose, data categories, and the processing context under review.
+more: Aligns with the lawful-bases table: identify necessity, documentation needs, and whether withdrawal applies.
+node: Checkpoint / gate
+detail: Test whether one Art. 6 basis clearly and lawfully fits the described processing.
+more: Legitimate interests require a documented balancing test; consent is not a default when another basis suffices.
+node: refine or escalate
+detail: Stop when no basis fits; narrow scope or involve qualified counsel.
+more: Undocumented processing should not proceed; this page flags blanket legitimate-interest claims without a recorded LIA.
+node: Continue flow
+detail: Record the chosen basis and required evidence before engineering implementation.
+more: Proceed with rights, retention, and transfer controls traceable in ROPA and DPIA artifacts.
+fallback_ascii: |
+  Lawful bases (Art. 6)
+
+  Current state
+      |
+      v
+  Checkpoint / gate
+      |
+      +-- no ──► refine or escalate
+      |
+     yes
+      v
+  Continue flow
 ```
 
 ---
@@ -81,7 +111,31 @@ alt: Diagram
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Technical implementation themes
+title: Consent management flow
+summary: How granular consent is captured, recorded, and withdrawn across product systems and processors.
+node: Technical implementation themes
+detail: Consent handling sits within broader privacy-by-design engineering obligations.
+more: This section groups consent with minimization, pseudonymization, and encryption as technical themes supporting GDPR accountability.
+node: Start
+detail: The user encounters a granular, purpose-specific consent choice.
+more: Consent must be freely given, specific, informed, and unambiguous per the lawful-bases table above.
+node: Core steps (see walkthrough below)
+detail: Record consent metadata and wire withdrawal paths to tags, SDKs, and vendors.
+more: Capture who consented, when, and which notice version applied; propagate withdrawal to downstream processors under Art. 28 contracts.
+node: Outcome
+detail: Traceable consent records support accountability and data-subject rights requests.
+more: Withdrawal must be as easy as opt-in; stop processing that relied solely on consent after withdrawal without affecting prior lawfulness.
+fallback_ascii: |
+  Technical implementation themes
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ---

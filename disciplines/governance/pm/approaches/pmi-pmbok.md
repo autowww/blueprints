@@ -60,7 +60,33 @@ Performance domains are **areas of focus** that interact and operate throughout 
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Core structure — PMBOK 7th edition
+title: PMBOK 7th edition performance domains
+summary: How eight interacting performance domains govern project focus from start through outcomes across any delivery approach.
+node: Start
+detail: The project opens with context assessment and explicit tailoring.
+more: Principle seven requires adapting the PM approach to unique constraints before domain work intensifies across the life cycle.
+node: Core steps (see walkthrough below)
+detail: Eight performance domains frame continuous focus areas throughout delivery.
+more: Stakeholders, Team, Development Approach, Planning, Project Work, Delivery, Measurement, and Uncertainty interact rather than run as fixed sequential phases.
+node: Outcome
+detail: Outputs and organizational change align with stakeholder value expectations.
+more: Delivery and Measurement domains validate scope and quality before handoff; outcomes include adoption, not only technical deliverables.
+node: Note: Stakeholders
+detail: Stakeholder engagement spans every domain, not only project initiation.
+more: Identification, analysis, engagement strategies, and satisfaction measurement persist from start through close per the Stakeholders performance domain.
+fallback_ascii: |
+  Core structure — PMBOK 7th edition
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: Stakeholders
 ```
 
 | Domain | Focus | Key activities |

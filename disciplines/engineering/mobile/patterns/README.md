@@ -15,7 +15,35 @@ Mobile patterns sit at the intersection of **threading and lifecycle** (main-thr
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Process flow
+title: Mobile pattern stack flow
+summary: How architecture, navigation, data contracts, and offline patterns compose as a bounded, reviewable stack.
+node: Process flow
+detail: The entry point for composing mobile pattern layers on this topic.
+more: Patterns stack rather than mix; architecture is chosen first, then navigation, data boundaries, and offline behavior align around it.
+node: Lane A
+detail: Establishes the primary pattern layer, typically application architecture.
+more: Choose MVC, Clean, MVVM, or TCA first so later layers inherit stable boundaries and dependency direction.
+node: handoff
+detail: Passes explicit contracts to the adjacent pattern layer.
+more: Navigation graphs, API shapes, and sync queues hand off through defined interfaces so concerns do not leak across layers.
+node: shared outcome
+detail: Delivers composed mobile behavior with aligned cross-layer contracts.
+more: Threading, deep links, restoration, and offline queues should interoperate without each layer reaching into another's internals.
+node: Lane B
+detail: Runs a parallel layer that inspects platform-specific constraints.
+more: Covers navigation, data sync, or offline behavior depending on which stack slice is active after architecture is set.
+node: inspect / adapt
+detail: Reviews lifecycle, threading, and navigation fit against the chosen stack.
+more: Main-thread UI rules, process death, and deep-link resolution surface here before patterns are treated as settled.
+node: feedback
+detail: Returns bounded adjustments to upstream pattern choices.
+more: When inspection reveals coupling or restoration gaps, feedback loops revise contracts before the next delivery increment.
+fallback_ascii: |
+  Process flow
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
 ```
 
 ## Pattern guides

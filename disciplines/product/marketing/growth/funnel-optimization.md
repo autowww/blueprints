@@ -23,14 +23,58 @@ learning_level: reference
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: AARRR funnel with conversion rates
+title: AARRR funnel conversion rates
+summary: Maps pirate-metrics stages and the conversion rates between them for prioritized growth work.
+node: Start
+detail: Entry at total addressable users or visitors entering the funnel top.
+more: Baseline volume sets denominators for stage-to-stage rates; segment by channel and cohort before comparing experiments.
+node: Core steps (see walkthrough below)
+detail: Progress through Acquisition, Activation, Retention, Revenue, and Referral.
+more: Each stage has owned metrics and KPIs in the table above; conversion between stages exposes where the funnel leaks.
+node: Outcome
+detail: Measurable end state such as retained revenue or successful referral.
+more: Outcomes tie back to guardrails so wins on one stage do not damage trust, compliance, or operational load.
+fallback_ascii: |
+  AARRR funnel with conversion rates
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ## Growth process cycle
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Growth process cycle
+title: Growth experiment cycle
+summary: Turns funnel insights into ranked, falsifiable experiments with documented learning.
+node: Start
+detail: A funnel insight, hypothesis, or ranked backlog idea enters the cycle.
+more: ICE or RICE scoring keeps the backlog comparable week to week so teams prioritize by impact, confidence, and ease.
+node: Core steps (see walkthrough below)
+detail: Design, launch, and measure a bounded experiment against pre-registered metrics.
+more: Primary metrics and guardrails are set before launch; null results still get written up to avoid duplicate work.
+node: Outcome
+detail: A decision to ship, iterate, or stop based on measured results.
+more: Each cycle closes with hypothesis, design, result, and decision recorded for traceable team learning.
+fallback_ascii: |
+  Growth process cycle
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: ICE / RICE:
 ```
 
 - **ICE / RICE:** Score ideas on Impact, Confidence, Ease (ICE) or add Reach for RICE — use consistently so the backlog is comparable week to week.
@@ -69,7 +113,28 @@ Without guardrails, teams often “win” experiments that damage trust, complia
 
 ```blueprint-diagram
 key: sequence
-alt: Diagram
+alt: Activation sequence (conceptual)
+title: Activation journey sequence
+summary: How a user trigger moves through product steps to first meaningful value.
+node: Actor / trigger
+detail: The user or event that begins onboarding toward activation.
+more: Signup, install, or return visit; time-to-value metrics start from this trigger.
+node: System step
+detail: Product onboarding actions that remove friction before the aha moment.
+more: Checklists, templates, guided setup, and smart defaults surface only what is needed for the first win.
+node: Outcome / handoff
+detail: The user reaches the defined activation event within the target window.
+more: Mutually exclusive stage rules, such as completing event X within Y hours of signup, make activation measurable and reviewable.
+fallback_ascii: |
+  Activation sequence (conceptual)
+
+  Actor / trigger
+      |
+      v
+  System step
+      |
+      v
+  Outcome / handoff
 ```
 
 ## Retention optimization

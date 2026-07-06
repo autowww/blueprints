@@ -36,7 +36,30 @@ Calibrate SLAs and **regulatory triggers** (e.g., GDPR breach assessment) with c
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: NIST incident response lifecycle
+title: NIST incident response lifecycle
+summary: How organizations move from incident start through core handling steps to a bounded, reviewable outcome.
+node: Start
+detail: An event or signal triggers formal incident handling.
+more: Classification and severity tables on this page set response SLAs and escalation paths before core work begins.
+node: Core steps (see walkthrough below)
+detail: Teams execute detection, containment, eradication, and recovery in governed sequence.
+more: Roles, evidence preservation, and communication plans elsewhere on the page define who acts and what is recorded at each phase.
+node: Outcome
+detail: Harm is limited and normal operations or trust restoration proceed.
+more: Post-incident activity then feeds preparation through updated controls, training, and detection rules.
+fallback_ascii: |
+  NIST incident response lifecycle
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: Post-incident activity
 ```
 
 **Post-incident activity** feeds **preparation** through updated controls, training, and detection rules.
@@ -86,7 +109,28 @@ alt: Diagram
 
 ```blueprint-diagram
 key: sequence
-alt: Diagram
+alt: Critical incident response flow (sequence)
+title: Critical incident response flow
+summary: How a critical security event moves from trigger through coordinated response to a clear handoff.
+node: Actor / trigger
+detail: An alert, report, or confirmed compromise initiates the critical path.
+more: Critical incidents require IC engagement within minutes and executive, legal, and communications paths per the severity table.
+node: System step
+detail: Security and engineering execute containment, evidence preservation, and triage actions.
+more: IC allocates resources; analysts hunt IOCs; engineering isolates systems while preserving logs and chain of custody.
+node: Outcome / handoff
+detail: The incident reaches a bounded state or passes to the next accountable role.
+more: Communications updates stakeholders; recovery or eradication continues under IC objectives with traceable status.
+fallback_ascii: |
+  Critical incident response flow (sequence)
+
+  Actor / trigger
+      |
+      v
+  System step
+      |
+      v
+  Outcome / handoff
 ```
 
 ---

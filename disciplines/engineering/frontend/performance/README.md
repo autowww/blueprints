@@ -15,7 +15,30 @@ Performance is **user experience**: latency, stability, and loading behavior sha
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Process flow
+title: Frontend performance workflow
+summary: How teams move from framing performance as user experience to governed measurement, optimization, and traceable outcomes.
+node: Start
+detail: Frame performance as latency, stability, and loading behavior that shapes trust.
+more: Anchor work in project-agnostic fundamentals from FRONTEND.md before chasing local optimizations.
+node: Core steps (see walkthrough below)
+detail: Measure Core Web Vitals, diagnose bottlenecks, and apply targeted optimizations.
+more: Deep guides cover web-vitals.md for LCP, INP, CLS, budgets, and RUM; optimization-strategies.md for bundles, images, caching, and rendering.
+node: Outcome
+detail: Ship reviewable improvements with budgets and evidence kept outside this blueprint.
+more: Record project-specific budgets in docs/development and optimization decisions in docs/adr for traceable governance.
+fallback_ascii: |
+  Process flow
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: Core knowledge:
 ```
 
 **Core knowledge:** [`FRONTEND.md`](../FRONTEND.md) — web performance fundamentals, rendering strategies.

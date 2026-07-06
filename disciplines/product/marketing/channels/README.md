@@ -11,7 +11,35 @@ learning_level: reference
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Process flow
+title: Multi-channel marketing lanes
+summary: How complementary channel guides advance acquisition and retention while inspect-and-adapt loops keep mix and spend reviewable.
+node: Process flow
+detail: Frames how discipline-level channel guides coordinate across the marketing funnel.
+more: SEO, content, paid media, and social each have dedicated guides; this index maps how they fit together without campaign-specific runbooks.
+node: Lane A
+detail: Primary work stream from channel execution toward shared funnel outcomes.
+more: SEO and content marketing, plus paid and social guides, carry intent-aligned acquisition and consideration work defined at discipline level.
+node: handoff
+detail: Passes governed context between channels and lifecycle stages.
+more: Topic clusters, creative iterations, and platform mix decisions hand off measurable signals so no single surface owns the full customer journey.
+node: shared outcome
+detail: Observable marketing results all channels align on.
+more: Acquisition, consideration, and retention outcomes stay complementary so algorithm or budget shifts on one surface do not define the business.
+node: Lane B
+detail: Parallel stream for channel inspection and governed course correction.
+more: Paid and social iteration, organic performance shifts, and planned email or referral work feed adjustments before mix or spend drifts unchecked.
+node: inspect / adapt
+detail: Reviews channel signals and adjusts coverage or platform mix.
+more: Creative testing, technical SEO hygiene, and community feedback inform when to rebalance investment across surfaces with traceable rationale.
+node: feedback
+detail: Returns measured results and audience signals to upstream channel work.
+more: Funnel metrics, attribution learnings, and VoC from social or community loops reopen content clusters or paid targeting with reviewable evidence.
+fallback_ascii: |
+  Process flow
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
 ```
 
 ## Channel guides

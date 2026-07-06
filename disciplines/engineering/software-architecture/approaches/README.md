@@ -15,7 +15,42 @@ learning_level: reference
 
 ```blueprint-diagram
 key: decision
-alt: Diagram
+alt: Process flow
+title: Architecture approach gate
+summary: How teams review current documentation against a checkpoint before continuing or refining their chosen approach.
+node: Process flow
+detail: The governed sequence for selecting and maintaining an architecture approach.
+more: Each step keeps documentation proportional to risk and aligned with audience and lifecycle stage.
+node: Current state
+detail: Inventory existing diagrams, sections, ADRs, and viewpoint coverage today.
+more: Surfaces whether the team uses a heavy enterprise method without delivery-facing views, or only C4 without decision traceability.
+node: Checkpoint / gate
+detail: Decide if the primary or combo approach still fits stakeholders and risk.
+more: The gate checks that every diagram and section has an owner, refresh trigger, and named reader before work continues.
+node: refine or escalate
+detail: Rework the approach choice or raise the decision when the gate fails.
+more: Failed gates often mean duplicate maintenance, missing ADRs, or stakeholders who need explicit viewpoint separation such as 4+1.
+node: Continue flow
+detail: Proceed with the selected approach and keep project docs in docs/architecture/.
+more: Project-specific architecture stays in docs/architecture/; decisions belong in docs/adr/, not in this blueprint index.
+node: Note: C4 model
+detail: C4 is the default lightweight framing for most delivery teams.
+more: Context through code views pair well inside arc42 sections; see the C4 guide when you need tool-agnostic structure first.
+fallback_ascii: |
+  Process flow
+
+  Current state
+      |
+      v
+  Checkpoint / gate
+      |
+      +-- no ──► refine or escalate
+      |
+     yes
+      v
+  Continue flow
+
+  Note: C4 model
 ```
 
 | Approach | Guide | Focus | When to use |

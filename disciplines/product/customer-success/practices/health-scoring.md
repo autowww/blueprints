@@ -31,7 +31,35 @@ Weight components by **what predicts your outcomes** (retention, expansion, advo
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Health score architecture
+title: Health score signal architecture
+summary: How component signals compose a governed composite score while calibration loops keep tiers actionable for CSMs.
+node: Health score architecture
+detail: Frames how signal lanes compose the prioritized risk and opportunity view.
+more: Engagement, support, relationship, financial, and outcome components from the table above feed weighted sub-scores before tier routing.
+node: Lane A
+detail: Primary path from raw signals through scoring to prioritized account action.
+more: Pipelines collect product, support, billing, and outcome metrics with consistent account IDs before weights produce a composite score.
+node: handoff
+detail: Passes tiered scores and alerts into CSM and automated playbooks.
+more: Green, yellow, and red bands trigger different automated actions and outreach depth per the risk tier framework below.
+node: shared outcome
+detail: A reviewable prioritized view of account risk and opportunity.
+more: CSMs and managers use the composite to decide Monday-morning attention without analytics theater.
+node: Lane B
+detail: Parallel lane for score calibration and governed course correction.
+more: CSM judgment, false-positive review, and quarterly weight iteration keep the model aligned with churn and expansion outcomes.
+node: inspect / adapt
+detail: Reviews tier accuracy against outcomes and adjusts weights or thresholds.
+more: Correlate component metrics with churn or downgrade; recalibrate when thresholds fire too often or miss saves.
+node: feedback
+detail: Returns intervention results and tier movement to refine the score model.
+more: Track whether tier changes and plays correlate with improved usage, renewal, or save rate per the closure guidance on this page.
+fallback_ascii: |
+  Health score architecture
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
 ```
 
 ---
@@ -76,7 +104,33 @@ Thresholds should be **calibrated** to your base rates — a “red” that fire
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Risk detection through intervention and learning
+title: Risk detection intervention loop
+summary: Detect tier shifts, intervene with matched playbooks, and learn whether actions improve usage and renewal outcomes.
+node: Start
+detail: Leading signals from the composite health score cross tier thresholds.
+more: Product engagement dips, support spikes, and relationship gaps trigger yellow or red bands before renewal crisis.
+node: Core steps (see walkthrough below)
+detail: Route alerts to tier-matched playbooks and governed CSM outreach.
+more: Automated routing, suggested playbooks, and escalation rules from the risk tier framework guide intervention depth by band.
+node: Outcome
+detail: Record whether usage, renewal, or save rate improved after plays.
+more: Lagging signals such as cancellation requests validate model tuning and post-mortem learning.
+node: Note: tier changes
+detail: Track tier movement as evidence that interventions changed account trajectory.
+more: Correlating tier changes with plays closes the loop on score calibration and playbook effectiveness.
+fallback_ascii: |
+  Risk detection through intervention and learning
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: tier changes
 ```
 
 Close the loop: track whether **tier changes** and **plays** correlate with improved usage, renewal, or save rate.

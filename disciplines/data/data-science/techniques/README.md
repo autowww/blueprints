@@ -19,7 +19,28 @@ learning_level: reference
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Technique selection in the ML workflow
+title: ML technique selection flow
+summary: How teams map workflow position to technique references before binding libraries in experiment logs.
+node: Technique selection in the ML workflow
+detail: Frames how algorithm, feature, and evaluation choices align with workflow position.
+more: Problem type, data scale, interpretability, and latency constrain which references in this folder apply at each stage.
+node: Lane A ──► handoff ──► shared outcome
+detail: Primary lane delivers technique choices through governed handoffs to shared outcomes.
+more: Encoding and feature stores come before or alongside modeling; algorithm families narrow once problem type and constraints are clear.
+node: Lane B ──► inspect / adapt ──► feedback
+detail: Parallel lane inspects comparisons and adapts choices from reviewable evidence.
+more: Evaluation design—splits, metrics, fairness—decides whether candidate comparisons are trustworthy before teams commit further.
+node: Note: Feature engineering
+detail: Signals that feature work often dominates early iteration quality.
+more: See feature-engineering.md for the deep dive; bind specific libraries and experiment IDs in project docs, not here.
+fallback_ascii: |
+  Technique selection in the ML workflow
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
+
+  Note: Feature engineering
 ```
 
 | Category | Core idea | Common algorithms | Deep dive |

@@ -85,7 +85,23 @@ HIPAA is US federal law protecting **health information** held by **covered enti
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Technical safeguards (§164.312)
+title: Technical safeguards swimlanes
+summary: How implementation and oversight lanes jointly satisfy §164.312 technical standards for ePHI.
+node: Technical safeguards (§164.312)
+detail: The Security Rule standards governing access, audit, integrity, authentication, and transmission of ePHI.
+more: The table above maps each standard to engineering expectations such as unique IDs, logging, integrity controls, MFA, and TLS where appropriate.
+node: Lane A ──► handoff ──► shared outcome
+detail: The build lane configures controls and hands off to a shared safeguard outcome.
+more: RBAC, encryption, audit logging, and transmission protections are implemented per policy and risk analysis before production use.
+node: Lane B ──► inspect / adapt ──► feedback
+detail: The review lane inspects systems and adapts safeguards from findings.
+more: Log review, incident response, and periodic evaluation close the loop into risk management and workforce training.
+fallback_ascii: |
+  Technical safeguards (§164.312)
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
 ```
 
 ---

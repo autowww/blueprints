@@ -35,7 +35,32 @@ In modern frontends, a **component** is a reusable boundary that encapsulates ma
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Component taxonomy
+title: Component taxonomy lanes
+summary: How classification axes guide composition roles while review feedback refines reusable boundaries over time.
+node: Component taxonomy
+detail: Entry framing presentational, behavioral, and atomic hierarchy axes.
+more: Categories span data versus presentation, smart versus dumb behavior, and Atomic Design levels from atom through page.
+node: Lane A
+detail: Primary path from taxonomy axes to deliberate composition roles.
+more: Teams assign presentational, container, smart, or atomic levels before wiring parent-child trees.
+node: handoff
+detail: Classification transfers into props contracts and nesting decisions.
+more: Container and presentational splits define who fetches data and what children may render.
+node: shared outcome
+detail: Reusable boundaries that scale composition and testability.
+node: Lane B
+detail: Parallel lane for inspecting whether taxonomy labels still fit.
+node: inspect / adapt
+detail: Review trees for god components, wrong splits, or premature abstraction.
+more: Anti-patterns on this page—prop drilling hell, god components—signal when taxonomy choices need adjustment.
+node: feedback
+detail: Refined taxonomy and composition rules feed back into the design system.
+fallback_ascii: |
+  Component taxonomy
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
 ```
 
 ---
@@ -74,7 +99,31 @@ alt: Diagram
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: State ownership patterns
+title: State ownership decision lanes
+summary: How scope and sibling needs drive where state lives, with review loops catching drilling or global overuse.
+node: State ownership patterns
+detail: Entry to local, lifted, context, and external store choices above.
+node: Lane A
+detail: Primary path selecting state scope from UI-only to app-wide.
+more: Local state suits ephemeral UI; lifted, context, and stores address siblings and cross-cutting concerns per the table.
+node: handoff
+detail: State and update handlers pass through props, context, or store APIs.
+more: Lifted state flows downward; context and stores avoid drilling when many descendants share values.
+node: shared outcome
+detail: Predictable updates with clear ownership boundaries.
+node: Lane B
+detail: Parallel lane observing trees as features grow.
+node: inspect / adapt
+detail: Detect prop drilling, context sprawl, or premature global state.
+more: Anti-patterns on this page recommend context, composition, or colocated state when drilling or god components appear.
+node: feedback
+detail: Ownership refactors loop back into clearer local, lifted, or store placement.
+fallback_ascii: |
+  State ownership patterns
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
 ```
 
 ---

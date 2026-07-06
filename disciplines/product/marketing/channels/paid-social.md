@@ -26,7 +26,28 @@ learning_level: reference
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Paid acquisition flow
+title: Paid acquisition flow
+summary: How paid campaigns move from objective and tracking through governed execution to attributable conversions and onboarding.
+node: Start
+detail: Define platform, objective, and conversion tracking before spend.
+more: Align the campaign goal with funnel stage and install UTMs or platform click IDs so web analytics, CRM, and warehouse models stay traceable.
+node: Core steps (see walkthrough below)
+detail: Structure campaigns, audiences, creative, bidding, and landing pages.
+more: Account hierarchy, ad-set themes, variant testing, bid models, and message-matched landings form the reviewable execution layer detailed in sections below.
+node: Outcome
+detail: Captured demand converts with measurable attribution into product onboarding.
+more: Tie paid touchpoints to pipeline and retention signals—not vanity reach alone—so scale decisions rest on trusted conversion data.
+fallback_ascii: |
+  Paid acquisition flow
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ## Campaign structure
@@ -107,7 +128,28 @@ alt: Diagram
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Paid + organic social flywheel
+title: Paid plus organic flywheel
+summary: How organic community and paid boosts align creative, targeting, and measurement for a governed social channel mix.
+node: Start
+detail: Select platforms where audience fit and sustainable content cadence align.
+more: Score audience fit, content you can ship consistently, and business model before committing organic and paid effort on a surface.
+node: Core steps (see walkthrough below)
+detail: Run organic publishing and paid flights with shared creative and landing alignment.
+more: Organic builds trust and community signals; paid scales reach, retargeting, and conversions—keep CTA and landing experience consistent across both motions.
+node: Outcome
+detail: Social traffic and conversions feed attribution and incrementality review.
+more: Pair social metrics with attribution models and holdouts so paid and organic credit reflects real lift, not last-click dashboards alone.
+fallback_ascii: |
+  Paid + organic social flywheel
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ## Attribution models

@@ -70,7 +70,28 @@ Native development targets **one platform** with first-class APIs and tooling. Y
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Build, sign, distribute lifecycle
+title: Native build sign distribute
+summary: How native iOS and Android artifacts move from compile through signing to store-ready release packages.
+node: Start
+detail: Source and dependencies enter the platform-native build pipeline.
+more: Xcode builds Swift and Objective-C for iOS; Gradle compiles Kotlin and Java for Android per the CI/CD row on this page.
+node: Core steps (see walkthrough below)
+detail: Compile, sign with platform credentials, and produce installable release artifacts.
+more: iOS uses certificates and provisioning profiles; Android applies signing keys, often via Fastlane, Xcode Cloud, or Gradle CI.
+node: Outcome
+detail: A reviewable binary ready for App Store or Google Play submission.
+more: Distribution tables on this page cover review cadence, phased rollout, and store metadata for each platform.
+fallback_ascii: |
+  Build, sign, distribute lifecycle
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ---
@@ -103,14 +124,64 @@ alt: Diagram
 
 ```blueprint-diagram
 key: state
-alt: Diagram
+alt: App lifecycle (conceptual)
+title: iOS scene lifecycle
+summary: How iOS scene and app states govern foreground work, background limits, and state restoration.
+node: Start
+detail: Launch or resume brings the app into the scene state model.
+more: iOS coordinates scenes and app delegates; transitions follow the conceptual states referenced in this section.
+node: Core steps (see walkthrough below)
+detail: Active, inactive, background, and suspended states bound work and resource use.
+more: Background execution is time-limited; persist navigation and form state before suspension per guidance below.
+node: Outcome
+detail: A bounded lifecycle state that determines what the app may run or display.
+node: Note: Android — activity / process:
+detail: Cross-reference to the companion Android lifecycle diagram on this page.
+more: Android uses activity and process semantics; see the following diagram for process death handling.
+fallback_ascii: |
+  App lifecycle (conceptual)
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: Android — activity / process:
 ```
 
 **Android — activity / process:**
 
 ```blueprint-diagram
 key: state
-alt: Diagram
+alt: App lifecycle (conceptual)
+title: Android activity lifecycle
+summary: How Android activity and process states govern UI survival, background limits, and recovery after process death.
+node: Start
+detail: Launch or task resume enters the activity and process state model.
+more: Activities transition through created, started, resumed, paused, stopped, and destroyed states managed by the system.
+node: Core steps (see walkthrough below)
+detail: Foreground, background, and low-memory callbacks reshape what the process may retain.
+more: The system may reclaim background processes; navigation and form state must survive recreation without user data loss.
+node: Outcome
+detail: A bounded state determining whether UI and in-memory work remain available.
+node: Note: process death
+detail: Low-memory termination can destroy the process while the task stack survives.
+more: Persist navigation and form state so users recover gracefully after the system recreates the activity.
+fallback_ascii: |
+  App lifecycle (conceptual)
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: process death
 ```
 
 Handle **process death** on Android and **suspension** on iOS — persist navigation and form state.

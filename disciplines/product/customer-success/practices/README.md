@@ -15,7 +15,40 @@ These **project-agnostic** guides support **proactive customer management**: ins
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Where practices sit in the customer lifecycle
+title: Customer success practice lanes
+summary: How proactive practice guides advance customers toward outcomes while inspect-and-adapt loops keep retention governed and traceable.
+node: Where practices sit in the customer lifecycle
+detail: Frames how the practice guides map across the customer lifecycle on this index.
+more: Onboarding, health scoring, and churn prevention extend CUSTOMER-SUCCESS.md; expansion and advocacy remain in the parent body of knowledge.
+node: Lane A
+detail: Primary work stream from first value through sustained customer outcomes.
+more: Carries onboarding design, activation milestones, and handoffs from sales or marketing into measurable success plans.
+node: handoff
+detail: Passes governed context between lifecycle stages and practice guides.
+more: Sales-to-CS transitions, milestone completion, and renewal prep each produce artifacts the next practice consumes without losing account history.
+node: shared outcome
+detail: Observable customer value both lifecycles and teams align on.
+more: Time-to-value, activation, health tier, and retention metrics land in project docs under docs/product/customer-success/ per this page's footer guidance.
+node: Lane B
+detail: Parallel stream for risk inspection and governed course correction.
+more: Health scoring, support signals, and feedback programs feed interventions before renewal crises or preventable churn.
+node: inspect / adapt
+detail: Reviews journey signals and adjusts coverage or playbooks.
+more: Tiered thresholds, alert routing, and false-positive governance from the health-scoring guide inform when CSM or digital plays change.
+node: feedback
+detail: Returns measured results and customer voice to upstream practices.
+more: VoC synthesis, churn-prevention experiments, and exit insights reopen onboarding assumptions or health-model weights with reviewable evidence.
+node: Note: Onboarding
+detail: First practice anchor where proactive customer management begins.
+more: Onboarding design sets time-to-value, persona journeys, and activation metrics that downstream scoring and retention plays inherit; see onboarding-design.md.
+fallback_ascii: |
+  Where practices sit in the customer lifecycle
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
+
+  Note: Onboarding
 ```
 
 Deep dives: [**Onboarding**](onboarding-design.md), [**Health scoring**](health-scoring.md), [**Churn prevention**](churn-prevention.md). **Expansion and advocacy** remain in [**CUSTOMER-SUCCESS.md**](../CUSTOMER-SUCCESS.md).

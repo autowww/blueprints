@@ -51,6 +51,27 @@ Rolling out Blueprints when **one squad** needs shared vocabulary — lightest f
 ```blueprint-diagram
 key: checklist
 alt: Anchor repo, document layout, run setup checklist verification steps, standardize one read slice
+title: Single-team week-zero rollout
+summary: A bounded path from squad commitment through shared setup rituals to a reviewable adoption outcome.
+node: Start
+detail: The squad commits to one anchor repo and a light rollout scope.
+more: Week zero begins by naming baseline versus project folders so new teammates share the same vocabulary.
+node: Core steps (see walkthrough below)
+detail: Execute anchor setup, shared verify steps, and one read slice.
+more: Tech lead documents layout; each developer runs Project setup checklist verify steps; onboarding links to Software delivery overview sections by role.
+node: Outcome
+detail: Teammates repeat setup without forking upstream blueprints.
+more: Success means repos match the same baseline and onboarding cites sections, not the whole blueprint tree.
+fallback_ascii: |
+  Phased timeline (example)
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ## Risks and mitigations

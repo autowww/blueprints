@@ -35,7 +35,33 @@ Interaction design (IxD) defines the **behavior** of an interface: states, trans
 
 ```blueprint-diagram
 key: decision
-alt: Diagram
+alt: Interaction design process
+title: Interaction design gate
+summary: How interaction work advances only after a reviewable checkpoint against the current design state.
+node: Current state
+detail: Capture interface behavior, flows, and open questions as they stand.
+more: Inventory screens, states, transitions, and known gaps before judging readiness to proceed.
+node: Checkpoint / gate
+detail: Evaluate whether the design meets visibility, feedback, and consistency criteria.
+more: A bounded review against principles on this page; block progression when critical interaction gaps remain.
+node: refine or escalate
+detail: Return to iteration or raise unresolved conflicts for stakeholder decision.
+more: Refinement updates flows and states; escalation brings decision-makers in when constraints block progress.
+node: Continue flow
+detail: Advance to the next interaction deliverable or implementation handoff.
+fallback_ascii: |
+  Interaction design process
+
+  Current state
+      |
+      v
+  Checkpoint / gate
+      |
+      +-- no ──► refine or escalate
+      |
+     yes
+      v
+  Continue flow
 ```
 
 ---
@@ -81,7 +107,28 @@ alt: Diagram
 
 ```blueprint-diagram
 key: state
-alt: Diagram
+alt: Form submission state diagram
+title: Form submission flow
+summary: How a form moves from user intent through governed steps to a traceable outcome.
+node: Start
+detail: User begins a form task with fields in an initial editable state.
+more: Apply progressive disclosure and smart defaults from the input patterns on this page.
+node: Core steps (see walkthrough below)
+detail: Validation, submit action, and loading feedback run in sequence.
+more: Pair inline validation with visible feedback; constrain submit until required fields pass validation.
+node: Outcome
+detail: Success confirmation or error with recovery path is shown to the user.
+more: Match success and error feedback patterns; errors must offer a clear next step without inviting double submits.
+fallback_ascii: |
+  Form submission state diagram
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ---
@@ -114,7 +161,27 @@ Prefer **platform HIG** defaults; when diverging, teach in UI.
 
 ```blueprint-diagram
 key: sequence
-alt: Diagram
+alt: Optimistic UI (sequence)
+title: Optimistic UI sequence
+summary: How an action updates the interface immediately while a server request completes in parallel.
+node: Actor / trigger
+detail: The user performs an action that expects a persistent state change.
+node: System step
+detail: The UI reflects the expected outcome before the server confirms.
+more: Show immediate feedback per feedback patterns; keep a reversible path if the request fails.
+node: Outcome / handoff
+detail: Confirmed success or rollback restores a truthful interface state.
+more: On failure, revert optimistic changes and surface an error with recovery options.
+fallback_ascii: |
+  Optimistic UI (sequence)
+
+  Actor / trigger
+      |
+      v
+  System step
+      |
+      v
+  Outcome / handoff
 ```
 
 ---

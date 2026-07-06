@@ -31,7 +31,28 @@ The following flow is a **composite** pattern; teams omit or reorder stages by r
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Reference pipeline (conceptual)
+title: Reference CI/CD pipeline
+summary: A composite flow from code change through governed automation to a deployable, production-ready outcome.
+node: Start
+detail: A merge or commit triggers the pipeline run.
+more: Trunk-based integration and short-lived branches keep this handoff frequent; branch policy defines who may initiate a run.
+node: Core steps (see walkthrough below)
+detail: Build, test, scan, and artifact stages run in sequence or parallel.
+more: Teams omit or reorder stages by risk profile; SAST may run beside unit tests, and approval gates vary between delivery and deployment models.
+node: Outcome
+detail: A versioned artifact or approved promotion candidate is produced.
+more: Immutable artifacts support reproducible deploys and rollbacks; continuous deployment may promote automatically when quality gates pass.
+fallback_ascii: |
+  Reference pipeline (conceptual)
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 **Notes:** SAST may run in parallel with unit tests; “approval gate” may be a manual change ticket, policy-as-code, or fully automated in continuous deployment setups.
@@ -80,7 +101,32 @@ alt: Diagram
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Deployment strategies (comparison)
+title: Deployment strategy lanes
+summary: How primary rollout paths and parallel validation lanes interact before traffic stabilizes on a new version.
+node: Lane A
+detail: The primary path that releases or routes work toward the new version.
+more: Blue-green, canary, and rolling strategies differ in how this lane replaces capacity or shifts traffic.
+node: handoff
+detail: Control of traffic, instances, or routing transfers to the new version.
+more: May be atomic in blue-green, gradual in canary, or incremental per instance in rolling updates.
+node: shared outcome
+detail: Users receive service from the promoted version at the chosen scale.
+more: Blast radius and rollback options depend on strategy—from traffic revert to drain-and-stop.
+node: Lane B
+detail: A parallel lane that observes rollout health and operational signals.
+more: Canary and gradual rollouts lean heavily on this lane; even blue-green benefits from post-switch verification.
+node: inspect / adapt
+detail: Metrics, health checks, and alarms validate whether the rollout should continue.
+more: Strong observability is prerequisite for canary expansion and policy-driven continuous deployment.
+node: feedback
+detail: Validation results inform promote, pause, or rollback decisions.
+more: Failed signals trigger stop-shift, drain, or revert per the strategy comparison table below.
+fallback_ascii: |
+  Deployment strategies (comparison)
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
 ```
 
 | Strategy | Blast radius | Rollback | Resource cost |

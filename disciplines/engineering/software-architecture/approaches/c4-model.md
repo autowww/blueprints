@@ -24,7 +24,28 @@ Shows people and software systems at the boundary of **your** system — not int
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Level 1 — System context (online store example)
+title: System context zoom flow
+summary: How Level 1 frames people, your system, and external systems at the trust boundary.
+node: Start
+detail: Open the diagram at the environment boundary, not internal technology.
+more: Level 1 is the default first view for executives, product, security, and new engineers.
+node: Core steps (see walkthrough below)
+detail: Place actors, your software system, and neighboring external systems.
+more: Answer who uses the system and what external systems it talks to; omit containers and components.
+node: Outcome
+detail: A context diagram that sets scope and trust boundaries for the online store.
+more: Stakeholders read this level without internal DB names or deployment detail; link deeper levels when needed.
+fallback_ascii: |
+  Level 1 — System context (online store example)
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ---
@@ -35,7 +56,28 @@ Shows **applications, data stores, and queues** — the things that could be dep
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Level 2 — Container diagram (same example)
+title: Container diagram zoom flow
+summary: How Level 2 maps deployable applications, data stores, and queues in the same example.
+node: Start
+detail: Begin from the system boundary established at Level 1.
+more: Containers are independently deployable or runnable units inside the system boundary.
+node: Core steps (see walkthrough below)
+detail: Draw web apps, APIs, databases, and queues with labeled communication.
+more: Show major runtime pieces and how they integrate—typical audience is tech leads, SRE, and security reviews.
+node: Outcome
+detail: A container view reviewable for deployment, integration, and operational ownership.
+more: Update this level when ADRs change a container or cross-system integration.
+fallback_ascii: |
+  Level 2 — Container diagram (same example)
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ---
@@ -46,7 +88,28 @@ Decomposes **one container** into major logical parts — not every class.
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Level 3 — Component diagram (inside the API container)
+title: Component diagram zoom flow
+summary: How Level 3 decomposes one container into major logical building blocks.
+node: Start
+detail: Select a single container—for example the API—from Level 2.
+more: Component diagrams decompose one container, not the whole system.
+node: Core steps (see walkthrough below)
+detail: Group major internal parts without drawing every class.
+more: Use when internal structure or ownership splits are non-obvious to the dev team.
+node: Outcome
+detail: A component map that guides reviews of complex service internals.
+more: Update Level 3 when ADRs refactor modules inside a container.
+fallback_ascii: |
+  Level 3 — Component diagram (inside the API container)
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ---
@@ -57,7 +120,28 @@ Use **sparingly** for hot spots (e.g. payment integration, pricing engine). Pref
 
 ```blueprint-diagram
 key: network
-alt: Diagram
+alt: Level 4 — Code (optional zoom)
+title: Optional code-level zoom
+summary: How Level 4 highlights key types and dependencies inside one component when diagrams earn their keep.
+node: Root / intake
+detail: Enter from one component chosen as a governed hot spot.
+more: Use sparingly for payment integration, pricing engine, or other critical subsystems named on this page.
+node: branch A
+detail: Trace one dependency path among key types in that component.
+more: Show interfaces and collaborators reviewers must understand without opening the full repository.
+node: branch B
+detail: Trace a second path where structure or ownership diverges.
+more: Keeps the diagram bounded when multiple concerns share the same component boundary.
+node: branch C
+detail: Trace a third path to complete the dependency picture.
+more: Prefer linking to ADRs and the repository for full detail; Level 4 goes stale quickly if overused.
+fallback_ascii: |
+  Level 4 — Code (optional zoom)
+
+  Root / intake
+      +-- branch A
+      +-- branch B
+      +-- branch C
 ```
 
 ---

@@ -68,7 +68,32 @@ learning_level: reference
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Kubernetes architecture (simplified)
+title: Kubernetes control and node lanes
+summary: How the control plane declares desired state while worker nodes reconcile workloads and report status.
+node: Lane A
+detail: Control plane path that accepts declarative manifests and schedules work.
+more: The API server, scheduler, and controllers persist intent in etcd and drive cluster-level reconciliation.
+node: handoff
+detail: Desired pod and service specs transfer to assigned worker nodes.
+more: Schedulers place pods; controllers create ReplicaSets and Services from Deployment and Ingress declarations.
+node: shared outcome
+detail: Running pods expose stable endpoints matching the declared configuration.
+more: Services provide discovery; Ingress routes HTTP(S) when an ingress controller is installed.
+node: Lane B
+detail: Worker path where kubelet and the container runtime execute assigned pods.
+more: Each node runs kubelet against containerd, CRI-O, or another CRI-compliant runtime beneath pods.
+node: inspect / adapt
+detail: Kubelet watches pod specs and starts, stops, or restarts containers to match.
+more: Resource limits, ConfigMaps, and Secrets inject at runtime; drift triggers restart or rescheduling.
+node: feedback
+detail: Node and pod status propagate back to the control plane for visibility.
+more: Operators and controllers use this signal for healing, scaling, and rollout decisions.
+fallback_ascii: |
+  Kubernetes architecture (simplified)
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
 ```
 
 ---
@@ -112,7 +137,28 @@ alt: Diagram
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Platform stack layers
+title: Internal platform layering
+summary: How platform teams pave golden paths so product teams deploy without owning every cluster knob.
+node: Start
+detail: Platform team scopes internal customer needs and existing cluster capabilities.
+more: Orchestration from earlier sections supplies the runtime; platform work abstracts deploy, data, and observability.
+node: Core steps (see walkthrough below)
+detail: Curate templates, self-service APIs, and paved-road defaults for common cases.
+more: Golden paths cover typical Deployments, databases, and queues; RBAC-guarded interfaces replace routine tickets.
+node: Outcome
+detail: Product teams ship faster through governed self-service instead of low-level operations.
+more: Developer experience improves via time-to-first-deploy and documented templates linked to CI/CD and GitOps practices.
+fallback_ascii: |
+  Platform stack layers
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ---

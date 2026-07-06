@@ -34,7 +34,37 @@ Illustrative **context map** — not a specific notation standard, but shows ups
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Context map (example relationships)
+title: Context map relationships
+summary: How bounded contexts connect through upstream influence, handoffs, and chosen integration patterns.
+node: Context map (example relationships)
+detail: Strategic view of multiple bounded contexts and their integration styles.
+more: Not a formal notation standard—an illustrative map of upstream/downstream dynamics and power between teams.
+node: Lane A
+detail: One bounded context acting as upstream in the relationship.
+more: Its domain model and ubiquitous language shape what downstream consumers must accept or translate.
+node: handoff
+detail: The boundary where models, events, or artifacts cross between contexts.
+more: Integration may follow shared kernel, published language, ACL, or conformist patterns from the context map.
+node: shared outcome
+detail: The coordinated result both contexts aim to deliver together.
+more: Success depends on explicit integration contracts rather than implicit shared database schemas.
+node: Lane B
+detail: A second context pair with a different integration posture.
+more: One map can show multiple relationship styles when teams negotiate or adapt differently.
+node: inspect / adapt
+detail: Downstream review and adjustment to upstream model or API changes.
+more: Reflects customer–supplier or partnership dynamics where downstream priorities can influence upstream design.
+node: feedback
+detail: Signal returning from downstream use back to upstream planning.
+more: Keeps roadmaps and model evolution aligned when consumers surface gaps or new needs.
+fallback_ascii: |
+  Context map (example relationships)
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
+
+  Note: Reading guide:
 ```
 
 **Reading guide:** *Upstream* teams’ models influence *downstream* consumers. **Conformist** accepts the upstream model as-is. **Anti-corruption layer (ACL)** translates foreign concepts. **Partnership** is tight coordination between two teams.
@@ -75,7 +105,33 @@ alt: Diagram
 
 ```blueprint-diagram
 key: network
-alt: Diagram
+alt: Aggregate example (order)
+title: Order aggregate structure
+summary: How an Order root enforces invariants across child lines within one transactional boundary.
+node: Aggregate example (order)
+detail: Order-rooted consistency cluster for the order subdomain.
+more: Tactical pattern example—one aggregate owns mutations and external references for its children.
+node: Root / intake
+detail: Order aggregate root—the sole external entry point for this cluster.
+more: All changes and outside references pass through Order, not through individual lines.
+node: branch A
+detail: One OrderLine child governed inside the aggregate boundary.
+more: Line identity stays scoped within the aggregate unless the model explicitly promotes it.
+node: branch B
+detail: Another OrderLine subject to the same invariant rules.
+more: Pricing, quantity, and removal constraints apply cluster-wide via the root entity.
+node: branch C
+detail: Additional child entity completing the consistency cluster.
+more: Keep aggregates as small as invariants allow—large roots increase contention and failure blast radius.
+fallback_ascii: |
+  Aggregate example (order)
+
+  Root / intake
+      +-- branch A
+      +-- branch B
+      +-- branch C
+
+  Note: Rule of thumb:
 ```
 
 **Rule of thumb:** External references to this aggregate go through **Order** only; `OrderLine` IDs are scoped inside the aggregate unless your model explicitly promotes them (rare).

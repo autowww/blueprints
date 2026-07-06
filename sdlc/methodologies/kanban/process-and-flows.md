@@ -11,7 +11,32 @@ learning_level: reference
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Pull through the value stream
+title: Kanban value stream pull
+summary: Move work through agreed columns only when downstream capacity can accept it.
+node: Pull through the value stream
+detail: Frames the Kanban value stream as governed pull, not push.
+node: Start
+detail: Work enters from upstream options or replenishment.
+more: Items arrive from discovery or committed backlog when policy allows pull.
+node: Core steps (see walkthrough below)
+detail: Traverse workflow columns under WIP limits and DoD gates.
+more: Columns are agreed states in your Definition of Workflow; pull only when the next column has capacity.
+node: Outcome
+detail: Delivered value with traceable flow metrics and reviewable Done criteria.
+more: Lead time stays visible when teams avoid pushing into overloaded Doing columns without capacity.
+fallback_ascii: |
+  Pull through the value stream
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: Definition of Workflow
 ```
 
 Customize column names to your **Definition of Workflow**.
@@ -20,21 +45,103 @@ Customize column names to your **Definition of Workflow**.
 
 ```blueprint-diagram
 key: decision
-alt: Diagram
+alt: Replenishment decision
+title: Replenishment pull decision
+summary: Decide which options enter the system when capacity and dependencies allow.
+node: Replenishment decision
+detail: Governs which backlog options may enter committed flow.
+node: Current state
+detail: Assess queue depth, WIP limits, and class-of-service mix.
+more: Replenishment reviews downstream capacity against the Definition of Workflow before adding work.
+node: Checkpoint / gate
+detail: Verify WIP headroom, dependencies, and readiness to pull.
+more: Items must fit WIP rules and class-of-service policy with clear dependencies resolved.
+node: refine or escalate
+detail: Defer, split, or run alignment when pull criteria fail.
+more: Run spikes or stakeholder alignment before retrying pull when scope or dependencies remain unclear.
+node: Continue flow
+detail: Pull the item into the next column when the gate passes.
+more: Committed work enters Doing only after replenishment confirms bounded, reviewable scope.
+fallback_ascii: |
+  Replenishment decision
+
+  Current state
+      |
+      v
+  Checkpoint / gate
+      |
+      +-- no ──► refine or escalate
+      |
+     yes
+      v
+  Continue flow
 ```
 
 ## 3. Blocked work escalation
 
 ```blueprint-diagram
 key: decision
-alt: Diagram
+alt: Blocked work escalation
+title: Blocked work escalation gate
+summary: Route blockers to fast team response or formal escalation when policy thresholds hit.
+node: Blocked work escalation
+detail: Governs how blocked cards leave the wait state.
+node: Current state
+detail: Capture blocker type, owner, and time in blocked column.
+more: Teams track aging blocked items against service-delivery policy thresholds.
+node: Checkpoint / gate
+detail: Check whether team policy can resolve the blocker locally.
+more: Swarm or fast team response applies when policy allows same-team resolution.
+node: refine or escalate
+detail: Escalate when trade-offs or time limits exceed team authority.
+more: Service delivery or steering decides priority trade-offs; record the decision before resuming flow.
+node: Continue flow
+detail: Resume pull once the blocker clears or is accepted.
+more: Unblock only after the recorded decision restores a reviewable path through the value stream.
+fallback_ascii: |
+  Blocked work escalation
+
+  Current state
+      |
+      v
+  Checkpoint / gate
+      |
+      +-- no ──► refine or escalate
+      |
+     yes
+      v
+  Continue flow
 ```
 
 ## 4. Release train (optional policy)
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Release train (optional policy)
+title: Release train policy flow
+summary: Batch Done work to production on an optional train or calendar cadence.
+node: Release train (optional policy)
+detail: Frames how board Done maps to production release.
+more: Optional policy layers release cadence onto Kanban Done without replacing column workflow.
+node: Start
+detail: Items reach Done on the board per DoD.
+more: Board completion and production deployment may follow different schedules under train policy.
+node: Core steps (see walkthrough below)
+detail: Batch, validate, and deploy per your release train or calendar.
+more: Align steps with continuous delivery when that is your Definition of Workflow instead of a train.
+node: Outcome
+detail: Production reflects governed releases aligned with board Done.
+more: Release policy stays traceable whether you ship on a train or continuously from Done.
+fallback_ascii: |
+  Release train (optional policy)
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ## 5. Phase mapping (A–F)

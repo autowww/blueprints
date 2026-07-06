@@ -38,7 +38,36 @@ The classic 5-stage model, adapted for software products:
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Core structure
+title: Stage-Gate core flow
+summary: How work stages and decision gates sequence an initiative from first screen through launch or governed stop.
+node: Core structure
+detail: Frames stages where work happens and gates where teams decide.
+more: Each gate reviews evidence against explicit criteria before funding the next stage; decisions are go, kill, pivot, or hold.
+node: Start
+detail: An initiative enters scoping with a lightweight opportunity assessment.
+more: Early screening checks market, technical, financial, and strategic fit before deeper investigation is funded.
+node: Core steps (see walkthrough below)
+detail: Five stages from scoping through launch, each bounded by a gate.
+more: Stages iterate internally in the 5th-generation model; gates remain strategic decision points with required deliverables per stage.
+node: Outcome
+detail: A launched product in market or a governed stop with documented learnings.
+more: Successful paths reach launch and post-launch review; kill decisions reallocate resources while preserving traceable evidence.
+node: Note: Build Business Case
+detail: Stage 2 deepens investigation into user research and feasibility evidence.
+more: The business case deliverable feeds Gate 2 with validation evidence before development is funded.
+fallback_ascii: |
+  Core structure
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: Build Business Case
 ```
 
 | Stage | Activities | Key deliverable |

@@ -43,7 +43,28 @@ learning_level: reference
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: IaC workflow
+title: IaC plan and apply
+summary: How version-controlled declarations become reviewable, idempotent infrastructure with drift detection.
+node: Start
+detail: Desired infrastructure is declared in version-controlled configuration.
+more: Declarative modules describe end state; changes enter through pull requests like application code.
+node: Core steps (see walkthrough below)
+detail: Plan, peer review, and automated apply converge live resources to the declaration.
+more: Tools such as Terraform emit a plan diff before apply; idempotent re-runs avoid duplicate resources from repeats.
+node: Outcome
+detail: Live infrastructure matches the reviewed desired state in Git.
+more: Scheduled plans and drift detection close the loop when console edits or failed applies leave reality out of sync.
+fallback_ascii: |
+  IaC workflow
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 **Drift** occurs when console changes or failed applies leave reality ≠ desired state; detection closes the loop.
@@ -67,7 +88,28 @@ OpenGitOps ([opengitops.dev](https://opengitops.dev/)) formalizes these for the 
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: GitOps architecture (pull model)
+title: GitOps pull reconciliation
+summary: How cluster controllers reconcile live state to Git as the authoritative desired configuration.
+node: Start
+detail: Declarative manifests and environment config are committed to Git.
+more: Version history records who merged what and when, matching the same audit trail as application code review.
+node: Core steps (see walkthrough below)
+detail: A cluster-bound controller polls or watches Git and applies declared changes.
+more: Credentials stay on the cluster side, limiting blast radius compared with CI holding broad deploy keys across environments.
+node: Outcome
+detail: Running workloads and cluster config match the reviewed Git revision.
+more: Sync status, diff UI, and metrics expose OutOfSync drift; remediation defaults to Git winning after review.
+fallback_ascii: |
+  GitOps architecture (pull model)
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ---

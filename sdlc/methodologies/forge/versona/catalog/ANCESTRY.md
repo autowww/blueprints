@@ -17,7 +17,40 @@ Normative layering for Forge Versonas: **generic baseline** (Layer 0), **kind** 
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Conceptual tree
+title: Versona conceptual ancestry tree
+summary: How normative Versona layering from baseline through kind and domain relates to reviewable install and on-disk layout.
+node: Conceptual tree
+detail: Names the page's normative layering view for Versona templates.
+more: Baseline, kind, domain, and concrete template files stack conceptually even when disk paths differ.
+node: Lane A
+detail: Traces template ancestry from baseline through kind and domain.
+more: Discipline templates add a domain layer; routing, workflow, and meta kinds sit between baseline and concrete files.
+node: handoff
+detail: Each layer passes contract shape and norms downward.
+more: Kind templates specialize routing or discipline behavior without Cursor inheriting rules automatically.
+node: shared outcome
+detail: Produces self-contained rule files ready for Cursor install.
+more: Installed rules duplicate the generic baseline so each file stands alone without live inheritance.
+node: Lane B
+detail: Covers how teams review, install, and refresh rules.
+more: Workflow kinds such as cursor-rules-sync and project-setup govern this lane on the catalog page.
+node: inspect / adapt
+detail: Review templates and diffs before copying into cursor rules.
+more: TEMPLATE-INDEX and sync playbooks make catalog changes reviewable before install.
+node: feedback
+detail: Catalog or baseline changes prompt re-sync and reassessment.
+more: When upstream templates change, operators diff and reinstall so workspace rules stay aligned.
+node: Note: Physical layout (on disk):
+detail: Warns that folder paths may differ from this tree.
+more: Family aggregator is a kind under catalog/discipline/domain/family, not a sibling of versona/discipline at root.
+fallback_ascii: |
+  Conceptual tree
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
+
+  Note: Physical layout (on disk):
 ```
 
 **Physical layout (on disk):** The diagram is **conceptual**. **Family aggregator** is a **kind**, not a sibling directory named `family/` next to `versona/discipline/` at the `versona/` root. Template files for that kind live under **`catalog/discipline/<domain>/family/`** (e.g. engineering, data, product). The optional **generic** baseline template is **`versona-generic.mdc.template`** at the `versona/` root (not under `catalog/`). See [`../README.md`](../README.md#source-layout-templates-on-disk).

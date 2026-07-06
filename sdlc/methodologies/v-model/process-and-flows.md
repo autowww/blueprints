@@ -11,7 +11,27 @@ learning_level: reference
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: V-Model structure (classic)
+title: Classic V-Model structure
+summary: How left-side decomposition pairs with right-side integration and verification across levels.
+node: Start
+detail: Entry point for applying the classic V lifecycle discipline.
+node: Core steps (see walkthrough below)
+detail: Descend through specification levels; ascend through matching verification levels.
+more: Each left-side level produces specifications the corresponding right-side level verifies; test planning pairs with design rather than following implementation.
+node: Outcome
+detail: Integrated system validated with traceability across every V-level.
+more: Dotted arrows link each specification level to its verification counterpart on the ascent.
+fallback_ascii: |
+  V-Model structure (classic)
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 Left side descends (decomposition); right side ascends (integration and verification). Dotted arrows show traceability pairing.
@@ -20,21 +40,78 @@ Left side descends (decomposition); right side ascends (integration and verifica
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Traceability flow
+title: Requirement-to-evidence traceability
+summary: How requirements link to tests and recorded results as the V-Model core deliverable.
+node: Start
+detail: A stakeholder need or requirement enters the traceability chain.
+node: Core steps (see walkthrough below)
+detail: Map each requirement to tests and capture results as reviewable evidence.
+more: Every requirement must be testable, every test traces to a requirement, and every result is recorded; gaps indicate missing tests or unnecessary requirements.
+node: Outcome
+detail: A complete requirement-to-evidence chain with no traceability gaps.
+fallback_ascii: |
+  Traceability flow
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ## 3. Test-level gate decision
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Test-level gate decision
+title: V-level test gate checks
+summary: How entry and exit gates at each V-level govern test readiness and recorded results.
+node: Start
+detail: A verification activity at a given V-level begins.
+node: Core steps (see walkthrough below)
+detail: Pass entry readiness, execute tests, then evaluate exit results.
+more: Entry checks confirm test readiness; exit checks record results; failures feed back to the matching development level, not a generic fix phase.
+node: Outcome
+detail: Level exit with documented results or bounded rework at the source level.
+fallback_ascii: |
+  Test-level gate decision
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ## 4. Change impact (V-Model perspective)
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Change impact (V-Model perspective)
+title: V-Model change ripple analysis
+summary: How a requirement change propagates across design, implementation, and tests at multiple levels.
+node: Start
+detail: A change request targets a requirement or specification artifact.
+node: Core steps (see walkthrough below)
+detail: Analyze impact across all affected V-levels before committing rework.
+more: A requirement change may require design updates, code changes, and retesting at unit, integration, system, and acceptance levels.
+node: Outcome
+detail: Bounded rework plan covering every impacted specification and test level.
+fallback_ascii: |
+  Change impact (V-Model perspective)
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 A change to a requirement potentially impacts design, implementation, and tests at multiple V-levels.

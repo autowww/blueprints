@@ -158,21 +158,77 @@ Small **single-operation** Cursor rules and an installer script live in [`../tas
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Tasklets (example bundle)
+title: Discipline overlay on tasklets
+summary: How neutral tasklets hand structured fragments to a normative Versona that adds discipline constraints and merges the report.
+node: Tasklets (example bundle)
+detail: The example bundle shows neutral cognition tasklets with fixed output shapes.
+more: Tasklets stay mechanical; discipline Versonas choose them, add constraints, and merge results per TASKLET-TAXONOMY.
+node: Lane A ──► handoff ──► shared outcome
+detail: Sequential tasklets pass structured fragments toward one merged report outcome.
+more: A normative Versona sequences neutral tasklets and combines their fixed-shape outputs into one reviewable pass.
+node: Lane B ──► inspect / adapt ──► feedback
+detail: The Versona inspects tasklet outputs and adapts discipline constraints before merge.
+more: Overlay adds lens-specific rules—Testing demands falsifiability, BA requires stakeholder fit—before downstream handoff.
+fallback_ascii: |
+  Tasklets (example bundle)
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
 ```
 
 ### Sampling Versona sequence (demo)
 
 ```blueprint-diagram
 key: sequence
-alt: Diagram
+alt: Tasklets (example bundle)
+title: Sampling Versona demo sequence
+summary: How Sampling Versona triggers cognition tasklets in order and hands off a merged preview report.
+node: Tasklets (example bundle)
+detail: Frames the demo bundle that Sampling Versona invokes during a bounded session.
+more: Install via install-tasklets.sh or sync preset; demonstrates meta-Versona chaining before full discipline passes.
+node: Actor / trigger
+detail: A human or routing rule starts the Sampling Versona session.
+more: Invoke from the rule picker or @versona-sampling when assumptions and unknowns need a quick surfaced pass.
+node: System step
+detail: Sampling runs cognition tasklets in sequence with fixed output shapes.
+more: Typical chain includes extract-assumptions, list-unknowns, and quick-triage before merge outputs.
+node: Outcome / handoff
+detail: Yields a merged preview report or routes toward deeper discipline Versonas.
+more: Output mirrors §5 structure when useful; teams act on signals or escalate to full lens reviews.
+fallback_ascii: |
+  Tasklets (example bundle)
+
+  Actor / trigger
+      |
+      v
+  System step
+      |
+      v
+  Outcome / handoff
 ```
 
 ### Where documentation is published
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Tasklets (example bundle)
+title: Versona documentation publish paths
+summary: How Versona and tasklet templates in blueprints reach the public handbook and consumer Cursor rules.
+node: Tasklets (example bundle)
+detail: Example tasklet docs ship alongside the Versona catalog in the blueprints tree.
+more: Authoritative Markdown lives under sdlc/methodologies/forge/versona/ and tasklets/; paths are indexed in catalog/TEMPLATE-INDEX.md.
+node: Lane A ──► handoff ──► shared outcome
+detail: Normative templates in blueprints hand off to the generated public handbook.
+more: Edits commit to blueprints first; blueprints-website rebuild propagates Versona and tasklet pages to blueprints.forgesdlc.com.
+node: Lane B ──► inspect / adapt ──► feedback
+detail: Consumer repos inspect sync output and adapt installed Cursor rules locally.
+more: sync-forge-cursor-rules.sh or install-tasklets.sh copies .mdc templates into .cursor/rules/; teams tune globs per project.
+fallback_ascii: |
+  Tasklets (example bundle)
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
 ```
 
 ## Adopting Versonas in a consuming repo

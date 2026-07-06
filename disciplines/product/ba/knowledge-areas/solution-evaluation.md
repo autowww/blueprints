@@ -144,7 +144,33 @@ Solution Evaluation is the knowledge area that **closes the lifecycle loop**:
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Relationship to PDLC and SDLC
+title: Closing the lifecycle loop
+summary: How Solution Evaluation connects post-delivery outcomes back to PDLC growth and SDLC verification.
+node: Relationship to PDLC and SDLC
+detail: Frames where evaluation tasks sit across both lifecycles.
+more: The mapping table ties each BABOK task to P5–P6 PDLC stages and SDLC E acceptance evidence.
+node: Start
+detail: Delivery completes and the solution enters operational use.
+more: Without an explicit evaluation gate, teams risk the launch-and-forget anti-pattern in PDLC-SDLC-BRIDGE.
+node: Core steps (see walkthrough below)
+detail: Measure performance, analyze gaps, assess limits, and recommend actions.
+more: Tasks in sections 1.1–1.5 trace metrics to requirements, investigate root causes, and feed G5 invest-or-sunset decisions.
+node: Outcome
+detail: Stakeholder value is verified and the loop closes or restarts.
+more: Acceptable performance sustains P5 growth; persistent gaps may trigger improve, replace, retire, or a new P1 cycle.
+fallback_ascii: |
+  Relationship to PDLC and SDLC
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: "launch and forget"
 ```
 
 Without Solution Evaluation, organizations build and ship but never measure whether the solution satisfied the original business need. This is the **"launch and forget"** anti-pattern identified in [`PDLC-SDLC-BRIDGE.md`](../../../../pdlc/PDLC-SDLC-BRIDGE.md) §8.

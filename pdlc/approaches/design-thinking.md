@@ -37,7 +37,28 @@ Design Thinking addresses **desirability risk** — "Do people actually need and
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Core structure
+title: Double Diamond core structure
+summary: How diverge-converge diamonds frame problem and solution work while user feedback keeps desirability risk governed.
+node: Core structure
+detail: Frames the Double Diamond diverge-converge model on this page.
+more: Design Thinking is not a linear checklist but mindsets and methods applied across problem and solution spaces.
+node: Lane A ──► handoff ──► shared outcome
+detail: Problem and solution diamonds diverge, then converge on framed intent.
+more: Diamond 1 explores many problems then defines the right one; Diamond 2 explores solutions then validates the right fit.
+node: Lane B ──► inspect / adapt ──► feedback
+detail: Test and empathize modes inspect assumptions and adapt from user evidence.
+more: Prototype and Test gather validation evidence; P5 Grow continues empathize loops after launch per the PDLC mapping table.
+node: Note: Empathize
+detail: Anchors Diamond 1 diverge with user-centered observation.
+more: Skipping Empathize is the top anti-pattern on this page; require evidence from real users, not stakeholder assumptions.
+fallback_ascii: |
+  Core structure
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
+
+  Note: Empathize
 ```
 
 ### Five modes (IDEO / Stanford d.school)

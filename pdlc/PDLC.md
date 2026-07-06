@@ -70,7 +70,36 @@ Product lifecycle work involves different accountabilities than delivery. These 
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Phases & product obligations
+title: Phases and product obligations
+summary: How a product initiative moves from discovery through delivery obligations to measurable outcomes in Forge PDLC.
+node: Phases & product obligations
+detail: Frames the canonical P1–P6 obligations this page defines.
+more: Each phase below lists goals, artifacts, and exits; SDLC nests inside P3–P4 as the build engine.
+node: Start
+detail: Entry when a team commits to addressing a product opportunity.
+more: Typically follows organizational intent or growth insights from P5 feeding back into P1.
+node: Core steps (see walkthrough below)
+detail: The governed P1–P6 walkthrough and nested SDLC delivery phases.
+more: P1–P3 validate and commit; SDLC A–F builds and releases; P4–P6 launch, grow, and retire.
+node: Outcome
+detail: A product initiative meets success metrics or exits with documented rationale.
+more: Done when P3 metrics are achieved, pivoted, or cancelled per section 3 Definition of Done.
+node: Note: Continuous discovery:
+detail: In mature teams, P1–P2 overlap with active SDLC delivery.
+more: Dual-Track Agile keeps discovery running in parallel; the sequential view shows logical dependency only.
+fallback_ascii: |
+  Phases & product obligations
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: Continuous discovery:
 ```
 
 **Continuous discovery:** In mature teams, P1–P2 run **in parallel** with SDLC delivery (Dual-Track Agile — see [`https://forgesdlc.com/pdlc-approaches-dual-track-agile.html`](https://forgesdlc.com/pdlc-approaches-dual-track-agile.html)). The sequential diagram shows logical dependency; real cadence overlaps.

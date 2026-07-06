@@ -17,14 +17,56 @@ Full taxonomy (execution plane, operation class, discipline overlay): [`TASKLET-
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Process flow
+title: Tasklet cognition layers
+summary: How single-operation tasklets stack under a meta-Versona that sequences them into a bounded, reviewable report.
+node: Process flow
+detail: Frames how cognition tasklets and meta-Versonas relate on this page.
+more: Tasklets are fixed-shape Cursor rules; discipline Versonas remain the full passes for PM, BA, Testing, and similar lenses.
+node: Lane A ──► handoff ──► shared outcome
+detail: Sequential tasklet invocations hand outputs toward one merged report shape.
+more: A meta-Versona such as Sampling Versona runs extract-assumptions, list-unknowns, and quick-triage in order before merge.
+node: Lane B ──► inspect / adapt ──► feedback
+detail: Inspect-and-adapt loops refine tasklet outputs before merge or downstream Versona work.
+more: Teams tune globs, merge fragments, or escalate to full discipline Versonas when tasklet scope is insufficient.
+node: Note: `versona-sampling.mdc`
+detail: Points to the bundled meta-Versona that demonstrates the tasklet sequence.
+more: Install or sync copies the template; it merges tasklet outputs into a readable demo report, not a discipline substitute.
+fallback_ascii: |
+  Process flow
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
+
+  Note: `versona-sampling.mdc`
 ```
 
 ### Install: file flow
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Process flow
+title: Tasklet install file flow
+summary: How install-tasklets.sh copies cognition rules into `.cursor/rules/` with optional sampling meta-Versona.
+node: Process flow
+detail: Frames what the installer places on disk at repository root.
+more: Run from a repo that already contains the blueprints submodule; defaults target the current directory as project root.
+node: Lane A ──► handoff ──► shared outcome
+detail: Installer copies forge-tasklet rules into `.cursor/rules/` as the shared outcome.
+more: Nine cognition tasklets cover assumptions, unknowns, triage, routing, session bootstrap, standards, logging, merge, and evidence summary.
+node: Lane B ──► inspect / adapt ──► feedback
+detail: Optional flags and dry-run inspect the install plan before overwriting files.
+more: `--dry-run` prints planned copies; `--force` overwrites existing rules; `--no-sampling` skips versona-sampling.mdc.
+node: Note: `versona-sampling.mdc`
+detail: Marks the optional meta-Versona copied alongside tasklet rules unless skipped.
+more: Also ships via sync-forge-cursor-rules.sh recommended preset; both install paths can coexist in `.cursor/rules/`.
+fallback_ascii: |
+  Process flow
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
+
+  Note: `versona-sampling.mdc`
 ```
 
 **Note:** **`versona-sampling.mdc`** ships with **`sync-forge-cursor-rules.sh sync --preset recommended`** (process-first default). This installer adds the **`forge-tasklet-*.mdc`** cognition rules; both layers can coexist.

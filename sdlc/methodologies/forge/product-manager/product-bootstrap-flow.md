@@ -19,7 +19,28 @@ This document describes the step-by-step process for bootstrapping a new product
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: The pipeline
+title: Product bootstrap pipeline
+summary: Dialog-driven sequence that seeds product artifacts from blueprint templates through the first Charge.
+node: Start
+detail: Begin bootstrap once Forge SDLC and blueprints are available.
+more: Requires forge.config.yaml (or forge-setup), blueprints submodule, and docs/product/ ready or creatable.
+node: Core steps (see walkthrough below)
+detail: Work through ten dialog steps that produce governed product artifacts.
+more: Covers PDLC Discover through Plan stages—vision, market, competitive, business case, metrics, roadmap, WBS, Product Spark, and Charge setup—with optional Versona review gates.
+node: Outcome
+detail: Arrive at a populated first Charge ready for daily Forge execution.
+more: Charge holds bootstrap Sparks or implementation Sparks; backlog carries phase-tagged Sparks assigned to iterations.
+fallback_ascii: |
+  The pipeline
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ---

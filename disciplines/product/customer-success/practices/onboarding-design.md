@@ -32,7 +32,33 @@ Choose the model by **setup complexity**, **contract value**, **risk** (security
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Onboarding funnel (conceptual)
+title: Onboarding funnel progression
+summary: How a new user moves from signup through guided setup to activation and habit-forming repeat use.
+node: Start
+detail: User enters onboarding after acquisition as customer or trialist.
+more: Onboarding bridges acquisition and activation; poor design inflates support cost and seeds churn.
+node: Core steps (see walkthrough below)
+detail: Product tours, checklists, wizards, and guided touchpoints structure multi-step setup.
+more: Mix patterns by persona and step; persist checklist state and tie each item to clear done criteria.
+node: Outcome
+detail: User reaches activation with observable proof the product works for their job.
+more: Measure signup-to-activation rate, time-to-value, and step drop-off by segment to find friction.
+node: Note: First value moment
+detail: Smallest observable outcome that proves the product fits their job.
+more: Habit formation is repeated use of retention-linked capabilities, not merely completing the checklist once.
+fallback_ascii: |
+  Onboarding funnel (conceptual)
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: First value moment
 ```
 
 **First value moment** is the smallest observable outcome that proves the product works for their job. **Habit formation** is repeated use of the capabilities tied to retention and expansion — not merely completing a checklist once.
@@ -69,7 +95,28 @@ Mix patterns by **persona** and **step**; the same product often needs tours for
 
 ```blueprint-diagram
 key: sequence
-alt: Diagram
+alt: Onboarding flow with decision points
+title: Onboarding flow with handoffs
+summary: How triggers, in-product guidance, and outcomes chain into segmented journeys with measurable milestones.
+node: Actor / trigger
+detail: Signup, invite, plan change, or behavioral signal starts the onboarding path.
+more: Prefer trigger-based outreach when behavior varies; honor opt-out, frequency caps, and product truth per segment.
+node: System step
+detail: Product delivers tours, checklists, wizards, or empty-state guidance in context.
+more: Trigger guidance from state such as empty projects or failed integrations, not only time since signup.
+node: Outcome / handoff
+detail: User reaches a milestone or transfers to human touch when setup warrants it.
+more: Split admin and member journeys; track invites, RBAC, and async SSO as visible milestones for enterprise teams.
+fallback_ascii: |
+  Onboarding flow with decision points
+
+  Actor / trigger
+      |
+      v
+  System step
+      |
+      v
+  Outcome / handoff
 ```
 
 ---

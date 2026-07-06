@@ -33,7 +33,31 @@ Treat optimization as a **closed loop**: measure, find the bottleneck, change on
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Loading optimization
+title: Loading optimization flow
+summary: How teams apply loading techniques to keep unused code off the critical path.
+node: Loading optimization
+detail: Frames which assets and bundles sit on the initial loading path.
+more: Scope covers HTML, JavaScript, CSS, fonts, and hero media before first meaningful paint.
+node: Start
+detail: Profile the initial load with lab tools and field data when available.
+more: Lighthouse waterfalls and RUM traces reveal which requests block render and inflate time-to-interactive.
+node: Core steps (see walkthrough below)
+detail: Apply splitting, lazy loading, compression, and fetch hints from the table.
+more: Each technique targets a specific bottleneck—splitting for large apps, lazy loading for below-fold routes, preload for LCP candidates.
+node: Outcome
+detail: A leaner critical path with traceable before-and-after validation.
+more: Re-measure after one change at a time so regressions stay visible in CI gates and field CWV.
+fallback_ascii: |
+  Loading optimization
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 *Real waterfalls parallelize per HTTP/2/3—this is a logical dependency sketch.*
@@ -101,7 +125,36 @@ alt: Diagram
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Caching strategy
+title: Caching strategy flow
+summary: How layered caches reduce latency while keeping invalidation policies reviewable across browser, CDN, and app.
+node: Caching strategy
+detail: Maps cache layers to mechanisms and invalidation rules from the table.
+more: Covers browser headers, service worker precache, CDN edge TTL, and application-level stores such as TanStack Query.
+node: Start
+detail: Classify which assets belong in each cache layer.
+more: Versioned hashed filenames suit long immutable browser caches; dynamic API responses need shorter TTLs and explicit keys.
+node: Core steps (see walkthrough below)
+detail: Configure Cache-Control, service worker versions, CDN TTL, and app cache keys.
+more: Service workers need versioned releases with skip-waiting and cleanup of obsolete precached entries.
+node: Outcome
+detail: Faster repeat visits with bounded stale risk and traceable purge paths.
+more: CDN purge APIs and mutation invalidation in app caches keep UI freshness aligned with content changes.
+node: Note: Stale-while-revalidate:
+detail: Serves stale responses at the edge while a background refresh runs.
+more: Fits read-heavy public content when freshness rules allow brief staleness in exchange for lower latency.
+fallback_ascii: |
+  Caching strategy
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: Stale-while-revalidate:
 ```
 
 **Stale-while-revalidate:** serve stale at edge while refreshing in background—good for read-heavy public content with clear freshness rules.

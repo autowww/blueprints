@@ -33,7 +33,7 @@
     <text x="424" y="50" text-anchor="middle" fill="#fff" font-weight="700" font-size="11">Build</text>
     <text x="424" y="68" text-anchor="middle" fill="#fff" font-size="9">Artifact</text>
     <text x="544" y="50" text-anchor="middle" fill="#fff" font-weight="700" font-size="11">Gate</text>
-    <text x="544" y="68" text-anchor="middle" fill="#fff" font-size="9">Green  merge</text>
+    <text x="544" y="68" text-anchor="middle" fill="#fff" font-size="9">Green Â merge</text>
   </g>
-  <text x="340" y="88" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8.5" fill="#708090">Add scans, E2E, signing  per project; failed step blocks merge unless waived</text>
+  <text x="340" y="88" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8.5" fill="#708090">Add scans, E2E, signing   per project; failed step blocks merge unless waived</text>
 </svg>

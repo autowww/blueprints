@@ -17,7 +17,40 @@ This document defines **generic** concepts for Forge **Versonas**: taxonomy by k
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Conceptual model
+title: Versona conceptual model
+summary: How parallel Versona lanes converge on shared outcomes anchored to stable work item references.
+node: Conceptual model
+detail: The vocabulary for kinds, interfaces, processes, and sessions in this framework.
+more: Complements per-discipline Cursor templates; does not replace VERSONA-CONTRACT rule shape.
+node: Lane A
+detail: One governed path executing Versona activities toward delivery.
+more: Typically a discipline Versona running bounded activities inside a session folder.
+node: handoff
+detail: Passes summary, concerns, and artifact paths to the next actor.
+more: Handoff payload per §3.3 may include recommended next Versona or human gate.
+node: shared outcome
+detail: The artifact, decision, or gate result both lanes ultimately serve.
+more: May be a §5 report, draft under outputs/, or a process step marked complete.
+node: Lane B
+detail: A parallel path for review, routing, or inspect-and-adapt work.
+more: Often human gates, family aggregators, or challenge passes on the same work item.
+node: inspect / adapt
+detail: Pressure-tests outputs against discipline scope and the §4 severity rubric.
+more: Challenge passes use the §5 structured review shape from VERSONA-CONTRACT.
+node: feedback
+detail: Returns concerns, recommendations, or routing guidance upstream.
+more: Findings may merge into family reports or trigger Rework per §4.2.
+node: Work item reference
+detail: Stable handle linking session work to Ore, Ingot, Spark, or external IDs.
+more: This framework does not introduce a new ID scheme; teams map to existing trackers.
+fallback_ascii: |
+  Conceptual model
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
+
+  Note: Work item reference
 ```
 
 | Term | Meaning |
@@ -158,7 +191,31 @@ Use the template [`../../../templates/forge/versona-process.template.md`](../../
 
 ```blueprint-diagram
 key: sequence
-alt: Diagram
+alt: Inter-Versona interaction patterns
+title: Inter-Versona interaction flow
+summary: How actors trigger Versona work, execute bounded steps, and produce reviewable handoffs for the next session.
+node: Inter-Versona interaction patterns
+detail: The six chaining styles documented in the table above this diagram.
+more: Covers router-first, sequential handoff, parallel merge, meta plus tasklets, recipe-then-interpret, and methodology orchestrator paths.
+node: Actor / trigger
+detail: Human, routing Versona, process entry, or upstream recipe completion starts the chain.
+more: Router-first patterns invoke versona-all before two to four discipline Versonas.
+node: System step
+detail: A bounded activity owned by a Versona, tasklet, or recipe on the execution plane.
+more: Discipline overlays supply severity boundaries when meta Versonas run neutral tasklets.
+node: Outcome / handoff
+detail: Produces §5 reports, handoff payloads, or merge inputs for the next session.
+more: Consumers read outputs/ paths and may set prior_session when chaining into Versona B.
+fallback_ascii: |
+  Inter-Versona interaction patterns
+
+  Actor / trigger
+      |
+      v
+  System step
+      |
+      v
+  Outcome / handoff
 ```
 
 ---

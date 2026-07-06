@@ -48,7 +48,28 @@ The approach emerged in the late 2000s because traditional Agile teams often del
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Core structure
+title: Discovery and delivery sync
+summary: How parallel discovery and delivery tracks hand off validated work while inspect loops keep both streams governed.
+node: Core structure
+detail: Frames how the two parallel tracks synchronize on this page.
+more: Discovery reduces uncertainty; delivery reduces build risk. Each track uses different cadences, outputs, and success criteria per the comparison table above.
+node: Lane A ──► handoff ──► shared outcome
+detail: Discovery validates problems and solutions, then hands ready items to delivery.
+more: Validated hypotheses, prototypes, and experiment results become ready backlog items at SDLC Phase A → B per the backlog handoff sync point below.
+node: Lane B ──► inspect / adapt ──► feedback
+detail: Delivery builds increments and inspects shipped work against discovery evidence.
+more: Sprint review (C4 Inspect) compares delivered work to original hypotheses; post-launch P5 Grow usage data feeds the discovery track as new evidence.
+node: Note: Sync points:
+detail: Marks the governed handoff and feedback moments listed below the diagram.
+more: Backlog handoff, C4 Inspect review, and P5 Grow feedback keep discovery one to two cycles ahead without waterfall sequencing.
+fallback_ascii: |
+  Core structure
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
+
+  Note: Sync points:
 ```
 
 **Sync points:**

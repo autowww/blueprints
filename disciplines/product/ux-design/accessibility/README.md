@@ -19,7 +19,28 @@ learning_level: reference
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Accessibility implementation workflow
+title: Accessibility implementation workflow
+summary: How teams move from baseline intent through governed core steps to inclusive, verifiable product outcomes.
+node: Start
+detail: Establish accessibility as a baseline quality bar, not deferred backlog.
+more: Align with WCAG expectations and treat accessibility like security or performance: explicit targets from the outset.
+node: Core steps (see walkthrough below)
+detail: Apply standards, patterns, testing, and organizational practices from the topic guides.
+more: Walkthrough covers WCAG conformance, ARIA patterns, keyboard support, contrast, forms, and audit workflows linked in the table below.
+node: Outcome
+detail: Deliver perceivable, operable, understandable, robust experiences for all users.
+more: Outcomes are verified through automated checks, manual verification with assistive technology, and regression discipline.
+fallback_ascii: |
+  Accessibility implementation workflow
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ---

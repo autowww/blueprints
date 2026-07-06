@@ -16,7 +16,37 @@ Different audiences need different documentation forms. A developer consuming an
 
 ```blueprint-diagram
 key: decision
-alt: Diagram
+alt: Why types matter
+title: Choosing documentation type
+summary: How teams match audience, lifecycle phase, and purpose to a specific documentation form from this index.
+node: Why types matter
+detail: Frames why distinct documentation forms exist for different audiences.
+more: Mixing purposes in one document serves nobody; this index separates types so each guide targets the right readers.
+node: Current state
+detail: Capture the audience, lifecycle phase, and information need at hand.
+more: Use the type tables below to compare candidate guides, standards, and lifecycle placement before locking a format.
+node: Checkpoint / gate
+detail: Decide whether the proposed type fits audience and purpose.
+more: Ask whether developers, end users, auditors, or stakeholders will consume it—and whether reference, tutorial, or evidence is the goal.
+node: refine or escalate
+detail: Adjust the type choice or raise the question to owners.
+more: Revisit adjacent types in this index or consult DOCUMENTATION.md and the standards README before publishing under the wrong form.
+node: Continue flow
+detail: Proceed with the selected type guide and applicable standards.
+more: Open the linked type guide and standards row to create governed, reviewable content in the right lifecycle phase.
+fallback_ascii: |
+  Why types matter
+
+  Current state
+      |
+      v
+  Checkpoint / gate
+      |
+      +-- no ──► refine or escalate
+      |
+     yes
+      v
+  Continue flow
 ```
 
 ---

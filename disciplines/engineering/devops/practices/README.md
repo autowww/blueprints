@@ -17,7 +17,33 @@ DevOps practices are the **how** of continuous delivery: they turn culture and g
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Process flow
+title: DevOps practices adoption path
+summary: How teams move from shared DevOps vocabulary through core practice guides to repeatable, governed delivery workflows.
+node: Start
+detail: Align on CALMS, Three Ways, and DORA baselines from the body of knowledge.
+more: Read DEVOPS.md first so vocabulary and goals are shared before adopting any practice guide below.
+node: Core steps (see walkthrough below)
+detail: Harden CI/CD and IaC, then define SLOs and formalize incident response.
+more: Each linked guide covers principles, patterns, and maturity progression without mandating a single vendor or cloud stack.
+node: Outcome
+detail: Turn culture and goals into traceable pipelines, codified infra, and resilient response.
+more: Small batches ship safely; project-specific SLAs and pipeline definitions stay in repository documentation.
+node: Note: CI/CD pipelines
+detail: Pipeline stages, gates, and deployment strategies live in the CI/CD guide.
+more: See ci-cd.md for DORA-aligned metrics and quality gates when delivery hardening is the first priority.
+fallback_ascii: |
+  Process flow
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: CI/CD pipelines
 ```
 
 | Practice | Guide | Focus |

@@ -35,6 +35,29 @@ Use this guide after you intend to use Blueprints at the **repository root** (ne
 ```blueprint-diagram
 key: linear
 alt: First hour — submodule in place, then project sdlc, Forge, Cursor rules, optional Forge Studio
+title: First-hour onboarding flow
+summary: A bounded sequence from adopting Blueprints at repo root through workspace, Forge, and Cursor alignment.
+node: When to use it
+detail: Confirm you will place Blueprints at the repository root before starting.
+more: Use this guide after you intend Blueprints next to sdlc/, docs/, and forge/; see Adopting Blueprints for ICP paths first.
+node: Start
+detail: Gather Git, bash, Python 3, and a checkout at the repository root.
+node: Core steps (see walkthrough below)
+detail: Run submodule init, project sdlc workspace, Forge init, and Cursor rule sync.
+more: Steps 1–4 use stock scripts from blueprints/sdlc/; step 5 (Forge Studio) is optional and documented separately.
+node: Outcome
+detail: Verify each artifact exists before moving to full setup or Studio.
+more: Check blueprints/sdlc/README.md, project sdlc/README.md, forge/forge.config.yaml, and optional Cursor rule check.
+fallback_ascii: |
+  When to use it
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ## Prerequisites

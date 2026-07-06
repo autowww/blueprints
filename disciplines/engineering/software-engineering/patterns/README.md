@@ -17,7 +17,36 @@ learning_level: reference
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Pattern categories (overview)
+title: Pattern category lanes
+summary: Two parallel tracks for matching named forces to proven structures without treating the catalog as mandatory.
+node: Pattern categories (overview)
+detail: Frames how pattern families coordinate on this index page.
+more: Pattern thinking names recurring forces first; guides below route creational, structural, behavioral, and integration concerns.
+node: Lane A
+detail: The forward path from force identification toward a shared design outcome.
+node: handoff
+detail: Passes a resolved pattern concern to the next selection step.
+more: Each handoff should cite the force—change, scale, or integration—that triggered escalation from simpler modules.
+node: shared outcome
+detail: The bounded structure both lanes converge on after pattern selection.
+node: Lane B
+detail: The inspect-and-adapt path for revising pattern choice as forces clarify.
+node: inspect / adapt
+detail: Reviews applied patterns against duplication and integration pressures.
+more: Escalate per the selection table when adapters absorb domain rules or sagas dominate cross-service work.
+node: feedback
+detail: Returns selection lessons to refine the next pattern pass.
+node: Note: single-process
+detail: Scopes in-process collaboration patterns to one runtime boundary.
+more: GoF patterns address single-process collaboration; enterprise integration patterns apply when messaging crosses service boundaries.
+fallback_ascii: |
+  Pattern categories (overview)
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
+
+  Note: single-process
 ```
 
 GoF addresses **single-process** collaboration; EIP addresses **cross-service** messaging and evolution.

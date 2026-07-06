@@ -10,7 +10,32 @@
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Pattern
+title: Execution tasklet swimlanes
+summary: Cognition defines criteria and artifacts; recipes run outside the IDE and return reviewable outputs.
+node: Pattern
+detail: The split between cognition tasklets and execution recipes on this page.
+more: Cognition tasklets live under Forge tasklets in Cursor; execution tasklets are recipes that run outside the IDE LLM.
+node: Lane A
+detail: The execution plane where bounded recipes produce concrete artifacts.
+node: handoff
+detail: Cursor or CI invokes the recipe with project-specific inputs.
+more: The LLM does not replace the container; it passes inputs and later interprets returned files and exit codes.
+node: shared outcome
+detail: Expected artifacts land as files, logs, or exit codes for review.
+more: Versona or meta-agent defined inputs, success criteria, and expected paths before the run.
+node: Lane B
+detail: The review plane where Versona or human interprets run outputs.
+node: inspect / adapt
+detail: Reviewers read artifacts against the defined success criteria.
+more: The LLM interprets outputs rather than re-running the recipe; gaps trigger bounded adaptation.
+node: feedback
+detail: Findings fold back into inputs, criteria, or the next recipe invocation.
+fallback_ascii: |
+  Pattern
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
 ```
 
 ## Example manifest (conceptual)

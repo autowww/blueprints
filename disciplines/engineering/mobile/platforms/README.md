@@ -15,7 +15,37 @@ learning_level: reference
 
 ```blueprint-diagram
 key: decision
-alt: Diagram
+alt: Process flow
+title: Platform strategy decision gate
+summary: How teams review mobile platform choices against current constraints before committing to a stack in ADRs.
+node: Process flow
+detail: The governed path for evaluating and locking a mobile platform strategy.
+more: Frames platform choice as a product and staffing decision, not only a technical one, before guides and ADRs are applied.
+node: Current state
+detail: Capture existing stacks, team skills, and product constraints.
+more: Inventory native fidelity needs, cross-platform velocity goals, and integration depth against the platform guides in this index.
+node: Checkpoint / gate
+detail: Verify alignment among engineering leads, mobile chapter, and architects.
+more: The gate confirms tradeoffs—OS access, shared velocity, framework lag—are understood before locking choices in ADRs.
+node: refine or escalate
+detail: Rework options or raise the decision when the gate is not met.
+more: Unresolved tradeoffs return to the native or cross-platform guides, or escalate for broader staffing and product input.
+node: Continue flow
+detail: Proceed with the chosen platform path into project documentation.
+more: Record the decision in docs/adr/ and keep platform-specific configuration under docs/development/mobile/, not in this blueprint.
+fallback_ascii: |
+  Process flow
+
+  Current state
+      |
+      v
+  Checkpoint / gate
+      |
+      +-- no ──► refine or escalate
+      |
+     yes
+      v
+  Continue flow
 ```
 
 ## Platform guides

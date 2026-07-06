@@ -35,7 +35,38 @@ Distributed systems integrate when **autonomy**, **latency tolerance**, and **fa
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Producer → channel → router → transformer → consumer
+title: EIP messaging pipeline
+summary: How a producer message travels through decoupled channels, routing, and transformation to a consumer.
+node: Producer
+detail: Application or service that emits a self-contained message with headers and payload.
+more: The producer owns sender semantics and does not need to know which consumer will process the work.
+node: channel
+detail: Logical path that buffers messages between sender and receiver.
+more: Point-to-point queues, pub/sub topics, and partitions are channel shapes with different delivery contracts.
+node: router
+detail: Decides the next hop from message content or routing context.
+more: Content-based routers, splitters, and aggregators live here; middleware and domain tiers may share this role.
+node: transformer
+detail: Maps payload shape or protocol at integration boundaries.
+more: Translators act as anti-corruption layers, normalizing heterogeneous formats to an internal model.
+node: consumer
+detail: Endpoint that receives and processes the message from the channel.
+more: Polling consumers, event-driven listeners, and competing consumers are common endpoint patterns.
+fallback_ascii: |
+  Producer
+      |
+      v
+  channel
+      |
+      v
+  router
+      |
+      v
+  transformer
+      |
+      v
+  consumer
 ```
 
 In practice, **router** and **translator** may live in the same service (integration tier) or be split across **middleware** and **domain** layers.
@@ -163,7 +194,36 @@ Exact features change with cloud revisions — treat this table as a **conversat
 
 ```blueprint-diagram
 key: sequence
-alt: Diagram
+alt: Saga: choreography vs orchestration
+title: Orchestrated saga sequence
+summary: A coordinator drives multi-step saga progress through explicit commands and tracked state.
+node: Saga: choreography vs orchestration
+detail: Frames centralized coordination against event-driven peer reactions.
+more: Orchestration uses a coordinator to command each step; choreography replaces those commands with domain events each service subscribes to.
+node: Actor / trigger
+detail: External or internal event that starts the distributed transaction.
+more: A user action, timer, or upstream message invokes the saga coordinator to begin the first step.
+node: System step
+detail: One saga participant executes work and reports its outcome.
+more: The orchestrator issues the next command based on acknowledgements from prior participants.
+node: Outcome / handoff
+detail: Result passed to the next saga step or compensation path.
+more: Success advances the saga; failure triggers explicitly designed compensations rather than implicit rollback.
+node: Note: domain events
+detail: Choreographed variants replace direct commands with published events.
+more: Each service reacts to events it cares about; compensations remain explicitly designed, not automatic.
+fallback_ascii: |
+  Saga: choreography vs orchestration
+
+  Actor / trigger
+      |
+      v
+  System step
+      |
+      v
+  Outcome / handoff
+
+  Note: domain events
 ```
 
 Choreographed sagas replace the `O` messages with **domain events** each service subscribes to; compensations are still **explicitly designed**, not magical.
@@ -172,7 +232,36 @@ Choreographed sagas replace the `O` messages with **domain events** each service
 
 ```blueprint-diagram
 key: sequence
-alt: Diagram
+alt: Saga: choreography vs orchestration
+title: Choreographed saga sequence
+summary: Services advance a distributed transaction by reacting to peer events without a central coordinator.
+node: Saga: choreography vs orchestration
+detail: Frames event-driven peer reactions against centralized saga coordination.
+more: In choreography, no single orchestrator object exists; each service subscribes to domain events and reacts independently.
+node: Actor / trigger
+detail: External or internal event that starts the distributed transaction.
+more: The initiating service publishes an event; downstream participants react when they observe it on their channels.
+node: System step
+detail: One saga participant executes work and publishes its outcome.
+more: Each service owns its step; progress spreads through events rather than commands from a coordinator.
+node: Outcome / handoff
+detail: Result emitted as an event for the next participant to observe.
+more: Success propagates via domain events; failure triggers explicitly designed compensations published the same way.
+node: Note: correlation IDs
+detail: Trace identifiers link scattered steps into one reviewable process.
+more: Without a central orchestrator to inspect, correlation IDs and process views become critical for observability.
+fallback_ascii: |
+  Saga: choreography vs orchestration
+
+  Actor / trigger
+      |
+      v
+  System step
+      |
+      v
+  Outcome / handoff
+
+  Note: correlation IDs
 ```
 
 Observability becomes critical: you need **correlation IDs** and **process views** because there is no single orchestrator object to inspect.

@@ -36,7 +36,37 @@ Cross-platform stacks trade **some platform fidelity and integration latency** f
 
 ```blueprint-diagram
 key: decision
-alt: Diagram
+alt: Decision flowchart
+title: Cross-platform stack decision
+summary: How teams gate RN, Flutter, KMP, hybrid, or PWA choices against performance, skills, and native surface needs.
+node: Decision flowchart
+detail: Frames cross-platform selection against the taxonomy and comparison tables on this page.
+more: Platform fidelity, integration latency, and shared ownership tradeoffs precede framework-specific deep dives below.
+node: Current state
+detail: Capture performance needs, team skills, native APIs, and maintenance appetite.
+more: Inventory camera, Bluetooth, widgets, and OS integration depth against the approach taxonomy before shortlisting stacks.
+node: Checkpoint / gate
+detail: Verify the candidate stack meets fidelity, access, and velocity constraints.
+more: Confirm bridge cost, plugin lag, and hiring pool fit align with product goals and MOBILE.md platform strategy factors.
+node: refine or escalate
+detail: Rework options or escalate when the gate fails on a hard constraint.
+more: Revisit native paths, narrow the pilot scope, or involve architects when bleeding-edge APIs or performance dominate.
+node: Continue flow
+detail: Proceed with the chosen cross-platform path into pilots and documentation.
+more: Pilot one feature with a shared API boundary; record the decision in docs/adr/ per migration guidance on this page.
+fallback_ascii: |
+  Decision flowchart
+
+  Current state
+      |
+      v
+  Checkpoint / gate
+      |
+      +-- no ──► refine or escalate
+      |
+     yes
+      v
+  Continue flow
 ```
 
 ---
@@ -104,7 +134,32 @@ alt: Diagram
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Cross-platform architecture layers
+title: Shared and platform-specific layers
+summary: How shared domain and UI code hands off to platform adapters while a review lane catches boundary leaks.
+node: Cross-platform architecture layers
+detail: Entry framing what to share versus keep platform-specific on this page.
+more: Domain, API clients, and navigation often share; secure enclave access and HIG or Material nuances stay native.
+node: Lane A
+detail: Primary path from shared logic and UI toward a cross-platform outcome.
+more: RN and Flutter carry UI plus logic; KMP typically shares commonMain domain while UI remains per platform.
+node: handoff
+detail: Contracts cross expect/actual, bridges, or platform channels at layer boundaries.
+more: DTO mapping, storage abstractions, and module interfaces keep transport details out of shared use cases.
+node: shared outcome
+detail: Delivered features with aligned shared contracts across iOS and Android targets.
+node: Lane B
+detail: Parallel lane inspecting platform fidelity and integration fit.
+node: inspect / adapt
+detail: Detect bridge overuse, plugin gaps, or UI that ignores platform conventions.
+more: Anti-patterns on this page—ignoring HIG or Material, overusing bridges—signal when layers need tightening before release.
+node: feedback
+detail: Bounded boundary adjustments feed back into shared module design.
+fallback_ascii: |
+  Cross-platform architecture layers
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
 ```
 
 ---

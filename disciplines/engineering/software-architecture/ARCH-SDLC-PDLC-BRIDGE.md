@@ -84,7 +84,29 @@ Architecture provides the structural reasoning that connects product vision (PDL
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: How architecture connects PDLC and SDLC
+title: Architecture lifecycle bridge
+summary: How structural reasoning links validated product direction to governed delivery increments and traceable feedback.
+node: How architecture connects PDLC and SDLC
+detail: Frames architecture as the bridge between product vision and technical execution.
+more: Without this bridge, products may be validated but poorly built, or well-coded but structurally unsound.
+node: Lane A ──► handoff ──► shared outcome
+detail: PDLC hands product intent and success criteria into shared structural outcomes.
+more: Feasibility notes, NFR catalogs, and options papers at P2–P3 become constraints delivery honors across increments.
+node: Lane B ──► inspect / adapt ──► feedback
+detail: SDLC inspects delivery evidence and adapts structure from field learnings.
+more: Phase E NFR results, incidents, and PR themes feed ADR updates, fitness functions, and debt registers.
+node: Note: | Discover Problem |
+detail: Entry at P1 where architecture stays minimally active.
+more: The lifecycle table marks P1 as passive context awareness—existing constraints surface without heavy design work yet.
+fallback_ascii: |
+  How architecture connects PDLC and SDLC
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
+
+  Note: | Discover Problem |
+  |
 ```
 
 ### PDLC phases (reference)

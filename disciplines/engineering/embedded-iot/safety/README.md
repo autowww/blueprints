@@ -17,7 +17,36 @@ learning_level: reference
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Process flow
+title: Safety standards reading path
+summary: How teams move from harm-aware context to a governed standard deep dive with auditable lifecycle evidence.
+node: Process flow
+detail: Conceptual map for navigating this safety standards index.
+more: Orients readers before they commit to a domain-specific standard or project safety documentation.
+node: Start
+detail: Begin when failure could harm people, property, or the environment.
+more: Confirm functional-safety stakes and regulated market access needs using EMBEDDED-IOT and the IoT SDLC bridge.
+node: Core steps (see walkthrough below)
+detail: Match the domain to a standard and open its deep dive.
+more: The table below maps IEC 61508, ISO 26262, DO-178C, IEC 62304, MISRA, and EN 50128 to scope and integrity levels.
+node: Outcome
+detail: Clear scope, integrity level, and phase activities for reviewable delivery.
+more: Each guide covers analysis through traceability, tool qualification, and common pitfalls by SDLC phase.
+node: Note: IEC 61508
+detail: IEC 61508 supplies cross-domain functional-safety vocabulary.
+more: General E/E/PE standard with SIL 1–4 and V-model lifecycle; see iec-61508.md for failure-mode depth.
+fallback_ascii: |
+  Process flow
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: IEC 61508
 ```
 
 | Standard | Domain | Focus | Deep dive |

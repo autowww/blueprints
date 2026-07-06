@@ -21,7 +21,28 @@ learning_level: reference
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: SEO workflow
+title: SEO organic acquisition workflow
+summary: How technical foundations, keyword research, and content compound into sustained organic discovery and conversion.
+node: Start
+detail: Establish SEO fundamentals audit and priority keyword clusters by intent.
+more: Map on-page, technical, and off-page gaps before writing; align clusters to ICP jobs and differentiation.
+node: Core steps (see walkthrough below)
+detail: Execute keyword research, content production, and technical fixes iteratively.
+more: Sections below cover intent mapping, Search Console loops, pillar content, structured data, and internal linking discipline.
+node: Outcome
+detail: Discoverable pages rank for priority intents and support conversions.
+more: Measure organic traffic, cluster rankings, CTR, engagement, and assisted conversions—not vanity reach alone.
+fallback_ascii: |
+  SEO workflow
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ## Keyword research
@@ -73,7 +94,28 @@ alt: Diagram
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Topic cluster model
+title: Topic cluster content model
+summary: How a pillar page and linked cluster posts build topical authority without keyword cannibalization.
+node: Start
+detail: Define three to five content pillars from ICP jobs and differentiation.
+more: Each pillar anchors a broad theme; map primary keyword clusters and CTAs before drafting assets.
+node: Core steps (see walkthrough below)
+detail: Publish a pillar page and cluster posts with governed internal links.
+more: Cluster posts answer specific sub-queries; links flow authority to the pillar and help crawlers navigate depth.
+node: Outcome
+detail: Topic authority compounds through internal linking and searchable depth.
+more: Hub maintenance and refresh cycles keep pillars current as new cluster content ships and SERPs shift.
+fallback_ascii: |
+  Topic cluster model
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ## Technical SEO checklist

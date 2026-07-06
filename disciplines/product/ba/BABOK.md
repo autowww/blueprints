@@ -25,7 +25,40 @@ This document maps the six **knowledge areas** defined by the [BABOK Guide v3](h
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Knowledge areas overview
+title: BABOK knowledge areas flow
+summary: How the six BABOK knowledge areas hand off outcomes while governance and feedback loops stay traceable across PDLC and SDLC.
+node: Knowledge areas overview
+detail: Frames the six IIBA knowledge areas mapped in this guide.
+more: Each area has a core question, key outputs, and a deeper guide under knowledge-areas/ linked from the summary table below.
+node: Lane A
+detail: Primary BA work stream from strategy through solution definition.
+more: Carries elicitation, requirements analysis, and design activities that produce specs and models for delivery teams.
+node: handoff
+detail: Passes confirmed artifacts to the next knowledge area or lifecycle phase.
+more: Outputs such as traced requirements or design definitions become inputs for downstream SDLC specification and PDLC validation work.
+node: shared outcome
+detail: Deliverables both lifecycles consume as governed intent.
+more: Vision, requirements, and evaluation artifacts land in docs/product/ and docs/requirements/ per the classification tables on this page.
+node: Lane B
+detail: Parallel stream for inspection, adaptation, and stakeholder feedback.
+more: Supports iterative refinement when elicitation surfaces new needs or solution evaluation reveals gaps against expected value.
+node: inspect / adapt
+detail: Reviews BA performance and adjusts the engagement approach.
+more: Applies techniques from BA Planning and Monitoring to rebaseline scope, stakeholder engagement, or elicitation plans when evidence warrants change.
+node: feedback
+detail: Returns measured results and stakeholder input to earlier areas.
+more: Solution Evaluation findings and collaboration signals can reopen requirements life cycle management or strategy analysis without losing traceability.
+node: Note: BA Planning & Monitoring
+detail: Governance layer scoped across every knowledge area on the initiative.
+more: Defines the BA plan, stakeholder engagement approach, and performance metrics that bound how Lane A and Lane B execute; see knowledge-areas/ba-planning-monitoring.md.
+fallback_ascii: |
+  Knowledge areas overview
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
+
+  Note: BA Planning & Monitoring
 ```
 
 ### Summary table

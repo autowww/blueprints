@@ -42,7 +42,28 @@ Sections **build on each other**: constraints and context inform solution strate
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: arc42 structure — relationships (overview)
+title: arc42 section relationships
+summary: How arc42 sections build on each other into one coherent architecture description.
+node: Start
+detail: Begin with introduction, goals, and stakeholder context in section one.
+more: Section one anchors why the system exists before constraints and scope bound the design space.
+node: Core steps (see walkthrough below)
+detail: Develop context, views, decisions, and quality through the twelve sections.
+more: Constraints and context inform solution strategy; building blocks and runtime views explain how quality goals are met.
+node: Outcome
+detail: Produce a maintainable, reviewable architecture document for the system.
+more: The template yields one coherent site or document maintained alongside the system in version control.
+fallback_ascii: |
+  arc42 structure — relationships (overview)
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ---
@@ -78,7 +99,33 @@ arc42 encourages tying **quality attributes** to **measurable scenarios**:
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Quality tree and scenarios (§10)
+title: Quality tree traceability
+summary: Tie quality attributes to scenarios and architecture for traceable NFR coverage in section ten.
+node: Start
+detail: Pick a quality attribute that matters for this system.
+more: Ask which "-ility" matters before writing scenarios so section ten stays grounded in real goals.
+node: Core steps (see walkthrough below)
+detail: Define measurable scenarios and map them to building blocks.
+more: Each scenario names stimulus, environment, and measure; the table below links attributes to architecture choices.
+node: Outcome
+detail: Connect section one goals with sections five through seven and section nine decisions.
+more: One traceable story shows how views and ADRs realize the quality goals stated upfront.
+node: Note: Quality attribute
+detail: Anchor every scenario on a concrete attribute from the quality tree.
+more: arc42 encourages a quality tree so reviewers see which attributes drive design and deployment choices.
+fallback_ascii: |
+  Quality tree and scenarios (§10)
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: Quality attribute
 ```
 
 | Step | Question |

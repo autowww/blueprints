@@ -35,7 +35,31 @@ Owner type values: `Human` | `Versona:discipline` | `Versona:routing` | `Versona
 
 ```blueprint-diagram
 key: sequence
-alt: Diagram
+alt: Flow
+title: Versona process sequence
+summary: How an entry trigger advances through governed owner steps to a traceable outcome handoff.
+node: Flow
+detail: Names the bounded process this template documents.
+more: Link from SESSION.md process_id so each Versona session maps to one reviewable flow definition.
+node: Actor / trigger
+detail: A ceremony, gate, or event starts the process.
+more: Entry triggers are declared at the top of the template so prerequisites and ownership stay explicit before work begins.
+node: System step
+detail: Human, Versona, or tasklet work executes the step table.
+more: Owner types include Human, Versona:discipline, Versona:routing, Versona:meta, Tasklet, and Recipe per the Steps section.
+node: Outcome / handoff
+detail: Produces artifacts, decisions, or Ember Log entries for downstream use.
+more: Outputs feed the next process, Assay Gate, or release path listed under Downstream consumers.
+fallback_ascii: |
+  Flow
+
+  Actor / trigger
+      |
+      v
+  System step
+      |
+      v
+  Outcome / handoff
 ```
 
 ## Outputs

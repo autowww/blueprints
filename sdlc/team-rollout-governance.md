@@ -40,7 +40,18 @@ Whenever more than a one-off email is needed to keep adoption healthy.
 ```blueprint-diagram
 key: roadmap
 alt: Pilot one anchor, expand with office hours, then standardize on golden SHA
+title: Phased Blueprints rollout wave
+summary: Move from one anchor repo through broader adoption to a governed golden SHA baseline with office hours.
 expand: true
+node: [ Pilot ]
+detail: Validate adoption in one anchor repo before scaling org-wide.
+more: One squad proves setup checklist verify steps pass without one-off forks in frozen blueprints text.
+node: [ Expand ]
+detail: Onboard more repos with the same pin and ritual scripts.
+more: Teams document where baseline blueprints text ends and project-specific sdlc overrides begin.
+node: [ Standardize ]
+detail: Publish golden SHA and hold office hours for submodule bumps.
+more: New services reach parity without custom blueprints edits; bumps follow the shared updating submodule ritual.
 fallback_ascii: |
   Week 0–2        Week 3–6         Steady state
  [ Pilot ]  -->  [ Expand ]  -->  [ Standardize ]

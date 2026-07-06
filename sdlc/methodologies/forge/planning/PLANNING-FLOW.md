@@ -13,7 +13,35 @@ This document describes the complete pipeline from a product vision through busi
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: The pipeline
+title: Vision to Charge planning pipeline
+summary: How business drivers, Product Sparks, and Forge iterations advance through handoffs and inspect-and-adapt feedback to daily Charge execution.
+node: The pipeline
+detail: Frames the full path from vision through drivers, Sparks, and iterations.
+more: Levels 1–3 below map business drivers to Product Sparks, Forge iterations, and Ore through Charge with ceremonies at each boundary.
+node: Lane A
+detail: The forward planning path from strategic intent to bounded iteration outcomes.
+more: Business drivers from PDLC P1–P3 decompose into Product Sparks; each Spark scopes one or more Forge iterations toward shippable evidence.
+node: handoff
+detail: Explicit transfer when planning level or hat ownership changes.
+more: Product hat leads drivers-to-Sparks and refinement; Engineering hat leads Spark decomposition and Charge pulls per the ceremony table.
+node: shared outcome
+detail: The traceable scope and evidence each planning level must leave behind.
+more: Product Sparks lock approach and duration; iterations produce Ingots, Sparks, and Assay evidence aligned to WBS milestones.
+node: Lane B
+detail: The parallel inspect-and-adapt path across planning ceremonies.
+more: Refinement, planning, daily sync, review, and Assay Gate inspect work against acceptance criteria before release decisions.
+node: inspect / adapt
+detail: Ceremonies and Versona sessions refine scope when evidence shifts.
+more: Review assesses iteration evidence; Assay Gate governs release; Retro feeds new Ore so learnings reopen intake without losing context.
+node: feedback
+detail: Learnings loop back into Ore intake and upstream planning.
+more: Ore captures ideas, defects, and learnings continuously; retro output informs the next Product Spark or iteration scope.
+fallback_ascii: |
+  The pipeline
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
 ```
 
 ## Level 1: Business Drivers → Product Sparks

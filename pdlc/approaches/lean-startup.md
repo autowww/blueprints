@@ -32,7 +32,30 @@ The core insight: the biggest risk in product development is not building it wro
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Core structure
+title: Build-Measure-Learn loop
+summary: How Lean Startup turns hypotheses into validated learning through bounded build-measure-learn cycles.
+node: Start
+detail: Begin with a falsifiable hypothesis about customer value or problem fit.
+more: Each cycle starts from what you need to learn next, not from a fixed roadmap or feature backlog.
+node: Core steps (see walkthrough below)
+detail: Run Build, then Measure, then Learn on the smallest viable experiment.
+more: Build produces an MVP or experiment; Measure collects actionable evidence; Learn confirms or refutes the hypothesis for pivot or persevere decisions.
+node: Outcome
+detail: Exit with validated learning that informs the next cycle or gate decision.
+more: Outcomes feed PDLC P1–P2 experiments and Gate G2 pivot-or-persevere criteria using evidence, not vanity metrics.
+fallback_ascii: |
+  Core structure
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: Direction of execution:
 ```
 
 **Direction of execution:** Build → Measure → Learn.

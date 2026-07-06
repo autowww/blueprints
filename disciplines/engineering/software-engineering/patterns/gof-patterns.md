@@ -33,14 +33,54 @@ The *Gang of Four* catalog ([Gamma et al.](https://en.wikipedia.org/wiki/Design_
 
 ```blueprint-diagram
 key: network
-alt: Diagram
+alt: Creational patterns
+title: Builder stepwise construction
+summary: How the Builder pattern assembles a complex object through optional, reviewable configuration steps.
+node: Creational patterns
+detail: The creational category covers flexible object-creation approaches on this page.
+node: Root / intake
+detail: The director or client starts construction with required base settings.
+more: Builder separates the step-by-step assembly from the final product so callers configure many optional fields without subclass explosion.
+node: branch A
+detail: One optional build step adds a facet of the complex object.
+node: branch B
+detail: Another optional step extends configuration through the same builder interface.
+node: branch C
+detail: A further optional step completes nested or variant fields before build returns the product.
+fallback_ascii: |
+  Creational patterns
+
+  Root / intake
+      +-- branch A
+      +-- branch B
+      +-- branch C
 ```
 
 ### Factory Method (class structure)
 
 ```blueprint-diagram
 key: network
-alt: Diagram
+alt: Creational patterns
+title: Factory Method extension hook
+summary: How a framework defers concrete product choice to subclasses through a bounded creation hook.
+node: Creational patterns
+detail: The creational category groups patterns that flex how objects are instantiated.
+node: Root / intake
+detail: The framework client requests a product through the abstract creator interface.
+more: The superclass declares the factory method; each concrete subclass decides which product type to instantiate.
+node: branch A
+detail: One subclass hook supplies a concrete product variant for this extension point.
+node: branch B
+detail: Another subclass hook offers an alternate product without changing client code.
+node: branch C
+detail: A third subclass hook covers additional plugin or vendor shapes at the same seam.
+fallback_ascii: |
+  Creational patterns
+
+  Root / intake
+      +-- branch A
+      +-- branch B
+      +-- branch C
 ```
 
 ---
@@ -99,7 +139,39 @@ alt: Diagram
 
 ```blueprint-diagram
 key: decision
-alt: Diagram
+alt: Pattern selection flowchart
+title: GoF pattern first triage
+summary: A bounded checkpoint for deciding whether a named GoF pattern fits before adding indirection.
+node: Pattern selection flowchart
+detail: Frames pattern selection as governed triage on this reference page.
+node: Current state
+detail: Capture the design problem, forces, and simpler options already considered.
+node: Checkpoint / gate
+detail: Ask whether the force recurs and simpler fixes are insufficient.
+more: Aligns with the YAGNI reminder: reach for a named pattern when duplication proves the force, not for one-off code.
+node: refine or escalate
+detail: Loop back to clarify requirements or seek review when the gate fails.
+more: Many issues resolve with a function, a data record, or a module boundary before any named pattern.
+node: Continue flow
+detail: Proceed to choose a specific GoF pattern from the catalog tables above.
+node: Note: first triage
+detail: This flow is guidance only, not a mandate to apply patterns.
+more: Named patterns carry indirection and vocabulary cost; document the choice in reviews when adopted.
+fallback_ascii: |
+  Pattern selection flowchart
+
+  Current state
+      |
+      v
+  Checkpoint / gate
+      |
+      +-- no ──► refine or escalate
+      |
+     yes
+      v
+  Continue flow
+
+  Note: first triage
 ```
 
 Use this as a **first triage**, not a mandate — many issues resolve with a function, a data record, or a module boundary before a named pattern.

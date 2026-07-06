@@ -56,6 +56,30 @@ Use this hub when you are ready to run scripts at the **repository root** next t
 ```blueprint-diagram
 key: board
 alt: Adopting Blueprints or first hour first; full setup profile when standardizing; Forge Studio optional for local Studio and Wizard
+title: Quickstart selection flow
+summary: Choose a bounded onboarding path from this hub based on role, urgency, and whether you need local Studio.
+node: Selection matrix
+detail: Compare quickstarts by time, outcome, and prerequisite on this page.
+more: The matrix links First hour, Forge Studio, and the full Project setup profile so you can match scope before running commands.
+node: Root / intake
+detail: Confirm repo-root layout and baseline tooling before leaving the hub.
+more: Prerequisites are Git, bash, Python 3, and a checkout where blueprints/ can live; read Adopting Blueprints first if process depth is still unclear.
+node: branch A
+detail: Start with Adopting Blueprints or the First hour quickstart.
+more: Use Adopting Blueprints when role or org size drives how much process to adopt; use First hour when you are ready to run verified commands today (~60 min).
+node: branch B
+detail: Follow the Project setup profile when standardizing team or template repos.
+more: SETUP.md is the multi-session ordered checklist beyond the first hour, including optional product-led steps.
+node: branch C
+detail: Add Forge Studio after your product repo baseline works.
+more: The forge-studio quickstart installs optional forge-lenses locally for /studio/ UI and Wizard; it is a companion product, not inside blueprints/.
+fallback_ascii: |
+  Selection matrix
+
+  Root / intake
+      +-- branch A
+      +-- branch B
+      +-- branch C
 ```
 
 ## Steps

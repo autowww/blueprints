@@ -55,6 +55,36 @@ The decision guide above maps three situations to paths A, B, and C. Use it befo
 ```blueprint-diagram
 key: decision
 alt: Adoption path choice — match your situation to path A, B, or C from the table above
+title: Adoption path decision flow
+summary: Match your team and governance situation to path A, B, or C before deep-reading methodology folders.
+node: Decision guide
+detail: Entry point for choosing which Blueprints adoption slice fits you.
+more: Answer the table rows in order; the first matching situation is usually your starting path.
+node: Current state
+detail: Assess team size, ceremony needs, and upstream governance scope.
+more: Solo baseline work, multi-repo vocabulary alignment, and platform corpus maintenance each imply a different path.
+node: Checkpoint / gate
+detail: Check whether a decision-guide row matches your situation.
+more: The table maps three situations to paths A, B, and C; stop at the first yes.
+node: refine or escalate
+detail: Step back when no row clearly fits yet.
+more: Re-read prerequisites, confirm submodule basics, or involve a lead before forcing a path choice.
+node: Continue flow
+detail: Proceed to the chosen path page and first-hour or setup checklist.
+more: Deep dives live in path A, B, or C pages plus quickstarts and the project setup profile.
+fallback_ascii: |
+  Decision guide
+
+  Current state
+      |
+      v
+  Checkpoint / gate
+      |
+      +-- no ──► refine or escalate
+      |
+     yes
+      v
+  Continue flow
 ```
 
 ## What changes vs what stays frozen

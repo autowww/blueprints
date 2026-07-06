@@ -23,7 +23,33 @@ Offline-first means the app **reads and writes against local storage first**, th
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Offline-first architecture
+title: Offline-first architecture flow
+summary: How the app serves reads and writes from local storage while a sync engine reconciles with the server.
+node: Start
+detail: User actions read and write against local storage first.
+more: The UI observes local state immediately; network reachability does not block primary interactions.
+node: Core steps (see walkthrough below)
+detail: Local persistence, queued writes, and bounded sync cycles run in the background.
+more: Covers connectivity states, storage choice, sync strategy, conflict rules, and queue retries described in this guide.
+node: Outcome
+detail: Local and server replicas converge to a reviewable, consistent state.
+more: Users see clear sync indicators; unresolved conflicts surface for manual resolution when merge rules cannot decide.
+node: Note: sync engine
+detail: A dedicated component owns scheduling, retries, and conflict detection.
+more: Separates sync mechanics from UI so retries, deduplication, and backoff stay traceable and testable.
+fallback_ascii: |
+  Offline-first architecture
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: sync engine
 ```
 
 The **sync engine** owns scheduling, retries, deduplication, and conflict detection; the **UI** observes local state.
@@ -70,7 +96,28 @@ Use **combined signals**: OS reachability plus **active probes** (lightweight HE
 
 ```blueprint-diagram
 key: sequence
-alt: Diagram
+alt: Conflict resolution sequence
+title: Conflict resolution sequence
+summary: How divergent local and server versions are detected, ruled on, and handed back to the user or sync layer.
+node: Actor / trigger
+detail: A concurrent edit, failed merge, or sync pull surfaces conflicting versions.
+more: Detection may occur during background sync, reconnect, or when comparing client and server timestamps or versions.
+node: System step
+detail: Apply the chosen resolution pattern—LWW, merge, manual, OT, or CRDT.
+more: Pattern choice depends on field type, trust in server clock, and whether independent edits can merge without user input.
+node: Outcome / handoff
+detail: Persist the resolved record or present a conflict UI for manual choice.
+more: Manual resolution suits legal or financial text; automated patterns need an audit trail when sync resumes.
+fallback_ascii: |
+  Conflict resolution sequence
+
+  Actor / trigger
+      |
+      v
+  System step
+      |
+      v
+  Outcome / handoff
 ```
 
 ---

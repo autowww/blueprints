@@ -19,7 +19,31 @@ Feature engineering is the **bridge** between domain data and learning algorithm
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Overview
+title: Feature engineering overview
+summary: How raw domain data becomes governed model inputs with consistent train and serve behavior.
+node: Overview
+detail: Frames feature engineering as the bridge between raw data and learning algorithms.
+more: Good features compress signal, respect causality and leakage rules, and behave consistently in training and serving.
+node: Start
+detail: Begin from raw domain data ready for transformation into model inputs.
+more: Teams anchor work in DATA-SCIENCE.md and the techniques in this reference before binding project-specific pipelines.
+node: Core steps (see walkthrough below)
+detail: Apply encodings, temporal and text features, selection, and store patterns.
+more: Later sections cover numerical and categorical techniques, feature stores, automation, and anti-patterns.
+node: Outcome
+detail: Produce reviewable features that train and serve without leakage or skew.
+more: Outcomes include consistent definitions across offline backfills and online serving paths.
+fallback_ascii: |
+  Overview
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ---
@@ -107,7 +131,28 @@ Always enforce **temporal splits** and **point-in-time** feature availability wh
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Feature store architecture
+title: Feature store architecture
+summary: How offline historical stores and online serving paths share governed definitions for train-serve consistency.
+node: Feature store architecture
+detail: Frames the dual offline and online store split on this page.
+more: Feature stores centralize definitions so training snapshots and live serving use the same feature logic.
+node: Lane A ──► handoff ──► shared outcome
+detail: Offline paths backfill history and hand off training-ready snapshots.
+more: Historical backfills, training snapshots, and analytics consume offline materializations with point-in-time correctness.
+node: Lane B ──► inspect / adapt ──► feedback
+detail: Online paths serve live keys with freshness matching training assumptions.
+more: Serving must match definitions and freshness used in training; drift or skew breaks model behavior silently.
+node: Note: Offline:
+detail: Labels the offline historical and analytics materialization lane.
+more: Offline stores support historical backfills, training snapshots, and analytics separate from the low-latency serving path.
+fallback_ascii: |
+  Feature store architecture
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
+
+  Note: Offline:
 ```
 
 - **Offline:** Historical backfills, training snapshots, analytics.

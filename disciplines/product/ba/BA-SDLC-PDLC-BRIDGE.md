@@ -40,7 +40,40 @@ BA is the discipline that feeds both lifecycles with structured understanding of
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: The three-discipline model
+title: Three-discipline lifecycle model
+summary: How BA, PDLC, and SDLC coordinate to validate problems, specify needs, and deliver measurable outcomes.
+node: The three-discipline model
+detail: Frames how BA, PDLC, and SDLC relate across an initiative.
+more: BA supplies structured needs and evaluation; PDLC validates the right product; SDLC governs correct delivery.
+node: Lane A
+detail: The primary path from needs analysis to delivery handoff.
+more: BA activities upstream feed PDLC strategy and SDLC specification with traceable requirements artifacts.
+node: handoff
+detail: Transfers baselined understanding into product and delivery work.
+more: Solution scope and requirements packages cross from BA into PDLC stage gates and SDLC phases A–B.
+node: shared outcome
+detail: Measurable value when all three disciplines align on the same goals.
+more: Validated problems become well-specified, well-built solutions that stakeholders can evaluate against business objectives.
+node: Lane B
+detail: Parallel feedback loop that inspects progress and adapts plans.
+more: PDLC usage data and SDLC test results flow back into BA solution evaluation and change assessment.
+node: inspect / adapt
+detail: Reviews evidence from delivery and market against stated needs.
+more: Solution evaluation, requirements changes, and P5 metrics inform whether scope and specifications still fit reality.
+node: feedback
+detail: Returns findings to upstream planning and requirements work.
+more: Keeps requirements current and traces gaps between expected and actual value across lifecycles.
+node: Note: Core question
+detail: Each discipline anchors on its governing question throughout the initiative.
+more: BA asks what stakeholders need; PDLC asks whether it is the right product; SDLC asks how to build it correctly.
+fallback_ascii: |
+  The three-discipline model
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
+
+  Note: Core question
 ```
 
 | Dimension | BA | PDLC | SDLC |

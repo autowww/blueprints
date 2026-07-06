@@ -69,7 +69,26 @@ Code review hint: any **manual `subscribe` inside `subscribe`** deserves a secon
 
 ```blueprint-diagram
 key: sequence
-alt: Diagram
+alt: Sequence: source → operators → subscriber (with backpressure)
+title: Reactive stream pipeline
+summary: How producers, operator chains, and subscribers move events while honoring sink demand and backpressure contracts.
+node: Sequence: source
+detail: Produces typed next, error, and complete events for the stream.
+more: Cold sources start fresh per subscription; hot sources multicast shared emissions to every attached subscriber.
+node: operators
+detail: Transforms, filters, and combines events as composable async stages.
+more: map, switchMap, and merge express nested async logic without manual subscribe-inside-subscribe patterns.
+node: subscriber (with backpressure)
+detail: Consumes outcomes and signals how fast the source may emit.
+more: Slow sinks request fewer items via library-specific APIs; explicit buffers accept memory risk when bursts outrun consumption.
+fallback_ascii: |
+  Sequence: source
+      |
+      v
+  operators
+      |
+      v
+  subscriber (with backpressure)
 ```
 
 Exact backpressure APIs differ by library (Reactive Streams `request(n)`, Kotlin `Flow` collectors, etc.), but the **contract** is the same: *don’t outrun the sink unless you explicitly buffer and accept memory risk*.

@@ -50,7 +50,20 @@ Evaluation is not a single step at the end of modeling; it is a **system** of ch
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Confusion matrix → metrics
+title: Confusion matrix to metrics
+summary: How predicted versus actual counts become reviewable classification scores for model comparison.
+node: Confusion matrix
+detail: Tabulates true positives, false positives, true negatives, and false negatives from predictions.
+more: Each cell counts instances where predicted labels meet or miss actual labels at a chosen threshold.
+node: metrics
+detail: Derives precision, recall, F1, and related scores from matrix counts.
+more: For probabilistic classifiers, metrics apply at a threshold or integrate across thresholds via ROC or PR curves.
+fallback_ascii: |
+  Confusion matrix
+      |
+      v
+  metrics
 ```
 
 For probabilistic classifiers, metrics are computed **at a threshold** or **integrated** over thresholds (ROC/PR).
@@ -70,7 +83,35 @@ For probabilistic classifiers, metrics are computed **at a threshold** or **inte
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Validation strategies
+title: Validation strategy lanes
+summary: How partitioned training and held-out evaluation produce scores you can compare across model candidates.
+node: Validation strategies
+detail: Selects how data is split before training and scoring.
+more: Choices include train-test split, k-fold CV, stratified folds, time-series splits, and nested CV for unbiased tuning estimates.
+node: Lane A
+detail: One governed path for holding out data and training.
+more: Train-test split or a single fold rotation fits this lane when data is plentiful and i.i.d.
+node: handoff
+detail: Passes the held-out fold or test set for scoring.
+more: The model trained on remaining data scores instances it never saw during fitting.
+node: shared outcome
+detail: Aggregated metric scores comparable across candidates.
+more: K-fold averages scores across rotations so estimates are stable rather than single-split noise.
+node: Lane B
+detail: Parallel path that inspects results and adapts the approach.
+more: Stratified, temporal, or nested splits live here when class balance or time order matters.
+node: inspect / adapt
+detail: Reviews fold-wise variance and adjusts split or model choices.
+more: High variance signals small data or leakage; nested CV separates tuning from final unbiased estimates.
+node: feedback
+detail: Validation findings inform whether metrics meet decision criteria.
+more: Scores feed back to hyperparameter tuning, feature work, or business-understanding success bars.
+fallback_ascii: |
+  Validation strategies
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
 ```
 
 Each rotation trains on k−1 folds and validates on the held-out fold; scores are averaged.

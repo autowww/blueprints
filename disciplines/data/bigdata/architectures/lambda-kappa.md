@@ -35,7 +35,28 @@ Lambda splits work across three conceptual layers:
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Lambda architecture (deep dive)
+title: Lambda three-layer swimlanes
+summary: How batch recomputation, speed-layer updates, and serving merge coexist for low latency with authoritative history.
+node: Lambda architecture (deep dive)
+detail: Frames the batch, speed, and serving split on this page.
+more: Batch precomputes complete views; speed compensates for lag; serving merges both into a unified read API.
+node: Lane A ──► handoff ──► shared outcome
+detail: Batch layer recomputes authoritative views and hands off to serving.
+more: High-latency full or large incremental windows yield provably correct historical state merged for queries.
+node: Lane B ──► inspect / adapt ──► feedback
+detail: Speed layer publishes incremental updates while batch lags behind.
+more: Low-latency approximations may diverge until batch catches up and wins after merge semantics are trusted.
+node: Note: When it shines:
+detail: Signals when dual-path Lambda is the right architectural fit.
+more: Choose when you need provably correct historical recomputation and sub-batch latency for some use cases.
+fallback_ascii: |
+  Lambda architecture (deep dive)
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
+
+  Note: When it shines:
 ```
 
 **When it shines:** You need **provably correct historical recomputation** (e.g., late-arriving facts, complex corrections) **and** **sub-batch latency** for some use cases.
@@ -48,7 +69,28 @@ Kappa **removes the separate batch path**: stream processing consumes an **appen
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Kappa architecture (deep dive)
+title: Kappa stream-and-replay swimlanes
+summary: How one stream topology serves live updates and full reprocessing from the immutable event log.
+node: Kappa architecture (deep dive)
+detail: Frames single-path streaming with log-centric reprocessing.
+more: Removes the separate batch path; the append-only log is the system of record for live and replay workloads.
+node: Lane A ──► handoff ──► shared outcome
+detail: Stream processors consume the log and materialize serving views.
+more: The same topology ingests live events and writes to idempotent sinks or compacted topics consumers can query.
+node: Lane B ──► inspect / adapt ──► feedback
+detail: Reprocessing replays the log when code or logic changes.
+more: Reset offsets or replay topics through the upgraded topology; inspect outcomes and adapt before trusting corrected state.
+node: Note: When it shines:
+detail: Signals when stream-only Kappa fits the domain model.
+more: Choose when events model the domain, idempotent sinks exist, and replay can replace heavyweight batch recompute.
+fallback_ascii: |
+  Kappa architecture (deep dive)
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
+
+  Note: When it shines:
 ```
 
 **When it shines:** The domain can be modeled as **events**, **idempotent sinks** exist, and **replay** is an acceptable substitute for heavyweight batch recompute.
@@ -73,7 +115,37 @@ alt: Diagram
 
 ```blueprint-diagram
 key: decision
-alt: Diagram
+alt: Decision flowchart (architecture choice)
+title: Architecture pattern selection gate
+summary: How teams assess workloads and gates before committing to Lambda, Kappa, or unified patterns.
+node: Decision flowchart (architecture choice)
+detail: Entry to governed choice among Lambda, Kappa, and unified approaches.
+more: Pair with the section 4 comparison matrix for complexity, latency, reprocessing, and operational trade-offs.
+node: Current state
+detail: Capture existing pipelines, latency needs, and correction patterns.
+more: Document whether workloads are batch-only, need sub-batch views, or can be modeled as immutable events with replay discipline.
+node: Checkpoint / gate
+detail: Test fit against latency, reprocessing, and merge or replay semantics.
+more: Lambda needs a clear serving merge story; Kappa needs late-data and idempotent sink discipline; unified stacks still need platform alignment.
+node: refine or escalate
+detail: Narrow scope, prototype, or engage architecture review when the gate fails.
+more: Anti-patterns include Lambda without merge semantics, Kappa ignoring late data, or unified platforms with shadow batch in spreadsheets.
+node: Continue flow
+detail: Proceed with the chosen pattern and technology mapping.
+more: Use section 6 stacks as family resemblance, not rigid taxonomy; plan migration from section 9 when replacing batch-only or Lambda paths.
+fallback_ascii: |
+  Decision flowchart (architecture choice)
+
+  Current state
+      |
+      v
+  Checkpoint / gate
+      |
+      +-- no ──► refine or escalate
+      |
+     yes
+      v
+  Continue flow
 ```
 
 ---

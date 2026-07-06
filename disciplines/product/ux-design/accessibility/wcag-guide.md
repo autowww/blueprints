@@ -44,7 +44,31 @@ Always cite **version** (e.g. WCAG 2.2) and **scope** in conformance statements.
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: WCAG audit workflow
+title: WCAG conformance audit
+summary: Bounded workflow for assessing WCAG 2.2 conformance against a declared scope and target level.
+node: WCAG audit workflow
+detail: Frames the audit against WCAG version, scope, and target conformance level.
+more: State version (e.g. WCAG 2.2), scope (pages or flows), and A, AA, or AAA target before testing begins.
+node: Start
+detail: Opens the audit with scope, tools, and success-criteria baseline.
+more: Define what you will test, which level you claim, and which automated, manual, and assistive-technology layers you will use.
+node: Core steps (see walkthrough below)
+detail: Apply POUR-themed review and all three testing layers across the scope.
+more: Walk perceivable, operable, understandable, and robust themes; run automated, manual, and AT passes; map findings to success criteria.
+node: Outcome
+detail: Produces a reviewable conformance statement tied to version and scope.
+more: Record supports, partial, and failure per criterion; update VPAT or ACR when procurement requires formal disclosure.
+fallback_ascii: |
+  WCAG audit workflow
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ---

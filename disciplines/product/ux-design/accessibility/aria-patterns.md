@@ -60,7 +60,28 @@ ARIA (Accessible Rich Internet Applications) **extends** the accessibility tree 
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: ARIA communication flow
+title: ARIA author-to-AT path
+summary: How authored roles and states reach assistive technologies through the platform accessibility API.
+node: Start
+detail: The author marks up the DOM with roles, states, and properties.
+more: ARIA extends the tree only when native HTML cannot express required semantics or behavior.
+node: Core steps (see walkthrough below)
+detail: The browser maps markup into the platform accessibility tree.
+more: States such as aria-expanded and aria-selected must stay synchronized with visible UI so announcements remain accurate.
+node: Outcome
+detail: Assistive technologies read name, role, state, and value from the tree.
+more: Screen readers use this information for keyboard parity, structure navigation, and live-region announcements.
+fallback_ascii: |
+  ARIA communication flow
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ---
@@ -138,7 +159,28 @@ alt: Diagram
 
 ```blueprint-diagram
 key: state
-alt: Diagram
+alt: Dialog lifecycle (state)
+title: Modal dialog focus lifecycle
+summary: How a dialog opens with trapped focus and closes by restoring focus to the trigger.
+node: Start
+detail: The trigger awaits activation while the dialog remains closed.
+more: Before open, focus stays on the page and no aria-modal trap is active.
+node: Core steps (see walkthrough below)
+detail: Open moves focus inside and keeps it within the dialog.
+more: Set role dialog or alertdialog, aria-modal true when required, and trap Tab until Escape or close.
+node: Outcome
+detail: Close releases the trap and restores focus to the trigger.
+more: Returning focus prevents users from losing their place in the tab order after dismissal.
+fallback_ascii: |
+  Dialog lifecycle (state)
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ---

@@ -38,6 +38,30 @@ Formality and coordination increase as you move from one team to many repos and 
 ```blueprint-diagram
 key: timeline
 alt: Team rollout — increasing scale from single team to multi-team, platform, and governance cadence
+title: Rollout scale progression
+summary: How teams move from picking a rollout scope to governed, shared Blueprints adoption.
+node: Rollout by scale (chooser)
+detail: Match your org scope to a rollout row in the table.
+more: Single team needs fewer artifacts than platform governance; pick the row that fits before reading the deep dive.
+node: Actor / trigger
+detail: A lead or enablement role recognizes Blueprints must scale beyond one repo.
+more: Typically follows a successful first-hour layout in at least one repo and path B or C from Adopting Blueprints.
+node: System step
+detail: Apply the rollout pattern from the matching child page.
+more: Each scale page defines ceremonies, artifacts, and coordination appropriate to that audience without forking upstream baseline text.
+node: Outcome / handoff
+detail: Teams share vocabulary and reach the same verify steps.
+more: Success means baseline lives in blueprints/ while project interpretations stay in sdlc/ and docs/ without one-off forks.
+fallback_ascii: |
+  Rollout by scale (chooser)
+
+  Actor / trigger
+      |
+      v
+  System step
+      |
+      v
+  Outcome / handoff
 ```
 
 ## How to verify success

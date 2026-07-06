@@ -45,7 +45,33 @@ Process improvement follows its own lifecycle that integrates with PDLC and SDLC
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: BPM lifecycle
+title: BPM process improvement lifecycle
+summary: How process improvement progresses from scoped initiation through governed phases to measurable outcomes aligned with PDLC and SDLC.
+node: Start
+detail: Scope the process improvement initiative and its stakeholders.
+more: BA planning centers on process boundaries rather than system boundaries; stakeholders include process owners, participants, and customers.
+node: Core steps (see walkthrough below)
+detail: Execute Discover through Monitor using BPMN, metrics, and redesign.
+more: Each phase pairs BABOK activities with PDLC discovery and validation gates and SDLC delivery when software changes are required.
+node: Outcome
+detail: A measurable, compliant target process with ongoing review.
+more: Solution evaluation tracks cycle time, error rates, cost savings, and compliance achievement—not only supporting software functionality.
+node: Note: Discover
+detail: Discover anchors the lifecycle before as-is modeling begins.
+more: Identifies process boundaries, stakeholders, and inputs/outputs; maps to PDLC P1 Discover in the phase table below.
+fallback_ascii: |
+  BPM lifecycle
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: Discover
 ```
 
 | BPM Phase | BA Activities | PDLC Mapping | SDLC Mapping |

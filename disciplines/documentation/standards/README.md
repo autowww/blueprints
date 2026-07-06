@@ -16,7 +16,37 @@ Documentation without standards drifts into inconsistency — every author inven
 
 ```blueprint-diagram
 key: decision
-alt: Diagram
+alt: Why standards matter
+title: Choosing a documentation standard
+summary: Decide whether a documentation standard fits your current state before committing to adoption.
+node: Why standards matter
+detail: Frame the decision around reducing drift and inconsistency.
+more: Standards set shared expectations for structure, voice, and depth so every author does not invent their own approach.
+node: Current state
+detail: Assess how documentation is organized and maintained today.
+more: Review whether docs lack consistent structure, voice, or quality gates that standards would address.
+node: Checkpoint / gate
+detail: Check whether a standard addresses your documented gaps.
+more: Compare current pain points against what the standard governs—organization, process, style, or quality.
+node: refine or escalate
+detail: Iterate the fit assessment or involve stakeholders when unclear.
+more: Revisit scope, consult the index guides, or escalate to a documentation lead before forcing adoption.
+node: Continue flow
+detail: Proceed to adopt the matched standard from this index.
+more: Open the linked guide for the chosen standard and align process, tooling, and review workflows to it.
+fallback_ascii: |
+  Why standards matter
+
+  Current state
+      |
+      v
+  Checkpoint / gate
+      |
+      +-- no ──► refine or escalate
+      |
+     yes
+      v
+  Continue flow
 ```
 
 ---

@@ -38,6 +38,38 @@ This document is the **methodology orchestration** layer for Forge: it sits **ab
 ```blueprint-diagram
 key: swimlane
 alt: Orchestration routes through routing optional discipline family merge
+title: Forge orchestration main paths
+summary: How routing, phase-aware orchestration, discipline passes, merge, and trace outputs connect in one governed cycle.
+node: Conceptual flow (main paths)
+detail: Two complementary lanes for delivery orchestration and inspect-and-adapt feedback.
+more: Section 2 frames the default sequence before the numbered walkthrough that follows this diagram.
+node: Lane A
+detail: The primary path from lens selection through orchestrated discipline work.
+more: Typically begins with optional versona-all routing, then versona-forge-sdlc phase planning and rule invocations.
+node: handoff
+detail: Explicit transfer between routing, orchestration, and specialist discipline passes.
+more: Each handoff should name merge owners and work_item_refs so context stays traceable across rules.
+node: shared outcome
+detail: Consolidated artifacts and trace outputs the orchestration run must leave behind.
+more: Includes the orchestration plan, discipline §5 pointers, and Ember Log when scope or risk acceptance changed.
+node: Lane B
+detail: The parallel inspect-and-adapt path for refining plans and specialist outputs.
+more: Teams re-run routing or discipline passes when context is stale or merge disagreements surface.
+node: inspect / adapt
+detail: Review merged outputs against phase contracts and escalation defaults.
+more: Section 3 merge table and phase A–F contracts in section 4 guide when to escalate versus rework.
+node: feedback
+detail: Lessons and decisions loop back into the next orchestration cycle.
+more: Trace outputs and Ember Log entries inform subsequent Ore intake and phase triggers.
+node: Note: Typical pattern:
+detail: The numbered list below expands each lane into concrete rule invocations.
+fallback_ascii: |
+  Conceptual flow (main paths)
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
+
+  Note: Typical pattern:
 ```
 
 **Typical pattern:**
@@ -66,6 +98,35 @@ alt: Orchestration routes through routing optional discipline family merge
 ```blueprint-diagram
 key: linear
 alt: Phases A through F with optional parallel discipline passes merging to trace outputs
+title: Phase-aware workflow contracts
+summary: How Forge SDLC phases A–F bound triggers, parallel discipline passes, merge rules, and trace outputs.
+node: Phase-aware workflow contracts (A–F)
+detail: The six lifecycle phases that structure methodology orchestration contracts.
+more: Ceremonies C1–C6 map through foundation-connection.md; Sparks use discover: through release: prefixes per SDLC.md.
+node: Start
+detail: A phase begins when its triggers and entry conditions are satisfied.
+more: Section 4 defines triggers per phase—from new Ore intake in Discover to Assay Gate pass in Release.
+node: Core steps (see walkthrough below)
+detail: Parallel or sequential discipline passes governed by merge and escalation defaults.
+more: Each phase table specifies when lenses run in parallel, required sequential order, and who merges §5 outputs.
+node: Outcome
+detail: Phase-complete trace artifacts and handoff to the next lifecycle stage.
+more: Outputs include Ore, Ingot, or Spark records, §5 artifacts, evidence packs, and Ember Log decisions.
+node: Note: Triggers
+detail: Entry signals that activate each phase contract are listed per phase below.
+more: Triggers span Ore intake and refinement through Assay readiness, verify Sparks, and ship checklist completion.
+fallback_ascii: |
+  Phase-aware workflow contracts (A–F)
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: Triggers
 ```
 
 Ceremony mapping (C1–C6) stays in [`../foundation-connection.md`](../foundation-connection.md). Sparks use phase prefixes `discover:` … `release:` per [`../../SDLC.md`](../../SDLC.md).

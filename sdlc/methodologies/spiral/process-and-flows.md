@@ -11,7 +11,27 @@ learning_level: reference
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Spiral quadrant cycle
+title: Spiral quadrant cycle
+summary: How each spiral pass cycles four quadrants from objectives through risk-gated build to evaluation.
+node: Start
+detail: A new spiral begins with the current product and risk posture.
+more: Each pass through all four quadrants counts as one spiral; numbering tracks maturity, not calendar time alone.
+node: Core steps (see walkthrough below)
+detail: Q1 sets direction, Q2 manages risk, Q3 produces work, Q4 evaluates and plans.
+more: Q2 gates commitment to expensive Q3 build; no significant construction proceeds without acceptable risk resolution.
+node: Outcome
+detail: The spiral closes with stakeholder evaluation and the next spiral's entry criteria.
+fallback_ascii: |
+  Spiral quadrant cycle
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 Each pass through the four quadrants is one **spiral**. Risk analysis (Q2) gates commitment to build (Q3).
@@ -20,14 +40,58 @@ Each pass through the four quadrants is one **spiral**. Risk analysis (Q2) gates
 
 ```blueprint-diagram
 key: decision
-alt: Diagram
+alt: Risk-driven decision (Q2 detail)
+title: Risk-driven Q2 gate
+summary: How Q2 risk analysis decides whether the spiral continues build work or refines approach.
+node: Current state
+detail: The spiral's scope, known threats, and unresolved uncertainties are visible.
+node: Checkpoint / gate
+detail: Risk analysis evaluates whether threats are acceptable for current commitment.
+more: Q2 produces actionable resolution: prototype feasibility tests, safeguards, monitored acceptance, or approach change.
+node: refine or escalate
+detail: Unacceptable risk triggers refinement, scope change, or escalation.
+more: The cycle repeats until risk fits the current spiral scope before Q3 build commitment.
+node: Continue flow
+detail: Acceptable risk authorizes Q3 development within the bounded spiral scope.
+fallback_ascii: |
+  Risk-driven decision (Q2 detail)
+
+  Current state
+      |
+      v
+  Checkpoint / gate
+      |
+      +-- no ──► refine or escalate
+      |
+     yes
+      v
+  Continue flow
 ```
 
 ## 3. Anchor-point milestone sequence
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Anchor-point milestone sequence
+title: Anchor-point milestone gates
+summary: How LCO, LCA, and IOC commitment gates pace spiral investment across the program.
+node: Start
+detail: The program begins toward the first anchor-point commitment gate.
+node: Core steps (see walkthrough below)
+detail: LCO, LCA, and IOC gates confirm worth, architecture fitness, and operational readiness.
+more: These are stakeholder commitment gates—each decides whether to invest in the next phase of spirals.
+node: Outcome
+detail: Passed gates authorize deeper spirals; failed gates halt or redirect investment.
+fallback_ascii: |
+  Anchor-point milestone sequence
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 Milestone count and spiral numbering are illustrative; actual projects adjust based on risk and scope.
@@ -36,7 +100,27 @@ Milestone count and spiral numbering are illustrative; actual projects adjust ba
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Spiral scope evolution
+title: Spiral scope evolution
+summary: How spiral scope and engineering intensity grow as confidence and risk acceptance increase.
+node: Start
+detail: Early spirals explore objectives with minimal committed scope.
+node: Core steps (see walkthrough below)
+detail: Each spiral expands scope and verification depth as confidence grows.
+more: Early spirals stay cheap and exploratory; throwaway prototypes are valid. Later spirals become more engineering-intensive.
+node: Outcome
+detail: Progressive commitment yields a mature product without premature large-scale investment.
+more: This graduated commitment is the model's core risk management strategy.
+fallback_ascii: |
+  Spiral scope evolution
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ## 5. Phases A–F (Spiral mapping per spiral)

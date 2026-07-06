@@ -74,7 +74,36 @@ Processes describe the **flow of activities** from project start to close. Each 
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Core structure
+title: PRINCE2 seven-process flow
+summary: How PRINCE2 processes move a project from first viability check through staged delivery to formal closure.
+node: Core structure
+detail: Frames the seven processes that govern project direction, management, and delivery.
+more: Each process has defined inputs, activities, and outputs; themes and principles constrain how they run.
+node: Start
+detail: Enters Starting Up a Project before major resources are committed.
+more: Executive and PM verify the project is worthwhile and produce a project brief plus stage plan for initiation.
+node: Core steps (see walkthrough below)
+detail: Runs directing, initiating, controlling, delivery, boundaries, and closure across management stages.
+more: Directing a Project spans the lifecycle; Controlling a Stage and Managing Product Delivery repeat within each stage until the next boundary review.
+node: Outcome
+detail: Closes with accepted products, captured lessons, and released resources.
+more: Closing verifies deliverables against product descriptions and recommends formal closure to the Project Board.
+node: Note: Starting Up a Project (SU)
+detail: SU is the first process and gate before full initiation is authorized.
+more: SU confirms viability and prepares initiation artifacts so the Project Board can authorize Initiating a Project.
+fallback_ascii: |
+  Core structure
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: Starting Up a Project (SU)
 ```
 
 | Process | Who leads | Purpose |

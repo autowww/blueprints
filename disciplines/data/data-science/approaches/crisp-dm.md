@@ -36,7 +36,31 @@ The process is **iterative by design**. Evaluation often sends you back to data 
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Six phases at a glance
+title: CRISP-DM phase overview
+summary: How a CRISP-DM project moves from scoped start through core phases to a reviewable outcome.
+node: Six phases at a glance
+detail: Introduces the six-phase cross-industry process model on this page.
+more: CRISP-DM organizes work from business intent through deployed models with explicit feedback loops between phases.
+node: Start
+detail: Anchor analytics work to business goals, constraints, and success criteria.
+more: Business Understanding aligns stakeholders on problem framing, measurable KPIs, and a feasible project plan before heavy data work.
+node: Core steps (see walkthrough below)
+detail: Progress through data, modeling, evaluation, and deployment iteratively.
+more: Phases include Data Understanding, Preparation, Modeling, Evaluation, and Deployment—each with decision gates, not linear milestones.
+node: Outcome
+detail: Deliver a deployed solution with documented limits and sustained monitoring.
+more: Typical outputs include deployed artifacts, runbooks, monitoring dashboards, and a final report with lessons learned.
+fallback_ascii: |
+  Six phases at a glance
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ---
@@ -118,7 +142,28 @@ Generic SDLC letters **A–F** here mean: **A** charter/requirements, **B** desi
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: CRISP-DM mapped to SDLC (high level)
+title: CRISP-DM to SDLC mapping
+summary: How CRISP-DM phases align with generic SDLC gates without forcing a one-to-one waterfall.
+node: CRISP-DM mapped to SDLC (high level)
+detail: Frames how analytics phases map onto delivery lifecycle letters A–F.
+more: Adjust letter naming to your org; the mapping is high level, not a rigid translation table.
+node: Lane A ──► handoff ──► shared outcome
+detail: Primary lane carries CRISP-DM work through SDLC build and release handoffs.
+more: Data understanding and preparation map to C/D integration; modeling and evaluation feed D/E verification before F release.
+node: Lane B ──► inspect / adapt ──► feedback
+detail: Parallel lane inspects phase outputs and adapts scope from evidence.
+more: Evaluation feedback may return to data preparation or modeling; deployment monitoring revisits business understanding iteratively.
+node: Note: Business Understanding
+detail: The opening CRISP-DM phase anchors SDLC intent and success definition.
+more: Maps to SDLC A/B for charter, scope, and measurable success criteria before data products or training code begin.
+fallback_ascii: |
+  CRISP-DM mapped to SDLC (high level)
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
+
+  Note: Business Understanding
 ```
 
 - **Business Understanding** → **A/B** (intent, scope, success definition).

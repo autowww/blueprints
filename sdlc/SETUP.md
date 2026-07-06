@@ -50,6 +50,27 @@ You may copy this file to your project root as `SETUP.md` if you want a local ch
 ```blueprint-diagram
 key: checklist
 alt: Project setup profile — Bootstrap, then Forge and Cursor, then optional product-led steps
+title: Project setup profile flow
+summary: How a consuming repository moves from adoption intent through phased steps to a governed, verifiable Blueprints layout.
+node: Start
+detail: Begin after choosing adoption and confirming blueprints/ at the repo root.
+more: Prerequisites require the submodule at repository root next to forge/, sdlc/, and docs/; skim Adopting Blueprints or first-hour quickstart if you have not committed to that layout.
+node: Core steps (see walkthrough below)
+detail: Follow Bootstrap, Forge and Cursor, then optional product-led phases in order.
+more: Steps 1–3 bootstrap the submodule and project sdlc/; 4–11 align forge.config.yaml and Cursor rules; step 12 covers optional product-led flows on linked profile pages.
+node: Outcome
+detail: A reviewable repo with Blueprints, Forge alignment, and passing verification checks.
+more: Confirm blueprints/sdlc/README.md and project sdlc/README.md exist; run sync-forge-cursor-rules.sh check for the recommended preset when applicable.
+fallback_ascii: |
+  What it is
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ## When to use it

@@ -21,7 +21,28 @@ Pick a **process scaffold** first (goals, data reality, deployment), then layer 
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Methodology selection
+title: Data science methodology selection
+summary: How process scaffolds, operational layers, and learning loops combine when teams choose data science approaches.
+node: Methodology selection
+detail: Teams pick a process scaffold before layering operations and measurement.
+more: Start with CRISP-DM for phase definitions; add MLOps when production deployment is real rather than hypothetical.
+node: Lane A ──► handoff ──► shared outcome
+detail: The primary lane delivers governed process through to shared delivery outcomes.
+more: CRISP-DM supplies the default scaffold; experiment management and A/B testing complement rather than replace the phase model.
+node: Lane B ──► inspect / adapt ──► feedback
+detail: A parallel lane inspects signals and adapts methodology choices from evidence.
+more: MLOps wraps deployment with change control; feedback loops refine priorities without abandoning phase structure.
+node: Note: illustrative
+detail: Timing overlaps in practice while dependency order stays fixed.
+more: Experiment tracking may start during Data Preparation or Modeling; A/B tests may follow first deployment, but sound process still precedes measured impact.
+fallback_ascii: |
+  Methodology selection
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
+
+  Note: illustrative
 ```
 
 The diagram is **illustrative**: in practice, experiment tracking starts early (often during Data Preparation / Modeling in CRISP-DM terms), and A/B tests may run only after a first deployment — but the dependencies (sound process → disciplined experiments → reliable production → measured impact) stay the same.

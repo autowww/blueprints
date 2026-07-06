@@ -40,7 +40,28 @@ All three are necessary in non-trivial software delivery. None is sufficient alo
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Three questions, three domains
+title: Three governing questions
+summary: How PDLC, PM, and SDLC each answer a distinct question while governing complementary delivery concerns.
+node: Three questions, three domains
+detail: Frames how the three lifecycles relate on this bridge page.
+more: PDLC validates product direction; PM governs schedule, budget, and scope; SDLC ensures technical delivery quality.
+node: Lane A ──► handoff ──► shared outcome
+detail: PDLC validates direction and hands measurable outcomes into governed delivery.
+more: Success metrics, stage gates, and P3 commitment outputs define what the project must achieve before PM initiation and SDLC execution.
+node: Lane B ──► inspect / adapt ──► feedback
+detail: PM and SDLC inspect execution and feed learnings back across domains.
+more: PM tracks schedule, budget, and risk while SDLC verifies increments; both inform pivots, change control, and outcome reviews.
+node: Note: Core question
+detail: Each domain answers a distinct governing question at its scope.
+more: PDLC asks whether to build the right product; PM asks whether delivery stays within constraints; SDLC asks how to build correctly.
+fallback_ascii: |
+  Three questions, three domains
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
+
+  Note: Core question
 ```
 
 ### Comparison table
@@ -119,7 +140,28 @@ The three-layer model is the **general case**. In practice, layers often collaps
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Phase alignment
+title: Three-domain phase alignment
+summary: How PDLC phases, PM process groups, and SDLC phases nest and hand off across the lifecycle.
+node: Phase alignment
+detail: Entry framing how the three lifecycles align phase by phase on this page.
+more: The table below maps PDLC P1–P6 to PM Initiate through Close and SDLC A–F, including overlap and collapse cases.
+node: Lane A ──► handoff ──► shared outcome
+detail: PDLC gates investment and hands validated intent into project initiation.
+more: At P3 Plan and Commit, outputs become the project charter; PM Plan and SDLC Phase A then decompose shared scope into WBS and backlog.
+node: Lane B ──► inspect / adapt ──► feedback
+detail: PM monitors execution while SDLC delivers increments and feeds governed adjustments.
+more: During Execute and Monitor, PM tracks SPI/CPI and risk while SDLC runs A–F; status and retrospectives inform change control and reforecasting.
+node: Note: P1 Discover Problem
+detail: Anchor at P1, upstream of both PM and SDLC formal work.
+more: Discovery and validation run before project initiation; no charter or delivery backlog exists until PDLC commits at P3.
+fallback_ascii: |
+  Phase alignment
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
+
+  Note: P1 Discover Problem
 ```
 
 ### Phase-by-phase alignment

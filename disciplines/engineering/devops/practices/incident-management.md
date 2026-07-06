@@ -19,7 +19,28 @@ Effective response depends on **preparedness** (runbooks, dashboards, escalation
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Overview: lifecycle and readiness
+title: Incident lifecycle overview
+summary: How preparedness and governed follow-through shorten impact and feed durable improvements.
+node: Start
+detail: A production-impacting signal or report enters the response lifecycle.
+more: Detection may come from SLO-backed alerts, customer reports, or dashboards correlated with recent deploys.
+node: Core steps (see walkthrough below)
+detail: Teams triage, classify severity, respond, mitigate, and resolve under assigned roles.
+more: Later sections cover severity tiers, ICS-inspired roles, on-call escalation, communication templates, and postmortem structure.
+node: Outcome
+detail: Impact is bounded and learning becomes owned, tracked action items.
+more: Blameless postmortems feed operational forums so contributing factors are addressed rather than repeated.
+fallback_ascii: |
+  Overview: lifecycle and readiness
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ---
@@ -90,7 +111,28 @@ Small incidents may **collapse roles** onto one person; SEV1 should **explicitly
 
 ```blueprint-diagram
 key: sequence
-alt: Diagram
+alt: SEV1 response sequence (illustrative)
+title: SEV1 response sequence
+summary: How a critical incident moves from trigger through coordinated response to governed handoff.
+node: Actor / trigger
+detail: On-call or monitoring confirms critical user or business impact.
+more: SEV1 covers service-down or major data-risk events; acknowledge within minutes and page primary and secondary on-call.
+node: System step
+detail: Incident Commander assigns roles and drives parallel mitigation and communication.
+more: Operations Lead owns the technical hypothesis and changes; Communications Lead updates stakeholders and filters noise from the IC.
+node: Outcome / handoff
+detail: Service restores and the team closes the loop with resolution messaging.
+more: Resolution templates capture preliminary cause, impact duration, and postmortem scheduling before tracked improvements begin.
+fallback_ascii: |
+  SEV1 response sequence (illustrative)
+
+  Actor / trigger
+      |
+      v
+  System step
+      |
+      v
+  Outcome / handoff
 ```
 
 ---

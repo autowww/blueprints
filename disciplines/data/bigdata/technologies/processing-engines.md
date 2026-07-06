@@ -54,7 +54,30 @@ Processing technology should follow **workload shape**: data volume, **latency**
 
 ```blueprint-diagram
 key: sequence
-alt: Diagram
+alt: Apache Flink (deep dive)
+title: Flink stream processing path
+summary: How Flink moves event-time workloads from sources through checkpointed operators to governed sink handoff.
+node: Apache Flink (deep dive)
+detail: Entry point for Flink's unified stream and batch execution model.
+node: Actor / trigger
+detail: Events or sources initiate DataStream pipelines with defined event-time semantics.
+more: Producers append to partitioned inputs; watermarks bound how far event time may progress before windows close.
+node: System step
+detail: JobManager schedules parallel operator subtasks across TaskManagers with managed state.
+more: Barrier-aligned checkpointing persists operator state and source offsets for recoverable, exactly-once replay after failure.
+node: Outcome / handoff
+detail: Transformed records reach sinks under semantics the sink and checkpoint model support.
+more: Idempotent or transactional sinks pair with checkpoints so downstream systems see consistent results after recovery.
+fallback_ascii: |
+  Apache Flink (deep dive)
+
+  Actor / trigger
+      |
+      v
+  System step
+      |
+      v
+  Outcome / handoff
 ```
 
 **Fit:** Low-latency aggregation, session windows, complex event-time logic, unified batch+stream on one engine.
@@ -104,7 +127,35 @@ alt: Diagram
 
 ```blueprint-diagram
 key: decision
-alt: Diagram
+alt: Decision flowchart (engine shortlist)
+title: Engine selection gate flow
+summary: How teams narrow processing-engine choices against workload shape, semantics, and operational constraints.
+node: Decision flowchart (engine shortlist)
+detail: Frames engine review against latency, state, windowing, and team leverage.
+node: Current state
+detail: Captures data volume, latency targets, state needs, and existing platform investments.
+more: Include semantics requirements such as at-least-once versus exactly-once and whether processing is batch, micro-batch, or true stream.
+node: Checkpoint / gate
+detail: Tests whether a candidate engine fits the stated workload and operational posture.
+more: Compare latency, throughput, state management, windowing, and managed-service options before committing cluster cost.
+node: refine or escalate
+detail: Revisit architecture patterns or escalate when no engine clearly satisfies the gate.
+more: Reconcile gaps against architectures in the bigdata guide or adjust scope before forcing an ill-fitting engine.
+node: Continue flow
+detail: Proceed with a shortlisted engine and validate cost against workload replay assumptions.
+fallback_ascii: |
+  Decision flowchart (engine shortlist)
+
+  Current state
+      |
+      v
+  Checkpoint / gate
+      |
+      +-- no ──► refine or escalate
+      |
+     yes
+      v
+  Continue flow
 ```
 
 ---

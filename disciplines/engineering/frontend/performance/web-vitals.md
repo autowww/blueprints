@@ -33,7 +33,31 @@ learning_level: reference
 
 ```blueprint-diagram
 key: timeline
-alt: Diagram
+alt: Core Web Vitals
+title: Core Web Vitals measurement flow
+summary: How user-facing signals become measurable LCP, INP, and CLS baselines for product quality goals.
+node: Core Web Vitals
+detail: LCP, INP, and CLS define the field-measurable baseline for perceived performance.
+more: These three metrics distill load completion, interaction responsiveness, and visual stability into thresholds teams can align with goals and regression checks.
+node: Actor / trigger
+detail: User load and interaction events generate the signals browsers measure.
+more: A page load drives LCP; taps, clicks, and keyboard input drive INP; late-loading assets and layout changes drive CLS.
+node: System step
+detail: The browser captures, aggregates, and reports each vital against defined thresholds.
+more: Field data from CrUX or RUM reflects real devices and networks; lab tools repeat the same signals under controlled conditions for comparisons.
+node: Outcome / handoff
+detail: Measured vitals feed performance goals, budgets, and regression checks.
+more: Teams triage lab versus field disagreements before treating a release as performance-ready.
+fallback_ascii: |
+  Core Web Vitals
+
+  Actor / trigger
+      |
+      v
+  System step
+      |
+      v
+  Outcome / handoff
 ```
 
 ---
@@ -122,7 +146,30 @@ Always triage disagreements: a fast lab run can hide slow field INP if interacti
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Performance budgets
+title: Performance budget lifecycle
+summary: How teams set, measure, and enforce bounded performance targets aligned with Core Web Vitals.
+node: Performance budgets
+detail: Bounded targets for JS weight, LCP proxies, and CWV thresholds.
+more: Budgets translate business constraints and vital thresholds into reviewable limits teams can track in lab and field.
+node: Start
+detail: Define budgets from CWV thresholds and product constraints before shipping.
+more: The Set row aligns JS weight limits and LCP proxies with the good and needs-improvement bands from the vitals table.
+node: Core steps (see walkthrough below)
+detail: Measure in lab and field, then gate regressions through CI.
+more: Lighthouse CI supplies repeatable lab baselines; RUM captures real-user percentiles; main-branch checks fail or warn when budgets are exceeded.
+node: Outcome
+detail: Releases ship with traceable performance evidence and bounded regression risk.
+fallback_ascii: |
+  Performance budgets
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ---

@@ -46,7 +46,36 @@ Prefer **composition** when behavior is assembled from capabilities; reserve **i
 
 ```blueprint-diagram
 key: network
-alt: Diagram
+alt: Composition vs inheritance (class view)
+title: Composition vs inheritance (class view)
+summary: How to choose has-a composition over is-a inheritance when modeling collaborating class boundaries.
+node: Composition vs inheritance (class view)
+detail: Frames class design as capability assembly versus taxonomic subtyping.
+more: Prefer composition when behavior is assembled from parts; reserve inheritance for stable is-a relationships and framework hooks.
+node: Root / intake
+detail: The type or relationship under design enters as the decision point.
+more: Evaluate whether collaborators are owned parts or genuine subtypes before committing to a class structure.
+node: branch A
+detail: One path—typically has-a composition for assembled capabilities.
+more: Car has-a Engine on this page: the whole delegates behavior to a replaceable part without subclassing.
+node: branch B
+detail: A second path—often is-a inheritance for shared protocol and polymorphism.
+more: Bird is-a Animal when subtypes honor the supertype contract and substitution stays predictable.
+node: branch C
+detail: A third path when reuse and taxonomy do not align cleanly.
+more: Mixing is-a with implementation reuse without taxonomy usually signals composition or delegation instead.
+node: Note: Reading the diagram:
+detail: Links the branches to concrete has-a and is-a examples in the prose below.
+more: Use the reading note to ground abstract branches in reviewable examples before refactoring class hierarchies.
+fallback_ascii: |
+  Composition vs inheritance (class view)
+
+  Root / intake
+      +-- branch A
+      +-- branch B
+      +-- branch C
+
+  Note: Reading the diagram:
 ```
 
 **Reading the diagram:** `Car` **has-a** `Engine` (composition). `Bird` **is-a** `Animal` (inheritance). Mixing “is-a” and reuse-of-implementation without a clear taxonomy usually signals composition or delegation instead.

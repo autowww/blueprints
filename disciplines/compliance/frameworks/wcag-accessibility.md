@@ -46,7 +46,28 @@ Accessibility is both a **legal obligation** in many jurisdictions and an **ethi
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: WCAG compliance workflow
+title: WCAG compliance workflow
+summary: How teams scope, implement, test, and document digital accessibility against WCAG and related legal hooks.
+node: Start
+detail: Scope product surfaces, audience, and which legal frameworks may apply.
+more: Use the legal landscape table to identify ADA, Section 508, EAA, EN 301 549, AODA, or DDA obligations before choosing a conformance target.
+node: Core steps (see walkthrough below)
+detail: Map criteria to engineering, test across layers, and prepare procurement artifacts.
+more: Apply WCAG-to-engineering mappings, run automated, manual, and assistive-technology passes, maintain VPAT rows, and audit with scoped sampling.
+node: Outcome
+detail: Publish a bounded conformance claim with evidence and monitoring.
+more: State WCAG version, level, and scope; ship an accessibility statement and CI regression gates to keep claims reviewable.
+fallback_ascii: |
+  WCAG compliance workflow
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ---
@@ -115,7 +136,28 @@ alt: Diagram
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Is WCAG AA legally required? (decision tree)
+title: WCAG AA legal requirement check
+summary: Whether WCAG AA is mandatory depends on jurisdiction, sector, and procurement—not a universal default.
+node: Start
+detail: Clarify where you operate, who you sell to, and which laws may apply.
+more: Federal vendors face Section 508; EU market actors face EAA; US public-accommodation interpretation varies by circuit.
+node: Core steps (see walkthrough below)
+detail: Walk the legal landscape table against your product and customer profile.
+more: Match ADA Title III, Section 508, EAA, EN 301 549, AODA, or DDA rows to your scope before fixing a conformance level.
+node: Outcome
+detail: Record the likely WCAG target and verify with counsel.
+more: Most settlements and RFPs cite WCAG 2.x AA, but this page is not legal advice—confirm obligations before public claims.
+fallback_ascii: |
+  Is WCAG AA legally required? (decision tree)
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ---

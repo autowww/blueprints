@@ -54,7 +54,28 @@ Real-world usage and learning connect both: PDLC sets direction; SDLC produces w
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: The core distinction
+title: PDLC and SDLC distinction
+summary: How product and delivery lifecycles complement each other with SDLC nested inside governed PDLC scope.
+node: The core distinction
+detail: Frames the complementary questions each lifecycle answers on this page.
+more: PDLC asks whether to build the right product; SDLC asks how to build it correctly with reviewable engineering practices.
+node: Lane A ──► handoff ──► shared outcome
+detail: PDLC validates direction and hands measurable outcomes into delivery.
+more: Stage gates, success metrics, and P3 commitment outputs define what engineering must achieve before SDLC execution begins.
+node: Lane B ──► inspect / adapt ──► feedback
+detail: SDLC inspects delivery and feeds execution learnings back to product work.
+more: Growth insights, release evidence, and P5 metrics reopen discovery and backlog priorities with governed traceability.
+node: Note: nested inside
+detail: SDLC sits inside PDLC as the delivery engine, not a parallel lifecycle.
+more: Teams can ship on time with clean CI yet fail if PDLC never validated the what and why before and after build.
+fallback_ascii: |
+  The core distinction
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
+
+  Note: nested inside
 ```
 
 SDLC is **nested inside** PDLC. A team can execute SDLC flawlessly — shipping on time, with quality, and with clean CI — and still fail if it built something nobody needs. PDLC ensures the **what** and **why** are validated before and measured after the **how**.
@@ -126,7 +147,28 @@ Teams use different labels for phases. **PDLC** operational phases remain **P1�
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Phase alignment
+title: PDLC and SDLC phase alignment
+summary: How outer PDLC phases nest inner SDLC work while feedback loops keep both lifecycles traceable.
+node: Phase alignment
+detail: Entry framing how PDLC P1–P6 maps to SDLC A–F on this page.
+more: The phase-by-phase table below details upstream, overlap, and downstream relationships including Dual-Track concurrency.
+node: Lane A ──► handoff ──► shared outcome
+detail: PDLC gates progress and hands validated intent into SDLC discovery.
+more: At P3 Plan and Commit, outputs become Phase A inputs: problem statement, solution concept, success metrics, and resourcing.
+node: Lane B ──► inspect / adapt ──► feedback
+detail: SDLC delivers increments while P5 growth signals govern course correction.
+more: Customer feedback from P5 Grow feeds SDLC Phase A as iteration backlog; P1–P2 for the next initiative may run in parallel.
+node: Note: copy-paste friendly
+detail: The plain-text loop below mirrors this nesting without diagram tooling.
+more: Outer PDLC spans discover through improve; inner SDLC runs plan through operate inside product delivery.
+fallback_ascii: |
+  Phase alignment
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
+
+  Note: copy-paste friendly
 ```
 
 ### Plain-text loop (outer PDLC, inner SDLC)
@@ -303,7 +345,28 @@ SDLC and PDLC use fundamentally different metrics. Neither set replaces the othe
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Metrics — two lenses
+title: PDLC and SDLC metric lenses
+summary: How outcome and delivery metrics each inform shared product health without replacing one another.
+node: Metrics — two lenses
+detail: Frames the two measurement lenses defined in the comparison table above.
+more: SDLC tracks throughput, quality, and operations; PDLC tracks desirability, adoption, retention, and revenue through P5–P6.
+node: Lane A ──► handoff ──► shared outcome
+detail: PDLC outcome metrics hand into shared product health judgments.
+more: Adoption, retention, NPS, and revenue from P4–P5 tie delivery effort to P3 success criteria leaders review.
+node: Lane B ──► inspect / adapt ──► feedback
+detail: SDLC delivery metrics inspect engineering health and adapt plans.
+more: Velocity, defect rate, DORA, and CI pass rate during A–F show whether product velocity remains sustainable.
+node: Note: SDLC metrics only
+detail: Warns against celebrating delivery output without outcome evidence.
+more: The metrics trap below names flat adoption despite high velocity as a common failure when PDLC lenses are omitted.
+fallback_ascii: |
+  Metrics — two lenses
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
+
+  Note: SDLC metrics only
 ```
 
 ### The metrics trap
@@ -355,7 +418,37 @@ This complements the situational tables below—it is a **lens for the conversat
 
 ```blueprint-diagram
 key: decision
-alt: Diagram
+alt: Decision framework — when to emphasize what
+title: PDLC versus SDLC emphasis gate
+summary: How teams calibrate lifecycle investment against product maturity and the meeting question at hand.
+node: Decision framework — when to emphasize what
+detail: Frames when to weight PDLC discovery versus SDLC delivery on this page.
+more: Meeting questions, maturity tables, and org context below complement gates and DoD without replacing them.
+node: Current state
+detail: Capture product maturity, organizational context, and the question being asked.
+more: Greenfield, maintenance, sunset, and portfolio contexts each shift how heavily P1–P3 or A–F deserve investment.
+node: Checkpoint / gate
+detail: Decide whether the situation warrants more PDLC or SDLC emphasis.
+more: Should we build this points to PDLC; how do we build and run points to SDLC; value creation needs both lenses.
+node: refine or escalate
+detail: Revisit assumptions or escalate when the checkpoint does not clear.
+more: Unclear fit may need more P1–P2 evidence; delivery crises may need focused D–F work before expanding discovery.
+node: Continue flow
+detail: Proceed with calibrated emphasis across the tables on this page.
+more: Apply situational guidance for greenfield, mature features, platform work, bug fixes, and organizational stage.
+fallback_ascii: |
+  Decision framework — when to emphasize what
+
+  Current state
+      |
+      v
+  Checkpoint / gate
+      |
+      +-- no ──► refine or escalate
+      |
+     yes
+      v
+  Continue flow
 ```
 
 ---

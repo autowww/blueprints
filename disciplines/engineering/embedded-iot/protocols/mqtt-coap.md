@@ -34,7 +34,33 @@ Producers **publish** to **topics**; consumers **subscribe** to topic filters. A
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: MQTT deep dive
+title: MQTT pub/sub routing lanes
+summary: How producers and subscribers exchange events through a broker without direct client addressing.
+node: MQTT deep dive
+detail: Entry to the publish/subscribe model described on this page.
+node: Lane A
+detail: Producer path where devices or services originate telemetry and commands.
+more: Publishers emit to hierarchical topics without knowing which subscribers will receive each message.
+node: handoff
+detail: Messages pass to the broker for topic-based routing.
+more: The broker matches topic filters and fans out copies to every matching subscription.
+node: shared outcome
+detail: Subscribers receive decoupled events from the routed publish.
+node: Lane B
+detail: Consumer path where applications subscribe and react to incoming traffic.
+node: inspect / adapt
+detail: Subscribers apply topic filters and local handling rules.
+more: Wildcards and ACL prefix boundaries determine which messages each client may receive.
+node: feedback
+detail: Consumers may publish responses or state back through the broker.
+fallback_ascii: |
+  MQTT deep dive
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
+
+  Note: for high-volume telemetry where loss is acceptable;
 ```
 
 ### QoS levels
@@ -92,7 +118,34 @@ Client registers interest; server pushes **notifications** when a resource chang
 
 ```blueprint-diagram
 key: sequence
-alt: Diagram
+alt: CoAP deep dive
+title: CoAP observe notification flow
+summary: How a client registers interest and receives server-pushed resource updates over UDP.
+node: CoAP deep dive
+detail: Entry to CoAP request/response and observe semantics on this page.
+node: Actor / trigger
+detail: A client or changing resource state starts the interaction.
+more: Registration uses GET with the Observe option; later updates arrive as confirmable or non-confirmable notifications.
+node: System step
+detail: Client and server exchange observe registration and notification messages.
+more: Confirmable messages require ACK or RST; the stack retransmits with backoff on constrained links.
+node: Outcome / handoff
+detail: Notifications deliver fresh resource representations to the interested client.
+more: Large payloads may use numbered block-wise transfers for reliable reassembly on constrained links.
+fallback_ascii: |
+  CoAP deep dive
+
+  Actor / trigger
+      |
+      v
+  System step
+      |
+      v
+  Outcome / handoff
+
+  Note: (numbered); supports reliable reassembly on constrained links.
+
+  ### Security
 ```
 
 ### Block-wise transfers ([RFC 7959](https://www.rfc-editor.org/rfc/rfc7959.html))

@@ -36,7 +36,36 @@ The OST makes discovery **visible**, **collaborative**, and **traceable** — th
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Core structure
+title: OST core layers
+summary: How the opportunity solution tree connects measurable outcomes to customer opportunities in governed discovery.
+node: Core structure
+detail: Frames the four-level OST model on this page.
+more: Outcome, opportunities, solutions, and experiments make discovery visible, collaborative, and traceable.
+node: Start
+detail: Initiates tree building from customer evidence and strategic intent.
+more: The product trio begins by defining what measurable result the team pursues this cycle.
+node: Core steps (see walkthrough below)
+detail: Walks through discovering opportunities, solutions, and experiments.
+more: The numbered list below defines how interviews, ideation, and smallest-viable tests populate each branch.
+node: Outcome
+detail: Anchors the tree with the measurable result to achieve.
+more: Root outcomes come from product strategy, OKRs, or P3 success metrics—not feature requests.
+node: Note: Opportunities
+detail: Marks the customer-needs layer between outcome and solutions.
+more: Opportunities cite P1 evidence such as interviews and analytics; keep needs separate from solutions.
+fallback_ascii: |
+  Core structure
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: Opportunities
 ```
 
 ### Layer definitions

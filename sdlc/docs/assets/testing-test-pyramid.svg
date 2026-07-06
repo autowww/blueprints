@@ -6,10 +6,10 @@
   <polygon points="260,50 420,300 100,300" fill="none" stroke="#334155" stroke-width="2"/>
   <g font-family="system-ui, sans-serif" font-size="10" fill="#e2e8f0">
     <text x="260" y="88" text-anchor="middle" font-weight="700" fill="#F59E0B">E2E</text>
-    <text x="260" y="102" text-anchor="middle" fill="#94a3b8">Few  slow, high confidence</text>
+    <text x="260" y="102" text-anchor="middle" fill="#94a3b8">Few   slow, high confidence</text>
     <text x="260" y="148" text-anchor="middle" font-weight="700" fill="#06B6D4">API / contract</text>
     <text x="260" y="198" text-anchor="middle" font-weight="700" fill="#06B6D4">Component / unit</text>
     <text x="260" y="248" text-anchor="middle" font-weight="700" fill="#06B6D4">Static analysis</text>
-    <text x="260" y="262" text-anchor="middle" fill="#94a3b8">Linters · SAST · types</text>
+    <text x="260" y="262" text-anchor="middle" fill="#94a3b8">Linters  |  SAST  |  types</text>
   </g>
 </svg>

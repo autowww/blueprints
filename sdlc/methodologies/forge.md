@@ -27,7 +27,32 @@ Forge is **not** a rebranding of Agile — it is an extension of it for modern A
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Process diagram
+title: Forge parallel process lanes
+summary: Two swimlanes show governed handoff toward outcomes and inspect-adapt feedback that compounds learning.
+node: Process diagram
+detail: Frames the Forge value chain as parallel, reviewable lanes on this overview.
+node: Lane A
+detail: The delivery lane moves refined work through ceremonies toward release.
+more: Ore becomes Ingot, Sparks enter the Charge, and Review feeds the Assay Gate along this path.
+node: handoff
+detail: Transfers work, context, or ownership between roles without losing traceability.
+more: Standard Forge ceremonies preserve intent at each boundary so the next actor can govern execution.
+node: shared outcome
+detail: The converged result the team recognizes as complete for the current step.
+node: Lane B
+detail: The learning lane inspects results and adapts before the next commitment.
+node: inspect / adapt
+detail: Reviews evidence from execution and adjusts scope, plans, or process.
+more: Versona challenge passes and Ember Log entries often anchor what changed and why.
+node: feedback
+detail: Captured learning that can restart Ore or refine the next Charge.
+more: Release learning explicitly feeds new Ore, closing the Forge iteration loop.
+fallback_ascii: |
+  Process diagram
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
 ```
 
 *Ore → Ingot → Spark → Charge → Review → Assay Gate → Release → learning feeds new Ore.*
@@ -154,8 +179,8 @@ Forge must never add more ceremony than it removes waste. Key tenets:
 - [Agentic SDLC](agentic-sdlc.md) — cross-cutting agent layer (Forge extends this with Versonas)
 - [Agentic coding standards](agentic-coding-standards.md) — AI-assisted coding and review standards; Forge mapping (Charge, Ember Log, Versonas, Assay)
 - [Respecting resources](forge/RESPECTING-RESOURCES.md) — token economics, decompose-before-escalate, bounded loops
-- [Autonomy levels](forge/AUTONOMY-LEVELS.md) — L0–L8 ladder, Assay enforcement, Forge Dark Factory PoC
-- [Bounded execution examples](forge/BOUNDED-EXECUTION-EXAMPLES.md) — real L1/L2 runs with loop, routing, PDCA, and dual-wiki diagrams
+- [Autonomy levels](forge/AUTONOMY-LEVELS.md) — L0–L8 ladder, Assay enforcement, Forge Dark Factory PoC · [Platform adoption hub](https://platform.forgesdlc.com/docs-autonomy-levels-index.html) (readiness + per-level reference architecture)
+- [Bounded execution examples](forge/BOUNDED-EXECUTION-EXAMPLES.md) — real L1–L3 runs with loop, routing, PDCA, and dual-wiki diagrams
 - [Spec-driven development](spec-driven-development.md) — durable specs complement Forge's Ingot refinement
 - [Scrum](scrum.md) · [Kanban](kanban.md) · [XP](xp.md) — Forge ceremonies map to the same C1–C6 foundation
 - [Ceremonies — Forge fork](ceremonies/forge.md) — C1–C6 mapped to Forge events

@@ -47,7 +47,33 @@ Six Sigma does **not replace** PM, SDLC, or PDLC. It is a **cross-cutting improv
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Core structure
+title: DMAIC improvement cycle
+summary: How Six Sigma structures data-driven improvement of an existing process through five governed phases.
+node: Core structure
+detail: Frames DMAIC as the primary cycle for improving existing processes.
+more: DMAIC targets processes with measurable baselines where statistical methods can reduce defects and variation.
+node: Start
+detail: Opens with a charter that scopes the problem, team, and CTQ goals.
+more: Define phase produces the project charter, stakeholder alignment, and measurable success criteria before data collection begins.
+node: Core steps (see walkthrough below)
+detail: Runs Define, Measure, Analyze, Improve, and Control with tollgate reviews.
+more: Each phase uses statistical tools and evidence-based decisions; the phase table below lists goals, activities, and tools per step.
+node: Outcome
+detail: Delivers sustained process gains handed off to the process owner.
+more: Control phase embeds monitoring, SOPs, and dashboards so improvements persist after the project closes.
+fallback_ascii: |
+  Core structure
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: (also called
 ```
 
 | Phase | Goal | Key activities | Key tools |

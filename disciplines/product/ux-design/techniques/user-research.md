@@ -58,7 +58,33 @@ Use the matrix to **pair methods**: qualitative behavioral observation explains 
 
 ```blueprint-diagram
 key: decision
-alt: Diagram
+alt: Research process (flowchart)
+title: User research process gate
+summary: How research advances only after a reviewable checkpoint against current evidence and planning.
+node: Current state
+detail: Capture open questions, participant context, and findings gathered so far.
+more: Inventory what is known from prior studies, planning artifacts, and stated limitations before judging readiness to proceed.
+node: Checkpoint / gate
+detail: Evaluate whether evidence quality and ethics meet the bar to continue or decide.
+more: A bounded review against research questions, sampling, and consent; block progression when gaps would waste participant time.
+node: refine or escalate
+detail: Return to planning or raise unresolved scope or ethics questions for decision.
+more: Refinement tightens questions, screeners, or methods; escalation brings legal or stakeholders when vulnerable populations apply.
+node: Continue flow
+detail: Advance to fieldwork, synthesis, or stakeholder recommendations with clear owners.
+fallback_ascii: |
+  Research process (flowchart)
+
+  Current state
+      |
+      v
+  Checkpoint / gate
+      |
+      +-- no ──► refine or escalate
+      |
+     yes
+      v
+  Continue flow
 ```
 
 ---
@@ -97,7 +123,28 @@ alt: Diagram
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Insight synthesis funnel
+title: Research insight synthesis funnel
+summary: How raw observations narrow into actionable themes and deliverables traceable back to evidence.
+node: Start
+detail: Raw session notes, clips, and observations enter synthesis from completed fieldwork.
+more: Bring together interview transcripts, usability recordings, survey open-ends, and tagged observations before clustering.
+node: Core steps (see walkthrough below)
+detail: Apply affinity, journey, persona, empathy, or jobs-to-be-done techniques from this page.
+more: Cluster findings bottom-up into themes, maps, and archetypes; document limitations so conclusions stay reviewable.
+node: Outcome
+detail: Produce evidence-backed insights, reports, and recommendations connected to design decisions.
+more: Each insight should have an owner and a follow-up so research does not stall without action.
+fallback_ascii: |
+  Insight synthesis funnel
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ---

@@ -13,7 +13,35 @@ Diagrams below use **` ```blueprint-diagram `** fences on the published handbook
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Forge iteration lifecycle (high level)
+title: Forge iteration delivery cycle
+summary: How forward delivery and inspect-and-adapt feedback run in parallel across one bounded Forge iteration.
+node: Forge iteration lifecycle (high level)
+detail: Frames the dual-lane view of ceremonies and outcomes inside one iteration.
+more: Ore intake stays continuous; refinement, planning, Charge, review, and Assay Gate shape what ships in the cycle.
+node: Lane A
+detail: The forward path from intake through ceremonies toward release outcomes.
+more: Refinement shapes Ore into Ingots; planning decomposes Ingots into Sparks scoped for the iteration.
+node: handoff
+detail: Explicit transfer when work crosses ceremony or ownership boundaries.
+more: Daily syncs confirm the Charge; review surfaces evidence before the Assay Gate release decision.
+node: shared outcome
+detail: The traceable increment and evidence the iteration must leave behind.
+more: Sparks across phases A–F produce artifacts ready for governed release when the Assay Gate passes.
+node: Lane B
+detail: The parallel inspect-and-adapt path across iteration ceremonies.
+more: Teams challenge scope and evidence without losing decision memory in forge-logs.
+node: inspect / adapt
+detail: Ceremonies review progress against acceptance criteria and blockers.
+more: Retro captures learning that feeds back as new Ore so the next cycle improves.
+node: feedback
+detail: Learnings loop back into continuous Ore intake and upstream planning.
+more: Blocked versus Banked states preserve context when work pauses strategically versus externally.
+fallback_ascii: |
+  Forge iteration lifecycle (high level)
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
 ```
 
 ## 2. Work unit hierarchy
@@ -65,7 +93,37 @@ Exploration spikes often use Versona **sessions** with `work_item_kind` `spike_d
 
 ```blueprint-diagram
 key: state
-alt: Diagram
+alt: State model
+title: Forge work-unit states
+summary: How Ore advances through refinement, execution, and release gates to a governed outcome.
+node: State model
+detail: Frames the lifecycle states that govern Forge work units on this page.
+more: The state table below defines Ore through Released and Rejected with meanings distinct from simple Kanban.
+node: Start
+detail: Work enters as raw Ore or returns from retro as new intake.
+more: Spark-specific state and journal data live in forge-logs/, not the requirements tree.
+node: Core steps (see walkthrough below)
+detail: Units move through refinement, Charge, Done, and gate review.
+more: Banked differs from Blocked; Done is not Released until the Assay Gate passes with evidence.
+node: Outcome
+detail: Work exits as Released after the gate or Rejected with a recorded reason.
+more: Rejected items close with rationale rather than silent deletion, keeping the trail reviewable.
+node: Note: | Raw, unrefined input |
+detail: Anchors Ore as the default entry state for unrefined intake.
+more: Ore maps to pre-refinement epics or features before refinement shapes plannable Ingots.
+fallback_ascii: |
+  State model
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: | Raw, unrefined input |
+  |
 ```
 
 | State | Meaning |
@@ -84,35 +142,148 @@ alt: Diagram
 
 ```blueprint-diagram
 key: decision
-alt: Diagram
+alt: Refinement flow (Ore → Ingot)
+title: Ore to Ingot refinement
+summary: How refinement shapes raw Ore into plannable Ingots ready for iteration planning.
+node: Refinement flow (Ore
+detail: Refinement begins with raw Ore selected for shaping at the ceremony.
+more: Aligns with SDLC Phase B Specify and specify: Sparks; stories with clear acceptance may already qualify as Ingots.
+node: Ingot)
+detail: Refined work exits with enough clarity for planning decomposition.
+more: Versonas may be invoked at this decision point for structured discipline review before planning.
+fallback_ascii: |
+  Refinement flow (Ore
+      |
+      v
+  Ingot)
 ```
 
 ## 5. Planning flow (Ingot → Sparks → iteration scope)
 
 ```blueprint-diagram
 key: decision
-alt: Diagram
+alt: Planning flow (Ingot → Sparks → iteration scope)
+title: Ingot to iteration scope
+summary: How planning decomposes Ingots into Sparks and bounds what one iteration will deliver.
+node: Planning flow (Ingot
+detail: Planning starts from a refined Ingot ready for decomposition.
+more: Engineering hat typically leads Spark decomposition while product hat shaped upstream Ingots.
+node: Sparks
+detail: Ingots break into executable, testable Sparks with inherited WBS IDs.
+more: Sparks map to tasks; flavor prefixes discover: through release: align to phases A–F.
+node: iteration scope)
+detail: The bounded set of Sparks committed for one Forge iteration.
+more: Charge is a daily view of selected Sparks, not a separate backlog board.
+fallback_ascii: |
+  Planning flow (Ingot
+      |
+      v
+  Sparks
+      |
+      v
+  iteration scope)
 ```
 
 ## 6. Daily execution loop
 
 ```blueprint-diagram
 key: decision
-alt: Diagram
+alt: Daily execution loop
+title: Daily Charge execution gate
+summary: How daily sync confirms the Charge and routes blockers through refine or escalate paths.
+node: Current state
+detail: Today's Charge reflects which Sparks are active in execution.
+more: Daily sync surfaces blockers and confirms the day's selected Sparks across build: work.
+node: Checkpoint / gate
+detail: The team checks whether each Spark can proceed or needs intervention.
+more: Blocked marks external impediment; Banked preserves context for strategic pause.
+node: refine or escalate
+detail: Rework scope, unblock, or escalate when the gate does not clear.
+more: Charge execution aligns with Phase D Build; impediments get traceable resolution paths.
+node: Continue flow
+detail: Cleared Sparks proceed through bounded execution toward Done evidence.
+more: Done gathers evidence but is not Released until the Assay Gate passes.
+fallback_ascii: |
+  Daily execution loop
+
+  Current state
+      |
+      v
+  Checkpoint / gate
+      |
+      +-- no ──► refine or escalate
+      |
+     yes
+      v
+  Continue flow
 ```
 
 ## 7. Assay Gate flow
 
 ```blueprint-diagram
 key: decision
-alt: Diagram
+alt: Assay Gate flow
+title: Assay Gate release decision
+summary: How strict release review decides whether Done work may ship as Released.
+node: Current state
+detail: Sparks marked Done arrive with gathered evidence at the gate.
+more: Done means evidence is ready for Assay Gate review, not yet shipped.
+node: Checkpoint / gate
+detail: The Assay Gate judges evidence quality against release criteria.
+more: Aligns with Phase E Verify and F Release; verify: and release: Sparks support the ceremony.
+node: refine or escalate
+detail: Rework evidence or escalate when the release bar is not met.
+more: Failed gates return work for refinement rather than silent partial release.
+node: Continue flow
+detail: Passed work advances to Released with governed ship approval.
+more: Released means Assay Gate pass; the distinction from Done keeps release reviewable.
+fallback_ascii: |
+  Assay Gate flow
+
+  Current state
+      |
+      v
+  Checkpoint / gate
+      |
+      +-- no ──► refine or escalate
+      |
+     yes
+      v
+  Continue flow
 ```
 
 ## 8. Versona flow (sessions and discipline work)
 
 ```blueprint-diagram
 key: decision
-alt: Diagram
+alt: Versona flow (sessions and discipline work)
+title: Versona session decision gate
+summary: How bounded Versona sessions support discipline work at Forge decision points.
+node: Current state
+detail: A decision point or discipline question triggers optional Versona invocation.
+more: Sessions live under forge-logs/versona/; exploration spikes use spike kinds, not Forge Sparks.
+node: Checkpoint / gate
+detail: The session checks whether discipline input is ready to proceed or merge.
+more: Each Versona calibrates review depth to the current SDLC phase via bridge documents.
+node: refine or escalate
+detail: Rework inputs or escalate when structured output is insufficient.
+more: §5 structured output or other discipline artifacts must be reviewable before downstream work continues.
+node: Continue flow
+detail: Accepted session outputs inform the next Forge ceremony or Spark work.
+more: Discipline spikes close with SPIKE-CLOSE.md and may spawn new Ore or Ingots as follow-up.
+fallback_ascii: |
+  Versona flow (sessions and discipline work)
+
+  Current state
+      |
+      v
+  Checkpoint / gate
+      |
+      +-- no ──► refine or escalate
+      |
+     yes
+      v
+  Continue flow
 ```
 
 ## 9. Cross-phase mapping (A–F) in one iteration

@@ -39,7 +39,36 @@ Project management work falls into five **process groups** — not sequential ph
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Process groups
+title: PM process group flow
+summary: Five overlapping PM activity sets that recur from authorization through formal project closure.
+node: Process groups
+detail: Framework organizing initiating, planning, executing, monitoring, and closing work.
+more: PMI treats these as overlapping activity sets, not sequential phases—they recur throughout the project lifecycle.
+node: Start
+detail: Authorization and charter work kick off initiating activities.
+more: Initiating receives the funded initiative from PDLC Phase P3 and produces the charter and stakeholder register.
+node: Core steps (see walkthrough below)
+detail: Planning, execution, and monitoring activities run concurrently below.
+more: Each subsection below maps to a process group with goals, activity tables, and PDLC or SDLC connection notes.
+node: Outcome
+detail: Delivery within agreed scope, schedule, budget, and risk tolerance.
+more: Closing formalizes acceptance, archives artifacts, and captures lessons learned before resources are released.
+node: Note: PDLC connection:
+detail: Product lifecycle phases feed initiating and overlap at closing.
+more: Initiating references P1–P3 outputs; closing often overlaps P4 Launch while the product continues in P5–P6.
+fallback_ascii: |
+  Process groups
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: PDLC connection:
 ```
 
 ### Initiating
@@ -220,7 +249,36 @@ While process groups describe **what** PM does, lifecycle phases describe **when
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Project lifecycle phases
+title: Project lifecycle phase flow
+summary: Sequential project phases from feasibility through closing with PDLC and SDLC alignment points.
+node: Project lifecycle phases
+detail: The temporal arc describing when PM work flows through a project.
+more: Process groups describe what PM does; lifecycle phases describe when those activities concentrate.
+node: Start
+detail: Feasibility assesses whether the project merits investment.
+more: Business case and high-level estimates align with PDLC Discover through Plan and Commit.
+node: Core steps (see walkthrough below)
+detail: Initiation, planning, and execution phases detailed in the table below.
+more: Planning overlaps SDLC Phase A for scope decomposition; execution spans SDLC Phases A–F.
+node: Outcome
+detail: Formal closure with acceptance, lessons learned, and resource release.
+more: Project closes while the product may continue through PDLC Grow and Mature phases.
+node: Note: Feasibility
+detail: First lifecycle gate before charter and authorization.
+more: Feasibility maps to P1–P3 and precedes initiation where the PM is assigned and work authorized.
+fallback_ascii: |
+  Project lifecycle phases
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: Feasibility
 ```
 
 | Phase | PM focus | PDLC overlap | SDLC overlap |

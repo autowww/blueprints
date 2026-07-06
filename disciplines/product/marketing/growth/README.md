@@ -13,7 +13,28 @@ learning_level: reference
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Process flow
+title: Growth engineering loop
+summary: How teams move from framed intent through bounded experiments to measurable funnel outcomes with guardrails.
+node: Start
+detail: Frame the growth opportunity and pre-register success criteria.
+more: Anchor the work in a funnel stage lever and define guardrails for support load, refunds, and trust before tests run.
+node: Core steps (see walkthrough below)
+detail: Run instrumented experiments using the guides and walkthroughs linked below.
+more: Apply funnel mechanics, prioritization, and experiment hygiene from funnel-optimization.md; project runbooks live in docs/product/marketing/.
+node: Outcome
+detail: Deliver a measurable lift or a documented learn with traceable evidence.
+more: Compare results against pre-registered criteria and guardrails so wins stay honest and repeatable across the AARRR funnel.
+fallback_ascii: |
+  Process flow
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ## Guides

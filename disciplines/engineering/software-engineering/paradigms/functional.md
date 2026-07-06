@@ -32,7 +32,30 @@ Functional programming treats computation as **evaluation of expressions** built
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Data transformation pipeline
+title: FP data transformation pipeline
+summary: How immutable input passes through composed pure steps to a typed, testable outcome.
+node: Start
+detail: Raw or upstream data enters with an explicit input type contract.
+more: Immutable values at the boundary keep downstream steps locally reasoned and safe for parallel maps.
+node: Core steps (see walkthrough below)
+detail: Each stage applies a small pure function with a clear type contract.
+more: Stages compose in batch jobs, stream transforms, and UI reducers; hidden IO stays at explicit effect boundaries.
+node: Outcome
+detail: The pipeline emits a new immutable value ready for the next consumer.
+more: Deterministic transforms simplify tests, snapshots, and concurrent evaluation without shared mutable state.
+fallback_ascii: |
+  Data transformation pipeline
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: small pure step
 ```
 
 This shape appears in batch jobs, stream transforms, and UI state reducers: each stage is a **small pure step** with a clear type contract.

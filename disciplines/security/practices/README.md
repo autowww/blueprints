@@ -19,7 +19,33 @@ Security practices are **proactive defense**: they turn “hope we are safe” i
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Why these practices matter
+title: Proactive security practice loop
+summary: How repeatable security activities replace ad hoc hope with early flaw detection, continuous validation, and governed response.
+node: Start
+detail: Recognize security as proactive defense owned across the whole team.
+more: Architecture, delivery, and operations share responsibility instead of isolating security in a late gate.
+node: Core steps (see walkthrough below)
+detail: Apply the linked guides for modeling, testing, review, and incident response.
+more: Threat modeling, secure review, security and penetration testing, incident response, supply chain, and secrets each map to a guide or SECURITY.md section in the table below.
+node: Outcome
+detail: Establish traceable defense that catches flaws early and supports governed response.
+more: Validate implementations continuously and ensure the organization can respond and learn when incidents occur.
+node: Note: `docs/security/`
+detail: Project-specific configuration and findings stay outside this blueprint index.
+more: Incidents and test findings feed updated assumptions into docs/security/, docs/security/threat-models/, and docs/adr/ to close the loop.
+fallback_ascii: |
+  Why these practices matter
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: `docs/security/`
 ```
 
 The loop closes when incidents and test findings **feed** updated threat assumptions, requirements, and detection — documented at the project level in **`docs/security/`**, **`docs/security/threat-models/`**, and **`docs/adr/`** as appropriate.

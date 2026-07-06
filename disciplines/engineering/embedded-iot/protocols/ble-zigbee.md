@@ -27,7 +27,34 @@ BLE exposes data through **GATT**: profiles bundle **services**; services contai
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: BLE (Bluetooth Low Energy)
+title: BLE GATT data path
+summary: Maps how BLE exposes structured application data through GATT for low-power, short-range links.
+node: BLE (Bluetooth Low Energy)
+detail: Short-range 2.4 GHz radio for phones, wearables, and beacons.
+more: Range, power, and topology trade-offs on this page depend on who talks to whom and whether native IP is needed.
+node: Start
+detail: Enter the GATT hierarchy that structures BLE application data.
+node: Core steps (see walkthrough below)
+detail: Profiles bundle services; services hold characteristics and descriptors.
+more: Characteristics carry values; descriptors include CCCD for enabling notifications from sleepy sensors.
+node: Outcome
+detail: A reviewable model for connectable devices and notification channels.
+node: Note: Advertising
+detail: Broadcast PDUs advertise service UUIDs, names, and manufacturer data.
+more: Advertising can be connectable or non-connectable and precedes pairing, bonding, and GATT access.
+fallback_ascii: |
+  BLE (Bluetooth Low Energy)
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: Advertising
 ```
 
 ### Operational themes
@@ -55,7 +82,34 @@ IEEE **802.15.4**-based stack with application layer from **Connectivity Standar
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Zigbee
+title: Zigbee mesh stack path
+summary: Traces how an 802.15.4 Zigbee network forms, routes traffic, and exposes application clusters.
+node: Zigbee
+detail: IEEE 802.15.4 stack with CSA application layer for home and sensor networks.
+more: Native mesh and sub-GHz options suit building-wide sensor networks without requiring native IP.
+node: Start
+detail: A coordinator forms the PAN and distributes trust-center keys.
+node: Core steps (see walkthrough below)
+detail: Routers relay traffic; end devices join as sleepy or reduced-function nodes.
+more: Mains-powered routers extend hop range; sleepy end devices minimize duty cycle at the cost of latency.
+node: Outcome
+detail: A governed mesh ready for standardized cluster commands and OTA updates.
+node: Note: (Zigbee Cluster Library) defines
+detail: ZCL clusters specify attributes and commands for domains like On/Off and metering.
+more: Zigbee 3.0 unifies application profiles; Zigbee Direct can ease commissioning over BLE where supported.
+fallback_ascii: |
+  Zigbee
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: (Zigbee Cluster Library) defines
 ```
 
 ### Application layer
@@ -100,7 +154,34 @@ alt: Diagram
 
 ```blueprint-diagram
 key: decision
-alt: Diagram
+alt: Decision flowchart
+title: Short-range protocol selection
+summary: A gated review of product constraints before committing to BLE, Zigbee, Thread, or peers.
+node: Decision flowchart
+detail: Frames protocol choice against range, power, mesh, and IP requirements on this page.
+node: Current state
+detail: Capture who talks to whom, topology needs, and 2.4 GHz coexistence constraints.
+node: Checkpoint / gate
+detail: Verify the candidate protocol meets range, throughput, and power budgets.
+more: Use the comparison matrix to bound expectations for mesh depth, module cost, and typical node counts.
+node: refine or escalate
+detail: Revisit assumptions or escalate when the gate fails on a hard constraint.
+more: Common misses include BLE for building-wide mesh without design and ignoring Wi-Fi coexistence on 2.4 GHz.
+node: Continue flow
+detail: Proceed with commissioning, security, and OTA patterns aligned to the chosen stack.
+fallback_ascii: |
+  Decision flowchart
+
+  Current state
+      |
+      v
+  Checkpoint / gate
+      |
+      +-- no ──► refine or escalate
+      |
+     yes
+      v
+  Continue flow
 ```
 
 ---

@@ -11,28 +11,116 @@ learning_level: reference
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: CI/CD pipeline (conceptual)
+title: CI/CD commit-to-deploy pipeline
+summary: How each commit advances through build, test, scan, and deploy with gated progression.
+node: Start
+detail: A commit or merge triggers the automated pipeline run.
+more: Every commit initiates the sequence; small, frequent commits keep feedback loops short and reviewable.
+node: Core steps (see walkthrough below)
+detail: Build, test, scan, and deploy execute in governed sequence.
+more: Failures at any stage block progression; teams treat the pipeline as the single source of deployment readiness.
+node: Outcome
+detail: A deployable artifact or blocked release decision is recorded.
+fallback_ascii: |
+  CI/CD pipeline (conceptual)
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ## 2. DevOps infinity loop
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: DevOps infinity loop
+title: DevOps continuous feedback loop
+summary: How operational signals cycle back into planning, build, test, release, and monitoring.
+node: Start
+detail: A delivery or operational signal enters the DevOps cycle.
+node: Core steps (see walkthrough below)
+detail: Planning, code, infrastructure, test, release, and monitor stages interconnect.
+more: DevOps is not linear; monitoring informs the next planning cycle and production-like testing shapes the next build.
+node: Outcome
+detail: Improved delivery posture feeds the next loop iteration.
+fallback_ascii: |
+  DevOps infinity loop
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ## 3. Incident response flow
 
 ```blueprint-diagram
 key: decision
-alt: Diagram
+alt: Incident response flow
+title: Governed incident response gate
+summary: How severity and readiness checkpoints route incidents toward coordinated response or escalation.
+node: Current state
+detail: An active alert or production incident enters structured response.
+more: Teams replace ad-hoc firefighting with defined roles; severity sets the initial response level.
+node: Checkpoint / gate
+detail: Confirm severity, scope, and whether the response bar is met.
+more: Incident commanders coordinate complex events; post-mortems capture learning from significant incidents.
+node: refine or escalate
+detail: Rework triage or escalate when the gate does not clear.
+node: Continue flow
+detail: Proceed with coordinated mitigation and communication per severity.
+fallback_ascii: |
+  Incident response flow
+
+  Current state
+      |
+      v
+  Checkpoint / gate
+      |
+      +-- no ──► refine or escalate
+      |
+     yes
+      v
+  Continue flow
 ```
 
 ## 4. Deployment strategy decision
 
 ```blueprint-diagram
 key: decision
-alt: Diagram
+alt: Deployment strategy decision
+title: Deployment strategy selection gate
+summary: How risk tolerance and rollback needs route releases toward rolling, canary, blue-green, or flag-based paths.
+node: Current state
+detail: Capture release scope, risk profile, and rollback requirements.
+node: Checkpoint / gate
+detail: Test whether the candidate strategy meets tolerance and observability needs.
+more: Rolling updates are simplest; canary uses subset traffic; blue-green enables instant rollback; flags decouple deploy from user-visible release.
+node: refine or escalate
+detail: Revisit strategy choice or escalate when the gate fails.
+node: Continue flow
+detail: Proceed with the selected deployment approach into release execution.
+fallback_ascii: |
+  Deployment strategy decision
+
+  Current state
+      |
+      v
+  Checkpoint / gate
+      |
+      +-- no ──► refine or escalate
+      |
+     yes
+      v
+  Continue flow
 ```
 
 ## 5. Phases A–F (DevOps emphasis)
@@ -50,7 +138,26 @@ alt: Diagram
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: DORA metrics collection
+title: DORA metrics collection flow
+summary: How teams gather delivery signals aligned with DORA research-backed metrics and capabilities.
+node: Start
+detail: Operational and delivery events enter the metrics collection flow.
+node: Core steps (see walkthrough below)
+detail: Instrument pipelines and production to capture delivery capability signals.
+more: DORA State of DevOps defines research-backed metrics and capabilities teams can adopt for bounded comparison.
+node: Outcome
+detail: Reviewable metrics support prioritizing DevOps capability improvements.
+fallback_ascii: |
+  DORA metrics collection
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ## 7. Flow details (walkthrough)

@@ -36,6 +36,27 @@ learning_level: overview
 ```blueprint-diagram
 key: linear
 alt: Forge Studio quickstart — clone forge-lenses, venv and dependencies, run server, open /studio/
+title: Clone to Forge Studio
+summary: How you move from handbook reading to a local forge-lenses server with Forge Studio at /studio/.
+node: Start
+detail: You begin when local workspace visibility matters more than handbook-only reading.
+more: Use this path after First hour in your repo or equivalent Blueprints onboarding—not when you only need Markdown in a product repo.
+node: Core steps (see walkthrough below)
+detail: Clone forge-lenses, create a venv, install dependencies, and run the server.
+more: Typical steps: git clone, python3 -m venv .venv, pip install -r requirements.txt, then ./scripts/run-lenses.sh from the repo root.
+node: Outcome
+detail: Forge Studio loads in your browser for governed workspace and plan surfaces.
+more: Open http://127.0.0.1:8080/studio/ on the default port; the same process also serves the classic dashboard at /.
+fallback_ascii: |
+  Handbook-only reading vs running Forge Studio
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ## When to use it

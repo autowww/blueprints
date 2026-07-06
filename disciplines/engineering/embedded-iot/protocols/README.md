@@ -17,7 +17,35 @@ learning_level: reference
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Process flow
+title: Protocol stack reference flow
+summary: How layer and protocol choices converge on shared connectivity with reviewable inspect-and-adapt feedback.
+node: Process flow
+detail: Entry for mapping application needs to reference protocol layers.
+more: Framing starts from latency, duty cycle, security posture, and cloud or on-prem integration constraints on this page.
+node: Lane A
+detail: Primary path from requirement to a bounded protocol selection.
+more: Each protocol entry covers architecture, message format, QoS, security, power profile, and best-fit scenarios in the table below.
+node: handoff
+detail: Traceable transfer between stack layer responsibilities.
+more: Application protocols such as MQTT or CoAP sit above link and network transports; each handoff fixes constraints for the next layer.
+node: shared outcome
+detail: Interoperable device connectivity aligned to product constraints.
+more: Committing late often forces gateways, duplicate stacks, or non-interoperable silos tied to power and update strategy.
+node: Lane B
+detail: Parallel path for operational inspection and adaptation.
+more: NAT behavior, duty cycle, and operational cost remain visible after the initial architecture decision.
+node: inspect / adapt
+detail: Review field behavior against power and latency budgets.
+more: Teams adjust QoS, polling versus event models, spreading factors, and broker or gateway placement as deployment evidence accumulates.
+node: feedback
+detail: Governed input back into protocol and architecture decisions.
+more: Lifecycle impact is documented in IOT-SDLC-PDLC-BRIDGE; project-specific configuration stays in docs/development/embedded/protocols.
+fallback_ascii: |
+  Process flow
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
 ```
 
 | Protocol | Layer | Focus | Deep dive |

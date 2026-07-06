@@ -11,7 +11,32 @@ learning_level: reference
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Value-stream overview (idea to production)
+title: Idea to production stream
+summary: How work moves from demand to delivery with measurable lead time across the full value stream.
+node: Value-stream overview (idea to production)
+detail: Frames the end-to-end path from idea through production delivery.
+more: Lean teams map this stream to expose waiting, handoffs, and queues between active work.
+node: Start
+detail: Demand or a validated idea enters the value stream.
+node: Core steps (see walkthrough below)
+detail: Work progresses through shape, plan, build, verify, release, and learn phases.
+more: Section 7 and the phases table define lean focus and metrics for each blueprint phase.
+node: Outcome
+detail: Delivered value reaches production with traceable elapsed time.
+more: Lean compares total lead time to active work time; the gap surfaces systemic waste.
+fallback_ascii: |
+  Value-stream overview (idea to production)
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: lead time
 ```
 
 Lean measures **lead time** across the entire stream and **waiting time** between steps.
@@ -20,21 +45,89 @@ Lean measures **lead time** across the entire stream and **waiting time** betwee
 
 ```blueprint-diagram
 key: decision
-alt: Diagram
+alt: Waste identification loop
+title: Waste identification loop
+summary: A repeating cycle that maps current flow, finds waste, and standardizes proven countermeasures.
+node: Current state
+detail: The team documents how work actually moves today.
+more: Value-stream mapping and the seven-waste taxonomy in section 6 guide what to observe.
+node: Checkpoint / gate
+detail: A review point asks whether waste is identified and actionable.
+node: refine or escalate
+detail: Countermeasures need rework or a higher-level decision before proceeding.
+node: Continue flow
+detail: Valid countermeasures advance into the live process.
+more: Successful changes are standardized so the loop restarts from an improved current state.
+fallback_ascii: |
+  Waste identification loop
+
+  Current state
+      |
+      v
+  Checkpoint / gate
+      |
+      +-- no ──► refine or escalate
+      |
+     yes
+      v
+  Continue flow
 ```
 
 ## 3. A3 problem-solving flow
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: A3 problem-solving flow
+title: A3 problem-solving flow
+summary: A structured, concise path for analyzing complex problems and validating countermeasures.
+node: A3 problem-solving flow
+detail: Frames the A3 format as the bounded container for the investigation.
+node: Start
+detail: A complex problem worth structured analysis enters the flow.
+node: Core steps (see walkthrough below)
+detail: Each A3 section builds on the prior with forced conciseness.
+more: Background, current state, root cause, countermeasures, and follow-up sections must justify the next step.
+node: Outcome
+detail: A reviewed countermeasure plan ready for execution or standardization.
+more: Review validates reasoning quality before changes reach the value stream.
+fallback_ascii: |
+  A3 problem-solving flow
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ## 4. Pull-based work selection
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Pull-based work selection
+title: Pull-based work selection
+summary: Work enters execution only when capacity exists, limiting WIP and queue waste.
+node: Pull-based work selection
+detail: Frames selection by available capacity rather than pushed demand volume.
+node: Start
+detail: Ready work waits in a governed queue until a slot opens.
+node: Core steps (see walkthrough below)
+detail: The team pulls the highest-priority item matching current capacity.
+more: WIP limits prevent overload; this operationalizes deliver-as-fast-as-possible without batching waste.
+node: Outcome
+detail: Bounded work in progress flows to completion at sustainable pace.
+fallback_ascii: |
+  Pull-based work selection
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ## 5. Phases A–F (Lean focus areas)

@@ -35,7 +35,33 @@ Save rates vary wildly by segment, product, and **stage of intent**; track your 
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Churn prevention lifecycle
+title: Churn prevention lifecycle
+summary: Detect risk early, diagnose cause, intervene with the right levers, and learn from outcomes.
+node: Start
+detail: Monitoring begins while the account still appears healthy.
+more: Combines health scores, usage predictors, and qualitative CSM notes into an early warning posture.
+node: Core steps (see walkthrough below)
+detail: Run detect, diagnose, intervene, monitor, and learn in sequence.
+more: Walkthrough sections below cover predictors, tiered playbooks, save offers, and involuntary recovery.
+node: Outcome
+detail: Record save, churn, downgrade, and reason codes for review.
+more: Outcomes feed cohort curves, LTV revision, and which playbooks warrant scale by segment.
+node: Note: Diagnose
+detail: Establish root cause before offering discounts or credits.
+more: Misdiagnosed saves waste margin and train customers to threaten churn for concessions.
+fallback_ascii: |
+  Churn prevention lifecycle
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: Diagnose
 ```
 
 **Diagnose** before defaulting to discounts — misdiagnosed saves waste margin and train customers to threaten churn.
@@ -84,7 +110,28 @@ Combine signals in **health scoring** (see [health-scoring.md](health-scoring.md
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Intervention decision tree
+title: Intervention decision tree
+summary: Route escalating risk signals to tier-matched playbooks within commercial guardrails.
+node: Start
+detail: Health score or qualitative signal crosses a tier threshold.
+more: Leading signals include usage decline, support escalation, champion departure, and renewal-window pressure.
+node: Core steps (see walkthrough below)
+detail: Apply green, yellow, or red playbook levers in sequence.
+more: Escalation runs from milestone check-ins through exec sponsors to bounded rescue offers.
+node: Outcome
+detail: Account retains, churns, or downgrades with reason logged.
+more: Results update save-rate-by-playbook metrics and inform future intervention choices.
+fallback_ascii: |
+  Intervention decision tree
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ---

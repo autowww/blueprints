@@ -36,7 +36,23 @@ It is not “microservices for tables” without standards: without **interopera
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Topology (conceptual)
+title: Data mesh topology
+summary: How domain teams, the self-serve platform, and federated governance interact without central bottlenecks.
+node: Topology (conceptual)
+detail: Frames how organizational and technical lanes connect in mesh.
+more: Domain teams publish data products on shared platform capabilities while global interoperability rules stay federated rather than centrally approved for every change.
+node: Lane A ──► handoff ──► shared outcome
+detail: Domains build and publish operated data products through platform golden paths.
+more: Handoffs cover provisioning, CI templates, schema registry, and catalog registration so each product exposes contracts and SLOs consumers can trust.
+node: Lane B ──► inspect / adapt ──► feedback
+detail: Federated governance inspects publishes and adapts policies from evidence.
+more: Automated checks in CI/CD block breaking contracts; observability on freshness and quality feeds back into domain ownership without ticket theater.
+fallback_ascii: |
+  Topology (conceptual)
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
 ```
 
 ---
@@ -47,7 +63,28 @@ A **data product** is more than a table: it is an **operated interface** with ex
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Data product anatomy
+title: Data product interface lanes
+summary: How input contracts, operated outputs, and feedback loops form a reviewable data product boundary.
+node: Data product anatomy
+detail: Frames a data product as more than a table.
+more: Section text defines it as an operated interface with explicit boundaries, discovery, observability, and negotiable SLOs.
+node: Lane A ──► handoff ──► shared outcome
+detail: Declares input ports and ships versioned output contracts to consumers.
+more: Input ports state upstream schema, volume, and SLA expectations; output ports are the versioned interfaces consumers discover in the catalog.
+node: Lane B ──► inspect / adapt ──► feedback
+detail: Monitors freshness and anomalies, then adapts the product from findings.
+more: Observability covers failed publishes and volume drift; feedback closes the loop on quality and support without breaking interoperability standards.
+node: Note: Input ports
+detail: Upstream expectations that bound what the product accepts.
+more: Input ports declare schema, volume, and SLA expectations so domains and platform teams share traceable contracts before publish.
+fallback_ascii: |
+  Data product anatomy
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
+
+  Note: Input ports
 ```
 
 **Input ports** declare upstream expectations (schema, volume, SLAs). **Output ports** are versioned consumer contracts. **Discovery** combines catalog metadata and human-readable intent. **Observability** covers freshness, volume anomalies, and failed publishes. **SLOs** make reliability negotiable.
@@ -96,7 +133,37 @@ Mesh can **use** a lakehouse as **implementation**; the differentiator is **owne
 
 ```blueprint-diagram
 key: decision
-alt: Diagram
+alt: Data product lifecycle
+title: Data product lifecycle gate
+summary: How teams assess product readiness, pass governance gates, and continue publish or refine.
+node: Data product lifecycle
+detail: Entry to governed stages from design through operate and evolve.
+more: Mesh treats each product with explicit contracts, SLOs, and lifecycle ownership rather than anonymous tables in a shared lake.
+node: Current state
+detail: Capture product definition, owners, ports, and operating baseline.
+more: Includes schema contracts, catalog metadata, observability hooks, and declared SLOs before a publish is attempted.
+node: Checkpoint / gate
+detail: Validate contracts, policy checks, and quality evidence before release.
+more: Federated governance runs automated compatibility and policy-as-code checks in CI/CD rather than central approval for every change.
+node: refine or escalate
+detail: Rework the product or engage governance when the gate fails.
+more: Breaking publishes are blocked; domains adjust contracts, quality expectations, or escalate standards negotiation when interoperability is at risk.
+node: Continue flow
+detail: Publish to catalog and operate against declared SLOs.
+more: Consumers discover the product through metadata; observability tracks freshness, volume, and failed publishes for ongoing ownership.
+fallback_ascii: |
+  Data product lifecycle
+
+  Current state
+      |
+      v
+  Checkpoint / gate
+      |
+      +-- no ──► refine or escalate
+      |
+     yes
+      v
+  Continue flow
 ```
 
 ---

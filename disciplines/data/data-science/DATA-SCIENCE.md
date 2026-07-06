@@ -23,7 +23,36 @@ The machine learning lifecycle follows iterative phases, aligned with CRISP-DM:
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: ML lifecycle (CRISP-DM aligned)
+title: CRISP-DM ML lifecycle
+summary: How iterative ML phases connect business intent to modeled outcomes and governed deployment.
+node: ML lifecycle (CRISP-DM aligned)
+detail: Introduces the cross-cutting ML lifecycle mapped to this blueprint ecosystem.
+more: Data science provides predictive and analytical capabilities to both PDLC and SDLC; see DS-SDLC-PDLC-BRIDGE for the full mapping.
+node: Start
+detail: Frame the business objective and ML problem before collecting data.
+more: Define success criteria and a feasibility assessment before exploratory data work or modeling investment.
+node: Core steps (see walkthrough below)
+detail: Execute data, modeling, evaluation, and deployment phases iteratively.
+more: Each phase produces reviewable artifacts—from prepared datasets and experiment logs to evaluation reports and model cards.
+node: Outcome
+detail: Arrive at a deployable model with documented evaluation and monitoring.
+more: Deployment yields serving infrastructure, monitoring dashboards, and retraining triggers when data or performance shifts.
+node: Note: Business understanding
+detail: The opening phase ties every later step to measurable business intent.
+more: Activities define the problem statement, success metrics, and feasibility assessment that govern downstream phases.
+fallback_ascii: |
+  ML lifecycle (CRISP-DM aligned)
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: Business understanding
 ```
 
 | Phase | Activities | Outputs |

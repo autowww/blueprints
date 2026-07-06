@@ -3,6 +3,14 @@ public_publish: true
 audience: public
 handbook_area: blueprints
 learning_level: reference
+content_id: forge.docs.blueprints.forge.concept-map
+canonical_owner: blueprints
+primary_persona: practitioner
+reader_stage: discover
+maturity: defined
+evidence_level: canonical_doc
+refresh_policy: on_claim_change
+last_reviewed: '2026-07-03'
 ---
 
 # ForgeSDLC — concept map and term-collision register
@@ -190,3 +198,35 @@ Known collisions and the **canonical resolution** (expand in [`NAMING-REFERENCE.
 ---
 
 *Blueprint reference — align with [`NAMING-REFERENCE.md`](NAMING-REFERENCE.md) when planning or roles change.*
+
+## Executive capsule
+
+**Purpose:** Single-page **canonical concept matrix** (how core terms relate to lifecycles, owners, artifacts, and meetings) and a **term-collision register** for known ambiguities. Detailed term → path mapping remains in [`NAMING-REFERENCE.md`](NAMING-REFERENCE.md). Maturity: **defined**.
+
+## Who this is for
+
+Hands-on engineers at the **discover** stage. Skim the executive capsule first; agents should respect the page frontmatter contract.
+
+## Evidence and maturity
+
+Maturity: **defined**. Statements here reflect the owning repo (`blueprints`) at `last_reviewed`; treat anything not explicitly marked as demonstrated as design direction rather than a shipped guarantee.
+
+## Trust boundary
+
+Forge keeps humans in charge of promotion, approval, and release decisions; automation proposes and executes only within approved boundaries described here.
+
+## How to use this page
+
+Read top-to-bottom at your depth: capsule for the decision, mechanism for design, links below for the next step in your journey.
+
+## The problem this solves
+
+Teams adopting AI-assisted delivery need structure they can trust before they scale it. This page addresses that gap for its topic: it explains the situation the reader is in, the failure mode without the mechanism described here, and the outcome when it is applied.
+
+## How it fits the Forge ecosystem
+
+This page belongs to its owning repo's canonical documentation and links outward to the related Forge surfaces (methodology in Blueprints, product docs in each product handbook, adoption narrative on forgesdlc.com). Follow the related links to stay on the governed path.
+
+## Related
+
+See the owning repo's documentation index for neighboring pages.

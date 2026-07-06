@@ -3,6 +3,14 @@ public_publish: true
 audience: public
 handbook_area: blueprints
 learning_level: reference
+content_id: forge.docs.blueprints.forge.sdlc-pdlc-bridge
+canonical_owner: blueprints
+primary_persona: engineering_leader
+reader_stage: adopt
+maturity: defined
+evidence_level: canonical_doc
+refresh_policy: on_claim_change
+last_reviewed: '2026-07-03'
 ---
 
 # Forge ↔ SDLC ↔ PDLC bridge
@@ -91,7 +99,23 @@ In reader-facing ForgeSDLC copy, **meeting** is the preferred label for these ev
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: Artifact flow
+title: Forge cross-lifecycle artifacts
+summary: How PDLC-validated intent flows through Forge artifacts into releases, with governed feedback reopening product learning.
+node: Artifact flow
+detail: Frames how Forge artifacts move between PDLC and SDLC on this bridge.
+more: Ore, Ingots, Sparks, Charge, Ember Log, and Assay evidence are the Forge-side carriers that connect product strategy to daily delivery.
+node: Lane A ──► handoff ──► shared outcome
+detail: PDLC outputs enter the Ore pipeline and emerge as traceable, evidenced releases.
+more: P1–P3 validated problems and P3 commitment artifacts hand off at Ore intake; Refinement, Planning, and Assay Gate produce Ingots, Sparks, and release evidence aligned to PDLC success criteria.
+node: Lane B ──► inspect / adapt ──► feedback
+detail: Forge inspects delivery and feeds learnings back into product work.
+more: Review meetings, Ember Log decisions, and P5 adoption metrics reopen Ore intake and Versona sessions so teams adjust without losing decision memory.
+fallback_ascii: |
+  Artifact flow
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
 ```
 
 ---
@@ -152,3 +176,27 @@ alt: Diagram
 | [`../../../disciplines/README.md`](../../../disciplines/README.md) | Discipline hub (Versonas knowledge bases) |
 | [`versona/README.md`](versona/README.md) | Versonas — discipline virtual personas |
 | [`planning/README.md`](planning/README.md) | Product planning (PoC/MVP/Phased) |
+
+## Executive capsule
+
+**Purpose:** Map how **Forge SDLC** connects to both the software delivery lifecycle (SDLC phases A–F) and the product development lifecycle (PDLC phases P1–P6). This bridge closes the gap between product discovery and daily execution. Maturity: **defined**.
+
+## Who this is for
+
+Engineering leaders at the **adopt** stage. Skim the executive capsule first; agents should respect the page frontmatter contract.
+
+## Evidence and maturity
+
+Maturity: **defined**. Statements here reflect the owning repo (`blueprints`) at `last_reviewed`; treat anything not explicitly marked as demonstrated as design direction rather than a shipped guarantee.
+
+## Trust boundary
+
+Forge keeps humans in charge of promotion, approval, and release decisions; automation proposes and executes only within approved boundaries described here.
+
+## How to use this page
+
+Read top-to-bottom at your depth: capsule for the decision, mechanism for design, links below for the next step in your journey.
+
+## The problem this solves
+
+Teams adopting AI-assisted delivery need structure they can trust before they scale it. This page addresses that gap for its topic: it explains the situation the reader is in, the failure mode without the mechanism described here, and the outcome when it is applied.

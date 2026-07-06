@@ -23,7 +23,29 @@ Security testing is not a single scan at the end of a release. It is a **layered
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Security test pyramid
+title: Layered security test pyramid
+summary: How automated scans, dynamic tests, and manual exercises stack for defense in depth.
+node: Start
+detail: Begin shaping a layered program rather than a single end-of-release scan.
+node: Core steps (see walkthrough below)
+detail: Layer SAST, SCA, DAST, IAST, pen tests, and red team by depth and cost.
+more: SAST and SCA scale across every commit; DAST and IAST validate running behavior; pen tests and red team stress detection and response.
+node: Outcome
+detail: Surface vulnerabilities before attackers with trustworthy, actionable signal.
+more: Tuned rules, triage discipline, and tracked fixes keep noise low so teams act on real risk.
+fallback_ascii: |
+  Security test pyramid
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: Interpretation:
 ```
 
 **Interpretation:** **SAST** and **SCA** scale across every commit; **DAST** (and **IAST**, see below) validates running behavior; **pen tests** and **red team** exercises stress real-world creativity and detection/response.
@@ -104,7 +126,29 @@ alt: Diagram
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Security testing in CI/CD
+title: Security gates in CI/CD
+summary: How security scans integrate into pipelines with governed, context-aware release gates.
+node: Start
+detail: Map security test types to IDE, pull-request, and continuous integration stages.
+node: Core steps (see walkthrough below)
+detail: Wire SAST, SCA, and DAST into builds and staging deploys with tuned baselines.
+more: Run fast checks at PR time; point DAST at ephemeral staging with test accounts and seeded data.
+node: Outcome
+detail: Gate releases on severity, exploitability, and context—not raw finding counts.
+more: Allow a baseline tuning period before hard thresholds; suppress false positives only with documented justification.
+fallback_ascii: |
+  Security testing in CI/CD
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: severity + exploitability + context
 ```
 
 Gates should use **severity + exploitability + context** (not raw counts alone) after a **baseline** period.
@@ -160,7 +204,33 @@ Gates should use **severity + exploitability + context** (not raw counts alone) 
 
 ```blueprint-diagram
 key: decision
-alt: Diagram
+alt: Vulnerability triage decision tree
+title: Vulnerability triage gate
+summary: How teams decide whether a finding is valid, scoped, and ready for remediation.
+node: Current state
+detail: A scanner, pen test, or bug-bounty finding enters the triage queue.
+node: Checkpoint / gate
+detail: Confirm validity, affected assets, and whether the issue is reachable in production.
+more: Separate true positives from false positives and map the finding to repos, images, or environments in scope.
+node: refine or escalate
+detail: Retune noisy rules, dismiss false positives, or escalate unclear high-risk items.
+more: Record suppression rationale for audit; escalate when exploitability or business impact needs expert judgment.
+node: Continue flow
+detail: Advance confirmed issues into prioritization, ownership, and tracked remediation.
+more: Feed verified findings into patch, verify, and close steps with retest criteria and severity-based SLAs.
+fallback_ascii: |
+  Vulnerability triage decision tree
+
+  Current state
+      |
+      v
+  Checkpoint / gate
+      |
+      +-- no ──► refine or escalate
+      |
+     yes
+      v
+  Continue flow
 ```
 
 ---

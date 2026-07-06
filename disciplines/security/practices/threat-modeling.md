@@ -40,7 +40,35 @@ STRIDE works best when you **anchor threats to elements** of a data flow diagram
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: STRIDE deep dive: from diagram to mitigation
+title: STRIDE diagram to mitigation
+summary: How STRIDE ties DFD elements and trust boundaries to documented threats and owned mitigations.
+node: STRIDE deep dive: from diagram to mitigation
+detail: Frames the workshop goal of moving from architecture sketch to controls.
+more: STRIDE categories apply per DFD element—entity, process, store, flow, and trust boundary.
+node: Lane A
+detail: Primary lane for diagramming assets, flows, and trust boundaries.
+more: Anchors threat prompts to each DFD element before enumeration begins.
+node: handoff
+detail: Transfers the annotated diagram into structured threat enumeration.
+more: Each element receives STRIDE prompts; threats are documented in plain language and rated.
+node: shared outcome
+detail: Produces a mitigation map traceable to diagram elements.
+more: Controls become security requirements or backlog items with owners and priority.
+node: Lane B
+detail: Parallel lane for reviewing assumptions and workshop coverage.
+more: Cross-functional participants challenge trust boundaries and missing flows before sign-off.
+node: inspect / adapt
+detail: Inspects findings against architecture changes and prior models.
+more: Iterative threat modeling evolves with the design rather than remaining a one-time exercise.
+node: feedback
+detail: Returns gaps and deltas back into the primary modeling lane.
+more: Architecture reviews and significant feature changes trigger model updates per SDLC integration.
+fallback_ascii: |
+  STRIDE deep dive: from diagram to mitigation
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
 ```
 
 For each **element** (entity, process, store, flow), ask which STRIDE categories apply, document the threat in plain language, rate risk, and map to a mitigation or compensating control.
@@ -87,7 +115,30 @@ For each **element** (entity, process, store, flow), ask which STRIDE categories
 
 ```blueprint-diagram
 key: sequence
-alt: Diagram
+alt: Workshop flow (sequence)
+title: Threat modeling workshop sequence
+summary: A time-boxed session from trigger through collaborative analysis to owned security outputs.
+node: Workshop flow (sequence)
+detail: Names the collaborative threat modeling session format used at multiple scales.
+node: Actor / trigger
+detail: A stakeholder or change event that starts the workshop.
+more: Feature work, architecture reviews, or release gates trigger sessions at feature, system, or organizational scale.
+node: System step
+detail: The team models boundaries, flows, and STRIDE threats collaboratively.
+more: Include engineers, PM, and ops—not security alone—using lightweight DFD or sequence sketches.
+node: Outcome / handoff
+detail: Delivers traceable threats, ratings, and mitigations with owners.
+more: Outputs become security requirements, backlog items, or ADR inputs tracked under docs/security/threat-models/.
+fallback_ascii: |
+  Workshop flow (sequence)
+
+  Actor / trigger
+      |
+      v
+  System step
+      |
+      v
+  Outcome / handoff
 ```
 
 ---
@@ -146,7 +197,30 @@ Track mitigations as **security requirements** with owners and dates; link to **
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Threat model lifecycle
+title: Threat model lifecycle
+summary: How threat models start at design, evolve through delivery, and close with traceable mitigations.
+node: Threat model lifecycle
+detail: Names the governed arc for maintaining a living threat model.
+node: Start
+detail: Begins when new boundaries, flows, or integrations enter design.
+more: Phase C design and architecture reviews are typical entry points before major build commitments.
+node: Core steps (see walkthrough below)
+detail: Covers diagramming, STRIDE analysis, risk rating, and mitigation mapping.
+more: Revalidate when auth, data paths, or integrations change during implementation and release.
+node: Outcome
+detail: Leaves mitigations as owned, trackable security requirements with evidence.
+more: Link material design decisions to docs/adr/ when the threat landscape changes materially.
+fallback_ascii: |
+  Threat model lifecycle
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 ---

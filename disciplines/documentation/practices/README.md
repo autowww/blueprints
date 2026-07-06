@@ -12,7 +12,31 @@ Documentation practices are **proactive knowledge management**: they turn "someo
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Why these practices matter
+title: Documentation practices lifecycle
+summary: Repeatable practices turn ad-hoc writing into governed knowledge management across authoring, publishing, and measurement.
+node: Why these practices matter
+detail: Frames documentation as proactive team activity, not a late-stage sprint.
+more: Practices capture knowledge early, maintain accuracy continuously, and deliver content to the right audience in the right format.
+node: Start
+detail: Teams begin from this index of repeatable documentation activities.
+more: Each row links to DOCUMENTATION.md sections or companion guides such as docs-as-code-workflow and quality-automation.
+node: Core steps (see walkthrough below)
+detail: Apply strategy, architecture, docs-as-code, quality, and feedback practices.
+more: The tables below cover audits, governance, CI pipelines, reviews, analytics, localization, accessibility, SEO, and media production.
+node: Outcome
+detail: Documentation quality is owned, accurate, and continuously improving.
+more: Analytics and user feedback close the loop by feeding updated content plans, navigation, and calendar entries in project docs/.
+fallback_ascii: |
+  Why these practices matter
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
 ```
 
 The loop closes when analytics and user feedback **feed** updated content plans, restructured navigation, and refreshed content — documented at the project level in **`docs/`** and tracked in the content calendar.

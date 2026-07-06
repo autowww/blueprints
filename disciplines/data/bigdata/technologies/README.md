@@ -17,7 +17,35 @@ learning_level: reference
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Process flow
+title: Processing paradigm spectrum
+summary: How processing requirements narrow technology choices before storage, streaming, and ops tools compose around the engine.
+node: Process flow
+detail: Frames the governed path from workload shape to a reviewable toolchain.
+node: Start
+detail: Anchor selection on latency, throughput, state, semantics, and operational model.
+more: Requirements should drive choices—not hype or a single vendor stack—before proofs of concept and cost models confirm the fit.
+node: Core steps (see walkthrough below)
+detail: Map workload shape to the category guides in the table below.
+more: Processing engines, storage, streaming buses, orchestration, catalogs, and quality tools each address a distinct layer of the stack.
+node: Outcome
+detail: Land on a composed toolchain with project-specific pins documented as ADRs.
+more: The same Spark or Flink job may land in Delta, register in DataHub, and be scheduled by Airflow.
+node: Note: consumes
+detail: Interactive analytics reads outputs from batch or stream pipelines.
+more: SQL warehouses and similar tools consume pipeline outputs rather than replacing batch or stream processing.
+fallback_ascii: |
+  Process flow
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: consumes
 ```
 
 Interactive analytics often **consumes** outputs of batch or stream pipelines rather than replacing them.

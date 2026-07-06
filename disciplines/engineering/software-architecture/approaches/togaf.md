@@ -40,7 +40,35 @@ learning_level: reference
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: ADM cycle — phase dependencies (conceptual)
+title: ADM cyclic phase handoffs
+summary: How ADM phases pass governed artifacts forward while continuous feedback loops refine the architecture cycle.
+node: ADM cycle — phase dependencies (conceptual)
+detail: Entry framing how iterative ADM phases depend on one another across the cycle.
+more: Phases B through H each consume prior outputs and produce inputs for downstream work; preliminary sets governance before phase A begins.
+node: Lane A
+detail: Primary path where each ADM phase delivers artifacts to the next.
+more: Business, information systems, and technology phases (B–D) hand consolidated views into opportunities, migration planning, and implementation governance.
+node: handoff
+detail: Formal transfer of phase outputs into downstream architecture work.
+more: Gap analysis, transition architectures, and work packages at phase E depend on artifacts from B–D before roadmaps and sequencing at F.
+node: shared outcome
+detail: Governed architecture baselines and roadmaps the organization can implement.
+more: Phase G aligns projects to architecture; approved outputs land in the architecture repository for reuse and compliance review.
+node: Lane B
+detail: Parallel lane where environment change and delivery evidence reshape the cycle.
+more: Cross-cutting requirements management and phase H change management monitor drift from approved baselines.
+node: inspect / adapt
+detail: Review implementation compliance, waivers, and environmental shifts against current architecture.
+more: Phase G governance and phase H triggers detect when a new ADM iteration is warranted rather than relying on stale blueprints.
+node: feedback
+detail: Change requests and updated requirements loop back into a new or revised cycle.
+more: Phase H explicitly monitors the environment; tailoring encourages time-boxing rather than treating ADM as a waterfall gate.
+fallback_ascii: |
+  ADM cycle — phase dependencies (conceptual)
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
 ```
 
 ---

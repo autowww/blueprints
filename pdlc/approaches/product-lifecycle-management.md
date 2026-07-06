@@ -36,7 +36,36 @@ PLM answers questions that neither SDLC nor early PDLC phases address:
 
 ```blueprint-diagram
 key: linear
-alt: Diagram
+alt: Core structure
+title: PLM four lifecycle stages
+summary: How post-launch products progress through introduction, growth, maturity, and decline with shifting investment strategy.
+node: Core structure
+detail: Frames the four-stage PLM model on this page.
+more: Introduction, growth, maturity, and decline each carry distinct revenue, investment, and competitive dynamics detailed below.
+node: Start
+detail: Begin from a live product after P4 launch.
+more: PLM thinking starts at or after market entry—not during P1–P3 build-and-ship phases.
+node: Core steps (see walkthrough below)
+detail: Walk the stage tables, strategies, and transition signals below.
+more: Each table maps stage characteristics to PDLC P5–P6 work and explicit invest-or-harvest choices.
+node: Outcome
+detail: Arrive at stage-appropriate investment or sunset decisions.
+more: Outcomes range from invest-to-learn through harvest-or-sunset, with P1 feedback when decline warrants a successor.
+node: Note: Introduction
+detail: Marks the first lifecycle stage after launch.
+more: Introduction pairs with P4 Launch—low revenue, high investment, few competitors, and pursuit of product-market fit.
+fallback_ascii: |
+  Core structure
+
+  Start
+      |
+      v
+  Core steps (see walkthrough below)
+      |
+      v
+  Outcome
+
+  Note: Introduction
 ```
 
 | Stage | Revenue | Investment | Competition | Strategic focus |

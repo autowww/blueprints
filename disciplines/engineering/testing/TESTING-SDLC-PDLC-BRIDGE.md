@@ -39,7 +39,28 @@ Testing is the discipline that verifies SDLC execution quality and validates tha
 
 ```blueprint-diagram
 key: swimlane
-alt: Diagram
+alt: The three-domain model
+title: Testing three-domain model
+summary: How testing verifies delivery quality while validating that governed product outcomes remain met.
+node: The three-domain model
+detail: Frames how Testing relates to product and delivery lifecycles on this page.
+more: Testing verifies SDLC execution quality and validates that PDLC outcomes are met; without it, neither lifecycle produces trustworthy artifacts.
+node: Lane A ──► handoff ──► shared outcome
+detail: PDLC validates direction and hands measurable outcomes into shared delivery goals.
+more: Success metrics, acceptance criteria, and stage gates at P3–P4 define what fit for purpose means before SDLC and testing execute against them.
+node: Lane B ──► inspect / adapt ──► feedback
+detail: Testing inspects delivery evidence and feeds quality learnings back to both lifecycles.
+more: Continuous verification from requirements review through production monitoring surfaces defects, escaped issues, and outcome gaps for governed iteration.
+node: Note: Core question
+detail: Each domain answers a distinct governing question at its scope.
+more: PDLC asks whether to build the right product; SDLC asks how to build correctly; Testing asks whether software is correct, reliable, and fit for purpose.
+fallback_ascii: |
+  The three-domain model
+
+  Lane A ──► handoff ──► shared outcome
+  Lane B ──► inspect / adapt ──► feedback
+
+  Note: Core question
 ```
 
 ### Comparison table
