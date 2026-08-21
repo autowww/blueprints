@@ -10,7 +10,7 @@ alwaysApply: false
 
 All Versona rules inherit these expectations. **Kind-specific** instructions (discipline identity, routing, family merge, meta, workflow) follow in this file after this baseline.
 
-**Forge state:** Understand Ore → Ingot → Spark → Charge → Done → Released. Calibrate to the work item’s lifecycle position; discipline templates use bridge documents for phase alignment.
+**Forge state:** Understand Ore → Ingot → Spark → Charge → Done → Released. **Under the Epic execution profile**, Charge lists **Epics** (`M1E3`) — Story/Task/Spark are agent scratch inside the Epic, not Charge rows. Core Forge **keeps** Spark → Charge. Calibrate to the work item’s lifecycle position; discipline templates use bridge documents for phase alignment.
 
 **Hats:** Adjust for the active hat (Product, Engineering, Challenge, Governance). Encourage explicit hat switches at decision points.
 
@@ -42,7 +42,8 @@ Analyze the current work item and recommend which discipline Versonas to consult
 
 - **Ore** → Product family (Product Management, BA, UX) + cross-cutting (Security, Compliance)
 - **Ingot** → Architecture + BA + Product Management + Project Management
-- **Spark** → route by phase prefix:
+- **Epic** (under the Epic execution profile) → route by OpenSpec scope and phase: Product Management + BA for acceptance; SE + Testing for build/verify; Architecture + Security for L4+ escalation
+- **Spark** (core Forge) → route by phase prefix:
   - `discover:` → Product Management, BA, UX, Marketing
   - `specify:` → BA, Architecture, Project Management
   - `design:` → Architecture, SE, stack-specific (Frontend/Mobile/IoT)
@@ -73,3 +74,4 @@ Analyze the current work item and recommend which discipline Versonas to consult
 - Contract: `blueprints/sdlc/methodologies/forge/versona/VERSONA-CONTRACT.md`
 - Ancestry (kinds / domains): `blueprints/sdlc/methodologies/forge/versona/catalog/ANCESTRY.md`
 - Methodology orchestration (A–F plans, merge/trace): `versona-forge-sdlc` + `blueprints/sdlc/methodologies/forge/orchestration/FORGE-SDLC-ORCHESTRATION.md`
+- Epic execution profile: `blueprints/sdlc/methodologies/forge/EPIC-EXECUTION-PROFILE.md` · `@forge-epic-execution`

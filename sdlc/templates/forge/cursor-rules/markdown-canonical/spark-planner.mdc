@@ -10,13 +10,23 @@ alwaysApply: false
 
 After classification is **direct execution**: implementation, fix, refactor, docs change with clear acceptance.
 
-## Runbook
+**Under the Epic execution profile:** plan and execute **inside** the Charged Epic — **do not** mint Forge Sparks on Charge or `…T{n}` WBS Task rows for committed Epic work. Use `@forge-epic-execution` and the linked OpenSpec change instead. Core Forge **keeps** Spark → Charge; this retarget applies only when the profile is active.
+
+## Runbook (core Forge)
 
 1. Split or merge **Forge Sparks** (WBS tasks, e.g. `M1E1S1T1`); link parent **Ingot** / story id.
 2. Update `docs/requirements/WBS.md`, task files under `docs/requirements/milestones/**/tasks/` (or team `sparks/`), `docs/requirements/TRACEABILITY.md`.
 3. **Charge:** stock path is **`forge/charge.md`**. Use `forge/current/CHARGE.md` **only** if `docs/PROJECT.md` defines that alias (scripts default to `forge/charge.md`).
 4. **Iteration context:** prefer `docs/ROADMAP.md` / WBS; use `forge/current/ITERATION.md` only if the repo documents it.
 5. Search for duplicate Sparks; canonicalize; recommend **next Charge** lines.
+
+## Runbook (Epic execution profile)
+
+1. Confirm the Epic is on **`forge/charge.md`** (`Active Epics`: id, OpenSpec change, status, actor).
+2. Load the **OpenSpec change** folder — observable SHALLs and scenarios are the acceptance bar.
+3. Decompose **runs** inside the Epic (L1–L2 scratch only); **do not** add Sparks to Charge.
+4. Escalate **L4+** (cross-repo, ADR, security ambiguity) — stop and ask.
+5. Update traceability for the **Epic** scope, not per-Task Charge rows.
 
 ## Prompt source
 

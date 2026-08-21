@@ -43,7 +43,7 @@ Thin wrappers still work: [`install-versona-cursor-rules.sh`](install-versona-cu
 | Preset | Effect |
 |--------|--------|
 | *(omit)* / `--preset minimal` | Copy **only** `versona-*.mdc` implied by `forge.config.yaml` (same as pre-preset behavior) |
-| `--preset recommended` | Minimal + standard Forge rules (`forge-daily`, `forge-planning`, `forge-versona`, `forge-setup`, `forge-product-manager`, `branch-steward`) + `versona-all`, `versona-project-setup`, `versona-roadmap-gate`, **`versona-forge-sdlc`** (methodology orchestrator), `versona-cursor-rules-sync`, **`versona-sampling`** (meta-Versona aligned with tasklets; idempotent with `install-tasklets.sh`) |
+| `--preset recommended` | Minimal + standard Forge rules (`forge-daily`, `forge-planning`, **`forge-epic-execution`**, `forge-versona`, `forge-setup`, `forge-product-manager`, `branch-steward`) + `versona-all`, `versona-project-setup`, `versona-roadmap-gate`, **`versona-forge-sdlc`** (methodology orchestrator), `versona-cursor-rules-sync`, **`versona-sampling`** (meta-Versona aligned with tasklets; idempotent with `install-tasklets.sh`) |
 | `--preset full` | Recommended + family aggregators (`versona-family-*`) + `versona-generic` |
 
 **Additive:** `--with-*` flags on `sync` / `diff` / `status` **add** on top of the chosen preset.
@@ -125,7 +125,7 @@ Use these with **`sync-forge-cursor-rules.sh sync`** (or `install-versona-cursor
 | `--with-family-product` / `--with-family-engineering` / `--with-family-data` | Family aggregators |
 | `--with-sampling` | Also `versona-sampling.mdc` (**included in `recommended` / `full`**; still useful if you use `minimal` + tasklets only) |
 | `--with-generic` | Also `versona-generic.mdc` |
-| `--with-standard-forge-rules` | Also `forge-daily`, `forge-planning`, `forge-versona`, `forge-setup`, `forge-product-manager` from `sdlc/templates/forge/cursor-rules/` |
+| `--with-standard-forge-rules` | Also `forge-daily`, `forge-planning`, **`forge-epic-execution`**, `forge-versona`, `forge-setup`, `forge-product-manager` from `sdlc/templates/forge/cursor-rules/` |
 | `--with-code-footprint-rules` | Also `code-footprint.mdc` from `sdlc/templates/forge/cursor-rules/`; advisory coding/style footprint rule, opt-in |
 | `--with-cost-tiering-rules` | Also `forge-triage.mdc` + `forge-planning-standards.mdc` from `sdlc/templates/forge/cursor-rules/`; cost-aware planning + t-shirt triage + model tiering, opt-in |
 
@@ -171,8 +171,9 @@ Usually copied from `blueprints/sdlc/templates/forge/cursor-rules/` (included in
 
 | File | Purpose |
 |------|---------|
-| `forge-daily.mdc` | Charge, hats, Ember Log, journal |
-| `forge-planning.mdc` | Ore, Product Sparks, planning |
+| `forge-daily.mdc` | Charge, hats, Ember Log, journal (dual-profile: Sparks vs Epics) |
+| `forge-planning.mdc` | Ore, Product Sparks, planning (core + Epic execution profile hierarchy) |
+| `forge-epic-execution.mdc` | Agent execution inside Charged Epic; OpenSpec; L4+ escalation; no Task Charge minting |
 | `forge-versona.mdc` | Master routing |
 | `forge-setup.mdc` | First-time setup (optional after onboarding) |
 | `forge-product-manager.mdc` | Product orchestration (optional; product-led teams) |

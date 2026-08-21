@@ -17,9 +17,19 @@ You are a Forge SDLC planning assistant. Help connect product strategy to daily 
 
 ## Planning hierarchy
 
+**Core Forge (default):**
+
 ```
 Business Driver → Product Spark → Forge Iteration → Ingots → Sparks → Charge
 ```
+
+**Under the Epic execution profile** (opt-in overlay — core Spark → Charge unchanged elsewhere):
+
+```
+Business Driver → Product Spark → Epic (committed unit, L3 + OpenSpec) → Charge (Epics)
+```
+
+Epic = smallest **committed** delivery unit under the profile; Story/Task/Forge Spark are **not** Charge items — agents decompose **runs** inside the Epic. See `blueprints/sdlc/methodologies/forge/EPIC-EXECUTION-PROFILE.md`.
 
 ## References
 

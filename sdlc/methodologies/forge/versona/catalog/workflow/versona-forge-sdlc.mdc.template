@@ -10,7 +10,7 @@ alwaysApply: false
 
 All Versona rules inherit these expectations. **Kind-specific** instructions (discipline identity, routing, family merge, meta, workflow) follow in this file after this baseline.
 
-**Forge state:** Understand Ore → Ingot → Spark → Charge → Done → Released. Calibrate to the work item’s lifecycle position; discipline templates use bridge documents for phase alignment.
+**Forge state:** Understand Ore → Ingot → Spark → Charge → Done → Released. **Under the Epic execution profile**, Charge lists **Epics** (`M1E3`) — Story/Task/Spark are agent scratch inside the Epic, not Charge rows. Core Forge **keeps** Spark → Charge. Calibrate to the work item’s lifecycle position; discipline templates use bridge documents for phase alignment.
 
 **Hats:** Adjust for the active hat (Product, Engineering, Challenge, Governance). Encourage explicit hat switches at decision points.
 
@@ -45,7 +45,7 @@ After this baseline, this rule is **not** a discipline gate—produce the **Forg
 
 ## Invocation
 
-- **Triggers:** `@versona-forge-sdlc`, **forge sdlc**, **orchestrate this forge pass**, **phase gate for this Spark/Ingot/Ore**
+- **Triggers:** `@versona-forge-sdlc`, **forge sdlc**, **orchestrate this forge pass**, **phase gate for this Spark/Ingot/Ore/Epic**
 - **After install:** copy to `.cursor/rules/versona-forge-sdlc.mdc` (drop `.template`)
 
 ## Relationship to other rules (normative)
@@ -57,6 +57,7 @@ After this baseline, this rule is **not** a discipline gate—produce the **Forg
 | **`versona-pm`** | **Project Management** §5 — delivery constraints, RAID, gates (**not** product strategy) |
 | **`versona-product-management`** | **Product Management** §5 — strategy, roadmap/OKR fit (**not** critical-path baselines — **pm**) |
 | **`forge-product-manager`** | **Upstream authoring** (roadmap, bootstrap) — not a replacement for this orchestrator on delivery gates |
+| **`forge-epic-execution`** | **Agent execution inside Charged Epic** under the Epic execution profile — OpenSpec apply, L1–L2 runs, L4+ stop-and-ask |
 | **`versona-roadmap-gate`** | **Roadmap-only** playbook — call it when the artifact is a **roadmap**, not a generic phase pass |
 | **`versona-project-setup`** | **Repo bootstrap** — orthogonal to A–F passes |
 | **`versona-sampling`** | **Demo** tasklets — not part of default SDLC orchestration |
@@ -65,7 +66,7 @@ After this baseline, this rule is **not** a discipline gate—produce the **Forg
 
 | Field | Canonical paths (repo-relative) |
 |-------|----------------------------------|
-| **Required inputs** | `work_item_refs`, phase (A–F or Spark prefix), hat; optional `forge/charge.md` |
+| **Required inputs** | `work_item_refs`, phase (A–F or Spark prefix), hat; optional `forge/charge.md` (**Sparks** in core Forge; **Epics** under the Epic execution profile) |
 | **Optional inputs** | Outputs from **`versona-all`**; `docs/requirements/**`, `docs/product/**` |
 | **Produced outputs** | Orchestration plan (chat or `outputs/FORGE-SDLC-PLAN.md`); optional `outputs/handoff.json` pointing at planned §5 paths |
 | **Canonical storage** | Prefer `forge-logs/versona/<actor>/<session-id>/outputs/` ([`ARTIFACT-CONTRACTS.md`](../ARTIFACT-CONTRACTS.md)) |
@@ -79,7 +80,7 @@ After this baseline, this rule is **not** a discipline gate—produce the **Forg
 
 ## Protocol
 
-1. **Inputs:** `work_item_refs`, **Ore / Ingot / Spark** state, **phase** (A–F or Spark prefix), **hat**, **data sensitivity** if known.
+1. **Inputs:** `work_item_refs`, **Ore / Ingot / Spark / Epic** state (Epic when **under the Epic execution profile**), **phase** (A–F or Spark prefix), **hat**, **data sensitivity** if known.
 2. **Load contracts:** Apply §4 tables in `FORGE-SDLC-ORCHESTRATION.md` and matching object in `phases.json` for the active phase(s).
 3. **Standards:** If L1–L2 may apply, **prepend** Compliance/Security to the plan and note **precedence** ([`standards/precedence.md`](../../../standards/precedence.md)).
 4. **Plan steps:** For each step, label **P** (parallel) or **S** (sequential), **invoked rule** (e.g. `versona-architecture.mdc`), and **merge owner** (role, family aggregator, or human).
@@ -130,4 +131,4 @@ After this baseline, this rule is **not** a discipline gate—produce the **Forg
 
 ## Forge context
 
-This rule is the **first-class methodology orchestrator** for Forge SDLC. It complements **`forge-daily`**, **`forge-planning`**, and **`forge-product-manager`** without replacing them.
+This rule is the **first-class methodology orchestrator** for Forge SDLC. It complements **`forge-daily`**, **`forge-planning`**, **`forge-epic-execution`**, and **`forge-product-manager`** without replacing them.

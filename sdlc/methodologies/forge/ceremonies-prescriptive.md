@@ -89,6 +89,8 @@ Default iteration length: **1 week** (configurable to 2 weeks for exploratory wo
 - Completable in one focused session (~1–4 hours).
 - Phase prefix assigned.
 
+> **Under the Epic execution profile (C2).** Planning confirms **ready Epics** (OpenSpec acceptance, size gate) for the iteration — not a Task-level Spark decomposition for Charge. Agents decompose **runs** inside each Charged Epic. Core Forge teams still decompose Ingots into Sparks here. See [`EPIC-EXECUTION-PROFILE.md`](EPIC-EXECUTION-PROFILE.md).
+
 ---
 
 ## 3. Daily sync (Charge confirmation)
@@ -115,6 +117,8 @@ Default iteration length: **1 week** (configurable to 2 weeks for exploratory wo
 **Prescriptive rule:** The Charge should be intentionally smaller than theoretical capacity, leaving room for interruption, rework, and learning.
 
 **Same-day follow-up:** When the sync surfaces a blocker, a need for replanning, or a **discipline Versona**, schedule a **separate, time-boxed** session afterward—analogous to the Scrum Guide’s Daily Scrum plus optional follow-on collaboration. **Do not** add standing **extra** sync meetings that only repeat status without new decisions or outcomes.
+
+> **Under the Epic execution profile (C3).** Daily sync confirms **today's Charge of Epics** — progress, blockers, and L4.2 escalation — not Spark-by-Spark or WBS Task standup rows. Core Forge teams still confirm Sparks in Charge. See [`EPIC-EXECUTION-PROFILE.md`](EPIC-EXECUTION-PROFILE.md).
 
 ---
 

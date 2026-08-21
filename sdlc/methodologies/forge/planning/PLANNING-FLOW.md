@@ -87,6 +87,8 @@ Within each iteration:
 | Spark | Task | `M1E1S1T1` |
 | Forge iteration | Sprint / time window | `F1`, `F2` |
 
+> **Under the Epic execution profile.** The **Ingot** row maps to a **committed Epic** (`M1E3`) — smallest Charge unit at autonomy **L3** with OpenSpec acceptance. Story / Task / Forge Spark rows are **agent scratch inside** the Epic, not Charge work items. See [`EPIC-EXECUTION-PROFILE.md`](EPIC-EXECUTION-PROFILE.md).
+
 Forge does **not** impose a new ID scheme. Use your project's existing WBS conventions.
 
 ## Planning ceremony integration

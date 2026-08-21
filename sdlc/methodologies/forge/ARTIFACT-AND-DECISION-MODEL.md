@@ -68,6 +68,8 @@ The following block is the **authoring checklist** used to maintain this documen
 
 ## Recommended artifact set
 
+> **Work units under the Epic execution profile.** Core Forge commits **Forge Spark** (WBS Task) and **Charge** selects Sparks. **Under the Epic execution profile**, the committed work-execution unit is **Epic** (`M1E3`) with a 1:1 **OpenSpec change**; **Charge** lists Epics; Story/Task/Spark grains are **agent scratch inside** the Epic — not separate Charge artifacts. See [`EPIC-EXECUTION-PROFILE.md`](EPIC-EXECUTION-PROFILE.md).
+
 Minimum **durable** types teams should be able to point to (paths are typical; projects may namespace under `docs/` or `forge/` per [`../../templates/forge/README.template.md`](../../templates/forge/README.template.md)):
 
 | # | Canonical artifact | Primary class | Canon pointer |

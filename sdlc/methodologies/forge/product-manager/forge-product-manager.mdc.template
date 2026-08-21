@@ -44,7 +44,8 @@ The Product Management Versona §5 report shape—including **Suggested next Ver
 - **Roadmap → Product Sparks** — Help decompose roadmap themes into Product Sparks (PoC/MVP/Phase) with clear Assay Gate criteria.
 - **Product Sparks → WBS** — Break Product Sparks into Themes → Epics → Stories → Tasks following the project's ID scheme (e.g. `M1E1S1T1`).
 - **WBS → Forge iterations** — Scope iterations with appropriate Ingots and define iteration-level success criteria.
-- **Charge management** — Pre-fill Charges with product-oriented Sparks using phase prefixes (`discover:`, `specify:`, `design:`, `build:`, `verify:`, `release:`).
+- **Charge management (core Forge)** — Pre-fill Charges with product-oriented **Forge Sparks** using phase prefixes (`discover:`, `specify:`, `design:`, `build:`, `verify:`, `release:`).
+- **Charge management (Epic execution profile)** — **Under the Epic execution profile**, Charge lists **Epics** (`M1E3`) with OpenSpec acceptance — **do not** mint `…T{n}` Task rows on Charge or drive agent work from WBS Task backlogs. Humans specify ready Epics; agents execute **runs** inside Charged Epics via `@forge-epic-execution`. Core Forge **keeps** Spark → Charge on other teams.
 
 ### 3. PDLC phase transitions
 
@@ -76,8 +77,9 @@ The Product Management Versona §5 report shape—including **Suggested next Ver
 - **Product Spark** — potentially shippable product iteration (coarsest Forge planning grain)
 - **Ore** — raw, unrefined input; captured ideas, problems, or opportunities
 - **Ingot** — refined, plannable work with acceptance criteria
-- **Spark** — smallest executable unit (1–4 hours, phase-prefixed)
-- **Charge** — today's selected Sparks for execution
+- **Spark** — smallest executable unit in **core** Forge (1–4 hours, phase-prefixed)
+- **Epic** (`M1E3`) — smallest **committed** unit **under the Epic execution profile** (L3 + OpenSpec); not a Charge Spark row under that profile
+- **Charge** — today's selected **Forge Sparks** (core) or **Epics** (Epic execution profile)
 - **Assay Gate** — evidence-based release gate
 - **Ember Log** — decision journal capturing why and context
 - **Product hat** — the strategic perspective in Forge hat-switching
@@ -91,6 +93,10 @@ When engaged, ask focused questions to understand the user's context:
 3. **What artifacts exist already?** (Vision? Roadmap? Business case? Backlog?)
 
 Then guide through the appropriate flow, creating artifacts interactively and suggesting Versona sessions at decision points.
+
+## Product strategy workcell (Forge Market)
+
+For governed dual-wiki strategy cycles (differentiation bets, Element dialog in `#forge-market-pm`, advisory roadmap deltas), use the **`product_strategy_worker`** contract pack — not a substitute for this Cursor rule. Handbook: `forge-market/docs/handbook/operator/product-strategy.md`; PDCA: `forge-market/docs/prompts/fm-product-strategy-pdca/00-master-sequence.md`. Optional gate after roadmap draft: `@versona-roadmap-gate` / `@versona-product-management`.
 
 ## References
 

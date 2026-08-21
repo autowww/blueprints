@@ -9,6 +9,8 @@ learning_level: reference
 
 This document describes the step-by-step process for bootstrapping a new product through dialog using the Forge Product Manager agent. Each step produces a concrete artifact seeded from blueprint templates.
 
+> **Under the Epic execution profile.** Bootstrap still seeds roadmap, WBS, and a first Charge using **core Forge** (Sparks). Teams that adopt the Epic overlay later Charge **Epics** instead — same artifacts, different Charge grain. See [`../EPIC-EXECUTION-PROFILE.md`](../EPIC-EXECUTION-PROFILE.md).
+
 ## Prerequisites
 
 - Forge SDLC is configured (`forge/forge.config.yaml` exists, or run `forge-setup` first).
