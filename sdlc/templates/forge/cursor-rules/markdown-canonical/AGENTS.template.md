@@ -25,7 +25,7 @@ This repository uses **Forge SDLC** with **Markdown-only** canonical artifacts: 
 - **Ingot** — refined, plannable (often story-level)  
 - **Forge Spark** — smallest **delivery** task (~1–4 h), often `M{n}E{n}S{n}T{n}`  
 - **Forge iteration** — timeboxed delivery cycle  
-- **Charge** — today’s selected Forge Sparks  
+- **Charge** — today’s committed work (**Forge Sparks** in core Forge; **Epics** under the [Epic execution profile](../../../../methodologies/forge/EPIC-EXECUTION-PROFILE.md))  
 - **Ember Log** — decision memory  
 - **Assay** — evidence-based release gate  
 

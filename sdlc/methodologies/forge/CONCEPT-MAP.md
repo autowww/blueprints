@@ -201,6 +201,7 @@ Known collisions and the **canonical resolution** (expand in [`NAMING-REFERENCE.
 | **Record** | Informal **Decision Record** / **Retro Record** vs **Ember Log** / retro → **directives** | Map industry phrases to **Ember Log** and **retro-to-directive** traceability (matrix rows above). |
 | **Epic** | WBS **Epic** vs **Ore** vs **Ingot** vs **Forge Spark** vs **Product Spark** | **Ore** = pre-refinement intake; **Ingot** = story-ready AC; **Forge Spark** = core task on Charge; **Product Spark** = release slice; **committed Epic** (profile) = L3 Charged unit with OpenSpec — [`EPIC-EXECUTION-PROFILE.md`](EPIC-EXECUTION-PROFILE.md). |
 | **Charge** | Core **Sparks** vs profile **Epics** | Default Forge: Charge = today's **Sparks**. **Under the Epic execution profile**: Charge = today's **Epics** — same view-not-board rule ([`NAMING-REFERENCE.md`](NAMING-REFERENCE.md)). |
+| **Board** | **Spec Flow board** vs **Charge** vs sticker board | **Charge** = daily view (markdown SoT). **Spec Flow board** = derived seven-column lens on WBS + OpenSpec + Charge — drag writes back, **not** a second backlog ([`SPEC-FLOW-BOARD.md`](SPEC-FLOW-BOARD.md)). Sticker board = separate Lenses surface; do not conflate with Charge or Spec Flow. |
 
 ### Detailed collision notes
 

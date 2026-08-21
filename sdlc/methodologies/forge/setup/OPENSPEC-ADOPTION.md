@@ -99,7 +99,7 @@ Documented for roadmap alignment; **do not** block Epic L3 adoption on these:
 | Follow-on | Status | Notes |
 |-----------|--------|-------|
 | **Graphiti MCP** + knowledge graph | Future | Optional long-horizon memory; not required for OpenSpec Epic flow |
-| **Forge Lenses** Today / Charge Epic grouping UI | Future | Local control plane enhancements; Charge remains a view until shipped |
+| **Spec Flow board** (Lenses Plan + Today Epic grouping) | Shipped | Seven-column derived lens on WBS + OpenSpec + Charge — [`../SPEC-FLOW-BOARD.md`](../SPEC-FLOW-BOARD.md); Charge remains a view, not a second SoT |
 | **LevelDB / Lenses `/api/today-charge`** | Future | Program scope excludes unless operator expands |
 
 ## Related

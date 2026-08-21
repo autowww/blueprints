@@ -94,9 +94,11 @@ Full profile selection is a **human** decision at Epic specification time.
 Under the Epic execution profile:
 
 1. Humans select **ready Epics** (size gate green, OpenSpec acceptance approved) into **today's Charge**.
-2. Charge remains a **view** on committed work — not a second board ([`process-and-flows.md`](process-and-flows.md)).
+2. Charge remains a **view** on committed work — not a second board ([`process-and-flows.md`](process-and-flows.md)). The [**Spec Flow board**](SPEC-FLOW-BOARD.md) is a **derived lens** on WBS + OpenSpec + `forge/charge.md`; drag writes Charge and change phase — it is **not** a parallel Charge SoT.
 3. **One Charged Epic** may host many agent **runs** at L1–L3; runs are **not** Charge items.
 4. Daily sync confirms Epic progress, blockers, and escalation — not a Task-level standup on WBS rows.
+
+Active Epics Charge statuses map to board columns: `planned` → **Charged**, `in progress` → **Apply**, `done` → **Verify** — see [Spec Flow board § Charge status map](SPEC-FLOW-BOARD.md#charge-status-map).
 
 Core Forge teams that Charge **Sparks** unchanged — see [`daily/README.md`](daily/README.md).
 
@@ -139,6 +141,7 @@ Log **Ember Log** entries for **Epic-scope** or **cross-cutting** decisions only
 
 | Topic | File |
 |-------|------|
+| Spec Flow board (derived Kanban lens) | [`SPEC-FLOW-BOARD.md`](SPEC-FLOW-BOARD.md) |
 | Autonomy L3 default for committed Epic | [`AUTONOMY-LEVELS.md`](AUTONOMY-LEVELS.md#epic-execution-profile) |
 | Naming: Epic, Charge dual-profile | [`NAMING-REFERENCE.md`](NAMING-REFERENCE.md) |
 | Concept matrix + collisions | [`CONCEPT-MAP.md`](CONCEPT-MAP.md) |

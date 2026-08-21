@@ -17,7 +17,7 @@ The **daily sync** ceremony (**C3** — sync progress) confirms the Charge and s
 
 | Artifact | Purpose | Cadence | Location (consuming repo) |
 |----------|---------|---------|---------------------------|
-| **Charge** | Today's selected Sparks — the daily working set | Updated each morning at daily sync | `forge/charge.md` |
+| **Charge** | **Core Forge:** today's selected **Forge Sparks**. **Epic execution profile:** today's selected **Epics** — see [`EPIC-EXECUTION-PROFILE.md`](../EPIC-EXECUTION-PROFILE.md) | Updated each morning at daily sync | `forge/charge.md` |
 | **Ember Log** | Decision memory — why, not what | Updated at decision points throughout the day | `ember-logs/YYYY-MM-DD.md` |
 | **Day journal** | Activity record — what hat was worn, what was done, what was learned | End of day | `forge/journal/YYYY-MM-DD.md` |
 
@@ -41,7 +41,7 @@ Before opening a **Versona** session or editing **Charge**, teams can run a sing
 
 [`forge-daily.mdc.template`](https://github.com/autowww/blueprints/blob/main/sdlc/methodologies/forge/daily/forge-daily.mdc.template) — conversational task delivery agent. When activated:
 
-- Shows the current Charge (today's Sparks).
+- Shows the current Charge per profile (**Sparks** in core Forge; **Epics** under the [Epic execution profile](../EPIC-EXECUTION-PROFILE.md)).
 - Suggests the next Spark based on priority, dependencies, and current hat.
 - Helps transition between hats with explicit declaration.
 - Prompts for Ember Log entries at decision points.
