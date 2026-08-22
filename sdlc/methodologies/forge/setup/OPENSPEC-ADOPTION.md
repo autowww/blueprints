@@ -99,7 +99,7 @@ Documented for roadmap alignment; **do not** block Epic L3 adoption on these:
 | Follow-on | Status | Notes |
 |-----------|--------|-------|
 | **Graphiti MCP** + knowledge graph | Future | Optional long-horizon memory; not required for OpenSpec Epic flow |
-| **Spec Flow board** (Lenses Plan + Today Epic grouping) | Shipped | Seven-column derived lens on WBS + OpenSpec + Charge — [`../SPEC-FLOW-BOARD.md`](../SPEC-FLOW-BOARD.md); Charge remains a view, not a second SoT |
+| **Spec Flow board** (Lenses Plan + Today Epic grouping) | Shipped | Seven-column derived lens on WBS + OpenSpec + Charge — [`../SPEC-FLOW-BOARD.md`](../SPEC-FLOW-BOARD.md); Charge remains a view, not a second SoT; **dual wiki on the go** keeps local handbook HTML fresh during Specify/Ready |
 | **LevelDB / Lenses `/api/today-charge`** | Future | Program scope excludes unless operator expands |
 
 ## Related

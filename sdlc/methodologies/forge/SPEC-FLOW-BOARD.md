@@ -126,6 +126,34 @@ Conversational polish (e.g. copilot tightening Lite SHALLs) happens in **Specify
 
 ---
 
+## Dual wiki (documentation)
+
+**Documentation dual wiki** is distinct from **dual-profile** (Spark vs Epic Charge) and from Dark Factory **dual-wiki trace** (machine JSON + generated `report.md`). Here it means the same-turn pair:
+
+1. **Author** — in-repo / code-adjacent Markdown (standalone `blueprints/` or product `docs/`).
+2. **Local derived** — handbook source rebuilt to HTML in the matching `*w` shell (`blueprints-website`, `forge-lenses-website`, etc.); bump submodule pointer when SoT moved.
+3. **Published** — Firebase Hosting via explicit `deploy-websites.sh` only; **never** from Spec Flow drag or loopback refresh.
+
+HTML is **derived**. Operators keep author + **local derived** fresh **on the go** while a change sits in **Specify** / **Ready**, not only at program-end handbook pins.
+
+### Column obligations (Check, not silent drag side-effects)
+
+| Column event | Dual-wiki duty |
+|--------------|----------------|
+| Intent → Specify | Scaffold OpenSpec change; include empty `## Dual wiki` surfaces list on `proposal.md` |
+| **Specify (edits)** | When claims change: update paired in-repo pages **same turn**; local rebuild when handbook-bound |
+| Specify → Ready | Size gate includes dual-wiki freshness; overlay **`wiki_stale`**; Ready drop **409** when stale |
+| Ready → Charged / Apply | No wiki write on drag |
+| Apply | Operator docs + local `*w` when product surface changed |
+| Verify | Docs describe what was built |
+| Archived | Dual-wiki for that change closed locally; **Archive ≠ Released ≠ deployed** |
+
+Declared surfaces live on the OpenSpec change (`## Dual wiki` table), not a sidecar board JSON. Defaults: methodology → `blueprints/` + `bpw`; Lenses operator → `docs/website/*` + `flsw` when nav-listed.
+
+Loopback **`POST /api/epic-spec-board/dual-wiki-refresh`** rebuilds local handbook HTML via `scripts/refresh-dual-wiki.sh`. **Firebase never runs** from Spec Flow or this path.
+
+---
+
 ## Dual-profile behavior
 
 | Profile | Today / Plan lens |

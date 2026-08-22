@@ -35,6 +35,7 @@ An Epic is **ready to Charge** only when it passes the **size gate**:
 | **Testable SHALLs** | Capability spec → at least one observable **SHALL** / **MUST** → ≥1 **Given / When / Then** scenario — **not** implementation SHALLs (no file or class names in acceptance) |
 | **One primary repo** | Execution and review stay in **one** primary repository; cross-repo work triggers **L4.2 stop-and-ask** (below) |
 | **Reviewable diff** | Expected outcome fits a **single PR or merge request** a human can review in one sitting |
+| **Dual wiki (local)** | **dual wiki** on the go: declared `## Dual wiki` surfaces on the OpenSpec proposal have **fresh local handbook HTML** — overlay `wiki_stale` blocks Specify→Ready until loopback refresh; **not** Firebase publish ([`SPEC-FLOW-BOARD.md`](SPEC-FLOW-BOARD.md#dual-wiki-documentation)) |
 
 Epics that fail the gate stay in refinement (OpenSpec draft, scope split, or human L4 planning) — **do not Charge** until the gate passes.
 

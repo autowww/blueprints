@@ -202,6 +202,7 @@ Known collisions and the **canonical resolution** (expand in [`NAMING-REFERENCE.
 | **Epic** | WBS **Epic** vs **Ore** vs **Ingot** vs **Forge Spark** vs **Product Spark** | **Ore** = pre-refinement intake; **Ingot** = story-ready AC; **Forge Spark** = core task on Charge; **Product Spark** = release slice; **committed Epic** (profile) = L3 Charged unit with OpenSpec — [`EPIC-EXECUTION-PROFILE.md`](EPIC-EXECUTION-PROFILE.md). |
 | **Charge** | Core **Sparks** vs profile **Epics** | Default Forge: Charge = today's **Sparks**. **Under the Epic execution profile**: Charge = today's **Epics** — same view-not-board rule ([`NAMING-REFERENCE.md`](NAMING-REFERENCE.md)). |
 | **Board** | **Spec Flow board** vs **Charge** vs sticker board | **Charge** = daily view (markdown SoT). **Spec Flow board** = derived seven-column lens on WBS + OpenSpec + Charge — drag writes back, **not** a second backlog ([`SPEC-FLOW-BOARD.md`](SPEC-FLOW-BOARD.md)). Sticker board = separate Lenses surface; do not conflate with Charge or Spec Flow. |
+| **Dual wiki** | **Documentation dual wiki** vs **dual-profile** vs Dark Factory **dual-wiki trace** | **Documentation dual wiki** = in-repo Markdown + handbook source → local HTML ([`SPEC-FLOW-BOARD.md` § Dual wiki](SPEC-FLOW-BOARD.md#dual-wiki-documentation)). **Dual-profile** = Spark vs Epic Charge. **Dark Factory trace** = machine JSON + generated `report.md` — unrelated. |
 
 ### Detailed collision notes
 
@@ -215,6 +216,7 @@ Known collisions and the **canonical resolution** (expand in [`NAMING-REFERENCE.
 - **Level / L3 (three-way):** **Autonomy L3** = end-to-end use-case slice in one app (logic + docs + UI + E2E evidence). **LCDL schema L3** = contract maturity band in `forge-lcdl` docs — unrelated ladder. **Standards precedence L3** = position in the Forge standards stack — unrelated ladder. Use **autonomy level** or **execution L3** when scoping unattended runs ([`AUTONOMY-LEVELS.md`](AUTONOMY-LEVELS.md)).
 - **Epic (five-way under profile):** WBS **Epic** label collides with Forge grains — **Ore** (intake), **Ingot** (refined story), **Forge Spark** (core Charge task), **Product Spark** (release horizon), **committed Epic** (profile Charge + OpenSpec L3). Use **under the Epic execution profile** when meaning the committed unit ([`EPIC-EXECUTION-PROFILE.md`](EPIC-EXECUTION-PROFILE.md), [`NAMING-REFERENCE.md`](NAMING-REFERENCE.md)).
 - **Charge (dual profile):** Core Forge Charge = **Sparks**; profile Charge = **Epics** — never imply Sparks were removed from Forge globally.
+- **Dual wiki (three-way):** **Documentation dual wiki** = author Markdown + local handbook HTML during Specify/Ready ([`SPEC-FLOW-BOARD.md`](SPEC-FLOW-BOARD.md#dual-wiki-documentation)). **Dual-profile** = Spark vs Epic Charge on `forge/charge.md`. **Dark Factory dual-wiki trace** = autonomy evidence JSON — do not merge the three.
 
 ---
 

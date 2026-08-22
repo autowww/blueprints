@@ -12,6 +12,8 @@ learning_level: reference
 
 > **Dual profile.** This template is for teams **under the Epic execution profile** — Charge lists **Epics**, not Forge Sparks. Core Forge teams may keep the **Active Sparks** table variant (`Spark ID`, phase, intent); see [`../../methodologies/forge/EPIC-EXECUTION-PROFILE.md`](../../methodologies/forge/EPIC-EXECUTION-PROFILE.md).
 
+> **Dual wiki (documentation).** Under the Epic profile, **Ready** includes fresh local handbook HTML for declared `## Dual wiki` surfaces (`wiki_stale` must clear before Specify→Ready). See [`../../methodologies/forge/SPEC-FLOW-BOARD.md`](../../methodologies/forge/SPEC-FLOW-BOARD.md#dual-wiki-documentation).
+
 ## Active Epics
 
 | # | id | OpenSpec change | status | actor |
