@@ -9,7 +9,7 @@ learning_level: reference
 
 **Purpose:** Main **day-to-day intake** prompt for an AI assistant acting as **Forge request classifier and routing guardrail** in a consuming repository. Paste the user’s request into the fenced block below, then run the whole document as the system/task prompt.
 
-**Related:** [`../../methodologies/forge/NAMING-REFERENCE.md`](../../methodologies/forge/NAMING-REFERENCE.md) (Product Spark vs Forge Spark) · [`../../methodologies/forge/process-and-flows.md`](../../methodologies/forge/process-and-flows.md) (Ore → Ingot → Forge Spark → Charge) · [`../../methodologies/forge/versona/DISCIPLINE-SPIKE.md`](../../methodologies/forge/versona/DISCIPLINE-SPIKE.md) (exploration spikes) · [`../../methodologies/markdown-canonical-workspace-policy.md`](../../methodologies/markdown-canonical-workspace-policy.md) (canonicalization A–G, markdown-only) · [`../../methodologies/forge/versona/ARTIFACT-CONTRACTS.md`](../../methodologies/forge/versona/ARTIFACT-CONTRACTS.md) (canonical paths) · **Meta-requests:** [`forge-meta-request-decomposition.prompt.md`](forge-meta-request-decomposition.prompt.md) · **Direct execution:** [`forge-direct-execution-sparks-charge.prompt.md`](forge-direct-execution-sparks-charge.prompt.md) · **Defects:** [`forge-defect-triage-rca-test-impact.prompt.md`](forge-defect-triage-rca-test-impact.prompt.md) · **Cursor history import:** [`forge-cursor-history-import.prompt.md`](forge-cursor-history-import.prompt.md)
+**Related:** [`../../methodologies/forge/NAMING-REFERENCE.md`](../../methodologies/forge/NAMING-REFERENCE.md) (Product Spark vs Forge Spark) · [`../../methodologies/forge/EPIC-EXECUTION-PROFILE.md`](../../methodologies/forge/EPIC-EXECUTION-PROFILE.md) (Epic execution profile — Charge = Epics) · [`../../methodologies/forge/process-and-flows.md`](../../methodologies/forge/process-and-flows.md) (Ore → Ingot → Forge Spark → Charge) · [`../../methodologies/forge/versona/DISCIPLINE-SPIKE.md`](../../methodologies/forge/versona/DISCIPLINE-SPIKE.md) (exploration spikes) · [`../../methodologies/markdown-canonical-workspace-policy.md`](../../methodologies/markdown-canonical-workspace-policy.md) (canonicalization A–G, markdown-only) · [`../../methodologies/forge/versona/ARTIFACT-CONTRACTS.md`](../../methodologies/forge/versona/ARTIFACT-CONTRACTS.md) (canonical paths) · **Meta-requests:** [`forge-meta-request-decomposition.prompt.md`](forge-meta-request-decomposition.prompt.md) · **Direct execution:** [`forge-direct-execution-sparks-charge.prompt.md`](forge-direct-execution-sparks-charge.prompt.md) · **Defects:** [`forge-defect-triage-rca-test-impact.prompt.md`](forge-defect-triage-rca-test-impact.prompt.md) · **Cursor history import:** [`forge-cursor-history-import.prompt.md`](forge-cursor-history-import.prompt.md)
 
 ---
 
@@ -38,10 +38,11 @@ Analyze the request below and classify it into Forge SDLC work types.
 
 - Update **canonical `.md` artifacts** only; do **not** propose CSV, spreadsheet, or JSON as **canonical** repository outputs (optional tooling adjuncts are out of scope unless `AGENTS.md` says otherwise).
 - **Never** treat **Product Spark** and **Forge Spark** as synonyms.
+- **Dual profile:** Core Forge **keeps** Forge Spark → Charge. **Under the Epic execution profile**, Charge lists **Epics** (`M1E3`) with OpenSpec acceptance — not Forge Sparks or `…T{n}` Task rows on Charge. Detect profile from `forge/forge.config.yaml`, `docs/PROJECT.md`, or Charge table shape (`Active Sparks` vs `Active Epics`).
 
 **Tasks:**
 
-1. **Classify** the request as **one or more** of: **Ore** · **Product Spark** · **Ingot** · **Forge Spark** · **defect** · **discipline-exploration spike** · **non-actionable / informational only**.
+1. **Classify** the request as **one or more** of: **Ore** · **Product Spark** · **Ingot** · **Forge Spark** · **Epic** (committed, under Epic execution profile) · **defect** · **discipline-exploration spike** · **non-actionable / informational only** · **L1 trivial skip** (typo/obvious one-liner — no Epic ceremony when profile policy allows).
 
 2. **Translate** common PM terms into Forge-aligned names where useful (keep both labels when the team still uses Jira/sprint language):
 
@@ -49,15 +50,15 @@ Analyze the request below and classify it into Forge SDLC work types.
    |-------------------|----------------------|
    | Roadmap theme / milestone | Often maps to **Product Spark** boundary or **milestone** (`M{n}`) in WBS |
    | Sprint | Often maps to **Forge iteration** (timebox), not a Spark type |
-   | Epic | Often maps to **Ore** (pre-refinement) or **Ingot**-parent **epic** row in WBS (`M{n}E{n}`) |
-   | Story | Often maps to **Ingot** (`M{n}E{n}S{n}`) when acceptance criteria exist |
-   | Task / sub-task | Maps to **Forge Spark** (executable slice), same ID family as WBS **task** (`…T{n}`) when using one namespace |
-   | Defect / bug | **Defect** workflow (not a Forge Spark unless you explicitly track fix work as Sparks) |
+   | Epic | **Core Forge:** often **Ore** (pre-refinement) or **Ingot**-parent epic row in WBS (`M{n}E{n}`). **Under the Epic execution profile:** **Epic** (`M1E3`) = smallest **committed** unit on Charge (L3 + OpenSpec) |
+   | Story | Often maps to **Ingot** (`M{n}E{n}S{n}`) when acceptance criteria exist; **under the Epic execution profile**, Story is agent scratch inside the Epic — not Charge |
+   | Task / sub-task | **Core Forge:** maps to **Forge Spark** (executable slice), same ID family as WBS **task** (`…T{n}`). **Under the Epic execution profile:** **do not** mint `…T{n}` on Charge — L1–L2 runs inside the Epic |
+   | Defect / bug | **Defect** workflow (not a Forge Spark unless you explicitly track fix work as Sparks in core Forge) |
 
 3. Decide **meta vs direct execution:**
 
-   - **Meta-request** — needs **decomposition** (Product Spark / Ingot / Forge Spark structure, sequencing, scope negotiation).
-   - **Direct execution** — can be expressed as **one or more Forge Sparks** (or a defect record + fix Sparks) with clear done criteria.
+   - **Meta-request** — needs **decomposition** (Product Spark / Ingot / Forge Spark structure, or Epic + OpenSpec under the profile, sequencing, scope negotiation).
+   - **Direct execution** — **Core Forge:** one or more **Forge Sparks** (or defect + fix Sparks) with clear done criteria. **Under the Epic execution profile:** work **inside** a Charged Epic via OpenSpec acceptance — **do not** mint Charge Sparks. **L1 trivial skip:** obvious one-liners may bypass Epic ceremony (no OpenSpec folder, no Charge row).
 
 4. Identify which **repositories** are in scope (e.g. Android app repo, site generator, kitchensink, blueprints).
 
@@ -75,8 +76,8 @@ Analyze the request below and classify it into Forge SDLC work types.
 
 **Routing rules:**
 
-- **Meta-requests** → run **[`forge-meta-request-decomposition.prompt.md`](forge-meta-request-decomposition.prompt.md)** next to produce **roadmap / WBS / traceability** Markdown; decompose into **Product Spark / Ingot / Forge Spark** structures; link to `docs/requirements/WBS.md`, milestone specs, `docs/ROADMAP.md` as appropriate.
-- **Direct execution** → run **[`forge-direct-execution-sparks-charge.prompt.md`](forge-direct-execution-sparks-charge.prompt.md)** to mint/update **Forge Sparks**, **`forge/charge.md`**, WBS/task files, and **TRACEABILITY**; use **Charge** when in active **Forge iteration** (stock path **`forge/charge.md`**).
+- **Meta-requests** → run **[`forge-meta-request-decomposition.prompt.md`](forge-meta-request-decomposition.prompt.md)** next to produce **roadmap / WBS / traceability** Markdown; decompose into **Product Spark / Ingot / Forge Spark** structures (core) or **Epic + OpenSpec** (under the Epic execution profile); link to `docs/requirements/WBS.md`, milestone specs, `docs/ROADMAP.md` as appropriate.
+- **Direct execution** → run **[`forge-direct-execution-sparks-charge.prompt.md`](forge-direct-execution-sparks-charge.prompt.md)** to mint/update **Forge Sparks** and **`forge/charge.md`** (core) or execute **inside a Charged Epic** with OpenSpec acceptance (profile — **no** Charge Spark minting); update WBS/task files and **TRACEABILITY** as appropriate; use **Charge** when in active **Forge iteration** (stock path **`forge/charge.md`** — **Epics** table under the profile).
 - **Defects** → run **[`forge-defect-triage-rca-test-impact.prompt.md`](forge-defect-triage-rca-test-impact.prompt.md)** for **triage, RCA, ISTQB test impact**, and **TRACEABILITY** updates; or minimal record under `docs/defects/` per `docs/PROJECT.md`.
 - Prefer **updating** existing canonical Markdown over **duplicates**.
 - **Record** the canonicalization decision in **traceability notes** (`docs/requirements/TRACEABILITY.md`, `imports/cursor-history/IMPORT-LEDGER.md`, or defect-local notes).

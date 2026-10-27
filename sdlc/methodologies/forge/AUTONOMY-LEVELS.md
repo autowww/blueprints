@@ -103,6 +103,20 @@ Claims combine level, sub-level, and grade as `L<level>.<sub><grade>` plus scope
 
 Do not confuse execution sub-levels with the Wizard planning enum (`l0_analyst`…`l3_goal_autopilot`), LCDL schema maturity (L0–L4), or standards precedence (L1–L6) — see the [concept map collision register](CONCEPT-MAP.md#term-collision-register).
 
+## Epic execution profile
+
+Teams **under the Epic execution profile** map the smallest **committed** delivery unit to **L3 use-case slice** by default:
+
+| Profile unit | Default autonomy | OpenSpec / gates |
+|--------------|------------------|------------------|
+| **Committed Epic** (`M1E3`, Charged) | **L3** — end-to-end user-visible flow in one existing app | OpenSpec acceptance **in**; human review / merge **out** |
+| **Agent runs inside Epic** | **L1–L2** scratch work (not Charge rows) | Bounded by Epic acceptance; decompose **runs**, not WBS Task backlogs |
+| **Cross-repo / L4.2+** | Out of autonomous Epic scope | Agents **stop and ask** — see [`EPIC-EXECUTION-PROFILE.md`](EPIC-EXECUTION-PROFILE.md) |
+
+Core Forge (Spark → Charge) unchanged: Spark-level work may still target **L1** or **L2** when humans commit task-grain units. The Epic profile **raises the committed grain** to L3 without deleting Spark from the methodology.
+
+Full profile rules (size gate, OpenSpec Lite/Full, trivial L1 skip): [`EPIC-EXECUTION-PROFILE.md`](EPIC-EXECUTION-PROFILE.md).
+
 ## Promotion criteria (grade transitions)
 
 - **a → b** — one green run at the declared (sub-)level with a passing Assay gate and machine + human trace.
@@ -168,6 +182,7 @@ This page belongs to its owning repo's canonical documentation and links outward
 ## Related
 
 - [Autonomy maturity framework](AUTONOMY-MATURITY-FRAMEWORK.md) — per-project observed level, grade, 0–100 score, and recommendations
+- [Epic execution profile](EPIC-EXECUTION-PROFILE.md) — committed Epic → L3 default; OpenSpec + Charge of Epics
 - [Forge Platform autonomy levels](https://platform.forgesdlc.com/docs-autonomy-levels-index.html) — operator hub, readiness matrix, per-level reference architecture
 - [Bounded execution examples](BOUNDED-EXECUTION-EXAMPLES.md) — real L1–L3 runs with loop, PDCA, and dual-wiki diagrams
 - [Respecting resources](RESPECTING-RESOURCES.md) — token economics, decompose-before-escalate, bounded loops

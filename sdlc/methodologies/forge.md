@@ -21,6 +21,8 @@ Traditional delivery methodologies — Scrum, SAFe, Kanban, Waterfall — were d
 
 Raw ideas enter as **Ore**, are refined into **Ingots**, decomposed into **Sparks** (the smallest meaningful executable unit), and selected into a daily **Charge**. **Versonas** (discipline virtual personas) apply discipline-specific judgment—including structured **challenge** passes that pressure-test work from each lens. Key decisions are captured in the **Ember Log**. Intentionally paused work is **Banked**. Release decisions pass an evidence-based **Assay Gate**.
 
+> **Epic execution profile (opt-in).** Core Forge keeps Ore → Ingot → **Spark** → Charge. Teams that delegate **L3 agent slices** under OpenSpec may adopt the **[Epic execution profile](forge/EPIC-EXECUTION-PROFILE.md)**: Charge lists **Epics**, OpenSpec acceptance defines scope, and agents decompose **runs** inside a Charged Epic — not WBS Task rows on Charge. Spark remains the default for all other Forge teams.
+
 Forge is **not** a rebranding of Agile — it is an extension of it for modern AI-enabled work. It improves clarity, decision quality, speed of learning, and release confidence.
 
 ## Process diagram
@@ -150,6 +152,7 @@ Forge must never add more ceremony than it removes waste. Key tenets:
 | **Small team** | 2–5 | Explicit Owner and Implementer(s). Charge is negotiated in a brief daily sync. Versonas combine AI agents and peer challenge. |
 | **Team** | 5–12 | Full ceremony set. Designated Versona disciplines. Ember Log maintained collaboratively. Assay Gate may include stakeholder sign-off. |
 | **Multi-team** | 12+ | Shared Ore pipeline. Cross-team Assay Gates. Versonas may include dedicated challenge roles. Forge iterations align across teams. |
+| **Epic execution profile** | Any (opt-in) | **Overlay**, not a team-size tier: Charge **Epics** with OpenSpec **L3** acceptance; agent **runs** inside Epics; core Spark → Charge unchanged for teams that do not opt in. Typical when unattended **L3** delivery is default in one primary repo. See [`forge/EPIC-EXECUTION-PROFILE.md`](forge/EPIC-EXECUTION-PROFILE.md). |
 
 **Git:** Branching and commit conventions scale with this table — see [`forge/setup/BRANCHING-STRATEGY.md`](forge/setup/BRANCHING-STRATEGY.md).
 
@@ -180,6 +183,7 @@ Forge must never add more ceremony than it removes waste. Key tenets:
 - [Agentic coding standards](agentic-coding-standards.md) — AI-assisted coding and review standards; Forge mapping (Charge, Ember Log, Versonas, Assay)
 - [Respecting resources](forge/RESPECTING-RESOURCES.md) — token economics, decompose-before-escalate, bounded loops
 - [Autonomy levels](forge/AUTONOMY-LEVELS.md) — L0–L8 ladder, Assay enforcement, Forge Dark Factory PoC · [Platform adoption hub](https://platform.forgesdlc.com/docs-autonomy-levels-index.html) (readiness + per-level reference architecture)
+- [Epic execution profile](forge/EPIC-EXECUTION-PROFILE.md) — opt-in overlay: Epic + OpenSpec + L3 Charge; dual-profile with core Spark → Charge
 - [Bounded execution examples](forge/BOUNDED-EXECUTION-EXAMPLES.md) — real L1–L3 runs with loop, routing, PDCA, and dual-wiki diagrams
 - [Spec-driven development](spec-driven-development.md) — durable specs complement Forge's Ingot refinement
 - [Scrum](scrum.md) · [Kanban](kanban.md) · [XP](xp.md) — Forge ceremonies map to the same C1–C6 foundation

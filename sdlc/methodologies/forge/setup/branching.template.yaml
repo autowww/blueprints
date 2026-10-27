@@ -65,6 +65,19 @@ agent_behavior:
   fleet_campaigns_may_push: false
   fleet_campaigns_may_open_pr: false
 
+# Agent lane — governed coding agents (see setup/branching-agent-lane.md).
+# Disabled by default; enable per repo once host-side rulesets exist.
+agent_lane:
+  enabled: false
+  integration: main
+  pattern: "agent/<agent-id>/<task-id>-<slug>"
+  agent_ids: [roadrunner, reviewer]
+  allow_paths: ["**"]
+  deny_paths: [".github/**", "**/*.env", "**/secrets*", "**/*.lock"]
+  ttl_days: 14
+  merge: squash_by_reviewer_after_operator_confirm
+  critical_requires_human_approval: true
+
 # Backward-compatible fields consumed by docs-health policy resolver.
 docs_health_branch_style: feature_prefixed
 use_forge_lanes: false

@@ -60,6 +60,7 @@ OPTIONAL_VERSONA_TEMPLATE_REL: dict[str, str] = {
 STANDARD_FORGE_CURSOR_RULES_REL: dict[str, str] = {
     "forge-daily.mdc": "sdlc/templates/forge/cursor-rules/forge-daily.mdc",
     "forge-planning.mdc": "sdlc/templates/forge/cursor-rules/forge-planning.mdc",
+    "forge-epic-execution.mdc": "sdlc/templates/forge/cursor-rules/forge-epic-execution.mdc",
     "forge-versona.mdc": "sdlc/templates/forge/cursor-rules/forge-versona.mdc",
     "forge-setup.mdc": "sdlc/templates/forge/cursor-rules/forge-setup.mdc",
     "forge-product-manager.mdc": "sdlc/templates/forge/cursor-rules/forge-product-manager.mdc",

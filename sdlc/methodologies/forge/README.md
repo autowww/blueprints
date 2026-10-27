@@ -20,6 +20,8 @@ learning_level: reference
 | **Artifacts & decisions** | [`ARTIFACT-AND-DECISION-MODEL.md`](ARTIFACT-AND-DECISION-MODEL.md) | Minimum artifact set, artifact matrix vs meetings/PDLC/SDLC, canonical names, Ember Log / ADR / directive boundaries, lightweight Markdown schemas |
 | **Process & flows** | [`process-and-flows.md`](process-and-flows.md) | State model, work unit hierarchy, iteration lifecycle, KS diagram templates |
 | **Naming reference** | [`NAMING-REFERENCE.md`](NAMING-REFERENCE.md) | Forge terms, meanings, meetings vs ceremonies vs Versona sessions, seven-phase benchmark vs P1–P6, source file paths |
+| **Epic execution profile** | [`EPIC-EXECUTION-PROFILE.md`](EPIC-EXECUTION-PROFILE.md) | Opt-in overlay: Epic + OpenSpec + L3 Charge; runs not WBS Tasks; dual-profile with core Spark → Charge |
+| **Spec Flow board** | [`SPEC-FLOW-BOARD.md`](SPEC-FLOW-BOARD.md) | Seven-column derived Kanban (Intent → Archived) for Epic + OpenSpec under the profile; Charge status map; archive ≠ Released |
 | **Concept map** | [`CONCEPT-MAP.md`](CONCEPT-MAP.md) | Canonical concept matrix (lifecycles, owners, artifacts, meetings) and term-collision register |
 | **Product → delivery IPE** | [`PRODUCT-DELIVERY-FORGE-IPE.md`](PRODUCT-DELIVERY-FORGE-IPE.md) | PDLC/SDLC phases: industry + Forge + Inputs–Process–Outputs + example Sparks |
 | **Bridge** | [`FORGE-SDLC-PDLC-BRIDGE.md`](FORGE-SDLC-PDLC-BRIDGE.md) | How Forge connects to PDLC P1–P6 and SDLC A–F |

@@ -9,7 +9,9 @@ learning_level: reference
 
 **Purpose:** Map **problem statement through product delivery** using **industry language**, **Forge** work units, and a compact **Inputs → Process → Outputs** (IPE) view per lifecycle phase. Deep definitions live in linked canon; this file is a **navigation spine**.
 
-**Canon:** [`../../../pdlc/PDLC.md`](../../../pdlc/PDLC.md) (P1–P6) · [`../../SDLC.md`](../../SDLC.md) (A–F) · [`FORGE-SDLC-PDLC-BRIDGE.md`](FORGE-SDLC-PDLC-BRIDGE.md) · [`planning/PLANNING-FLOW.md`](planning/PLANNING-FLOW.md) · [`process-and-flows.md`](process-and-flows.md)
+**Canon:** [`../../../pdlc/PDLC.md`](../../../pdlc/PDLC.md) (P1–P6) · [`../../SDLC.md`](../../SDLC.md) (A–F) · [`FORGE-SDLC-PDLC-BRIDGE.md`](FORGE-SDLC-PDLC-BRIDGE.md) · [`planning/PLANNING-FLOW.md`](planning/PLANNING-FLOW.md) · [`process-and-flows.md`](process-and-flows.md) · [`EPIC-EXECUTION-PROFILE.md`](EPIC-EXECUTION-PROFILE.md) (opt-in Charge-of-Epics overlay)
+
+> **Under the Epic execution profile.** Tables below describe **core Forge** (Spark → Charge). Where **Forge** names Charge or committed delivery units, read [`EPIC-EXECUTION-PROFILE.md`](EPIC-EXECUTION-PROFILE.md) for the Epic grain overlay — Spark is not removed from Forge.
 
 **Legend**
 

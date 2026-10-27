@@ -93,6 +93,8 @@ Two allowed paths (cross-links only — do not duplicate full bootstrap text her
 1. **Open** — Create a Versona session folder (e.g. [`../../../scripts/forge-versona-session.sh`](../scripts/forge-versona-session.sh)) from [`../../../templates/forge/versona-session.template.md`](../../../templates/forge/versona-session.template.md). Set `work_item_kind` to `spike_discipline` or `spike_general`. Fill optional manifest hints ([VERSONA-FRAMEWORK.md](VERSONA-FRAMEWORK.md) §7.4). Complete the open checklist template.
 2. **Execute** — Time-boxed work; artifacts under `inputs/` and `outputs/`.
 3. **Close** — Write `outputs/SPIKE-CLOSE.md`: findings, recommendation (promote to Ingot / new Ore / no-go), follow-up ids, links to any new WBS lines or ADRs.
+
+   > **Under the Epic execution profile.** Spike **follow-up** promotes a **ready Epic** (OpenSpec acceptance, size gate) for Charge — not a Forge Spark pulled into Charge as the committed unit. Core Forge teams may still promote Ingots and Sparks per the default pipeline. See [`../EPIC-EXECUTION-PROFILE.md`](../EPIC-EXECUTION-PROFILE.md).
 4. **Decisions** — Append Ember Log entries when scope, risk acceptance, or trade-offs are decided ([`../scripts/forge-ember.sh`](../scripts/forge-ember.sh)).
 5. **Git** — Commit traceable changes (session tree, WBS, roadmap, specs). Suggested message pattern:
 

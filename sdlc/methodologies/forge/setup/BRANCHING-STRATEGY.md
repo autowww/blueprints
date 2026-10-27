@@ -34,7 +34,10 @@ Repos may adopt a **named lane** model on top of protected `main`, documented in
 | **`spike/*`** | **Exploration only** (discipline spikes); not delivery Sparks |
 | **`release/*`** | Optional **stabilization** window when the setup profile demands it |
 | **`hotfix/*`** | Production corrections; promotion and back-merge path documented per repo |
+| **`agent/<agent-id>/*`** | Branches created by **governed coding agents** for one approved task; PR mandatory, squash by a separate review identity; see [Agent lane](branching-agent-lane.md) |
 | **Charge (`forge/charge.md`)** | Daily **view** of selected Sparks — **never** a `charge/*` Git branch |
+
+> **Under the Epic execution profile.** Charge lists **Epics**, not Sparks — still a Markdown **view** only; **no** `charge/*` Git branch. **`spark/*`** lanes and traceability rules are **unchanged** in v1. See [`../EPIC-EXECUTION-PROFILE.md`](../EPIC-EXECUTION-PROFILE.md).
 
 The **scaling table** below uses **`feature/*`** and related names as **GitHub Flow** shorthand for short-lived topic branches. Teams using the lane model often land topic work as **`spark/*`** or on **`iter/*`** instead. Pick **one** convention per repository and record it in `forge/branching.yml` or `docs/process/branching-profile.md` (or equivalent).
 

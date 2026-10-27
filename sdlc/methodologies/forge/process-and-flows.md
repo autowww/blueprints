@@ -67,6 +67,8 @@ Time horizon
 | **Daily set** | Charge | Daily commitment | One day |
 | **Cycle** | Forge iteration | Sprint or release cycle | 1–2 weeks |
 
+> **Under the Epic execution profile.** **Charge** lists **Epics** in play (a daily view, not a Kanban system of record). **Forge Spark** remains the smallest **delivery** unit in **core Forge** (Ore → Ingot → Spark → Charge with Sparks). The profile is an opt-in overlay — see [`EPIC-EXECUTION-PROFILE.md`](EPIC-EXECUTION-PROFILE.md).
+
 ### Spark = Task (WBS mapping)
 
 In projects with an existing **milestone → epic → story → task** hierarchy, Forge terms map directly — no parallel namespace:

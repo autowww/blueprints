@@ -9,7 +9,7 @@ learning_level: reference
 
 **Purpose:** **Follow-on prompt** when [`forge-request-classifier-intake.prompt.md`](forge-request-classifier-intake.prompt.md) classifies work as a **direct execution** request. The assistant acts as **Forge execution planner** and proposes **Forge Spark(s)**, **Charge** membership, and **Markdown** updates.
 
-**Related:** [`../../methodologies/forge/process-and-flows.md`](../../methodologies/forge/process-and-flows.md) · [`../../methodologies/forge/daily/README.md`](../../methodologies/forge/daily/README.md) (`forge/charge.md`) · [`../../methodologies/forge/NAMING-REFERENCE.md`](../../methodologies/forge/NAMING-REFERENCE.md) (Forge Spark vs Product Spark) · [`../../methodologies/markdown-canonical-workspace-policy.md`](../../methodologies/markdown-canonical-workspace-policy.md) · [`../../DOCUMENTATION-STRUCTURE.md`](../../DOCUMENTATION-STRUCTURE.md)
+**Related:** [`../../methodologies/forge/process-and-flows.md`](../../methodologies/forge/process-and-flows.md) · [`../../methodologies/forge/EPIC-EXECUTION-PROFILE.md`](../../methodologies/forge/EPIC-EXECUTION-PROFILE.md) (Epic execution profile) · [`../../methodologies/forge/daily/README.md`](../../methodologies/forge/daily/README.md) (`forge/charge.md`) · [`../../methodologies/forge/NAMING-REFERENCE.md`](../../methodologies/forge/NAMING-REFERENCE.md) (Forge Spark vs Product Spark) · [`../../methodologies/markdown-canonical-workspace-policy.md`](../../methodologies/markdown-canonical-workspace-policy.md) · [`../../DOCUMENTATION-STRUCTURE.md`](../../DOCUMENTATION-STRUCTURE.md)
 
 ---
 
@@ -17,7 +17,8 @@ learning_level: reference
 
 | Concept | Default path (consuming repo root) |
 |---------|-------------------------------------|
-| **Charge** | **`forge/charge.md`** — today’s selected Forge Sparks (`forge-charge.sh` uses this path) |
+| **Charge (core Forge)** | **`forge/charge.md`** — today's selected **Forge Sparks** (`forge-charge.sh` uses this path) |
+| **Charge (Epic execution profile)** | **`forge/charge.md`** — **`Active Epics`** table (id, OpenSpec change, status, actor) |
 | **Day journal** | `forge/journal/YYYY-MM-DD.md` |
 | **Archived Charge** | `forge/charge-archive/` |
 | **Forge iteration** | Often **implicit** in planning docs (`docs/ROADMAP.md`, `docs/requirements/WBS.md`, `forge/releases/*.md`); there is **no** single required `ITERATION.md` in stock templates |
@@ -40,7 +41,9 @@ learning_level: reference
 
 Act as **Forge execution planner** for this workspace.
 
-Convert this **direct executable** request into **Forge Sparks** and decide whether any item belongs in the **current Forge iteration Charge**.
+Convert this **direct executable** request into committed work and decide Charge membership.
+
+**Under the Epic execution profile:** execute **inside** the Charged Epic — apply OpenSpec acceptance, decompose **runs** at L1–L2, **do not** mint Forge Sparks or `…T{n}` rows on Charge. **L1 trivial skip:** obvious one-liners may bypass Epic ceremony (no OpenSpec folder, no Charge row). **Core Forge** (default): convert to **Forge Sparks** as below.
 
 **Request:**
 
@@ -51,10 +54,11 @@ Convert this **direct executable** request into **Forge Sparks** and decide whet
 **Workspace rules:**
 
 - **Markdown-only** canonical artifacts (`.md`); **no CSV** / spreadsheet SoT.  
-- **Forge Spark** = smallest **delivery** unit (~1–4 h), often WBS **task** id `M{n}E{n}S{n}T{n}`; **not** a **Product Spark** (release slice).  
-- **Charge** lists **today’s** committed Forge Sparks — see **`forge/charge.md`** (or team alias documented in `docs/PROJECT.md`).
+- **Dual profile:** Core Forge **keeps** Forge Spark → Charge. **Under the Epic execution profile**, Charge = **Epics** with OpenSpec acceptance — Story/Task/Spark are agent scratch inside the Epic, not Charge items.  
+- **Forge Spark** (core only) = smallest **delivery** unit (~1–4 h), often WBS **task** id `M{n}E{n}S{n}T{n}`; **not** a **Product Spark** (release slice).  
+- **Charge** lists **today's** committed work — **`forge/charge.md`**: **Sparks** (core) or **Epics** (profile); see team alias in `docs/PROJECT.md` if documented.
 
-**Tasks:**
+**Tasks (core Forge — Forge Sparks):**
 
 1. Decide whether the request is **one** Forge Spark or **several** (split if multiple PR-sized outcomes, different repos, or non-overlapping acceptance).
 
@@ -91,6 +95,14 @@ Convert this **direct executable** request into **Forge Sparks** and decide whet
 
 8. **Flag** any item **too large** for one Forge Spark (suggest split into multiple `…T{n}` or refinement into an **Ingot** first).
 
+**Tasks (Epic execution profile — inside Charged Epic):**
+
+1. Confirm target **Epic** on Charge (`Active Epics`) or classify as **L1 trivial skip** (no Epic row).
+2. Load **OpenSpec change** — observable SHALLs + scenarios; `tasks.md` is non-binding.
+3. Plan **runs** inside the Epic (L1–L2); **do not** mint `…T{n}` on Charge or expand WBS Task process for the Epic.
+4. **Escalate L4+** (cross-repo L4.2, ADR, security) — stop and ask before proceeding.
+5. Update traceability at **Epic** scope; recommend Charge status transitions only for the **Epic** row.
+
 **Execution mode:**
 
 - **High confidence** — apply **direct** Markdown edits.  
@@ -98,12 +110,14 @@ Convert this **direct executable** request into **Forge Sparks** and decide whet
 
 **Return (structured output):**
 
-**A. Spark list** — table: id, title, phase prefix if used (`build:`, `verify:`, …), status, parent.  
+**Profile detected:** core Forge · Epic execution profile · L1 trivial skip
+
+**A. Work list** — **Core:** Spark table (id, title, phase prefix, status, parent). **Profile:** Epic id, OpenSpec change, run plan inside Epic (no Charge Spark rows).  
 **B. Sequence and dependencies** — ordered graph or numbered list.  
-**C. Charge recommendation** — which ids to add/remove on **today’s** Charge; what to leave in bank/backlog.  
+**C. Charge recommendation** — **Core:** which Spark ids to add/remove on today's Charge. **Profile:** Epic status/actor updates only.  
 **D. Markdown file changes** — path + create/update + one-line purpose.  
 **E. Canonicalization decisions** — per candidate: **A–G**, similarity state, ledger pointer (`TRACEABILITY` / `IMPORT-LEDGER`).  
-**F. Risks and hidden decomposition** — bullets: unknowns, spikes, oversized work, cross-repo coupling.
+**F. Risks and hidden decomposition** — bullets: unknowns, spikes, oversized work, cross-repo coupling, L4+ escalation.
 
 ---
 

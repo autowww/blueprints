@@ -10,24 +10,28 @@ learning_level: reference
 
 # Charge — YYYY-MM-DD
 
-## Active Sparks
+> **Dual profile.** This template is for teams **under the Epic execution profile** — Charge lists **Epics**, not Forge Sparks. Core Forge teams may keep the **Active Sparks** table variant (`Spark ID`, phase, intent); see [`../EPIC-EXECUTION-PROFILE.md`](../EPIC-EXECUTION-PROFILE.md).
 
-| # | Spark ID | Phase | Intent | Status |
-|---|----------|-------|--------|--------|
-| 1 | | | | `planned` / `in-progress` / `done` / `blocked` / `banked` |
+> **Dual wiki (documentation).** Under the Epic profile, an Epic is **Ready** on the Spec Flow board only when OpenSpec validate is green **and** declared handbook surfaces have fresh **local derived** HTML (`wiki_stale` overlay clear). Loopback refresh rebuilds handbooks; **Archive ≠ deployed** — see [`../SPEC-FLOW-BOARD.md`](../SPEC-FLOW-BOARD.md#dual-wiki-documentation).
+
+## Active Epics
+
+| # | id | OpenSpec change | status | actor |
+|---|-----|-----------------|--------|-------|
+| 1 | | | `planned` / `in-progress` / `done` / `blocked` / `banked` | |
 | 2 | | | | |
 | 3 | | | | |
 
 ## Blockers
 
-| Spark | Blocker | Action |
-|-------|---------|--------|
+| Epic | Blocker | Action |
+|------|---------|--------|
 | | | |
 
 ## Banking decisions
 
-| Spark | Reason banked | Restart context |
-|-------|---------------|-----------------|
+| Epic | Reason banked | Restart context |
+|------|---------------|-----------------|
 | | | |
 
 ## Notes

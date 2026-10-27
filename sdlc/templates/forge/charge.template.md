@@ -10,20 +10,24 @@ learning_level: reference
 
 # Charge — YYYY-MM-DD
 
-## Active Sparks
+> **Dual profile.** This template is for teams **under the Epic execution profile** — Charge lists **Epics**, not Forge Sparks. Core Forge teams may keep the **Active Sparks** table variant (`Spark ID`, phase, intent); see [`../../methodologies/forge/EPIC-EXECUTION-PROFILE.md`](../../methodologies/forge/EPIC-EXECUTION-PROFILE.md).
 
-| # | Spark ID | Phase | Intent | Status |
-|---|----------|-------|--------|--------|
-| 1 | | | | planned |
+> **Dual wiki (documentation).** Under the Epic profile, **Ready** includes fresh local handbook HTML for declared `## Dual wiki` surfaces (`wiki_stale` must clear before Specify→Ready). See [`../../methodologies/forge/SPEC-FLOW-BOARD.md`](../../methodologies/forge/SPEC-FLOW-BOARD.md#dual-wiki-documentation).
+
+## Active Epics
+
+| # | id | OpenSpec change | status | actor |
+|---|-----|-----------------|--------|-------|
+| 1 | | | planned | |
 
 ## Blockers
 
-| Spark | Blocker | Action |
-|-------|---------|--------|
+| Epic | Blocker | Action |
+|------|---------|--------|
 
 ## Banking decisions
 
-| Spark | Reason banked | Restart context |
-|-------|---------------|-----------------|
+| Epic | Reason banked | Restart context |
+|------|---------------|-----------------|
 
 ## Notes
