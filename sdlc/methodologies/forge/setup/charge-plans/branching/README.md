@@ -116,6 +116,10 @@ Use these unless the project already decided otherwise:
 - Enable Product Spark **parent** branch when work spans multiple iterations, teams, or repos.
 - Require PR-based promotion into `iter/*`, then from `iter/*` into parent or `main` (as documented in charge 03).
 
+### Agent lane
+
+When governed coding agents may push to the repo, add the **`agent/<agent-id>/<task-id>-<slug>`** lane from [`../../branching-agent-lane.md`](../../branching-agent-lane.md): fresh `origin/main` source with recorded `base_sha`, PR mandatory, squash merge by a separate review identity after operator confirmation, human approval record on any critical finding, 14-day TTL, never a push to `main`. Humans keep `iter/*`, `spark/*`, and `spike/*`.
+
 ### Polyrepo or submodule-based
 
 - Run [`optional-spikes.md`](optional-spikes.md) first, especially the topology spike.
